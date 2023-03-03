@@ -28,24 +28,57 @@ The glossary is divided into four sections: domain terms, technical terms, data 
 ## Technical Terms 
 
 
-| Term | Definition |
-|------|------------|
-| Service| The application of an eligible party that processes data from consumers.|
-| | |
+| Term         | Definition                                                                                                |
+|--------------|-----------------------------------------------------------------------------------------------------------|
+| Service      | The application of an eligible party that processes data from consumers.                                  |
+| P1 Interface | Term for the non-validated near real-time interface demanded by Article 20(a) of Directive (EU) 2019/944. |
+|              |                                                                                                           |
+|              |                                                                                                           |
+|              |                                                                                                           |
 
 ## Data Types 
 
-| Term | Definition |
-|------|------------|
-|Historical data| Validated historical metering and consumption data. |
-|Real-time data| Non-validated near real-time data from P1-interface in smart meter. |
-|Master data| |
+| Term            | Definition                                                                                         |
+|-----------------|----------------------------------------------------------------------------------------------------|
+| Historical data | Validated historical metering and consumption data.                                                |
+| Real-time data  | Non-validated near real-time data from P1-interface in smart meter.                                |
+| Master data     | Reference data about relevant entities in the market (connection point, parties, platforms, etc.). |
 
 ## Acronyms 
 
 
-| Acronym | Definition                                          |
-|---------|-----------------------------------------------------|
-| AIIDA   | Administrative Interface for In-house Data Access   |
-| EDDIE   | European Distributed Data Infrastructure for Energy |
-|         |                                                     |
+| Acronym | Definition                                                                                                                                      |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| AIIDA   | Administrative Interface for In-house Data Access                                                                                               |
+| EDDIE   | European Distributed Data Infrastructure for Energy                                                                                             |
+| DSO     | Distribution System Operator                                                                                                                    |
+| TSO     | Transmission System Operator                                                                                                                    |
+| NRA     | National Regulatory Authority                                                                                                                   |
+| IA      | Implementing Acts for Interoperability after Article 24 of Directive (EU) 2019/944.                                                             |
+| eIDAS   | Electronic Identification and Authentication Services. Regulation on electronic identification and trust services. Regulation (EU) No 910/2014. |
+/ aFRR / Automatic Frequency Restoration Reserve /
+/ API / Application Programming Interface /
+/ ASM / Active System Management /
+/ BRP / Balancing Responsible Party [TODO] explain /
+/ CEP / Clean Energy Package [TODO] explain /
+/ CM / Capacity Mechanism /
+/ DA / Day Ahead (market) /
+/ DCC / Demand Connection Code /
+/ DER / Distributed Energy Resources /
+/ DF / Distributed Flexibility /
+/ DSF / Demand-Side Flexibility /
+/ EBGL / Electricity Balancing Guideline /
+/ FMO / Flexibility Market Operator /
+/ FSP / Flexibility Service Provider /
+/ GDPR / Regulation (EU) 2016/679 a.k.a. General Data Protection Regulation /
+/ HRM / Harmonised Role Model /
+/ ID / Intraday /
+/ LV / Low voltage /
+/ mFRR / Manual Frequency Restoration Reserve /
+/ MV / Medium voltage /
+/ NC / Network Code /
+/ RfG / Requirements for Generators /
+/ SGAM / Smart Grid Architecture Model /
+/ SGU / Significant Grid User /
+/ SOGL / System Operation Guideline /
+///
