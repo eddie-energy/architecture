@@ -31,7 +31,8 @@ The glossary is divided into four sections: domain terms, technical terms, data 
 ## Acronyms 
 
 
-| Acronym | Definition |
-|------|------------|
-| AIIDA | Administrative Interface for In-house Data Access|
-| | |
+| Acronym | Definition                                          |
+|---------|-----------------------------------------------------|
+| AIIDA   | Administrative Interface for In-house Data Access   |
+| EDDIE   | European Distributed Data Infrastructure for Energy |
+|         |                                                     |
