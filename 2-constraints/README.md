@@ -25,9 +25,13 @@ Various constraints limit the design and implementation decisions. These constra
 
 ## Technical Constraints 
 
-| Constraint | Description |
-|------|------------|
-| Kafka communication | The streaming of real-time data over the Internet must implemented with Apache Kafka. |
-| P1 port | Real-time data from the smart meter must be collected over the P1 Port.  |
-| | |
+| Constraint               | Description                                                                                                                                                                                                    |
+|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C1: Kafka communication  | The streaming of real-time data from AIIDA to EDDIE Framework over the Internet must implemented with Apache Kafka.                                                                                            |
+| C2: P1 interface         | Real-time data from the smart meter must be collected over the P1 Port.                                                                                                                                        |
+| C3: Distributed architecture | There shall be no central party aggregating data flows. A distributed data architecture must respect this principle.                                                                                           |
+| C4: Secure communication | All communication between parties must be signed and encrypted to ensure authenticity and integrity of data exchange.                                                                                          |
+| C5: Respect for subsidiarity | When implementing access to online data-sharing infrastructures, EDDIE Framework and its region connectors will integrate fully into MS data exchange environments, and not intervene into national decisions. |
+|                          |                                                                                                                                                                                                                |
+|                          |                                                                                                                                                                                                                |
 
