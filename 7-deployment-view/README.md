@@ -84,6 +84,8 @@ Mapping of Building Blocks to Infrastructure
 
 :   *\<description of the mapping>*
 
+![EDDIE Doployment Options (BYOI)](./figures/EDDIE_Deployment_Options.png)
+
 ## Infrastructure Level 2 {#_infrastructure_level_2}
 
 Here you can include the internal structure of (some) infrastructure

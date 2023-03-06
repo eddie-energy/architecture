@@ -35,6 +35,8 @@ white boxes (see figure below) and their descriptions.
 **Level 1** is the white box description of the overall system together
 with black box descriptions of all contained building blocks.
 
+![EDDIE Architectural Schema](./figures/EDDIE_Architecture.png)
+
 **Level 2** zooms into some building blocks of level 1. Thus it contains
 the white box description of selected building blocks of level 1,
 together with black box descriptions of their internal building blocks.
