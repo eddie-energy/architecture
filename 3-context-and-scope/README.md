@@ -21,7 +21,7 @@ the communication partner, the inputs, and the outputs. -->
 
 From a business perspective, our system consists of four components and three interfaces which are shown in the figure below. 
 
-![business context diagram](./figures/external-interfaces.png)
+![business context diagram](/3-context-and-scope/figures/external-interfaces.png)
 
 As shown in the figure, the four components of the system are:
 1. AIIDA (Administrative Interface for In-house Data Access)
