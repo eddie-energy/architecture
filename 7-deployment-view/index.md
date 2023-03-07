@@ -1,8 +1,6 @@
-# Deployment View {#section-deployment-view}
+# Deployment View
 
-::: formalpara-title
-**Content**
-:::
+##### Content
 
 The deployment view describes:
 
@@ -28,9 +26,7 @@ elements of an infrastructure that are needed to show a deployment of
 your building blocks. Hardware architects can go beyond that and
 describe an infrastructure to any level of detail they need to capture.
 
-::: formalpara-title
-**Motivation**
-:::
+##### Motivation
 
 Software does not run without hardware. This underlying infrastructure
 can and will influence a system and/or some cross-cutting concepts.
@@ -52,7 +48,7 @@ deployment diagrams:
 See [Deployment View](https://docs.arc42.org/section-7/) in the arc42
 documentation.
 
-## Infrastructure Level 1 {#_infrastructure_level_1}
+## Infrastructure Level 1
 
 Describe (usually in a combination of diagrams, tables, and text):
 
@@ -86,23 +82,23 @@ Mapping of Building Blocks to Infrastructure
 
 ![EDDIE Doployment Options (BYOI)](./figures/EDDIE_Deployment_Options.png)
 
-## Infrastructure Level 2 {#_infrastructure_level_2}
+## Infrastructure Level 2
 
 Here you can include the internal structure of (some) infrastructure
 elements from level 1.
 
 Please copy the structure from level 1 for each selected element.
 
-### *\<Infrastructure Element 1>* {#__emphasis_infrastructure_element_1_emphasis}
+### *\<Infrastructure Element 1>*
 
 *\<diagram + explanation>*
 
-### *\<Infrastructure Element 2>* {#__emphasis_infrastructure_element_2_emphasis}
+### *\<Infrastructure Element 2>*
 
 *\<diagram + explanation>*
 
 ...
 
-### *\<Infrastructure Element n>* {#__emphasis_infrastructure_element_n_emphasis}
+### *\<Infrastructure Element n>*
 
 *\<diagram + explanation>*
