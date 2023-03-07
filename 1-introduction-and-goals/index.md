@@ -24,7 +24,7 @@ The essential features of the framework are:
 
 ## Essential Functional Requirements
 
-The essential functional requirements are listed below. A more elaborate description of the requirements can be found in [Section 10](/10-quality-requirements/README.md).
+The essential functional requirements are listed below. A more elaborate description of the requirements can be found in [Section 10](/10-quality-requirements/).
 - Decentralized: The consumer data must be shared only with eligible parties (i.e., that have the permission of the consumer). A central place that aggregates consumer data without the permission of the consumer must not be used.
 - Scalable. The consumer must be able to share their data with multiple eligible parties. Moreover, an eligible party must be able to collect data from multiple consumers.
 - Extensible. The framework must be extensible so that adding unsupported energy providers does not involve significant engineering/developing effort.

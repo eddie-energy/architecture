@@ -6,6 +6,7 @@
   "scripts": {
     "build": "eleventy",
     "dev": "eleventy --serve",
+    "clean": "rmdir /s /q _site",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
