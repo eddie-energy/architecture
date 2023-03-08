@@ -8,6 +8,7 @@ module.exports = {
       order: (data) => {
         const match = data.page.url.match(getOrderNumberRegex);
         return match ? match[1] : -1;
-      }
+      },
+      parent: (data) => data.page.url==='/' ? undefined : '/'
     },
 };
