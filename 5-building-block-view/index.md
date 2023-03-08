@@ -1,4 +1,6 @@
-# Building Block View
+---
+title: Building Block View
+---
 
 ##### Content
 

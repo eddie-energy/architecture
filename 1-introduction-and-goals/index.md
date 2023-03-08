@@ -1,4 +1,6 @@
-# Introduction and Goals
+---
+title: Introduction and Goals
+---
 
 <!-- Describes the relevant requirements and the driving forces that software architects and the development team must consider. These include
 

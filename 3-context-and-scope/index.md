@@ -1,4 +1,6 @@
-# System Scope and Context
+---
+title: System Scope and Context
+---
 <!-- System scope and context - as the name suggests - delimits your system
 (i.e. your scope) from all its communication partners (neighboring
 systems and users, i.e. the context of your system). It thereby

@@ -1,4 +1,6 @@
-# Glossary
+---
+title: Glossary
+---
 
 The glossary is divided into four sections: domain terms, technical terms, data types, and acronyms. The definitions here should be expressed clearly so that everyone has an identical understanding of each term. Synonyms and homonyms are discouraged.
 

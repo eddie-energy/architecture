@@ -1,4 +1,6 @@
-# Architecture Decisions
+---
+title: Architecture Decisions
+---
 
 ##### Contents
 

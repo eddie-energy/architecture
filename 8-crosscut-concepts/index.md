@@ -1,4 +1,6 @@
-# Cross-cutting Concepts
+---
+title: Cross-cutting Concepts
+---
 
 ##### Content
 

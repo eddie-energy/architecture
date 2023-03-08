@@ -1,4 +1,6 @@
-# Solution Strategy
+---
+title: Solution Strategy
+---
 
 ##### Contents
 
