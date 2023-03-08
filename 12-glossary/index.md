@@ -41,11 +41,12 @@ The glossary is divided into four sections: domain terms, technical terms, data 
 
 ## Data Types 
 
-| Term            | Definition                                                                                         |
-|-----------------|----------------------------------------------------------------------------------------------------|
-| Historical data | Validated historical metering and consumption data.                                                |
-| Real-time data  | Non-validated near real-time data from P1-interface in smart meter.                                |
-| Master data     | Reference data about relevant entities in the market (connection point, parties, platforms, etc.). |
+| Term                                               | Definition                                                                                                                                        |
+|----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Validated historical metering and consumption data | Validated historical metering and consumption data.                                                                                               |
+| Non-validated near real-time data                  | Non-validated near real-time data from P1-interface in smart meter.                                                                               |
+| Accounting point master data                       | Reference data about accounting points. Defines to which final customer an accounting point belongs to, its supplier/BRP, address, capacity etc.. |
+| Party master data                                  | Reference data about parties. Defines etc. which organisation belongs to which identifier, address.                                               |
 
 ## Acronyms 
 
