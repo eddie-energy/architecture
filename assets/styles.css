@@ -1,0 +1,29 @@
+
+body {
+    max-width: 1100px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container > nav {
+    flex: 0 0 30ch;
+}
+
+.container > main {
+    flex: 1 1 80ch;
+}
+
+.container > nav > ol {
+    padding-left: 0;
+}
+
+.container > nav > ol ol{
+    padding-left: 3ch;
+}
+
+.container > nav > ol > li {
+    list-style-type: none;
+}
