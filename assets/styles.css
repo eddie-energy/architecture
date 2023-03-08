@@ -44,3 +44,7 @@ header > img {
 .container > nav > ol > li {
     list-style-type: none;
 }
+
+a.current {
+    font-weight: bolder;
+}

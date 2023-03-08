@@ -1,6 +1,15 @@
----
-navigationOptions:
-  listElement: ol
+---js
+{
+  navigationOptions: {
+    listElement: "ol",
+    activeAnchorClass: "current"
+  },
+  eleventyComputed: {
+    navigationOptions: {
+      activeKey: (data) => data.eleventyNavigation.key
+    }
+  }
+}
 ---
 <!DOCTYPE html>
 <html lang="en">
