@@ -1,0 +1,3 @@
+# default layout that is used for all pages in this folder
+# that don't specify their own layout
+layout: chapter
