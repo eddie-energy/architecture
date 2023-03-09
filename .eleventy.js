@@ -8,6 +8,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataFileBaseName("index");
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy("**/*.png");
+  eleventyConfig.addPassthroughCopy("!(node_modules|_site)/**/*.(png|gif|jpg)");
   return {};
 };
