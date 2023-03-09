@@ -33,12 +33,11 @@ With the call for proposals to Establish the Grounds for a Common European Energ
 Following this guidance, we propose EDDIE – a European Distributed Data Infrastructure for Energy – with six main objectives as solution to Establish the Grounds for a Common European Energy Data Space as described in Table 1.
 
 <table>
-    <tr>
-        <th>Obj.  Nr</th>
-        <th>Description of Main Objective (OBJ)</th>
-        <th>Related WP (Tasks) and Milestone (due month)</th>
-    </tr>
-
+<tr>
+    <th style="width: 8ch">Obj.  Nr</th>
+    <th style="width: 60%">Description of Main Objective (OBJ)</th>
+    <th>Related WP (Tasks) and Milestone (due month)</th>
+</tr>
 <tr>
     <th>OBJ#1</th>
     <td>Deliver a unified, de-central and highly scalable European interface – the EDDIE Framework – to validated historical and near real-time energy consumption data from different data sources based on the work of the EU Smart Grids Task Force’s Expert Group 1 for data interoperability.</td>
