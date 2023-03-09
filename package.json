@@ -6,7 +6,7 @@
   "scripts": {
     "build": "eleventy",
     "dev": "eleventy --serve",
-    "clean": "rmdir /s /q _site",
+    "clean": "rimraf _site node_modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +22,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-navigation": "^0.3.5",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "rimraf": "^4.4.0"
   }
 }
