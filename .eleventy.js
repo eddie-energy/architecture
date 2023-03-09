@@ -1,13 +1,15 @@
 const yaml = require("js-yaml");
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
+  eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.setDataFileBaseName("index");
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("!(node_modules|_site)/**/*.(png|gif|jpg)");
-  return {};
+  return { pathPrefix: "/architecture/" };
 };
