@@ -174,7 +174,7 @@ standardized parts of your system
 
 *\<white box template>*
 
-## Level 3
+## Region Connectors
 
 Here you can specify the inner structure of (some) building blocks from
 level 2 as white boxes.
@@ -182,16 +182,20 @@ level 2 as white boxes.
 When you need more detailed levels of your architecture please copy this
 part of arc42 for additional levels.
 
-### White Box \<\_building block x.1\_\>
+### AT - Austria \<\_building block x.1\_\>
 
 Specifies the internal structure of *building block x.1*.
 
 *\<white box template>*
 
-### White Box \<\_building block x.2\_\>
+### DE - Germany \<\_building block x.2\_\>
 
 *\<white box template>*
 
-### White Box \<\_building block y.1\_\>
+### FR - France \<\_building block x.2\_\>
+
+*\<white box template>*
+
+### IT - Italy \<\_building block y.1\_\>
 
 *\<white box template>*

@@ -4,6 +4,8 @@ title: Runtime View
 
 ##### Contents
 
+
+
 The runtime view describes concrete behavior and interactions of the
 system's building blocks in form of scenarios from the following areas:
 
