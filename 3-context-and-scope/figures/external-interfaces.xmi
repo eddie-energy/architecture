@@ -14,7 +14,7 @@
                 <UML:Component name="AIIDA" namespace="model1" xmi.id="cl0004">
                     <UML:Classifier.feature/>
                 </UML:Component>
-                <UML:Component name="Eligible" namespace="model1" xmi.id="cl0005">
+                <UML:Component name="Services" namespace="model1" xmi.id="cl0005">
                     <UML:Classifier.feature/>
                 </UML:Component>
                 <UML:Component name=" " namespace="model1" xmi.id="cl0006">

@@ -21,20 +21,30 @@ component [Energy\nProvider] as energy
 ' #52cbff
 component [AIIDA\n] as aiida
 ' #7aff83
-component [Eligible\nParty] as ep
+component [Services\n] as services
 ' #ff52ab
 
+'''''''''''with interfaces'''''''''''
 interface " " as eddie1
 interface " " as eddie2
 interface " " as energy1
 
 eddie -right- eddie1
-ep -left-( eddie1 :Consumes data
+services -left-( eddie1 :Consumes data
 
 eddie -left- eddie2
 aiida -right-( eddie2 :Sends real-time data
 
 energy -right- energy1
 eddie -down-( energy1 :Gets historical data
+''''''''''with interfaces'''''''''''
+
+' '''''''''''without interfaces'''''''''''
+' eddie -right-> services :all energy data
+
+' aiida -right-> eddie :real-time data
+
+' energy -up-> eddie :historical data
+' '''''''''''without interfaces'''''''''''
 
 @enduml
