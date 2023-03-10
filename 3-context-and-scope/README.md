@@ -14,7 +14,7 @@ The context of the system is described by showing the external interfaces and by
 
 ## Business Context
 
-<!-- All kinds of diagrams that show the system as a black box and specify
+<!-- All kinds of context diagrams that show the system as a black box and specify
 the domain interfaces to communication partners. Alternatively 
 (or additionally) you can use a table, the three columns contain the name of
 the communication partner, the inputs, and the outputs. -->
