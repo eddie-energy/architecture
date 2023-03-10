@@ -6,6 +6,8 @@
   "scripts": {
     "build": "eleventy",
     "dev": "eleventy --serve",
+    "upload": "winscp.com /script=upload_via_winscp.txt",
+    "clean-deploy": "rimraf _site && npm run build && npm run upload",
     "clean": "rimraf _site node_modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
