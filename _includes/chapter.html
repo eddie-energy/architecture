@@ -32,6 +32,7 @@
         {{ collections.all | eleventyNavigation | eleventyNavigationToHtml: navigationOptions }}
       </nav>
       <main>
+        <aside class="page-metadata">last edited on {{ page.date | date: "%d.%m.%Y %H:%M" }}</aside>
         <h1>{{ title }}</h1>
         <div>{{ content }}</div>
       </main>

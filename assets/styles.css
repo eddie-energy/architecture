@@ -1,3 +1,5 @@
+/* ================================================================> page layout
+*/
 :root {
     --eddie-blue: #007aa2;
     --links: var(--eddie-blue);
@@ -9,11 +11,11 @@ body {
 }
 
 header {
-    display: flex;align-items: start;border-bottom: 2pt solid #007aa2; padding-bottom: .5em;
+    display: flex;align-items: start;border-bottom: 2pt solid var(--eddie-blue); padding-bottom: .5em;
 }
 
 header > h1 {
-    font-weight: bolder;color: #007aa2;flex-grow: 1;margin: 0
+    font-weight: bolder;color: var(--eddie-blue);flex-grow: 1;margin: 0
 }
 
 header > img {
@@ -21,6 +23,7 @@ header > img {
 }
 
 .container {
+    position:relative;
     display: flex;
     flex-wrap: wrap;
 }
@@ -33,6 +36,16 @@ header > img {
     flex: 1 1 80ch;
 }
 
+.page-metadata {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-style: italic;
+    color: var(--eddie-blue);
+}
+
+/* ================================================================> navigation
+*/
 .container > nav > ol {
     padding-left: 0;
 }
