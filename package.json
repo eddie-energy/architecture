@@ -1,0 +1,30 @@
+{
+  "name": "eddie-architecture-docs",
+  "version": "0.0.0",
+  "description": "Architecture documentation website for the EDDIE project",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "upload": "winscp.com /script=upload_via_winscp.txt",
+    "clean-deploy": "rimraf _site && npm run build && npm run upload",
+    "clean": "rimraf _site node_modules",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddie-energy/architecture.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/eddie-energy/architecture/issues"
+  },
+  "homepage": "https://github.com/eddie-energy/architecture#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "js-yaml": "^4.1.0",
+    "rimraf": "^4.4.0"
+  }
+}

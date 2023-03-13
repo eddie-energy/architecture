@@ -1,8 +1,8 @@
-# Runtime View {#section-runtime-view}
+---
+title: Runtime View
+---
 
-::: formalpara-title
-**Contents**
-:::
+##### Contents
 
 
 
@@ -24,9 +24,7 @@ Remark: The main criterion for the choice of possible scenarios
 **not** important to describe a large number of scenarios. You should
 rather document a representative selection.
 
-::: formalpara-title
-**Motivation**
-:::
+##### Motivation
 
 You should understand how (instances of) building blocks of your system
 perform their job and communicate at runtime. You will mainly capture
@@ -34,9 +32,7 @@ scenarios in your documentation to communicate your architecture to
 stakeholders that are less willing or able to read and understand the
 static models (building block view, deployment view).
 
-::: formalpara-title
-**Form**
-:::
+##### Form
 
 There are many notations for describing scenarios, e.g.
 
@@ -55,15 +51,15 @@ There are many notations for describing scenarios, e.g.
 See [Runtime View](https://docs.arc42.org/section-6/) in the arc42
 documentation.
 
-## \<Runtime Scenario 1> {#__runtime_scenario_1}
+## \<Runtime Scenario 1>
 
 -   *\<insert runtime diagram or textual description of the scenario>*
 
 -   *\<insert description of the notable aspects of the interactions
     between the building block instances depicted in this diagram.\>*
 
-## \<Runtime Scenario 2> {#__runtime_scenario_2}
+## \<Runtime Scenario 2>
 
-## ... {#_}
+## ...
 
-## \<Runtime Scenario n> {#__runtime_scenario_n}
+## \<Runtime Scenario n>

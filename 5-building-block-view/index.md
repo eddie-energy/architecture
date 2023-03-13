@@ -1,8 +1,8 @@
-# Building Block View {#section-building-block-view}
+---
+title: Building Block View
+---
 
-::: formalpara-title
-**Content**
-:::
+##### Content
 
 The building block view shows the static decomposition of the system
 into building blocks (modules, components, subsystems, classes,
@@ -13,9 +13,7 @@ dependencies (relationships, associations, ...)
 This view is mandatory for every architecture documentation. In analogy
 to a house this is the *floor plan*.
 
-::: formalpara-title
-**Motivation**
-:::
+##### Motivation
 
 Maintain an overview of your source code by making its structure
 understandable through abstraction.
@@ -23,9 +21,7 @@ understandable through abstraction.
 This allows you to communicate with your stakeholder on an abstract
 level without disclosing implementation details.
 
-::: formalpara-title
-**Form**
-:::
+##### Form
 
 The building block view is a hierarchical collection of black boxes and
 white boxes (see figure below) and their descriptions.
@@ -46,7 +42,7 @@ together with black box descriptions of their internal building blocks.
 See [Building Block View](https://docs.arc42.org/section-5/) in the
 arc42 documentation.
 
-## Whitebox Overall System {#_whitebox_overall_system}
+## Whitebox Overall System
 
 Here you describe the decomposition of the overall system using the
 following white box template. It contains
@@ -95,19 +91,16 @@ Insert your explanations of black boxes from level 1:
 If you use tabular form you will only describe your black boxes with
 name and responsibility according to the following schema:
 
-+-----------------------+-----------------------------------------------+
-| **Name**              | **Responsibility**                            |
-+=======================+===============================================+
-| *\<black box 1>*      |  *\<Text>*                                    |
-+-----------------------+-----------------------------------------------+
-| *\<black box 2>*      |  *\<Text>*                                    |
-+-----------------------+-----------------------------------------------+
+| **Name**         | **Responsibility** |
+| ---------------- | ------------------ |
+| *\<black box 1>* | *\<Text>*          |
+| *\<black box 2>* | *\<Text>*          |
 
 If you use a list of black box descriptions then you fill in a separate
 black box template for every important building block . Its headline is
 the name of the black box.
 
-### \<Name black box 1> {#__name_black_box_1}
+### \<Name black box 1>
 
 Here you describe \<black box 1> according the the following black box
 template:
@@ -140,21 +133,21 @@ template:
 
 *\<(optional) Open Issues/Problems/Risks>*
 
-### \<Name black box 2> {#__name_black_box_2}
+### \<Name black box 2>
 
 *\<black box template>*
 
-### \<Name black box n> {#__name_black_box_n}
+### \<Name black box n>
 
 *\<black box template>*
 
-### \<Name interface 1> {#__name_interface_1}
+### \<Name interface 1>
 
 ...
 
-### \<Name interface m> {#__name_interface_m}
+### \<Name interface m>
 
-## Level 2 {#_level_2}
+## Level 2
 
 Here you can specify the inner structure of (some) building blocks from
 level 1 as white boxes.
@@ -165,19 +158,19 @@ over completeness. Specify important, surprising, risky, complex or
 volatile building blocks. Leave out normal, simple, boring or
 standardized parts of your system
 
-### White Box *\<building block 1>* {#_white_box_emphasis_building_block_1_emphasis}
+### White Box *\<building block 1>*
 
 ...describes the internal structure of *building block 1*.
 
 *\<white box template>*
 
-### White Box *\<building block 2>* {#_white_box_emphasis_building_block_2_emphasis}
+### White Box *\<building block 2>*
 
 *\<white box template>*
 
 ...
 
-### White Box *\<building block m>* {#_white_box_emphasis_building_block_m_emphasis}
+### White Box *\<building block m>*
 
 *\<white box template>*
 
@@ -189,20 +182,20 @@ level 2 as white boxes.
 When you need more detailed levels of your architecture please copy this
 part of arc42 for additional levels.
 
-### AT - Austria \<\_building block x.1\_\> {#_white_box_building_block_x_1}
+### AT - Austria \<\_building block x.1\_\>
 
 Specifies the internal structure of *building block x.1*.
 
 *\<white box template>*
 
-### DE - Germany \<\_building block x.2\_\> {#_white_box_building_block_x_2}
+### DE - Germany \<\_building block x.2\_\>
 
 *\<white box template>*
 
-### FR - France \<\_building block x.2\_\> {#_white_box_building_block_x_2}
+### FR - France \<\_building block x.2\_\>
 
 *\<white box template>*
 
-### IT - Italy \<\_building block y.1\_\> {#_white_box_building_block_y_1}
+### IT - Italy \<\_building block y.1\_\>
 
 *\<white box template>*

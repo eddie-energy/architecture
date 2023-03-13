@@ -1,8 +1,8 @@
-# Quality Requirements {#section-quality-scenarios}
+---
+title: Quality Requirements
+---
 
-::: formalpara-title
-**Content**
-:::
+##### Content
 
 This section contains all quality requirements as quality tree with
 scenarios. The most important ones have already been described in
@@ -11,9 +11,7 @@ section 1.2. (quality goals)
 Here you can also capture quality requirements with lesser priority,
 which will not create high risks when they are not fully achieved.
 
-::: formalpara-title
-**Motivation**
-:::
+##### Motivation
 
 Since quality requirements will have a lot of influence on architectural
 decisions you should know for every stakeholder what is really important
@@ -22,25 +20,19 @@ to them, concrete and measurable.
 See [Quality Requirements](https://docs.arc42.org/section-10/) in the
 arc42 documentation.
 
-## Quality Tree {#_quality_tree}
+## Quality Tree
 
-::: formalpara-title
-**Content**
-:::
+##### Content
 
 The quality tree (as defined in ATAM -- Architecture Tradeoff Analysis
 Method) with quality/evaluation scenarios as leafs.
 
-::: formalpara-title
-**Motivation**
-:::
+##### Motivation
 
 The tree structure with priorities provides an overview for a sometimes
 large number of quality requirements.
 
-::: formalpara-title
-**Form**
-:::
+##### Form
 
 The quality tree is a high-level overview of the quality goals and
 requirements:
@@ -53,11 +45,9 @@ requirements:
 In any case the tree should include links to the scenarios of the
 following section.
 
-## Quality Scenarios {#_quality_scenarios}
+## Quality Scenarios
 
-::: formalpara-title
-**Contents**
-:::
+##### Contents
 
 Concretization of (sometimes vague or implicit) quality requirements
 using (quality) scenarios.
@@ -77,9 +67,7 @@ For architects, two kinds of scenarios are important:
     immediate environment. Example: Additional functionality is
     implemented or requirements for a quality attribute change.
 
-::: formalpara-title
-**Motivation**
-:::
+##### Motivation
 
 Scenarios make quality requirements concrete and allow to more easily
 measure or decide whether they are fulfilled.
@@ -89,8 +77,6 @@ ATAM you need to describe your quality goals (from section 1.2) more
 precisely down to a level of scenarios that can be discussed and
 evaluated.
 
-::: formalpara-title
-**Form**
-:::
+##### Form
 
 Tabular or free form text.
