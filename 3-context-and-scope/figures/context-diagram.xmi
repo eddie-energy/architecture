@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><XMI xmlns:UML="href://org.omg/UML/1.3" xmi.version="1.1">
+    <XMI.header>
+        <XMI.metamodel xmi.name="UML" xmi.version="1.3"/>
+    </XMI.header>
+    <XMI.content>
+        <UML:Model name="PlantUML 1.2022.7" xmi.id="model1">
+            <UML:Namespace.ownedElement>
+                <UML:Component name="" namespace="model1" xmi.id="cl0002">
+                    <UML:Classifier.feature/>
+                </UML:Component>
+                <UML:Component name="Energy" namespace="model1" xmi.id="cl0003">
+                    <UML:Classifier.feature/>
+                </UML:Component>
+                <UML:Component name="AIIDA" namespace="model1" xmi.id="cl0004">
+                    <UML:Classifier.feature/>
+                </UML:Component>
+                <UML:Component name="Services" namespace="model1" xmi.id="cl0005">
+                    <UML:Classifier.feature/>
+                </UML:Component>
+                <UML:Association name="Real-time data" namespace="model1" xmi.id="ass10">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass10" type="cl0004" xmi.id="end11">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass10" type="cl0002" xmi.id="end12">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association name="Historical data" namespace="model1" xmi.id="ass13">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass13" type="cl0002" xmi.id="end14">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass13" type="cl0003" xmi.id="end15">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association name="Real-time and historical data" namespace="model1" xmi.id="ass16">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass16" type="cl0002" xmi.id="end17">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass16" type="cl0005" xmi.id="end18">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+            </UML:Namespace.ownedElement>
+        </UML:Model>
+    </XMI.content>
+</XMI>
