@@ -2,38 +2,36 @@
 title: Solution Strategy
 ---
 
-##### Contents
+# Solution Strategy
 
-A short summary and explanation of the fundamental decisions and
+<!-- A short summary and explanation of the fundamental decisions and
 solution strategies, that shape system architecture. It includes
-
 -   technology decisions
-
 -   decisions about the top-level decomposition of the system, e.g.
     usage of an architectural pattern or design pattern
-
 -   decisions on how to achieve key quality goals
-
 -   relevant organizational decisions, e.g. selecting a development
     process or delegating certain tasks to third parties.
 
-##### Motivation
-
-These decisions form the cornerstones for your architecture. They are
-the foundation for many other detailed decisions or implementation
-rules.
-
-##### Form
-
-Keep the explanations of such key decisions short.
+Keep the explanations of such key decisions short. You may use a
+table: Quality goal, Scenario, Solution approach, Link to Details
 
 Motivate what was decided and why it was decided that way, based upon
 problem statement, quality goals and key constraints. Refer to details
-in the following sections.
+in the following sections. -->
 
-See [Solution Strategy](https://docs.arc42.org/section-4/) in the arc42
-documentation.
+There are certain goals of the framework which can be achieved by following a specific strategy. These goals are outlined in the following table which also provides links to more detailed explanations. Additional high-level information on these goals is presented in the subsections below.
 
+| No. | Quality Goal | Scenario | Approach | Details |
+|-|-|-|-|-|
+| 1 | Consent facade | All consumers shall provide their consent for sharing data in a homogeneous manner regardless of their country or their energy provider.| Implement a Consent Facade component based on the European Reference Process for providing consent. This component shall include speacialized adaptors each one implmenting the secificities of an energy provider. | [Block view](/5-building-block-view/index.md). [Runtime view](/6-runtime-view/index.md). |
+| 2 | World-wide coverage | Consumers from urban environemnts around the world shall be eligible to use the framework. | Devise a multi-stage expansion plan (starting from one area and expanding to other) that achieves coverage of a large part of urban societies around the world. | [Expantion plan](#expansion-plan). |
+
+
+## Consent Facade
+
+
+## Expansion Plan 
 
 There will be three phases for connectivity with regional data hubs. The Phase 1 will be with contributors to the consortium (already adding up to more than 69% of European metering points as estimated in section 1.2.7), the Phase 2 will be with other data hubs not directly in the project (25%) and a Phase 3 adds data-sharing infrastructures outside Europe. So, EDDIE aims on making available more than 70% of European metering points (taking into account that not all attempted regional connectors will be feasible due to environmental factors) – see Figure 1.
 
