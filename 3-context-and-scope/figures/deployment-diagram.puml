@@ -36,7 +36,7 @@ node "Docker Runtime" <<Eligible Party Infrastructure>> as epInfra{
   interface "Kafka" as eddie2
 
   eddie -right- eddie1
-  service -left-( eddie1 :Consume all data
+  service -left-( eddie1 :Consume historical \nand real-time data
   eddie -left- eddie2
 }
 

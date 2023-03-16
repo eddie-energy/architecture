@@ -51,7 +51,7 @@
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association name="Consume all data" namespace="model1" xmi.id="ass28">
+                <UML:Association name="Consume historical " namespace="model1" xmi.id="ass28">
                     <UML:Association.connection>
                         <UML:AssociationEnd association="ass28" type="cl0006" xmi.id="end29">
                             <UML:AssociationEnd.participant/>
