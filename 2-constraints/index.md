@@ -2,6 +2,8 @@
 title: Architecture Constraints
 ---
 
+# Architecture Constraints
+
 <!-- Any requirement that constraints software architects in their freedom of
 design and implementation decisions or decisions about the development
 process. These constraints sometimes go beyond individual systems and
@@ -30,9 +32,9 @@ Various constraints limit the design and implementation decisions. These constra
 
 | Constraint               | Description                                                                                                                                                                                                    |
 |--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| C1: Kafka communication  | The streaming of real-time data from AIIDA to EDDIE Framework over the Internet must implemented with Apache Kafka.                                                                                            |
-| C2: P1 interface         | Real-time data from the smart meter must be collected over the P1 Port.                                                                                                                                        |
-| C3: Distributed architecture | There shall be no central party aggregating data flows. A distributed data architecture must respect this principle.                                                                                           |
-| C4: Secure communication | All communication between parties must be signed and encrypted to ensure authenticity and integrity of data exchange.                                                                                          |
+| TC1: Kafka communication  | The streaming of real-time data from AIIDA to EDDIE Framework over the Internet must implemented with Apache Kafka.                                                                                            |
+| TC2: P1 interface         | Real-time data from the smart meter must be collected over the P1 Port.                                                                                                                                        |
+| TC3: Distributed architecture | There shall be no central party aggregating data flows. A distributed data architecture must respect this principle.                                                                                           |
+| TC4: Secure communication | All communication between parties must be signed and encrypted to ensure authenticity and integrity of data exchange.                                                                                          |
 |                          |                                                                                                                                                                                                                |
 
