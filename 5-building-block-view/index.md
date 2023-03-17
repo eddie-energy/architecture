@@ -2,6 +2,33 @@
 title: Building Block View
 ---
 
+# Building Block View
+
+TBD
+
+## Consent Facade
+
+TBD
+
+The figure below shows the components of the system that are relevant to the consent facade.
+
+<!-- ![EDDIE Coverage](/1-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
+<div align="center">
+<img src="./figures/component-diagram.png" width="300" alt="test">
+</div>
+
+`add figure description here`
+
+A different view of the system which includes two countries is shown below.
+
+<!-- ![EDDIE Coverage](/1-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
+<div align="center">
+<img src="./figures/region-connectors.png" width="900" alt="test">
+</div>
+
+`add figure description here`
+
+<!-- 
 ##### Content
 
 The building block view shows the static decomposition of the system
@@ -198,4 +225,4 @@ Specifies the internal structure of *building block x.1*.
 
 ### IT - Italy \<\_building block y.1\_\>
 
-*\<white box template>*
+*\<white box template>* -->

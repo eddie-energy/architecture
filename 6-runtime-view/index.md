@@ -2,7 +2,21 @@
 title: Runtime View
 ---
 
-##### Contents
+# Runtime View
+
+TBD
+
+## Consent Facade 
+
+TBD
+
+<div align="center">
+<img src="./figures/EDDIE_ConsentProcess.png" >
+</div>
+
+
+
+<!-- ##### Contents
 
 
 
@@ -62,4 +76,4 @@ documentation.
 
 ## ...
 
-## \<Runtime Scenario n>
+## \<Runtime Scenario n> -->
