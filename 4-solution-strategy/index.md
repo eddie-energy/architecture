@@ -24,21 +24,35 @@ There are certain goals of the framework which can be achieved by following a sp
 
 | No. | Quality Goal | Scenario | Approach | Details |
 |-|-|-|-|-|
-| 1 | Consent facade | All consumers shall provide their consent for sharing data in a homogeneous manner regardless of their country or their energy provider.| Implement a Consent Facade component based on the European Reference Process for providing consent. This component shall include speacialized adaptors each one implmenting the secificities of an energy provider. | [Block view](/5-building-block-view/index.md). [Runtime view](/6-runtime-view/index.md). |
-| 2 | World-wide coverage | Consumers from urban environemnts around the world shall be eligible to use the framework. | Devise a multi-stage expansion plan (starting from one area and expanding to other) that achieves coverage of a large part of urban societies around the world. | [Expantion plan](#expansion-plan). |
+| 1 | Consent facade | All consumers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their energy provider.| Implement a Consent Facade component based on the European Reference Process for providing consent. This component shall include speacialized adaptors implmenting the secificities of each country. | [Block view](/5-building-block-view/index.md). [Runtime view](/6-runtime-view/index.md). |
+| 2 | World-wide coverage | Consumers from urban environemnts around the world shall be eligible to use the framework. | Devise a multi-stage expansion plan (starting from one area and expanding to others) that achieves coverage of a large part of urban societies around the world. | [Expantion plan](#expansion-plan). |
 
 
 ## Consent Facade
 
+The Consent Facade component is implemented within the EDDIE framework which is under the operation of the eligible party. Upon request from the consumer, this component is responsible for triggering the process that gives the eligible party access to the consumer's energy data (either from the consumer's energy provider, or from AIIDA). More information regarding the components related to the Consent Facade can be found in Section [Building Block View](/5-building-block-view/index.md). More information on the related processes and behaviors can be found in Section [Runtime view](/6-runtime-view/index.md).
+
+
 
 ## Expansion Plan 
 
-There will be three phases for connectivity with regional data hubs. The Phase 1 will be with contributors to the consortium (already adding up to more than 69% of European metering points as estimated in section 1.2.7), the Phase 2 will be with other data hubs not directly in the project (25%) and a Phase 3 adds data-sharing infrastructures outside Europe. So, EDDIE aims on making available more than 70% of European metering points (taking into account that not all attempted regional connectors will be feasible due to environmental factors) – see Figure 1.
+The expansion plan includes three phases for achieving compatibility with energy providers in a large area. These phases are described in the table below.
 
-![EDDIE Coverage](/1-introduction-and-goals/figures/EDDIE_Coverage.jpg)
+| Phase | Included Countries | Comment |
+|-|-|-|
+| 1 | Austria, Germany, Italy, France, and Spain. | Compatibility with countries of contributors to the consortium. |
+| 2 | Norway, Finland, Estonia, Latvia, Lithuania, Poland, Greece, Netherlands, Belgium, Portugal, and Ireland. | Compatibility with other countries within Europe (excluded in Phase 1). |
+| 3 | Australia, United Kingdom, and United States of America | Compatibility with countries outside Europe. |
 
-The consortium of EDDIE includes leading experts on data-sharing, data interoperability, smart grids, electricity and gas metering, standardisation, distributed flexibility and legislation in Europe, modelling and IT development, dissemination and a broad coverage of data-sharing infrastructure operators, who will contribute with connecting and opening their national environments. Together, they feature more than 60% of European metering points for electricity alone.
+The countries envisioned in the 3 phases mentioned above are also shown in the figure below. Notably, this explansion plan achieves compatibility with more than 70% of European smart meters.
 
+<!-- ![EDDIE Coverage](/1-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
+<div align="center">
+<img src="../1-introduction-and-goals/figures/EDDIE_Coverage.jpg" width="800" alt="test">
+</div>
+
+
+## OTHERs (TBD)
 
 The overall methodology of EDDIE is oriented towards the first main objective to (OBJ#1) provide a dependable, scalable and extensible European Distributed Data Infrastructure for Energy Framework (EDDIE Framework). This means that the overlying European interface will be given priority, and data accessible through data-sharing infrastructure (1) provided by metered data administrators will be available first. In parallel, and independently but synchronised, the work on the second main objective to (OBJ#2) provide an Administrative Interface for In-house Data Access (AIIDA) to feed in-house data (2) to EDDIE Framework users will be started.
 
