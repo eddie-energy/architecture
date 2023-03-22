@@ -4,6 +4,8 @@
   "description": "Architecture documentation website for the EDDIE project",
   "main": "index.js",
   "scripts": {
+    "compose-up": "docker compose -f _docker/docker-compose.yml -p 11ty-generation up -d",
+    "compose-down": "docker compose -f _docker/docker-compose.yml -p 11ty-generation down",
     "build": "eleventy",
     "dev": "eleventy --serve",
     "upload": "winscp.com /script=upload_via_winscp.txt",
