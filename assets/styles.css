@@ -3,6 +3,7 @@
 :root {
   --eddie-blue: #007aa2;
   --links: var(--eddie-blue);
+  --section-separator: 2pt solid var(--eddie-blue);
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 header {
   display: flex;
   align-items: start;
-  border-bottom: 2pt solid var(--eddie-blue);
+  border-bottom: var(--section-separator);
   padding-bottom: 0.5em;
 }
 
@@ -42,12 +43,14 @@ header > img {
   flex: 1 1 80ch;
 }
 
-.page-metadata {
-  position: absolute;
-  top: 0;
-  right: 0;
+footer {
+  border-top: var(--section-separator);
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span {
   font-style: italic;
-  color: var(--eddie-blue);
 }
 
 /* ================================================================> navigation
