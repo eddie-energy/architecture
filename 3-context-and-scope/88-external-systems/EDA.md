@@ -1,6 +1,6 @@
 ---
 title: EDA
-tags: MVP-1
+tags: [MVP-1,Austria]
 ---
 
 TBD.

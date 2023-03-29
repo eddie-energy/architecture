@@ -1,6 +1,6 @@
 ---
 title: ENEDIS
-tags: MVP-1
+tags: [MVP-1,France]
 ---
 
 The ENEDIS Datahub is a permission administrator and data access provider for historically validated data in France.
