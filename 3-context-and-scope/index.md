@@ -12,6 +12,8 @@ Various options:
 -   Context diagrams
 -   Lists of communication partners and their interfaces. -->
 
+# System Scope and Context
+
 The context of the system is described by showing the external interfaces and by specifying inputs and outputs. We differentiate between business context and technical context (for the same system).
 
 ## Business Context
@@ -63,7 +65,7 @@ The figure below shows the associations between artifacts and interfaces as well
 
 <!-- ![deployment diagram](/3-context-and-scope/figures/deployment-diagram.png) -->
 <div align="center">
-<img src="./figures/deployment-diagram.png" width="650" alt="test">
+<img src="./figures/deployment-diagram.png" width="650">
 </div>
 
 The following table shows a description of the artifacts.

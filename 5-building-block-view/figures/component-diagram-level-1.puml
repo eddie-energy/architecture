@@ -1,0 +1,82 @@
+@startuml component-diagram-level-1
+'component diagram
+caption Component Diagram: Level 1 view
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam actor{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle{
+  BorderColor transparent
+  BackgroundColor transparent
+  FontColor transparent
+}
+
+
+
+node "Eligible Party Infrastructure"  as epInfra{
+  package "Framework" {    
+    component "Consent \nFacade" as consentFacade
+    component "Data \nBroker " as broker
+    database "Database\n" as database
+    component "Admin \nConsole" as adminConsole
+    component "\t\t\tInteroperable Communication\t\t\t" as comm
+  }
+  package "Applications" {
+    component "User Interface \n(Website or App)" as ui
+    component "Services" as services
+  }
+
+  ui -down- consentFacade
+  ui -[hidden]right- services
+  consentFacade -right- broker
+  broker -right- database
+  broker -down- comm
+  database -right-adminConsole
+  broker -up- services
+  adminConsole -down- comm
+
+}
+node "In-house Infrastructure" {
+  component "\tAIIDA\t" as aiida
+  node "Smart Meter" as meter {
+      interface "P1" as p1
+      rectangle "dummy" as dummy
+  }
+  p1 -[hidden] dummy
+  aiida -right-( p1 : "\t"
+}
+
+node "Regional Data-Sharing Infrastructure" as energyProvider {
+  interface "Meter Data \nPortal" as dataPortal
+  interface "Consent Admin\t\t \nPortal" as adminPortal
+}
+
+actor "Consumer" as consumer
+actor "EP Admin" as admin
+  admin -left- adminConsole
+
+consumer ---- aiida
+consumer - ui
+
+comm -down-( dataPortal
+comm -down-( adminPortal
+consentFacade -right-( adminPortal
+
+aiida -up- comm
+
+
+@enduml

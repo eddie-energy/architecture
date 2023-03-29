@@ -26,6 +26,8 @@ There are certain goals of the framework which can be achieved by following a sp
 |-|-|-|-|-|
 | 1 | Consent facade | All consumers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their energy provider.| Implement a Consent Facade component based on the European Reference Process for providing consent. This component shall include speacialized adaptors implmenting the secificities of each country. | [Block view](/5-building-block-view/index.md). [Runtime view](/6-runtime-view/index.md). |
 | 2 | World-wide coverage | Consumers from urban environemnts around the world shall be eligible to use the framework. | Devise a multi-stage expansion plan (starting from one area and expanding to others) that achieves coverage of a large part of urban societies around the world. | [Expantion plan](#expansion-plan). |
+| 3 | Incentives | Why would consumers and eligible parties use eddie | marketplace |  |
+| 4 | Deployment alternatives | Different options for deploying the framework | options |  |
 
 
 ## Consent Facade
@@ -44,7 +46,7 @@ The expansion plan includes three phases for achieving compatibility with energy
 | 2 | Norway, Finland, Estonia, Latvia, Lithuania, Poland, Greece, Netherlands, Belgium, Portugal, and Ireland. | Compatibility with other countries within Europe (excluded in Phase 1). |
 | 3 | Australia, United Kingdom, and United States of America | Compatibility with countries outside Europe. |
 
-The countries envisioned in the 3 phases mentioned above are also shown in the figure below. Notably, this explansion plan achieves compatibility with more than 70% of European smart meters.
+The countries envisioned in the 3 phases mentioned above are also shown in the figure below. Notably, this expansion plan achieves compatibility with more than 70% of European smart meters.
 
 <!-- ![EDDIE Coverage](/1-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
 <div align="center">
