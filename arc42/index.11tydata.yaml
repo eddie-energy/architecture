@@ -4,5 +4,5 @@ layout: chapter
 
 # date of last modification of the file - the git version
 # is computationally more expensive
-date: Last Modified
-# date: git Last Modified
+# date: Last Modified
+date: git Last Modified
