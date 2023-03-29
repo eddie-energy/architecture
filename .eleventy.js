@@ -17,8 +17,15 @@ module.exports = function (eleventyConfig) {
     imgClass: "plantuml",
   });
   eleventyConfig.setDataFileBaseName("index");
-  eleventyConfig.ignores.add("README.md");
-  eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy("!(node_modules|_site)/**/*.(png|gif|jpg)");
-  return { pathPrefix: "/architecture/" };
+  eleventyConfig.addPassthroughCopy({ "eleventy/assets": "assets" });
+  eleventyConfig.addPassthroughCopy("arc42/**/*.(png|gif|jpg)");
+  return {
+    dir: {
+      input: "arc42",
+      includes: "../eleventy/_includes",
+      data: "../eleventy/_data",
+      output: "eleventy/_site",
+    },
+    pathPrefix: "/architecture/",
+  };
 };

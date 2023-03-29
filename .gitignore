@@ -2,4 +2,4 @@
 /.idea/
 /figures/.idea/workspace.xml
 /node_modules
-/_site
+/eleventy/_site

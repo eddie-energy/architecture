@@ -4,13 +4,13 @@
   "description": "Architecture documentation website for the EDDIE project",
   "main": "index.js",
   "scripts": {
-    "compose-up": "docker compose -f _docker/docker-compose.yml -p 11ty-generation up -d",
-    "compose-down": "docker compose -f _docker/docker-compose.yml -p 11ty-generation down",
+    "compose-up": "docker compose -f eleventy/_docker/docker-compose.yml -p 11ty-generation up -d",
+    "compose-down": "docker compose -f eleventy/_docker/docker-compose.yml -p 11ty-generation down",
     "build": "eleventy",
     "dev": "eleventy --serve",
     "upload": "winscp.com /script=upload_via_winscp.txt",
-    "clean-deploy": "rimraf _site && npm run build && npm run upload",
-    "clean": "rimraf _site node_modules",
+    "clean-deploy": "rimraf eleventy/_site && npm run build && npm run upload",
+    "clean": "rimraf eleventy/_site node_modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
