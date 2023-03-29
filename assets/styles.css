@@ -1,50 +1,77 @@
+/* ================================================================> page layout
+*/
 :root {
-    --eddie-blue: #007aa2;
-    --links: var(--eddie-blue);
+  --eddie-blue: #007aa2;
+  --links: var(--eddie-blue);
+  --section-separator: 2pt solid var(--eddie-blue);
 }
 
 body {
-    max-width: 1100px;
-    padding: 0 2ch;
+  max-width: 1100px;
+  padding: 0 2ch;
 }
 
 header {
-    display: flex;align-items: start;border-bottom: 2pt solid #007aa2; padding-bottom: .5em;
+  display: flex;
+  align-items: start;
+  border-bottom: var(--section-separator);
+  padding-bottom: 0.5em;
 }
 
 header > h1 {
-    font-weight: bolder;color: #007aa2;flex-grow: 1;margin: 0
+  font-weight: bolder;
+  color: var(--eddie-blue);
+  flex-grow: 1;
+  margin: 0;
 }
 
 header > img {
-    height: 4rem;
+  height: 4rem;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container > nav {
-    flex: 0 0 30ch;
+  flex: 0 0 30ch;
 }
 
 .container > main {
-    flex: 1 1 80ch;
+  flex: 1 1 80ch;
 }
 
+footer {
+  border-top: var(--section-separator);
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span {
+  font-style: italic;
+}
+
+/* ================================================================> navigation
+*/
 .container > nav > ol {
-    padding-left: 0;
+  padding-left: 0;
 }
 
-.container > nav > ol ol{
-    padding-left: 3ch;
+.container > nav > ol ol,
+.container > nav > ol ol ol {
+  padding-left: 3ch;
+}
+
+.container > nav > ol ol ol {
+  padding-left: 1.5ch;
 }
 
 .container > nav > ol > li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 a.current {
-    font-weight: bolder;
+  font-weight: bolder;
 }
