@@ -31,7 +31,7 @@ The building block view is presented through a description of the system using l
 
 ## Level 1
 
-A high-level view of the system is shown below. To derive this view we have used functional decomposition on the main functionality of the framework (as discussed in Section 3: [Context and Scope](../3-context-and-scope/index.md)).
+A high-level view of the system is shown below. To derive this view we have used functional decomposition on the main functionality of the framework (as discussed in Section 3: [Context and Scope](../03-context-and-scope/index.md)).
 
 <div align="center">
 <img src="./figures/component-diagram-level-1.png" width="800">
@@ -93,7 +93,7 @@ TBD
 
 The figure below shows the components of the system that are relevant to the consent facade.
 
-<!-- ![EDDIE Coverage](/1-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
+<!-- ![EDDIE Coverage](/01-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
 <div align="center">
 <img src="./figures/component-diagram.png" width="300" alt="test">
 </div>
@@ -102,7 +102,7 @@ The figure below shows the components of the system that are relevant to the con
 
 A different view of the system which includes two countries is shown below.
 
-<!-- ![EDDIE Coverage](/1-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
+<!-- ![EDDIE Coverage](/01-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
 <div align="center">
 <img src="./figures/region-connectors.png" width="900" alt="test">
 </div>

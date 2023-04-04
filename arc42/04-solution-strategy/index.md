@@ -24,7 +24,7 @@ There are certain goals of the framework which can be achieved by following a sp
 
 | No. | Quality Goal | Scenario | Approach | Details |
 |-|-|-|-|-|
-| 1 | Consent facade | All consumers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their energy provider.| Implement a Consent Facade component based on the European Reference Process for providing consent. This component shall include speacialized adaptors implmenting the secificities of each country. | [Block view](/5-building-block-view/index.md). [Runtime view](/6-runtime-view/index.md). |
+| 1 | Consent facade | All consumers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their energy provider.| Implement a Consent Facade component based on the European Reference Process for providing consent. This component shall include speacialized adaptors implmenting the secificities of each country. | [Block view](/05-building-block-view/index.md). [Runtime view](/06-runtime-view/index.md). |
 | 2 | World-wide coverage | Consumers from urban environemnts around the world shall be eligible to use the framework. | Devise a multi-stage expansion plan (starting from one area and expanding to others) that achieves coverage of a large part of urban societies around the world. | [Expantion plan](#expansion-plan). |
 | 3 | Incentives | Why would consumers and eligible parties use eddie | marketplace |  |
 | 4 | Deployment alternatives | Different options for deploying the framework | options |  |
@@ -32,7 +32,7 @@ There are certain goals of the framework which can be achieved by following a sp
 
 ## Consent Facade
 
-The Consent Facade component is implemented within the EDDIE framework which is under the operation of the eligible party. Upon request from the consumer, this component is responsible for triggering the process that gives the eligible party access to the consumer's energy data (either from the consumer's energy provider, or from AIIDA). More information regarding the components related to the Consent Facade can be found in Section [Building Block View](/5-building-block-view/index.md). More information on the related processes and behaviors can be found in Section [Runtime view](/6-runtime-view/index.md).
+The Consent Facade component is implemented within the EDDIE framework which is under the operation of the eligible party. Upon request from the consumer, this component is responsible for triggering the process that gives the eligible party access to the consumer's energy data (either from the consumer's energy provider, or from AIIDA). More information regarding the components related to the Consent Facade can be found in Section [Building Block View](/05-building-block-view/index.md). More information on the related processes and behaviors can be found in Section [Runtime view](/06-runtime-view/index.md).
 
 
 
@@ -48,9 +48,9 @@ The expansion plan includes three phases for achieving compatibility with energy
 
 The countries envisioned in the 3 phases mentioned above are also shown in the figure below. Notably, this expansion plan achieves compatibility with more than 70% of European smart meters.
 
-<!-- ![EDDIE Coverage](/1-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
+<!-- ![EDDIE Coverage](/01-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
 <div align="center">
-<img src="../1-introduction-and-goals/figures/EDDIE_Coverage.jpg" width="800" alt="test">
+<img src="../01-introduction-and-goals/figures/EDDIE_Coverage.jpg" width="800" alt="test">
 </div>
 
 
@@ -78,7 +78,7 @@ Both together, the EDDIE Framework and AIIDA will be put into a consistent overa
 •	In-house data sources: Currently, near real-time data can in most MSs be read from the “standardised interface” on the smart meter (if it has been ordered and installed after July 4th 2019). If the customer manages to connect to that interface and make that data processable, it is still only available in-house and it needs to be transformed to a common format. The Administrative Interface for In-house Data Access (AIIDA) will be in the position to read that data from different meter models, standards and configurations and make it available through an online consent-based mechanism. This means that users of services that are based on the EDDIE Framework can be shown a button on e.g., the service website saying “connect my in-house data” and will be routed to their Consent Management Interface (within AIIDA). If a consent is given, the AIIDA instance will deliver the requested data to the EDDIE Framework of the service for which a consent was granted. Not only main meter interfaces will be supported, but also others (e.g., sub-meters).
 •	Publicly available data: There is also other – often publicly available – data, that is necessary for many processes, but does not directly belong to the customer and also does not show consumption or generation time series characteristics. National weather forecasts, price feeds or market reference data fall under this category. These data families are still depicted diversely and by different players depending on the country. Optionally, but if the time allows, the EDDIE project team will also address this field and strive to make it available in a unified pivotal format through the EDDIE Framework. -->
 
-<!-- ![EDDIE Overview](/1-introduction-and-goals/figures/EDDIE_overview.png) -->
+<!-- ![EDDIE Overview](/01-introduction-and-goals/figures/EDDIE_overview.png) -->
 <!-- <div align="center"> -->
 <!-- <img src="./figures/EDDIE_overview.png" width="850" alt="test"> -->
 <!-- </div> -->

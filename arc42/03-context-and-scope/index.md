@@ -45,7 +45,7 @@ The table below shows a description of all the entities of the context diagram.
 | EDDIE framework | Aggregates energy data from AIIDA and the energy provider (can be multiple instances of AIIDA and energy providers), and consolidates it. | &#x2611; Yes |
 | Services | Acquire consolidated data from the EDDIE framework and use it to generate value, e.g., using data analysis services that are based on statistics, machine learning, and artificial intelligence approaches. | &#x2612; No |
 
-The figure above shows how the services of an eligible party can acquire real-time data (from AIIDA) and historical data (from the energy provider) using the EDDIE framework. The eligible party is then expected to process this data using services (as discussed in quality goal No. 2 mentioned in Section [Introduction and Goals](/1-introduction-and-goals/README.md)). Interestingly, an energy provider can also act as an eligible party that aggregates energy data and processes it using the existing services. This way, a consumer can use services that are offered by any energy provider in the same or different country (as discussed in quality goal No. 2 mentioned in Section [Introduction and Goals](/1-introduction-and-goals/README.md)).
+The figure above shows how the services of an eligible party can acquire real-time data (from AIIDA) and historical data (from the energy provider) using the EDDIE framework. The eligible party is then expected to process this data using services (as discussed in quality goal No. 2 mentioned in Section [Introduction and Goals](../01-introduction-and-goals/index.md)). Interestingly, an energy provider can also act as an eligible party that aggregates energy data and processes it using the existing services. This way, a consumer can use services that are offered by any energy provider in the same or different country (as discussed in quality goal No. 2 mentioned in Section [Introduction and Goals](/arc42/01-introduction-and-goals/index.md)).
 
 Notably, **one eligible party must be able to use one instance of an EDDIE framework to communicate with one or more instances of AIIDA and energy providers**. This way, the eligible party can aggregate data from multiple consumers thereby being able to implement services that leverage large datasets of energy information (i.e., not only from one consumer).
 
@@ -63,7 +63,7 @@ From a technical perspective, the system includes four types of nodes which are:
 
 The figure below shows the associations between artifacts and interfaces as well as the communication protocols of these interfaces.
 
-<!-- ![deployment diagram](/3-context-and-scope/figures/deployment-diagram.png) -->
+<!-- ![deployment diagram](/03-context-and-scope/figures/deployment-diagram.png) -->
 <div align="center">
 <img src="./figures/deployment-diagram.png" width="650">
 </div>
@@ -85,5 +85,5 @@ The table below shows a summary of the interfaces.
 | EDDIE Framework Interface | EDDIE Framework | Services | Kafka |
 | Energy Provider Interfaces | Energy Provider | EDDIE Framework | HTTP |
 
-A description of how the artifacts operate in order to achieve their goal (e.g., what is the procedure for the EDDIE Framework to acquire historical data) is presented in Section [Solution Strategy](/4-solution-strategy/README.md).
+A description of how the artifacts operate in order to achieve their goal (e.g., what is the procedure for the EDDIE Framework to acquire historical data) is presented in Section [Solution Strategy](/04-solution-strategy/README.md).
 
