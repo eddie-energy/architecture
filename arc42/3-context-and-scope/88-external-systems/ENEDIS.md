@@ -10,7 +10,10 @@ services.
 
 This API is based on HTTP/REST principles and uses an OAuth 2.0 based authorization scheme to access that data.
 
-_Note:_ Most links to ENEDIS require the creation of a user account. The account can be created by login in with an email that has no account associatated (yes very obvious...).
+_Note:_ 
+
+* Most links to ENEDIS require the creation of a user account. An account can be created by login in with an email that has no account associatated (yes very obvious...).
+* Use the French documentation as reference and translate with e.g. a browser plugin, as the english version is outdated.
 
 ## Authorization
 The current authorization API [Jeton v3](https://datahub-enedis.fr/services-api/data-connect/documentation/jeton/) is based on OAuth 2.0. This
