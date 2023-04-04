@@ -9,7 +9,7 @@ This repository hosts the documentation of the software architecture of EDDIE (E
 There are 3 options to read the architecture documenation:
 1. Visit the architecture website (pending).
 1. [Set up the architecture website locally.](./eleventy/README.md)
-1. [Navigate the files on GitHub.](./arc42/README.md)
+1. [Navigate the files on GitHub.](./contents.md)
 
 ### Other Interesting links:
 
