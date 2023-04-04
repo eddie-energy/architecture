@@ -10,10 +10,6 @@ services.
 
 This API is based on HTTP/REST principles and uses an OAuth 2.0 based authorization scheme to access that data.
 
-_Note:_ 
-
-* Most links to ENEDIS require the creation of a user account. An account can be created by login in with an email that has no account associatated (yes very obvious...).
-* Use the French documentation as reference and translate with e.g. a browser plugin, as the english version is outdated.
 
 ## Authorization
 The current authorization API [Jeton v3](https://datahub-enedis.fr/services-api/data-connect/documentation/jeton/) is based on OAuth 2.0. This
@@ -43,3 +39,8 @@ A description  of various authorization flows can be found in the auth0 document
 - [État des services](https://datahub-enedis.fr/services-api/etat-des-services/): current status of the ENEDIS services _in French_
 - [Data Connect](https://datahub-enedis.fr/en/data-connect-en/)
 - [Data Connect API documentation](https://datahub-enedis.fr/services-api/data-connect/documentation/): swagger API documentation _in French_
+
+_Note:_ 
+
+* Most links to ENEDIS require the creation of a user account. An account can be created by login in with an email that has no account associatated (yes very obvious...).
+* Use the French documentation as reference and translate with e.g. a browser plugin, as the english version is outdated.
