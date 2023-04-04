@@ -16,9 +16,9 @@ The current authorization API [Jeton v3](https://datahub-enedis.fr/services-api/
 is the API ENEDIS offers to fulfill it's role as a permission administrator.
 
 Though their documentation mentions that they implement the [Client Credentials Grant Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow), 
-their implementation is more akin to [Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow) as their api requires
-us to redirect the user to their website (via the [Authorization v1](https://datahub-enedis.fr/services-api/data-connect/documentation/autorisation-v1/) API) which will result in the user granting us permission (by providing his credentials) in which case
-the API provides us with an authorization code (via a redirect uri) which can then be used to request a token or refresh token from the token api ([Jeton v3](https://datahub-enedis.fr/services-api/data-connect/documentation/jeton/)).
+their implementation is more akin to [Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow) as their API requires
+us to redirect the user to their website (via the [Authorization v1](https://datahub-enedis.fr/services-api/data-connect/documentation/autorisation-v1/) API) which will result in the user granting us permission (by providing his credentials). In this case
+the API provides us with an authorization code (via a redirect uri) which can then be used to request a token or refresh token from the token API ([Jeton v3](https://datahub-enedis.fr/services-api/data-connect/documentation/jeton/)).
 
 RFCs for OAUTH grants:
 - [RFC 6749: Authorization Code Grant](https://www.rfc-editor.org/rfc/rfc6749#section-4.1)
@@ -42,5 +42,5 @@ A description  of various authorization flows can be found in the auth0 document
 
 _Note:_ 
 
-* Most links to ENEDIS require the creation of a user account. An account can be created by login in with an email that has no account associatated (yes very obvious...).
+* Most links to ENEDIS require the creation of a user account. An account can be created by logging in with an email that has no account associatated (yes very obvious...).
 * Use the French documentation as reference and translate with e.g. a browser plugin, as the english version is outdated.
