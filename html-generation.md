@@ -1,4 +1,4 @@
-<img align="right" width="150" src="../arc42/figures/eddie-logo.png">
+<img align="right" width="150" src="./arc42/figures/eddie-logo.png">
 <br/>
 <br/>
 
