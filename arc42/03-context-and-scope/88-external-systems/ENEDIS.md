@@ -15,10 +15,11 @@ This API is based on HTTP/REST principles and uses an OAuth 2.0 based authorizat
 The current authorization API [Jeton v3](https://datahub-enedis.fr/services-api/data-connect/documentation/jeton/) is based on OAuth 2.0. This
 is the API ENEDIS offers to fulfill it's role as a permission administrator.
 
-Though their documentation mentions that they implement the [Client Credentials Grant Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow), 
-their implementation is more akin to [Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow) as their API requires
-us to redirect the user to their website (via the [Authorization v1](https://datahub-enedis.fr/services-api/data-connect/documentation/autorisation-v1/) API) which will result in the user granting us permission (by providing his credentials). In this case
-the API provides us with an authorization code (via a redirect uri) which can then be used to request a token or refresh token from the token API ([Jeton v3](https://datahub-enedis.fr/services-api/data-connect/documentation/jeton/)).
+ENEDIS implements the [Client Credentials Grant Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow), i.e. we provide the credentials
+of our ENEDIS application to the [Jeton v3](https://datahub-enedis.fr/services-api/data-connect/documentation/jeton/) API which will return a JWT bearer token. The token needs to be provided 
+to the other APIs when requesting data e.g. consumption data like daily consumption or a load curve. With the token we can request data for all usage points (metering points) for which we have been granted access.
+
+Access to a usage point (metering point) is granted by a user via the [Authorization v1](https://datahub-enedis.fr/services-api/data-connect/documentation/autorisation-v1/) API. This API redirects the user to an ENEDIS page on which they can grant access to their usage points.
 
 RFCs for OAUTH grants:
 - [RFC 6749: Authorization Code Grant](https://www.rfc-editor.org/rfc/rfc6749#section-4.1)
