@@ -2,84 +2,39 @@
 title: Cross-cutting Concepts
 ---
 
-##### Content
-
-This section describes overall, principal regulations and solution ideas
+<!-- This section describes overall, principal regulations and solution ideas
 that are relevant in multiple parts (= cross-cutting) of your system.
 Such concepts are often related to multiple building blocks. They can
 include many different topics, such as
-
 -   models, especially domain models
-
 -   architecture or design patterns
-
 -   rules for using specific technology
-
 -   principal, often technical decisions of an overarching (=
     cross-cutting) nature
+-   implementation rules -->
 
--   implementation rules
+There are various important concepts that are relevant to many parts of the system. The figure below shows an overview of these concepts in the form of a mindmap. The motivation for using some of these concepts is explained below.
 
-##### Motivation
+<div align="center"> 
+<img src="./figures/crosscutting-concepts.png" width=650>
+</div>
 
-Concepts form the basis for *conceptual integrity* (consistency,
-homogeneity) of the architecture. Thus, they are an important
-contribution to achieve inner qualities of your system.
 
-Some of these concepts cannot be assigned to individual building blocks,
-e.g. security or safety.
 
-##### Form
+## Domain Models
+### CIM (Common Information Model)
 
-The form can be varied:
+CIM is an electric power transmission and distribution standard developed by the electric power industry. It aims to allow application software to exchange information about an electrical network. It has been officially adopted by the International Electrotechnical Commission (IEC). CIM defines a common vocabulary and basic ontology. For this system, CIM is used as the target model for storing energy data in the [Database](../05-building-block-view/index.md#level-1) of the eligible party.
 
--   concept papers with any kind of structure
+### SAREF (Smart Applications REFerence) 
 
--   cross-cutting model excerpts or scenarios using notations of the
-    architecture views
+The SAREF ontology is a shared model of consensus that facilitates the matching of existing assets in the smart applications domain. SAREF provides building blocks that allow separation and recombination of different parts of the ontology depending on specific needs. SAREF explicitly specifies recurring core concepts in the smart applications domain, the main relationships between these concepts, and axioms to constrain the usage of these concepts and relationships. It has been created based on the following fundamental principles: reuse, modularity, extensibility, and maintainability. For this system, SAREF is used to define data models for various processes.
 
--   sample implementations, especially for technical concepts
+## Security
+### HTTPS
 
--   reference to typical usage of standard frameworks (e.g. using
-    Hibernate for object/relational mapping)
+explanation (What is it, where do we use it, and why)
 
-##### Structure
+### SASL/SSL
 
-A potential (but not mandatory) structure for this section could be:
-
--   Domain concepts
-
--   User Experience concepts (UX)
-
--   Safety and security concepts
-
--   Architecture and design patterns
-
--   \"Under-the-hood\"
-
--   development concepts
-
--   operational concepts
-
-Note: it might be difficult to assign individual concepts to one
-specific topic on this list.
-
-![Possible topics for crosscutting
-concepts](./figures/08-Crosscutting-Concepts-Structure-EN.png)
-
-See [Concepts](https://docs.arc42.org/section-8/) in the arc42
-documentation.
-
-## *\<Concept 1>*
-
-*\<explanation>*
-
-## *\<Concept 2>*
-
-*\<explanation>*
-
-...
-
-## *\<Concept n>*
-
-*\<explanation>*
+explanation (What is it, where do we use it, and why)
