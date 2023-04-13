@@ -1,0 +1,42 @@
+@startuml deployment-diagram-option-1
+'deployment diagram
+caption Deployment Diagram: Level 1 view, option 1
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam artifact{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam actor{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle{
+  BorderColor transparent
+  BackgroundColor transparent
+  FontColor transparent
+}
+
+  node "Docker Runtime" <<Local Computing Infrastructure>> as local {    
+    artifact "Consent\nFacade" as consentFacade
+    artifact "Interoperable\nCommunication" as comm
+    artifact "Admin\nConsole" as adminConsole
+    artifact "Data\nBroker " as broker
+    database "Database\n" as database
+  }
+  consentFacade -right- comm
+  adminConsole -left- comm
+  consentFacade -down- broker
+  database -left- broker
+  comm -down- broker
+  adminConsole -down- database
+  
+@enduml

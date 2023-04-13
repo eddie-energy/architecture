@@ -2,105 +2,69 @@
 title: Deployment View
 ---
 
-##### Content
-
-The deployment view describes:
-
+<!-- The deployment view describes:
 1.  technical infrastructure used to execute your system, with
     infrastructure elements like geographical locations, environments,
     computers, processors, channels and net topologies as well as other
     infrastructure elements and
-
 2.  mapping of (software) building blocks to that infrastructure
     elements.
-
 Often systems are executed in different environments, e.g. development
 environment, test environment, production environment. In such cases you
 should document all relevant environments.
 
-Especially document a deployment view if your software is executed as
-distributed system with more than one computer, processor, server or
-container or when you design and construct your own hardware processors
-and chips.
-
 From a software perspective it is sufficient to capture only those
 elements of an infrastructure that are needed to show a deployment of
-your building blocks. Hardware architects can go beyond that and
-describe an infrastructure to any level of detail they need to capture.
+your building blocks. -->
 
-##### Motivation
-
-Software does not run without hardware. This underlying infrastructure
-can and will influence a system and/or some cross-cutting concepts.
-Therefore, there is a need to know the infrastructure.
-
-Maybe a highest level deployment diagram is already contained in section
+<!-- Maybe a highest level deployment diagram is already contained in section
 3.2. as technical context with your own infrastructure as ONE black box.
 In this section one can zoom into this black box using additional
 deployment diagrams:
-
--   UML offers deployment diagrams to express that view. Use it,
-    probably with nested diagrams, when your infrastructure is more
-    complex.
-
--   When your (hardware) stakeholders prefer other kinds of diagrams
-    rather than a deployment diagram, let them use any kind that is able
-    to show nodes and channels of the infrastructure.
-
-See [Deployment View](https://docs.arc42.org/section-7/) in the arc42
-documentation.
-
-## Infrastructure Level 1
-
 Describe (usually in a combination of diagrams, tables, and text):
-
 -   distribution of a system to multiple locations, environments,
     computers, processors, .., as well as physical connections between
     them
-
 -   important justifications or motivations for this deployment
     structure
-
 -   quality and/or performance features of this infrastructure
+-   mapping of software artifacts to elements of this infrastructure -->
 
--   mapping of software artifacts to elements of this infrastructure
+The deployment view of the system focuses on the utilized technical infrastructure. A high-level deployment diagram is shown in Section [Context and Scope](../03-context-and-scope/index.md#technical-context). While that diagram shows the framework as a black box, this section shows deployment diagrams that depict where the internal components of the system run. For the system decomposition, the same logic as in Section [Building Block View](../05-building-block-view/index.md) is used, i.e., based on levels.
 
-For multiple environments or alternative deployments please copy and
-adapt this section of arc42 for all relevant environments.
+## Infrastructure Level 1
 
-***\<Overview Diagram>***
+The prime way to deploy the system is shown below.
 
-Motivation
+<div align="center"> 
+<img src="./figures/deployment-diagram-level-1.png" width="650">
+</div>
 
-:   *\<explanation in text form>*
+The Level 1 view includes the following high-level nodes.
 
-Quality and/or Performance Features
+| Node | Description |
+|-|-|
+|Eligible Party Infrastructure | This is operated by the eligible party. The Local Computing Infrastructure is used for running the framework which is deployed locally on the premises of the eligible party. The Cloud Computing Infrastructure is out of scope of this document, as discussed in Section: [Context and Scope](../03-context-and-scope/index.md#business-context). |
+|Regional Data Sharing Infrastructure | This is also out of scope for this document, although, integration with the provided interfaces is necessary.
+|In-house Infrastructure | This node is operated by the consumer. It includes an in-house device and the smart meter. |
 
-:   *\<explanation in text form>*
+Specifically for the deployment of the framework, i.e., the node Local Computing Infrastructure shown above, 2 additional deployment options are possible. The original deployment is shown below isolated from the rest of the system.
 
-Mapping of Building Blocks to Infrastructure
+<div align="center"> 
+<img src="./figures/deployment-diagram-option-1.png" width=400>
+</div>
 
-:   *\<description of the mapping>*
+Two additional options are shown below.
 
-![EDDIE Doployment Options (BYOI)](./figures/EDDIE_Deployment_Options.png)
+| Option 2 | Option 3 |
+|-|-|
+|<div><img src="./figures/deployment-diagram-option-2.png" width=450></div>|<div><img src="./figures/deployment-diagram-option-3.png" width=450></div>|
+
+The motivation for all 3 options is shown in the table below.
+| Option | Motivation |
+|-|-|
+| 1 |-|
+| 2 |-|
+| 3 |-|
 
 ## Infrastructure Level 2
-
-Here you can include the internal structure of (some) infrastructure
-elements from level 1.
-
-Please copy the structure from level 1 for each selected element.
-
-### *\<Infrastructure Element 1>*
-
-*\<diagram + explanation>*
-
-### *\<Infrastructure Element 2>*
-
-*\<diagram + explanation>*
-
-...
-
-### *\<Infrastructure Element n>*
-
-*\<diagram + explanation>*
