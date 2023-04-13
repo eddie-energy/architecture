@@ -9,8 +9,10 @@
 1. [Constraints](./arc42/02-constraints/index.md)
 
 1. [Context & Scope](./arc42/03-context-and-scope/index.md)
+    - [MVP 1](./arc42/03-context-and-scope/01-mvp1.md)
 
 1. [Solution Strategy](./arc42/04-solution-strategy/index.md)
+    - [Consent Facade](./arc42/04-solution-strategy/consent-facade/consent-facade.md)
 
 1. [Building Block View](./arc42/05-building-block-view/index.md)
 

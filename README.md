@@ -16,3 +16,4 @@ There are 3 options to read the architecture documentation:
 - [EDDIE Website](https://eddie.energy/)
 - [EDDIE Linkedin](https://www.linkedin.com/company/eddie-energy/)
 - [EDDIE Github](https://github.com/eddie-energy)
+- [EDDIE CORDIS](https://cordis.europa.eu/project/id/101069510)
