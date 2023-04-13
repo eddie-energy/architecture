@@ -2,25 +2,29 @@
 title: Risks and Technical Debts
 ---
 
-##### Contents
-
-A list of identified technical risks or technical debts, ordered by
-priority
-
-##### Motivation
-
-"Risk management is project management for grown-ups" (Tim Lister,
+<!-- "Risk management is project management for grown-ups" (Tim Lister,
 Atlantic Systems Guild.)
 
-This should be your motto for systematic detection and evaluation of
-risks and technical debts in the architecture, which will be needed by
-management stakeholders (e.g. project managers, product owners) as part
-of the overall risk analysis and measurement planning.
+List of risks and/or technical debts ordered by
+priority, probably including suggested
+measures to minimize, mitigate or avoid risks or reduce technical debts. -->
 
-##### Form
+Various technical risks and technical debts are identified for the operation of the system. Technical risks refer to occurrences of unwanted and sometimes unexpected behaviors that could impact the operation of the system negatively. Technical debts refer to identified behaviors, solutions, and concepts that may improve the operation of the system but are not realized.
 
-List of risks and/or technical debts, probably including suggested
-measures to minimize, mitigate or avoid risks or reduce technical debts.
+## Technical Risks
 
-See [Risks and Technical Debt](https://docs.arc42.org/section-11/) in
-the arc42 documentation.
+The table below shows an overview of the identified technical risks. This table also has links to additional explanations for technical risks that need more clarification.
+
+| No. | Risk | Applicable Measures | Section |
+|-|-|-|-|
+| 1 | AIIDA causing upload bottlenecks due to limited bandwidth .| Reduce volume or frequency of real-time data transmissions. | [Link]() |
+
+
+
+## Technical Debts
+
+The table below shows an overview of the identified technical debts. This table also has links to additional explanations for technical debts that need more clarification.
+
+| No. | Debt | Possible Soluctions | Section |
+|-|-|-|-|
+| 1 | Expose energy data through a data space | Integrate a data space connector for exposing sovereign data | [Link]() |
