@@ -1,5 +1,6 @@
 @startuml context-diagram
 'context diagram
+caption Context Diagram: Interactions between the framework and its environment
 
 ' skinparam linetype ortho
 skinparam usecase {
@@ -11,9 +12,9 @@ skinparam rectangle {
   BackgroundColor transparent
 }
 
-usecase "\nEDDIE\nFramework\n" as eddie 
+usecase "\n\nFramework\n\n" as eddie 
 ' #ffbd38
-rectangle "Energy\nProvider" as energy
+rectangle "Utility\nProvider" as energy
 ' #52cbff
 rectangle "AIIDA\n" as aiida
 ' #7aff83
@@ -23,7 +24,5 @@ rectangle "Services\n" as services
 aiida -right-> eddie :Real-time data
 energy -up-> eddie :Historical data
 eddie -right-> services :Real-time and historical data
-
-caption Figure 3.1: Context diagram of
 
 @enduml

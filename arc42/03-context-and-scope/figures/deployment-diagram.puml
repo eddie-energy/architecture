@@ -1,7 +1,8 @@
 @startuml deployment-diagram
 'deployment diagram
+caption Deployment Diagram: High-level view of the system
 
-' skinparam linetype ortho
+skinparam linetype ortho
 skinparam interface {
   backgroundColor transparent
   borderColor black
@@ -29,37 +30,36 @@ skinparam rectangle {
   stereotypeFontColor Transparent
 }
 
-node "Docker Runtime" <<Eligible Party Infrastructure>> as epInfra{
-  artifact "EDDIE Framework" as eddie
-  artifact "\nServices\n" as service
-  interface "Kafka" as eddie1
-  interface "Kafka" as eddie2
+node "\t\t\tDocker Runtime\t\t\t" <<Eligible Party Infrastructure>> as epInfra{
+  artifact "\t\t Framework\t\t" as eddie
+  artifact "Services" as service
+  interface "\t\tKafka" as eddie1
+  interface "\t\tKafka" as eddie2
 
-  eddie -right- eddie1
-  service -left-( eddie1 :Consume historical \nand real-time data
-  eddie -left- eddie2
+  eddie -up- eddie1
+  service -down-( eddie1 :Consume historical\nand real-time data
+  eddie -right- eddie2
 }
-
+node "In-house Infrastructure"  {
 node "Docker Runtime" <<In-house Device>> as house{
-  artifact AIIDA as aiida
+  artifact "\tAIIDA\t" as aiida
 }
 node " " <<Smart Meter>> as meter{
   interface "P1" as p1
-  rectangle "\n" as dummy
-  dummy -[hidden]left- p1
+}
 }
 
-node " " <<Energy Provider Infrastructure>> as energyProvider {
-  interface "HTTP" as energy1
+node "Regional Data Sharing\nInfrastructure"  as energyProvider {
+  interface "API" as energy1
 }
 
 ' actor "Consumer" as consumer
 ' actor "Eligible\nParty" as ep
 
-aiida -right-( p1 :"              Get real-time data         "
+aiida --( p1 :Get real-time data\n
 
-eddie -down-( energy1 :Get historical data
-aiida -down-( eddie2 :Send real-time data
+eddie -down--( energy1 :Get historical data
+aiida -up--( eddie2 :Send real-time data\n\n
 
 ' consumer -down- aiida
 ' ep -down- eddie
