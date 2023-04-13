@@ -18,23 +18,23 @@ subdivide them into technical constraints, organizational and political
 constraints and conventions (e.g. programming or versioning guidelines,
 documentation or naming conventions) -->
 
-Various constraints limit the design and implementation decisions. These constraints are divided into categories below.
+Various constraints limit the design and implementation decisions. These constraints are divided into two categories below, i.e., political constraints, and technical constraints.
 
 ## Political Constraints 
 
-| No. | Constraint                       | Description |
-|-|----------------------------------|------------|
-| 1 | Data Space Interoperability | Interactions with Gaia-X compliant Data Spaces should be explored and, if possible, implemeted. |
-| 2 | Respect for subsidiarity    | When implementing access to online data-sharing infrastructures, EDDIE Framework and its region connectors will integrate fully into MS data exchange environments, and not intervene into national decisions. |
-| 3 |                                  | |
+| No. | Constraint | Description |
+|-|-|-|
+| 1 | Data space interoperability | Interactions with Gaia-X compliant Data Spaces should be explored and, if possible, implemeted. |
+| 2 | Respect for subsidiarity | When implementing access to online data-sharing infrastructures, EDDIE Framework and its region connectors will integrate fully into MS data exchange environments, and not intervene into national decisions. |
+| 3 |  |  |
 
 ## Technical Constraints 
 
-| No. | Constraint               | Description                                                                                                                                                                                                    |
-|-----|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1 | Kafka communication  | The streaming of real-time data from AIIDA to EDDIE Framework over the Internet must implemented with Apache Kafka.                                                                                            |
-| 2 | P1 interface         | Real-time data from the smart meter must be collected over the P1 Port.                                                                                                                                        |
+| No. | Constraint | Description |
+|-|-|-|
+| 1 | Kafka communication  | The streaming of real-time data from AIIDA to EDDIE Framework over the Internet must implemented with Apache Kafka. |
+| 2 | P1 interface | Real-time data from the smart meter must be collected over the P1 Port. |
 | 3 | Distributed architecture | There shall be no central party aggregating data flows. A distributed data architecture must respect this principle.                                                                                           |
-| 4 | Secure communication | All communication between parties must be signed and encrypted to ensure authenticity and integrity of data exchange.                                                                                          |
-| 5 |                      |                                                                                                                                                                                                                |
+| 4 | Secure communication | All communication between parties must be signed and encrypted to ensure authenticity and integrity of data exchange. | 
+| 5 |  |  |
 
