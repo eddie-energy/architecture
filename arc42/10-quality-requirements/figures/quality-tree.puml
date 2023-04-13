@@ -1,0 +1,42 @@
+@startwbs quality-tree
+'work breakdown structure
+caption Quality Tree: Overview of the quality requirements
+
+<style>
+wbsdiagram {
+  node {
+    BackgroundColor transparemt
+    HorizontalAlignment center
+    fontsize 14
+  }
+'   :depth(3) {
+'     Linecolor white
+'   }
+}
+</style>
+
+* Quality
+
+++ Performance
++++ Data Loss
+++++_ No data\nshall be\n lost
++++ Latency
+++++_ Delay to\nsend data\n< 5sec
+
+++ Availability
++++ Down Time
+++++_ <1min/day
++++ Boot Time
+++++_ <10sec
+
+++ Interoperability
++++ Regional\nCoverage
+++++_ >3 EU\ncountries
+
+++ Security
++++ Unauthorized\nAccess
+++++_ Breaches\nreported\nin <5min
++++ Compliance
+++++_ Access\nto data\nonly with\nconsumer\nconsent
+
+@endwbs

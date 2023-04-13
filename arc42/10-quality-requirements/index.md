@@ -2,88 +2,94 @@
 title: Quality Requirements
 ---
 
-##### Content
-
-This section contains all quality requirements as quality tree with
+<!-- This section contains all quality requirements as quality tree with
 scenarios. The most important ones have already been described in
 section 1.2. (quality goals)
-
 Here you can also capture quality requirements with lesser priority,
 which will not create high risks when they are not fully achieved.
-
-##### Motivation
-
-Since quality requirements will have a lot of influence on architectural
-decisions you should know for every stakeholder what is really important
-to them, concrete and measurable.
-
-See [Quality Requirements](https://docs.arc42.org/section-10/) in the
-arc42 documentation.
-
-## Quality Tree
-
-##### Content
-
 The quality tree (as defined in ATAM -- Architecture Tradeoff Analysis
 Method) with quality/evaluation scenarios as leafs.
 
-##### Motivation
-
-The tree structure with priorities provides an overview for a sometimes
-large number of quality requirements.
-
-##### Form
-
 The quality tree is a high-level overview of the quality goals and
 requirements:
-
 -   tree-like refinement of the term \"quality\". Use \"quality\" or
     \"usefulness\" as a root
+-   a mind map with quality categories as main branches 
+quality tree example https://arnon.me/2010/05/utility-trees-hatching-quality-attributes/
+-->
 
--   a mind map with quality categories as main branches
+The quality requirements of the system are outlined in the quality tree below. This tree has 4 main attributes, i.e., Performance, Availability, Interoperability,  and Security, each one having one or more requirements.
 
-In any case the tree should include links to the scenarios of the
-following section.
+<div align="center"> 
+<img src="./figures/quality-tree.png" width=700>
+</div>
+
+A table of requirements that need further explanation is shown below. This table provides links to the following sections which describe scenarios showing the behavior of the system when a stimulus that affects a requirement arrives.
+
+| Attribute | Requirement | Section |
+|-|-|-|
+| Performance | Data Loss| [Link]()|
+| Performance | Latency | [Link](#latency)|
+| Availability | Down Time | [Link]()|
+| Availability | Boot Time | [Link]()|
+| Interoperability | Coverage | [Link]()|
+| Security | Unauthorized Access | [Link](#unauthorized-access)|
+| Security | Compliance | [Link]()|
+
+
 
 ## Quality Scenarios
 
-##### Contents
-
-Concretization of (sometimes vague or implicit) quality requirements
+<!-- Concretization of (sometimes vague or implicit) quality requirements
 using (quality) scenarios.
-
 These scenarios describe what should happen when a stimulus arrives at
 the system.
-
 For architects, two kinds of scenarios are important:
-
 -   Usage scenarios (also called application scenarios or use case
     scenarios) describe the system's runtime reaction to a certain
     stimulus. This also includes scenarios that describe the system's
     efficiency or performance. Example: The system reacts to a user's
     request within one second.
-
 -   Change scenarios describe a modification of the system or of its
     immediate environment. Example: Additional functionality is
-    implemented or requirements for a quality attribute change.
+    implemented or requirements for a quality attribute change. -->
 
-##### Motivation
+<!-- A scenario should have:
+- Context – under what circumstances
+- Stimulus – trigger in Use case lingo
+- Response – what the system does. -->
 
-Scenarios make quality requirements concrete and allow to more easily
-measure or decide whether they are fulfilled.
+### Latency
 
-Especially when you want to assess your architecture using methods like
-ATAM you need to describe your quality goals (from section 1.2) more
-precisely down to a level of scenarios that can be discussed and
-evaluated.
+#### Context
+Every AIIDA instance collects energy data in real time and generates a data stream. Data streams from one or more AIIDA instances are then sent to an eligible party, i.e., to an instance of the Framework. The Framework uses a message broker to distribute the different streams to different services. Each service implements logic to perform specific computations on the data.
 
-##### Form
+#### Stimulus
+A new consumption value is collected by AIIDA from an energy data source, e.g., a smart meter. 
 
-Tabular or free form text.
-
+#### Response
+The response of the system is that this value is propagated to one or more services of one or more eligible parties. The latency from the time a value is collected until the time the last service receives it shall be less than 5 seconds.
 
 
-Following this guidance, we propose EDDIE – a European Distributed Data Infrastructure for Energy – with six main objectives as solution to Establish the Grounds for a Common European Energy Data Space as described in Table 1.
+### Unauthorized Access
+
+#### Context
+
+#### Stimulus
+
+#### Response
+
+
+
+
+
+
+
+
+
+
+
+<!-- Following this guidance, we propose EDDIE – a European Distributed Data Infrastructure for Energy – with six main objectives as solution to Establish the Grounds for a Common European Energy Data Space as described in Table 1.
 
 <table>
 <tr>
@@ -152,4 +158,4 @@ OBJ#5
 Table 2 Overview of project participants, together with their geographical position and roles
 
 
-oreover, with EDDIE we present a strategy to ensure the wide usability, adjustability and application of EDDIE within and beyond the project duration: (1) The consortium is fully committed to the open-source idea: all project deliverables will be free to download, fork and use; (2) Training activities will be carried out, including a strategy how to continue after the project; (3) Academic partners will train students on EDDIE and let them implement prototype applications in their teaching activities.
+oreover, with EDDIE we present a strategy to ensure the wide usability, adjustability and application of EDDIE within and beyond the project duration: (1) The consortium is fully committed to the open-source idea: all project deliverables will be free to download, fork and use; (2) Training activities will be carried out, including a strategy how to continue after the project; (3) Academic partners will train students on EDDIE and let them implement prototype applications in their teaching activities. -->
