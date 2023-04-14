@@ -1,6 +1,7 @@
 ---
 title: System Scope and Context
 ---
+
 <!-- System scope and context - as the name suggests - delimits your system
 (i.e. your scope) from all its communication partners (neighboring
 systems and users, i.e. the context of your system). It thereby
@@ -11,8 +12,6 @@ technical context (channels, protocols, hardware).
 Various options:
 -   Context diagrams
 -   Lists of communication partners and their interfaces. -->
-
-# System Scope and Context
 
 The context of the system is described by showing the external interfaces and by specifying inputs and outputs. We differentiate between business context and technical context (for the same system).
 

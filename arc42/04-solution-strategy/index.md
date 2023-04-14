@@ -2,8 +2,6 @@
 title: Solution Strategy
 ---
 
-# Solution Strategy
-
 <!-- A short summary and explanation of the fundamental decisions and
 solution strategies, that shape system architecture. It includes
 -   technology decisions

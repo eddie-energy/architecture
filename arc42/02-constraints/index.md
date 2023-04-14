@@ -2,8 +2,6 @@
 title: Architecture Constraints
 ---
 
-# Architecture Constraints
-
 <!-- Any requirement that constraints software architects in their freedom of
 design and implementation decisions or decisions about the development
 process. These constraints sometimes go beyond individual systems and
