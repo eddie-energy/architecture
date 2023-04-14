@@ -22,13 +22,10 @@ To generate PlantUml pictures, a local server is used which is started via docke
 4. Deploy files contained in directory `_site` to a webserver.
 
 ## How to deploy a freshly generated site to the Hagenberg webserver
-1. `npm install` _needs to run only once_
-2. `npm run compose-up`
-3. `npm run clean-deploy`
-4. Enter SFTP server's username _when prompted_
-5. Enter SFTP server's password _when prompted_
-6. Check if the site is up and running at: <https://eddie-web.projekte.fh-hagenberg.at/architecture/>
-   _use a hard refresh to clear the browser cache_
+1. Push changes to GitHub repository
+2. Merge into main branch
+3. Wait for GitHub Action to deploy changes
+4. For more info see https://github.com/eddie-energy/architecture/issues/12
 
 ## Tools used
 - [11ty](https://www.11ty.dev/): the used static site generator

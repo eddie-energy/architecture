@@ -2,8 +2,6 @@
 title: Introduction and Goals
 ---
 
-# Introduction and Goals
-
 <!-- Describes the relevant requirements and the driving forces that software architects and the development team must consider. These include
 
 -   underlying
@@ -12,7 +10,7 @@ title: Introduction and Goals
 -   quality goals for the architecture and
 -   relevant stakeholders and their expectations -->
 
-EDDIE (European Distributed Data Infrastructure for Energy) is a research project which aims at building a framework for aggregating energy-related data, e.g., from houses whose owners have provided the appropriate permission.
+EDDIE (European Distributed Data Infrastructure for Energy) is a research project aiming to build a framework for aggregating energy-related data, e.g., from houses whose owners have provided the appropriate permission.
 
 ## Background
 
