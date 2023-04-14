@@ -28,27 +28,27 @@ Describe (usually in a combination of diagrams, tables, and text):
 -   important justifications or motivations for this deployment
     structure
 -   quality and/or performance features of this infrastructure
--   mapping of software artifacts to elements of this infrastructure -->
+-   mapping of software artifacts to elements of this infrastructure --> 
 
 The deployment view of the system focuses on the utilized technical infrastructure. A high-level deployment diagram is shown in Section [Context and Scope](../03-context-and-scope/index.md#technical-context). While that diagram shows the framework as a black box, this section shows deployment diagrams that depict where the internal components of the system run. For the system decomposition, the same logic as in Section [Building Block View](../05-building-block-view/index.md) is used, i.e., based on levels.
 
-## Infrastructure Level 1
+## Infrastructure Level 2
 
 The prime way to deploy the system is shown below.
 
 <div align="center"> 
-<img src="./figures/deployment-diagram-level-1.png" width="650">
+<img src="./figures/deployment-diagram-level-2.png" width="650">
 </div>
 
-The Level 1 view includes the following high-level nodes.
+The Level 2 view includes the following high-level nodes.
 
 | Node | Description |
 |-|-|
 |Eligible Party Infrastructure | This is operated by the eligible party. The Local Computing Infrastructure is used for running the framework which is deployed locally on the premises of the eligible party. The Cloud Computing Infrastructure is out of scope of this document, as discussed in Section: [Context and Scope](../03-context-and-scope/index.md#business-context). |
-|Regional Data Sharing Infrastructure | This is also out of scope for this document, although, integration with the provided interfaces is necessary.
-|In-house Infrastructure | This node is operated by the consumer. It includes an in-house device and the smart meter. |
+|Regional Data-sharing Infrastructure | This is also out of scope for this document, although, integration with the provided interfaces is necessary.
+|In-house Infrastructure | This node is operated by the consumer. It includes an in-house device (e.g., a Raspberry Pi) and the smart meter. |
 
-Specifically for the deployment of the framework, i.e., the node Local Computing Infrastructure shown above, 2 additional deployment options are possible. The original deployment is shown below isolated from the rest of the system.
+Specifically for the deployment of the framework, i.e., the node Local Computing Infrastructure shown above, two additional deployment options are possible. The original deployment is shown below isolated from the rest of the system.
 
 <div align="center"> 
 <img src="./figures/deployment-diagram-option-1.png" width=400>
@@ -58,7 +58,7 @@ Two additional options are shown below.
 
 | Option 2 | Option 3 |
 |-|-|
-|<div><img src="./figures/deployment-diagram-option-2.png" width=450></div>|<div><img src="./figures/deployment-diagram-option-3.png" width=450></div>|
+|<div><img src="./figures/deployment-diagram-option-2.png" width=450></div>|<div><img src="./figures/deployment-diagram-option-3.png" width=430></div>|
 
 The motivation for all 3 options is shown in the table below.
 | Option | Motivation |
@@ -67,4 +67,4 @@ The motivation for all 3 options is shown in the table below.
 | 2 |-|
 | 3 |-|
 
-## Infrastructure Level 2
+## Infrastructure Level 3

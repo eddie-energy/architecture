@@ -27,73 +27,141 @@ This structure can be used:
 
 # Building Block View
 
-The building block view is presented through a description of the system using levels. Level 1 shows the overall system along with all the contained building blocks. Level 2 focuses on some building blocks from level 1. Level 3 focuses on building blocks from Level 3 and so on. After the levels, there are additional sections showing the block view for specific features.
+The building block view is presented through a description of the system using levels. Level 1 shows the overall system along with all the main building blocks. Level 2 focuses on some building blocks from Level 1. Level 3 focuses on building blocks from Level 3 and so on. To decompose the system into building blocks we have used functional decomposition on the main functionality of the framework (as discussed in Section 3: [Context and Scope](../03-context-and-scope/index.md)).
 
 ## Level 1
 
-A high-level view of the system is shown below. To derive this view we have used functional decomposition on the main functionality of the framework (as discussed in Section 3: [Context and Scope](../03-context-and-scope/index.md)).
+A high-level view of the system is shown in the component diagram below. 
 
 <div align="center">
-<img src="./figures/component-diagram-level-1.png" width="800">
+<img src="./figures/component-diagram-level-1.png" width="500">
 </div>
 
 ### Contained Building Blocks
 
-The eligible party manages the following components:
+The eligible party manages the following components.
 
 | Component | Responsibility |
 | - | - |
 | User Interface | Entry point for consumers to provide their consent. |
-| Consent Facade | Manages and stores the consent of the consumers. |
-| Data Broker | Handles the communication among internal components |
-| Database  | Stores information about consents, state, and data. |
-| Admin Console | Entry point for the eligible party to register with regional data-sharing infrastructure. |
-| Interoperable Communication  | translates messages/data from data-sharing infrastructures of different regions to a unified format. |
+| Services | Implement logic to process the energy data. |
+| EDDIE Framework | Manages the consumer consents, consolidates energy data from different Regional Data-sharing Infrastructures a unified format. |
 
-The house of the consumer hosts the following.
-
-The eligible party manages the following components:
+The In-house Infrastructure hosts the following components.
 
 | Component | Responsibility |
 | - | - |
 | AIIDA| Gets real-time data from the smart meter. |
 
+### Interfaces
+
+The Level 1 view includes the following interfaces.
+
+| Interface | Responsibility | Type| Data Model |
+| - | - | - | - |
+| Consent Admin Portal | Receives requests from eligible parties for access to consumer data. | HTTP (or other) | [Link](./data-models/consent-admin-portal.md) |
+| Meter Data Portal | Provides historical data to the eligible party (with appropriate consent) | HTTP (or other) | [Link](./data-models/meter-data-portal.md) |
+| P1 | Provides access to real-time energy consumption data | P1 | [Link](./data-models/p1-interface.md) |
+
 ### Black Boxes
 
-| Component | Responsibility | Interface |
-| - | - | - |
-| Consent Admin Portal | Issues consent to the eligible party upon request from a consumer | HTTP |
-| Meter Data Portal | Gives access to historical data upon request from the eligible party (with appropriate consent) | HTTP |
-| Smart meter | A device installed at home by the grid operator | P1 |
-
+| Component | Function |
+| - | - |
+| Regional Data-sharing Infrastructure | Operated by the utility provider or a metered data administrator. It is used only through the interfaces (described above). |
+| Smart meter | Provided by the utility provider. Is is used only through the interface (described above). |
 
 
 ## Level 2
 
-Intro and motivation
+The Level 2 view of the system is shown in the component diagram below. 
 
-- figure
+<div align="center">
+<img src="./figures/component-diagram-level-2.png" width="650">
+</div>
 
 ### Contained Building Blocks
 
+The EDDIE Framework includes the following components.
+
+| Component | Responsibility |
+| - | - |
+| Consent Facade | Manages and stores the consent of the consumers. |
+| Data Broker | Handles the communication among internal and external components |
+| Database | Stores information about consents, state, and data. |
+| Admin Console | Entry point for the eligible party to register with regional data-sharing infrastructure (if necessary). |
+| Interoperable Communication | Translates messages/data from different Regional Data-sharing Infrastructures (e.g., from different countries) to a unified format. |
+
+The AIIDA component includes the following components.
+
+| Component | Responsibility |
+| - | - |
+| pending | - |
 
 ### Interfaces
 
+The Level 2 view introduces the following interfaces.
+
+| Provided From | Consumed By | Type | Data Model |
+| - | - | - | - |
+| Consent Facade | User Interface | HTTP | [Link](./data-models/consent-facade-interface.md) |
+| Data Broker | Services | Kafka | [Link](./data-models/data-broker-interface.md) |
+| Interoperable Communication | AIIDA | Kafka | [Link](./data-models/inter-comm-aiida-interface.md) |
 
 ### Black Boxes
 
-## 
+No introduced black boxes in Level 2
+
+## Level 3
+
+The Level 3 view of the system is shown in the component diagram below. 
+<!-- 
+
+<div align="center">
+<img src="./figures/component-diagram-level-3.png" width="650">
+</div>
+ -->
+### Contained Building Blocks
+<!-- 
+The eligible party manages the following components.
+
+| Component | Responsibility |
+| - | - |
+| User Interface | Entry point for consumers to provide their consent. |
+| Services | Implement logic to process the energy data. |
+| EDDIE Framework | Manages the consumer consents, consolidates energy data from different Regional Data-sharing Infrastructures a unified format. |
+
+The In-house Infrastructure hosts the following components.
+
+| Component | Responsibility |
+| - | - |
+| AIIDA| Gets real-time data from the smart meter. |
+ -->
+### Interfaces
+<!-- 
+The Level 1 view includes the following interfaces.
+
+| Interface | Responsibility | Type| Data Model |
+| - | - | - | - |
+| Consent Admin Portal | Receives requests from eligible parties for access to consumer data. | HTTP (or other) | [Link](./data-models/consent-admin-portal/consent-admin-portal.md) |
+| Meter Data Portal | Provides historical data to the eligible party (with appropriate consent) | HTTP (or other) | [Link](./data-models/meter-data-portal/meter-data-portal.md) |
+| P1 | Provides access to real-time energy consumption data | P1 | [Link](./data-models/p1-interface/p1-interface.md) |
+ -->
+### Black Boxes
+<!-- 
+| Component | Function |
+| - | - |
+| Regional Data-sharing Infrastructure | Operated by the utility provider or a metered data administrator. It is used only through the interfaces (described above). |
+| Smart meter | Provided by the utility provider. Is is used only through the interface (described above). | -->
 
 
 
 
-## Consent Facade
+<!-- ## Consent Facade
 
 TBD
 
 The figure below shows the components of the system that are relevant to the consent facade.
 
-<!-- ![EDDIE Coverage](/01-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
 <div align="center">
 <img src="./figures/component-diagram.png" width="300" alt="test">
 </div>
@@ -102,7 +170,6 @@ The figure below shows the components of the system that are relevant to the con
 
 A different view of the system which includes two countries is shown below.
 
-<!-- ![EDDIE Coverage](/01-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
 <div align="center">
 <img src="./figures/region-connectors.png" width="900" alt="test">
 </div>
@@ -125,4 +192,4 @@ Specifies the internal structure of *building block x.1*.
 
 ### IT - Italy \<\_building block y.1\_\>
 
-*\<white box template>*
+*\<white box template>* -->

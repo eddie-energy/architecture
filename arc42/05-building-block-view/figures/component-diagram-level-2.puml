@@ -1,6 +1,6 @@
-@startuml component-diagram-level-1
+@startuml component-diagram-level-2
 'component diagram
-caption Component Diagram: Level 1 view
+caption Component Diagram: Level 2 view
 
 skinparam linetype ortho
 skinparam interface {
@@ -26,17 +26,30 @@ skinparam rectangle{
 }
 
 
-
 node "Eligible Party Infrastructure"  as epInfra{
-  component "\t\tEDDIE Framework\t\t\n" as eddie
-  component "User Interface \n(Website or App)" as ui
-  component "Services" as services
+  component "EDDIE Framework" {    
+    component "Consent \nFacade" as consentFacade
+    component "Data \nBroker " as broker
+    database "Database\n" as database
+    component "Admin \nConsole" as adminConsole
+    component "\t\t\t\tInteroperable Communication\t\t\t\t" as comm
+  }
+ 
+    component "User Interface \n(Website or App)" as ui
+    component "Services" as services
+  
 
-  ui -down- eddie
+  ui -down(0- consentFacade
   ui -[hidden]right- services
-  services -down- eddie
-}
+  consentFacade -right- broker
+  consentFacade -down- comm
+  broker -right- database
+  broker -down- comm
+  database -right-adminConsole
+  broker -up0)- services
+  adminConsole -down- comm
 
+}
 node "In-house\nInfrastructure" {
   component "\tAIIDA\t" as aiida
   node "Smart Meter" as meter {
@@ -51,14 +64,15 @@ node "Regional Data-sharing\nInfrastructure" as energyProvider {
 }
 
 actor "Consumer" as consumer
-actor "Eligible Party" as admin
+actor "Eligible\nParty" as admin
+  admin -left- adminConsole
 
-admin -left- eddie
-consumer -left- ui
 consumer -down- aiida
+consumer - ui
 
-eddie -down-( adminPortal
-eddie -down-( dataPortal
-eddie -down- aiida
+comm -down-( dataPortal
+comm -down-( adminPortal
+
+aiida -up(0- comm
 
 @enduml

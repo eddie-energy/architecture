@@ -1,6 +1,6 @@
-@startuml deployment-diagram-level-1
+@startuml deployment-diagram-level-2
 'deployment diagram
-caption Deployment Diagram: Level 1 view
+caption Deployment Diagram: Level 2 view
 
 skinparam linetype ortho
 skinparam interface {
@@ -54,19 +54,17 @@ node "In-house Infrastructure" {
   }
   node " " <<Smart Meter>> as meter {
       interface "P1" as p1
-      rectangle "dummy" as dummy
   }
-  p1 -[hidden] dummy
   aiida -down-( p1 : "\t"
 }
 
-node " " <<Regional Data-Sharing Infrastructure>> as energyProvider {
-  interface "Meter Data\nPortal" as dataPortal
-  interface "Consent Admin\nPortal" as adminPortal
+node "Regional Data-sharing\nInfrastructure" as energyProvider {
+  interface "Meter\nData\nPortal" as dataPortal
+  interface "Consent\nAdmin\nPortal" as adminPortal
 }
 
 actor "Consumer" as consumer
-actor "EP Admin" as admin
+actor "Eligible Party" as admin
   admin -left- adminConsole
 
 consumer ---- aiida

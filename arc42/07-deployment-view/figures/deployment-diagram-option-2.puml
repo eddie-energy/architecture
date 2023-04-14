@@ -1,6 +1,6 @@
 @startuml deployment-diagram-option-2
 'deployment diagram
-caption Deployment Diagram: Level 1 view, option 2
+caption Deployment Diagram: Level 2 view, option 2
 
 skinparam linetype ortho
 skinparam interface {

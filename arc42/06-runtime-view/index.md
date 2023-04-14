@@ -37,7 +37,7 @@ Add a description of the notable aspects of the interactions between the buildin
 
 ### The Consumer Gives Consent to Eligible Party for Access to Historical Data
 
-The workflow of a consumer that provides their consent to an eligible party for access to historical data from a meter data portal is shown below:
+The workflow of a consumer that provides their consent to an eligible party for access to historical data from a Meter Data Portal is shown below:
 
 <div align="center"> 
 <img src="./figures/consent-for-historical-data-seq.png" width="700">
@@ -49,7 +49,7 @@ This workflow includes the following steps:
 1. A request is sent from the website to the Consent Facade to create a list of the countries (and respective consent admin portals) that the eligible party operates in.
 1. The list of countries and Consent Admin Portals is sent back to the website. To find the countries and respective consent admin portals, the consent facade searches the framework's database. The available countries are stored in the database during the workflow of the [eligible party registration](). 
 1. The list is shown to the consumer.
-1. The consumer selects their country and consent admin portal.
+1. The consumer selects their country and Consent Admin Portal.
 1. The selected Consent Admin Portal is sent to the Consent Facade.
 1. The Consent Facade asks the Interoperable Communication to set up a consent request in the selected Consent Admin Portal.
 1. The Interoperable Communication sends a consent request to the Consent Admin Portal.
@@ -58,7 +58,7 @@ This workflow includes the following steps:
 1. The consumer logs in to the Consent Admin Portal website (using cross-national credentials or upon registration).
 1. The consumer accepts the consent request created in Step 9 (for access to their historical data).
 1. The Consent Admin Portal informs the Meter Data Portal to allow access to the data for the eligible party.
-1. The Meter Data Portal sends the data to the eligible party. The way whereby the data is sent depends on the individual meter data portal, and also on the host country. For example, the transmission of the data may be based on pull or push (which are handled by the the Interoperable Communication).
+1. The Meter Data Portal sends the data to the eligible party. The way whereby the data is sent depends on the individual meter data portal, and also on the host country. For example, the transmission of the data may be based on pull or push (which are handled by the Interoperable Communication).
 
 ### The Consumer Gives Consent to Eligible Party for Access to Real-time Data from AIIDA
 

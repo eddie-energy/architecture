@@ -21,7 +21,7 @@ quality tree example https://arnon.me/2010/05/utility-trees-hatching-quality-att
 The quality requirements of the system are outlined in the quality tree below. This tree has 4 main attributes, i.e., Performance, Availability, Interoperability,  and Security, each one having one or more requirements.
 
 <div align="center"> 
-<img src="./figures/quality-tree.png" width=700>
+<img src="./figures/quality-tree.png" width=750>
 </div>
 
 A table of requirements that need further explanation is shown below. This table provides links to the following sections which describe scenarios showing the behavior of the system when a stimulus that affects a requirement arrives.

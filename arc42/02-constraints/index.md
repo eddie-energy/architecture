@@ -18,7 +18,7 @@ subdivide them into technical constraints, organizational and political
 constraints and conventions (e.g. programming or versioning guidelines,
 documentation or naming conventions) -->
 
-Various constraints limit the design and implementation decisions. These constraints are divided into two categories below, i.e., political constraints, and technical constraints.
+Various constraints limit the design and implementation decisions of this architecture. These constraints are divided into two categories below, i.e., political constraints, and technical constraints.
 
 ## Political Constraints 
 
@@ -32,9 +32,9 @@ Various constraints limit the design and implementation decisions. These constra
 
 | No. | Constraint | Description |
 |-|-|-|
-| 1 | Kafka communication  | The streaming of real-time data from AIIDA to EDDIE Framework over the Internet must implemented with Apache Kafka. |
-| 2 | P1 interface | Real-time data from the smart meter must be collected over the P1 Port. |
-| 3 | Distributed architecture | There shall be no central party aggregating data flows. A distributed data architecture must respect this principle.                                                                                           |
+| 1 | Kafka communication  | The EDDIE Framework shall use Apache Kafka for distributing the energy data to the services. |
+| 2 | P1 interface | Real-time data from the smart meter shall be collected over the P1 Port. |
+| 3 | Distributed architecture | There shall be no central party aggregating data flows. A distributed data architecture must respect this principle. |
 | 4 | Secure communication | All communication between parties must be signed and encrypted to ensure authenticity and integrity of data exchange. | 
 | 5 |  |  |
 

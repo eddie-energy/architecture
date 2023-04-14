@@ -30,9 +30,9 @@ skinparam rectangle {
   stereotypeFontColor Transparent
 }
 
-node "\t\t\tDocker Runtime\t\t\t" <<Eligible Party Infrastructure>> as epInfra{
-  artifact "\t\t Framework\t\t" as eddie
-  artifact "Services" as service
+node "\t\tDocker Runtime\t\t" <<Eligible Party Infrastructure>> as epInfra{
+  artifact "EDDIE Framework" as eddie
+  artifact "Service" as service
   interface "\t\tKafka" as eddie1
   interface "\t\tKafka" as eddie2
 
@@ -49,8 +49,8 @@ node " " <<Smart Meter>> as meter{
 }
 }
 
-node "Regional Data Sharing\nInfrastructure"  as energyProvider {
-  interface "API" as energy1
+node "Regional Data-sharing\nInfrastructure"  as energyProvider {
+  interface "HTTP" as energy1
 }
 
 ' actor "Consumer" as consumer

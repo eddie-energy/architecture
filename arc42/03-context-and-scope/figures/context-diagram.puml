@@ -12,9 +12,9 @@ skinparam rectangle {
   BackgroundColor transparent
 }
 
-usecase "\n\nFramework\n\n" as eddie 
+usecase "\n\nEDDIE\nFramework\n\n" as eddie 
 ' #ffbd38
-rectangle "Utility\nProvider" as energy
+rectangle "Regional Data-sharing\n\tInfrastructure" as energy
 ' #52cbff
 rectangle "AIIDA\n" as aiida
 ' #7aff83

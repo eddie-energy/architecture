@@ -30,7 +30,7 @@ From a business perspective, the system consists of four entities which are show
 <img src="./figures/context-diagram.png" width="700" alt="test">
 </div>
 
-This context diagram shows how the Framework (in the center of the figure) interacts with its environment. Three other entities are part of the system:
+This context diagram shows how the EDDIE Framework (in the center of the figure) interacts with its environment. Three other entities are part of the system:
 
 1. AIIDA (Administrative Interface for In-house Data Access)
 1. Utility provider 
@@ -40,14 +40,14 @@ The table below shows a description of all the entities of the context diagram.
 
 | Component | Description | Within Scope |
 |-|-|-|
-| AIIDA | Collects real-time data from an energy metering device (e.g., a smart meter or an IoT home automation system), and sends this data to the Framework. | &#x2611; Yes | 
-| Utility provider | Provides historical data about the energy consumption of an energy consumer (e.g., energy consumption within a house). | &#x2612; No|
-| Framework | Collects energy data from AIIDA and the utility provider (can be multiple instances of AIIDA and utility providers), and consolidates it. | &#x2611; Yes |
-| Services | Acquire consolidated data from the Framework and use it to generate value, e.g., using data analysis services that are based on statistics, machine learning, and artificial intelligence techniques. | &#x2612; No |
+| AIIDA | Collects real-time data from an energy metering device (e.g., a smart meter or an IoT home automation system), and sends this data to the EDDIE Framework. | &#x2611; Yes | 
+| Regional Data-sharing Infrastructure | Provides historical data about the energy consumption of an energy consumer (e.g., energy consumption within a house). | &#x2612; No|
+| EDDIE Framework | Collects energy data from AIIDA and the Regional Data-sharing Infrastructure (can be multiple instances of AIIDA and Regional Data-sharing Infrastructure), and consolidates it. | &#x2611; Yes |
+| Services | Acquire consolidated data from the EDDIE Framework and use it to generate value, e.g., using data analysis services that are based on statistics, machine learning, and artificial intelligence techniques. | &#x2612; No |
 
-The figure above shows how the services of an eligible party can acquire real-time data (from AIIDA) and historical data (from the utility provider) using the Framework. The eligible party is then expected to process this data using services (as discussed in quality goal No. 2 mentioned in Section [Introduction and Goals](../01-introduction-and-goals/index.md)). Interestingly, a utility provider can also act as an eligible party that collects energy data and processes it using existing services. This way, a consumer can use services that are offered by any utility provider in the same or different country (as discussed in quality goal No. 2 mentioned in Section [Introduction and Goals](/arc42/01-introduction-and-goals/index.md)).
+The figure above shows how the services of an eligible party can acquire real-time data (from AIIDA) and historical data (from a Regional Data-sharing Infrastructure) using the EDDIE Framework. The eligible party is then expected to process this data using services. This way, a consumer can use services that are offered by any organization that takes the role of the eligible party (as discussed in quality goal No. 1 mentioned in Section [Introduction and Goals](/arc42/01-introduction-and-goals/index.md)).
 
-Notably, **one eligible party deploys one instance of the Framework to communicate with one or more instances of AIIDA and utility providers**. This way, the eligible party collects data from multiple consumers thereby being able to implement services that leverage large datasets with energy information (i.e., not only from one consumer).
+Notably, **one eligible party deploys one instance of the EDDIE Framework to communicate with one or more instances of AIIDA and Regional Data-sharing Infrastructures**. This way, the eligible party collects data from multiple consumers thereby being able to implement services that leverage large datasets with energy information (i.e., not only from one consumer).
 
 ## Technical Context 
 
@@ -59,7 +59,7 @@ From a technical perspective, the system includes four types of nodes which are:
 1. Smart Meter: A device installed in a house by the utility provider, which measures data about the energy consumption of the house, and exposes this data via a P1 port.
 1. In-house Device: A device such as a Raspberry Pi that connects to the smart meter via a P1 port, and implements the Docker Runtime for executing applications.
 1. Eligible Party Infrastructure: Either on-premise or cloud-based computing infrastructure that implements the Docker Runtime for executing applications.
-1. Regional Data Sharing Infrastructure: This infrastructure provides an API for various processes including exposing historical energy consumption data. Interestingly, this infrastructure may be provided by the utility provider or a regional Metered Data Administrator.
+1. Regional Data-sharing Infrastructure: This infrastructure provides an interface for various processes including exposing historical energy consumption data. Interestingly, this infrastructure may be provided by a utility provider or a regional Metered Data Administrator. 
 
 The figure below shows the associations between artifacts and interfaces as well as the communication protocols of these interfaces.
 
@@ -73,14 +73,14 @@ The following table shows a description of the artifacts.
 | Artifact | Description |
 |-|-|
 | AIIDA | Implements the functionality to acquire real-time data from the smart meter via P1, and send this data to the Framework via a Kafka interface. |
-| Framework| Implements functionality to receive real-time data from one or more AIIDA instances via a Kafka interface. Also, to acquire historical data from one or more regional data sharing infrastructures via the provided API, e.g., via HTTP. |
-| Services | Implement functionality to acquire real-time and historical data via a Kafka interface, and to process this data using data minining and machine learning algorithms. The implementation of the services is out of scope of this document.
+| EDDIE Framework| Implements functionality to receive real-time data from one or more AIIDA instances via a Kafka interface. Also, to acquire historical data from one or more Regional Data-sharing Infrastructures via the provided API, e.g., via HTTP. |
+| Service | Implement functionality to acquire real-time and historical data via a Kafka interface, and to process this data using data minining and machine learning algorithms. The implementation of services is out of scope of this document.
 
 The table below shows a summary of the interfaces.
 
-| Interface | Provided by | Consumed by | Protocol |
-|-|-|-|-|
-| Smart Meter Interface | Smart meter| AIIDA | P1 |
-| Framework Interface | Framework | AIIDA | Kafka |
-| Framework Interface | Framework | Services | Kafka |
-| Regional Data Sharing Infrastructure Interface | Utility provider | Framework | May vary (e.g., HTTP) |
+| Provided by | Consumed by | Protocol |
+|-|-|-|
+| Smart meter| AIIDA | P1 |
+| EDDIE Framework | AIIDA | Kafka |
+| EDDIE Framework | Services | Kafka |
+| Regional Data-sharing Infrastructure | Framework | HTTP (or other) |

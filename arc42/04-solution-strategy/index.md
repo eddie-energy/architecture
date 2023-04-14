@@ -20,38 +20,14 @@ Motivate what was decided and why it was decided that way, based upon
 problem statement, quality goals and key constraints. Refer to details
 in the following sections. -->
 
-There are certain goals of the framework which can be achieved by following a specific strategy. These goals are outlined in the following table which also provides links to more detailed explanations. Additional high-level information on these goals is presented in the subsections below.
+There are certain goals of the framework which can be achieved by following a specific strategy. These goals are outlined in the following table which also provides links to more detailed explanations.
 
 | No. | Quality Goal | Scenario | Approach | Details |
 |-|-|-|-|-|
-| 1 | Consent facade | All consumers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their energy provider.| Implement a Consent Facade component based on the European Reference Process for providing consent. This component shall include speacialized adaptors implmenting the secificities of each country. | [Block view](/05-building-block-view/index.md). [Runtime view](/06-runtime-view/index.md). |
-| 2 | World-wide coverage | Consumers from urban environemnts around the world shall be eligible to use the framework. | Devise a multi-stage expansion plan (starting from one area and expanding to others) that achieves coverage of a large part of urban societies around the world. | [Expantion plan](#expansion-plan). |
+| 1 | Consent collection | All consumers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their utility provider.| Implement a Consent Facade component based on the European Reference Process for providing consent. This component shall include speacialized adaptors implmenting the secificities of each country. | [Link](./consent-facade/consent-facade.md) |
+| 2 | World-wide coverage | Consumers from around the world shall be eligible to use the framework. | Devise a multi-stage expansion plan (starting from one area and expanding to others) that achieves coverage of a large area around the world. | [Link](#expansion-plan) |
 | 3 | Incentives | Why would consumers and eligible parties use eddie | marketplace |  |
-| 4 | Deployment alternatives | Different options for deploying the framework | options |  |
-
-
-## Consent Facade
-
-The Consent Facade component is implemented within the EDDIE framework which is under the operation of the eligible party. Upon request from the consumer, this component is responsible for triggering the process that gives the eligible party access to the consumer's energy data (either from the consumer's energy provider, or from AIIDA). More information regarding the components related to the Consent Facade can be found in Section [Building Block View](/05-building-block-view/index.md). More information on the related processes and behaviors can be found in Section [Runtime view](/06-runtime-view/index.md).
-
-
-
-## Expansion Plan 
-
-The expansion plan includes three phases for achieving compatibility with energy providers in a large area. These phases are described in the table below.
-
-| Phase | Included Countries | Comment |
-|-|-|-|
-| 1 | Austria, Germany, Italy, France, and Spain. | Compatibility with countries of contributors to the consortium. |
-| 2 | Norway, Finland, Estonia, Latvia, Lithuania, Poland, Greece, Netherlands, Belgium, Portugal, and Ireland. | Compatibility with other countries within Europe (excluded in Phase 1). |
-| 3 | Australia, United Kingdom, and United States of America | Compatibility with countries outside Europe. |
-
-The countries envisioned in the 3 phases mentioned above are also shown in the figure below. Notably, this expansion plan achieves compatibility with more than 70% of European smart meters.
-
-<!-- ![EDDIE Coverage](/01-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
-<div align="center">
-<img src="../01-introduction-and-goals/figures/EDDIE_Coverage.jpg" width="800" alt="test">
-</div>
+| 4 |  |  |  |  |
 
 
 <!-- ## OTHERs (TBD)

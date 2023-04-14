@@ -6,11 +6,11 @@ title: Introduction and Goals
 
 -   underlying
 -   essential fu business goals,
--   essential features,nctional requirements,
+-   essential features,functional requirements,
 -   quality goals for the architecture and
 -   relevant stakeholders and their expectations -->
 
-EDDIE (European Distributed Data Infrastructure for Energy) is a research project aiming to build a framework for aggregating energy-related data, e.g., from houses whose owners have provided the appropriate permission.
+EDDIE (European Distributed Data Infrastructure for Energy) is a research project which aims at building a framework for aggregating energy-related data, e.g., from houses whose owners have provided the appropriate permission.
 
 ## Background
 
@@ -18,22 +18,21 @@ In the energy sector, the European Directive (EU) 2019/944 of the Clean Energy f
 
 ## Business Goals
 
-There are 2 prime business goals:
-1. At the moment, an energy consumer may make use of services (e.g., visualizations, predictions) offered by their energy utility provider (e.g., Wiener Netze in Vienna). To do this, one can log in to the website of their utility provider and access the available services. The EDDIE framework aims at allowing consumers to access the services of any utility provider in the same or a different country. This will allow all utility providers to work and compete in a common energy market.
-1. The second goal of the EDDIE framework is to enable energy consumers to use services that are provided not only by utility providers but by any eligible party. An eligible party can be, e.g., individuals, organizations or research groups, with appropriate permission from consumers to access and process their energy data in order to generate value in a commercial or non-commercial context, e.g., by developing novel services. 
+The prime business goals are:
+1. At the moment, an energy consumer may make use of services (e.g., visualizations, predictions) offered by their energy utility provider (e.g., Wiener Netze in Vienna). To do this, one can log in to the website of their utility provider and access the available services, e.g. to visualize the energy consumption of a past period. The EDDIE framework aims at allowing consumers to access the services that are provided not only by their utility provider but by any eligible party. An eligible party can be, e.g., individuals, organizations or research groups, with appropriate permission from consumers to access and process their energy data in order to generate value in a commercial or non-commercial context, e.g., by developing novel services. **Organizations with a particular interest in taking the role of the eligible party can be, e.g., Distribution System Operators (DSOs), Transmission System operators (TSOs), and Flexibility Service Providers (FSPs)**.
 
 ## Essential Features
 
 The essential features of the framework are:
 - Allowing the consumers to select who can process their data (to avoid privacy infringement).
-- Consolidating datasets that follow different structure/syntax/semantics (e.g., from consumers in different countries) into a unified format that allows uniform processing of all the data.
+- Consolidating datasets that follow different structures/syntax/semantics (e.g., from consumers in different countries) into a unified format that allows uniform processing of all the data.
 
 ## Essential Functional Requirements
 
-The essential functional requirements are listed below. A more elaborate description of the quality requirements can be found in [Section 10](/10-quality-requirements/).
-- Decentralized: The energy data of a consumer must be shared only with eligible parties (i.e., entities that have the permission of the consumer). A central place that aggregates energy data from multiple consumers without their permission must not be used.
-- Scalable. The consumer must be able to share their data with multiple eligible parties. Moreover, an eligible party must be able to collect data from multiple consumers.
-- Extensible. The framework must be extensible so that adding compatibility with unsupported regions does not involve significant engineering/developing effort.
+The essential functional requirements are listed below. A more elaborate description of the quality requirements can be found in Section [Quality Requirements](../10-quality-requirements/index.md).
+- Decentralized: The energy data of a consumer shall be shared only with eligible parties (i.e., entities that have the permission of the consumer). A central place that aggregates energy data from multiple consumers without their permission shall not be used.
+- Scalable. The consumer shall be able to share their data with multiple eligible parties. Moreover, an eligible party shall be able to collect data from multiple consumers.
+- Extensible. The framework shall be extensible so that adding compatibility with unsupported regions does not involve significant engineering/developing effort.
 
 ## Quality Goals
 
