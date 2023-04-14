@@ -1,0 +1,47 @@
+@startuml consent-for-historical-data-seq
+'sequence diagram
+caption sequence Diagram: The consumer gives consent to an eligible party for access to historical data.
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+
+actor "Consumer" as user
+participant "EP\nWebsite" as website
+participant "Consent\nFacade" as facade
+participant "Interoperable\nCommunication" as comm
+participant "Consent\nFacade" as facade
+participant "Consent Admin\nPortal" as adminPortal
+participant "Meter Data\nPortal" as dataPortal
+
+user -> website : login()
+user -> website : connectMyData()
+activate website
+  website -> facade : getConsentPortals()
+    activate facade
+    facade -->> website : countries,\nadminPortals
+  deactivate facade
+  website -->> user : show(countries,\nadminPortals)
+deactivate website
+
+user -> website : select(admin\nPortal)
+activate website
+  website -> facade : forward(adminPortal)
+  activate facade
+    facade -> comm : get\nConsent(\nconsumer)
+    comm -> adminPortal : requestConsent(consumer, EP)
+    facade -->> website : OK
+  deactivate facade
+  website -->> user : redirect(admin\nPortal)
+deactivate website
+
+user -> adminPortal : login()
+user -> adminPortal : acceptConsentRequest()
+adminPortal -> dataPortal : notify(\nconsumer,\nEP)
+dataPortal -> comm : send(historicalData)
+
+@enduml

@@ -1,0 +1,30 @@
+@startuml consent-for-historical-data
+'activity diagram
+caption Activity Diagram: The consumer gives consent to an eligible party for access to historical data
+
+<style>
+activityDiagram {
+  FontSize 14
+  activity{
+    BackgroundColor transparent
+  }
+}
+</style>
+
+|EP Website|
+start
+:1. Consumer login\n     to account;
+:2. Consumer clicks\n     "Connect my Data";
+|Consent Facade|
+:3. Show available countries\n     & consent admin portals;
+|EP Website|
+:4. Consumer selects a\n     consent admin portal;
+->\t\t\t\tRedirection;
+|Consent Admin Portal|
+:5. Consumer login\n     to account;
+:6. Consumer gives\n     consent to EP;
+|Meter Data Portal|
+:7. Send historical\n     data to EP;
+stop
+
+@enduml

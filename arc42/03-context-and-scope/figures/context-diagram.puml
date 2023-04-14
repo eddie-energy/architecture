@@ -1,0 +1,28 @@
+@startuml context-diagram
+'context diagram
+caption Context Diagram: Interactions between the framework and its environment
+
+' skinparam linetype ortho
+skinparam usecase {
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle {
+  BorderColor black
+  BackgroundColor transparent
+}
+
+usecase "\n\nFramework\n\n" as eddie 
+' #ffbd38
+rectangle "Utility\nProvider" as energy
+' #52cbff
+rectangle "AIIDA\n" as aiida
+' #7aff83
+rectangle "Services\n" as services
+' #ff52ab
+
+aiida -right-> eddie :Real-time data
+energy -up-> eddie :Historical data
+eddie -right-> services :Real-time and historical data
+
+@enduml
