@@ -49,7 +49,7 @@ node "Eligible Party Infrastructure" as epInfra{
 
 }
 node "In-house Infrastructure" {
-  node "Docker Runtime" <<In-house Infrastructure>> as house{
+  node "Docker Runtime" <<In-house Device>> as house{
     artifact "\t\tAIIDA\t\t" as aiida
   }
   node " " <<Smart Meter>> as meter {

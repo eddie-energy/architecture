@@ -25,6 +25,6 @@ The table below shows an overview of the identified technical risks. This table 
 
 The table below shows an overview of the identified technical debts. This table also has links to additional explanations for technical debts that need more clarification.
 
-| No. | Debt | Possible Soluctions | Section |
+| No. | Debt | Possible Solutions | Section |
 |-|-|-|-|
 | 1 | Expose energy data through a data space | Integrate a data space connector for exposing sovereign data | [Link]() |

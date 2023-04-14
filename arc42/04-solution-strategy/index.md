@@ -22,8 +22,8 @@ There are certain goals of the framework which can be achieved by following a sp
 
 | No. | Quality Goal | Scenario | Approach | Details |
 |-|-|-|-|-|
-| 1 | Consent collection | All consumers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their utility provider.| Implement a Consent Facade component based on the European Reference Process for providing consent. This component shall include speacialized adaptors implmenting the secificities of each country. | [Link](./consent-facade/consent-facade.md) |
-| 2 | World-wide coverage | Consumers from around the world shall be eligible to use the framework. | Devise a multi-stage expansion plan (starting from one area and expanding to others) that achieves coverage of a large area around the world. | [Link](#expansion-plan) |
+| 1 | Consent collection | All consumers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their utility provider.| Implement a Consent Facade component based on the European Reference Process for providing consent. This component shall include speacialized adaptors implmenting the specificities of each country. | [Link](./consent-facade/consent-facade.md) |
+| 2 | World-wide coverage | Consumers from around the world shall be eligible to use the framework. | Devise a multi-stage expansion plan (starting from one area and expanding to others) that achieves coverage of a large area around the world. | [Link](./expansion-plan/expansion-plan.md) |
 | 3 | Incentives | Why would consumers and eligible parties use eddie | marketplace |  |
 | 4 |  |  |  |  |
 
