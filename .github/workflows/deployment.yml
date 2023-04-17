@@ -33,5 +33,5 @@ jobs:
         target-server: ${{ secrets.SSH_HOST }}
         remote-user: ${{ secrets.SSH_USERNAME }}
         private-ssh-key: ${{ secrets.SSH_KEY }}
-        source-path: ./_site/
+        source-path: ./eleventy/_site/
         destination-path: /web/architecture/
