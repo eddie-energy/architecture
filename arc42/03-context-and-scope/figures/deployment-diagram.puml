@@ -31,7 +31,7 @@ skinparam rectangle {
 }
 
 node "\t\tDocker Runtime\t\t" <<Eligible Party Infrastructure>> as epInfra{
-  artifact "EDDIE Framework" as eddie
+  component "EDDIE Framework" as eddie
   artifact "Service" as service
   interface "\t\tKafka" as eddie1
   interface "\t\tKafka" as eddie2
@@ -42,7 +42,7 @@ node "\t\tDocker Runtime\t\t" <<Eligible Party Infrastructure>> as epInfra{
 }
 node "In-house Infrastructure"  {
 node "Docker Runtime" <<In-house Device>> as house{
-  artifact "\tAIIDA\t" as aiida
+  component "\tAIIDA\t" as aiida
 }
 node " " <<Smart Meter>> as meter{
   interface "P1" as p1
