@@ -1,0 +1,3 @@
+---
+title: Consent Facade Interface
+---

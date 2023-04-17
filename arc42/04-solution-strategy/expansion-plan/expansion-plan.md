@@ -1,5 +1,6 @@
-## Expansion Plan 
-
+---
+title: Expansion Plan
+---
 The expansion plan includes three phases for achieving compatibility with utility providers in a large area. These phases are described in the table below.
 
 | Phase | Included Countries | Comment |
