@@ -27,6 +27,7 @@ Various constraints limit the design and implementation decisions of this archit
 | 3 | Customer sovereignty | The need for sharing data to participate in new energy services must not lead to a loss of control about what data is stored and used about whom about final customers. Also, deliverables of the project must be suited to be easily usable, and provide prosumers an understandable overview about the flow of their data. |
 | 4 | Data space interoperability | Interactions with relevant European data space intiatives shall be sought and explored and, if possible, implemented. |
 | 5 | European Viewpoint | EDDIE's primary perspective is a European one. We do not build for national environments, but for and upon European-wide functionality. |
+| 6 | Utilise existing infrastructure | EDDIE aims to build as far as possible on existing and already rolled-out hardware and infrastructure. This rule does not only affect utility - owned infrastructure, but also in-house standard home automation and IT shall be utilised. |
 
 ## Technical Constraints 
 
