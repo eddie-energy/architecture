@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <link rel="stylesheet" href="/architecture/assets/styles.css">
+  <link rel="icon" type="image/png" href="/architecture/figures/favicon-32x32.png">
+  <title>EDDIE Architecture : Glossary</title>
+</head>
+
+<body>
+  <header>
+    <h1>EDDIE Architecture</h1>
+    <img src="/architecture/figures/eddie-logo.png">
+  </header>
+  <div class="container">
+    <nav>
+      <ol><li><a href="/architecture/">Top Page</a><ol><li><a href="/architecture/1-introduction-and-goals/">Introduction and Goals</a></li>
+<li><a href="/architecture/2-constraints/">Architecture Constraints</a></li>
+<li><a href="/architecture/3-context-and-scope/">System Scope and Context</a><ol><li><a href="/architecture/3-context-and-scope/01-mvp1/">MVP-1</a></li>
+<li><a href="/architecture/3-context-and-scope/88-external-systems/">External systems</a><ol><li><a href="/architecture/3-context-and-scope/88-external-systems/EDA/">EDA</a></li>
+<li><a href="/architecture/3-context-and-scope/88-external-systems/ENEDIS/">ENEDIS</a></li></ol></li></ol></li>
+<li><a href="/architecture/4-solution-strategy/">Solution Strategy</a></li>
+<li><a href="/architecture/5-building-block-view/">Building Block View</a></li>
+<li><a href="/architecture/6-runtime-view/">Runtime View</a></li>
+<li><a href="/architecture/7-deployment-view/">Deployment View</a></li>
+<li><a href="/architecture/8-crosscut-concepts/">Cross-cutting Concepts</a></li>
+<li><a href="/architecture/9-architectural-decisions/">Architecture Decisions</a></li>
+<li><a href="/architecture/10-quality-requirements/">Quality Requirements</a></li>
+<li><a href="/architecture/11-risks-and-technical-debt/">Risks and Technical Debts</a></li>
+<li><a href="/architecture/12-glossary/" class="current">Glossary</a></li></ol></li></ol>
+    </nav>
+    <main>
+      <h1>Glossary</h1>
+      <div><p>The glossary is divided into four sections: domain terms, technical terms, data types, and acronyms. The definitions here should be expressed clearly so that everyone has an identical understanding of each term. Synonyms and homonyms are discouraged.</p>
+<h2>Domain Terms</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reference model</td>
+<td>the procedures that are necessary for access to data describing the minimum required information exchange between market participants;</td>
+</tr>
+<tr>
+<td>metering and consumption data</td>
+<td>meter readings of electricity consumption from the grid, or electricity feed into the grid, which includes validated historical data and non- validated near-real time data.</td>
+</tr>
+<tr>
+<td>validated historical metering and consumption data</td>
+<td>historical metering and consumption data collected from a meter, a conventional or a smart meter, or completed with substitute values that are determined otherwise in case of meter unavailability;</td>
+</tr>
+<tr>
+<td>smart meter</td>
+<td>an electronic metering device deployed within a smart metering system as defined in the Article 2(23) of the Directive (EU) 2019/944.;</td>
+</tr>
+<tr>
+<td>near real-time metering and consumption data</td>
+<td>metering and consumption data provided continuously by a smart meter in a short time period, usually down to seconds or up to the imbalance settlement period in the national market, which is non-validated and made available through a standardised interface or through remote access in line with Article 20(a) of the Electricity Directive (EU) 2019/944;</td>
+</tr>
+<tr>
+<td>eligible party</td>
+<td>an entity offering energy-related services to final customers, such as suppliers, transmission and distribution system operators, aggregators, energy service companies, and balancing service providers;</td>
+</tr>
+<tr>
+<td>metered data administrator</td>
+<td>a party responsible for storing validated historical metering and consumption data and distributing these data to final customers and eligible parties;</td>
+</tr>
+<tr>
+<td>permission</td>
+<td>the authorisation given by a final customer to an eligible party on the basis of a contractual agreement they have with this party, to access their metering and consumption data managed by the metered data administrator for the provision of a specific service;</td>
+</tr>
+<tr>
+<td>permission administrator</td>
+<td>a party responsible for administering a register of data access permissions for a set of metering points, making this information available to final customers and eligible parties in the sector, on request;</td>
+</tr>
+<tr>
+<td>data access log</td>
+<td>a timestamped record of data items accessed that includes at least the identification of the final customer or the eligible party accessing the data and, if applicable, the identification of the permission used to access the data;</td>
+</tr>
+<tr>
+<td>metering point administrator</td>
+<td>a party responsible for administering and making available the characteristics of a metering point, including the registrations of eligible parties and final customers linked to the metering point;</td>
+</tr>
+<tr>
+<td>data access provider</td>
+<td>a party responsible for facilitating access to validated historical metering and consumption data by the final customer;</td>
+</tr>
+<tr>
+<td>permission provision log</td>
+<td>a timestamped record of when the permission for a an eligible party or final customer was granted, revoked, or terminated, including a permission identifier, and a party identifier;</td>
+</tr>
+<tr>
+<td>identity service provider</td>
+<td>a party that manages identity information; issues, stores, protects, keeps up to date, and manages identity information for a natural or legal person and provides authentication services to eligible parties and final customers;</td>
+</tr>
+<tr>
+<td>authentication</td>
+<td>an electronic procedure that enables the electronic identification of a natural or legal person;</td>
+</tr>
+<tr>
+<td>meter operator</td>
+<td>a party responsible for installing, maintaining, testing, certifying and decommissioning physical meters;</td>
+</tr>
+<tr>
+<td>near real-time data consumption system</td>
+<td>a system or device that obtains the flow of non-validated near real-time data from a smart metering system as referred to in Article 20, first subparagraph, point (a) of Directive (EU) 2019/944.</td>
+</tr>
+<tr>
+<td>sub-meter</td>
+<td>meter that measures only a part of a consumer's load/production behind one connection to the grid (measured by a main meter) or a meter with a different granularity of metering data than the main meter.</td>
+</tr>
+</tbody>
+</table>
+<h2>Technical Terms</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Service</td>
+<td>The application of an eligible party that processes data from consumers.</td>
+</tr>
+<tr>
+<td>P1 Interface</td>
+<td>Term for the non-validated near real-time interface demanded by Article 20(a) of Directive (EU) 2019/944.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Data Types</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Validated historical metering and consumption data</td>
+<td>Validated historical metering and consumption data.</td>
+</tr>
+<tr>
+<td>Non-validated near real-time data</td>
+<td>Non-validated near real-time data from P1-interface in smart meter.</td>
+</tr>
+<tr>
+<td>Accounting point master data</td>
+<td>Reference data about accounting points. Defines to which final customer an accounting point belongs to, its supplier/BRP, address, capacity etc..</td>
+</tr>
+<tr>
+<td>Party master data</td>
+<td>Reference data about parties. Defines etc. which organisation belongs to which identifier, address.</td>
+</tr>
+</tbody>
+</table>
+<h2>Acronyms</h2>
+<table>
+<thead>
+<tr>
+<th>Acronym</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AIIDA</td>
+<td>Administrative Interface for In-house Data Access</td>
+</tr>
+<tr>
+<td>EDDIE</td>
+<td>European Distributed Data Infrastructure for Energy</td>
+</tr>
+<tr>
+<td>DSO</td>
+<td>Distribution System Operator</td>
+</tr>
+<tr>
+<td>TSO</td>
+<td>Transmission System Operator</td>
+</tr>
+<tr>
+<td>NRA</td>
+<td>National Regulatory Authority</td>
+</tr>
+<tr>
+<td>IA</td>
+<td>Implementing Acts for Interoperability after Article 24 of Directive (EU) 2019/944.</td>
+</tr>
+<tr>
+<td>eIDAS</td>
+<td>Electronic Identification and Authentication Services. Regulation on electronic identification and trust services. Regulation (EU) No 910/2014.</td>
+</tr>
+<tr>
+<td>aFRR</td>
+<td>Automatic Frequency Restoration Reserve</td>
+</tr>
+<tr>
+<td>API</td>
+<td>Application Programming Interface</td>
+</tr>
+<tr>
+<td>ASM</td>
+<td>Active System Management</td>
+</tr>
+<tr>
+<td>BRP</td>
+<td>Balancing Responsible Party [TODO] explain</td>
+</tr>
+<tr>
+<td>CEP</td>
+<td>Clean Energy Package [TODO] explain</td>
+</tr>
+<tr>
+<td>CM</td>
+<td>Capacity Mechanism</td>
+</tr>
+<tr>
+<td>DA</td>
+<td>Day Ahead (market)</td>
+</tr>
+<tr>
+<td>DCC</td>
+<td>Demand Connection Code</td>
+</tr>
+<tr>
+<td>DER</td>
+<td>Distributed Energy Resources</td>
+</tr>
+<tr>
+<td>DF</td>
+<td>Distributed Flexibility</td>
+</tr>
+<tr>
+<td>DSF</td>
+<td>Demand-Side Flexibility</td>
+</tr>
+<tr>
+<td>EBGL</td>
+<td>Electricity Balancing Guideline</td>
+</tr>
+<tr>
+<td>FMO</td>
+<td>Flexibility Market Operator</td>
+</tr>
+<tr>
+<td>FSP</td>
+<td>Flexibility Service Provider</td>
+</tr>
+<tr>
+<td>GDPR</td>
+<td>Regulation (EU) 2016</td>
+</tr>
+<tr>
+<td>HRM</td>
+<td>Harmonised Role Model</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>Intraday</td>
+</tr>
+<tr>
+<td>LV</td>
+<td>Low voltage</td>
+</tr>
+<tr>
+<td>mFRR</td>
+<td>Manual Frequency Restoration Reserve</td>
+</tr>
+<tr>
+<td>MV</td>
+<td>Medium voltage</td>
+</tr>
+<tr>
+<td>NC</td>
+<td>Network Code</td>
+</tr>
+<tr>
+<td>RfG</td>
+<td>Requirements for Generators</td>
+</tr>
+<tr>
+<td>SGAM</td>
+<td>Smart Grid Architecture Model</td>
+</tr>
+<tr>
+<td>SGU</td>
+<td>Significant Grid User</td>
+</tr>
+<tr>
+<td>SOGL</td>
+<td>System Operation Guideline</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+    </main>
+  </div>
+  <footer>
+    <span>last edited on 15.03.2023 08:28</span>
+    <a href="https://github.com/eddie-energy/architecture/blob/main/./12-glossary/index.md">edit on GitHub</a>
+  </footer>
+</body>
+
+</html>

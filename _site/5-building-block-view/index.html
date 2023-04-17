@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <link rel="stylesheet" href="/architecture/assets/styles.css">
+  <link rel="icon" type="image/png" href="/architecture/figures/favicon-32x32.png">
+  <title>EDDIE Architecture : Building Block View</title>
+</head>
+
+<body>
+  <header>
+    <h1>EDDIE Architecture</h1>
+    <img src="/architecture/figures/eddie-logo.png">
+  </header>
+  <div class="container">
+    <nav>
+      <ol><li><a href="/architecture/">Top Page</a><ol><li><a href="/architecture/1-introduction-and-goals/">Introduction and Goals</a></li>
+<li><a href="/architecture/2-constraints/">Architecture Constraints</a></li>
+<li><a href="/architecture/3-context-and-scope/">System Scope and Context</a><ol><li><a href="/architecture/3-context-and-scope/01-mvp1/">MVP-1</a></li>
+<li><a href="/architecture/3-context-and-scope/88-external-systems/">External systems</a><ol><li><a href="/architecture/3-context-and-scope/88-external-systems/EDA/">EDA</a></li>
+<li><a href="/architecture/3-context-and-scope/88-external-systems/ENEDIS/">ENEDIS</a></li></ol></li></ol></li>
+<li><a href="/architecture/4-solution-strategy/">Solution Strategy</a></li>
+<li><a href="/architecture/5-building-block-view/" class="current">Building Block View</a></li>
+<li><a href="/architecture/6-runtime-view/">Runtime View</a></li>
+<li><a href="/architecture/7-deployment-view/">Deployment View</a></li>
+<li><a href="/architecture/8-crosscut-concepts/">Cross-cutting Concepts</a></li>
+<li><a href="/architecture/9-architectural-decisions/">Architecture Decisions</a></li>
+<li><a href="/architecture/10-quality-requirements/">Quality Requirements</a></li>
+<li><a href="/architecture/11-risks-and-technical-debt/">Risks and Technical Debts</a></li>
+<li><a href="/architecture/12-glossary/">Glossary</a></li></ol></li></ol>
+    </nav>
+    <main>
+      <h1>Building Block View</h1>
+      <div><!-- The building block view shows the static decomposition of the system
+into building blocks (modules, components, subsystems, classes,
+interfaces, packages, libraries, frameworks, layers, partitions, tiers,
+functions, macros, operations, data structures, ...) as well as their
+dependencies (relationships, associations, ...). This view is mandatory
+for every architecture documentation. In analogy to a house, this is
+the *floor plan*. -->
+<!-- The building block view is a hierarchical collection of black boxes and
+white boxes (see figure below) and their descriptions.
+**Level 1** is the white box description of the overall system together
+with black box descriptions of all contained building blocks.
+**Level 2** zooms into some building blocks of level 1. Thus it contains
+the white box description of selected building blocks of level 1,
+together with black box descriptions of their internal building blocks.
+**Level 3** zooms into selected building blocks of level 2, and so on. -->
+<!-- 
+This structure can be used:
+    Motivation
+    Contained Building Blocks
+    Important Interfaces
+    Black boxes -->
+<h1>Building Block View</h1>
+<p>The building block view is presented through a description of the system using levels. Level 1 shows the overall system along with all the contained building blocks. Level 2 focuses on some building blocks from level 1. Level 3 focuses on building blocks from Level 3 and so on. After the levels, there are additional sections showing the block view for specific features.</p>
+<h2>Level 1</h2>
+<p>A high-level view of the system is shown below. To derive this view we have used functional decomposition on the main functionality of the framework (as discussed in Section 3: <a href="../3-context-and-scope/index.md">Context and Scope</a>).</p>
+<div align="center">
+<img src="figures/component-diagram-level-1.png" width="800">
+</div>
+<h3>Contained Building Blocks</h3>
+<p>The eligible party manages the following components:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User Interface</td>
+<td>Entry point for consumers to provide their consent.</td>
+</tr>
+<tr>
+<td>Consent Facade</td>
+<td>Manages and stores the consent of the consumers.</td>
+</tr>
+<tr>
+<td>Data Broker</td>
+<td>Handles the communication among internal components</td>
+</tr>
+<tr>
+<td>Database</td>
+<td>Stores information about consents, state, and data.</td>
+</tr>
+<tr>
+<td>Admin Console</td>
+<td>Entry point for the eligible party to register with regional data-sharing infrastructure.</td>
+</tr>
+<tr>
+<td>Interoperable Communication</td>
+<td>translates messages/data from data-sharing infrastructures of different regions to a unified format.</td>
+</tr>
+</tbody>
+</table>
+<p>The house of the consumer hosts the following.</p>
+<p>The eligible party manages the following components:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AIIDA</td>
+<td>Gets real-time data from the smart meter.</td>
+</tr>
+</tbody>
+</table>
+<h3>Black Boxes</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Responsibility</th>
+<th>Interface</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consent Admin Portal</td>
+<td>Issues consent to the eligible party upon request from a consumer</td>
+<td>HTTP</td>
+</tr>
+<tr>
+<td>Meter Data Portal</td>
+<td>Gives access to historical data upon request from the eligible party (with appropriate consent)</td>
+<td>HTTP</td>
+</tr>
+<tr>
+<td>Smart meter</td>
+<td>A device installed at home by the grid operator</td>
+<td>P1</td>
+</tr>
+</tbody>
+</table>
+<h2>Level 2</h2>
+<p>Intro and motivation</p>
+<ul>
+<li>figure</li>
+</ul>
+<h3>Contained Building Blocks</h3>
+<h3>Interfaces</h3>
+<h3>Black Boxes</h3>
+<h2></h2>
+<h2>Consent Facade</h2>
+<p>TBD</p>
+<p>The figure below shows the components of the system that are relevant to the consent facade.</p>
+<!-- ![EDDIE Coverage](/1-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
+<div align="center">
+<img src="figures/component-diagram.png" width="300" alt="test">
+</div>
+<p><code>add figure description here</code></p>
+<p>A different view of the system which includes two countries is shown below.</p>
+<!-- ![EDDIE Coverage](/1-introduction-and-goals/figures/EDDIE_Coverage.jpg) -->
+<div align="center">
+<img src="figures/region-connectors.png" width="900" alt="test">
+</div>
+<p><code>add figure description here</code></p>
+<h3>AT - Austria &lt;_building block x.1_&gt;</h3>
+<p>Specifies the internal structure of <em>building block x.1</em>.</p>
+<p><em>&lt;white box template&gt;</em></p>
+<h3>DE - Germany &lt;_building block x.2_&gt;</h3>
+<p><em>&lt;white box template&gt;</em></p>
+<h3>FR - France &lt;_building block x.2_&gt;</h3>
+<p><em>&lt;white box template&gt;</em></p>
+<h3>IT - Italy &lt;_building block y.1_&gt;</h3>
+<p><em>&lt;white box template&gt;</em></p>
+</div>
+    </main>
+  </div>
+  <footer>
+    <span>last edited on 29.03.2023 15:06</span>
+    <a href="https://github.com/eddie-energy/architecture/blob/main/./5-building-block-view/index.md">edit on GitHub</a>
+  </footer>
+</body>
+
+</html>

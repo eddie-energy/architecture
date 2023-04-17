@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <link rel="stylesheet" href="/architecture/assets/styles.css">
+  <link rel="icon" type="image/png" href="/architecture/figures/favicon-32x32.png">
+  <title>EDDIE Architecture : Deployment View</title>
+</head>
+
+<body>
+  <header>
+    <h1>EDDIE Architecture</h1>
+    <img src="/architecture/figures/eddie-logo.png">
+  </header>
+  <div class="container">
+    <nav>
+      <ol><li><a href="/architecture/">Top Page</a><ol><li><a href="/architecture/1-introduction-and-goals/">Introduction and Goals</a></li>
+<li><a href="/architecture/2-constraints/">Architecture Constraints</a></li>
+<li><a href="/architecture/3-context-and-scope/">System Scope and Context</a><ol><li><a href="/architecture/3-context-and-scope/01-mvp1/">MVP-1</a></li>
+<li><a href="/architecture/3-context-and-scope/88-external-systems/">External systems</a><ol><li><a href="/architecture/3-context-and-scope/88-external-systems/EDA/">EDA</a></li>
+<li><a href="/architecture/3-context-and-scope/88-external-systems/ENEDIS/">ENEDIS</a></li></ol></li></ol></li>
+<li><a href="/architecture/4-solution-strategy/">Solution Strategy</a></li>
+<li><a href="/architecture/5-building-block-view/">Building Block View</a></li>
+<li><a href="/architecture/6-runtime-view/">Runtime View</a></li>
+<li><a href="/architecture/7-deployment-view/" class="current">Deployment View</a></li>
+<li><a href="/architecture/8-crosscut-concepts/">Cross-cutting Concepts</a></li>
+<li><a href="/architecture/9-architectural-decisions/">Architecture Decisions</a></li>
+<li><a href="/architecture/10-quality-requirements/">Quality Requirements</a></li>
+<li><a href="/architecture/11-risks-and-technical-debt/">Risks and Technical Debts</a></li>
+<li><a href="/architecture/12-glossary/">Glossary</a></li></ol></li></ol>
+    </nav>
+    <main>
+      <h1>Deployment View</h1>
+      <div><h5>Content</h5>
+<p>The deployment view describes:</p>
+<ol>
+<li>
+<p>technical infrastructure used to execute your system, with
+infrastructure elements like geographical locations, environments,
+computers, processors, channels and net topologies as well as other
+infrastructure elements and</p>
+</li>
+<li>
+<p>mapping of (software) building blocks to that infrastructure
+elements.</p>
+</li>
+</ol>
+<p>Often systems are executed in different environments, e.g. development
+environment, test environment, production environment. In such cases you
+should document all relevant environments.</p>
+<p>Especially document a deployment view if your software is executed as
+distributed system with more than one computer, processor, server or
+container or when you design and construct your own hardware processors
+and chips.</p>
+<p>From a software perspective it is sufficient to capture only those
+elements of an infrastructure that are needed to show a deployment of
+your building blocks. Hardware architects can go beyond that and
+describe an infrastructure to any level of detail they need to capture.</p>
+<h5>Motivation</h5>
+<p>Software does not run without hardware. This underlying infrastructure
+can and will influence a system and/or some cross-cutting concepts.
+Therefore, there is a need to know the infrastructure.</p>
+<p>Maybe a highest level deployment diagram is already contained in section
+3.2. as technical context with your own infrastructure as ONE black box.
+In this section one can zoom into this black box using additional
+deployment diagrams:</p>
+<ul>
+<li>
+<p>UML offers deployment diagrams to express that view. Use it,
+probably with nested diagrams, when your infrastructure is more
+complex.</p>
+</li>
+<li>
+<p>When your (hardware) stakeholders prefer other kinds of diagrams
+rather than a deployment diagram, let them use any kind that is able
+to show nodes and channels of the infrastructure.</p>
+</li>
+</ul>
+<p>See <a href="https://docs.arc42.org/section-7/">Deployment View</a> in the arc42
+documentation.</p>
+<h2>Infrastructure Level 1</h2>
+<p>Describe (usually in a combination of diagrams, tables, and text):</p>
+<ul>
+<li>
+<p>distribution of a system to multiple locations, environments,
+computers, processors, .., as well as physical connections between
+them</p>
+</li>
+<li>
+<p>important justifications or motivations for this deployment
+structure</p>
+</li>
+<li>
+<p>quality and/or performance features of this infrastructure</p>
+</li>
+<li>
+<p>mapping of software artifacts to elements of this infrastructure</p>
+</li>
+</ul>
+<p>For multiple environments or alternative deployments please copy and
+adapt this section of arc42 for all relevant environments.</p>
+<p><em><strong>&lt;Overview Diagram&gt;</strong></em></p>
+<p>Motivation</p>
+<p>:   <em>&lt;explanation in text form&gt;</em></p>
+<p>Quality and/or Performance Features</p>
+<p>:   <em>&lt;explanation in text form&gt;</em></p>
+<p>Mapping of Building Blocks to Infrastructure</p>
+<p>:   <em>&lt;description of the mapping&gt;</em></p>
+<p><img src="figures/EDDIE_Deployment_Options.png" alt="EDDIE Doployment Options (BYOI)"></p>
+<h2>Infrastructure Level 2</h2>
+<p>Here you can include the internal structure of (some) infrastructure
+elements from level 1.</p>
+<p>Please copy the structure from level 1 for each selected element.</p>
+<h3><em>&lt;Infrastructure Element 1&gt;</em></h3>
+<p><em>&lt;diagram + explanation&gt;</em></p>
+<h3><em>&lt;Infrastructure Element 2&gt;</em></h3>
+<p><em>&lt;diagram + explanation&gt;</em></p>
+<p>...</p>
+<h3><em>&lt;Infrastructure Element n&gt;</em></h3>
+<p><em>&lt;diagram + explanation&gt;</em></p>
+</div>
+    </main>
+  </div>
+  <footer>
+    <span>last edited on 15.03.2023 08:28</span>
+    <a href="https://github.com/eddie-energy/architecture/blob/main/./7-deployment-view/index.md">edit on GitHub</a>
+  </footer>
+</body>
+
+</html>

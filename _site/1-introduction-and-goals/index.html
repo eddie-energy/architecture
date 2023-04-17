@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <link rel="stylesheet" href="/architecture/assets/styles.css">
+  <link rel="icon" type="image/png" href="/architecture/figures/favicon-32x32.png">
+  <title>EDDIE Architecture : Introduction and Goals</title>
+</head>
+
+<body>
+  <header>
+    <h1>EDDIE Architecture</h1>
+    <img src="/architecture/figures/eddie-logo.png">
+  </header>
+  <div class="container">
+    <nav>
+      <ol><li><a href="/architecture/">Top Page</a><ol><li><a href="/architecture/1-introduction-and-goals/" class="current">Introduction and Goals</a></li>
+<li><a href="/architecture/2-constraints/">Architecture Constraints</a></li>
+<li><a href="/architecture/3-context-and-scope/">System Scope and Context</a><ol><li><a href="/architecture/3-context-and-scope/01-mvp1/">MVP-1</a></li>
+<li><a href="/architecture/3-context-and-scope/88-external-systems/">External systems</a><ol><li><a href="/architecture/3-context-and-scope/88-external-systems/EDA/">EDA</a></li>
+<li><a href="/architecture/3-context-and-scope/88-external-systems/ENEDIS/">ENEDIS</a></li></ol></li></ol></li>
+<li><a href="/architecture/4-solution-strategy/">Solution Strategy</a></li>
+<li><a href="/architecture/5-building-block-view/">Building Block View</a></li>
+<li><a href="/architecture/6-runtime-view/">Runtime View</a></li>
+<li><a href="/architecture/7-deployment-view/">Deployment View</a></li>
+<li><a href="/architecture/8-crosscut-concepts/">Cross-cutting Concepts</a></li>
+<li><a href="/architecture/9-architectural-decisions/">Architecture Decisions</a></li>
+<li><a href="/architecture/10-quality-requirements/">Quality Requirements</a></li>
+<li><a href="/architecture/11-risks-and-technical-debt/">Risks and Technical Debts</a></li>
+<li><a href="/architecture/12-glossary/">Glossary</a></li></ol></li></ol>
+    </nav>
+    <main>
+      <h1>Introduction and Goals</h1>
+      <div><!-- Describes the relevant requirements and the driving forces that software architects and the development team must consider. These include
+
+-   underlying business goals,
+-   essential features,
+-   essential functional requirements,
+-   quality goals for the architecture and
+-   relevant stakeholders and their expectations -->
+<p>EDDIE (European Distributed Data Infrastructure for Energy) is a research project aiming to build a framework for aggregating energy-related data, e.g., from houses whose owners have provided the appropriate permission.</p>
+<h2>Background</h2>
+<p>In the energy sector, the European Directive (EU) 2019/944 of the Clean Energy for all Europeans Package has established the rights to access energy-related metering, production, and consumption data for energy consumers and eligible parties of their choice. New European regulations like this directive pave the way for novel energy data-based services which have the potential to improve the use of energy via web-based and mobile applications that process the energy data, e.g., to provide consumption recommendations for saving energy. Such services can raise the energy awareness of citizens and foster economic growth on a European level. However, the main barrier today is that there is no large-scale, uniform, and easy access to energy data across European Member States (MSs), which is a severe handicap for developing new services. EDDIE aims at tackling this problem by creating a framework that automates the process of sharing data between energy consumers and eligible parties (i.e., third parties with permission from consumers).</p>
+<h2>Business Goals</h2>
+<p>There are 2 prime business goals:</p>
+<ol>
+<li>At the moment, an energy consumer may make use of services (e.g., visualizations, predictions) offered by their energy provider. To do this, one can log in to the website of their energy provider and access the available services. The EDDIE framework aims at allowing consumers to access the services of any energy provider in the same or a different country. This will allow all energy providers to work and compete in a common energy market.</li>
+<li>The second goal of the EDDIE framework is to enable energy consumers to use services that are provided not only by the energy provider but by any eligible party. An eligible party can be anyone, e.g., individuals, organizations or research groups, with appropriate permission from consumers to access and process their energy data in order to generate value in a commercial or non-commercial context, e.g., by developing novel services.</li>
+</ol>
+<h2>Essential Features</h2>
+<p>The essential features of the framework are:</p>
+<ul>
+<li>Allowing the consumers to select who can process their data (to avoid privacy infringement).</li>
+<li>Consolidating datasets that follow different structure/syntax/semantics (e.g., from consumers in different countries) into a unified format that allows uniform processing of all the data.</li>
+</ul>
+<h2>Essential Functional Requirements</h2>
+<p>The essential functional requirements are listed below. A more elaborate description of the requirements can be found in <a href="/architecture/10-quality-requirements/">Section 10</a>.</p>
+<ul>
+<li>Decentralized: The consumer data must be shared only with eligible parties (i.e., that have the permission of the consumer). A central place that aggregates consumer data without the permission of the consumer must not be used.</li>
+<li>Scalable. The consumer must be able to share their data with multiple eligible parties. Moreover, an eligible party must be able to collect data from multiple consumers.</li>
+<li>Extensible. The framework must be extensible so that adding unsupported energy providers does not involve significant engineering/developing effort.</li>
+</ul>
+<h2>Quality Goals</h2>
+<!-- The top three (max five) quality goals for the architecture whose
+fulfillment is of the highest importance to the major stakeholders. We
+mean quality goals for the architecture. Don't confuse them with
+project goals. They are not necessarily identical.
+A table with quality goals and concrete scenarios, ordered by priorities -->
+<p>The main goals of the architecture are:</p>
+<!-- (based on the ISO 25010 standard) -->
+<ul>
+<li>Usability: The framework can be understood, learned, and used, and is attractive to the stakeholders.</li>
+<li>Maintainability: the framework can be modified, corrected, adapted, and extended to react to changes in the environment.</li>
+</ul>
+<h2>Stakeholders</h2>
+<!-- Explicit overview of stakeholders of the system, i.e. all persons, roles
+or organizations that
+
+-   should know the architecture
+-   have to be convinced of the architecture
+-   have to work with the architecture or with code
+-   need the documentation of the architecture for their work
+-   have to come up with decisions about the system or its development -->
+<p>Persons that may make use of this document can have the following roles:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Expectation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product owner</td>
+<td>Needs to understand the overall structure of a system that uses the framework, e.g., to be able to prioritize development tasks.</td>
+</tr>
+<tr>
+<td>Software architect</td>
+<td>Needs to understand the architecture of a system that uses the framework,e.g., to be able to design services.</td>
+</tr>
+<tr>
+<td>Software Developer</td>
+<td>Needs to understand the functionality of a specific component, e.g., to be able to perform code modifications.</td>
+</tr>
+<tr>
+<td>DevOps Engineer</td>
+<td>Needs to understant the interactions among the components of the framework, e.g., to be able to deploy and run the framework.</td>
+</tr>
+</tbody>
+</table>
+</div>
+    </main>
+  </div>
+  <footer>
+    <span>last edited on 10.04.2023 16:58</span>
+    <a href="https://github.com/eddie-energy/architecture/blob/main/./1-introduction-and-goals/index.md">edit on GitHub</a>
+  </footer>
+</body>
+
+</html>

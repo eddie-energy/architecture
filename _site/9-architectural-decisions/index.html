@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <link rel="stylesheet" href="/architecture/assets/styles.css">
+  <link rel="icon" type="image/png" href="/architecture/figures/favicon-32x32.png">
+  <title>EDDIE Architecture : Architecture Decisions</title>
+</head>
+
+<body>
+  <header>
+    <h1>EDDIE Architecture</h1>
+    <img src="/architecture/figures/eddie-logo.png">
+  </header>
+  <div class="container">
+    <nav>
+      <ol><li><a href="/architecture/">Top Page</a><ol><li><a href="/architecture/1-introduction-and-goals/">Introduction and Goals</a></li>
+<li><a href="/architecture/2-constraints/">Architecture Constraints</a></li>
+<li><a href="/architecture/3-context-and-scope/">System Scope and Context</a><ol><li><a href="/architecture/3-context-and-scope/01-mvp1/">MVP-1</a></li>
+<li><a href="/architecture/3-context-and-scope/88-external-systems/">External systems</a><ol><li><a href="/architecture/3-context-and-scope/88-external-systems/EDA/">EDA</a></li>
+<li><a href="/architecture/3-context-and-scope/88-external-systems/ENEDIS/">ENEDIS</a></li></ol></li></ol></li>
+<li><a href="/architecture/4-solution-strategy/">Solution Strategy</a></li>
+<li><a href="/architecture/5-building-block-view/">Building Block View</a></li>
+<li><a href="/architecture/6-runtime-view/">Runtime View</a></li>
+<li><a href="/architecture/7-deployment-view/">Deployment View</a></li>
+<li><a href="/architecture/8-crosscut-concepts/">Cross-cutting Concepts</a></li>
+<li><a href="/architecture/9-architectural-decisions/" class="current">Architecture Decisions</a></li>
+<li><a href="/architecture/10-quality-requirements/">Quality Requirements</a></li>
+<li><a href="/architecture/11-risks-and-technical-debt/">Risks and Technical Debts</a></li>
+<li><a href="/architecture/12-glossary/">Glossary</a></li></ol></li></ol>
+    </nav>
+    <main>
+      <h1>Architecture Decisions</h1>
+      <div><h5>Contents</h5>
+<p>Important, expensive, large scale or risky architecture decisions
+including rationales. With &quot;decisions&quot; we mean selecting one
+alternative based on given criteria.</p>
+<p>Please use your judgement to decide whether an architectural decision
+should be documented here in this central section or whether you better
+document it locally (e.g. within the white box template of one building
+block).</p>
+<p>Avoid redundancy. Refer to section 4, where you already captured the
+most important decisions of your architecture.</p>
+<h5>Motivation</h5>
+<p>Stakeholders of your system should be able to comprehend and retrace
+your decisions.</p>
+<h5>Form</h5>
+<p>Various options:</p>
+<ul>
+<li>
+<p>ADR (<a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Documenting Architecture
+Decisions</a>)
+for every important decision</p>
+</li>
+<li>
+<p>List or table, ordered by importance and consequences or:</p>
+</li>
+<li>
+<p>more detailed in form of separate sections per decision</p>
+</li>
+</ul>
+<p>See <a href="https://docs.arc42.org/section-9/">Architecture Decisions</a> in the
+arc42 documentation. There you will find links and examples about ADR.</p>
+<p>In addition to industrial, economic and social problems, EDDIE tackles another technical problem and closes a significant gap for the further development of data-based solutions in the energy domain: the lack of streamlined, secure and easy access to measurements of in-house sensors (e.g., Internet of Things (IoT) devices in households). The Administrative Interface for In-house Data Access (AIIDA) will provide the customer with the infrastructure to share these data streams close to real-time with remote services on a manageable, GDPR-compliant consent basis.</p>
+<p>Throughout the implementation of EDDIE, we will closely monitor ongoing developments in the field of data-sharing infrastructure and technologies and will – during the project – accommodate these developments, where relevant. At the time of writing, important related initiatives like GAIA-X [9] and EIDAS [10] electronic IDs (eID) are emerging. Although not in a state directly usable for EDDIE, GAIA-X will complement the decentralised approach of the distributed data infrastructure. If GAIA-X becomes usable during project runtime, steps will be taken to exploit the new opportunities. In route of the comitology process for the upcoming Implementing Acts for Interoperability and Data Access following Art. 24(2) of Directive (EU) 2019/944 it has been identified, that especially eID has the potential to drastically lower the hurdles for eligible parties/services from another Member State than the customer. At the moment, in some countries eligible parties need to undergo complicated and long-running validation processes, which would become a matter of seconds with supported EU Logins at least for onboarding processes. A close cooperation and interoperability with other initiatives (e.g., European Data Spaces, International Data Spaces Association, Data Spaces Business Alliance) will be sought throughout the project’s implementation.</p>
+</div>
+    </main>
+  </div>
+  <footer>
+    <span>last edited on 29.03.2023 15:06</span>
+    <a href="https://github.com/eddie-energy/architecture/blob/main/./9-architectural-decisions/index.md">edit on GitHub</a>
+  </footer>
+</body>
+
+</html>
