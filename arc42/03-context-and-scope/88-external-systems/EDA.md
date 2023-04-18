@@ -23,7 +23,7 @@ It requires the following steps:
 
 As this process shows, Austria uses a push based model for historical validated data.
 
-## AS4
+## Setup/ Onboarding
 
 For the AS4 communication with EDA we use a [Ponton X/P Messenger](https://www.ponton.de/ponton-xp).
 
@@ -33,6 +33,18 @@ The communication with the Ponton X/P Messenger itself works via their Java API 
 
 In the future we might consider implementing the AS4 protocol by ourselves or look into available open source implementations.
 
+## Example Files
+
+* ANFORDERUNG_CCMO
+* NEXT_FILE
+* ..
+
+## Issues
+
+| No. | Title | Description | Reported at | Resolved at |
+|-----|-------------------|-----------------------------------------------|-----------|------------|
+| 1 | No response to request | ... | 2023-04-18 | - |
+| 2 | Manual setup of communication partner needed|  | 2023-04-18 |  |
 
 ## Links to ebUtilities
 - [ebUtilities](https://ebutilities.at/)
