@@ -31,7 +31,7 @@ skinparam rectangle{
     artifact "Admin\nConsole" as adminConsole
   }
   node "Docker Runtime" <<Organization Computing Infrastructure>> as org {    
-    artifact "Data\nBroker " as broker
+    artifact "Streaming\nInfrastructure" as broker
     database "Database\n" as database
   }
 

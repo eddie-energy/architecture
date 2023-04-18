@@ -29,7 +29,7 @@ skinparam rectangle{
     artifact "Consent\nFacade" as consentFacade
     artifact "Interoperable\nCommunication" as comm
     artifact "Admin\nConsole" as adminConsole
-    artifact "Data\nBroker " as broker
+    artifact "Streaming\nInfrastructure" as broker
     database "Database\n" as database
   }
   consentFacade -right- comm

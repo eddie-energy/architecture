@@ -29,10 +29,10 @@ skinparam rectangle{
 node "Eligible Party Infrastructure"  as epInfra{
   component "EDDIE Framework" {    
     component "Consent \nFacade" as consentFacade
-    component "Data \nBroker " as broker
+    component "Streaming\nInfrastructure" as broker
     database "Database\n" as database
     component "Admin \nConsole" as adminConsole
-    component "\t\t\t\tInteroperable Communication\t\t\t\t" as comm
+    component "\t\t\t\t    Interoperable Communication\t\t\t\t\t" as comm
   }
  
     component "User Interface \n(Website or App)" as ui

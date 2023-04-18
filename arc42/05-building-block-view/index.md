@@ -84,7 +84,7 @@ The EDDIE Framework includes the following components.
 | Component | Responsibility |
 | - | - |
 | Consent Facade | Manages and stores the consent of the consumers. |
-| Data Broker | Handles the communication among internal and external components |
+| Streaming Infrastructure | Handles the communication among internal and external components |
 | Database | Stores information about consents, state, and data. |
 | Admin Console | Entry point for the eligible party to register with regional data-sharing infrastructure (if necessary). |
 | Interoperable Communication | Translates messages/data from different Regional Data-sharing Infrastructures (e.g., from different countries) to a unified format. |
@@ -102,7 +102,7 @@ The Level 2 view introduces the following interfaces.
 | Provided From | Consumed By | Type | Data Model |
 | - | - | - | - |
 | Consent Facade | User Interface | HTTP | [Link](./data-models/consent-facade-interface.md) |
-| Data Broker | Services | Kafka | [Link](./data-models/data-broker-interface.md) |
+| Streaming Infrastructure | Services | Kafka | [Link](./data-models/data-broker-interface.md) |
 | Interoperable Communication | AIIDA | Kafka | [Link](./data-models/inter-comm-aiida-interface.md) |
 
 ### Black Boxes
