@@ -83,3 +83,5 @@ The table below shows a summary of the interfaces.
 | EDDIE Framework | AIIDA | Kafka |
 | EDDIE Framework | Services | Kafka |
 | Regional Data-sharing Infrastructure | Framework | HTTP (or other) |
+
+Notably, concrete details about the system scope from a product development perspective are presented [here](./01-mvp1.md).
