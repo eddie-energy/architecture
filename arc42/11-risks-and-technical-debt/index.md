@@ -27,4 +27,4 @@ The table below shows an overview of the identified technical debts. This table 
 
 | No. | Debt | Possible Solutions | Section |
 |-|-|-|-|
-| 1 | Expose energy data through a data space | Integrate a data space connector for exposing sovereign data | [Link]() |
+| 1 | Expose energy data through a data space. | Integrate a data space connector for exposing sovereign data. | [Link]() |
