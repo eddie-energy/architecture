@@ -84,4 +84,4 @@ The table below shows a summary of the interfaces.
 | EDDIE Framework | Services | Kafka |
 | Regional Data-sharing Infrastructure | EDDIE Framework | HTTP (or other) |
 
-Notably, concrete details about the system scope from a product development perspective are presented [here](/arc42/03-context-and-scope/01-mvp1.md).
+Notably, concrete details about the system scope from a product development perspective are presented [here](./01-mvp1.md)

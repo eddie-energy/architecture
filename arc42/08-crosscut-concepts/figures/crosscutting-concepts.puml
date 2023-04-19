@@ -16,6 +16,7 @@ mindmapDiagram {
 -- Domain\nModels
 ---_ CIM
 ---_ SAREF
+---_ SGAM
 -- Architectural\nPatterns
 ---_ Request/\nResponse
 ---_ Publish/\nSubscribe

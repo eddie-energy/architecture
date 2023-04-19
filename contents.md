@@ -18,7 +18,7 @@
 
 1. [Deployment View](./arc42/07-deployment-view/index.md)
 
-1. [Crosscut Concepts](./arc42/08-crosscut-concepts/index.md)
+1. [Crosscutting Concepts](./arc42/08-crosscut-concepts/index.md)
 
 1. [Architectural Decisions](./arc42/09-architectural-decisions/index.md)
 

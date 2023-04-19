@@ -25,7 +25,7 @@ This structure can be used:
     Important Interfaces
     Black boxes -->
 
-The building block view is presented through a description of the system using levels. Level 1 shows the overall system along with all the main building blocks. Level 2 focuses on some building blocks from Level 1. Level 3 focuses on building blocks from Level 3 and so on. To decompose the system into building blocks we have used functional decomposition on the main functionality of the framework (as discussed in Section 3: [Context and Scope](../03-context-and-scope/index.md)).
+The building block view is presented through a description of the system using levels. Level 1 shows the overall system along with all the main building blocks. Level 2 focuses on some building blocks from Level 1. Level 3 focuses on building blocks from Level 3 and so on. To decompose the system into building blocks we have used functional decomposition on the main functionality of the framework.
 
 ## Level 1
 
@@ -81,19 +81,19 @@ The Level 2 view of the system is shown in the component diagram below.
 
 The EDDIE Framework includes the following components.
 
+| Component | Responsibility | Data Model |
+| - | - | - |
+| Consent Facade | Manages and stores the consent of the consumers. |  |
+| Streaming Infrastructure | Handles the communication among internal and external components |  |
+| Database | Stores information about consents, state, and data. |  [Master Data](./data-models/master-data.md) |
+| Admin Console | Entry point for the eligible party to register with regional data-sharing infrastructure (if necessary). |  |
+| Interoperable Communication | Translates messages/data from different Regional Data-sharing Infrastructures (e.g., from different countries) to a unified format. |  |
+
+<!-- The AIIDA component includes the following components.
+
 | Component | Responsibility |
 | - | - |
-| Consent Facade | Manages and stores the consent of the consumers. |
-| Streaming Infrastructure | Handles the communication among internal and external components |
-| Database | Stores information about consents, state, and data. |
-| Admin Console | Entry point for the eligible party to register with regional data-sharing infrastructure (if necessary). |
-| Interoperable Communication | Translates messages/data from different Regional Data-sharing Infrastructures (e.g., from different countries) to a unified format. |
-
-The AIIDA component includes the following components.
-
-| Component | Responsibility |
-| - | - |
-| pending | - |
+| pending | - | -->
 
 ### Interfaces
 
@@ -107,18 +107,31 @@ The Level 2 view introduces the following interfaces.
 
 ### Black Boxes
 
-No introduced black boxes in Level 2
+No introduced black boxes in Level 2.
 
-## Level 3
+
+
+
+
+
+
+<!-- ## Level 3
 
 The Level 3 view of the system is shown in the component diagram below. 
+
+### Contained Building Blocks
+
+### Interfaces
+
+### Black Boxes -->
+
 <!-- 
 
 <div align="center">
 <img src="./figures/component-diagram-level-3.png" width="650">
 </div>
  -->
-### Contained Building Blocks
+
 <!-- 
 The eligible party manages the following components.
 
@@ -134,7 +147,7 @@ The In-house Infrastructure hosts the following components.
 | - | - |
 | AIIDA| Gets real-time data from the smart meter. |
  -->
-### Interfaces
+
 <!-- 
 The Level 1 view includes the following interfaces.
 
@@ -144,7 +157,7 @@ The Level 1 view includes the following interfaces.
 | Meter Data Portal | Provides historical data to the eligible party (with appropriate consent) | HTTP (or other) | [Link](./data-models/meter-data-portal/meter-data-portal.md) |
 | P1 | Provides access to real-time energy consumption data | P1 | [Link](./data-models/p1-interface/p1-interface.md) |
  -->
-### Black Boxes
+
 <!-- 
 | Component | Function |
 | - | - |

@@ -28,13 +28,13 @@ A table of requirements that need further explanation is shown below. This table
 
 | Attribute | Requirement | Section |
 |-|-|-|
-| Performance | Data Loss| [Link]()|
+| Performance | Data Loss|  |
 | Performance | Latency | [Link](#latency)|
-| Availability | Down Time | [Link]()|
-| Availability | Boot Time | [Link]()|
-| Interoperability | Coverage | [Link]()|
-| Security | Unauthorized Access | [Link](#unauthorized-access)|
-| Security | Compliance | [Link]()|
+| Availability | Down Time |  |
+| Availability | Boot Time |  |
+| Interoperability | Coverage |  |
+| Security | Unauthorized Access |  |
+| Security | Compliance |  |
 
 
 
@@ -71,13 +71,13 @@ A new consumption value is collected by AIIDA from an energy data source, e.g., 
 The response of the system is that this value is propagated to one or more services of one or more eligible parties. The latency from the time a value is collected until the time the last service receives it shall be less than 5 seconds.
 
 
-### Unauthorized Access
+<!-- ### Unauthorized Access
 
 #### Context
 
 #### Stimulus
 
-#### Response
+#### Response -->
 
 
 

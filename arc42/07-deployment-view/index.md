@@ -30,7 +30,7 @@ Describe (usually in a combination of diagrams, tables, and text):
 -   quality and/or performance features of this infrastructure
 -   mapping of software artifacts to elements of this infrastructure --> 
 
-The deployment view of the system focuses on the utilized technical infrastructure. A high-level deployment diagram is shown in Section [Context and Scope](../03-context-and-scope/index.md#technical-context). While that diagram shows the framework as a black box, this section shows deployment diagrams that depict where the internal components of the system run. For the system decomposition, the same logic as in Section [Building Block View](../05-building-block-view/index.md) is used, i.e., based on levels.
+The deployment view of the system focuses on the utilized technical infrastructure. A high-level deployment diagram is shown in Section: Context and Scope. While that diagram shows the framework as a black box, this section shows deployment diagrams that depict where the internal components of the system run.
 
 ## Infrastructure Level 2
 
@@ -44,9 +44,9 @@ The Level 2 view includes the following high-level nodes.
 
 | Node | Description |
 |-|-|
-|Eligible Party Infrastructure | This is operated by the eligible party. The Local Computing Infrastructure is used for running the framework which is deployed locally on the premises of the eligible party. The Cloud Computing Infrastructure is out of scope of this document, as discussed in Section: [Context and Scope](../03-context-and-scope/index.md#business-context). |
-|Regional Data-sharing Infrastructure | This is also out of scope for this document, although, integration with the provided interfaces is necessary.
-|In-house Infrastructure | This node is operated by the consumer. It includes an in-house device (e.g., a Raspberry Pi) and the smart meter. |
+|Eligible Party Infrastructure | This is operated by the eligible party. The Local Computing Infrastructure is used for running the framework which is deployed locally on the premises of the eligible party.|
+|Regional Data-sharing Infrastructure | This is operated by the Metered Data Administrator. |
+|In-house Infrastructure | This node is operated by the consumer. It includes an in-house device (e.g., a Raspberry Pi computer) and the smart meter. |
 
 Specifically for the deployment of the framework, i.e., the node Local Computing Infrastructure shown above, two additional deployment options are possible. The original deployment is shown below isolated from the rest of the system.
 
@@ -63,8 +63,8 @@ Two additional options are shown below.
 The motivation for all 3 options is shown in the table below.
 | Option | Motivation |
 |-|-|
-| 1 |-|
-| 2 |-|
-| 3 |-|
+| 1 |  Represents a deployment scenario as to be run on a laptop or on a standard server. All the environment is delivered with a simple console command and running in an orchestrated pre-defined virtual infrastructure configured by the EDDIE deployment scripts. |
+| 2 | This would be a typical scenario in a corporate environment, that has its own database/data warehouse infrastructure running on-premises, as well as – probably – already a data streaming infrastructure in place, that it intends to re-use and manage with existing staff. |
+| 3 | This would be typical for a “purchase” or “download” of EDDIE through a cloud market place. It works similar to Option 2, with the difference that is utilises the integrated, cloud-native structures for managed databases and managed data streaming infrastructure. |
 
-## Infrastructure Level 3
+<!-- ## Infrastructure Level 3 -->

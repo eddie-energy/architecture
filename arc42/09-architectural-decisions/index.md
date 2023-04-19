@@ -24,7 +24,7 @@ Various architectural decisions are discussed for the implementation of this sys
 | - | - | - | - |
 | AD1 | Kafka for sending data streams from AIIDA to the framework. | Proposed | [Link](#ad1-kafka-for-sending-data-streams-from-aiida-to-the-framework) |
 | AD2 | Kafka for assigning data streams from the framework to the services. | Proposed | [Link](#ad2-kafka-for-assigning-data-streams-from-the-framework-to-the-services) |
-| AD3 | - | - | - |
+<!-- | AD3 | - | - | - | -->
 
 ## AD1: Kafka for sending Data Streams from AIIDA to the Framework 
 

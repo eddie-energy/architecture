@@ -15,7 +15,7 @@ participant "EP\nWebsite" as website
 participant "Consent\nFacade" as facade
 participant "Interoperable\nCommunication" as comm
 participant "Consent\nFacade" as facade
-participant "Consent Admin\nPortal" as adminPortal
+participant "Consent\nAdmin Portal" as adminPortal
 participant "Meter Data\nPortal" as dataPortal
 
 user -> website : login()
