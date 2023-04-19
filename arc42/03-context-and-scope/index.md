@@ -32,7 +32,7 @@ From a business perspective, the system consists of four entities which are show
 This context diagram shows how the EDDIE Framework (in the center of the figure) interacts with its environment. Three other entities are part of the system:
 
 1. AIIDA (Administrative Interface for In-house Data Access)
-1. Utility provider 
+1. Regional Data-sharing Infrastructure
 1. Services
 
 The table below shows a description of all the entities of the context diagram.
@@ -40,11 +40,11 @@ The table below shows a description of all the entities of the context diagram.
 | Component | Description | Within Scope |
 |-|-|-|
 | AIIDA | Collects real-time data from an energy metering device (e.g., a smart meter or an IoT home automation system), and sends this data to the EDDIE Framework. | &#x2611; Yes | 
-| Regional Data-sharing Infrastructure | Provides historical data about the energy consumption of an energy consumer (e.g., energy consumption within a house). | &#x2612; No|
+| Regional Data-sharing Infrastructure | Provides historical data (e.g., validated historical metering data) about the energy consumption of an energy consumer (e.g., energy consumption within a house). This infrastructure is provided, e.g., by a Metered Data Administrator. | &#x2612; No|
 | EDDIE Framework | Collects energy data from AIIDA and the Regional Data-sharing Infrastructure (can be multiple instances of AIIDA and Regional Data-sharing Infrastructure), and consolidates it. | &#x2611; Yes |
 | Services | Acquire consolidated data from the EDDIE Framework and use it to generate value, e.g., using data analysis services that are based on statistics, machine learning, and artificial intelligence techniques. | &#x2612; No |
 
-The figure above shows how the services of an eligible party can acquire real-time data (from AIIDA) and historical data (from a Regional Data-sharing Infrastructure) using the EDDIE Framework. The eligible party is then expected to process this data using services. This way, a consumer can use services that are offered by any organization that takes the role of the eligible party (as discussed in quality goal No. 1 mentioned in Section [Introduction and Goals](/arc42/01-introduction-and-goals/index.md)).
+The figure above shows how the services of an eligible party can acquire real-time data (from AIIDA) and historical data (from a Regional Data-sharing Infrastructure) using the EDDIE Framework. The eligible party is then expected to process this data using services. This way, a consumer can use services that are offered by any organization that takes the role of the eligible party.
 
 Notably, **one eligible party deploys one instance of the EDDIE Framework to communicate with one or more instances of AIIDA and Regional Data-sharing Infrastructures**. This way, the eligible party collects data from multiple consumers thereby being able to implement services that leverage large datasets with energy information (i.e., not only from one consumer).
 
@@ -56,7 +56,7 @@ E.g. UML deployment diagram describing channels to neighboring systems, together
 
 From a technical perspective, the system includes four types of nodes which are:
 1. Smart Meter: A device installed in a house by the utility provider, which measures data about the energy consumption of the house, and exposes this data via a P1 port.
-1. In-house Device: A device such as a Raspberry Pi that connects to the smart meter via a P1 port, and implements the Docker Runtime for executing applications.
+1. In-house Device: A device such as a Raspberry Pi computer that connects to the smart meter via a P1 port, and implements the Docker Runtime for executing applications.
 1. Eligible Party Infrastructure: Either on-premise or cloud-based computing infrastructure that implements the Docker Runtime for executing applications.
 1. Regional Data-sharing Infrastructure: This infrastructure provides an interface for various processes including exposing historical energy consumption data. Interestingly, this infrastructure may be provided by a utility provider or a regional Metered Data Administrator. 
 
@@ -82,6 +82,6 @@ The table below shows a summary of the interfaces.
 | Smart meter| AIIDA | P1 |
 | EDDIE Framework | AIIDA | Kafka |
 | EDDIE Framework | Services | Kafka |
-| Regional Data-sharing Infrastructure | Framework | HTTP (or other) |
+| Regional Data-sharing Infrastructure | EDDIE Framework | HTTP (or other) |
 
-Notably, concrete details about the system scope from a product development perspective are presented [here](./01-mvp1.md).
+Notably, concrete details about the system scope from a product development perspective are presented [here](/arc42/03-context-and-scope/01-mvp1.md).
