@@ -24,7 +24,7 @@ rather document a representative selection. -->
 
 The runtime view focuses on interactions among the system's components. The goal of this section is to describe representative and important workflows that occur during the runtime of the system. The table below shows an overview of these workflows:
 
-| Workflow | Involved Actors | Involved Components | Link | 
+| Workflow | Involved Actors | Involved Components | Section | 
 |-|-|-|-|
 | Eligible party registration to MDA | Eligible party | Admin console, consent admin portal, interoperable communication | [Link](./admin-process/eligible-party-registration.md) |
 | Eligible party gets historical validated data | Consumer, eligible party | Consent Facade, Consent Admin Portal, Meter Data Portal, Interoperable Communication  | [Link](./data-flow/eligible-party-gets-historical-data.md) |

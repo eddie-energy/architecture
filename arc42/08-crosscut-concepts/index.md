@@ -21,7 +21,7 @@ There are various important concepts that are relevant to many parts of the syst
 
 The motivation for using some of these concepts is provided in the links of this table.
 
-| Type | Concept | Link |
+| Type | Concept | Section |
 | - | - | - |
 | Domain Models | CIM | [Link](./domain-models/cim.md) | 
 | Domain Models | SAREF | [Link](./domain-models/saref.md) | 
