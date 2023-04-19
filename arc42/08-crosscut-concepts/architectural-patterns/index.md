@@ -1,0 +1,3 @@
+---
+title: Architectural Patterns
+---
