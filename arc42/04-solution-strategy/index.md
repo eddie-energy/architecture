@@ -20,10 +20,11 @@ in the following sections. -->
 
 There are certain goals of the framework which can be achieved by following a specific strategy. These goals are outlined in the following table which also provides links to more detailed explanations.
 
-| No. | Quality Goal | Scenario | Approach | Section |
+| No. | Goal | Scenario | Approach | Section |
 |-|-|-|-|-|
-| 1 | Consent Facade | All consumers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their utility provider.| Implement a Consent Facade component based on the European Reference Process for providing consent. This component shall include speacialized adaptors implmenting the specificities of each country. | [Link](./consent-facade/consent-facade.md) |
-| 2 | Far-reaching | Eligible parties in many countries shall be able to use the EDDIE Framework. | The EDDIE Framework shall become compatible with multiple regional data hubs in three phases. | [Link](./three-phases/three-phases.md) |
+| 1 | Reference Process to Get Historical Validate Data|  |  | [Link](./reference-process-historical-validated-data/reference-process-historical-validated-data.md) |
+| 2 | Consent Facade | All consumers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their utility provider.| Implement a Consent Facade component based on the European Reference Process for providing consent. This component shall include speacialized adaptors implmenting the specificities of each country. | [Link](./consent-facade/consent-facade.md) |
+| 3 | Far-reaching | Eligible parties in many countries shall be able to use the EDDIE Framework. | The EDDIE Framework shall become compatible with multiple regional data hubs in three phases. | [Link](./three-phases/three-phases.md) |
 <!-- | 3 | Incentives | Why would consumers and eligible parties use eddie | marketplace |  |
 | 4 |  |  |  |  | -->
 
