@@ -17,7 +17,7 @@ This workflow includes the following steps:
 1. The consumer visits the website of an eligible party and logs in to their account (upon registration if necessary).
 1. The consumer clicks the button "Connect my data".
 1. A request is sent from the website to the Consent Facade to create a list of the countries (and respective consent admin portals) that the eligible party operates in.
-1. The list of countries and Consent Admin Portals is sent back to the website. To find the countries and respective consent admin portals, the consent facade searches the framework's database. The available countries are stored in the database during after the eligible party registration. 
+1. The list of countries and Consent Admin Portals is sent back to the website. To find the countries and respective consent admin portals, the consent facade searches the framework's database. The available countries are stored in the database during the eligible party registration. 
 1. The list is shown to the consumer.
 1. The consumer selects their country and Consent Admin Portal.
 1. The selected Consent Admin Portal is sent to the Consent Facade.
