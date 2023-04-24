@@ -85,4 +85,7 @@ The glossary is divided into four sections: domain terms, technical terms, data 
 | SGAM | Smart Grid Architecture Model |
 | SGU | Significant Grid User |
 | SOGL | System Operation Guideline |
+| ENTSO-E |European Network of Transmission System Operators for Electricity |
+| SAREF | Smart Applications REFerence ontology |
+| GEODE | GEODE is made up of European independent distribution companies of gas and electricity | 
 |||
