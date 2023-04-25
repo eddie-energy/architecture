@@ -1,4 +1,6 @@
-**Scope accountability**
+---
+title: Scope accountability
+---
 
 The Implementation Acts of the Smart Grids TaskForce (SGTF) constitutes the starting point for the EDDIE Project. Where the architecture discipline is concerned with ‘doing the things right’ this section deals with ‘doing the right thing’. For this purpose I have  enhanced the relevant SGTF uses cases with a color scheme indicating what is directly part of project EDDIE, what is indirectly involved (e.g. the communication between Eligible Party and Metered Data Administrator) and what is out of scope (e.g. the final customer identifying his Eligible Party).
 
