@@ -29,16 +29,19 @@ A table of requirements that need further explanation is shown below. This table
 | Attribute | Requirement | Section |
 |-|-|-|
 | Performance | Data Loss|  |
-| Performance | Latency | [Link](#latency)|
+| Performance | Latency | [Link](./latency-real-time-data/latency-real-time-data.md)|
 | Availability | Down Time |  |
 | Availability | Boot Time |  |
 | Interoperability | Coverage |  |
 | Security | Unauthorized Access |  |
 | Security | Compliance |  |
 
+Requirements stem also from regulatory aspects of the energy sector. The table below includes such requirements.
 
+| Source | Requirement | Section |
+|-|-|-|
+| Implementing Act | Compliance with the Implementing Act defined by TBD | [Section](./implementing-act/implementing-act.md) |
 
-## Quality Scenarios
 
 <!-- Concretization of (sometimes vague or implicit) quality requirements
 using (quality) scenarios.
@@ -58,18 +61,6 @@ For architects, two kinds of scenarios are important:
 - Context – under what circumstances
 - Stimulus – trigger in Use case lingo
 - Response – what the system does. -->
-
-### Latency
-
-#### Context
-Every AIIDA instance collects energy data in real time and generates a data stream. Data streams from one or more AIIDA instances are then sent to an eligible party, i.e., to an instance of the Framework. The Framework uses a message broker to distribute the different streams to different services. Each service implements logic to perform specific computations on the data.
-
-#### Stimulus
-A new consumption value is collected by AIIDA from an energy data source, e.g., a smart meter. 
-
-#### Response
-The response of the system is that this value is propagated to one or more services of one or more eligible parties. The latency from the time a value is collected until the time the last service receives it shall be less than 5 seconds.
-
 
 <!-- ### Unauthorized Access
 
