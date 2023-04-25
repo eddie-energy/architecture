@@ -40,7 +40,7 @@ Requirements stem also from regulatory aspects of the energy sector. The table b
 
 | Source | Requirement | Section |
 |-|-|-|
-| Implementing Act | Compliance with the Implementing Act defined by TBD | [Section](./implementing-act/implementing-act.md) |
+| Implementing Act | Compliance with the Implementing Act defined by TBD | [Link](./implementing-act/implementing-act.md) |
 
 
 <!-- Concretization of (sometimes vague or implicit) quality requirements
