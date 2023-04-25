@@ -5,9 +5,9 @@ The Implementation Acts of the Smart Grids TaskForce (SGTF) constitutes the star
 The next section relates to the Final customer accessing his historical validated data:
 
 
-- [ ] SGTF use case 2: Access to validated historical consumption data by an eligible party
-- [ ] SGTF use case 3: Eligible party terminates the service
-- [ ] SGTF use case 4: Revocation of an active consent
+* SGTF use case 2: Access to validated historical consumption data by an eligible party
+* SGTF use case 3: Eligible party terminates the service
+* SGTF use case 4: Revocation of an active consent
 
 **SGTF use case 2: Access to validated historical consumption data by an eligible party**
 ![SGTF UC02 Access to validated historical consumption data by an eligible party](https://user-images.githubusercontent.com/118567442/234294518-5d092a18-123c-47b1-a272-5ef7cd7b9bf0.png)
