@@ -22,7 +22,7 @@ Various constraints limit the design and implementation decisions of this archit
 
 | No. | Constraint | Description |
 |-|-|-|
-| 1 | Distributed Data Management | Data is always transferred just from the source to the sink. Just for the sake of data sharing or communication under the scope of energy-related business processes, there must be no platforms in the middle needed. |
+| 1 | Distributed Data Management | Data is always transferred only from the source to the sink. Just for the sake of data sharing or communication under the scope of energy-related business processes, there must be no platforms in the middle needed. |
 | 2 | Respect for subsidiarity | When implementing access to online data-sharing infrastructures, EDDIE Framework and its region connectors will integrate fully into MS data exchange environments, and not intervene into national decisions. This can even be boiled further down to regions. EDDIE supports value creation to stay at local levels and therefore highly supports value streams created by local energy communities and service providers. |
 | 3 | Customer sovereignty | The need for sharing data to participate in new energy services must not lead to a loss of control about what data is stored and used about whom about final customers. Also, deliverables of the project must be suited to be easily usable, and provide prosumers an understandable overview about the flow of their data. |
 | 4 | Data space interoperability | Interactions with relevant European data space intiatives shall be sought and explored and, if possible, implemented. |
