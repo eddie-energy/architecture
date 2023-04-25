@@ -16,5 +16,5 @@ CIM vs EDDIE/SGTF roles:
 The Permission Administrator is added
 
 <div align="center">
-<img src="./figures/CIM-Master-Data-Model.png" width="1000">
+<img src="../figures/CIM-Master-Data-Model.png" width="1000">
 </div>
