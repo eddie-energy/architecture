@@ -57,9 +57,9 @@ The Level 1 view includes the following interfaces.
 
 | Interface | Responsibility | Type| Data Model |
 | - | - | - | - |
-| Consent Admin Portal | Receives requests from eligible parties for access to consumer data. | HTTP (or other) | [Link](./data-models/consent-admin-portal.md) |
-| Meter Data Portal | Provides historical data to the eligible party (with appropriate consent) | HTTP (or other) | [Link](./data-models/meter-data-portal.md) |
-| P1 | Provides access to real-time energy consumption data | P1 | [Link](./data-models/p1-interface.md) |
+| Consent Admin Portal | Receives requests from eligible parties for access to consumer data. | HTTP (or other) | [Link](./consent-admin-portal/consent-admin-portal.md) |
+| Meter Data Portal | Provides historical data to the eligible party (with appropriate consent) | HTTP (or other) | [Link](./meter-data-portal/meter-data-portal.md) |
+| P1 | Provides access to real-time energy consumption data | P1 | [Link](./p1-interface/p1-interface.md) |
 
 ### Black Boxes
 
@@ -85,7 +85,7 @@ The EDDIE Framework includes the following components.
 | - | - | - |
 | Consent Facade | Manages and stores the consent of the consumers. |  |
 | Streaming Infrastructure | Handles the communication among internal and external components |  |
-| Database | Stores information about consents, state, and data. |  [Master Data](./data-models/master-data.md) |
+| Database | Stores information about consents, state, and data. |  [Master Data](./master-data/master-data.md) |
 | Admin Console | Entry point for the eligible party to register with regional data-sharing infrastructure (if necessary). |  |
 | Interoperable Communication | Translates messages/data from different Regional Data-sharing Infrastructures (e.g., from different countries) to a unified format. |  |
 
@@ -101,9 +101,9 @@ The Level 2 view introduces the following interfaces.
 
 | Provided From | Consumed By | Type | Data Model |
 | - | - | - | - |
-| Consent Facade | User Interface | HTTP | [Link](./data-models/consent-facade-interface.md) |
-| Streaming Infrastructure | Services | Kafka | [Link](./data-models/data-broker-interface.md) |
-| Interoperable Communication | AIIDA | Kafka | [Link](./data-models/inter-comm-aiida-interface.md) |
+| Consent Facade | User Interface | HTTP | [Link](./consent-facade-interface/consent-facade-interface.md) |
+| Streaming Infrastructure | Services | Kafka | [Link](./data-broker-interface/data-broker-interface.md) |
+| Interoperable Communication | AIIDA | Kafka | [Link](./inter-comm-aiida-interface/inter-comm-aiida-interface.md) |
 
 ### Black Boxes
 

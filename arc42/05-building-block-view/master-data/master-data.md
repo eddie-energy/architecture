@@ -1,5 +1,5 @@
 ---
-title: Master Data
+title: "Data Model: Master Data"
 ---
 
 **This is the CIM version of the master data model.**
@@ -15,8 +15,7 @@ CIM vs EDDIE/SGTF roles:
 
 The Permission Administrator is added
 
-<!-- <div align="center">
+<div align="center">
 <img src="./figures/CIM-Master-Data-Model.png" width="1000">
-</div> -->
+</div>
 
-![Master Data](./figures/CIM-Master-Data-Model.png)
