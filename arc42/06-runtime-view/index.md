@@ -26,7 +26,7 @@ The runtime view focuses on interactions among the system's components. The goal
 
 | Workflow | Involved Actors | Involved Components | Section | 
 |-|-|-|-|
-| Eligible party registration to MDA | Eligible party | Admin console, consent admin portal, interoperable communication | [Link](./admin-process/eligible-party-registration.md) |
-| Eligible party gets historical validated data | Consumer, eligible party | Consent Facade, Consent Admin Portal, Meter Data Portal, Interoperable Communication  | [Link](./data-flow/eligible-party-gets-historical-data.md) |
+| Eligible party registration to MDA | Eligible party | Admin console, consent admin portal, interoperable communication | [Link](./eligible-party-registration/eligible-party-registration.md) |
+| Eligible party gets historical validated data | Consumer, eligible party | Consent Facade, Consent Admin Portal, Meter Data Portal, Interoperable Communication  | [Link](./eligible-party-gets-historical-data/eligible-party-gets-historical-data.md) |
 
 

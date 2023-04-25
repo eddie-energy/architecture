@@ -32,12 +32,12 @@ skinparam rectangle {
 
 node "\t\tDocker Runtime\t\t" <<Eligible Party Infrastructure>> as epInfra{
   component "EDDIE Framework" as eddie
-  artifact "Service" as service
+  artifact "Service" <<Container>> as service
   interface "\t\tKafka" as eddie1
   interface "\t\tKafka" as eddie2
 
   eddie -up- eddie1
-  service -down-( eddie1 :Consume historical\nand real-time data
+  service -down-( eddie1 :Pull historical and\nreal-time data
   eddie -right- eddie2
 }
 node "In-house Infrastructure"  {
@@ -56,10 +56,10 @@ node "Regional Data-sharing\nInfrastructure"  as energyProvider {
 ' actor "Consumer" as consumer
 ' actor "Eligible\nParty" as ep
 
-aiida --( p1 :Get real-time data\n
+aiida --( p1 :Pull real-time data\n
 
-eddie -down--( energy1 :Get historical data
-aiida -up--( eddie2 :Send real-time data\n\n
+eddie -down--( energy1 :Pull historical data
+aiida -up--( eddie2 :Push real-time data\n\n
 
 ' consumer -down- aiida
 ' ep -down- eddie
