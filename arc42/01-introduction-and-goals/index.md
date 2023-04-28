@@ -123,7 +123,7 @@ Roles that may be involved are:
 | Abbr. | Role | Description |
 |-|-|-|
 | EP | Eligible Party | Party requesting or processing data shared by the customer (e.g., data-driven service, aggregators, established actors, etc.) |
-| CA | Consent Administrator | A party responsible for administrating a register of consents. The CA makes information about the consent (but not necessarily the data to be shared) available on request for entitled parties in the sector. |
+| PA | Permission Administrator | A party responsible for administrating a register of consents. The CA makes information about the consent (but not necessarily the data to be shared) available on request for entitled parties in the sector. |
 | OCA | Online Consent Administrator | CA with a constant and publicly usable interface through an online service. |
 | ICA | In-house Consent Administrator | Functional service managing the access to in-house data sources that would not be available online. Within the context of the EDDIE project, AIIDA is targeted to act as such. |
 | MDA | Metered Data Administrator | A party responsible for storing and distributing validated measured data. |
