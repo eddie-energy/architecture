@@ -2,6 +2,7 @@ const yaml = require("js-yaml");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const plantuml = require("eleventy-plugin-plantuml");
+const transformUrls = require("./eleventy/transformUrls");
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = function (eleventyConfig) {
@@ -19,6 +20,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataFileBaseName("index");
   eleventyConfig.addPassthroughCopy({ "eleventy/assets": "assets" });
   eleventyConfig.addPassthroughCopy("arc42/**/*.(png|gif|jpg)");
+  eleventyConfig.addTransform("transformUrls", transformUrls);
   return {
     dir: {
       input: "arc42",
