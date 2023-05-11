@@ -15,4 +15,4 @@ Horizon Innovation Actions under grant agreement No. 101069510.
 
 - [EDDIE Website](https://eddie.energy/)
 - [EDDIE Linkedin](https://www.linkedin.com/company/eddie-energy/)
-- EDDIE Software Development (pending)
+- [EDDIE GitHub](https://github.com/eddie-energy)
