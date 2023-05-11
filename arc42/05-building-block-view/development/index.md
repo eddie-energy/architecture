@@ -4,9 +4,9 @@ title: Development
 
 | External System| Country| Section |
 |-|-|-|
-| EDA | Austria | [Link](./dev-EDA/dev-EDA.md) |
-| Enedis | France | [Link](./dev-Enedis/dev-Enedis.md) |
-| Datadis | Spain | [Link](./dev-Datadis/dev-Datadis.md) |
+| EDA | Austria | [Link](./dev-eda/dev-eda.md) |
+| Enedis | France | [Link](./dev-enedis/dev-enedis.md) |
+| Datadis | Spain | [Link](./dev-datadis/dev-datadis.md) |
 
 | Product | Section |
 |-|-|

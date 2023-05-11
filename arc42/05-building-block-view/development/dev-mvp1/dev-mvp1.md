@@ -40,8 +40,8 @@ Eligible parties need to be able to
 - offer their customers the possibility to connect their data from their MDA to the eligible party (EP), giving their permission through a PA.
 - provide their customers a means to provide their consent to the data sharing between the PA and EP
 - receive validated historical metering and consumption data from at least two MPAs in a CIM-62325-451 "My Energy Data" compliant data format. If the related data exchange is currently not covered by the IEC-62325-451 standard, proposals shall be made to extend the standard.
-  - [EDA](../dev-EDA/dev-EDA.md) (Austria)
-  - [ENEDIS](../dev-Enedis/dev-Enedis.md) (France)
+  - [EDA](../dev-eda/dev-eda.md) (Austria)
+  - [ENEDIS](../dev-enedis/dev-enedis.md) (France)
 - see a demo application as an example how to integrate the EDDIE Framework into their own solutions (which display the data received from the MDA)
 
 ## Nonfunctional Scope
@@ -59,8 +59,8 @@ The interfaces that EDDIE offers need to be specified and provided. The interfac
 in productive use and will be used as they are currently provided.
 
 The interfaces of these systems are described in subsequent sections:
-  - [EDA](../dev-EDA/dev-EDA.md) (Austria)
-  - [ENEDIS](../dev-Enedis/dev-Enedis.md) (France)
+  - [EDA](../dev-eda/dev-eda.md) (Austria)
+  - [ENEDIS](../dev-enedis/dev-enedis.md) (France)
 
 <!-- ```plantuml
 @startuml

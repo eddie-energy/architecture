@@ -27,7 +27,7 @@ This structure can be used:
 
 The building block view is presented through a description of the system using levels. Level 1 shows the overall system along with all the main building blocks. Level 2 focuses on some building blocks from Level 1. Level 3 focuses on building blocks from Level 3 and so on. To decompose the system into building blocks we have used functional decomposition on the main functionality of the framework.
 
-**Notably, concrete details about the system from a product development perspective are presented [here](./Development/dev-mvp1/dev-mvp1.md).**
+**Notably, concrete details about the system from a product development perspective are presented [here](./development/dev-mvp1/dev-mvp1.md).**
 
 ## Level 1
 
