@@ -1,5 +1,5 @@
 ---
-title: "Data Model: Master Data"
+title: Master Data
 ---
 
 **This is the CIM version of the master data model.**

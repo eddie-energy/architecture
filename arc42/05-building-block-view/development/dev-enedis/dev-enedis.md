@@ -1,5 +1,5 @@
 ---
-title: FR - ENEDIS
+title: Enedis-FR
 tags: [MVP-1,France]
 ---
 
