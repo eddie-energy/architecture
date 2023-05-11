@@ -29,5 +29,5 @@ SAREF is developed by ETSI, which ensures that it is developed in line with indu
 
 Alternative models to SAREF include:
 
-    OneM2M: OneM2M is a global standard for Machine-to-Machine (M2M) and the Internet of Things (IoT) interoperability, providing a common architecture and framework for IoT applications across different domains.
-    Brick Schema: Brick Schema is an open-source, community-driven effort to develop a comprehensive schema for building automation, based on Semantic Web technologies.
+- OneM2M: OneM2M is a global standard for Machine-to-Machine (M2M) and the Internet of Things (IoT) interoperability, providing a common architecture and framework for IoT applications across different domains.
+- Brick Schema: Brick Schema is an open-source, community-driven effort to develop a comprehensive schema for building automation, based on Semantic Web technologies.
