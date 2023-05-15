@@ -19,12 +19,16 @@ There are various important concepts that are relevant to many parts of the syst
 <img src="./figures/crosscutting-concepts.png" width=650>
 </div>
 
-The motivation for using some of these concepts is provided in the links of this table.
+The motivation for using some of these concepts is provided below.
 
-| Type | Concept | Section |
-| - | - | - |
-| Domain Models | CIM | [Link](./domain-models/cim.md) | 
-| Domain Models | SAREF | [Link](./domain-models/saref.md) | 
-| Domain Models | SGAM | [Link](./domain-models/sgam.md) | 
-| Architectural Patterns | Publish/Subscribe | [Link](./architectural-patterns/publish-subscribe.md) | 
+| Domain Model | Section |
+| - | - |
+| CIM | [Link](./domain-models/cim/cim.md) | 
+| SAREF | [Link](./domain-models/saref/saref.md) | 
+| SGAM | [Link](./domain-models/sgam/sgam.md) | 
+
+
+| Architectural Pattern | Section |
+| - | - |
+| Publish/Subscribe | [Link](./architectural-patterns/publish-subscribe/publish-subscribe.md) | 
 
