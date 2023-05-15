@@ -1,5 +1,5 @@
 ---
-title: Architecture Decisions
+title: Architectural Decisions
 ---
 <!-- Important, expensive, large scale or risky architecture decisions
 including rationales. With \"decisions\" we mean selecting one
@@ -22,37 +22,10 @@ Various architectural decisions are discussed for the implementation of this sys
 
 | No. | Title  | Status | Section |
 | - | - | - | - |
-| AD1 | Kafka for sending data streams from AIIDA to the framework. | Proposed | [Link](#ad1-kafka-for-sending-data-streams-from-aiida-to-the-framework) |
-| AD2 | Kafka for assigning data streams from the framework to the services. | Proposed | [Link](#ad2-kafka-for-assigning-data-streams-from-the-framework-to-the-services) |
+| AD1 | Kafka for sending data streams from AIIDA to the framework. | Proposed | [Link](./kafka-for-sending-data-to-framework/kafka-for-sending-data-to-framework.md) |
+| AD2 | Kafka for assigning data streams from the framework to the services. | Proposed | [Link](./kafka-for-sending-data-to-services/kafka-for-sending-data-to-services.md) |
 <!-- | AD3 | - | - | - | -->
 
-## AD1: Kafka for sending Data Streams from AIIDA to the Framework 
-
-### Context
-
-AIIDA, which runs on in-house infrastructure, collects data from a smart meter in real time. This data forms a data stream that originates in AIIDA and needs to be sent to the framework (running on the infrastructure of the eligible party). Thus, each AIIDA instance creates one data stream that has to be sent to one or more instances of the framework, i.e., one or more eligible parties. AD1 refers to the communication mechanism utilized to facilitate the transmission of a data stream from one instance of AIIDA to one or more instances of the framework.    
-
-### Decision
-
-Integration of an Apache Kafka client within AIIDA, that creates one data stream for every framework that needs to receive the data, i.e., for every eligible party. Each eligible party has to integrate an Apache Kafka cluster. Information on how to send data from the client to each cluster (e.g., IP address, port, topic ID) has to be configured in the client. As a result, each AIIDA instance sends the same data stream multiple times, i.e., to each eligible party.
-
-### Consequences
-
-Positive consequences: 
-- The goal to send the data from one AIIDA instance to multiple instances of the framework is achieved by Kafka, thereby with little development effort.
-- The Kafka cluster on the eligible party infrastructure can also be used for other tasks, e.g., for internal communication between components, or for forwarding the data streams to the services. 
-
-Negative consequences: 
-- Since AIIDA may be running on a resource-constrained device, sending multiple data streams at once might affect the device's performance (e.g., CPU, RAM).
-- Uploading many identical data streams at once might be limited by the available network bandwidth, i.e., some eligible parties may receive the data with delay.
-
-## AD2: Kafka for Assigning Data Streams from the Framework to the Services
-
-### Context
-
-### Decision
-
-### Consequences
 
 
 <!-- In addition to industrial, economic and social problems, EDDIE tackles another technical problem and closes a significant gap for the further development of data-based solutions in the energy domain: the lack of streamlined, secure and easy access to measurements of in-house sensors (e.g., Internet of Things (IoT) devices in households). The Administrative Interface for In-house Data Access (AIIDA) will provide the customer with the infrastructure to share these data streams close to real-time with remote services on a manageable, GDPR-compliant consent basis.
