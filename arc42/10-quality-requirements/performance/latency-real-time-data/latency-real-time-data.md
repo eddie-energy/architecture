@@ -1,5 +1,5 @@
 ---
-title: Latency to Send Real-time Data
+title: Latency of Real-time Data
 ---
 
 ## Context

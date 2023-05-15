@@ -18,29 +18,34 @@ requirements:
 quality tree example https://arnon.me/2010/05/utility-trees-hatching-quality-attributes/
 -->
 
-The quality requirements of the system are outlined in the quality tree below. This tree has 4 main attributes, i.e., Performance, Availability, Interoperability,  and Security, each one having one or more requirements.
+The quality requirements of the system are outlined in the quality tree below. This tree has 4 main attributes, i.e., Performance, Availability, Compliance,  and Security, each one having one or more requirements.
 
 <div align="center"> 
 <img src="./figures/quality-tree.png" width=750>
 </div>
 
-A table of requirements that need further explanation is shown below. This table provides links to the following sections which describe scenarios showing the behavior of the system when a stimulus that affects a requirement arrives.
+For each attribute, a table of requirements that need further explanation is shown below. These tables provide links to the following sections which describe scenarios showing the behavior of the system when a stimulus that affects a requirement arrives.
 
-| Attribute | Requirement | Section |
-|-|-|-|
-| Performance | Data Loss|  |
-| Performance | Latency | [Link](./latency-real-time-data/latency-real-time-data.md)|
-| Availability | Down Time |  |
-| Availability | Boot Time |  |
-| Interoperability | Coverage |  |
-| Security | Unauthorized Access |  |
-| Security | Compliance |  |
+| Performance Requirement | Section |
+|-|-|
+| Data Loss|  |
+| Latency of real-time data | [Link](./performance/latency-real-time-data/latency-real-time-data.md)|
 
-Requirements stem also from regulatory aspects of the energy sector. The table below includes such requirements.
+| Availability Requirement | Section |
+|-|-|
+| Boot Time |  |
 
-| Source | Requirement | Section |
-|-|-|-|
-| Implementing Act | Compliance with the Implementing Act defined by TBD | [Link](./implementing-act/implementing-act.md) |
+
+| Compliance Requirement | Section |
+|-|-|
+| Smart Grids Task Force | [Link](./compliance/implementing-act/implementing-act.md)
+| Regional Coverage | |
+
+| Security Requirement | Section |
+|-|-|
+| Unauthorized Access |  |
+
+
 
 
 <!-- Concretization of (sometimes vague or implicit) quality requirements

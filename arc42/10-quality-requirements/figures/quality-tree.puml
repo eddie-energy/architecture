@@ -20,23 +20,24 @@ wbsdiagram {
 ++ Performance
 +++ Data Loss
 ++++_ No data\nshall be\n lost
-+++ Latency
-++++_ Delay to\nsend data\n< 5sec
++++ Latency of\n real-time\ndata
+++++_ <1min
 
 ++ Availability
-+++ Down Time
-++++_ <1min/day
 +++ Boot Time
-++++_ <10sec
+++++_ <1min
+' +++ Down Time
+' ++++_ <60min/day
 
-++ Interoperability
+++ Compilance
++++ Implementation\nAct
+++++_  Smart Grids\nTask Force
 +++ Regional\nCoverage
 ++++_ >3 EU\ncountries
 
 ++ Security
 +++ Unauthorized\nAccess
-++++_ Breaches\nreported\nin <5min
-+++ Compliance
-++++_ Access\nto data\nonly with\nconsumer\nconsent
+++++_ No access\n without\ncustomer\nconsent
+
 
 @endwbs

@@ -1,5 +1,5 @@
 ---
-title: Eligible Party Gets Historical Data
+title: Access to Historical Data
 ---
 
 <!-- Add runtime diagram or textual description of the scenario/
