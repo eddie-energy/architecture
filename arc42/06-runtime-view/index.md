@@ -27,6 +27,8 @@ The runtime view focuses on interactions among the system's components. The goal
 | Workflow | Involved Actors | Involved Components | Section | 
 |-|-|-|-|
 | Eligible party registration to MDA | Eligible party | Admin console, consent admin portal, interoperable communication | [Link](./eligible-party-registration/eligible-party-registration.md) |
-| Eligible party gets historical validated data | Consumer, eligible party | Consent Facade, Consent Admin Portal, Meter Data Portal, Interoperable Communication  | [Link](./eligible-party-gets-historical-data/eligible-party-gets-historical-data.md) |
-
+| Eligible party gets historical validated data from consumer| Consumer, eligible party | Consent Facade, Consent Admin Portal, Meter Data Portal, Interoperable Communication  | [Link](./eligible-party-gets-historical-data/eligible-party-gets-historical-data.md) |
+| Consumer revokes consent for access to historical validated data | Consumer, eligible party | Consent Facade, Consent Admin Portal, Meter Data Portal, Interoperable Communication  | [Link](./consent-revokation/consent-revokation.md) |
+| Eligible party terminates a running service | Consumer, eligible party | Consent Facade, Consent Admin Portal, Meter Data Portal, Interoperable Communication  | [Link](./eligible-party-gets-historical-data/eligible-party-gets-historical-data.md) |
+| Detailed view of eligible party getting historical validated data, consumer consent revocation, and service termination | Consumer, eligible party | Consent Facade, Consent Admin Portal, Meter Data Portal, Interoperable Communication  | [Link](./eligible-party-gets-historical-data/eligible-party-gets-historical-data.md) |
 

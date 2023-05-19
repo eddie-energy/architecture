@@ -1,0 +1,28 @@
+@startuml consent-revocation
+'sequence diagram
+caption Sequence Diagram: The consumer revokes their consent.
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+
+actor "Consumer" as user
+participant "Consent\nAdmin Portal" as adminPortal
+participant "Interoperable\nCommunication" as comm
+participant "Service" as service
+
+
+user -> adminPortal : login()
+user -> adminPortal : revokeConsent(\neligibleParty)
+activate adminPortal
+  adminPortal -> adminPortal : revokeConsent(\nconsumer,\neligibleParty)
+  adminPortal -> comm : notify(\nRevocation)
+  adminPortal -->> user : OK
+deactivate adminPortal
+  comm -> service : forward(\nRevocation)
+
+@enduml
