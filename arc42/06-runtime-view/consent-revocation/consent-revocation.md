@@ -15,5 +15,9 @@ The workflow of a consumer that revokes their consent from an eligible party for
 
 This workflow includes the following steps:
 
-1. 
-1.
+1. The consumer logs in to the website of the consent administrator.
+1. The consumer clicks to revoke the consent of a specific eligible party.
+1. The consent administrator revokes the consent.
+1. The consent administrator notifies the Interoperable Communication about the revocation of the consent.
+1. The consent administrator responds to the consumer that the consent has been revoked.
+1. The Interoperable Communication notifies the service that the consent has been revoked.

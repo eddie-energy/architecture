@@ -11,24 +11,23 @@ skinparam sequence {
 autonumber
 
 actor "Eligible\nParty" as user
-participant "Service" as service
+participant "Admin\nConsole" as adminConsole
 participant "Interoperable\nCommunication" as comm
 participant "Consent\nAdmin Portal" as adminPortal
 participant "Meter Data\n Portal" as meterPortal
 
-user -> service : terminate()
-activate service
-  service -> comm : terminate(\nservice)
+user -> adminConsole : terminate(\nservice)
+activate adminConsole
+  adminConsole -> comm : terminate(\nservice)
     activate comm
       comm -> adminPortal : terminate(\nservice)
       activate adminPortal
+        adminPortal -> meterPortal : terminate(\ndataSharing)
         adminPortal -->> comm : consentStatus
       deactivate adminPortal
-      comm -->> service : consentStatus
+      comm -->> adminConsole : consentStatus
     deactivate comm
-  service -->> user : consentStatus
-deactivate service
-
-adminPortal -> meterPortal : terminate(\ndataSharing)
+  adminConsole -->> user : consentStatus
+deactivate adminConsole
 
 @enduml

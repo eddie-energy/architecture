@@ -16,5 +16,10 @@ The workflow of an eligible party that terminates an active service is shown bel
 
 This workflow includes the following steps:
 
-1. 
-1.
+1. The eligible party accesses the admin console and clicks to terminate the service.
+1. The admin console forwards this to the Interoperable Communication.
+1. The Interoperable communication sends a request to terminate the service to the consent administrator.
+1. The consent administrator stops the data sharing from the meter data administrator.
+1. The status of the consent is returned to the Interoperable communication.
+1. The status of the consent is returned to the Admin Console.
+1. The status of the consent is returned to the eligible party.
