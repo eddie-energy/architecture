@@ -1,0 +1,34 @@
+@startuml service-termination
+'sequence diagram
+caption Sequence Diagram: The eligible party terminates a running service.
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+
+actor "Eligible\nParty" as user
+participant "Service" as service
+participant "Interoperable\nCommunication" as comm
+participant "Consent\nAdmin Portal" as adminPortal
+participant "Meter Data\n Portal" as meterPortal
+
+user -> service : terminate()
+activate service
+  service -> comm : terminate(\nservice)
+    activate comm
+      comm -> adminPortal : terminate(\nservice)
+      activate adminPortal
+        adminPortal -->> comm : consentStatus
+      deactivate adminPortal
+      comm -->> service : consentStatus
+    deactivate comm
+  service -->> user : consentStatus
+deactivate service
+
+adminPortal -> meterPortal : terminate(\ndataSharing)
+
+@enduml

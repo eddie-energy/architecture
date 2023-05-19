@@ -38,8 +38,8 @@ For each attribute, a table of requirements that need further explanation is sho
 
 | Compliance Requirement | Section |
 |-|-|
-| Smart Grids Task Force | [Link](./compliance/implementing-act/implementing-act.md)
-| Regional Coverage | |
+| Smart Grids Task Force | [Link](./compliance/implementing-act/implementing-act.md) |
+| Regional Coverage | [Link](../04-solution-strategy/three-phases/three-phases.md) |
 
 | Security Requirement | Section |
 |-|-|
