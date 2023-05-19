@@ -21,6 +21,4 @@ The next section relates to the Final customer accessing his historical validate
  [to be added]
  
  
- In the next diagram the EDDIE scope of the Implementing Acts are represented together with the EDDIE internal framework.
- 
- ![Context Consent Facade SGTF UC02-04](https://user-images.githubusercontent.com/118567442/234295544-849b4d7b-ff0e-4698-8b2b-99846aeed7d4.png)
+The EDDIE scope of the Implementing Acts is presented together with the EDDIE Framework [here](../../../06-runtime-view/consent-management/consent-management.md).
