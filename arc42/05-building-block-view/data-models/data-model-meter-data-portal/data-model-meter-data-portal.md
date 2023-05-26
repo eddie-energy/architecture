@@ -1,20 +1,17 @@
 ---
 title: Meter Data Portal
 ---
-The next figure represents the CIM datastructure as derived from IEC62325-351 Ed.3. This model is used internally by EDDIE.
+
+The energy-related data received from the Regional Data-sharing Infrastructure is represented within the EDDIE Framework using the following data model. This model follows the [CIM](../../../08-crosscut-concepts/domain-models/cim/cim.md) data structure as derived from IEC62325-351 Ed.3.
 
 <div align="center">
 <img src="./figures/CIM transfer Data.png" width="1033">
 </div>
 
-For France we use the exising ENEDIS exchange format, which is non-CIM. 
+Notably, The Regional Data-sharing Infrastructure of each country may offer energy-related data in different formats. In such cases, mapping from country-specific data models to our data model (shown above) needs to be formulated. So far, we have created mappings for the following countries:
 
-<div align="center">
-<img src="./figures/FR connector for transfer data.png" width="555">
-</div>
+| Country | Data Model |
+|-|-|
+| France | [Link](./country-data-models/data-model-france/data-model-france.md) |
 
-As a provisional test, the next diagram tries to map the internal CIM format with the external French regional connector. Mark that oinkly two attributes are unmapped.
 
-<div align="center">
-<img src="./figures/Mapping CIM vs FR.png" width="1060">
-</div>
