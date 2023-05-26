@@ -113,6 +113,17 @@ No introduced black boxes in Level 2.
 
 
 
+<div align="center">
+<img src="./figures/component-diagram-level-3-consent-facade.png" width="500">
+</div>
+
+<div align="center">
+<img src="./figures/component-diagram-level-3-inter-comm.png" width="700">
+</div>
+
+<div align="center">
+<img src="./figures/component-diagram-level-4-reg-con-AT.png" width="700">
+</div>
 
 
 
