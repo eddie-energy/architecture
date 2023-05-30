@@ -1,5 +1,5 @@
 ---
-title: Consent Management
+title: Implementing Act
 ---
 
 <!-- Add runtime diagram or textual description of the scenario/

@@ -22,13 +22,29 @@ rather document a representative selection. -->
 -   BPMN or EPCs (event process chains)
 -   state machines -->
 
-The runtime view focuses on interactions among the system's components. The goal of this section is to describe representative and important workflows that occur during the runtime of the system. The table below shows an overview of these workflows:
+The runtime view focuses on interactions among the system's components. The goal of this section is to describe representative and important workflows that occur during the runtime of the system. The tables below show an overview of these workflows:
 
-| Workflow | Involved Actors | Involved Components | Section | 
+## Eligible party gets historical validated data of consumer
+
+| Workflow | Country | Involved Actors | Involved Components | Section | 
+|-|-|-|-|-|
+| Eligible party gets historical data of consumer | Austria | Consumer, eligible party | EP Website, Consent Facade, Interoperable Communication, Consent Admin Portal, Meter Data Portal,    | [Link](./eligible-party-gets-historical-data/eligible-party-gets-historical-data-austria/eligible-party-gets-historical-data-austria.md) |
+| Detailed view of eligible party getting historical validated data, consumer consent revocation, and service termination | [Implementing Act-compliant](../10-quality-requirements/compliance/implementing-act/implementing-act.md)  | Consumer, eligible party | EDDIE Framework, Consent Admin Portal, Meter Data Portal, EP Website  | [Link](./eligible-party-gets-historical-data/eddie-implementing-act/eddie-implementing-act.md) |
+
+
+## Consent revocation
+
+| Workflow | Country | Involved Actors | Involved Components | Section | 
+|-|-|-|-|-|
+| Consumer revokes consent of eligible party from the Regional Data-sharing Infrastructure | [Implementing Act-compliant](../10-quality-requirements/compliance/implementing-act/implementing-act.md) | Consumer | Consent Admin Portal, Interoperable Communication, Service  | [Link](./consent-revocation/consent-revocation-consumer/consent-revocation-consumer.md) |
+| Eligible party terminates a running service | [Implementing Act-compliant](../10-quality-requirements/compliance/implementing-act/implementing-act.md) | Eligible party | Admin Console, Consent Admin Portal, Meter Data Portal, Interoperable Communication  | [Link](./consent-revocation/service-termination-eligible-party/service-termination-eligible-party.md) |
+| Consumer terminates a running service | [Implementing Act-compliant](../10-quality-requirements/compliance/implementing-act/implementing-act.md) | Consumer | EP Website,  Consent Admin Portal, Meter Data Portal, Interoperable Communication  | [Link](./consent-revocation/service-termination-consumer/service-termination-consumer.md) |
+
+
+## Eligible party registration to Regional Data-sharing Infrastructure
+
+| Country | Involved Actors | Involved Components | Section | 
 |-|-|-|-|
-| Eligible party registration to MDA | Eligible party | Admin console, consent admin portal, interoperable communication | [Link](./eligible-party-registration/eligible-party-registration.md) |
-| Eligible party gets historical validated data from consumer| Consumer, eligible party | Consent Facade, Consent Admin Portal, Meter Data Portal, Interoperable Communication, EP Website  | [Link](./eligible-party-gets-historical-data/eligible-party-gets-historical-data.md) |
-| Consumer revokes consent for access to historical validated data | Consumer | Consent Admin Portal, Interoperable Communication, Service  | [Link](./consent-revocation/consent-revocation.md) |
-| Eligible party terminates a running service | Eligible party | Service, Consent Admin Portal, Meter Data Portal, Interoperable Communication  | [Link](./service-termination/service-termination.md) |
-| Detailed view of eligible party getting historical validated data, consumer consent revocation, and service termination | Consumer, eligible party | EDDIE Framework, Consent Admin Portal, Meter Data Portal, EP Website  | [Link](./consent-management/consent-management.md) |
+| Austria | Eligible party | Consent Admin Portal | [Link](./eligible-party-registration/eligible-party-registration-austria/eligible-party-registration-austria.md) |
+| France | Eligible party | Consent Admin Portal | [Link](./eligible-party-registration/eligible-party-registration-france/eligible-party-registration-france.md) |
 
