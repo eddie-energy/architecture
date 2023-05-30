@@ -8,7 +8,7 @@ The energy-related data received from the Regional Data-sharing Infrastructure i
 <img src="./figures/CIM transfer Data.png" width="1033">
 </div>
 
-Notably, The Regional Data-sharing Infrastructure of each country may offer energy-related data in different formats. In such cases, mapping from country-specific data models to our data model (shown above) needs to be formulated. So far, we have created mappings for the following countries:
+A description of the attributes of this model is provided [here](../data-model-master-data/Class%20and%20attributes%20CIM%20Transfer%20Data%20Base.md). Notably, The Regional Data-sharing Infrastructure of each country may offer energy-related data in different formats. In such cases, mapping from country-specific data models to our data model (shown above) needs to be formulated. So far, we have created mappings for the following countries:
 
 | Country | Data Model |
 |-|-|
