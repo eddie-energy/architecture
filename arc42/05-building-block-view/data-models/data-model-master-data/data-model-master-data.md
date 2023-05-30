@@ -21,6 +21,8 @@ The Permission Administrator is added
 
 
 Attribute descriptions for this data model are provided in the links below:
+
+- [Brief description of important attributes](./class-and-attributes-brief.md)
 - [Class and attributes CIM Master Data Model](./Class%20and%20attributes%20CIM%20Master%20Data%20Model.md)
 - [Class and attributes CIM Transfer Data Base](./Class%20and%20attributes%20CIM%20Transfer%20Data%20Base.md)
 - [IEC62325-351 Ed.3 - ESMPClasses](./IEC62325-351%20Ed.3%20-%20ESMPClasses.md)
