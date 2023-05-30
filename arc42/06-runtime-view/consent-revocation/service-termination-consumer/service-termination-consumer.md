@@ -5,10 +5,10 @@ title: Consumer Terminates Service
 <!-- Add runtime diagram or textual description of the scenario/
 Add a description of the notable aspects of the interactions between the building block instances depicted in this diagram. -->
 
-## Eligible party terminates a service
+## Consumer terminates a service
 
 
-The workflow of an eligible party that terminates an active service is shown below.
+The workflow of a consumer that terminates an active service is shown below.
 
 <div align="center"> 
 <img src="./figures/service-termination-consumer.png" width="600">
