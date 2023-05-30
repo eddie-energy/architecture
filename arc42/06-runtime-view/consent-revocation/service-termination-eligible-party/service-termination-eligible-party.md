@@ -23,3 +23,4 @@ This workflow includes the following steps:
 1. The status of the consent is returned to the Interoperable communication.
 1. The status of the consent is returned to the Admin Console.
 1. The status of the consent is returned to the eligible party.
+1. Inform the consumer. At the moment, this is out of scope.
