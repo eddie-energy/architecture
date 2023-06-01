@@ -1,5 +1,5 @@
 ---
-title: Brief Description
+title: Data Model (Short)
 ---
 
 ## Class: National Competent Authority

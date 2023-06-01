@@ -1,4 +1,6 @@
-
+---
+title: IEC62746Profile
+---
 
 | IEC62746CIMVersion | IEC62746Profile | 8-2-2023 | This is the IEC 62746 CIM version number assigned to this UML model. |
 

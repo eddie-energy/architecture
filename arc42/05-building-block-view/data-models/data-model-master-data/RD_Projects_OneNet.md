@@ -1,3 +1,7 @@
+---
+title: RD Projects OneNet
+---
+
 | MarketParticipant | Reactive Power SetPoint contextual | 17-5-2023 | The identification of the party participating in energy market business processes. |
 | --- | --- | --- | --- |
 | MarketRole | Reactive Power SetPoint contextual | 17-5-2023 | The identification of the intended behaviour of a market participant played within a given business process. |
