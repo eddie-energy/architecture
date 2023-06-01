@@ -8,7 +8,7 @@ title: Transfer Model Attributes
 
 The location where one or more products are measured. This may be a physical or virtual location.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | mRID | MeasurementPointID\_ String | 1 | A unique identification of the measurement point. In the ESMP context, the "model authority" is defined as an authorized issuing office that provides an agreed identification coding scheme for market participant, domain, measurement point, resources (generator, lines, substations, etc.) identification. Master resource identifier issued by a model authority. The mRID is globally unique within an exchange context. Global uniqueness is easily achieved by using a UUID for the mRID. It is strongly recommended to do this. For CIMXML data files in RDF syntax, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements. |
 | description | String | 0..1 | The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy. |
@@ -17,31 +17,31 @@ The location where one or more products are measured. This may be a physical or 
 | physicalConnectionCapacity | Decimal | 0..1 | Quantitative information about the maximum capacity of the connection for the usage point. |
 | disconnectionMethod | String | 0..1 | The disconnection method is an indication of how the usage point is physically connected or disconnected. |
 
-\*Verpl: Mandatory fields are indicated by 1, optional fields by 0..1
+\*Mandatory: Mandatory fields are indicated by 1, optional fields by 0..1
 
 ## MeterReading
 
 Set of values obtained from the meter.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | mRID | ResourceID\_String | 0..1 | The unique identification of the meter reading. In the ESMP context, the "model authority" is defined as a party (originator of the exchange) that provides an identification in the context of a business exchange. Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552 Edition 1, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements. |
 | name | String | 0..1 | The name is any free human readable and possibly non unique text naming the object. |
 
-\*Verpl: Mandatory fields are indicated by 1, optional fields by 0..1
+\*Mandatory: Mandatory fields are indicated by 1, optional fields by 0..1
 
 ## Reading
 
 Specific value measured by a meter or other asset, or calculated by a system. Each Reading is associated with a specific ReadingType.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | reason | ReasonCode\_String | 0..1 | Reason for this reading being taken. |
 | position | Integer | 0..1 | A sequential value representing the relative position within a given time interval. |
 | mRID | ResourceID\_String | 0..1 | The identification of the reading. Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552 Edition 1, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements. |
 | valueMissing | Boolean | 0..1 | The indication whether or not the quantity of this reading is missing. |
 
-\*Verpl: Mandatory fields are indicated by 1, optional fields by 0..1
+\*Mandatory: Mandatory fields are indicated by 1, optional fields by 0..1
 
 ## TimeSeries
 
@@ -49,7 +49,7 @@ A set of time-ordered quantities being exchanged in relation to a product.
 
 In the ESMP profile, the TimeSeries provides not only time-ordered quantities but also time-ordered information.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | mRID | ID\_String | 0..1 | A unique identification of the time series. In the ESMP context, the "model authority" is defined as a party (originator of the exchange) that provides a unique identification in the context of a business exchange such as time series identification, bid identification, ... Master resource identifier issued by a model authority. The mRID is globally unique within an exchange context. Global uniqueness is easily achieved by using a UUID for the mRID. It is strongly recommended to do this. For CIMXML data files in RDF syntax, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements. |
 | description | String | 0..1 | The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy. |
@@ -60,35 +60,35 @@ In the ESMP profile, the TimeSeries provides not only time-ordered quantities bu
 | curveType | CurveType\_String | 0..1 | The identification of the coded representation of the type of curve being described. |
 | cancelledTS | ESMPBoolean\_String | 0..1 | An indicator stating that the TimeSeries, identified by the mRID, is withdrawn as well as all the values sent in a previous version of the TimeSeries in a previous document. |
 
-\*Verpl: Mandatory fields are indicated by 1, optional fields by 0..1
+\*Mandatory: Mandatory fields are indicated by 1, optional fields by 0..1
 
 ## DateAndOrTime
 
 The Date and or the Time.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | date | Date | 0..1 | The date as "YYYY-MM-DD", which conforms with ISO 8601. |
 | time | Time | 0..1 | The time as "hh:mm:ss.sssZ", which conforms with ISO 8601. |
 | dateTime | DateTime | 0..1 | Date and time as per ISO 8601 YYYY-MM-DDThh:mm:ss.sssZ . |
 
-\*Verpl: Mandatory fields are indicated by 1, optional fields by 0..1
+\*Mandatory: Mandatory fields are indicated by 1, optional fields by 0..1
 
 ## Measure\_Unit
 
 The particular quantity, defined and adopted by convention, with which other quantities of the same kind are compared in order to express their magnitudes relative to that quantity.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | name | MeasurementUnitKind \_String | 1 | The identification of the formal code for a measurement unit (UN/ECE Recommendation 20). |
 
-\*Verpl: Mandatory fields are indicated by 1, optional fields by 0..1
+\*Mandatory: Mandatory fields are indicated by 1, optional fields by 0..1
 
 ## UnitOfMeasureTypeList
 
 (synonym MeasurementUnit) The unit of measure that is applied to a quantity. The measurement units shall be in compliance with UN/ECE Recommendation 20.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | ampere | | 1 | The unit of electrical current in the International system of Units (SI) equivalent to one Coulomb per second. |
 | megavolt-ampere | | 1 | MVA unit as per UN/CEFACT recommendation 20. |
@@ -119,7 +119,7 @@ The particular quantity, defined and adopted by convention, with which other qua
 | millimeter | | 1 | A unit of measurement of length expressed in millimeter. |
 | K (Kelvin) | | 1 | Temperature unit refer ISO 80000-5 (Quantities and units, Part 5: Thermodynamics). |
 
-\*Verpl: Mandatory fields are indicated by 1, optional fields by 0..1 
+\*Mandatory: Mandatory fields are indicated by 1, optional fields by 0..1 
 
 ## Quantity
 
@@ -129,29 +129,29 @@ The type of the quantity is described either by the role of the association or t
 
 The quality attribute provides the information about the quality of the quantity (measured, estimated, etc.).
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | quantity | Decimal | 0..1 | The quantity value. The association role provides the information about what is expressed. |
 | quality | Quality\_String | 0..1 | The description of the quality of the quantity. |
 | type | String | 0..1 | The description of the type of the quantity. |
 
-\*Verpl: Mandatory fields are indicated by 1, optional fields by 0..1
+\*Mandatory: Mandatory fields are indicated by 1, optional fields by 0..1
 
 ## EnergyProductKind\_String
 
 The identification of the nature of an energy product such as power, energy, reactive power, etc.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | value | EnergyProductTypeLis t | 1 | Main Core value Space. |
 
-\*Verpl: Mandatory fields are indicated by 1, optional fields by 0..1
+\*Mandatory: Mandatory fields are indicated by 1, optional fields by 0..1
 
 ## EnergyProductTypeList
 
 The identification of the nature of an energy product such as power, energy, reactive power, etc.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | Active power | | 1 | The product of voltage and the in-phase component of alternating current measured in units of watts and standard multiples thereof. |
 | Reactive power | | 1 | The product of voltage and current and the sine of the phase angle between them, measured in units of voltamperes reactive and standard multiples thereof. (not used for planned schedules). |
@@ -163,35 +163,35 @@ The identification of the nature of an energy product such as power, energy, rea
 | Capacitive reactive power | | 1 | Capacitive reactive power. |
 | Inductive reactive power | | 1 | Inductive reactive power. |
 
-\*Verpl: Mandatory fields are indicated by 1, optional fields by 0..1
+\*Mandatory: Mandatory fields are indicated by 1, optional fields by 0..1
 
 ## Time\_Period
 
 The identification of a time interval or a duration.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | timeInterval | ESMP\_DateTimeInterv al | 1 | The start and end date and time for a given interval. |
 
-\*Verpl: Mandatory fields are indicated by 1, optional fields by 0..1
+\*Mandatory: Mandatory fields are indicated by 1, optional fields by 0..1
 
 ## ESMP\_DateTimeInterval
 
 This datatype enables to express the start date and time, and the end date and time of a time interval with a specific pattern. This pattern is the YYYY-MM-DDThh:mmZ.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | start | YMDHM\_DateTime | 1 | The start date and time of the interval with a minute resolution. |
 | end | YMDHM\_DateTime | 1 | The end date and time of the interval with a minute resolution. |
 
-\*Verpl: Mandatory fields are indicated by 1, optional fields by 0..1
+\*Mandatory: Mandatory fields are indicated by 1, optional fields by 0..1
 
 ## YMDHM\_DateTime
 
 In ESMP, the date and time is expressed as "YYYY-MM-DDThh:mmZ", which conforms with ISO 8601 UTC time zone. This date and time is without the seconds.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | value | DateTime | 1 | The date and time as "YYYY-MM-DDThh:mmZ", which conforms with the ISO 8601 UTC time zone. |
 
-\*Verpl: Mandatory fields are indicated by 1, optional fields by 0..1
+\*Mandatory: Mandatory fields are indicated by 1, optional fields by 0..1

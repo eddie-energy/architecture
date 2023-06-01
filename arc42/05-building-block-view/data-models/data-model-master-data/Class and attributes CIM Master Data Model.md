@@ -10,22 +10,22 @@ The coded identification of a domain, i.e. balance area, grid area, etc.
 
 In the ESMP context, it is an authorized issuing office that provides an agreed identification coding scheme for domain identification.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | codingScheme | CodingSchemeTypeList | 1 | DomainQualification. |
 | value | String | 1 | Main Core value Space. |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## MarketRoleKind\_String
 
 The identification of the role played by a party.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | value | RoleTypeList | 1 | Main Core value Space. |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## PartyID\_String
 
@@ -33,28 +33,28 @@ The identification of an actor in the energy market.
 
 In the ESMP context, it is an authorized issuing office that provides an agreed identification coding scheme for market participant identification.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | codingScheme | CodingSchemeTypeLis t | 1 | DomainQualification. |
 | value | String | 1 | Main Core value Space. |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## MarketRole
 
 The identification of the intended behaviour of a market participant played within a given business process.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | type | MarketRoleKind\_Strin g | 1 | The identification of the role played by a market player. |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## MarketParticipant
 
 The identification of the party participating in energy market business processes.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | mRID | PartyID\_String | 0..1 | The identification of a party in the energy market. In the ESMP context, the "model authority" is defined as an authorized issuing office that provides an agreed identification coding scheme for market participant, domain, measurement point, resources (generator, lines, substations, etc.) identification. Master resource identifier issued by a model authority. The mRID is globally unique within an exchange context. Global uniqueness is easily achieved by using a UUID for the mRID. It is strongly recommended to do this. For CIMXML data files in RDF syntax, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements. |
 | name | String | 0..1 | The name is any free human readable and possibly non unique text naming the object. |
@@ -69,13 +69,13 @@ The identification of the party participating in energy market business processe
 | jumpOffUrl | String | 0..1 | |
 | gridArea | String | 0..1 | |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## CodingSchemeTypeList
 
 Codification scheme used to identify the coding scheme used for the set of coded values to identify specific objects.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | EIC | | 1 | The coding scheme is the Energy Identification Coding Scheme (EIC), maintained by ENTSO-E. |
 | GS1 | | 1 | The coding scheme for the preceding attribute is the Global Location Number (GLN 13) or Global Service Relation Number (GSRN 18), maintained by GS1. |
@@ -127,13 +127,13 @@ Codification scheme used to identify the coding scheme used for the set of coded
 | Ukraine National coding scheme | | 1 | The National coding scheme of the country in question. |
 | CGM | | 1 | The coding scheme used for Common Grid Model Exchange Standard (CGMES). |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## RoleTypeList
 
 Identification of the role played by a party.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | Trade responsible party | | 1 | Refer to role model definitions in the ENTSO-E Harmonised Role Model Document. |
 | Consumption responsible party | | 1 | Refer to role model definitions in the ENTSO-E Harmonised Role Model Document. |
@@ -185,62 +185,62 @@ Identification of the role played by a party.
 | Balancing Service Provider | | 1 | A party with reserve-providing units or reserve-providing groups able to provide balancing services to LFC Operators. |
 | Permission Administrator | | 1 | A party with reserve-providing units or reserve-providing groups able to provide balancing services to LFC Operators. |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## ElectronicAddress
 
 Electronic address information.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | email1 | Characters70\_String | 1 | Primary email address. |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## StreetAddress
 
 General purpose street address information.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | streetDetail | StreetDetail | 1 | Street detail. |
 | postalCode | Characters10\_String | 1 | Postal code for the address. |
 | townDetail | TownDetail | 1 | Town detail. |
 | language | String | 0..1 | The language in which the address is specified using ISO60039-1 two digit code. |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## TelephoneNumber
 
 Telephone number.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | ituPhone | Characters15\_String | 1 | Phone number according to ITU E.164. |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## String
 
 A string consisting of a sequence of 8 bit characters. The character encoding is UTF-8. The string length is unspecified and unlimited.
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
-\*Verpl: Mandatory fields a re indicated by 1, Optional fields by 0..1. 
+\*Mandatory: Mandatory fields a re indicated by 1, Optional fields by 0..1. 
 
 ## Country
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | codingScheme | CodingSchemeTypeLis t | 1 | |
 | value | String | 1 | |
 | country\_flag | blob | 1 | |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## NationalCompetentAuthority
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | company | String | 1 | |
 | webSite | String | 1 | |
@@ -248,11 +248,11 @@ A string consisting of a sequence of 8 bit characters. The character encoding is
 | status | String | 1 | |
 | logo | String | 1 | |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## NearRealTimeDataInterface
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | company | String | 1 | |
 | classOfInterfaceUtilised | String | 1 | |
@@ -261,20 +261,20 @@ A string consisting of a sequence of 8 bit characters. The character encoding is
 | standardFollowed | String | 1 | |
 | logo | blob | 1 | |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## VHCDSpecificInfo
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | twoLetterCode | String | 1 | |
 | typicalAvailability | timeOfDay | 1 | |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## DataExchangeEnvironment
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | company | String | 1 | |
 | website | URL | 1 | |
@@ -284,15 +284,15 @@ A string consisting of a sequence of 8 bit characters. The character encoding is
 | nationalRegulatoryBasis | String | 1 | |
 | markdownEnglishDoc | String | 1 | |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
 
 ## onboardingType
 
-| **Veldnaam** | **Type** | **Verpl\*** | **Details** |
+| **Attribute** | **Type** | **Mandatory\*** | **Details** |
 | --- | --- | --- | --- |
 | eligiblePartyTestOnboarding | String | 1 | |
 | eligiblePartyLiveOnboarding | String | 1 | |
 | descriptionOfPricingSchema | String | 1 | |
 | marketRole | String | 1 | |
 
-\*Verpl: Mandatory fields are indicated by 1, Optional fields by 0..1.
+\*Mandatory: Mandatory fields are indicated by 1, Optional fields by 0..1.
