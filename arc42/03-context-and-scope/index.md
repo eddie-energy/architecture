@@ -83,3 +83,17 @@ The table below shows a summary of the interfaces.
 | EDDIE Framework | AIIDA | Kafka |
 | EDDIE Framework | Services | Kafka |
 | Regional Data-sharing Infrastructure | EDDIE Framework | HTTP (or other) |
+
+## Prerequisites
+
+### Eligible party registration to Regional Data-sharing Infrastructure
+
+The Regional Data-sharing Infrastructure might operate differently in each country. Notably, every eligible party may need to register with the Regional Data-sharing Infrastructure of each country in order to get a country-specific eligible party ID. The process to get this ID is out of the scope of the EDDIE Framework. Nevertheless, we have documented this process for the following countries because this may be a mandatory process for the eligible parties. 
+| Country | Section | 
+|-|-|
+| Austria | [Link](./eligible-party-registration/eligible-party-registration-austria/eligible-party-registration-austria.md) |
+| France | [Link](./eligible-party-registration/eligible-party-registration-france/eligible-party-registration-france.md) |
+
+
+
+
