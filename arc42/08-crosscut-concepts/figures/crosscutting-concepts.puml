@@ -18,8 +18,8 @@ mindmapDiagram {
 ---_ SAREF
 ---_ SGAM
 -- Architectural\nPatterns
----_ Request/\nResponse
 ---_ Publish/\nSubscribe
+---_ Micro\nFrontends
 -- Development\nProcess
 ---_ Test Driven\nDevelopment
 ---_ CI/CD

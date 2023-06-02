@@ -31,4 +31,5 @@ The motivation for using some of these concepts is provided below.
 | Architectural Pattern | Section |
 | - | - |
 | Publish/Subscribe | [Link](./architectural-patterns/publish-subscribe/publish-subscribe.md) | 
+| Micro frontends | [Link](./architectural-patterns/micro-frontends/micro-frontends.md) | 
 
