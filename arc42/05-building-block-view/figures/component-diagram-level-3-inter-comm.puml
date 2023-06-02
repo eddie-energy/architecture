@@ -32,20 +32,31 @@ node "Eligible Party Infrastructure"  as epInfra{
     component "Regional Connector\nAustria" as regConAu
     component "Regional Connector\nFrance" as regConFr
     collections "Regional Connector\nOther" as regConOt
+    component "Message\nProducer" as messageProducer
+    
+    regConFr -down-> messageProducer
+    regConAu -down-> messageProducer
+    regConOt -right-> messageProducer
+
+    regConAu -[hidden]right- regConFr
   }
-  database "Database\n" as database
+    component "Streaming\nInfrastructure" as database
   
   consentFacade --down- comm
   comm -right- database
   }  
 }
 node "Regional Data-sharing\nInfrastructure" as energyProvider {
-  interface "Meter\nData\nPortal" as dataPortal
-  interface "Consent\nAdmin\nPortal" as adminPortal
+  interface "Meter Data Portal" as dataPortal
+  interface "Consent Admin Portal" as adminPortal
+
+  adminPortal -[hidden]down- dataPortal 
 }
 
-comm --down-( dataPortal
+comm -down-( dataPortal
 comm --down-( adminPortal
+
+
 
 
 

@@ -65,7 +65,7 @@ The Level 1 view includes the following interfaces.
 
 ### Black Boxes
 
-| Component | Function |
+| Component | Responsibility |
 | - | - |
 | Regional Data-sharing Infrastructure | Operated by the utility provider or a metered data administrator. It is used only through the interfaces (described above). |
 | Smart meter | Provided by the utility provider. Is is used only through the interface (described above). |
@@ -107,25 +107,64 @@ The Level 2 view introduces the following interfaces.
 | Streaming Infrastructure | Services | Kafka | [Link](./data-models/data-model-data-broker-interface/data-model-data-broker-interface.md) |
 | Interoperable Communication | AIIDA | Kafka | [Link](./data-models/data-model-inter-comm-aiida-interface/data-model-inter-comm-aiida-interface.md) |
 
-### Black Boxes
 
-No introduced black boxes in Level 2.
+## Level 3
 
+The Level 3 view includes the internal structure of some components from Level 2.
 
+### Contained Building Blocks
+
+#### Consent Facade
+
+The internal structure of the Consent Facade component is shown below. The Consent Facade is a collection of [micro frontends](../08-crosscut-concepts/architectural-patterns/micro-frontends/micro-frontends.md). Each micro frontend provides the necessary frontend elements to collect the required information for acquiring the consumer consent in a specific country.
 
 <div align="center">
 <img src="./figures/component-diagram-level-3-consent-facade.png" width="500">
 </div>
 
+The included components are the following.
+
+| Component | Responsibility |
+| - | - |
+| Micro Frontend | Provides the necessary frontent elements to the EP Website. Since every country may require different information for establishing consent, one micro frontent component is needed for each supported country. |
+
+
+#### Interoperable Communication
+
+The internal structure of the Interoperable Communication component is shown below. The Interoperable Communication is a collection of regional connectors. Each regional connector implements the functionality to access the APIs of the Regional Data-sharing Infrastructure of a specific country.
+
 <div align="center">
 <img src="./figures/component-diagram-level-3-inter-comm.png" width="700">
 </div>
 
+The included components are the following.
+
+| Component | Responsibility |
+| - | - |
+| Regional Connector | Implements the functionality to access the APIs of a country-specific Regional Data-sharing Infrastructure, e.g., to request the consent of the consumer. |
+| Message Producer  | Receives energy data from a regional connector and publishes it to the Streaming Infrastructure. |
+
+## Level 4
+
+The Level 4 view includes the internal structure of some components from Level 3.
+
+### Contained Building Blocks
+
+#### Regional Connector - Austria
+
+The internal structure of the Regional Connector - Austria is shown below. 
+
 <div align="center">
-<img src="./figures/component-diagram-level-4-reg-con-AT.png" width="700">
+<img src="./figures/component-diagram-level-4-reg-con-AT.png" width="750">
 </div>
 
+The included components are the following.
 
+| Component | Responsibility |
+| - | - |
+| Translation Service | Receives the required information of the consumer from the Consent Facade and translates it to appropriate format. |
+| Ponton XP Messenger  | This is a messaging solution by [Ponton GmbH](https://www.ponton.de/ponton-xp) for communication with the Regional Data-sharing Infrastructure in Austria which is called [EDA](https://www.eda.at/?lang=en). |
+| Ponton Adapter | Translates infromation to/from the formats used by Ponton XP Messenger. |
 
 
 <!-- ## Level 3

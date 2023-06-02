@@ -29,9 +29,9 @@ node "Eligible Party Infrastructure"  as epInfra{
   component "User Interface \n(Website or App)" as ui
   component "EDDIE Framework" as eddie {
     component "Consent Facade" as consentFacade {
-      component "Microfrontend\nAustria" as regConAu
-      component "Microfrontend\nFrance" as regConFr
-      collections "Microfrontend\nOther" as regConOt
+      component "Micro frontend -\nAustria" as regConAu
+      component "Micro frontend -\nFrance" as regConFr
+      collections "Micro frontend -\nOther" as regConOt
 
       ' regConFr -up- regConAu
       ' regConFr -down- regConOt
