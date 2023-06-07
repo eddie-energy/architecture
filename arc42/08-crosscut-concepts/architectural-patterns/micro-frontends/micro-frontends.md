@@ -1,5 +1,5 @@
 ---
-title: Publish/Subscribe
+title: Micro Frontends
 ---
 
 ## Definition
