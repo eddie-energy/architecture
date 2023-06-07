@@ -30,7 +30,7 @@ The runtime view focuses on interactions among the system's components. The goal
 |-|-|-|-|-|
 | Detailed view of eligible party getting historical validated data, consumer consent revocation, and service termination | [Implementing Act-compliant](../10-quality-requirements/compliance/implementing-act/implementing-act.md)  | Consumer, eligible party | EDDIE Framework, Consent Admin Portal, Meter Data Portal, EP Website  | [Link](./eligible-party-gets-historical-data/eddie-implementing-act/eddie-implementing-act.md) |
 | Eligible party gets historical data of consumer | Austria | Consumer, eligible party | EP Website, Consent Facade, Interoperable Communication, Consent Admin Portal, Meter Data Portal,    | [Link](./eligible-party-gets-historical-data/eligible-party-gets-historical-data-austria/eligible-party-gets-historical-data-austria.md) |
-| The Service get historical data from the EDDIE Framework | Any (EDDIE-internal process) |  | Interoperable Communication, Database, Streaming Infrastructure, Service, Regional Data-sharing Infrastructure | [Link](./eligible-party-gets-historical-data/eddie-framework-offers-data-to-service/eddie-framework-offers-data-to-service.md) |
+| The Service gets historical data from the EDDIE Framework | Any (EDDIE-internal process) |  | Interoperable Communication, Database, Streaming Infrastructure, Service, Regional Data-sharing Infrastructure | [Link](./eligible-party-gets-historical-data/eddie-framework-offers-data-to-service/eddie-framework-offers-data-to-service.md) |
 
 
 ## Consent revocation
@@ -45,4 +45,4 @@ The runtime view focuses on interactions among the system's components. The goal
 
 ## Eligible party registration to Regional Data-sharing Infrastructure
 
-The workflows of this process are mandatory but are not within the context of the EDDIE Framework. For this reason, these workflows are discussed in [Section: Context and Scope](../03-context-and-scope/index.md#eligible-party-registration-to-regional-data-sharing-infrastructure).
+The workflows of this process are mandatory but are not within the context of the EDDIE Framework. For this reason, these workflows are discussed in subsection: Prerequisites of Section: [Context and Scope](../03-context-and-scope/index.md).
