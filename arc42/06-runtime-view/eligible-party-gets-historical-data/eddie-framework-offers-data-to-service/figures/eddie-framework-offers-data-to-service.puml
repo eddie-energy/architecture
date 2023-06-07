@@ -1,0 +1,34 @@
+@startuml eddie-framework-offers-data-to-service
+'sequence diagram
+caption Sequence Diagram: The Service gets the historical data from the EDDIE Framework.
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+
+participant "Regional Data-\nsharing Infr." as dataPortal
+
+box "EDDIE Framework" #transparent
+participant "Regional\nConnector" as regionalConnector
+participant "Message\nProducer" as messageProducer
+participant "Streaming\nInfr." as streamingInfrastructure
+participant "Database\n" as database
+end box
+
+participant "Service\n" as service
+
+database -> streamingInfrastructure : subscribe(\ntopic)
+service -> streamingInfrastructure : subscribe(\ntopic)
+
+dataPortal -> regionalConnector : data
+regionalConnector -> messageProducer : send(data)
+messageProducer -> streamingInfrastructure : publish(\ndata, topic)
+
+streamingInfrastructure -> database  : send(data)
+streamingInfrastructure -> service  : send(data)
+
+@enduml
