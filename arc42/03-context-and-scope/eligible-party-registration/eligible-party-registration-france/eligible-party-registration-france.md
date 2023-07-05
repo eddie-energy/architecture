@@ -6,14 +6,11 @@ title: France
 
 ### Create Account
 
-The Regional Data-sharing Infrastructure of France is operated by ENEDIS. Every eligible party covering France must register with ENEDIS and create an eligible party account. To create this account, the eligible party must provide:
-
-1. Name
-1. Email
+The Regional Data-sharing Infrastructure of France is operated by [ENEDIS](https://datahub-enedis.fr). Every eligible party covering France must register with ENEDIS and create an eligible party account. 
 
 ### Create Application
 
-After creating the account, the eligible party can create an *application* on the [ENEDIS website](https://datahub-enedis.fr/services-api/data-connect/data-connect-creer-une-application/).
+After creating the account, the eligible party can create an *application* on the [ENEDIS website](https://datahub-enedis.fr/en/data-connect-en/).
 This application relates to a [Service](../../index.md) that is offered by the eligible party. Thus, for every service, the eligible party should create an application on the ENEDIS website. To create the application, the eligible party must provide:
 1. The name of the application.
 1. A logo for the application.
