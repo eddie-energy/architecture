@@ -7,4 +7,4 @@ Add a description of the notable aspects of the interactions between the buildin
 
 ## Eligible Party Registration to the Regional Data-sharing Infrastructure - Austria
 
-TBD
+The Regional Data-sharing Infrastructure of Austria is operated by EDA.
