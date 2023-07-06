@@ -165,9 +165,9 @@ The included components are the following.
 | Ponton XP Messenger  | This is a messaging solution by [Ponton GmbH](https://www.ponton.de/ponton-xp) for communication with the Regional Data-sharing Infrastructure in Austria which is called [EDA](https://www.eda.at/?lang=en). |
 | Ponton Adapter | Translates infromation to/from the formats used by Ponton XP Messenger. |
 
-#### Regional Connector - Spain
+#### Regional Connector - France
 
-An implementation model for this component is provided [here](./data-models/data-model-regional-connector-spain/data-model-regional-connector-spain.md).
+An implementation model for this component is provided [here](./data-models/data-model-regional-connector-france/data-model-regional-connector-france.md).
 
 
 <!-- ## Level 3
