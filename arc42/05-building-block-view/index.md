@@ -101,12 +101,11 @@ The EDDIE Framework includes the following components.
 
 The Level 2 view introduces the following interfaces.
 
-| Provided From | Consumed By | Type | Data Model |
-| - | - | - | - |
-| Consent Facade | User Interface | HTTP | [Link](./data-models/data-model-consent-facade-interface/data-model-consent-facade-interface.md) |
-| Streaming Infrastructure | Services | Kafka | [Link](./data-models/data-model-data-broker-interface/data-model-data-broker-interface.md) |
-| Interoperable Communication | AIIDA | Kafka | [Link](./data-models/data-model-inter-comm-aiida-interface/data-model-inter-comm-aiida-interface.md) |
-
+| Provided From | Consumed By | Type |
+| - | - | - |
+| Consent Facade | User Interface | HTTP |
+| Streaming Infrastructure | Services | Kafka |
+| Interoperable Communication | AIIDA | Kafka |
 
 ## Level 3
 
@@ -152,7 +151,7 @@ The Level 4 view includes the internal structure of some components from Level 3
 
 #### Regional Connector - Austria
 
-The internal structure of the Regional Connector - Austria is shown below. 
+The internal structure of the Regional Connector - Austria is shown below. An implementation model for this component is provided [here](./data-models/data-model-regional-connector-austria/data-model-regional-connector-austria.md).
 
 <div align="center">
 <img src="./figures/component-diagram-level-4-reg-con-AT.png" width="750">
@@ -165,6 +164,10 @@ The included components are the following.
 | Translation Service | Receives the required information of the consumer from the Consent Facade and translates it to appropriate format. |
 | Ponton XP Messenger  | This is a messaging solution by [Ponton GmbH](https://www.ponton.de/ponton-xp) for communication with the Regional Data-sharing Infrastructure in Austria which is called [EDA](https://www.eda.at/?lang=en). |
 | Ponton Adapter | Translates infromation to/from the formats used by Ponton XP Messenger. |
+
+#### Regional Connector - Spain
+
+An implementation model for this component is provided [here](./data-models/data-model-regional-connector-spain/data-model-regional-connector-spain.md).
 
 
 <!-- ## Level 3
