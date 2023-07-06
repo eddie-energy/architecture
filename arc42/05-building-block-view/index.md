@@ -59,8 +59,8 @@ The Level 1 view includes the following interfaces.
 
 | Interface | Responsibility | Type| Data Model |
 | - | - | - | - |
-| Consent Admin Portal | Receives requests from eligible parties for access to consumer data. | HTTP (or other) | [Link](./data-models/data-model-consent-admin-portal/data-model-consent-admin-portal.md) |
-| Meter Data Portal | Provides historical data to the eligible party (with appropriate consent) | HTTP (or other) | [Link](./data-models/data-model-meter-data-portal/data-model-meter-data-portal.md) |
+| Consent Admin Portal | Operated by the Permission Administrator. Receives requests from eligible parties for access to consumer data. | HTTP (or other) | [Link](./data-models/data-model-consent-admin-portal/data-model-consent-admin-portal.md) |
+| Meter Data Portal | Operated by the Meter Data Administrator. Provides historical data to the eligible party (with appropriate consent) | HTTP (or other) | [Link](./data-models/data-model-meter-data-portal/data-model-meter-data-portal.md) |
 | P1 | Provides access to real-time energy consumption data | P1 | [Link](./data-models/data-model-p1-interface/data-model-p1-interface.md) |
 
 ### Black Boxes
