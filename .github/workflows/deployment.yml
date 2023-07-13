@@ -2,9 +2,18 @@ on:
   push:
     branches:
       - main
+  issues:
+    types: [ opened, labeled, unlabeled, edited, deleted ]
+
+permissions:
+  contents: write
+  issues: write
+
 name: Build and Deploy
 jobs:
   web-deploy:
+    if: ${{ contains(github.event.*.labels.*.name, 'bprt') || github.event_name == 'push' }}
+
     name: Deployment
     runs-on: ubuntu-latest
     steps:
@@ -27,6 +36,8 @@ jobs:
       run: |
         npm install --ci 
         npm run build
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Deploy
       uses: SamKirkland/web-deploy@v1
       with:

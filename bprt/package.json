@@ -1,0 +1,20 @@
+{
+  "name": "bprt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/types": "^11.0.0",
+    "@types/node": "^20.4.1",
+    "markdown-table": "^3.0.3",
+    "octokit": "^2.1.0",
+    "typescript": "^5.1.6"
+  }
+}
