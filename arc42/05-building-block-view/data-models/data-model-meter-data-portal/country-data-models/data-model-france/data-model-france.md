@@ -2,13 +2,13 @@
 title: France
 ---
 
-For France we use the exising ENEDIS exchange format, which is non-CIM. This is shown below.
+For France we use the existing ENEDIS exchange format, which is non-CIM. This is shown below.
 
 <div align="center">
 <img src="./figures/FR connector for transfer data.png">
 </div> 
 
-The ENEDIS exchange format is then mapped to the CIM compliant model which is shown below.
+The ENEDIS exchange format is then mapped to the CIM-compliant model which is shown below.
 
 <div align="center">
 <img src="./figures/VHD Assembly Extended.png">
