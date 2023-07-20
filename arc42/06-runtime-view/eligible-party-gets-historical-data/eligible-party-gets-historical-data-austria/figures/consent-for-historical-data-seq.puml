@@ -12,9 +12,11 @@ autonumber
 
 actor "Consumer" as user
 participant "EP\nWebsite" as website
-participant "Consent\nFacade" as facade
-participant "Interoperable\nCommunication" as comm
-participant "Consent\nFacade" as facade
+box "EDDIE Framework" #transparent
+  participant "Consent\nFacade" as facade
+  participant "Interoperable\nCommunication" as comm
+  participant "Consent\nFacade" as facade
+end box
 participant "Consent\nAdmin Portal" as adminPortal
 participant "Meter Data\nPortal" as dataPortal
 

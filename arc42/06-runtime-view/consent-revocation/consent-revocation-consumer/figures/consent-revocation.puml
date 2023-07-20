@@ -12,7 +12,9 @@ autonumber
 
 actor "Consumer" as user
 participant "Consent\nAdmin Portal" as adminPortal
-participant "Interoperable\nCommunication" as comm
+box "EDDIE Framework" #transparent
+  participant "Interoperable\nCommunication" as comm
+end box
 participant "Service" as service
 
 

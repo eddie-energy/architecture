@@ -11,8 +11,10 @@ skinparam sequence {
 autonumber
 
 actor "Eligible\nParty" as user
-participant "Admin\nConsole" as adminConsole
-participant "Interoperable\nCommunication" as comm
+box "EDDIE Framework" #transparent
+  participant "Admin\nConsole" as adminConsole
+  participant "Interoperable\nCommunication" as comm
+end box
 participant "Consent\nAdmin Portal" as adminPortal
 participant "Meter Data\n Portal" as meterPortal
 

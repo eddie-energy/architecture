@@ -11,7 +11,9 @@ skinparam sequence {
 autonumber
 
 participant "Meter Data\nAdministrator" as user
-participant "Interoperable\nCommunication" as comm
+box "EDDIE Framework" #transparent
+  participant "Interoperable\nCommunication" as comm
+end box
 participant "Service\n" as service
 
 user -> comm : revokeConsent(\nconsumer,\neligibleParty)
