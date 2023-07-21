@@ -3,6 +3,7 @@ import {Configuration} from './Configuration';
 import {Issue} from './Model.js';
 import {MarkdownTable} from './MarkdownTable';
 import {Content} from './Content';
+import {BPRTExcelSheets} from "./import/BPRTExcelSheets";
 
 interface Dictionary<T> {
   [Key: string]: T;
@@ -42,4 +43,10 @@ export async function writeIssues() {
     .catch(err => console.log(`Error when generating BPRT Issue tables:\n${err}`))
 }
 
-
+export async function importBPRTIssuesIntoGitHub(excelSheet: string) {
+  const issueService = new IssueService()
+  return Promise.all(new BPRTExcelSheets(excelSheet)
+    .issuesOfSheet(0)
+    .map(issue => issueService.createIssue(issue))
+  )
+}

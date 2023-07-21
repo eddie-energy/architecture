@@ -8,6 +8,18 @@ export interface Issue {
   closedOn?: Date
 }
 
+export interface IssueForCreation {
+  title: string
+  labels: string[]
+  status: string
+  description: string
+  workaround: string
+  sustainableSolution: string
+  projectedFor: string
+  availableSince: string
+  owner: string
+}
+
 export interface User {
   name: string
   url: string
