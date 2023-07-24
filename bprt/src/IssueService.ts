@@ -8,6 +8,8 @@ type ListIssues = Endpoints['GET /repos/{owner}/{repo}/issues']['response'];
 
 export class IssueService {
   private static issueLabels = ['bprt']
+  private static repo = 'best-practice-round-table-issues';
+
   private octokit: Octokit
 
   constructor() {
@@ -18,7 +20,7 @@ export class IssueService {
   public async issues(): Promise<Issue[]> {
     console.log("Gathering Issues")
     const result: ListIssues = await this.octokit.request('GET /repos/{owner}/{repo}/issues', {
-      owner: 'eddie-energy', repo: 'architecture', headers: {
+      owner: 'eddie-energy', repo: IssueService.repo, headers: {
         'X-GitHub-Api-Version': '2022-11-28'
       }, labels: IssueService.issueLabels.join(',')
     })
@@ -40,7 +42,7 @@ export class IssueService {
     const res = await this.octokit.request('POST /repos/{owner}/{repo}/issues',
       {
         owner: 'eddie-energy',
-        repo: 'architecture',
+        repo: IssueService.repo,
         headers: {
           'X-GitHub-Api-Version': '2022-11-28'
         },
