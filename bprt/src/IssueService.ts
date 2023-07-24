@@ -34,7 +34,8 @@ export class IssueService {
         labels: issue.labels.map(label => label.name),
         state: issue.state,
         availableSince: new Date(issue.created_at),
-        closedOn: issue.closed_at ? new Date(issue.closed_at) : null
+        closedOn: issue.closed_at ? new Date(issue.closed_at) : null,
+        description: issue.body
       } as Issue))
   }
 

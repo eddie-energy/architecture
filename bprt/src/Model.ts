@@ -6,6 +6,7 @@ export interface Issue {
   state: string
   availableSince: Date
   closedOn?: Date
+  description: string
 }
 
 export interface IssueForCreation {
