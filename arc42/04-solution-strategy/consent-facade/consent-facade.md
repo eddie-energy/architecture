@@ -44,31 +44,31 @@ The necessary components to achieve the basic functionality of the Consent Facad
 The process discussed so far is also shown below in a sequence diagram. This diagram includes the following steps.
 
 1. This step is to be implemented by the eligible party itself. It needs to be able to identify the customer and create an onboarding flow for its user. Nothing to do from our side (except - probably - documentation).
-2. For each data set required, a 'connect my data' button must be placed in the onboarding journey of the user. **[DEV-TASK] <br />1) design such a button graphically, 2) define a CIMExtension / market message as an interface for eligible parties for how they can specify/parameterise the data they need, 3) create a HTML/JS library or code copy&paste for users to easily integrate these buttons on their websites or apps.**
-3. The popup should either redirect to a dedicated page or to a popup like in the Figure below. **[DEV-TASK] 1) Design such a popup or redirect page 2)create a JS/HTML library for users to easily integrate and keep in mind that this component needs to draw master data from the Consent Facade run by the EDDIE Framework operator**.
-4. Request list of countries and - after a country is selected - a list of the permission administrators in each country from the EDDIE Framework instance. **[TASK] 1) define master data structure, 2) research and generate master data 3) create a REST API for this within the EDDIE Framework / EDDIE Consent Facade 4) on the GUI side, these lists must be displayed properly in the country dropdown and also in the Permission Administrator dropdown.**
+2. For each data set required, a 'connect my data' button must be placed in the onboarding journey of the user.
+3. The popup should either redirect to a dedicated page or to a popup like in the Figure below.
+4. Request list of countries and - after a country is selected - a list of the permission administrators in each country from the EDDIE Framework instance.
 5. Return countries and data families.
-6. Here the popup will need to download glue HTML code to fill _shortcomings of user flows of data-sharing environments_. **[DEV-TASK] 1) define a way to integrate these glue pieces of information (see screenshot of popup) 2) API functionality of Consent Facade will be needed.**
+6. Here the popup will need to download glue HTML code to fill _shortcomings of user flows of data-sharing environments_.
 7. Return shortcomings.
 8. If _cancel_ is clicked on the popup, the user should be redirected back to the onboarding workflow.
-9. Send a standardised [CIMConsentRequest] message to the PA Portal to preset consent information (see Implementing Act Procedure 2.3). **[DEV-TASK] 1) standardise how such a message must look like, extend CIM, 2) implement generation of such a message.**
-10. Forward the message in MS format and within MS data exchange environment **[DEV-TASK] 1) translage CIM message to national format 2) use interoperability layer to integrate with different means of communication (e.g. log in to hub, send market message, etc.) using the onboarding details stored in the _country setup_.**
-11. Redirect the customer to the PA Portal. **[DEV-TASK] 1) foresee a redirect link in PA Master Data that can take parameters like ConsentID or ConnectionPointID etc. 2) Redirect from Consent Popup to PA Portal.**
+9. Send a standardised [CIMConsentRequest] message to the PA Portal to preset consent information (see Implementing Act Procedure 2.3).
+10. Forward the message in MS format and within MS data exchange environment.
+11. Redirect the customer to the PA Portal.
 12. User logs in to PA Portal.
-13. User closes portal or is redirected to _EP App Onboarding Workflow_. **[DEV_TASK] for e.g. OAuth-based authentication on the PA Portal, such _redirect links in case of error_ must be supported. [TASK_FOR_BPRT] Data-sharing infrastructures must support backlinks in case the consent is not given to allow for effective user flows also in this case.**
-14 Ideally - but depending on the support by the data-sharing infrastructure - the customer should then be redirected on login to the respective consent request, so that he must only say _accept_ or _reject_. **[TASK_FOR_BPRT] Emphasize support for this step by all data-sharing infrastructures.**
-15. Send negative Status update in MS format to Interop Layer. **[DEV-TASK] Support the reception of this information in MS format and with MS procedures. (Region Connector)**
-16. Translate MS format to CIM Format and forward to Service. **[DEV-TASK] 1) Support the MarketMessage in CIM Extension, 2) Write translator for national formats.**
-17. Close portal or redirect user. **[DEV-TASK] support the redirect back, check whether Consent has been accepted or rejected and show GUI accordingly. [TASK_FOR_BPRT] Emphasize support for _direct redirect after accept/reject_ in PA Portals.**
+13. User closes portal or is redirected to _EP App Onboarding Workflow_.
+14. Ideally - but depending on the support by the data-sharing infrastructure - the customer should then be redirected on login to the respective consent request, so that he must only say _accept_ or _reject_.
+15. Send negative Status update in MS format to Interop Layer.
+16. Translate MS format to CIM Format and forward to Service.
+17. Close portal or redirect user.
 18. PA informs MDA about established consent (within MS environment).
-19. Set up the transfer of data. NB: If data is directly awailable and we are in PUSH environments, it is directly transferred to _EP Service_ or when it gets available. In PULL environments, the data becomes _pullable_.
-20. MS MarketMessage to InteroperableCommunicationLayer that the consent request has been accepted. **[DEV-TASK] 1) Prepare Interoperability layer for this interaction 2) RegionConnectors must be prepared to receive this type of interaction. [TASK_FOR_BPRT] Data-sharing infrastructures must support this type of action.
-21. Forward MarketMessage about consent acceptance in CIM format to EP Service. **[DEV-TASK] 1) extend CIM standard to allow for such a message 2) write translator from national format to common format 3) update consent process object and log information**.
+19. Set up the transfer of data. NB: If data is directly available and we are in PUSH environments, it is directly transferred to _EP Service_ or when it gets available. In PULL environments, the data becomes _pullable_.
+20. MS MarketMessage to InteroperableCommunicationLayer that the consent request has been accepted.
+21. Forward MarketMessage about consent acceptance in CIM format to EP Service.
 22. EP Service can update its customer account information.
-23. Close portal or redirect user. **[DEV-TASK] support the redirect back, check whether Consent has been accepted or rejected and show GUI accordingly. [TASK_FOR_BPRT] Emphasize support for _direct redirect after accept/reject_ in PA Portals.**
+23. Close portal or redirect user.
 24. If other data families are needed, the EP Application in its onboarding process can request it.
-25. Data is sent to the EP Service as a MS format MarketMessage to the Interoperability layer. NB: Note that in PULL scenarios this _sending_ needs to be emulated by polling smartly. **[DEV-TASK] 1) prepare interoperability layer to receive data 2) write emularions for message-based, rest, soap and streaming scenarios 3) interfaces for region connectors to dock in 4) write region connectors that integrate and receive these messages.**
-26. Data is translated to common CIM MarketMessage and forwarded to EP Service through EDDIE Data Streaming infrastructure. **[DEV-TASK] 1) Extend CIM to support MarketMessage(s) 2) write translators within RegionConnector towards CIM MarketMessage.**
+25. Data is sent to the EP Service as an MS format MarketMessage to the Interoperability layer. NB: Note that in PULL scenarios this _sending_ needs to be emulated by polling smartly.
+26. Data is translated to common CIM MarketMessage and forwarded to EP Service through EDDIE Data Streaming infrastructure.
 
 <div align="center">
 <img src="./figures/SEQUENCE.png" >
