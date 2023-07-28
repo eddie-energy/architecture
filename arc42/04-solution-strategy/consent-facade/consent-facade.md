@@ -121,7 +121,7 @@ When the data is received by the Interoperable Communication Layer, this data is
 The figure below shows the process from the perspective of the consumer. Specifically, this figure includes examples of graphical interfaces that collect the response of the consumer, e.g., to provide consent, accept a request for data access, etc.
 
 <div align="center">
-<img src="./figures/Consent%20Fa%C3%A7ade%20-%20User%20Flow.jpg" >
+<img src="./figures/Consent%20Fa%C3%A7ade%20-%20User%20Flow.png" >
 </div>
 
 Finally, the following figure shows a domain model which includes the necessary variables and methods that need to be implemented in the EDDIE Framework for efficient integration and interactions with the Permissions Administrators.
