@@ -1,0 +1,145 @@
+@startuml
+
+(*) -right-> "
+{{
+salt
+{+
+<b>Eligible Party - Onboarding - usable in MVP Scope
+Step 2 of 4
+We need you to fulfill the following procedures:
+Access to validated historical consumption data: | [connect_my_data]
+Access to P1 data: | [connect_my_data]
+}
+}}
+" as connect_button
+
+connect_button -right-> "
+{{
+salt
+{+
+<b>EDDIE - Connect My Data - MVP Scope
+Connecting data for service: |<i>MyGoodService
+My country: | ^Austria       ^  
+Permission admin: | ^Netze Niederoesterreich    ^
+Data from: |2023-03-29
+Data to: |2023-12-31
+Granularity: |15 min
+Periodicity: |Daily
+Metering point id: |"AT0900128391829829232400"
+Generated consent id: |<i>ATDKCLDUKE
+[close] | [forward_to_pa]
+}
+}}
+" as open_popup_vhcd
+
+connect_button --> "
+{{
+salt
+{+
+<b>EDDIE - Connect My Data - MVP Out of Scope
+Connecting data for service: |<i>MyGoodService
+Permission from: |2023-03-29
+Permission to: |2023-12-31
+Refresh rate: |2s
+Request ID: |AKXBCIL2KD
+Barcode: |{S
+.
+.
+.
+SCAN THIS BARCODE
+WITH AIIDA APP
+.
+.
+}
+<&loop-square> Waiting for consent... | [Abort]
+}
+}}
+" as open_popup_aiida
+
+open_popup_aiida -right[dashed]-> "
+{{
+salt
+{+
+<b>EDDIE - Connect My Data - MVP Scope
+<&loop-square> Waiting for customer ACCEPT/REJECT...
+--
+constantly getting updates from EDDIE Consent Facade process facade
+via Websocket or HTTP poll.
+}
+}}
+" as waiting_for_acceptance
+
+open_popup_aiida -right-> "
+{{
+salt
+{+
+<b>AIIDA - App (push notified) - MVP Out of Scope
+
+Data sharing request: |<i>AKXBCIL2KD
+from: |<i>My data-based service
+Permission from: |2023-03-29
+Permission to: |2023-12-31
+Refresh rate: |2s
+
+[<color:red>REJECT]|[<color:green>ACCEPT]
+}    
+}}
+" as app_screen
+
+open_popup_vhcd -down-> waiting_for_acceptance
+
+waiting_for_acceptance -right-> "
+{{
+salt
+{+
+<b>Eligible Party - Onboarding - usable in MVP Scope
+Step 2 of 4
+We need you to fulfill the following procedures:
+Access to validated historical consumption data: | <color:green><&thumb-up> connected
+Access to P1 data: | [connect_my_data]
+}
+}}
+" as one_connected
+
+app_screen -[dashed]down-> one_connected
+
+one_connected -[dotted]-> open_popup_vhcd
+one_connected -[dotted]-> open_popup_aiida
+
+open_popup_vhcd -right-> "
+{{
+salt
+{+
+<b>Netze Niederoesterreich Smart Meter Portal
+Username:|"    myoldusername    "
+Password:|"*****"
+|[Login!]
+}    
+}}
+" as pa_login
+
+pa_login -right-> "
+{{
+salt
+{+
+<b>Netze Niederoesterreich Smart Meter Portal
+Please accept or reject the following request.
+--
+Consent id: |<i>ATDKCLDUKE
+--
+Metering point id: |"AT0900128391829829232400"
+--
+Data from: |2023-03-29
+Data to: |2023-12-31
+Granularity: |15 min
+Periodicity: |Daily
+--
+[<color:red>REJECT]|[<color:green>ACCEPT]
+}    
+}}
+" as pa_confirm
+
+pa_confirm --> waiting_for_acceptance
+pa_confirm -[dashed]-> one_connected
+
+one_connected -right-> (*)
