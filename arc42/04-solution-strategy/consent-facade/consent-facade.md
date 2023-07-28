@@ -7,7 +7,7 @@ The Consent Facade component is implemented within the EDDIE framework which is 
 The Consent Facade is linked with various operations of the EDDIE Framework. For this reason, in order to describe the Consent Facade comprehensively, this section provides various details and graphical representations. In general, the acquisition of data from the EDDIE Framework is initiated by the creation of a *Service*. Thus, the eligible party initially has to create a Service and specify certain Service-related attributes such as the data family (e.g., historical validated data, or real-time data) of the required data. The figure below shows an example of a form that has to be filled out by the eligible party in order to create a new Service. 
 
 <div align="center">
-<img src="./figures/EACH%20Process%20will%20be%20done%20for%20a%20Service.png" >
+<img src="./figures/process-service.png" >
 </div>
 
 As long as a Service has been created, consumers have to be linked to this Service, so that the Service can process their data. The figure below shows the high-level process of a consumer that gives their consent to an eligible party for data access and processing by a Service. This process includes the following steps:
