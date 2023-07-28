@@ -38,7 +38,7 @@ To show all the consents given to a particular eligible party, the EDDIE Framewo
 The necessary components to achieve the basic functionality of the Consent Facade are shown in the figure below. On the left-hand side, there is an onboarding process that shows the button *connect my data* that has to be clicked by the consumer. After clicking, there is a popup window with a form that gathers additional information from the consumer. This form requires information, e.g., available countries and permission administrators, which are acquired from the Consent Facade. The filled-out form is sent back to the Consent Facade. The consent facade creates the request for data access and shares this request with the EDDIE Interoperable Communication Layer via a Kafka topic. The Interoperable Communication Layer maintains a state of all requests so that if a state changes, all related components are notified (e.g., the popup window of the consumer on the EP Website). The state can change from the PA Connectors (e.g., PA Connector EDA or PA Connector Enedis in the figure) which communicate with the respective Permissions Administrators (e.g., PA Connector EDA communicates with the Austria Permission Administrator EDA, while Enedis is the French Permission Administrator). 
  
 <div align="center">
-<img src="./figures/eddie-mvp.png.png" >
+<img src="./figures/eddie-mvp.png" >
 </div>
 
 The process discussed so far is also shown below in a sequence diagram. This diagram includes the following steps.
@@ -51,7 +51,7 @@ The process discussed so far is also shown below in a sequence diagram. This dia
 6. Here the popup will need to download glue HTML code to fill _shortcomings of user flows of data-sharing environments_.
 7. Return shortcomings.
 8. If _cancel_ is clicked on the popup, the user should be redirected back to the onboarding workflow.
-9. Send a standardised [CIMConsentRequest] message to the PA Portal to preset consent information (see Implementing Act Procedure 2.3).
+9. Send a standardized [CIMConsentRequest] message to the PA Portal to preset consent information (see Implementing Act Procedure 2.3).
 10. Forward the message in MS format and within MS data exchange environment.
 11. Redirect the customer to the PA Portal.
 12. User logs in to PA Portal.
@@ -115,7 +115,7 @@ After establishing the consent, the data is sent to the EDDIE Framework through 
 When the data is received by the Interoperable Communication Layer, this data is transformed into a [CIM](../../08-crosscut-concepts/domain-models/cim/cim.md) representation. Then, the data is enriched with additional information that is used internally in the EDDIE Framework (e.g., Service ID, ConsentID, etc.). Finally, the enriched CIM representation of the data is sent to the Service via a Kafka topic. This process is also shown in the figure below.
 
 <div align="center">
-<img src="./figures/transfer-data-process.png.png" >
+<img src="./figures/transfer-data-process.png" >
 </div>
 
 The figure below shows the process from the perspective of the consumer. Specifically, this figure includes examples of graphical interfaces that collect the response of the consumer, e.g., to provide consent, accept a request for data access, etc.
