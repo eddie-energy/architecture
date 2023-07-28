@@ -26,19 +26,19 @@ As long as a Service has been created, consumers have to be linked to this Servi
 
 
 <div align="center">
-<img src="./figures/HIGH-Level%20view%20in%20Proposal.png" >
+<img src="./figures/establishment-of-consent.png" >
 </div>
 
 To show all the consents given to a particular eligible party, the EDDIE Framework will provide an overview of the consents along with respective details and available actions. An example of this overview is shown in the figure below.
 
 <div align="center">
-<img src="./figures/GOAL%20for%20after%20MVP.png" >
+<img src="./figures/admin-console.png" >
 </div>
 
 The necessary components to achieve the basic functionality of the Consent Facade are shown in the figure below. On the left-hand side, there is an onboarding process that shows the button *connect my data* that has to be clicked by the consumer. After clicking, there is a popup window with a form that gathers additional information from the consumer. This form requires information, e.g., available countries and permission administrators, which are acquired from the Consent Facade. The filled-out form is sent back to the Consent Facade. The consent facade creates the request for data access and shares this request with the EDDIE Interoperable Communication Layer via a Kafka topic. The Interoperable Communication Layer maintains a state of all requests so that if a state changes, all related components are notified (e.g., the popup window of the consumer on the EP Website). The state can change from the PA Connectors (e.g., PA Connector EDA or PA Connector Enedis in the figure) which communicate with the respective Permissions Administrators (e.g., PA Connector EDA communicates with the Austria Permission Administrator EDA, while Enedis is the French Permission Administrator). 
  
 <div align="center">
-<img src="./figures/EDDIE%20Framework%20MVP%20Deployment%20Diagram.png" >
+<img src="./figures/eddie-mvp.png.png" >
 </div>
 
 The process discussed so far is also shown below in a sequence diagram. This diagram includes the following steps.
@@ -77,25 +77,25 @@ The process discussed so far is also shown below in a sequence diagram. This dia
 The consent for data access may be revoked at any time. If the revocation is triggered by the Meter Data Administrator, then the Permission Administrator is notified, and in turn, the EDDIE Framework (through the Interoperable Communication Layer). This process is shown in the figure below. 
 
 <div align="center">
-<img src="./figures/REVOKE%20PROCESS.png" >
+<img src="./figures/revoke-process.png" >
 </div>
 
 If the Service is terminated by the eligible party, then a termination request is sent from the EDDIE Framework to the Permission Administrator and then to the Meter Data Administrator. This process is shown in the figure below.
 
 <div align="center">
-<img src="./figures/TERMINATE%20PROCESS.png" >
+<img src="./figures/terminate-process.png" >
 </div>
 
 The popup window that is shown to the consumer upon clicking the *connect my data* button, needs to collect the necessary information for acquiring the consumer's data. An example of such a window is shown in the figure below, including two cases: Spain on the left-hand side and Austria on the right-hand side. Both cases need information about the selected country and Permission Administrator as well as the data family, granularity and period. In addition, the popup window may require specific information based on the selected Permission Administrator. For example, for Datadis in Spain, the Shared Metering Point ID is needed, while for Netze Burgenland, the Generated ConsentID is needed. After filling out this window, the consumer clicks *Proceed* and is redirected to the Permission Administrator Website.
 
 <div align="center">
-<img src="./figures/Popup%20initiating%20Consent%20process(es).png" >
+<img src="./figures/connect-my-data.png" >
 </div>
 
 The overall consent management process is shown in the figure below. This process starts with a new consent request (shown on the right-hand side of the figure). For this request, a process state object is created including a process ID, creation date, corresponding Service, region, etc, and is given the state *CREATED*. Then, this object is examined by the corresponding Region Connector to make sure that all the mandatory fields are filled in. If something is missing, the state is changed to *INVALID*, and the process ends. Otherwise, the state is changed to *VALIDATED*. If the state is *VALIDATED*, then the object is transformed into a PA message that is structured based on what is needed by the corresponding Permission Administrator. If something goes wrong during the transformation process, the state changes to *INVALID* and the process ends. Otherwise, the state is changed to *VALID_PA*. At this point, is where the consumer is redirected to the Permission Administrator Website to accept the request. When the consumer accepts, the EDDIE Framework is notified, and the state is changed to *CONSENT_ESTABLISHED*. In this state, the EDDIE Framework has acquired the consumer's consent, and is able to request the energy data. If the Service is terminated by the eligible party, the process ends and the state is changed to *CONSENT_TERMINATED*. If the consent is revoked, e.g., by the Permission Administrator, the process also ends, and the state is changed to *CONSENT_TERMINATED*.
 
 <div align="center">
-<img src="./figures/Reference%20consent%20Management%20PROCESS%20proposal.png" >
+<img src="./figures/consent-management.png" >
 </div>
 
 After establishing the consent, the data is sent to the EDDIE Framework through the Interoperable Communication Layer. This process is shown in the figure below and includes the following steps:
@@ -109,25 +109,25 @@ After establishing the consent, the data is sent to the EDDIE Framework through 
 7. The data is transformed to be used by the internal algorithms of the Service, and is further processed. 
 
 <div align="center">
-<img src="./figures/HIGH-Level%20view%20in%20Proposal2.png" >
+<img src="./figures/transfer-of-data.png" >
 </div>
 
 When the data is received by the Interoperable Communication Layer, this data is transformed into a [CIM](../../08-crosscut-concepts/domain-models/cim/cim.md) representation. Then, the data is enriched with additional information that is used internally in the EDDIE Framework (e.g., Service ID, ConsentID, etc.). Finally, the enriched CIM representation of the data is sent to the Service via a Kafka topic. This process is also shown in the figure below.
 
 <div align="center">
-<img src="./figures/Reference%20TRANSFER%20DATA%20PROCESS%20PROPOSAL.png" >
+<img src="./figures/transfer-data-process.png.png" >
 </div>
 
 The figure below shows the process from the perspective of the consumer. Specifically, this figure includes examples of graphical interfaces that collect the response of the consumer, e.g., to provide consent, accept a request for data access, etc.
 
 <div align="center">
-<img src="./figures/Consent%20Fa%C3%A7ade%20-%20User%20Flow.png" >
+<img src="./figures/user-flow.png" >
 </div>
 
 Finally, the following figure shows a domain model which includes the necessary variables and methods that need to be implemented in the EDDIE Framework for efficient integration and interactions with the Permissions Administrators.
 
 <div align="center">
-<img src="./figures/Consent Facade Conceptual Domain Model.png" >
+<img src="./figures/domain-model.png" >
 </div>
 
 
