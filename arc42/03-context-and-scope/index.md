@@ -26,7 +26,7 @@ From a business perspective, the system consists of four entities which are show
 
 <!-- ![business context diagram](/3-context-and-scope/figures/external-interfaces.png) -->
 <div align="center">
-<img src="./figures/context-diagram.png" width="700">
+<img src="./figures/context-diagram.svg">
 </div>
 
 This context diagram shows how the EDDIE Framework (in the center of the figure) interacts with its environment. Three other entities are part of the system:
