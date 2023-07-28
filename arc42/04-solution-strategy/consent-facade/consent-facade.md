@@ -127,7 +127,7 @@ The figure below shows the process from the perspective of the consumer. Specifi
 Finally, the following figure shows a domain model which includes the necessary variables and methods that need to be implemented in the EDDIE Framework for efficient integration and interactions with the Permissions Administrators.
 
 <div align="center">
-<img src="./figures/Consent%20Fa%C3%A7ade%20%E2%80%93%20conceptual%20domain%20model.png" >
+<img src="./figures/Consent Facade Conceptual Domain Model.png" >
 </div>
 
 
