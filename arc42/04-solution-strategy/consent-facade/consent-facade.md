@@ -71,7 +71,7 @@ The process discussed so far is also shown below in a sequence diagram. This dia
 26. Data is translated to common CIM MarketMessage and forwarded to EP Service through EDDIE Data Streaming infrastructure.
 
 <div align="center">
-<img src="./figures/SEQUENCE.png" >
+<img src="./figures/sequence.svg" >
 </div>
 
 The consent for data access may be revoked at any time. If the revocation is triggered by the Meter Data Administrator, then the Permission Administrator is notified, and in turn, the EDDIE Framework (through the Interoperable Communication Layer). This process is shown in the figure below. 
