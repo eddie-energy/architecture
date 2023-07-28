@@ -20,7 +20,7 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.setDataFileBaseName("index");
   eleventyConfig.addPassthroughCopy({"eleventy/assets": "assets"});
-  eleventyConfig.addPassthroughCopy("arc42/**/*.(png|gif|jpg)");
+  eleventyConfig.addPassthroughCopy("arc42/**/*.(png|gif|jpg|svg)");
   eleventyConfig.addTransform("transformUrls", transformUrls);
 
   eleventyConfig.on('eleventy.before', async () => {
