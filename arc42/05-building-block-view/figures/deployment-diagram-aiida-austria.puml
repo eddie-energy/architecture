@@ -1,0 +1,56 @@
+@startuml deployment-diagram-aiida-austria
+'deployment diagram
+caption Deployment Diagram: AIIDA - Austria
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam artifact{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam artifact{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam node{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle {
+  borderColor Transparent
+  backgroundColor Transparent
+  fontColor Transparent
+  stereotypeFontColor Transparent
+}
+
+node "\t\tDocker Runtime\t\t" <<Eligible Party Infrastructure>> as epInfra{
+  component "EDDIE Framework" as eddie
+  interface "\t\tKafka" as eddie1
+
+  eddie -right- eddie1
+}
+node "In-house Infrastructure"  {
+  node "Docker Runtime" <<In-house Device>> as house{
+    component "\tAIIDA\t" as aiida
+  }
+  node " " <<Adaptor>> as adaptor{
+    interface "MQTT\n(over WiFi)" as mqtt
+  }
+  node " " <<Smart Meter>> as meter{
+    interface "P1" as p1
+  }
+}
+
+
+aiida -up--( eddie1 :Push data\n\n
+aiida --( mqtt : \nGet data
+adaptor --( p1 :Get real-time data
+
+
+@enduml
