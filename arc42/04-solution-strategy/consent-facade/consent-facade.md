@@ -45,13 +45,13 @@ The process discussed so far is also shown below in a sequence diagram. This dia
 
 1. This step is to be implemented by the eligible party itself. It needs to be able to identify the customer and create an onboarding flow for its user. Nothing to do from our side (except - probably - documentation).
 2. For each data set required, a 'connect my data' button must be placed in the onboarding journey of the user.
-3. The popup should either redirect to a dedicated page or to a popup like in the Figure below.
+3. The popup should either redirect to a dedicated page or to open a popup (discussed later on).
 4. Request list of countries and - after a country is selected - a list of the permission administrators in each country from the EDDIE Framework instance.
 5. Return countries and data families.
 6. Here the popup will need to download glue HTML code to fill _shortcomings of user flows of data-sharing environments_.
 7. Return shortcomings.
 8. If _cancel_ is clicked on the popup, the user should be redirected back to the onboarding workflow.
-9. Send a standardized [CIMConsentRequest] message to the PA Portal to preset consent information (see Implementing Act Procedure 2.3).
+9. Send a standardized [CIMConsentRequest] message to the PA Portal to preset consent information.
 10. Forward the message in MS format and within MS data exchange environment.
 11. Redirect the customer to the PA Portal.
 12. User logs in to PA Portal.
