@@ -11,7 +11,7 @@ technical context (channels, protocols, hardware).
 
 Various options:
 -   Context diagrams
--   Lists of communication partners and their interfaces. -->
+-   Lists of communication partners and their interfaces. test -->
 
 The context of the system is described by showing the external interfaces and by specifying inputs and outputs. We differentiate between business context and technical context (for the same system).
 
