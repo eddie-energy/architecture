@@ -19,7 +19,8 @@ There are various important concepts that are relevant to many parts of the syst
 <img src="./figures/crosscutting-concepts.png" width=650>
 </div>
 
-The motivation for using some of these concepts is provided below.
+The motivation for using some of these concepts is provided the corresponing subsections: 
+* [Domain Model](./domain-models/index.md)
 
 | Domain Model | Section |
 | - | - |
