@@ -8,9 +8,9 @@ The components of the systems are shown in the table below with links to dedicat
 | - | - |
 | EP Website |  |
 | Service |  |
-| Consent Facade | [Link](./consent-facade.md/consent-facade.md) |
+| Consent Facade | [Link](./consent-facade/consent-facade.md) |
 | Streaming Infrastructure |  |
 | Database |  |
 | Admin Console |  |
 | Interoperable Communication | [Link](./interoperable-communication/interoperable-communication.md) |
-| AIIDA |  |
+| AIIDA | [Link](./AIIDA/AIIDA.md) |

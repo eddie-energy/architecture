@@ -86,9 +86,12 @@ The table below shows a summary of the interfaces.
 
 ## Prerequisites
 
-The EDDIE Framework aims at being compatible with external components such as the Regional Data-sharing Infrastructure of different countries. This may create prerequisites and dependencies with regard to achieving efficient interactions with such components. The prerequisites are:
+Since the EDDIE framework interacts with various external components and infrastructures of different countries, certain prerequisites and dependencies arise that are outlined in a seperate section: 
 
-- [Eligible party registration to Regional Data-sharing Infrastructure](./eligible-party-registration/eligible-party-registration.md)
+
+
+- [Prerequisites for external components](./prerequisites/prerequisites.md)
+
 
 
 

@@ -22,11 +22,6 @@ There are various important concepts that are relevant to many parts of the syst
 The motivation for using some of these concepts is provided the corresponing subsections: 
 * [Domain Model](./domain-models/index.md)
 
-| Domain Model | Section |
-| - | - |
-| CIM | [Link](./domain-models/cim/cim.md) | 
-| SAREF | [Link](./domain-models/saref/saref.md) | 
-| SGAM | [Link](./domain-models/sgam/sgam.md) | 
 
 
 | Architectural Pattern | Section |
