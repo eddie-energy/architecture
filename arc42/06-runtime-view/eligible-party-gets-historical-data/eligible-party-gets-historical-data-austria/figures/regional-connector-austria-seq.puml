@@ -1,0 +1,34 @@
+@startuml regional-connector-austria-seq
+'sequence diagram
+caption Sequence Diagram: The Regional Connector of Austria
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+
+!pragma teoz true
+
+participant "Regional Data-\nsharing Infr." as dataPortal
+box "EDDIE Framework" #transparent
+  box "Interoperable Communication\n" #transparent
+    box "Regional Connector - Austria" #transparent
+      participant "Ponton XP\nMessanger" as pontonXP
+      ' participant "Translation\nService" as translationService
+      participant "Ponton\nAdapter" as pontonAdapter
+    end box 
+    participant "Message\nProducer" as messageProducer
+  end box
+  participant "Streaming\nInfrastructure" as streamingInfrastructure
+end box
+
+dataPortal -> pontonXP : data
+pontonXP -> pontonAdapter : send(data)
+pontonAdapter -> messageProducer : send(data)
+messageProducer -> streamingInfrastructure : publish(\ndata, topic)
+
+
+@enduml
