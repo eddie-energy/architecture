@@ -30,9 +30,10 @@ This workflow includes the following steps:
 14. The Consent Admin Portal informs the Meter Data Portal to allow access to the data for the eligible party. Since the involved components of this step do not belong to EDDIE, this step is out of scope. However, EDDIE depends on the timely execution of this step.
 15. The Meter Data Portal sends the data to the Interoperable Communication. This step is also shown below in a separate sequence diagram that details the internal process of the Interoperable communication.
 
->
->After the data has been received by the EDDIE Framework, another internal workflow takes place to send the data to a service. This workflow is shown [here](./to-be-added).
->
+Some of these steps that require additional explanations are discussed in the subsections below. A more detailed view of this workflow is also shown [here](./figures/get-historical-data-austria-detailed.png).
+
+> After the data has been received by the EDDIE Framework, another internal workflow takes place to send the data to a service. This workflow is shown [here](../eddie-framework-offers-data-to-service/eddie-framework-offers-data-to-service.md).
+
 
 ### Steps 8 and 9: Internal Process of the Interoperable Communication to Request the Consent
 
@@ -48,7 +49,7 @@ This workflow includes the following steps:
 3. The Ponton Adapter forwards the consent request to the Ponton XP Messanger.
 4. The Ponton XP Messanger sets up a consent request at the Consent Admin Portal. The consumer then has to access the Consent Admin Portal and accept the consent request by clicking the appropriate button.
 
-## Step 15: Internal Process of the Interoperable Communication When Receiving Historical Data
+### Step 15: Internal Process of the Interoperable Communication When Receiving Historical Data
 
 A more detailed view showing the workflow of the Interoperable Communication is depicted below:
 
