@@ -11,7 +11,7 @@ The Regional Data-sharing Infrastructure of France is operated by [ENEDIS](https
 ### Create Application
 
 After creating the account, the eligible party can create an *application* on the [ENEDIS website](https://datahub-enedis.fr/en/data-connect-en/).
-This application relates to a [Service](../../index.md) that is offered by the eligible party. Thus, for every service, the eligible party should create an application on the ENEDIS website. To create the application, the eligible party must provide:
+This application relates to a Service that is offered by the eligible party. Thus, for every service, the eligible party should create an application on the ENEDIS website. To create the application, the eligible party must provide:
 1. The name of the application.
 1. A logo for the application.
 1. Select the requested data.

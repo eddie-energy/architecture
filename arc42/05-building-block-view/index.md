@@ -85,7 +85,7 @@ The EDDIE Framework includes the following components.
 
 | Component | Responsibility | Data Model |
 | - | - | - |
-| Consent Facade | Manages and stores the consent of the consumers. |  |
+| Consent Facade | Manages and stores the consent of the consumers. | [Link](./data-models/data-model-consent-facade-interface/data-model-consent-facade-interface.md) |
 | Streaming Infrastructure | Handles the communication among internal and external components |  |
 | Database | Stores information about consents, state, and data. |  [Master Data](./data-models/data-model-master-data/data-model-master-data.md) |
 | Admin Console | Entry point for the eligible party to register with regional data-sharing infrastructure (if necessary). |  |
