@@ -1,0 +1,49 @@
+@startuml aiida-high-level
+'component diagram
+caption Component Diagram: High-level view of AIIDA
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam actor{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle{
+  BorderColor transparent
+  BackgroundColor transparent
+  FontColor transparent
+}
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" {    
+    component "Interoperable Communication" as comm {
+      component "Regional connector\nAIIDA" as regionalConnectorAIIDA
+      component "Message\nProducer" as messageProducer
+    
+      regionalConnectorAIIDA -> messageProducer
+    }
+  }
+}
+node "In-house\nInfrastructure" {
+  component "\tAIIDA\t" as aiida
+  node "Smart Meter" as meter {
+      interface "Smart Meter\nInterface" as p1
+  }
+  aiida -down-( p1 
+}
+' actor "Consumer" as consumer
+' consumer -down- aiida
+aiida -up(0- regionalConnectorAIIDA
+
+@enduml
