@@ -45,7 +45,7 @@ node "Docker Runtime" <<In-house Device>> as house{
   component "\tAIIDA\t" as aiida
 }
 node " " <<Smart Meter>> as meter{
-  interface "P1" as p1
+  interface "Smart Meter\nInterface" as p1
 }
 }
 

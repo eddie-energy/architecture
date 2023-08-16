@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="868px" preserveAspectRatio="none" style="width:790px;height:868px;background:#FFFFFF;" version="1.1" viewBox="0 0 790 868" width="790px" zoomAndPan="magnify"><defs/><g><!--MD5=[c57d54656a6b708159567a005370dc18]
+cluster epInfra--><g id="cluster_epInfra"><polygon fill="none" points="16,16,26,6,648,6,648,404.5,638,414.5,16,414.5,16,16" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="638" x2="648" y1="16" y2="6"/><line style="stroke:#181818;stroke-width:1.0;" x1="16" x2="638" y1="16" y2="16"/><line style="stroke:#181818;stroke-width:1.0;" x1="638" x2="638" y1="16" y2="414.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="216" x="220" y="31.9951">Eligible Party Infrastructure</text></g><!--MD5=[8284efcdb2c06113b670adc4eb5eeffa]
+cluster EDDIE Framework--><g id="cluster_EDDIE Framework"><rect fill="none" height="235" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="584" x="40" y="155.5"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="604" y="160.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="602" y="162.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="602" y="166.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="138" x="263" y="181.4951">EDDIE Framework</text></g><!--MD5=[415e973a851217c742885318a05f06ea]
+cluster In-house\nInfrastructure--><g id="cluster_In-house\nInfrastructure"><polygon fill="none" points="534,486.5,544,476.5,755,476.5,755,816.5,745,826.5,534,826.5,534,486.5" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="745" x2="755" y1="486.5" y2="476.5"/><line style="stroke:#181818;stroke-width:1.0;" x1="534" x2="745" y1="486.5" y2="486.5"/><line style="stroke:#181818;stroke-width:1.0;" x1="745" x2="745" y1="486.5" y2="826.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="69" x="606" y="502.4951">In-house</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="110" x="585.5" y="518.792">Infrastructure</text></g><!--MD5=[7dbb7dea99a93d406f05c066d12ba64a]
+cluster meter--><g id="cluster_meter"><polygon fill="none" points="558,666.5,568,656.5,731,656.5,731,792.5,721,802.5,558,802.5,558,666.5" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="721" x2="731" y1="666.5" y2="656.5"/><line style="stroke:#181818;stroke-width:1.0;" x1="558" x2="721" y1="666.5" y2="666.5"/><line style="stroke:#181818;stroke-width:1.0;" x1="721" x2="721" y1="666.5" y2="802.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="97" x="592" y="682.4951">Smart Meter</text></g><!--MD5=[518e645c172fff526c6656066ad6216c]
+cluster energyProvider--><g id="cluster_energyProvider"><polygon fill="none" points="192,448.5,202,438.5,440,438.5,440,622.5,430,632.5,192,632.5,192,448.5" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="430" x2="440" y1="448.5" y2="438.5"/><line style="stroke:#181818;stroke-width:1.0;" x1="192" x2="430" y1="448.5" y2="448.5"/><line style="stroke:#181818;stroke-width:1.0;" x1="430" x2="430" y1="448.5" y2="632.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="172" x="226" y="464.4951">Regional Data-sharing</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="110" x="257" y="480.792">Infrastructure</text></g><!--MD5=[bf1b4add2ee2e1b53e65912b20fb7ef4]
+entity ui--><g id="elem_ui"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="155" x="58.5" y="46"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="193.5" y="51"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="191.5" y="53"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="191.5" y="57"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="73.5" y="78.9951">User Interface</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="73.5" y="95.292">(Website or App)</text></g><!--MD5=[862ebe305f068a9a150a38aa6740efca]
+entity services--><g id="elem_services"><rect fill="none" height="46.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="98" x="249" y="54.5"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="327" y="59.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="325" y="61.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="325" y="65.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="264" y="87.4951">Services</text></g><!--MD5=[3350d7f66612901443cd0d848f04b832]
+entity consentFacade--><g id="elem_consentFacade"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="103" x="84.5" y="190.5"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="167.5" y="195.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="165.5" y="197.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="165.5" y="201.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="99.5" y="223.4951">Consent</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="99.5" y="239.792">Facade</text></g><!--MD5=[e701bbac852ce3c7f1c3d2193e52d58f]
+entity broker--><g id="elem_broker"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="132" x="223" y="190.5"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="335" y="195.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="333" y="197.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="333" y="201.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="238" y="223.4951">Streaming</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="238" y="239.792">Infrastructure</text></g><!--MD5=[f50ff5e4cd64f259303fc83dba1819fc]
+entity database--><g id="elem_database"><path d="M390,201 C390,191 433,191 433,191 C433,191 476,191 476,201 L476,242.5938 C476,252.5938 433,252.5938 433,252.5938 C433,252.5938 390,252.5938 390,242.5938 L390,201 " fill="none" style="stroke:#000000;stroke-width:0.5;"/><path d="M390,201 C390,211 433,211 433,211 C433,211 476,211 476,201 " fill="none" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="400" y="227.9951">Database</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="400" y="244.292"> </text></g><!--MD5=[5dc741833ab4bfb2da004728c4a088b3]
+entity adminConsole--><g id="elem_adminConsole"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="97" x="511.5" y="190.5"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="588.5" y="195.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="586.5" y="197.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="586.5" y="201.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="526.5" y="223.4951">Admin</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="526.5" y="239.792">Console</text></g><!--MD5=[f687954eaad6e4cc089d50ae0ac13b41]
+entity comm--><g id="elem_comm"><rect fill="none" height="46.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="552" x="56" y="328.5"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="588" y="333.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="586" y="335.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="586" y="339.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="204" x="231" y="361.4951">Interoperable Communication</text></g><!--MD5=[0cf652f43e3bb8df3f72494916dfd857]
+entity aiida--><g id="elem_aiida"><rect fill="none" height="46.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="136" x="576" y="532.5"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="692" y="537.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="690" y="539.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="690" y="543.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35" x="623" y="565.4951">AIIDA</text></g><!--MD5=[c3dd7293d4e74cc67bec6d68663a773e]
+entity p1--><g id="elem_p1"><ellipse cx="644" cy="741.5" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="602" y="771.4951">Smart Meter</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="602" y="787.792">Interface</text></g><!--MD5=[1fc653c3dfea6295b6b1ce4824f4233e]
+entity dataPortal--><g id="elem_dataPortal"><ellipse cx="370" cy="555.5" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="350" y="585.4951">Meter</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="350" y="601.792">Data</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="350" y="618.0889">Portal</text></g><!--MD5=[f4fa63a7ccbb5d09e5b22f5f145bd9c7]
+entity adminPortal--><g id="elem_adminPortal"><ellipse cx="270" cy="555.5" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="240.5" y="585.4951">Consent</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="240.5" y="601.792">Admin</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="240.5" y="618.0889">Portal</text></g><!--MD5=[a6e63e5080b6098cbc36e97e7cf20a2e]
+entity consumer--><g id="elem_consumer"><ellipse cx="700" cy="48" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><path d="M700,56 L700,83 M687,64 L713,64 M700,83 L687,98 M700,83 L713,98 " fill="none" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="664" y="112.4951">Consumer</text></g><!--MD5=[79a439086b036a57b90a01d7b2f8bbd1]
+entity admin--><g id="elem_admin"><ellipse cx="759" cy="184" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><path d="M759,192 L759,219 M746,200 L772,200 M759,219 L746,234 M759,219 L772,234 " fill="none" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="735" y="248.4951">Eligible</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="735" y="264.792">Party</text></g><!--MD5=[0446f666ba595ccf579b2c98b41adc6d]
+link ui to consentFacade--><g id="link_ui_consentFacade"><path d="M136,109.21 C136,133.3 136,166.29 136,190.36 " fill="none" id="ui-consentFacade" style="stroke:#181818;stroke-width:1.0;"/><path d="M143.0711,142.7214 A10,10 0 0 0 128.9289 142.7214" fill="none" style="stroke:#181818;stroke-width:1.5;"/><ellipse cx="136" cy="149.7925" fill="#FFFFFF" rx="6" ry="6" style="stroke:#181818;stroke-width:1.5;"/></g><!--MD5=[edc97ded98fafbde7221f7fb2e4834b2]
+link ui to services--><!--MD5=[fc2d08aa515604291a8e6982590a1806]
+link consentFacade to broker--><g id="link_consentFacade_broker"><path d="M187.8,222.5 C199.07,222.5 211.14,222.5 222.88,222.5 " fill="none" id="consentFacade-broker" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d799de9f50b8d4eb11cfb4763ee2e47d]
+link consentFacade to comm--><g id="link_consentFacade_comm"><path d="M136,253.68 C136,276.74 136,307.46 136,328.27 " fill="none" id="consentFacade-comm" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e58abdc2777391f49ae57eab7503198c]
+link broker to database--><g id="link_broker_database"><path d="M355.1,222.5 C366.93,222.5 378.97,222.5 389.94,222.5 " fill="none" id="broker-database" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0fa590cf9e987db4a511fe1536bc1ef5]
+link broker to comm--><g id="link_broker_comm"><path d="M289,253.68 C289,276.74 289,307.46 289,328.27 " fill="none" id="broker-comm" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a1cb94b15f02fb936f707fd29a7869cf]
+link database to adminConsole--><g id="link_database_adminConsole"><path d="M476.35,222.5 C487.56,222.5 499.71,222.5 511.17,222.5 " fill="none" id="database-adminConsole" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[fc5f757b3fa0ac1f0fd073cc5ce18f1e]
+link services to broker--><g id="link_services_broker"><path d="M298,100.72 C298,125.05 298,163.43 298,190.49 " fill="none" id="services-broker" style="stroke:#181818;stroke-width:1.0;"/><path d="M305.0711,137.5102 A10,10 0 0 0 290.9289 137.5102" fill="none" style="stroke:#181818;stroke-width:1.5;"/><ellipse cx="298" cy="144.5812" fill="#FFFFFF" rx="6" ry="6" style="stroke:#181818;stroke-width:1.5;"/></g><!--MD5=[aa779140d8d367cd7d6d58aadc15bd39]
+link adminConsole to comm--><g id="link_adminConsole_comm"><path d="M559.75,253.68 C559.75,276.74 559.75,307.46 559.75,328.27 " fill="none" id="adminConsole-comm" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[91c26e35f1a0fc8e53a4d8e16c002b08]
+link aiida to p1--><g id="link_aiida_p1"><path d="M644,578.68 C644,578.68 644,722.38 644,722.38 " fill="none" id="aiida-to-p1" style="stroke:#181818;stroke-width:1.0;"/><path d="M652.4572,729.3018 A9,9 0 0 0 635.5428 729.3018" fill="none" style="stroke:#181818;stroke-width:1.5;"/></g><!--MD5=[77dfd4ff75db097e3d391a1341660cd8]
+link adminConsole to admin--><g id="link_adminConsole_admin"><path d="M608.68,222.5 C648.72,222.5 703.78,222.5 734.94,222.5 " fill="none" id="adminConsole-admin" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d2f4f838a6ae4f20eb53f8209a23a1d5]
+link consumer to aiida--><g id="link_consumer_aiida"><path d="M688,115.81 C688,210.96 688,455.88 688,532.34 " fill="none" id="consumer-aiida" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4db3d4a1dd68105f1888b13142642d29]
+link consumer to ui--><g id="link_consumer_ui"><path d="M663.86,105.5 C573.66,105.5 337.02,105.5 213.53,105.5 " fill="none" id="consumer-ui" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7d8dbe7152c15d3c8cf3ab72388fd9a2]
+link comm to dataPortal--><g id="link_comm_dataPortal"><path d="M370,374.5 C370,374.5 370,536.08 370,536.08 " fill="none" id="comm-to-dataPortal" style="stroke:#181818;stroke-width:1.0;"/><path d="M378.4572,543.0018 A9,9 0 0 0 361.5428 543.0018" fill="none" style="stroke:#181818;stroke-width:1.5;"/></g><!--MD5=[389349c654e7b3d024ad2c78731b87d2]
+link comm to adminPortal--><g id="link_comm_adminPortal"><path d="M270,374.5 C270,374.5 270,536.08 270,536.08 " fill="none" id="comm-to-adminPortal" style="stroke:#181818;stroke-width:1.0;"/><path d="M278.4572,543.0018 A9,9 0 0 0 261.5428 543.0018" fill="none" style="stroke:#181818;stroke-width:1.5;"/></g><!--MD5=[e5ff8ebb2c70ff6ee0b66b10841ef388]
+link comm to aiida--><g id="link_comm_aiida"><path d="M592,374.5 C592,413.68 592,492.93 592,532.27 " fill="none" id="comm-aiida" style="stroke:#181818;stroke-width:1.0;"/><path d="M584.9289,460.3961 A10,10 0 0 0 599.0711 460.3961" fill="none" style="stroke:#181818;stroke-width:1.5;"/><ellipse cx="592" cy="453.325" fill="#FFFFFF" rx="6" ry="6" style="stroke:#181818;stroke-width:1.5;"/></g><rect fill="none" height="16.2969" id="_caption" style="stroke:none;stroke-width:1.0;" width="234" x="271" y="843.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="234" x="271" y="856.4951">Component Diagram: Level 2 view</text><!--MD5=[e5845f6bd7a8933a2e647ba5be68c79b]
+@startuml component-diagram-level-2
+'component diagram
+caption Component Diagram: Level 2 view
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam actor{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle{
+  BorderColor transparent
+  BackgroundColor transparent
+  FontColor transparent
+}
+
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" {    
+    component "Consent \nFacade" as consentFacade
+    component "Streaming\nInfrastructure" as broker
+    database "Database\n" as database
+    component "Admin \nConsole" as adminConsole
+    component "\t\t\t\t\tInteroperable Communication\t\t\t\t\t" as comm
+  }
+ 
+    component "User Interface \n(Website or App)" as ui
+    component "Services" as services
+  
+
+  ui -down(0- consentFacade
+  ui -[hidden]right- services
+  consentFacade -right- broker
+  consentFacade -down- comm
+  broker -right- database
+  broker -down- comm
+  database -right-adminConsole
+  broker -up0)- services
+  adminConsole -down- comm
+
+}
+node "In-house\nInfrastructure" {
+  component "\tAIIDA\t" as aiida
+  node "Smart Meter" as meter {
+      interface "Smart Meter\nInterface" as p1
+  }
+  aiida -down-( p1 
+}
+
+node "Regional Data-sharing\nInfrastructure" as energyProvider {
+  interface "Meter\nData\nPortal" as dataPortal
+  interface "Consent\nAdmin\nPortal" as adminPortal
+}
+
+actor "Consumer" as consumer
+actor "Eligible\nParty" as admin
+  admin -left- adminConsole
+
+consumer -down- aiida
+consumer - ui
+
+comm -down-( dataPortal
+comm -down-( adminPortal
+
+aiida -up(0- comm
+
+@enduml
+
+@startuml component-diagram-level-2
+caption Component Diagram: Level 2 view
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam actor{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle{
+  BorderColor transparent
+  BackgroundColor transparent
+  FontColor transparent
+}
+
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" {    
+    component "Consent \nFacade" as consentFacade
+    component "Streaming\nInfrastructure" as broker
+    database "Database\n" as database
+    component "Admin \nConsole" as adminConsole
+    component "\t\t\t\t\tInteroperable Communication\t\t\t\t\t" as comm
+  }
+ 
+    component "User Interface \n(Website or App)" as ui
+    component "Services" as services
+  
+
+  ui -down(0- consentFacade
+  ui -[hidden]right- services
+  consentFacade -right- broker
+  consentFacade -down- comm
+  broker -right- database
+  broker -down- comm
+  database -right-adminConsole
+  broker -up0)- services
+  adminConsole -down- comm
+
+}
+node "In-house\nInfrastructure" {
+  component "\tAIIDA\t" as aiida
+  node "Smart Meter" as meter {
+      interface "Smart Meter\nInterface" as p1
+  }
+  aiida -down-( p1 
+}
+
+node "Regional Data-sharing\nInfrastructure" as energyProvider {
+  interface "Meter\nData\nPortal" as dataPortal
+  interface "Consent\nAdmin\nPortal" as adminPortal
+}
+
+actor "Consumer" as consumer
+actor "Eligible\nParty" as admin
+  admin -left- adminConsole
+
+consumer -down- aiida
+consumer - ui
+
+comm -down-( dataPortal
+comm -down-( adminPortal
+
+aiida -up(0- comm
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,5 +1,5 @@
 ---
-title: P1 Interface
+title: Smart Meter Interface
 ---
 
 TBD

@@ -53,7 +53,7 @@ node "Eligible Party Infrastructure"  as epInfra{
 node "In-house\nInfrastructure" {
   component "\tAIIDA\t" as aiida
   node "Smart Meter" as meter {
-      interface "P1" as p1
+      interface "Smart Meter\nInterface" as p1
   }
   aiida -down-( p1 
 }

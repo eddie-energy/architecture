@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="843px" preserveAspectRatio="none" style="width:565px;height:843px;background:#FFFFFF;" version="1.1" viewBox="0 0 565 843" width="565px" zoomAndPan="magnify"><defs/><g><!--MD5=[c57d54656a6b708159567a005370dc18]
+cluster epInfra--><g id="cluster_epInfra"><polygon fill="none" points="106,16,116,6,462,6,462,348,452,358,106,358,106,16" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.0;" x1="452" x2="462" y1="16" y2="6"/><line style="stroke:#000000;stroke-width:1.0;" x1="106" x2="452" y1="16" y2="16"/><line style="stroke:#000000;stroke-width:1.0;" x1="452" x2="452" y1="16" y2="358"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="200" x="180" y="31.9951">«Eligible Party Infrastructure»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="125" x="220" y="48.292">Docker Runtime</text></g><!--MD5=[97a694c952d92dda9e76ee9cfb8adce9]
+cluster In-house Infrastructure--><g id="cluster_In-house Infrastructure"><polygon fill="none" points="288,429,298,419,548,419,548,791,538,801,288,801,288,429" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.0;" x1="538" x2="548" y1="429" y2="419"/><line style="stroke:#000000;stroke-width:1.0;" x1="288" x2="538" y1="429" y2="429"/><line style="stroke:#000000;stroke-width:1.0;" x1="538" x2="538" y1="429" y2="801"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="184" x="322" y="444.9951">In-house Infrastructure</text></g><!--MD5=[d9058215e5bb1eb3a1e05e68aef038ed]
+cluster house--><g id="cluster_house"><polygon fill="none" points="312,477,322,467,519,467,519,575,509,585,312,585,312,477" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.0;" x1="509" x2="519" y1="477" y2="467"/><line style="stroke:#000000;stroke-width:1.0;" x1="312" x2="509" y1="477" y2="477"/><line style="stroke:#000000;stroke-width:1.0;" x1="509" x2="509" y1="477" y2="585"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="131" x="346" y="492.9951">«In-house Device»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="125" x="349" y="509.292">Docker Runtime</text></g><!--MD5=[7dbb7dea99a93d406f05c066d12ba64a]
+cluster meter--><g id="cluster_meter"><polygon fill="none" points="321,625,331,615,499,615,499,767,489,777,321,777,321,625" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.0;" x1="489" x2="499" y1="625" y2="615"/><line style="stroke:#000000;stroke-width:1.0;" x1="321" x2="489" y1="625" y2="625"/><line style="stroke:#000000;stroke-width:1.0;" x1="489" x2="489" y1="625" y2="777"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="102" x="355" y="640.9951">«Smart Meter»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="5" x="403.5" y="657.292"> </text></g><!--MD5=[518e645c172fff526c6656066ad6216c]
+cluster energyProvider--><g id="cluster_energyProvider"><polygon fill="none" points="16,471,26,461,264,461,264,581,254,591,16,591,16,471" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.0;" x1="254" x2="264" y1="471" y2="461"/><line style="stroke:#000000;stroke-width:1.0;" x1="16" x2="254" y1="471" y2="471"/><line style="stroke:#000000;stroke-width:1.0;" x1="254" x2="254" y1="471" y2="591"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="172" x="50" y="486.9951">Regional Data-sharing</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="110" x="81" y="503.292">Infrastructure</text></g><!--MD5=[7683c8bffdf7a0827bc3d05a19063006]
+entity eddie--><g id="elem_eddie"><rect fill="none" height="46.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="163" x="175.5" y="296"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="318.5" y="301"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="316.5" y="303"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="316.5" y="307"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="190.5" y="328.9951">EDDIE Framework</text></g><!--MD5=[38bfa9dc6018363cafe15f923a4b8db9]
+entity service--><g id="elem_service"><rect fill="none" height="55.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="115" x="199.5" y="62"/><polygon fill="none" points="297.5,67,297.5,81,309.5,81,309.5,73,303.5,67,297.5,67" style="stroke:#000000;stroke-width:0.5;"/><line style="stroke:#000000;stroke-width:0.5;" x1="303.5" x2="303.5" y1="67" y2="73"/><line style="stroke:#000000;stroke-width:0.5;" x1="309.5" x2="303.5" y1="73" y2="73"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="85" x="209.5" y="87.9951">«Container»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="227" y="104.292">Service</text></g><!--MD5=[cb17a09720242047282c953a3a24c60b]
+entity eddie1--><g id="elem_eddie1"><ellipse cx="257" cy="207" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="270.5" y="236.9951">Kafka</text></g><!--MD5=[7fcc3cdd2d320255615008f676abb407]
+entity eddie2--><g id="elem_eddie2"><ellipse cx="383" cy="319" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="396.5" y="348.9951">Kafka</text></g><!--MD5=[0cf652f43e3bb8df3f72494916dfd857]
+entity aiida--><g id="elem_aiida"><rect fill="none" height="46.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="136" x="328" y="523"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="444" y="528"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="442" y="530"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="442" y="534"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35" x="375" y="555.9951">AIIDA</text></g><!--MD5=[c3dd7293d4e74cc67bec6d68663a773e]
+entity p1--><g id="elem_p1"><ellipse cx="396" cy="716" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="354" y="745.9951">Smart Meter</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="354" y="762.292">Interface</text></g><!--MD5=[bbeacf37dd2bdb18fd9091b51ca92201]
+entity energy1--><g id="elem_energy1"><ellipse cx="221" cy="546" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="202.5" y="575.9951">HTTP</text></g><!--MD5=[ead7caef37f45f83a51907e20eaef25b]
+link eddie1 to eddie--><g id="link_eddie1_eddie"><path d="M257,216.17 C257,233.41 257,271.14 257,295.79 " fill="none" id="eddie1-eddie" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9dd02487734157df75d0d1c50f97be54]
+link service to eddie1--><g id="link_service_eddie1"><path d="M257,118.02 C257,118.02 257,187.97 257,187.97 " fill="none" id="service-to-eddie1" style="stroke:#181818;stroke-width:1.0;"/><path d="M265.4572,194.8918 A9,9 0 0 0 248.5428 194.8918" fill="none" style="stroke:#181818;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="111" x="145" y="134.0569">Pull historical and</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="91" x="155" y="149.1897">real-time data</text></g><!--MD5=[c047848d9a03778a0c96fb66985d790b]
+link eddie to eddie2--><g id="link_eddie_eddie2"><path d="M338.58,319 C352.77,319 365.58,319 373.76,319 " fill="none" id="eddie-eddie2" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[91c26e35f1a0fc8e53a4d8e16c002b08]
+link aiida to p1--><g id="link_aiida_p1"><path d="M396,569.28 C396,569.28 396,696.82 396,696.82 " fill="none" id="aiida-to-p1" style="stroke:#181818;stroke-width:1.0;"/><path d="M404.4572,703.7418 A9,9 0 0 0 387.5428 703.7418" fill="none" style="stroke:#181818;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117" x="278" y="614.1169">Pull real-time data</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="334.5" y="629.2497"> </text></g><!--MD5=[23b6d946145fc2128be79f67a80ef185]
+link eddie to energy1--><g id="link_eddie_energy1"><path d="M221,342.02 C221,342.02 221,526.65 221,526.65 " fill="none" id="eddie-to-energy1" style="stroke:#181818;stroke-width:1.0;"/><path d="M229.4572,533.5718 A9,9 0 0 0 212.5428 533.5718" fill="none" style="stroke:#181818;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="104" y="430.3969">Pull historical data</text></g><!--MD5=[be6f3f3063e9e109acf08124b6db374a]
+reverse link eddie2 to aiida--><g id="link_eddie2_aiida"><path d="M383,338.18 C383,338.18 383,522.95 383,522.95 " fill="none" id="eddie2-backto-aiida" style="stroke:#181818;stroke-width:1.0;"/><path d="M374.5428,331.2582 A9,9 0 0 0 391.4572 331.2582" fill="none" style="stroke:#181818;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="126" x="256" y="396.6369">Push real-time data</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="317" y="411.7697"> </text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="317" y="426.9025"> </text></g><rect fill="none" height="16.2969" id="_caption" style="stroke:none;stroke-width:1.0;" width="353" x="99" y="818"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="353" x="99" y="830.9951">Deployment Diagram: High-level view of the system</text><!--MD5=[954a4b0cb443af10a4ee64efe85ff223]
+@startuml deployment-diagram
+'deployment diagram
+caption Deployment Diagram: High-level view of the system
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam artifact{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam artifact{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam node{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle {
+  borderColor Transparent
+  backgroundColor Transparent
+  fontColor Transparent
+  stereotypeFontColor Transparent
+}
+
+node "\t\tDocker Runtime\t\t" <<Eligible Party Infrastructure>> as epInfra{
+  component "EDDIE Framework" as eddie
+  artifact "Service" <<Container>> as service
+  interface "\t\tKafka" as eddie1
+  interface "\t\tKafka" as eddie2
+
+  eddie -up- eddie1
+  service -down-( eddie1 :Pull historical and\nreal-time data
+  eddie -right- eddie2
+}
+node "In-house Infrastructure"  {
+node "Docker Runtime" <<In-house Device>> as house{
+  component "\tAIIDA\t" as aiida
+}
+node " " <<Smart Meter>> as meter{
+  interface "Smart Meter\nInterface" as p1
+}
+}
+
+node "Regional Data-sharing\nInfrastructure"  as energyProvider {
+  interface "HTTP" as energy1
+}
+
+' actor "Consumer" as consumer
+' actor "Eligible\nParty" as ep
+
+aiida - -( p1 :Pull real-time data\n
+
+eddie -down- -( energy1 :Pull historical data
+aiida -up- -( eddie2 :Push real-time data\n\n
+
+' consumer -down- aiida
+' ep -down- eddie
+
+@enduml
+
+@startuml deployment-diagram
+caption Deployment Diagram: High-level view of the system
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam artifact{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam artifact{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam node{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle {
+  borderColor Transparent
+  backgroundColor Transparent
+  fontColor Transparent
+  stereotypeFontColor Transparent
+}
+
+node "\t\tDocker Runtime\t\t" <<Eligible Party Infrastructure>> as epInfra{
+  component "EDDIE Framework" as eddie
+  artifact "Service" <<Container>> as service
+  interface "\t\tKafka" as eddie1
+  interface "\t\tKafka" as eddie2
+
+  eddie -up- eddie1
+  service -down-( eddie1 :Pull historical and\nreal-time data
+  eddie -right- eddie2
+}
+node "In-house Infrastructure"  {
+node "Docker Runtime" <<In-house Device>> as house{
+  component "\tAIIDA\t" as aiida
+}
+node " " <<Smart Meter>> as meter{
+  interface "Smart Meter\nInterface" as p1
+}
+}
+
+node "Regional Data-sharing\nInfrastructure"  as energyProvider {
+  interface "HTTP" as energy1
+}
+
+
+aiida - -( p1 :Pull real-time data\n
+
+eddie -down- -( energy1 :Pull historical data
+aiida -up- -( eddie2 :Push real-time data\n\n
+
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

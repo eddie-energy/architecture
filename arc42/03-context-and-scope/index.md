@@ -55,8 +55,8 @@ Notably, **one eligible party deploys one instance of the EDDIE Framework to com
 E.g. UML deployment diagram describing channels to neighboring systems, together with a mapping table showing the relationships between channels and input/output. -->
 
 From a technical perspective, the system includes four types of nodes which are:
-1. Smart Meter: A device installed in a house by the utility provider, which measures data about the energy consumption of the house, and exposes this data via a P1 port.
-1. In-house Device: A device such as a Raspberry Pi computer that connects to the smart meter via a P1 port, and implements the Docker Runtime for executing applications.
+1. Smart Meter: A device installed in a house by the utility provider, which measures data about the energy consumption of the house, and exposes this data, e.g., via a P1 port.
+1. In-house Device: A device such as a Raspberry Pi computer that connects to the smart meter, and implements the Docker Runtime for executing applications.
 1. Eligible Party Infrastructure: Either on-premise or cloud-based computing infrastructure that implements the Docker Runtime for executing applications.
 1. Regional Data-sharing Infrastructure: This infrastructure provides an interface for various processes including exposing historical energy consumption data. Interestingly, this infrastructure may be provided by a utility provider or a regional Metered Data Administrator. 
 
@@ -64,14 +64,14 @@ The figure below shows the associations between artifacts and interfaces as well
 
 <!-- ![deployment diagram](/03-context-and-scope/figures/deployment-diagram.png) -->
 <div align="center">
-<img src="./figures/deployment-diagram.png" width="650">
+<img src="./figures/deployment-diagram.svg">
 </div>
 
 The following table shows a description of the artifacts.
 
 | Artifact | Description |
 |-|-|
-| AIIDA | Implements the functionality to acquire real-time data from the smart meter via P1, and send this data to the Framework via a Kafka interface. |
+| AIIDA | Implements the functionality to acquire real-time data from the smart meter, and send this data to the Framework via a Kafka interface. |
 | EDDIE Framework| Implements functionality to receive real-time data from one or more AIIDA instances via a Kafka interface. Also, to acquire historical data from one or more Regional Data-sharing Infrastructures via the provided API, e.g., via HTTP. |
 | Service | Implement functionality to acquire real-time and historical data via a Kafka interface, and to process this data using data minining and machine learning algorithms. The implementation of services is out of scope of this document.
 
@@ -79,14 +79,14 @@ The table below shows a summary of the interfaces.
 
 | Provided by | Consumed by | Protocol |
 |-|-|-|
-| Smart meter| AIIDA | P1 |
+| Smart meter| AIIDA | P1 (or other) |
 | EDDIE Framework | AIIDA | Kafka |
 | EDDIE Framework | Services | Kafka |
 | Regional Data-sharing Infrastructure | EDDIE Framework | HTTP (or other) |
 
 ## Prerequisites
 
-Since the EDDIE framework interacts with various external components and infrastructures of different countries, certain prerequisites and dependencies arise that are outlined in a seperate section: 
+Since the EDDIE framework interacts with various external components and infrastructures of different countries, certain prerequisites and dependencies arise that are outlined in a separate section: 
 
 
 
