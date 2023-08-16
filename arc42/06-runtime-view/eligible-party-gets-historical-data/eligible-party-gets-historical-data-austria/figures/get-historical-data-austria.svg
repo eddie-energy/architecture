@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="680px" preserveAspectRatio="none" style="width:699px;height:680px;background:#FFFFFF;" version="1.1" viewBox="0 0 699 680" width="699px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="16.2969" id="_caption" style="stroke:none;stroke-width:1.0;" width="668" x="14.5" y="655.3516"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="668" x="14.5" y="668.3467">Sequence Diagram: The consumer gives consent to an eligible party for access to historical data.</text><rect height="647.3516" style="stroke:#181818;stroke-width:0.5;fill:none;" width="216.5" x="232" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="132" x="274.25" y="18.0669">EDDIE Framework</text><rect fill="#FFFFFF" height="117.6641" style="stroke:#181818;stroke-width:1.0;" width="10" x="186" y="141.5625"/><rect fill="#FFFFFF" height="191.0625" style="stroke:#181818;stroke-width:1.0;" width="10" x="186" y="303.4922"/><rect fill="#FFFFFF" height="44.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="403" y="170.6953"/><rect fill="#FFFFFF" height="117.6641" style="stroke:#181818;stroke-width:1.0;" width="10" x="403" y="332.625"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="44" x2="44" y1="81.2969" y2="659.3516"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="191" x2="191" y1="81.2969" y2="659.3516"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="297" x2="297" y1="81.2969" y2="659.3516"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="407.5" x2="407.5" y1="81.2969" y2="659.3516"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="534" x2="534" y1="81.2969" y2="659.3516"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="648" x2="648" y1="81.2969" y2="659.3516"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="5" y="77.9951">Consumer</text><ellipse cx="44" cy="13.5" fill="none" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M44,21.5 L44,48.5 M31,29.5 L57,29.5 M44,48.5 L31,63.5 M44,48.5 L57,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="none" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="70" x="156" y="33.7031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="18" x="182" y="53.6982">EP</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="163" y="69.9951">Website</text><rect fill="none" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122" x="236" y="33.7031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="251" y="53.6982">Interoperable</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="243" y="69.9951">Communication</text><rect fill="none" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="73" x="371.5" y="33.7031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="378.5" y="53.6982">Consent</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="383" y="69.9951">Facade</text><rect fill="none" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="100" x="484" y="33.7031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="504.5" y="53.6982">Consent</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="491" y="69.9951">Admin Portal</text><rect fill="none" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="90" x="603" y="33.7031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="610" y="53.6982">Meter Data</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="628.5" y="69.9951">Portal</text><rect fill="#FFFFFF" height="117.6641" style="stroke:#181818;stroke-width:1.0;" width="10" x="186" y="141.5625"/><rect fill="#FFFFFF" height="191.0625" style="stroke:#181818;stroke-width:1.0;" width="10" x="186" y="303.4922"/><rect fill="#FFFFFF" height="44.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="403" y="170.6953"/><rect fill="#FFFFFF" height="117.6641" style="stroke:#181818;stroke-width:1.0;" width="10" x="403" y="332.625"/><polygon fill="#181818" points="179,108.4297,189,112.4297,179,116.4297" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="44" x2="185" y1="112.4297" y2="112.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="51" y="107.3638">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="40" x="64" y="107.3638">login()</text><polygon fill="#181818" points="174,137.5625,184,141.5625,174,145.5625" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="44" x2="180" y1="141.5625" y2="141.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="51" y="136.4966">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="110" x="64" y="136.4966">connectMyData()</text><polygon fill="#181818" points="391,166.6953,401,170.6953,391,174.6953" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="196" x2="397" y1="170.6953" y2="170.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="203" y="165.6294">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="128" x="216" y="165.6294">getConsentPortals()</text><line style="stroke:#181818;stroke-width:1.0;" x1="197" x2="207" y1="214.9609" y2="210.9609"/><line style="stroke:#181818;stroke-width:1.0;" x1="197" x2="207" y1="214.9609" y2="218.9609"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="196" x2="407" y1="214.9609" y2="214.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="213" y="202.3286">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="63" x="226" y="194.7622">countries,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="84" x="226" y="209.895">adminPortals</text><line style="stroke:#181818;stroke-width:1.0;" x1="45" x2="55" y1="259.2266" y2="255.2266"/><line style="stroke:#181818;stroke-width:1.0;" x1="45" x2="55" y1="259.2266" y2="263.2266"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="44" x2="190" y1="259.2266" y2="259.2266"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="61" y="246.5942">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="100" x="74" y="239.0278">show(countries,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="89" x="74" y="254.1606">adminPortals)</text><polygon fill="#181818" points="174,299.4922,184,303.4922,174,307.4922" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="44" x2="180" y1="303.4922" y2="303.4922"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="51" y="290.8599">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="83" x="64" y="283.2935">select(admin</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="42" x="64" y="298.4263">Portal)</text><polygon fill="#181818" points="391,328.625,401,332.625,391,336.625" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="196" x2="397" y1="332.625" y2="332.625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="203" y="327.5591">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="134" x="216" y="327.5591">forward(adminPortal)</text><polygon fill="#181818" points="308,388.0234,298,392.0234,308,396.0234" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="302" x2="402" y1="392.0234" y2="392.0234"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="314" y="371.8247">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="327" y="356.6919">get</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="58" x="327" y="371.8247">Consent(</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="69" x="327" y="386.9575">consumer)</text><polygon fill="#181818" points="522,417.1563,532,421.1563,522,425.1563" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="297" x2="528" y1="421.1563" y2="421.1563"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="304" y="416.0903">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="200" x="317" y="416.0903">requestConsent(consumer, EP)</text><line style="stroke:#181818;stroke-width:1.0;" x1="197" x2="207" y1="450.2891" y2="446.2891"/><line style="stroke:#181818;stroke-width:1.0;" x1="197" x2="207" y1="450.2891" y2="454.2891"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="196" x2="407" y1="450.2891" y2="450.2891"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="213" y="445.2231">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="18" x="235" y="445.2231">OK</text><line style="stroke:#181818;stroke-width:1.0;" x1="45" x2="55" y1="494.5547" y2="490.5547"/><line style="stroke:#181818;stroke-width:1.0;" x1="45" x2="55" y1="494.5547" y2="498.5547"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="44" x2="190" y1="494.5547" y2="494.5547"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="61" y="481.9224">11</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="69" x="83" y="474.356">redirectTo(</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="82" x="83" y="489.4888">adminPortal)</text><polygon fill="#181818" points="522,519.6875,532,523.6875,522,527.6875" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="44" x2="528" y1="523.6875" y2="523.6875"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="51" y="518.6216">12</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="40" x="73" y="518.6216">login()</text><polygon fill="#181818" points="522,548.8203,532,552.8203,522,556.8203" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="44" x2="528" y1="552.8203" y2="552.8203"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="51" y="547.7544">13</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="158" x="73" y="547.7544">acceptConsentRequest()</text><polygon fill="#181818" points="636,608.2188,646,612.2188,636,616.2188" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="534" x2="642" y1="612.2188" y2="612.2188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="541" y="592.02">14</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="40" x="563" y="576.8872">notify(</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="563" y="592.02">consumer,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="563" y="607.1528">EP)</text><polygon fill="#181818" points="308,637.3516,298,641.3516,308,645.3516" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="302" x2="647" y1="641.3516" y2="641.3516"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="314" y="636.2856">15</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="129" x="336" y="636.2856">send(historicalData)</text><!--MD5=[e7af76efca8454044d311fa5a8529fd6]
+@startuml get-historical-data-austria
+'sequence diagram
+caption Sequence Diagram: The consumer gives consent to an eligible party for access to historical data.
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+
+actor "Consumer" as user
+participant "EP\nWebsite" as website
+box "EDDIE Framework" #transparent
+  participant "Consent\nFacade" as facade
+  participant "Interoperable\nCommunication" as comm
+  participant "Consent\nFacade" as facade
+end box
+participant "Consent\nAdmin Portal" as adminPortal
+participant "Meter Data\nPortal" as dataPortal
+
+user -> website : login()
+user -> website : connectMyData()
+activate website
+  website -> facade : getConsentPortals()
+    activate facade
+    facade - ->> website : countries,\nadminPortals
+  deactivate facade
+  website - ->> user : show(countries,\nadminPortals)
+deactivate website
+
+user -> website : select(admin\nPortal)
+activate website
+  website -> facade : forward(adminPortal)
+  activate facade
+    facade -> comm : get\nConsent(\nconsumer)
+    comm -> adminPortal : requestConsent(consumer, EP)
+    facade - ->> website : OK
+  deactivate facade
+  website - ->> user : redirectTo(\nadminPortal)
+deactivate website
+
+user -> adminPortal : login()
+user -> adminPortal : acceptConsentRequest()
+adminPortal -> dataPortal : notify(\nconsumer,\nEP)
+dataPortal -> comm : send(historicalData)
+
+@enduml
+
+@startuml get-historical-data-austria
+caption Sequence Diagram: The consumer gives consent to an eligible party for access to historical data.
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+
+actor "Consumer" as user
+participant "EP\nWebsite" as website
+box "EDDIE Framework" #transparent
+  participant "Consent\nFacade" as facade
+  participant "Interoperable\nCommunication" as comm
+  participant "Consent\nFacade" as facade
+end box
+participant "Consent\nAdmin Portal" as adminPortal
+participant "Meter Data\nPortal" as dataPortal
+
+user -> website : login()
+user -> website : connectMyData()
+activate website
+  website -> facade : getConsentPortals()
+    activate facade
+    facade - ->> website : countries,\nadminPortals
+  deactivate facade
+  website - ->> user : show(countries,\nadminPortals)
+deactivate website
+
+user -> website : select(admin\nPortal)
+activate website
+  website -> facade : forward(adminPortal)
+  activate facade
+    facade -> comm : get\nConsent(\nconsumer)
+    comm -> adminPortal : requestConsent(consumer, EP)
+    facade - ->> website : OK
+  deactivate facade
+  website - ->> user : redirectTo(\nadminPortal)
+deactivate website
+
+user -> adminPortal : login()
+user -> adminPortal : acceptConsentRequest()
+adminPortal -> dataPortal : notify(\nconsumer,\nEP)
+dataPortal -> comm : send(historicalData)
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

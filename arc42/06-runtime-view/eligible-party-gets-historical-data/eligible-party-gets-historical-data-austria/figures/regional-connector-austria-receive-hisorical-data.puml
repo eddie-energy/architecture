@@ -1,6 +1,6 @@
-@startuml regional-connector-austria-seq
+@startuml regional-connector-austria-receive-hisorical-data
 'sequence diagram
-caption Sequence Diagram: The Regional Connector of Austria
+caption Sequence Diagram: The Regional Connector of Austria Receiving Historical Data
 
 skinparam style strictuml
 skinparam sequence {

@@ -1,4 +1,4 @@
-@startuml consent-for-historical-data-seq
+@startuml get-historical-data-austria
 'sequence diagram
 caption Sequence Diagram: The consumer gives consent to an eligible party for access to historical data.
 

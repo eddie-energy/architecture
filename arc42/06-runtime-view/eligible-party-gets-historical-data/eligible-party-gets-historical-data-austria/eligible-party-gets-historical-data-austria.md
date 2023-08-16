@@ -10,7 +10,7 @@ Add a description of the notable aspects of the interactions between the buildin
 The workflow of a consumer that provides their consent to an eligible party for access to historical data from a Meter Data Portal is shown below:
 
 <div align="center"> 
-<img src="./figures/consent-for-historical-data-seq.png" width="700">
+<img src="./figures/get-historical-data-austria.svg">
 </div>
 
 This workflow includes the following steps:
@@ -53,7 +53,7 @@ This workflow includes the following steps:
 A more detailed view showing the workflow of the Interoperable Communication is depicted below:
 
 <div align="center"> 
-<img src="./figures/regional-connector-austria-seq.svg">
+<img src="./figures/regional-connector-austria-receive-hisorical-data.svg">
 </div>
 
 This workflow includes the following steps:
