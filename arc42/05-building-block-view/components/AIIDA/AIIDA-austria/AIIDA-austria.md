@@ -14,7 +14,7 @@ As shown in the figure, an additional device named the Adaptor is used. The adap
 <img src="./figures/adaptor-austria.png" width="500">
 </div>
 
-The energy consumption data that is sent to AIIDA formatted using JSON as shown below:
+The energy consumption data that is sent to AIIDA is formatted using JSON as shown below:
 
 <div align="center">
 <img src="./figures/consumption-data.png">

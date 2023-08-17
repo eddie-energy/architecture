@@ -1,0 +1,51 @@
+@startuml regional-connector-austria
+'component diagram
+caption Component Diagram: The internal structure of the Regional Connector - Austria
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" as eddie {
+    component "Consent Facade" as consentFacade
+    component "Streaming\nInfrastructure" as database
+    component "Interoperable Communication" as comm {
+      component "Regional Connector - Austria" as regConAu {
+        component "Ponton\nAdapter" as pontonAdapter
+        component "\tPonton XP\n\tMessanger\t" as pontonXP
+        component "Translation\nService" as translationService
+      }
+      component "Message\nProducer" as messageProducer
+    }
+  }
+
+  consentFacade -down- translationService
+  translationService -right-> pontonAdapter
+  pontonAdapter -right-> messageProducer
+  messageProducer -down-> database
+  pontonXP -up- pontonAdapter
+}
+node "Regional Data-sharing\nInfrastructure" as energyProvider {
+  interface "Meter\nData\nPortal" as dataPortal
+  interface "Consent\nAdmin\nPortal" as adminPortal
+}
+
+pontonXP --down-( adminPortal
+pontonXP -down-( dataPortal
+
+@enduml
