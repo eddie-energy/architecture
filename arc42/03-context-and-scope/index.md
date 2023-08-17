@@ -90,7 +90,7 @@ Since the EDDIE framework interacts with various external components and infrast
 
 
 
-- [Prerequisites for external components](./prerequisites/prerequisites.md)
+> [Prerequisites](./prerequisites/prerequisites.md)
 
 
 
