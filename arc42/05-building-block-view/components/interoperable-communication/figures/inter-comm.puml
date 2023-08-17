@@ -1,0 +1,63 @@
+@startuml inter-comm
+'component diagram
+caption Component Diagram: Internal structure of the Interoperable Communication component
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle{
+  BorderColor transparent
+  BackgroundColor transparent
+  FontColor transparent
+}
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" as eddie {
+  component "Consent Facade" as consentFacade
+  component "Interoperable Communication" as comm {
+    collections "\tRegional Connector\t  \n\tCountry-specific" as regCon
+    component "Regional Connector\nAIIDA" as regConAIIDA
+    component "Message\nProducer" as messageProducer
+    
+    regCon -up-> messageProducer
+    regConAIIDA -up-> messageProducer
+  }
+  component "Streaming\nInfrastructure" as database
+  
+  consentFacade -down- comm
+  messageProducer -right-> database
+  }  
+}
+node "Regional Data-sharing\nInfrastructure" as energyProvider{
+  interface "Meter\nData\nPortal" as dataPortal
+  interface "Consent\nAdmin\nPortal" as adminPortal
+}
+
+node "In-house\nInfrastructure" {
+  component "AIIDA" as aiida
+}
+
+regCon -down-( dataPortal
+regCon -down-( adminPortal
+regConAIIDA -down- aiida
+
+' aiida -left- energyProvider
+
+
+
+
+@enduml
