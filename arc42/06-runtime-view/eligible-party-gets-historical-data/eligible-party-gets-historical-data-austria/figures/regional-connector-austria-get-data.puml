@@ -1,4 +1,4 @@
-@startuml regional-connector-austria-receive-hisorical-data
+@startuml regional-connector-austria-get-data
 'sequence diagram
 caption Sequence Diagram: The Regional Connector of Austria Receiving Historical Data
 

@@ -2,7 +2,7 @@
 title: AIIDA
 ---
 
-A high-level view of AIIDA is shown below. Notably, AIIDA connects to the EDDIE Framework through a specialized Regional Connector.
+A high-level view of AIIDA is shown below. Notably, AIIDA connects to the EDDIE Framework through a specialized Regional Connector (described [here](../interoperable-communication/regional-connectors/aiida/aiida.md)).
 
 <div align="center">
 <img src="./figures/aiida-high-level.svg">

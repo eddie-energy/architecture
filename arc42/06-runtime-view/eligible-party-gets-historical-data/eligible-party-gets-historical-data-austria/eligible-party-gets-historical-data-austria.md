@@ -54,7 +54,7 @@ This workflow includes the following steps:
 A more detailed view showing the workflow of the Interoperable Communication is depicted below:
 
 <div align="center"> 
-<img src="./figures/regional-connector-austria-receive-hisorical-data.svg">
+<img src="./figures/regional-connector-austria-get-data.svg">
 </div>
 
 This workflow includes the following steps:
