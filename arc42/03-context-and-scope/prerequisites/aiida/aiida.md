@@ -6,7 +6,7 @@ Each country may be using a different Smart Meter device. For this reason, AIIDA
 
 | Country | Prerequisites |
 |-|-|
-| Austria | For Austria, we rely on an [Adaptor device](https://oesterreichsenergie.at/fileadmin/user_upload/Oesterreichs_Energie/Publikationsdatenbank/Leitfaden/2022/Datenblatt_Smart_Meter_Adapter_V7_20220808.pdf) that attaches to the Smart Meter and send the real-time data to AIIDA via WiFi.  |
+| Austria | For Austria, we rely on an [Adaptor device](https://oesterreichsenergie.at/fileadmin/user_upload/Oesterreichs_Energie/Publikationsdatenbank/Leitfaden/2022/Datenblatt_Smart_Meter_Adapter_V7_20220808.pdf) that attaches to the Smart Meter and sends the real-time consumption data to AIIDA via WiFi. |
 | France | |
 | Spain | |
 
