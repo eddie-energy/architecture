@@ -1,5 +1,5 @@
 ---
-title: Austria Process
+title: Austria
 ---
 
 <!-- Add runtime diagram or textual description of the scenario/

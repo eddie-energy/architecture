@@ -3,10 +3,10 @@ title: Austria
 ---
 ### Regional Connector - Austria
 
-The internal structure of the Regional Connector - Austria is shown below. An implementation model for this component is provided [here](./data-models/data-model-regional-connector-austria/data-model-regional-connector-austria.md).
+The internal structure of the Regional Connector - Austria is shown below.
 
 <div align="center">
-<img src="./figures/component-diagram-level-4-reg-con-AT.png" width="750">
+<img src="./figures/regional-connector-austria.svg">
 </div>
 
 The included components are the following.
@@ -18,7 +18,7 @@ The included components are the following.
 | Ponton Adapter | Translates infromation to/from the formats used by Ponton XP Messenger. |
 
 
-The model of this component using a class diagram is shown below.
+An implementation model for this component is shown below.
 
 <div align="center">
 <img src="./figures/class-diagram-regional-connector-austria.png">

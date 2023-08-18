@@ -1,6 +1,6 @@
-@startuml component-diagram-level-3-consent-facade
+@startuml consent-facade
 'component diagram
-caption Component Diagram: Level 3 view with focus on the Consent Facade
+caption Component Diagram: Internal structure of the Consent Facade
 
 skinparam linetype ortho
 skinparam interface {
