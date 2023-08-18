@@ -26,24 +26,20 @@ The quality requirements of the system are outlined in the quality tree below. T
 
 For each attribute, a table of requirements that need further explanation is shown below. These tables provide links to the following sections which describe scenarios showing the behavior of the system when a stimulus that affects a requirement arrives.
 
-| Performance Requirement | Section |
+| Attribute| Section |
 |-|-|
-| Data Loss|  |
-| Latency of real-time data | [Link](./performance/latency-real-time-data/latency-real-time-data.md)|
-
-| Availability Requirement | Section |
-|-|-|
-| Boot Time |  |
+| Performance | [Link](./performance/performance.md) |
+| Availability | [Link](./availability/availability.md) |
+| Compliance | [Link](./compliance/compliance.md) |
+| Security | [Link](./security/security.md) |
 
 
-| Compliance Requirement | Section |
-|-|-|
-| Smart Grids Task Force | [Link](./compliance/implementing-act/implementing-act.md) |
-| Regional Coverage | [Link](../04-solution-strategy/three-phases/three-phases.md) |
 
-| Security Requirement | Section |
-|-|-|
-| Unauthorized Access |  |
+
+
+
+
+
 
 
 

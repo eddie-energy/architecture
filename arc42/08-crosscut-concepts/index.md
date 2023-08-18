@@ -19,13 +19,11 @@ There are various important concepts that are relevant to many parts of the syst
 <img src="./figures/crosscutting-concepts.png" width=650>
 </div>
 
-The motivation for using some of these concepts is provided the corresponing subsections: 
-* [Domain Model](./domain-models/index.md)
+Further information about each concept is provided the corresponing subsections: 
 
-
-
-| Architectural Pattern | Section |
+| Concept | Section |
 | - | - |
-| Publish/Subscribe | [Link](./architectural-patterns/publish-subscribe/publish-subscribe.md) | 
-| Micro frontends | [Link](./architectural-patterns/micro-frontends/micro-frontends.md) | 
+| Domain Model | [Link](./domain-models/domain-models.md) | 
+|Architectural Pattern | [Link](./architectural-patterns/architectural-patterns.md) | 
+
 
