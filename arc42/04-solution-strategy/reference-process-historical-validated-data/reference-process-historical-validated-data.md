@@ -1,10 +1,5 @@
 ---
-title: Reference Process To Get Historical Validated Data
+title: Reference Process
 ---
 
-This is the process to get historical validated data.
-
-
-<div align="center">
-<img src="./figures/reference-process-historical-validated-data.png" width="800">
-</div>
+The reference process to get historical validated data according to the Smart Grids Task Force is discussed [here](../../10-quality-requirements/compliance/implementing-act/implementing-act.md).

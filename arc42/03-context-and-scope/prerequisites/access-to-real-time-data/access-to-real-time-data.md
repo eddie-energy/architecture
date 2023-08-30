@@ -8,7 +8,6 @@ To access real-time consumption data, the EDDIE Framework relies on AIIDA. AIIDA
 |-|-|
 | Austria | For Austria, AIIDA relies on an [Adaptor device](https://oesterreichsenergie.at/fileadmin/user_upload/Oesterreichs_Energie/Publikationsdatenbank/Leitfaden/2022/Datenblatt_Smart_Meter_Adapter_V7_20220808.pdf) that attaches to the Smart Meter and sends the real-time consumption data to AIIDA via WiFi. |
 | France | |
-| Spain | |
 
 
 

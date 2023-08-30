@@ -4,7 +4,11 @@ title: Inter. Communication
 
 #### Interoperable Communication
 
-The internal structure of the Interoperable Communication component is shown below. The Interoperable Communication is a collection of regional connectors that send data to the Message Producer. Each regional connector implements the functionality to access the APIs of the Regional Data-sharing Infrastructure of a specific country, or AIIDA.
+The internal structure of the Interoperable Communication component is shown below. The Interoperable Communication is a collection of regional connectors that send data to the Message Producer. Each regional connector implements the functionality to access the APIs of the Regional Data-sharing Infrastructure of a specific country, or AIIDA. 
+
+> The data models of the Regional Data-sharing Infrastructures are provided [here](../../data-models/data-model-meter-data-portal/data-model-meter-data-portal.md), while the data model of AIIDA is presented [here](../../data-models/data-model-inter-comm-aiida-interface/data-model-inter-comm-aiida-interface.md)
+
+
 
 <div align="center">
 <img src="./figures/inter-comm.svg" width="700">

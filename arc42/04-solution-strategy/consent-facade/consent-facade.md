@@ -10,7 +10,7 @@ The Consent Facade is linked with various operations of the EDDIE Framework. For
 <img src="./figures/process-service.png" >
 </div>
 
-As long as a Service has been created, consumers have to be linked to this Service, so that the Service can process their data. The figure below shows the high-level process of a consumer that gives their consent to an eligible party for data access and processing by a Service. This process includes the following steps:
+When a Service is created, consumers can be linked to this Service, so that the Service can process their data. The figure below shows the high-level process of a consumer that gives their consent to an eligible party for data access and processing by a Service. This process includes the following steps:
 
 1. The consumer creates an account on the EP Website.
 2. The consumer clicks a button to share their data.

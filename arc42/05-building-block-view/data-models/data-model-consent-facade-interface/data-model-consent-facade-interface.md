@@ -19,6 +19,6 @@ The Consent Facade is responsible for gathering the necessary information from t
 |-|-|-|
 | Austria | EDA | Metering Point ID |
 | France | DATADIS | |
-| Spain | ENEDIS | Metering Point ID  |
+<!-- | Spain | ENEDIS | Metering Point ID  | -->
 
 
