@@ -2,16 +2,20 @@
 title: Austria
 ---
 
-For Austria, we use the existing EDA exchange format, which is non-CIM. 
-
-The EDA exchange format is then mapped to the CIM-compliant model which is shown below.
+In Austria, the Regional Data-sharing Infrastructure operated by EDA utilizes the following data format, which is non-CIM.
 
 <div align="center">
-<img src="../data-model-france/figures/VHD Assembly Extended.png">
+<img src="./figures/Austria model.png">
 </div> 
 
-The following diagram maps the internal CIM format with the external French regional connector. Note that only one attribute is unmapped.
+This format is then mapped to the CIM-compliant model used internally by the EDDIE Framework, which is shown below.
 
 <div align="center">
-<img src="./figures/Mapping AU.png">
+<img src="../figures/VHD Assembly Extended.png">
+</div> 
+
+The mapping between these two data models is shown in the figure below.
+
+<div align="center">
+<img src="./figures/Mapping Austria.png">
 </div>
