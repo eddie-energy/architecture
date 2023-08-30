@@ -19,16 +19,3 @@ The mapping between these two data models is shown in the figure below.
 <div align="center">
 <img src="./figures/Mapping CIM vs FR.png">
 </div>
-
-
-The ENEDIS exchange format is then mapped to the CIM-compliant model which is shown below.
-
-<div align="center">
-<img src="./figures/VHD Assembly Extended.png">
-</div> 
-
-The following diagram maps the internal CIM format with the external French regional connector.
-
-<div align="center">
-<img src="./figures/Mapping CIM vs FR.png" width="1060">
-</div>

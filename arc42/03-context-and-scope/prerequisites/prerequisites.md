@@ -2,7 +2,7 @@
 title: Prerequisites
 ---
 
-The EDDIE Framework aims at being compatible with external components such as the Regional Data-sharing Infrastructure of different countries. This may create prerequisites and dependencies with regard to achieving efficient interactions with such components. The prerequisites are:
+The EDDIE Framework aims at being compatible with external components such as the Regional Data-sharing Infrastructure of different countries. This may create prerequisites with regard to achieving efficient interactions with such components. The prerequisites are:
 
 | Prerequisite | Section |
 |-|-|

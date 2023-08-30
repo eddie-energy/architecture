@@ -2,7 +2,7 @@
 title: France
 ---
 
-## Eligible Party Registration to the Regional Data-sharing Infrastructure - France
+## Eligible Party Access to the Regional Data-sharing Infrastructure - France
 
 ### Create Account
 
