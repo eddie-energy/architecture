@@ -10,4 +10,4 @@ To access historical validated data, the EDDIE Framework relies on interactions 
 |-|-|
 | Austria | [Link](./eligible-party-registration-austria/eligible-party-registration-austria.md) |
 | France | [Link](./eligible-party-registration-france/eligible-party-registration-france.md) |
-| Spain | [Link](./eligible-party-registration-spain/eligible-party-registration-spain.md) |
+<!-- | Spain | [Link](./eligible-party-registration-spain/eligible-party-registration-spain.md) | -->

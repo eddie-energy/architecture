@@ -17,8 +17,12 @@ box "EDDIE Framework" #transparent
   participant "Interoperable\nCommunication" as comm
   participant "Consent\nFacade" as facade
 end box
+box "EDA" #transparent
 participant "Consent\nAdmin Portal" as adminPortal
+end box
+box "DSO" #transparent
 participant "Meter Data\nPortal" as dataPortal
+end box
 
 user -> website : login()
 user -> website : connectMyData()
@@ -36,14 +40,15 @@ activate website
   activate facade
     facade -> comm : get\nConsent(\nconsumer)
     comm -> adminPortal : requestConsent(consumer, EP)
+    adminPortal -> dataPortal : forward(\nconsentRequest)
     facade -->> website : OK
   deactivate facade
-  website -->> user : redirectTo(\nadminPortal)
+  website -->> user : redirectTo(\ndataPortal)
 deactivate website
 
-user -> adminPortal : login()
-user -> adminPortal : acceptConsentRequest()
-adminPortal -> dataPortal : notify(\nconsumer,\nEP)
-dataPortal -> comm : send(historicalData)
+user -> dataPortal : login()
+user -> dataPortal : acceptConsentRequest()
+dataPortal -> adminPortal : send(\nhistoricalData)
+adminPortal -> comm : send(historicalData)
 
 @enduml

@@ -22,7 +22,9 @@ participant "Consent\nFacade" as consentFacade
     end box 
   end box
 end box
-participant "Consent\nAdmin Portal" as adminPortal
+box "EDA" #transparent
+  participant "Consent\nAdmin Portal" as adminPortal
+end box
 
 consentFacade -> translationService : getConsent(\nconsumer)
 translationService -> pontonAdapter : send(\nconsentRequest)

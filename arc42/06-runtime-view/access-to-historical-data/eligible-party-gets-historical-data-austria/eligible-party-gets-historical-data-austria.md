@@ -23,12 +23,15 @@ This workflow includes the following steps:
 7. The selected Consent Admin Portal is sent to the Consent Facade.
 8. The Consent Facade asks the Interoperable Communication to set up a consent request in the selected Consent Admin Portal.
 9. The Interoperable Communication sends a consent request to the Consent Admin Portal. Steps 8 and 9 are also shown below in a separate sequence diagram.
-10. The website is notified that the consent request is made.
-11. The consumer is redirected to the Consent Admin Portal.
-12. The consumer logs in to the Consent Admin Portal website (using cross-national credentials or upon registration).
-13. The consumer accepts the consent request created in Step 9 (for access to their historical data). The Consent Admin Portal then forwards this acceptance to the Interoperable Communication component (via the communication established in Step 9) which makes this acceptance visible to the user through the EP Website.
-14. The Consent Admin Portal informs the Meter Data Portal to allow access to the data for the eligible party. Since the involved components of this step do not belong to EDDIE, this step is out of scope. However, EDDIE depends on the timely execution of this step.
-15. The Meter Data Portal sends the data to the Interoperable Communication. This step is also shown below in a separate sequence diagram that details the internal process of the Interoperable communication.
+10. The Consent Admin Portal forwards the consent request to the Meter Data Portal.
+11. The Consumer is notified that the consent request has been made via the EP Website.
+12. The consumer is redirected to the Meter Data Portal.
+13. The consumer logs in to the Meter Data Portal (after having registered).
+14. The consumer accepts the consent request created in Step 10 (for access to their historical data). The acceptance is forwarded Interoperable Communication component (via the communication established in Step 9) which makes this acceptance visible to the user through the EP Website.
+15. The Meter Data Portal forwards the acceptance to the Consent Admin Portal. 
+16. The Meter Data Portal sends the data to the Interoperable Communication. This step is also shown below in a separate sequence diagram that details the internal process of the Interoperable communication.
+
+The steps that include exclusively components that do not belong to EDDIE (e.g., Step 10, 15) are out of scope. However, EDDIE depends on the timely execution of these steps.
 
 Some of these steps that require additional explanations are discussed in the subsections below. A more detailed view of this workflow is also shown [here](./figures/get-historical-data-austria-detailed.png).
 
