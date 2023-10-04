@@ -2,7 +2,7 @@
 title: Access to Real-time Data
 ---
 
-To access real-time consumption data, the EDDIE Framework relies on AIIDA. AIIDA is deployed in-house and connects to the Smart Meter. Each country may be using a different Smart Meter device. For this reason, AIIDA might need to be configured differently for each country in order to adapt to each specific Smart Meter device and acquire the real-time data. The table below shows the specific prerequisites that apply to every supported country. More information on the connectivity of AIIDA is provided [here](./../../../05-building-block-view/components/AIIDA/AIIDA.md).
+To access real-time consumption data, the EDDIE Framework relies on AIIDA. AIIDA is deployed in-house and connects to the Smart Meter. Each Member State may be using a different Smart Meter device. For this reason, AIIDA might need to be configured differently for each country in order to adapt to each specific Smart Meter device and acquire the real-time data. The table below shows the specific prerequisites that apply to every supported country. More information on the connectivity of AIIDA is provided [here](./../../../05-building-block-view/components/AIIDA/AIIDA.md).
 
 | Country | Prerequisites |
 |-|-|
