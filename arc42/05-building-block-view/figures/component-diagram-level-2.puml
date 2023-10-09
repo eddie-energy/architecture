@@ -19,6 +19,10 @@ skinparam database{
   BorderColor black
   BackgroundColor transparent
 }
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
 skinparam rectangle{
   BorderColor transparent
   BackgroundColor transparent
@@ -28,15 +32,15 @@ skinparam rectangle{
 
 node "Eligible Party Infrastructure"  as epInfra{
   component "EDDIE Framework" {    
-    component "Consent \nFacade" as consentFacade
+    component "Permission \nFacade" as consentFacade
     component "Streaming\nInfrastructure" as broker
     database "Database\n" as database
     component "Admin \nConsole" as adminConsole
     component "\t\t\t\t\tInteroperable Communication\t\t\t\t\t" as comm
   }
  
-    component "User Interface \n(Website or App)" as ui
-    component "Services" as services
+    component "EP Website" as ui
+    collections "Service" as services
   
 
   ui -down(0- consentFacade
@@ -63,7 +67,7 @@ node "Regional Data-sharing\nInfrastructure" as energyProvider {
   interface "Consent\nAdmin\nPortal" as adminPortal
 }
 
-actor "Consumer" as consumer
+actor "Customer" as consumer
 actor "Eligible\nParty" as admin
   admin -left- adminConsole
 

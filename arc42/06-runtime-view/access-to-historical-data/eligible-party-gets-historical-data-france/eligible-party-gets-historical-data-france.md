@@ -20,12 +20,12 @@ The workflow consists of the following steps. Please note that Steps 1-8 are ide
 
 1.	The consumer visits the website of an eligible party and logs in to their account (upon registration if necessary).
 2.	The consumer clicks the button "Connect my data".
-3.	A request is sent from the website to the Consent Facade to create a list of the countries (and respective consent admin portals) that the eligible party operates in.
-4.	The list of countries and Consent Admin Portals is sent back to the website. To find the countries and respective consent admin portals, the consent facade searches the framework's database. The available countries are stored in the database during the eligible party registration.
+3.	A request is sent from the website to the Permission Facade to create a list of the countries (and respective consent admin portals) that the eligible party operates in.
+4.	The list of countries and Consent Admin Portals is sent back to the website. To find the countries and respective consent admin portals, the Permission Facade searches the framework's database. The available countries are stored in the database during the eligible party registration.
 5.	The list is shown to the consumer.
 6.	The consumer selects their country and Consent Admin Portal.
-7.	The selected Consent Admin Portal is sent to the Consent Facade.
-8.	The Consent Facade asks the Interoperable Communication to set up a consent request in the selected Consent Admin Portal. <!-- How is the button created?Normally it would be created in the EP Application --> 
+7.	The selected Consent Admin Portal is sent to the Permission Facade.
+8.	The Permission Facade asks the Interoperable Communication to set up a consent request in the selected Consent Admin Portal. <!-- How is the button created?Normally it would be created in the EP Application --> 
 9.	The Consent Button, that is unique to the EP Application in ENEDIS is forwarded to the EP Website.
 10.	The button is shown to the consumer on the EP Website.
 11.	 When clicking on the button, the consumer is redirected to the Log-In Page of the ENEDIS Website.

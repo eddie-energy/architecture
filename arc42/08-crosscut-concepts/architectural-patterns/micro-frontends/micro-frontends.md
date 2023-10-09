@@ -12,13 +12,13 @@ Micro frontends is an architectural pattern for building websites or application
 
 <!-- Where it is used, i.e., in what parts of EDDIE -->
 
-This architectural pattern is used for the development of the Consent Facade which provides the necessary frontend elements to the EP Website based on the country of the consumer.
+This architectural pattern is used for the development of the Permission Facade which provides the necessary frontend elements to the EP Website based on the country of the consumer.
 
 ## Motivation
 
 <!-- Why it is used, what are alternatives, why is this preferred compared to alternatives -->
 
-The Consent Facade needs to be able to connect to the Regional Data-sharing Infrastructure of different countries, with each country potentially implementing different procedures and mechanisms. For this reason, the micro frontends pattern is used for offering to the consumer one frontend application which uses a different micro frontend for every country. This allows for a homogeneous user experience for all the consumers, while also managing to cope with the potentially diverse information required from the consumers based on their origin country.
+The Permission Facade needs to be able to connect to the Regional Data-sharing Infrastructure of different countries, with each country potentially implementing different procedures and mechanisms. For this reason, the micro frontends pattern is used for offering to the consumer one frontend application which uses a different micro frontend for every country. This allows for a homogeneous user experience for all the consumers, while also managing to cope with the potentially diverse information required from the consumers based on their origin country.
 
 Alternatives to the micro frontends are:
 

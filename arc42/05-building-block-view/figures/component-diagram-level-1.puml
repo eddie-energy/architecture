@@ -24,17 +24,21 @@ skinparam rectangle{
   BackgroundColor transparent
   FontColor transparent
 }
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
 
 
 
 node "Eligible Party Infrastructure"  as epInfra{
   component "\t\tEDDIE Framework\t\t\n" as eddie
-  component "User Interface \n(Website or App)" as ui
-  component "Services" as services
+  component "EP Website" as ui
+  collections "Service" as service
 
   ui -down- eddie
-  ui -[hidden]right- services
-  services -down- eddie
+  ui -[hidden]right- service
+  service -down- eddie
 }
 
 node "In-house\nInfrastructure" {
@@ -50,10 +54,10 @@ node "Regional Data-sharing\nInfrastructure" as energyProvider {
   interface "Consent\nAdmin\nPortal" as adminPortal
 }
 
-actor "Consumer" as consumer
-actor "Eligible Party" as admin
+actor "Customer" as consumer
+actor "Eligible\nParty" as ep
 
-admin -left- eddie
+ep -left- eddie
 consumer -left- ui
 consumer -down- aiida
 

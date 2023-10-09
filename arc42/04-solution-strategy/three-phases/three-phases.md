@@ -19,5 +19,5 @@ The EDDIE Framework will expand to support customers in many countries in three 
 Thus, EDDIE aims at making available a big part of the European metering points, as shown below. 
 
 <div align="center">
-<img src="./figures/EDDIE_Coverage.jpg" width="800">
+<img src="./figures/EDDIE_Coverage.jpg">
 </div>

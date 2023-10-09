@@ -25,4 +25,4 @@ This workflow includes the following steps:
 **Important Node:** At the moment various alternatives for Steps 6 and 7 are being considered, so these steps may change. The most important alternatives are:
 
 - Only the Service gets the data from the Streaming Infrastructure (not the Database). This means that no historical data is saved in the Database of the EDDIE Framework. Instead, the historical data is stored only in the Streaming Infrastructure (temporarily).
-- Only the Database gets the data from the Streaming Infrastructure (not the Service). The Service then gets the data from the Database (either directly or through a topic of the Streaming Infrastructure). This means that all the data is stored in the Database of the EDDIE Framework
+- Only the Database gets the data from the Streaming Infrastructure (not the Service). The Service then gets the data from the Database (either directly or through a topic of the Streaming Infrastructure). This means that all the data is stored in the Database of the EDDIE Framework.

@@ -23,7 +23,7 @@ There are certain goals of the framework which can be achieved by following a sp
 | No. | Goal | Scenario | Approach | Section |
 |-|-|-|-|-|
 | 1 | Access Historical Data| The EDDIE Framework needs to access historical validated energy consumption data and provide it to the Services. | To achieve this, the EDDIE Framework follows the approach of the Implementing Act by the Smart Grids Task Force. | [Link](../10-quality-requirements/compliance/implementing-act/implementing-act.md) |
-| 2 | Consent Facade | All customers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their permission administrator.| Implement a dedicated Consent Facade component according to [Implementing Act](../10-quality-requirements/compliance/implementing-act/implementing-act.md). This component shall comply with the specificities of each country. | [Link](./consent-facade/consent-facade.md) |
+| 2 | Permission Facade | All customers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their permission administrator.| Implement a dedicated Permission Facade component according to [Implementing Act](../10-quality-requirements/compliance/implementing-act/implementing-act.md). This component shall comply with the specificities of each country. | [Link](./consent-facade/consent-facade.md) |
 | 3 | Far-reaching | The EDDIE Framework shall support customers and Regional Data-sharing Infrastructures across many Member States. | The EDDIE Framework shall become compatible with multiple Member States and beyond in three phases. | [Link](./three-phases/three-phases.md) |
 <!-- | 3 | Incentives | Why would consumers and eligible parties use eddie | marketplace |  |
 | 4 |  |  |  |  | -->

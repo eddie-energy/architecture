@@ -1,0 +1,69 @@
+@startuml inter-comm-dataspace
+'component diagram
+caption Component Diagram: Internal structure of the Interoperable Communication component
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle{
+  BorderColor transparent
+  BackgroundColor transparent
+  FontColor transparent
+}
+' component "Service/Data\nMarketplace" as marketplace
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" as eddie {
+  component "Consent Facade" as consentFacade
+  component "Interoperable Communication" as comm {
+    collections "\t\tRegional Connector\t\t\n" as regCon
+    component "AIIDA\nConnector" as regConAIIDA
+    component "Message\nProducer" as messageProducer
+    component "Dataspace\nConnector\n" as dataspaceConnector
+    interface "public API" as dataspaceAPI
+    
+    regCon -up-> messageProducer : Historical data
+    regConAIIDA -up-> messageProducer : "\n Real-time\ndata"
+    dataspaceConnector -left- dataspaceAPI
+    dataspaceConnector -down- messageProducer
+    ' messageProducer -right-> marketplace
+  }
+  component "Streaming\nInfrastructure" as streaming
+  
+  consentFacade -down- comm
+  messageProducer -up-> streaming : Publish\ndata
+  dataspaceConnector -right- streaming
+  }  
+}
+node "Regional Data-sharing\nInfrastructure" as energyProvider{
+  interface "Meter\nData\nPortal" as dataPortal
+  interface "Consent\nAdmin\nPortal" as adminPortal
+}
+
+node "In-house\nInfrastructure" {
+  component "AIIDA" as aiida
+}
+
+regCon -down-( dataPortal
+regCon -down-( adminPortal
+regConAIIDA -down- aiida
+
+' aiida -left- energyProvider
+
+
+
+
+@enduml

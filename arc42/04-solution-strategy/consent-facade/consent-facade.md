@@ -1,10 +1,10 @@
 ---
-title: Consent Facade
+title: Permission Facade
 ---
 
-The Consent Facade component is implemented within the EDDIE framework which is under the operation of the eligible party. Upon request from the customer, this component is responsible for triggering the process that gives the eligible party access to the customer's energy data (either from the customer's permission administrator or from AIIDA). The figures below describe various aspects of the Consent Facade.
+The Permission Facade (or Consent Facade) component is implemented within the EDDIE framework which is under the operation of the eligible party. Upon request from the customer, this component is responsible for triggering the process that gives the eligible party access to the customer's energy data (either from the customer's permission administrator or from AIIDA). The figures below describe various aspects of the Permission Facade.
 
-The Consent Facade is linked with various operations of the EDDIE Framework. For this reason, in order to describe the Consent Facade comprehensively, this section provides various details and graphical representations. In general, the acquisition of data from the EDDIE Framework is initiated by the creation of a *Service*. Thus, the eligible party initially has to create a Service and specify certain Service-related attributes such as the data family (e.g., historical validated data, or real-time data) of the required data. The figure below shows an example of a form that has to be filled out by the eligible party in order to create a new Service. 
+The Permission Facade is linked with various operations of the EDDIE Framework. For this reason, in order to describe the Permission Facade comprehensively, this section provides various details and graphical representations. In general, the acquisition of data from the EDDIE Framework is initiated by the creation of a *Service*. Thus, the eligible party initially has to create a Service and specify certain Service-related attributes such as the data family (e.g., historical validated data, or real-time data) of the required data. The figure below shows an example of a form that has to be filled out by the eligible party in order to create a new Service. 
 
 <div align="center">
 <img src="./figures/process-service.png" >
@@ -20,7 +20,7 @@ When a Service is created, customers can be linked to this Service, so that the 
 6. The customer is redirected to the permissions administrator's website.
 7. The customer accepts (or declines) the request for data access.
 8. The EDDIE Framework is informed about the acceptance of the request.
-9. The acceptance is forwarded to the Consent Facade.
+9. The acceptance is forwarded to the Permission Facade.
 10. The acceptance is forwarded to the EP Website.
 11. A status update of the request is shown.
 
@@ -35,7 +35,7 @@ To show all the consents given to a particular eligible party, the EDDIE Framewo
 <img src="./figures/admin-console.png" >
 </div>
 
-The necessary components to achieve the basic functionality of the Consent Facade are shown in the figure below. On the left-hand side, there is an onboarding process that shows the button *connect my data* that has to be clicked by the customer. After clicking, there is a popup window with a form that gathers additional information from the customer. This information includes the country and the permission administrator of the customer. The filled-out form is sent back to the Consent Facade. The consent facade creates the request for data access and shares this request with the EDDIE Interoperable Communication component via a Kafka topic. The Interoperable Communication maintains a state of all the requests so that if a state changes, all related components are notified (e.g., the popup window of the customer on the EP Website). The state can change by EDDIE Components such as the Connectors which implement functionality to interact with Permission Administrators (PA) of the Regional Data-sharing Infrastructures, e.g., PA Connector EDA or PA Connector Enedis in the figure. These connectors communicate with the respective permission administrators, i.e., PA Connector EDA communicates with the Austrian permission administrator EDA, while Enedis is the French permission administrator. 
+The necessary components to achieve the basic functionality of the Permission Facade are shown in the figure below. On the left-hand side, there is an onboarding process that shows the button *connect my data* that has to be clicked by the customer. After clicking, there is a popup window with a form that gathers additional information from the customer. This information includes the country and the permission administrator of the customer. The filled-out form is sent back to the Permission Facade. The Permission Facade creates the request for data access and shares this request with the EDDIE Interoperable Communication component via a Kafka topic. The Interoperable Communication maintains a state of all the requests so that if a state changes, all related components are notified (e.g., the popup window of the customer on the EP Website). The state can change by EDDIE Components such as the Connectors which implement functionality to interact with Permission Administrators (PA) of the Regional Data-sharing Infrastructures, e.g., PA Connector EDA or PA Connector Enedis in the figure. These connectors communicate with the respective permission administrators, i.e., PA Connector EDA communicates with the Austrian permission administrator EDA, while Enedis is the French permission administrator. 
  
 <div align="center">
 <img src="./figures/eddie-mvp.png" >

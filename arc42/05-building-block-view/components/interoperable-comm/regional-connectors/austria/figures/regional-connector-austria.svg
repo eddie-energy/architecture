@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="772px" preserveAspectRatio="none" style="width:882px;height:772px;background:#FFFFFF;" version="1.1" viewBox="0 0 882 772" width="882px" zoomAndPan="magnify"><defs/><g><!--MD5=[c57d54656a6b708159567a005370dc18]
+cluster epInfra--><g id="cluster_epInfra"><polygon fill="none" points="16,16,26,6,865,6,865,493,855,503,16,503,16,16" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="855" x2="865" y1="16" y2="6"/><line style="stroke:#181818;stroke-width:1.0;" x1="16" x2="855" y1="16" y2="16"/><line style="stroke:#181818;stroke-width:1.0;" x1="855" x2="855" y1="16" y2="503"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="216" x="328.5" y="31.9951">Eligible Party Infrastructure</text></g><!--MD5=[d8519cdb77f238de7515b60c1e2a0448]
+cluster eddie--><g id="cluster_eddie"><rect fill="none" height="425" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="801" x="40" y="54"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="821" y="59"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="819" y="61"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="819" y="65"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="138" x="371.5" y="79.9951">EDDIE Framework</text></g><!--MD5=[ea13f3982d3f313ad76f361004455302]
+cluster comm--><g id="cluster_comm"><rect fill="none" height="304" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="613" x="64" y="151"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="657" y="156"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="655" y="158"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="655" y="162"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="233" x="254" y="176.9951">Interoperable Communication</text></g><!--MD5=[d2097d9ce64ec5875eaff28c85e752f7]
+cluster regConAu--><g id="cluster_regConAu"><rect fill="none" height="237" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="450" x="88" y="194"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="518" y="199"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="516" y="201"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="516" y="205"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="227" x="199.5" y="219.9951">Regional Connector - Austria</text></g><!--MD5=[518e645c172fff526c6656066ad6216c]
+cluster energyProvider--><g id="cluster_energyProvider"><polygon fill="none" points="316,546,326,536,564,536,564,720,554,730,316,730,316,546" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="554" x2="564" y1="546" y2="536"/><line style="stroke:#181818;stroke-width:1.0;" x1="316" x2="554" y1="546" y2="546"/><line style="stroke:#181818;stroke-width:1.0;" x1="554" x2="554" y1="546" y2="730"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="172" x="350" y="561.9951">Regional Data-sharing</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="110" x="381" y="578.292">Infrastructure</text></g><!--MD5=[3350d7f66612901443cd0d848f04b832]
+entity consentFacade--><g id="elem_consentFacade"><rect fill="none" height="46.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="153" x="96.5" y="89"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="229.5" y="94"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="227.5" y="96"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="227.5" y="100"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="111.5" y="121.9951">Consent Facade</text></g><!--MD5=[f50ff5e4cd64f259303fc83dba1819fc]
+entity database--><g id="elem_database"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="132" x="693" y="352"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="805" y="357"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="803" y="359"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="803" y="363"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="708" y="384.9951">Streaming</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="708" y="401.292">Infrastructure</text></g><!--MD5=[3fae18697c1514b048afb635d41589e9]
+entity messageProducer--><g id="elem_messageProducer"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="103" x="557.5" y="229"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="640.5" y="234"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="638.5" y="236"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="638.5" y="240"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="572.5" y="261.9951">Message</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="572.5" y="278.292">Producer</text></g><!--MD5=[2bc27f8c6f3c439ffbcf4f6a52b48c99]
+entity microfrontend--><g id="elem_microfrontend"><rect fill="none" height="46.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="137" x="104.5" y="237.5"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="221.5" y="242.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="219.5" y="244.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="219.5" y="248.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="119.5" y="270.4951">microfrontend</text></g><!--MD5=[c12808caacd1fabb1208be7a66b6a9d4]
+entity pontonAdapter--><g id="elem_pontonAdapter"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="94" x="428" y="229"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="502" y="234"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="500" y="236"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="500" y="240"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="443" y="261.9951">Ponton</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="443" y="278.292">Adapter</text></g><!--MD5=[046793bc58486bda15330f0e7b0748ce]
+entity pontonXP--><g id="elem_pontonXP"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="168" x="354" y="352"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="502" y="357"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="500" y="359"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="500" y="363"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="401" y="384.9951">Ponton XP</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="401" y="401.292">Messenger</text></g><!--MD5=[ae036095a050d439eef64c8c1e7f845a]
+entity translationService--><g id="elem_translationService"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="116" x="277" y="229"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="373" y="234"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="371" y="236"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="371" y="240"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="292" y="261.9951">Translation</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="292" y="278.292">Service</text></g><!--MD5=[1fc653c3dfea6295b6b1ce4824f4233e]
+entity dataPortal--><g id="elem_dataPortal"><ellipse cx="385" cy="653" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="365" y="682.9951">Meter</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="365" y="699.292">Data</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="365" y="715.5889">Portal</text></g><!--MD5=[f4fa63a7ccbb5d09e5b22f5f145bd9c7]
+entity adminPortal--><g id="elem_adminPortal"><ellipse cx="485" cy="653" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="455.5" y="682.9951">Consent</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="455.5" y="699.292">Admin</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="455.5" y="715.5889">Portal</text></g><!--MD5=[c455558b2a47e218ecd2c2722f16d8a8]
+link consentFacade to microfrontend--><g id="link_consentFacade_microfrontend"><path d="M173,135.2 C173,163.1 173,209.63 173,237.46 " fill="none" id="consentFacade-microfrontend" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c73a347d032ca1e88b0826da17ef6a10]
+link microfrontend to translationService--><g id="link_microfrontend_translationService"><path d="M241.7,261 C253.43,261 265.51,261 276.93,261 " fill="none" id="microfrontend-translationService" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[3233ab314daf591bacba83c754fa7270]
+link translationService to pontonAdapter--><g id="link_translationService_pontonAdapter"><path d="M393.16,261 C404.73,261 416.74,261 427.88,261 " fill="none" id="translationService-pontonAdapter" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4bd081aa5498a81ed151c44696035170]
+link pontonAdapter to messageProducer--><g id="link_pontonAdapter_messageProducer"><path d="M522.24,261 C522.24,261 552.17,261 552.17,261 " fill="none" id="pontonAdapter-to-messageProducer" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="557.17,261,548.17,257,552.17,261,548.17,265,557.17,261" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[62791ed5947dddbbf999d2458cea32b0]
+link messageProducer to database--><g id="link_messageProducer_database"><path d="M609,292.3 C609,328.9 609,384 609,384 C609,384 687.77,384 687.77,384 " fill="none" id="messageProducer-to-database" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="692.77,384,683.77,380,687.77,384,683.77,388,692.77,384" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[2799bbaa3d540a76b7ce2e9fced122dd]
+link pontonAdapter to pontonXP--><g id="link_pontonAdapter_pontonXP"><path d="M475,292.18 C475,310.54 475,333.59 475,351.93 " fill="none" id="pontonAdapter-pontonXP" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[2e32ee7ed1e8e0d77e422ee53f455126]
+link pontonXP to adminPortal--><g id="link_pontonXP_adminPortal"><path d="M485,415.21 C485,415.21 485,633.85 485,633.85 " fill="none" id="pontonXP-to-adminPortal" style="stroke:#181818;stroke-width:1.0;"/><path d="M493.4572,640.7718 A9,9 0 0 0 476.5428 640.7718" fill="none" style="stroke:#181818;stroke-width:1.5;"/></g><!--MD5=[3048a873914616bbb5fc462be062ba63]
+link pontonXP to dataPortal--><g id="link_pontonXP_dataPortal"><path d="M385,415.21 C385,415.21 385,633.85 385,633.85 " fill="none" id="pontonXP-to-dataPortal" style="stroke:#181818;stroke-width:1.0;"/><path d="M393.4572,640.7718 A9,9 0 0 0 376.5428 640.7718" fill="none" style="stroke:#181818;stroke-width:1.5;"/></g><rect fill="none" height="16.2969" id="_caption" style="stroke:none;stroke-width:1.0;" width="546" x="161" y="747"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="546" x="161" y="759.9951">Component Diagram: The internal structure of the Regional Connector - Austria</text><!--MD5=[8fe1e601e36f7c679746156b217e9696]
+@startuml regional-connector-austria
+'component diagram
+caption Component Diagram: The internal structure of the Regional Connector - Austria
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" as eddie {
+    component "Consent Facade" as consentFacade
+    component "Streaming\nInfrastructure" as database
+    component "Interoperable Communication" as comm {
+      component "Regional Connector - Austria" as regConAu {
+        component "microfrontend" as microfrontend
+        component "Ponton\nAdapter" as pontonAdapter
+        component "\tPonton XP\n\tMessenger\t" as pontonXP
+        component "Translation\nService" as translationService
+      }
+      component "Message\nProducer" as messageProducer
+    }
+  }
+
+  consentFacade -down- microfrontend
+  microfrontend -right- translationService
+  translationService -right- pontonAdapter
+  pontonAdapter -right-> messageProducer
+  messageProducer -down-> database
+  pontonXP -up- pontonAdapter
+}
+node "Regional Data-sharing\nInfrastructure" as energyProvider {
+  interface "Meter\nData\nPortal" as dataPortal
+  interface "Consent\nAdmin\nPortal" as adminPortal
+}
+
+pontonXP - -down-( adminPortal
+pontonXP -down-( dataPortal
+
+@enduml
+
+@startuml regional-connector-austria
+caption Component Diagram: The internal structure of the Regional Connector - Austria
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" as eddie {
+    component "Consent Facade" as consentFacade
+    component "Streaming\nInfrastructure" as database
+    component "Interoperable Communication" as comm {
+      component "Regional Connector - Austria" as regConAu {
+        component "microfrontend" as microfrontend
+        component "Ponton\nAdapter" as pontonAdapter
+        component "\tPonton XP\n\tMessenger\t" as pontonXP
+        component "Translation\nService" as translationService
+      }
+      component "Message\nProducer" as messageProducer
+    }
+  }
+
+  consentFacade -down- microfrontend
+  microfrontend -right- translationService
+  translationService -right- pontonAdapter
+  pontonAdapter -right-> messageProducer
+  messageProducer -down-> database
+  pontonXP -up- pontonAdapter
+}
+node "Regional Data-sharing\nInfrastructure" as energyProvider {
+  interface "Meter\nData\nPortal" as dataPortal
+  interface "Consent\nAdmin\nPortal" as adminPortal
+}
+
+pontonXP - -down-( adminPortal
+pontonXP -down-( dataPortal
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

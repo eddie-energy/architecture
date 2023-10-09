@@ -1,5 +1,0 @@
----
-title: Streaming Interface
----
-
-TBD
