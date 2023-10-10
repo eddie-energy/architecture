@@ -1,5 +1,5 @@
 ---
-title: Streaming Infrastructure
+title: Streaming Infr.
 ---
 
 ## Overview
