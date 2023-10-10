@@ -1,5 +1,5 @@
 ---
-title: Interoperable Communication
+title: Interoperable Comm.
 ---
 
 ## Overview
