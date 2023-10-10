@@ -4,9 +4,4 @@ title: EP Website
 
 ## Overview
 
-TBD
-<!-- 
-<div align="center">
-<img src="../ep-website/figures/component-diagram-ep-website.svg">
-</div>
- -->
+The EP Website does not implement a particular data model. Nevertheless, the EP Website collects data from the customer for establishing the customer consent. This information is described in the context of the [Permission Facade](../../data-models/permission-facade/permission-facade.md).

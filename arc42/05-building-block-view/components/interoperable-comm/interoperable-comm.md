@@ -1,5 +1,5 @@
 ---
-title: Inter. Communication
+title: Interoperable Communication
 ---
 
 ## Overview
@@ -16,9 +16,9 @@ The included components are the following:
 
 | Component | Responsibility | Section |
 | - | - | - |
-| Regional Connector | Includes various country-specific regional connectors. Each one of these connectors implements the functionality to access the APIs of the corresponding Regional Data-sharing Infrastructure. | [Link](./regional-connectors/regional-connectors.md)|
-| AIIDA Connector | Implements the functionality to connect with AIIDA instances of In-house devices and access real-time data of customers. | [Link](./aiida-connnector/aiida-connector.md)|
-| Dataspace Connector | Implements the functionality to access data from a dataspace, e.g., to collect other data than energy consumption, which is useful for the Services. | [Link](./dataspace-connnector/dataspace-connector.md)|
+| Regional Connectors | Includes various country-specific regional connectors. Each one of these connectors implements the functionality to access the APIs of the corresponding Regional Data-sharing Infrastructure. | [Link](./regional-connectors/regional-connectors.md)|
+| AIIDA Connector | Implements the functionality to connect with AIIDA instances of In-house devices and access real-time data of customers. | [Link](./aiida-connector/aiida-connector.md)|
+| Dataspace Connector | Implements the functionality to access data from a dataspace, e.g., to collect other data than energy consumption, which is useful for the Services. | [Link](./dataspace-connector/dataspace-connector.md)|
 | Message Producer  | Receives data from a connector and publishes it to the Streaming Infrastructure. | [Link](./message-producer/message-producer.md) |
 
 

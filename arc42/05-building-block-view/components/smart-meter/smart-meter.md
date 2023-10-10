@@ -4,9 +4,10 @@ title: Smart Meter
 
 ## Overview
 
-TBD
-<!-- 
+The Smart Meter is a device that is installed in the residence of each customer to collect energy consumption data in real time. The Smart Meter is out of the control of the eligible party and the customer. The EDDIE Framework, and specifically [AIIDA](../aiida/aiida.md), interacts with the Smart Meter only through the Smart Meter interface to access the real-time data, as shown in the figure below.   
+
 <div align="center">
-<img src="../ep-website/figures/component-diagram-ep-website.svg">
+<img src="./figures/smart-meter.svg">
 </div>
- -->
+
+> Information regarding the data exchanged with the Smart Meter is presented [here](../../data-models/smart-meter/smart-meter.md).

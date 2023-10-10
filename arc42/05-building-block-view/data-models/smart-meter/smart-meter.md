@@ -2,6 +2,8 @@
 title: Smart Meter
 ---
 
-The Smart Meter may be a different device based on the regulations of each country. This affects the connectivity of AIIDA to the Smart Meter interface. For this reason, the data model of the Smart Meter interface is discussed separately for each country.
+## Overview
 
-> Information on how to access the Smart Meter of each country is provided [here](../../components/AIIDA/AIIDA.md).
+The Smart Meter may be a different device based on the regulations of each country. Thus, the data received from the Smart Meter may vary per country. For this reason, the Smart Meter data is discussed separately for each country.
+
+> Information regarding the data exchanged with the Smart Meter is presented [here](../../components/aiida/aiida.md).

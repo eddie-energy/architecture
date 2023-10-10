@@ -4,7 +4,7 @@ title: Admin Console
 
 ## Overview 
 
-The Admin Console is a frontend application for the eligible party. This application offer a comprehensive view of the Services and customer of the eligible party with various configuration options, as shown in the figure below.
+The Admin Console is a frontend application for the eligible party. This application offer a comprehensive view of the Services and customers of the eligible party with various configuration options, as shown in the figure below.
 
 TBD
 

@@ -28,7 +28,7 @@ skinparam rectangle{
 node "Eligible Party Infrastructure"  as epInfra{
   component "EDDIE Framework" {    
     component "Interoperable Communication" as comm {
-      component "Regional connector\nAIIDA" as regionalConnectorAIIDA
+      component "AIIDA\nconnector" as regionalConnectorAIIDA
       component "Message\nProducer" as messageProducer
     
       regionalConnectorAIIDA -> messageProducer

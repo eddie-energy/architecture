@@ -22,11 +22,11 @@ skinparam database{
 
 node "Eligible Party Infrastructure"  as epInfra{
   component "EDDIE Framework" as eddie {
-    component "Consent Facade" as consentFacade
+    component "Permission\nFacade" as consentFacade
     component "Streaming\nInfrastructure" as database
     component "Interoperable Communication" as comm {
       component "Regional Connector - Austria" as regConAu {
-        component "microfrontend" as microfrontend
+        component "Microfrontend" as microfrontend
         component "Ponton\nAdapter" as pontonAdapter
         component "\tPonton XP\n\tMessenger\t" as pontonXP
         component "Translation\nService" as translationService

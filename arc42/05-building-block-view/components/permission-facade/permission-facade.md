@@ -10,6 +10,6 @@ The Permission Facade is a backend application that coordinates the [microfronte
 <img src="./figures/permission-facade.svg">
 </div>
 
-> The specific information that is needed by each country (or AIIDA) is summarized [here](../../data-models/consent-facade-interface/consent-facade-interface.md).
+> The specific information that is needed by each country (or AIIDA) is summarized [here](../../data-models/permission-facade/permission-facade.md).
 
 

@@ -1,10 +1,9 @@
 ---
-title: France
+title: Regional Connector - France
 ---
-#### Regional Connector - France
 
-The model of this component using a class diagram is shown below.
+## Overview
 
-<div align="center">
-<img src="./figures/class-diagram-regional-connector-france.png">
-</div>
+TBD
+
+A class diagram with the implementation model of this component is provided [here](../france/figures/class-diagram-regional-connector-france.png).
