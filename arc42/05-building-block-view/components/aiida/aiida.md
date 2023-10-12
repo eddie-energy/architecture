@@ -17,6 +17,6 @@ The deployment of AIIDA for each country is documented here.
 
 | Country | Section | 
 |-|-|
-| Austria | [Link](./aiida-austria/aiida-austria2.md) |
-| France | [Link](./aiida-france/aiida-france2.md) |
+| Austria | [Link](./countries/aiida-austria/aiida-austria.md) |
+| France | [Link](./countries/aiida-france/aiida-france.md) |
 | Spain | TBD |
