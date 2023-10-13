@@ -8,5 +8,5 @@ This section includes the workflows related to the eligible party accessing the 
 
 | Topic | Section |
 |-|-|
-| Access historical validated data| [Link](./workflows/access-historical-data/1-access-historical-data.md) |
+| Access historical validated data| [Link](./workflows/access-historical-data/access-historical-data.md) |
 | Access real-time data| [Link](./workflows/access-real-time-data/access-real-time-data.md) |
