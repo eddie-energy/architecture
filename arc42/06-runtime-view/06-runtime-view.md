@@ -7,9 +7,9 @@ The runtime view focuses on interactions among the system's components. The goal
 | Topic | Section |
 |-|-|
 | Collect consent form | [Link](./0-collect-consent-form/0-collect-consent-form.md) |
-| Access historical data | [Link](./1-access-historical-data/1-access-historical-data.md) |
-| Access real-time data | [Link](./2-access-real-time-data/2-access-real-time-data.md) |
+| Request customer consent | [Link](./1-request-consent/1-request-consent.md) |
+| Access customer data | [Link](./2-access-data/2-access-data.md) |
 | Send data to Service | [Link](./3-send-data-to-service/3-send-data-to-service.md) |
-| Consent revocation | [Link](./4-consent-revocation/4-consent-revocation.md) |
+| Consent revocation | [Link](./4-revoke-consent/4-revoke-consent.md) |
 | Implementing Act| [Link](./5-implementing-act/5-implementing-act.md) |
 
