@@ -8,7 +8,7 @@ This section includes the workflows related to sending data from the EDDIE Frame
 
 | Topic | Section |
 |-|-|
-| The Regional (or AIIDA) Connector sends data to a Service | [Link](./workflows/regional-connector-sends-data/regional-connector-sends-data.md) |
+| The Regional/AIIDA Connector sends data to a Service | [Link](./workflows/regional-connector-sends-data/regional-connector-sends-data.md) |
 | The Dataspace Connector sends data to a Service | [Link](./workflows/dataspace-connector-sends-data/dataspace-connector-sends-data.md) |
 
 
