@@ -1,0 +1,55 @@
+@startuml request-consent-austria
+'sequence diagram
+caption Sequence Diagram: The Regional Connector - Austria requests the customer consent from the Regional Data-sharing Infrastructure
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Customer" as user
+box "EDDIE Framework" #transparent
+  ' participant "Permission\nFacade" as website
+  box "Interoperable Communication\n"  #transparent
+    box "Regional Connector - Austria"  #transparent
+      participant "Microfrontend" as microfrontend
+      participant "Translation\nService" as translationService
+      participant "Ponton\nAdapter" as pontonAdapter
+      participant "Ponton XP\nMessenger" as pontonXP
+    end box
+  end box
+end box
+box "Regional Data-sharing\nInfrastructure" #transparent
+  box "EDA" #transparent
+    participant "Consent\nAdmin Portal" as adminPortal
+  end box
+end box
+
+user -> microfrontend : fillOutForm(requiredData)
+activate microfrontend
+  microfrontend -> translationService : requestConsent(\nrequiredData)
+  activate translationService
+    translationService -> translationService : CCM=createConsent\nRequest(requiredData)
+    translationService -> pontonAdapter : send(CCM)
+    activate pontonAdapter
+      pontonAdapter -> pontonXP : send(CCM)
+      activate pontonXP
+        pontonXP -> adminPortal : send(CCM)
+        activate adminPortal
+          adminPortal -->> pontonXP : Consent\nrequested
+        deactivate adminPortal
+        pontonXP -->> pontonAdapter : Consent\nrequested
+      deactivate pontonXP
+      pontonAdapter -->> translationService : Consent\nrequested
+    deactivate pontonAdapter
+    translationService -> microfrontend : Consent\nrequested
+  deactivate translationService
+  microfrontend -->> user : show(redirection)
+deactivate microfrontend
+
+
+@enduml

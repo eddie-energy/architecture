@@ -6,7 +6,10 @@ The runtime view focuses on interactions among the system's components. The goal
 
 | Topic | Section |
 |-|-|
-| Access to historical validated data | [Link](./access-to-historical-data/access-to-historical-data.md) |
-| Access to real-time data | [Link](./access-to-real-time-data/access-to-real-time-data.md) |
-| Consent revocation | [Link](./consent-revocation/consent-revocation.md) |
+| Collect consent form | [Link](./0-collect-consent-form/0-collect-consent-form.md) |
+| Access historical data | [Link](./1-access-historical-data/1-access-historical-data.md) |
+| Access real-time data | [Link](./2-access-real-time-data/2-access-real-time-data.md) |
+| Send data to Service | [Link](./3-send-data-to-service/3-send-data-to-service.md) |
+| Consent revocation | [Link](./4-consent-revocation/4-consent-revocation.md) |
+| Implementing Act| [Link](./5-implementing-act/5-implementing-act.md) |
 
