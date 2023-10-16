@@ -1,0 +1,27 @@
+@startuml metered-data-admin-revokes-consent
+'sequence diagram
+caption Sequence Diagram: The metered data administrator revokes the consent
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+participant "Metered Data\nAdministrator" as mda
+box "EDDIE Framework" #transparent
+  box "Interoperable\nCommunication" #transparent
+    participant "Regional\nConnector" as regionalConnector
+  end box
+end box
+participant "Service" as service
+
+mda -> mda : revokeConsent(\ncustomer, eligibleParty)
+mda -> regionalConnector : inform(revocation, customer)
+regionalConnector -> regionalConnector : revokeConsent(customer)
+regionalConnector -> service : inform(revocation, customer)
+
+@enduml

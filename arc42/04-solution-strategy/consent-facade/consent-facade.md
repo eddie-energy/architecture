@@ -74,7 +74,7 @@ The process discussed so far is also shown below in a detailed sequence diagram.
 <img src="./figures/sequence.svg" >
 </div>
 
-The consent for data access may be revoked at any time. If the revocation is triggered by the Meter Data Administrator, then the Permission Administrator is notified, and in turn, the EDDIE Framework (through the Interoperable Communication). This process is shown in the figure below. 
+The consent for data access may be revoked at any time. If the revocation is triggered by the Metered Data Administrator, then the Permission Administrator is notified, and in turn, the EDDIE Framework (through the Interoperable Communication). This process is shown in the figure below. 
 
 <div align="center">
 <img src="./figures/revoke-process.png" >

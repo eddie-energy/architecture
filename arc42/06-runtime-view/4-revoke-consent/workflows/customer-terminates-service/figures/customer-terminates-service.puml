@@ -1,0 +1,45 @@
+@startuml customer-terminates-service
+'sequence diagram
+caption Sequence Diagram: The customer terminates a Service
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Customer" as user
+box "Eligible Party Infrastructure" #transparent
+  box "EDDIE Framework\n" #transparent
+    participant "Permission\nFacade" as consentFacade
+    box "Interoperable\nCommunication" #transparent
+      participant "Regional\nConnector" as regionalConnector
+    end box
+  end box
+  participant "Service" as service
+end box
+box "Regional Data-sharing\nInfrastructure" #transparent
+  participant "Consent\nAdmin Portal" as adminPortal
+end box
+
+user -> consentFacade : login(credentials)
+user -> consentFacade : terminate(service)
+activate consentFacade
+  consentFacade -> regionalConnector : terminate(service,\ncustomer)
+    activate regionalConnector
+      regionalConnector -> regionalConnector : terminate(service,\ncustomer)
+      regionalConnector -> service : inform(termination,\ncustomer)
+      regionalConnector -> adminPortal : revokeConsent(\ncustomer)
+      activate adminPortal
+        adminPortal -> adminPortal : revokeConsent(\ncustomer, eligibleParty)
+        adminPortal -->> regionalConnector : consentStatus
+      deactivate adminPortal
+      regionalConnector -->> consentFacade : consentStatus
+    deactivate regionalConnector
+  consentFacade -->> user : consentStatus
+deactivate consentFacade
+
+

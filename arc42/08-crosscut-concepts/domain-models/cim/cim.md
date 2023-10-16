@@ -23,8 +23,8 @@ CIM has been used widely to model data objects in order to achieve syntactic and
 In the EDDIE project, CIM is used to address an interoperability concern that may arise due to the large number of entities communicating with the EDDIE Framework. Such entities can be:
 
 - Smart meters in different countries potentially generating data in diverse formats.
-- Meter Data Administrators in different countries potentially providing historical validated data in different formats.
-- Consent Administrators in different countries potentially carrying out the process of providing consent using messages of different formats.
+- Metered data administrators in different countries potentially providing historical validated data in different formats.
+- Permission administrators in different countries potentially carrying out the process of providing consent using messages of different formats.
 
 Notably, the EDDIE Framework needs to implement functions for handling and storing all this data. Implementing individual functions for each data format that any of the above entities may be using, is not a solution that scales since it might be practically cumbersome to address all possible data formats. To avoid this, the handling of the data will be implemented based on CIM. Additionally, the Interoperable Communication component will integrate converters to translate data from different data formats to CIM so that it is then processed using common functions.
 

@@ -1,26 +1,21 @@
 ---
-title: EP Terminates Service
+title: The Eligible Party Terminates a Service
 ---
 
-<!-- Add runtime diagram or textual description of the scenario/
-Add a description of the notable aspects of the interactions between the building block instances depicted in this diagram. -->
+## Overview
 
-## Eligible party terminates a service
-
-
-The workflow of an eligible party that terminates an active service is shown below. A more detailed view of this process can be viewed [here](../consent-management/consent-management.md).
+The following workflow shows the process of the eligible party terminating a Service, and consequently, also revoking the consent of the customers who use this Service. This process starts with the eligible party accessing the Admin Console.
 
 <div align="center"> 
-<img src="./figures/service-termination.png" width="600">
+<img src="./figures/eligible-party-terminates-service.svg">
 </div>
 
 This workflow includes the following steps:
-
-1. The eligible party accesses the admin console and clicks to terminate the service.
-1. The admin console forwards this to the Interoperable Communication.
-1. The Interoperable communication sends a request to terminate the service to the consent administrator.
-1. The consent administrator stops the data sharing from the meter data administrator. Since the involved components of this step do not belong to EDDIE, this step is out of scope. However, EDDIE depends on the timely execution of this step.
-1. The status of the consent is returned to the Interoperable communication.
-1. The status of the consent is returned to the Admin Console.
-1. The status of the consent is returned to the eligible party.
-1. Inform the consumer. At the moment, this is out of scope.
+1. The eligible party logs in to the Admin Console.
+1. The eligible party clicks to terminate the Service.
+1. The Admin console applies the Service termination, e.g., by updating the relevant fields in the Database.
+1. The Admin Console instructs the Regional Connectors to revoke the consent of the customers who use the terminated service.
+1. The Regional Connectors revoke the consent of the customers from the Consent Admin Portal of their countries.
+1. The responses of the consent status are sent back to the Regional Connectors.
+1. The consent status of each customer is sent to the Admin Console.
+1. The Admin Console show to the eligible party that the consent have been revoked.

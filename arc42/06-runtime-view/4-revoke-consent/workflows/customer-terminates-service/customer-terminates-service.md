@@ -1,25 +1,23 @@
 ---
-title: Consumer Terminates Service
+title: The Customer Terminates Service
 ---
 
-<!-- Add runtime diagram or textual description of the scenario/
-Add a description of the notable aspects of the interactions between the building block instances depicted in this diagram. -->
+## Overview
 
-## Consumer terminates a service
-
-
-The workflow of a consumer that terminates an active service is shown below.
+The following workflow shows the process of the customer terminating a Service, and consequently, revoking their consent for data access. This process starts with the Customer accessing the Consent Facade, i.e., the website of the eligible party.
 
 <div align="center"> 
-<img src="./figures/service-termination-consumer.png" width="600">
+<img src="./figures/customer-terminates-service.svg">
 </div>
 
 This workflow includes the following steps:
-
-1. The consumer accesses the EP Website and clicks to terminate the service.
-1. The EP Website forwards this to the Interoperable Communication.
-1. The Interoperable communication sends a request to terminate the service to the consent administrator.
-1. The consent administrator stops the data sharing from the meter data administrator. Since the involved components of this step do not belong to EDDIE, this step is out of scope. However, EDDIE depends on the timely execution of this step.
-1. The status of the consent is returned to the Interoperable communication.
-1. The status of the consent is returned to the EP Website.
-1. The status of the consent is returned to the consumer.
+1. The customer logs in to the Permission Facade.
+2. The customer clicks to terminate a running Service.
+3. The Permission Facade forwards the termination to the Regional Connector of the customer's country.
+4. The Regional Connector applies the termination, e.g., by updating the relevant fields in the Database. Notably, upon termination, the Service stops receiving data from this particular customer. However, the Service may still run and collect data from other customers.
+5. The Regional Connector informs the Service about the termination.
+6. The Regional Connector revokes the customer consent from the Consent Admin Portal.
+7. The Consent Admin Portal applies the consent revocation. This step may include additional actions that are out of the scope of EDDIE, e.g., informing the Meter Data Portal about the revocation.
+8. The status of the revoked consent is sent back to the Regional Connector.
+9. The status of the revoked consent is sent to the Permission Facade.
+10. The Permission Facade shows to the customer the status of the consent.
