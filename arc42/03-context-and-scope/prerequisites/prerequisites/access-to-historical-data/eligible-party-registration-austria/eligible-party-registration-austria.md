@@ -1,8 +1,8 @@
 ---
-title: Austria
+title: Eligible Party Access to the Regional Data-sharing Infrastructure - Austria
 ---
 
-## Eligible Party Access to the Regional Data-sharing Infrastructure - Austria
+## Overview
 
 ### Create Account
 

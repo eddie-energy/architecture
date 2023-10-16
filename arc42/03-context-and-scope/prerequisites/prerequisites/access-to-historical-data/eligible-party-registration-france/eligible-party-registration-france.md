@@ -1,8 +1,8 @@
 ---
-title: France
+title: Eligible Party Access to the Regional Data-sharing Infrastructure - France
 ---
 
-## Eligible Party Access to the Regional Data-sharing Infrastructure - France
+## Overview
 
 ### Create Account
 
