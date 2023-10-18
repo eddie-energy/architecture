@@ -30,23 +30,24 @@ Describe (usually in a combination of diagrams, tables, and text):
 -   quality and/or performance features of this infrastructure
 -   mapping of software artifacts to elements of this infrastructure --> 
 
-The deployment view of the system focuses on the utilized technical infrastructure. A high-level deployment diagram is shown in Section: Context and Scope. While that diagram shows the framework as a black box, this section shows deployment diagrams that depict where the internal components of the system run.
+## Overview
 
-## Infrastructure Level 2
-
-The prime way to deploy the system is shown below.
+The deployment view of the system focuses on the utilized technical infrastructure, and shows deployment diagrams that depict where the internal components of the system run. The prime way to deploy the these components is shown in the figure below.
 
 <div align="center"> 
 <img src="./figures/deployment-diagram-level-2.png" width="650">
 </div>
 
-The Level 2 view includes the following high-level nodes.
+
+The system runs across three nodes which are described in the table below.
 
 | Node | Description |
 |-|-|
 |Eligible Party Infrastructure | This is operated by the eligible party. The Local Computing Infrastructure is used for running the framework which is deployed locally on the premises of the eligible party.|
 |Regional Data-sharing Infrastructure | This is operated by the Metered Data Administrator. |
 |In-house Infrastructure | This node is operated by the consumer. It includes an in-house device (e.g., a Raspberry Pi computer) and the smart meter. |
+
+## Deployment Options
 
 Specifically for the deployment of the framework, i.e., the node Local Computing Infrastructure shown above, two additional deployment options are possible. The original deployment is shown below isolated from the rest of the system.
 

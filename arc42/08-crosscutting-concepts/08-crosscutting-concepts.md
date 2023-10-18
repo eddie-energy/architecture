@@ -13,17 +13,22 @@ include many different topics, such as
     cross-cutting) nature
 -   implementation rules -->
 
+## Overview
+
 There are various important concepts that are relevant to many parts of the system. The figure below shows an overview of these concepts in the form of a mindmap. 
 
 <div align="center"> 
-<img src="./figures/crosscutting-concepts.png" width=650>
+<img src="./figures/crosscutting-concepts.svg">
 </div>
 
-Further information about each concept is provided the corresponing subsections: 
+The following table shows the concepts with links to further information in dedicated sections. 
 
 | Concept | Section |
 | - | - |
-| Domain Model | [Link](./domain-models/domain-models.md) | 
-|Architectural Pattern | [Link](./architectural-patterns/architectural-patterns.md) | 
+| Architectural Patterns | [Link](./architectural-patterns/architectural-patterns.md) | 
+| Development Process | [Link](./development-process/development-process.md) | 
+| Domain Models | [Link](./domain-models/domain-models.md) | 
+| Security | [Link](./security/security.md) | 
+| User Experience | [Link](./user-experience/user-experience.md) | 
 
 
