@@ -25,11 +25,11 @@ The following table shows the concepts with links to further information in dedi
 
 | Concept | Section |
 | - | - |
-| Architectural Patterns | [Link](./architectural-patterns/architectural-patterns.md) | 
-| Development Process | [Link](./development-process/development-process.md) | 
-| Domain Models | [Link](./domain-models/domain-models.md) | 
-| Security | [Link](./security/security.md) | 
-| User Experience | [Link](./user-experience/user-experience/gui/gui.md) | 
-| Other Concepts| [Link](./other-concepts/other-concepts/dataspaces/dataspaces.md) | 
+| Architectural Patterns | [Link](./crosscutting-concepts/architectural-patterns/architectural-patterns.md) | 
+| Development Process | [Link](./crosscutting-concepts/development-process/development-process.md) | 
+| Domain Models | [Link](./crosscutting-concepts/domain-models/domain-models.md) | 
+| Security | [Link](./crosscutting-concepts/security/security.md) | 
+| User Experience | [Link](./crosscutting-concepts/user-experience/user-experience.md) | 
+| Other Concepts| [Link](./crosscutting-concepts/other-concepts/other-concepts.md) | 
 
 
