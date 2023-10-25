@@ -1,10 +1,10 @@
 ---
-title: Architectural Patterns
+title: Security
 ---
 
 
-| Architectural Pattern | Section |
+| Security Mechanism | Section |
 | - | - |
-| Publish/Subscribe | [Link](./publish-subscribe/publish-subscribe.md) | 
-| Micro frontends | [Link](./micro-frontends/micro-frontends.md) | 
+| HTTPS | [Link](./security/https/https.md) | 
+| SASL - TLS | [Link](./security/sasl-tls/sasl-tls.md) | 
 

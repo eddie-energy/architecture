@@ -27,8 +27,10 @@ mindmapDiagram {
 
 ++ Security
 +++_ HTTPS
-+++_ SASL/SSL
++++_ SASL-TLS
 ++ User\nExperience
 +++_ GUIs
+++ Other\nConcepts
++++_ Dataspaces
 
 @endmindmap

@@ -1,10 +1,10 @@
 ---
-title: Architectural Patterns
+title: Development Process
 ---
 
 
-| Architectural Pattern | Section |
+| Development Process | Section |
 | - | - |
-| Publish/Subscribe | [Link](./publish-subscribe/publish-subscribe.md) | 
-| Micro frontends | [Link](./micro-frontends/micro-frontends.md) | 
+| Test-driven | [Link](./deveopment-process/test-driven/test-driven.md) | 
+| CI/CD | [Link](./deveopment-process/ci-cd/ci-cd.md) | 
 

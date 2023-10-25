@@ -4,6 +4,6 @@ title: Domain Models
 
 | Domain Model | Section |
 | - | - |
-| CIM | [Link](./cim/cim.md) | 
-| SAREF | [Link](./saref/saref.md) | 
-| SGAM | [Link](./sgam/sgam.md) | 
+| CIM | [Link](./domain-models/cim/cim.md) | 
+| SAREF | [Link](./domain-models/saref/saref.md) | 
+| SGAM | [Link](./domain-models/sgam/sgam.md) | 

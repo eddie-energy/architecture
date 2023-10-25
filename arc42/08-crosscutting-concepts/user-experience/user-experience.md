@@ -1,10 +1,10 @@
 ---
-title: Architectural Patterns
+title: User Experience
 ---
 
 
-| Architectural Pattern | Section |
+| User Experience | Section |
 | - | - |
-| Publish/Subscribe | [Link](./publish-subscribe/publish-subscribe.md) | 
-| Micro frontends | [Link](./micro-frontends/micro-frontends.md) | 
+| Graphical User Interfaces | [Link](./publish-subscribe/publish-subscribe.md) | 
+
 
