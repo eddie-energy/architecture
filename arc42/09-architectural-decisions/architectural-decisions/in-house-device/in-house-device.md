@@ -1,5 +1,5 @@
 ---
-title: AD1: Dedicated In-house Device
+title: Dedicated In-house Device
 ---
 
 ## Context
