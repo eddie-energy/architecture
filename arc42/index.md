@@ -23,7 +23,7 @@ This document is organized as follows:
 
 1. [Deployment View](./07-deployment-view/07-deployment-view.md). Includes information about the infrastructure that can host the system and its components.
 
-1. [Crosscutting Concepts](./08-crosscutting-concepts/08-crosscut-concepts.md). Includes information about important concepts which are used within the system.
+1. [Crosscutting Concepts](./08-crosscutting-concepts/08-crosscutting-concepts.md). Includes information about important concepts which are used within the system.
 
 1. [Architectural Decisions](./09-architectural-decisions/09-architectural-decisions.md). Includes architectural decisions that affect the system and its components.
 
