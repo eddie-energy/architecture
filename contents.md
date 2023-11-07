@@ -10,13 +10,13 @@
 
 1. [Context & Scope](./arc42/03-context-and-scope/03-context-and-scope.md)
 
-1. [Building Block View](./arc42/04-building-block-view/04-building-block-view.md)
+1. [Solution Strategy](./arc42/04-solution-strategy/04-solution-strategy.md)
 
-1. [Runtime View](./arc42/05-runtime-view/05-runtime-view.md)
+1. [Building Block View](./arc42/05-building-block-view/05-building-block-view.md)
 
-1. [Deployment View](./arc42/06-deployment-view/06-deployment-view.md)
+1. [Runtime View](./arc42/06-runtime-view/06-runtime-view.md)
 
-1. [Solution Strategy](./arc42/07-solution-strategy/07-solution-strategy.md)
+1. [Deployment View](./arc42/07-deployment-view/07-deployment-view.md)
 
 1. [Crosscutting Concepts](./arc42/08-crosscutting-concepts/08-crosscut-concepts.md)
 

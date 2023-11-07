@@ -15,29 +15,28 @@ wbsdiagram {
 }
 </style>
 
-* Quality
+* Quality Requirements
 
-++ Performance
-+++ Data Loss
-++++_ No data\nshall be\n lost
-+++ Latency of\n real-time\ndata
-++++_ <1min
-
-++ Availability
-+++ Boot Time
-++++_ <1min
-' +++ Down Time
-' ++++_ <60min/day
+++ Deployment
++++_ Decentralized
++++ Configurations
+++++_ Single-\ncommand\ndeployment
+++++_ Deployment\noptions
++++ External\nComponent\nsupport
+++++_ Databases
+++++_ Streaming\ninfrastructures
 
 ++ Compliance
-+++ Implementation\nAct
-++++_  Smart Grids\nTask Force
-+++ Regional\nCoverage
-++++_ >3 EU\ncountries
++++_ Implementing\nAct (SGTF)
++++ Regional\ncoverage
+++++_ Access historical\n and real-time data
+++++_ Identify regional\ntechnical hurdles
 
 ++ Security
-+++ Unauthorized\nAccess
-++++_ No access\n without\ncustomer\nconsent
++++ Authorization
+++++_ Data access\nonly for\nauthorized\n Services
+++++_ Consent\nrevocation
+
 
 
 @endwbs

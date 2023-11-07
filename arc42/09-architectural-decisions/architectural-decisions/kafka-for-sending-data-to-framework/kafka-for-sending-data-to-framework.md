@@ -1,23 +1,24 @@
 ---
-title: "AD1: Kafka-to-Framework"
+title: Publish/subscribe mechanism for sending data from AIIDA to the EDDIE Framework
 ---
 
-## AD1: Kafka for sending Data Streams from AIIDA to the Framework 
+## Context
 
-### Context
+AIIDA, which runs on the in-house device, collects data from a smart meter in real time. This data needs to be sent to the EDDIE Framework (running on the infrastructure of the eligible party). Thus, each AIIDA instance sends real-time data to one or more instances of the EDDIE Framework, i.e., one or more eligible parties. Since this data transfer involves real-time data, it is crucial that all eligible parties get the data in due time. This may create a challenge when the number of receiver eligible parties is large, because the in-house device may not have the resources (e.g., computational and network resources) to initiate many transmissions at once.    
 
-AIIDA, which runs on in-house infrastructure, collects data from a smart meter in real time. This data forms a data stream that originates in AIIDA and needs to be sent to the framework (running on the infrastructure of the eligible party). Thus, each AIIDA instance creates one data stream that has to be sent to one or more instances of the framework, i.e., one or more eligible parties. AD1 refers to the communication mechanism utilized to facilitate the transmission of a data stream from one instance of AIIDA to one or more instances of the framework.    
+## Decision
 
-### Decision
+To send the real-time data from AIIDA to potentially multiple instances of the EDDIE Framework, a publish/subscribe mechanism is used. This mechanism handles the complexity of sending the real-time data. The specifics of this decision are yet to be determined. 
+<!-- TBD -->
 
-Integration of an Apache Kafka client within AIIDA, that creates one data stream for every framework that needs to receive the data, i.e., for every eligible party. Each eligible party has to integrate an Apache Kafka cluster. Information on how to send data from the client to each cluster (e.g., IP address, port, topic ID) has to be configured in the client. As a result, each AIIDA instance sends the same data stream multiple times, i.e., to each eligible party.
-
-### Consequences
+## Consequences
 
 Positive consequences: 
-- The goal to send the data from one AIIDA instance to multiple instances of the framework is achieved by Kafka, thereby with little development effort.
-- The Kafka cluster on the eligible party infrastructure can also be used for other tasks, e.g., for internal communication between components, or for forwarding the data streams to the services. 
+<!-- - The goal to send the data from one AIIDA instance to multiple instances of the framework is achieved by Kafka, thereby with little development effort.
+- The Kafka cluster on the eligible party infrastructure can also be used for other tasks, e.g., for internal communication between components, or for forwarding the data streams to the services.  -->
 
 Negative consequences: 
-- Since AIIDA may be running on a resource-constrained device, sending multiple data streams at once might affect the device's performance (e.g., CPU, RAM).
-- Uploading many identical data streams at once might be limited by the available network bandwidth, i.e., some eligible parties may receive the data with delay.
+<!-- - Since AIIDA may be running on a resource-constrained device, sending multiple data streams at once might affect the device's performance (e.g., CPU, RAM).
+- Uploading many identical data streams at once might be limited by the available network bandwidth, i.e., some eligible parties may receive the data with delay. -->
+
+## Alternatives

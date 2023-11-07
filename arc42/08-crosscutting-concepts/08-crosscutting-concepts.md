@@ -21,15 +21,51 @@ There are various important concepts that are relevant to many parts of the syst
 <img src="./figures/crosscutting-concepts.svg">
 </div>
 
-The following table shows the concepts with links to further information in dedicated sections. 
+The following sections provide tables with links to more information about these concepts.
+
+## Architectural Patterns
+
+| Architectural Pattern | Section |
+| - | - |
+| Microfrontend | [Link](./crosscutting-concepts/microfrontends/microfrontends.md) | 
+| Adapter | [Link](./crosscutting-concepts/adapter/adapter.md) | 
+| Publish/subscribe | [Link](./crosscutting-concepts/publish-subscribe/publish-subscribe.md) | 
+
+## Development Process
+
+| Development Process | Section |
+| - | - |
+| Test-driven | [Link](./crosscutting-concepts/test-driven/test-driven.md) | 
+| CI/CD | [Link](./crosscutting-concepts/ci-cd/ci-cd.md) | 
+
+## Domain Models
+
+| Domain Model | Section |
+| - | - |
+| CIM | [Link](./crosscutting-concepts/cim/cim.md) | 
+| SAREF | [Link](./crosscutting-concepts/saref/saref.md) | 
+| SGAM | [Link](./crosscutting-concepts/sgam/sgam.md) | 
+
+## Security
+
+| Security Mechanism | Section |
+| - | - |
+| HTTPS | [Link](./crosscutting-concepts/https/https.md) | 
+| SASL - TLS | [Link](./crosscutting-concepts/sasl-tls/sasl-tls.md) | 
+
+## User Experience
+
+| User Experience | Section |
+| - | - |
+| Graphical User Interfaces | [Link](./crosscutting-concepts/gui/gui.md) | 
+| Containers | [Link](./crosscutting-concepts/containers/containers.md) | 
+
+## Other Concepts
+
 
 | Concept | Section |
 | - | - |
-| Architectural Patterns | [Link](./crosscutting-concepts/architectural-patterns/architectural-patterns.md) | 
-| Development Process | [Link](./crosscutting-concepts/development-process/development-process.md) | 
-| Domain Models | [Link](./crosscutting-concepts/domain-models/domain-models.md) | 
-| Security | [Link](./crosscutting-concepts/security/security.md) | 
-| User Experience | [Link](./crosscutting-concepts/user-experience/user-experience.md) | 
-| Other Concepts| [Link](./crosscutting-concepts/other-concepts/other-concepts.md) | 
+| Dataspaces| [Link](./crosscutting-concepts/dataspaces/dataspaces.md) | 
+
 
 

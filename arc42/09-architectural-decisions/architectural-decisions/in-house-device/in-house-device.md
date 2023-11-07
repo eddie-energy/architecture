@@ -4,20 +4,21 @@ title: Dedicated In-house Device
 
 ## Context
 
-AIIDA, which runs on in-house infrastructure, collects data from a smart meter in real time. This data forms a data stream that originates in AIIDA and needs to be sent to the framework (running on the infrastructure of the eligible party). Thus, each AIIDA instance creates one data stream that has to be sent to one or more instances of the framework, i.e., one or more eligible parties. AD1 refers to the communication mechanism utilized to facilitate the transmission of a data stream from one instance of AIIDA to one or more instances of the framework.    
+The goal of the EDDIE Framework is to provide historical and real-time energy data to the Services. Notably, energy consumption data needs to be validated before being considered as accurate and credible data. When the EDDIE Framework acquires historical data from the Regional Data-sharing Infrastructure, this data is already validated. However, the Regional Data-sharing Infrastructure may not offer access to real-time validated data because the validation might incur additional delays. Thus, while access to historical validated data is achieved through the Regional Data-sharing Infrastructure, access to real-time validated data cannot be guaranteed in a similar way.
 
 ## Decision
 
-Integration of an Apache Kafka client within AIIDA, that creates one data stream for every framework that needs to receive the data, i.e., for every eligible party. Each eligible party has to integrate an Apache Kafka cluster. Information on how to send data from the client to each cluster (e.g., IP address, port, topic ID) has to be configured in the client. As a result, each AIIDA instance sends the same data stream multiple times, i.e., to each eligible party.
+To access real-time energy consumption data, the EDDIE Framework relies on a dedicated in-house device that connects to the smart meter and monitors the energy consumption in real time. This device hosts AIIDA which reads the real-time data and sends it to the EDDIE Framework.
 
 ## Consequences
 
 Positive consequences: 
-- The goal to send the data from one AIIDA instance to multiple instances of the framework is achieved by Kafka, thereby with little development effort.
-- The Kafka cluster on the eligible party infrastructure can also be used for other tasks, e.g., for internal communication between components, or for forwarding the data streams to the services. 
+- Access to energy consumption data straight from the smart meter with very little delay (e.g., small transmission, propagation and queuing delay).
 
 Negative consequences: 
-- Since AIIDA may be running on a resource-constrained device, sending multiple data streams at once might affect the device's performance (e.g., CPU, RAM).
-- Uploading many identical data streams at once might be limited by the available network bandwidth, i.e., some eligible parties may receive the data with delay.
+- The real-time energy consumption data accessed via the in-house device is not validated.
 
 ## Alternatives
+
+Alternatives:
+- Access near real-time data from the Regional Data-sharing Infrastructure as soon as (and if) it is available. In this case, the data might be validated, although considerable delay may be introduced thus jeopardizing the sense of real time.

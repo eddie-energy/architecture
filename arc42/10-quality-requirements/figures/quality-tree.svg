@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="520px" preserveAspectRatio="none" style="width:732px;height:520px;background:#FFFFFF;" version="1.1" viewBox="0 0 732 520" width="732px" zoomAndPan="magnify"><defs/><g><line style="stroke:#181818;stroke-width:1.5;" x1="62" x2="62" y1="66.2969" y2="86.2969"/><rect fill="#FFFFFF" height="36.2969" style="stroke:#181818;stroke-width:1.5;" width="104" x="10" y="86.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="20" y="109.292">Deployment</text><line style="stroke:#181818;stroke-width:1.5;" x1="62" x2="72" y1="146.7422" y2="146.7422"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="72" y="151.5889">Decentralized</text><line style="stroke:#181818;stroke-width:1.5;" x1="62" x2="72" y1="189.0391" y2="189.0391"/><rect fill="#FFFFFF" height="36.2969" style="stroke:#181818;stroke-width:1.5;" width="120" x="72" y="170.8906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="82" y="193.8857">Configurations</text><line style="stroke:#181818;stroke-width:1.5;" x1="132" x2="142" y1="247.6328" y2="247.6328"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="159.5" y="236.1826">Single-</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="148.5" y="252.4795">command</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="142" y="268.7764">deployment</text><line style="stroke:#181818;stroke-width:1.5;" x1="132" x2="142" y1="305.375" y2="305.375"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="142" y="302.0732">Deployment</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="158" y="318.3701">options</text><line style="stroke:#181818;stroke-width:1.5;" x1="132" x2="132" y1="207.1875" y2="305.375"/><line style="stroke:#181818;stroke-width:1.5;" x1="62" x2="72" y1="372.1172" y2="372.1172"/><rect fill="#FFFFFF" height="68.8906" style="stroke:#181818;stroke-width:1.5;" width="102" x="72" y="337.6719"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="95.5" y="360.667">External</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="82" y="376.9639">Component</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="96" y="393.2607">support</text><line style="stroke:#181818;stroke-width:1.5;" x1="123" x2="133" y1="430.7109" y2="430.7109"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="133" y="435.5576">Databases</text><line style="stroke:#181818;stroke-width:1.5;" x1="123" x2="133" y1="472.1563" y2="472.1563"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="148" y="468.8545">Streaming</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="133" y="485.1514">infrastructures</text><line style="stroke:#181818;stroke-width:1.5;" x1="123" x2="123" y1="406.5625" y2="472.1563"/><line style="stroke:#181818;stroke-width:1.5;" x1="62" x2="62" y1="122.5938" y2="372.1172"/><line style="stroke:#181818;stroke-width:1.5;" x1="306.5" x2="306.5" y1="66.2969" y2="86.2969"/><rect fill="#FFFFFF" height="36.2969" style="stroke:#181818;stroke-width:1.5;" width="101" x="256" y="86.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="266" y="109.292">Compliance</text><line style="stroke:#181818;stroke-width:1.5;" x1="306.5" x2="316.5" y1="154.8906" y2="154.8906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="316.5" y="151.5889">Implementing</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="327" y="167.8857">Act (SGTF)</text><line style="stroke:#181818;stroke-width:1.5;" x1="306.5" x2="316.5" y1="213.4844" y2="213.4844"/><rect fill="#FFFFFF" height="52.5938" style="stroke:#181818;stroke-width:1.5;" width="84" x="316.5" y="187.1875"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="328.5" y="210.1826">Regional</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="326.5" y="226.4795">coverage</text><line style="stroke:#181818;stroke-width:1.5;" x1="358.5" x2="368.5" y1="272.0781" y2="272.0781"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="375" y="268.7764">Access historical</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="372.5" y="285.0732">and real-time data</text><line style="stroke:#181818;stroke-width:1.5;" x1="358.5" x2="368.5" y1="321.6719" y2="321.6719"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="373.5" y="318.3701">Identify regional</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="368.5" y="334.667">technical hurdles</text><line style="stroke:#181818;stroke-width:1.5;" x1="358.5" x2="358.5" y1="239.7813" y2="321.6719"/><line style="stroke:#181818;stroke-width:1.5;" x1="306.5" x2="306.5" y1="122.5938" y2="213.4844"/><line style="stroke:#181818;stroke-width:1.5;" x1="557" x2="557" y1="66.2969" y2="86.2969"/><rect fill="#FFFFFF" height="36.2969" style="stroke:#181818;stroke-width:1.5;" width="75" x="519.5" y="86.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="529.5" y="109.292">Security</text><line style="stroke:#181818;stroke-width:1.5;" x1="557" x2="567" y1="155.7422" y2="155.7422"/><rect fill="#FFFFFF" height="36.2969" style="stroke:#181818;stroke-width:1.5;" width="111" x="567" y="137.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="577" y="160.5889">Authorization</text><line style="stroke:#181818;stroke-width:1.5;" x1="622.5" x2="632.5" y1="222.4844" y2="222.4844"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="632.5" y="202.8857">Data access</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="650" y="219.1826">only for</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="638" y="235.4795">authorized</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="648" y="251.7764">Services</text><line style="stroke:#181818;stroke-width:1.5;" x1="622.5" x2="632.5" y1="288.375" y2="288.375"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="639" y="285.0732">Consent</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="632.5" y="301.3701">revocation</text><line style="stroke:#181818;stroke-width:1.5;" x1="622.5" x2="622.5" y1="173.8906" y2="288.375"/><line style="stroke:#181818;stroke-width:1.5;" x1="557" x2="557" y1="122.5938" y2="155.7422"/><line style="stroke:#181818;stroke-width:1.5;" x1="62" x2="557" y1="66.2969" y2="66.2969"/><rect fill="#FFFFFF" height="36.2969" style="stroke:#181818;stroke-width:1.5;" width="168" x="225.5" y="10"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148" x="235.5" y="32.9951">Quality Requirements</text><line style="stroke:#181818;stroke-width:1.5;" x1="309.5" x2="309.5" y1="46.2969" y2="66.2969"/><rect fill="none" height="16.2969" id="_caption" style="stroke:none;stroke-width:1.0;" width="342" x="173.75" y="490.4531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="342" x="173.75" y="503.4482">Quality Tree: Overview of the quality requirements</text><!--MD5=[3472ad9cbea539124f82bea93a375ea4]
+@startwbs quality-tree
+'work breakdown structure
+caption Quality Tree: Overview of the quality requirements
+
+<style>
+wbsdiagram {
+  node {
+    BackgroundColor transparemt
+    HorizontalAlignment center
+    fontsize 14
+  }
+'   :depth(3) {
+'     Linecolor white
+'   }
+}
+</style>
+
+* Quality Requirements
+
+++ Deployment
++++_ Decentralized
++++ Configurations
+++++_ Single-\ncommand\ndeployment
+++++_ Deployment\noptions
++++ External\nComponent\nsupport
+++++_ Databases
+++++_ Streaming\ninfrastructures
+
+++ Compliance
++++_ Implementing\nAct (SGTF)
++++ Regional\ncoverage
+++++_ Access historical\n and real-time data
+++++_ Identify regional\ntechnical hurdles
+
+++ Security
++++ Authorization
+++++_ Data access\nonly for\nauthorized\n Services
+++++_ Consent\nrevocation
+
+
+
+@endwbs
+
+@startwbs quality-tree
+caption Quality Tree: Overview of the quality requirements
+
+<style>
+wbsdiagram {
+  node {
+    BackgroundColor transparemt
+    HorizontalAlignment center
+    fontsize 14
+  }
+}
+</style>
+
+* Quality Requirements
+
+++ Deployment
++++_ Decentralized
++++ Configurations
+++++_ Single-\ncommand\ndeployment
+++++_ Deployment\noptions
++++ External\nComponent\nsupport
+++++_ Databases
+++++_ Streaming\ninfrastructures
+
+++ Compliance
++++_ Implementing\nAct (SGTF)
++++ Regional\ncoverage
+++++_ Access historical\n and real-time data
+++++_ Identify regional\ntechnical hurdles
+
+++ Security
++++ Authorization
+++++_ Data access\nonly for\nauthorized\n Services
+++++_ Consent\nrevocation
+
+
+
+@endwbs
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
