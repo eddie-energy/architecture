@@ -1,5 +1,5 @@
 ---
-title: Request Consent
+title: Request Customer Consent
 ---
 
 ## Overview
@@ -8,5 +8,5 @@ This section includes the workflows related to the eligible party requesting the
 
 | Topic | Section |
 |-|-|
-| Request consent for access to historical data| [Link](./workflows/request-consent-historical-data/request-consent-historical-data.md) |
-| Request consent for access to real-time data| [Link](./workflows/request-consent-real-time-data/request-consent-real-time-data.md) |
+| Request consent for access to historical data| [Link](./request-consent-historical-data/request-consent-historical-data.md) |
+| Request consent for access to real-time data| [Link](./request-consent-real-time-data/request-consent-real-time-data.md) |

@@ -8,5 +8,5 @@ This section includes the workflows related to the customer filling in the conse
 
 | Topic | Section |
 |-|-|
-| Collect consent form for access to historical data| [Link](./workflows/collect-consent-historical-data/collect-consent-historical-data.md) |
-| Collect consent form for access to real-time data| [Link](./workflows/collect-consent-real-time-data/collect-consent-real-time-data.md) |
+| Collect consent form for access to historical data| [Link](./collect-consent-historical-data/collect-consent-historical-data.md) |
+| Collect consent form for access to real-time data| [Link](./collect-consent-real-time-data/collect-consent-real-time-data.md) |
