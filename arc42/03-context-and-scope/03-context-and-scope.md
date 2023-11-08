@@ -86,7 +86,7 @@ The table below shows a summary of the interfaces.
 
 ## Prerequisites
 
-Since the EDDIE framework interacts with various external components and infrastructures (e.g., the Regional Data-sharing Infrastructures), certain prerequisites and dependencies arise. These refer mostly to interactions and processes regarding requesting/approving the consent of the customer in different Member States. The prerequisites are outlined in a separate section: 
+Since the EDDIE framework interacts with various external components and infrastructures (e.g., the Regional Data-sharing Infrastructures, and AIIDA instances), certain prerequisites and dependencies arise. All the prerequisites are outlined in link below. 
 
 
 

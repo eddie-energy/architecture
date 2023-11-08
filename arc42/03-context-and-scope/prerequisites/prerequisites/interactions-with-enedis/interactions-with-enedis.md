@@ -1,5 +1,5 @@
 ---
-title: Eligible Party Access to the Regional Data-sharing Infrastructure - France
+title: Regional Data-sharing Infrastructure of France
 ---
 
 ## Overview

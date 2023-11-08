@@ -1,5 +1,5 @@
 ---
-title: Eligible Party Access to the Regional Data-sharing Infrastructure - Austria
+title: Regional Data-sharing Infrastructure of Austria
 ---
 
 ## Overview
