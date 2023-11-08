@@ -10,7 +10,7 @@ The runtime view focuses on interactions among the system's components. The goal
 
 | Consent Form | Section |
 |-|-|
-| For Access to Historical Validate Data | [Link](./runtime-view/collect-consent-historical-data/collect-consent-historical-data.md) |
+| For Access to Historical Validated Data | [Link](./runtime-view/collect-consent-historical-data/collect-consent-historical-data.md) |
 | For Access to Real-time Data | [Link](./runtime-view/collect-consent-real-time-data/collect-consent-real-time-data.md) |
 
 ## 2. Request the Customer Consent
@@ -54,8 +54,8 @@ The runtime view focuses on interactions among the system's components. The goal
 
 | Connector | Section |
 |-|-|
-| Regional/AIIDA Connector | [Link](./runtime-view/send-data-to-service-regional-connector/send-data-to-service-regional-connector.md) |
-| Dataspace Connector | [Link](./runtime-view/send-data-to-service-dataspace-connector/send-data-to-service-dataspace-connector.md) |
+| Historical/real-time data | [Link](./runtime-view/send-data-to-service-regional-connector/send-data-to-service-regional-connector.md) |
+| External data (from dataspaces) | [Link](./runtime-view/send-data-to-service-dataspace-connector/send-data-to-service-dataspace-connector.md) |
 
 
 
