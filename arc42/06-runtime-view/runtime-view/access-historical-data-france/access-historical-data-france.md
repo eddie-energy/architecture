@@ -16,7 +16,7 @@ This workflow includes the following steps:
 1. The Microfrontend shows to the customer a redirection the the Consent Admin Portal (which is operated by [Enedis](../../../../../03-context-and-scope/prerequisites/access-to-historical-data/eligible-party-registration-france/eligible-party-registration-france.md))
 2. The customer logs in to the Consent Admin Portal.
 3. The customer approves the consent request at the Consent Admin Portal.
-4. The Consent Admin Portal forwards the approval to the account of the eligible party, along with information about the Metering Point of the customer. 
+4. The Consent Admin Portal forwards the approval to the account of the eligible party, along with information about the metering point of the customer. 
 5.	The Interoperable Communication requests the clientID and clientSecret from the Consent Admin Portal.
 6.	The clientID and clientSecret are sent to the Interoperable Communication.
 7.	The Interoperable Communication uses the clientID and the clientSecret to get a valid token from the Consent Admin Portal.

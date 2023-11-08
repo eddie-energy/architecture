@@ -4,7 +4,7 @@ title: The Customer Terminates Service
 
 ## Overview
 
-The following workflow shows the process of the customer terminating a Service, and consequently, revoking their consent for data access. This process starts with the Customer accessing the Consent Facade, i.e., the website of the eligible party.
+The following workflow shows the process of the customer terminating a Service, and consequently, revoking their consent for data access. This process starts with the Customer accessing the Permission Facade, i.e., the website of the eligible party.
 
 <div align="center"> 
 <img src="./figures/customer-terminates-service.svg">

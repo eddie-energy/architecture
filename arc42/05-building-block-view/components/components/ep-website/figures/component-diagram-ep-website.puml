@@ -28,12 +28,12 @@ skinparam collections{
 
 
 node "Eligible Party Infrastructure"  as epInfra{
-  component "EDDIE Framework" as eddie
+  component "\t\tEDDIE Framework\t\t" as eddie
   component "EP Website" as ui
   collections "Service" as service
 
   ui -down-> eddie : consent
-  service -right-> ui : result
+  service .-right--> ui
   eddie -up-> service : data 
 }
 

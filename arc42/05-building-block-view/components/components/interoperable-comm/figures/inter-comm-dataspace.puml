@@ -27,7 +27,7 @@ skinparam rectangle{
 ' component "Service/Data\nMarketplace" as marketplace
 node "Eligible Party Infrastructure"  as epInfra{
   component "EDDIE Framework" as eddie {
-  component "Consent Facade" as consentFacade
+  component "Permission\nFacade" as consentFacade
   component "Interoperable Communication" as comm {
     collections "\t\tRegional Connector\t\t\n" as regCon
     component "AIIDA\nConnector" as regConAIIDA

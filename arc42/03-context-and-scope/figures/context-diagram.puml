@@ -1,6 +1,6 @@
 @startuml context-diagram
 'context diagram
-caption Context Diagram: Interactions between the framework and its environment
+caption Context Diagram: Interactions between the EDDIE Framework and its environment
 
 ' skinparam linetype ortho
 skinparam usecase {

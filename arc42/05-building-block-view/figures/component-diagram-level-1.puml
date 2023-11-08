@@ -57,6 +57,8 @@ node "Regional Data-sharing\nInfrastructure" as energyProvider {
 actor "Customer" as consumer
 actor "Eligible\nParty" as ep
 
+component "Marketplace" as marketplace
+
 ep -left- eddie
 consumer -left- ui
 consumer -down- aiida
@@ -64,5 +66,8 @@ consumer -down- aiida
 eddie -down-( adminPortal
 eddie -down-( dataPortal
 eddie -down- aiida
+
+consumer -right- marketplace
+marketplace -down- ep
 
 @enduml

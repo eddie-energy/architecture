@@ -4,10 +4,10 @@ entity aiida--><g id="elem_aiida"><rect fill="none" height="52.5938" rx="2.5" ry
 entity services--><g id="elem_services"><rect fill="none" height="52.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="78" x="569.5" y="42.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="579.5" y="65.4951">Services</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="579.5" y="81.792"> </text></g><!--MD5=[6d88cdb51dbbc6cd8d356f05b5830ce1]
 link aiida to eddie--><g id="link_aiida_eddie"><path d="M62.15,69 C92.84,69 143.84,69 187.82,69 " fill="none" id="aiida-to-eddie" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="192.87,69,183.87,65,187.87,69,183.87,73,192.87,69" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="94" x="80.5" y="62.0669">Real-time data</text></g><!--MD5=[c9bb01259546853bac1ba94d16bb0411]
 reverse link eddie to energy--><g id="link_eddie_energy"><path d="M271.5,137.2 C271.5,162.41 271.5,189.58 271.5,208.78 " fill="none" id="eddie-backto-energy" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="271.5,132.19,267.5,141.19,271.5,137.19,275.5,141.19,271.5,132.19" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="272.5" y="175.0669">Historical data</text></g><!--MD5=[e2f18b6070a29c34cdbeb56e97d2791a]
-link eddie to services--><g id="link_eddie_services"><path d="M350.09,69 C416.6,69 509.54,69 563.94,69 " fill="none" id="eddie-to-services" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="569.08,69,560.08,65,564.08,69,560.08,73,569.08,69" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="183" x="368.25" y="62.0669">Real-time and historical data</text></g><rect fill="none" height="16.2969" id="_caption" style="stroke:none;stroke-width:1.0;" width="514" x="62.75" y="267.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="514" x="62.75" y="280.5889">Context Diagram: Interactions between the framework and its environment</text><!--MD5=[4a5723adf1bc992ba4561761860ed0ca]
+link eddie to services--><g id="link_eddie_services"><path d="M350.09,69 C416.6,69 509.54,69 563.94,69 " fill="none" id="eddie-to-services" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="569.08,69,560.08,65,564.08,69,560.08,73,569.08,69" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="183" x="368.25" y="62.0669">Real-time and historical data</text></g><rect fill="none" height="16.2969" id="_caption" style="stroke:none;stroke-width:1.0;" width="565" x="37.25" y="267.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="565" x="37.25" y="280.5889">Context Diagram: Interactions between the EDDIE Framework and its environment</text><!--MD5=[981c92a43f6669e08d532acc59d962fb]
 @startuml context-diagram
 'context diagram
-caption Context Diagram: Interactions between the framework and its environment
+caption Context Diagram: Interactions between the EDDIE Framework and its environment
 
 ' skinparam linetype ortho
 skinparam usecase {
@@ -35,7 +35,7 @@ eddie -right-> services :Real-time and historical data
 @enduml
 
 @startuml context-diagram
-caption Context Diagram: Interactions between the framework and its environment
+caption Context Diagram: Interactions between the EDDIE Framework and its environment
 
 skinparam usecase {
   BorderColor black
