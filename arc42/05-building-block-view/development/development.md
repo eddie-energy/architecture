@@ -14,7 +14,8 @@ title: Development
 
 | Regional Hurdles | Section |
 |-|-|
-| Austria| [Link]() |
-| France| [Link]() |
-| Spain| [Link]() |
+| Austria| [Link](./development/dev-eda/issues.md) |
+| France| [Link](./development/dev-enedis/issues.md) |
+| Spain| [Link](./development/dev-datadis/issues.md) |
+
 
