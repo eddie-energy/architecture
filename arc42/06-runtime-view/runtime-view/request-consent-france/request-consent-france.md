@@ -7,7 +7,7 @@ title: Request Customer Consent from the Regional Data-sharing Infrastructure in
 The following workflow shows the process of the Regional Connector - France requesting the consent for access to historical validated data of a customer for the Regional Data-sharing Infrastructure in Austria. This process starts when the Microfrontend has collected the consent form with the required data from the customer. The workflow of the customer filling out the consent from is presented [here](../../../0-collect-consent-form/workflows/collect-consent-historical-data/collect-consent-historical-data.md). 
 
 <div align="center"> 
-<img src="./figures/request-consent-austria.svg">
+<img src="./figures/request-consent-france.svg">
 </div>
 
 
