@@ -10,4 +10,8 @@ The Smart Meter is a device that is installed in the residence of each customer 
 <img src="./figures/smart-meter.svg">
 </div>
 
+## Data Models
+
 > Information regarding the data exchanged with the Smart Meter is presented [here](../../data-models/smart-meter/smart-meter.md).
+
+<!-- > Information about the Permission Facade data model is provided [here](../../../data-models/permission-facade/permission-facade.md). -->

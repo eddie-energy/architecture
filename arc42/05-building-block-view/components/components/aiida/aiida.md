@@ -20,3 +20,7 @@ The deployment of AIIDA for each country is documented here.
 | Austria | [Link](./countries/aiida-austria/aiida-austria.md) |
 | France | [Link](./countries/aiida-france/aiida-france.md) |
 | Spain | TBD |
+
+## Data Models
+
+<!-- > Information about the Permission Facade data model is provided [here](../../../data-models/permission-facade/permission-facade.md). -->

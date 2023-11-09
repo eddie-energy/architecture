@@ -1,5 +1,5 @@
 ---
-title: AIIDA
+title: AIIDA Data Model
 ---
 
 ## Overview

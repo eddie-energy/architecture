@@ -1,5 +1,5 @@
 ---
-title: Smart Meter
+title: Smart Meter Data Model
 ---
 
 ## Overview

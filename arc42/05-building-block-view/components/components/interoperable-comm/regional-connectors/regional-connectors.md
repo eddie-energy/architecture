@@ -3,15 +3,17 @@ title: Regional Connectors
 ---
 ## Overview
 
-Since the Regional Data-sharing Infrastructure of every country may be operating differently (i.e., different APIs and authentication processes, as discussed [here](../../../../03-context-and-scope/prerequisites/access-to-historical-data/access-to-historical-data.md)), one Regional Connector is implemented for each Regional Data-sharing Infrastructure. The table below shows the implemented Regional Connectors for each supported country, with links to dedicated sections that include additional information.
+Since the Regional Data-sharing Infrastructure of every country may be operating differently, one Regional Connector is implemented for each Regional Data-sharing Infrastructure. The table below shows the implemented Regional Connectors for every supported country.
 
 
-| Region | Section |
+| Regional Connector | Section |
 |-|-|
 | Austria | [Link](./country-specific/austria/austria.md) |
 | France | [Link](./country-specific/france/france.md) |
-| Spain | TBD |
+<!-- | Spain | TBD | -->
 
-> The data models of the Regional Data-sharing Infrastructures are provided [here](../../../data-models/meter-data-portal/meter-data-portal.md).
+## Data Models
+
+> Information about the Regional Data-sharing Infrastructure data models is provided [here](../../../../data-models/meter-data-portal/meter-data-portal.md).
 
 

@@ -27,26 +27,29 @@ skinparam rectangle{
 ' component "Service/Data\nMarketplace" as marketplace
 node "Eligible Party Infrastructure"  as epInfra{
   component "EDDIE Framework" as eddie {
-  component "Permission\nFacade" as consentFacade
-  component "Interoperable Communication" as comm {
-    collections "\t\tRegional Connector\t\t\n" as regCon
-    component "AIIDA\nConnector" as regConAIIDA
-    component "Message\nProducer" as messageProducer
-    component "Dataspace\nConnector\n" as dataspaceConnector
-    interface "public API" as dataspaceAPI
-    
-    regCon -up-> messageProducer : Historical data
-    regConAIIDA -up-> messageProducer : "\n Real-time\ndata"
-    dataspaceConnector -left- dataspaceAPI
-    dataspaceConnector -down- messageProducer
-    ' messageProducer -right-> marketplace
+    component "Permission\nFacade" as consentFacade
+    component "Interoperable Communication" as comm {
+      collections "\t\tRegional Connector\t\t\n" as regCon
+      component "AIIDA\nConnector" as regConAIIDA
+      component "Message\nProducer" as messageProducer
+      component "Dataspace\nConnector\n" as dataspaceConnector
+      interface "Public API" as dataspaceAPI
+      interface " " as aiidaAPI
+
+
+      regCon -up-> messageProducer : Historical data
+      regConAIIDA -up-> messageProducer : "\n Real-time\ndata"
+      dataspaceConnector -left- dataspaceAPI
+      dataspaceConnector -down- messageProducer
+      ' messageProducer -right-> marketplace
+    }
+    component "Streaming\nInfrastructure" as streaming
+
+    consentFacade -down- comm
+    messageProducer -up-> streaming : Publish\ndata
+    dataspaceConnector -right- streaming
   }
-  component "Streaming\nInfrastructure" as streaming
-  
-  consentFacade -down- comm
-  messageProducer -up-> streaming : Publish\ndata
-  dataspaceConnector -right- streaming
-  }  
+
 }
 node "Regional Data-sharing\nInfrastructure" as energyProvider{
   interface "Meter\nData\nPortal" as dataPortal
@@ -59,9 +62,10 @@ node "In-house\nInfrastructure" {
 
 regCon -down-( dataPortal
 regCon -down-( adminPortal
-regConAIIDA -down- aiida
+regCon -[hidden]right- regConAIIDA
+regConAIIDA -right- aiidaAPI
+aiida -up-( aiidaAPI : Push\nreal-time data
 
-' aiida -left- energyProvider
 
 
 

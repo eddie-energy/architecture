@@ -1,5 +1,5 @@
 ---
-title: Database
+title: Database Data Model
 ---
 
 ## Overview
@@ -10,7 +10,7 @@ The data model of the Master data is shown in the class diagram below.
 <img src="../../../05-building-block-view/data-models/database/figures/CIM-Master-Data-Model.png">
 </div>
 
-This data model is [CIM](../../../08-crosscut-concepts/domain-models/cim/cim.md)-compliant. Specifically, the green entities correspond directly to CIM entities, while the blue entities are additions which are necessary to enrich the CIM model so that it covers all aspects of the EDDIE Framework. In addition, some existing entities are enhanced with EDDIE attributes. These can be distinguished by the minus sign ( - ) in front of the attribute name. Notably, the permission administrator entity is added. Also, some of the RoleTypesList enumerations are renamed to fit better the context of EDDIE. These are:
+This data model is CIM-compliant. Specifically, the green entities correspond directly to CIM entities, while the blue entities are additions that are necessary to enrich the CIM model so that it covers all aspects of the EDDIE Framework. Furthermore, some existing entities are enhanced with additional attributes. These can be distinguished by the minus sign ( - ) in front of the attribute name. Notably, the permission administrator entity is added. Also, some of the RoleTypesList enumerations are renamed to fit better the context of the EDDIE Framework. These are:
 
 CIM vs EDDIE/SGTF roles:
 

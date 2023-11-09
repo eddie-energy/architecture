@@ -1,5 +1,5 @@
 ---
-title: Consent Admin Portal
+title: Consent Admin Portal Data Model
 ---
 
 ## Overview

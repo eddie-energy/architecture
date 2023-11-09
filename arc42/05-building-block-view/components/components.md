@@ -17,3 +17,4 @@ The components of the system are shown in the table below with links to dedicate
 | Consent Admin Portal | [Link](./components/consent-admin-portal/consent-admin-portal.md) | [Link](../data-models/consent-admin-portal/consent-admin-portal.md) |
 | Meter Data Portal | [Link](./components/meter-data-portal/meter-data-portal.md) | [Link](../data-models/meter-data-portal/meter-data-portal.md) |
 | Smart Meter | [Link](./components/smart-meter/smart-meter.md) | [Link](../data-models/smart-meter/smart-meter.md) |
+| Marketplace | [Link](./components/marketplace/marketplace.md) | [Link](../data-models/marketplace/marketplace.md) |

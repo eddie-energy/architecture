@@ -6,6 +6,6 @@ title: AIIDA Connector
 
 TBD
 
+## Data Models
 
-
-The data model of the data coming from AIIDA instances is presented [here](../../../data-models/aiida/aiida.md).
+> Information about the AIIDA Connector data model is provided [here](../../../../data-models/aiida/aiida.md).
