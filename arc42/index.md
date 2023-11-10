@@ -10,7 +10,7 @@ This website hosts the software architecture of EDDIE (European Distributed Data
 This document is organized as follows:
 
 1. [Introduction and goals](./01-introduction-and-goals/01-introduction-and-goals.md). Includes the background, business goals, essential requirements and roles. 
-1. [Constraints](./02-constraints/02-constraints.md). Includes the political and business constraints.
+1. [Architectural Constraints](./02-constraints/02-constraints.md). Includes the political and business constraints.
 1. [Context & Scope](./03-context-and-scope/03-context-and-scope.md). Includes the business scope, technical scope and prerequisites.
 1. [Solution Strategy](./04-solution-strategy/04-solution-strategy.md). Includes elaborate guidelines for achieving complex goals.
 1. [Building Block View](./05-building-block-view/05-building-block-view.md). Includes high-level views and data models of the system.

@@ -33,41 +33,42 @@ The glossary is divided into two sections: domain terms and acronyms.
 
 ## Acronyms 
 
-| Acronym | Definition                                                                                                                                      |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| AIIDA   | Administrative Interface for In-house Data Access                                                                                               |
-| EDDIE   | European Distributed Data Infrastructure for Energy                                                                                             |
-| DSO     | Distribution System Operator                                                                                                                    |
-| TSO     | Transmission System Operator                                                                                                                    |
-| NRA     | National Regulatory Authority                                                                                                                   |
-| IA      | Implementing Acts for Interoperability after Article 24 of Directive (EU) 2019/944.                                                             |
-| eIDAS   | Electronic Identification and Authentication Services. Regulation on electronic identification and trust services. Regulation (EU) No 910/2014. |
+| Acronym | Definition |
+|-|-|
 | aFRR | Automatic Frequency Restoration Reserve |
+| AIIDA | Administrative Interface for In-house Data Access |
 | API | Application Programming Interface |
 | ASM | Active System Management |
 | BRP | Balancing Responsible Party |
 | CEP | Clean Energy Package |
+| CIM | Common Information Model |
 | CM | Capacity Mechanism |
 | DA | Day Ahead (market) |
 | DCC | Demand Connection Code |
 | DER | Distributed Energy Resources |
 | DF | Distributed Flexibility |
 | DSF | Demand-Side Flexibility |
+| DSO | Distribution System Operator |
 | EBGL | Electricity Balancing Guideline |
+| EDDIE | European Distributed Data Infrastructure for Energy |
+| eIDAS | Electronic Identification and Authentication Services. Regulation on electronic identification and trust services. Regulation (EU) No 910/2014. |
+| ENTSO-E |European Network of Transmission System Operators for Electricity |
 | FMO | Flexibility Market Operator |
 | FSP | Flexibility Service Provider |
 | GDPR | Regulation (EU) 2016|679 a.k.a. General Data Protection Regulation |
+| GEODE | GEODE is made up of European independent distribution companies of gas and electricity |
 | HRM | Harmonised Role Model |
+| IA | Implementing Acts for Interoperability after Article 24 of Directive (EU) 2019/944 |
 | ID | Intraday |
 | LV | Low voltage |
 | mFRR | Manual Frequency Restoration Reserve |
 | MV | Medium voltage |
 | NC | Network Code |
+| NRA | National Regulatory Authority |
 | RfG | Requirements for Generators |
+| SAREF | Smart Applications REFerence ontology |
 | SGAM | Smart Grid Architecture Model |
 | SGU | Significant Grid User |
 | SOGL | System Operation Guideline |
-| ENTSO-E |European Network of Transmission System Operators for Electricity |
-| SAREF | Smart Applications REFerence ontology |
-| GEODE | GEODE is made up of European independent distribution companies of gas and electricity | 
+| TSO | Transmission System Operator |
 
