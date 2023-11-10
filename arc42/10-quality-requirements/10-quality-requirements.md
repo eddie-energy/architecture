@@ -42,7 +42,7 @@ The following sections provide tables which show the requirements for every aspe
 |-|-|
 | Implementing Act (SGTF) | [Link](./quality-requirements/implementing-act/implementing-act.md) |
 | Access historical and real-time data | [Link](./quality-requirements/access-historical-real-time-data/access-historical-real-time-data.md) |
-| Identify regional technical hurdles | [Link](./quality-requirements/identify-regional-hurdles/identify-regional-hurdles.md) |
+| Identify technical regional hurdles | [Link](./quality-requirements/identify-regional-hurdles/identify-regional-hurdles.md) |
 
 ## Security Requirements
 

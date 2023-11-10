@@ -4,7 +4,7 @@ title: Interoperable Communication
 
 ## Overview
 
-The Interoperable Communication component is responsible for the communication with external components, e.g., with the Regional Data-sharing Infrastructures, and with AIIDA instances. Primarily, it accesses data from these external components and publishes it to the Streaming Infrastructure to be sent to the Services. To this end, the Interoperable Communication includes a collection of connectors that access data and send it to the Message Producer. Subsequently, the Message Producer publishes the data to the [Streaming Infrastructure](../streaming-infr/streaming-infr.md). The internal structure of the Interoperable Communication component is shown in the figure below.
+The Interoperable Communication component is responsible for communication with external components, e.g., with the Regional Data-sharing Infrastructures, and with AIIDA instances. Primarily, it accesses data from these external components and publishes it to the Streaming Infrastructure to be sent to the Services. To this end, the Interoperable Communication includes a collection of connectors that access data and send it to the Message Producer. Subsequently, the Message Producer publishes the data to the Streaming Infrastructure. The internal structure of the Interoperable Communication component is shown in the figure below.
 
 
 <div align="center">

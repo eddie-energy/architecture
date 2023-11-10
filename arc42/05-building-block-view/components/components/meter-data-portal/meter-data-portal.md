@@ -4,7 +4,7 @@ title: Meter Data Portal
 
 ## Overview
 
-The Meter Data Portal is the interface of the Regional Data-sharing Infrastructure that handles the access of eligible parties to historical validated energy consumption data of customers. The Meter Data Portal is usually operated by a designated entity (e.g., a country-specific metered data administrator), and is out of the control of the eligible party and the customer. As the the Regional Data-sharing Infrastructure can function differently in each country, as discussed [here](../consent-admin-portal/consent-admin-portal.md), the Meter Data Portal interface is used for interactions regarding accessing data, as shown in the figure below.
+The Meter Data Portal is the interface of the Regional Data-sharing Infrastructure that handles the access of eligible parties to historical validated energy consumption data of customers. The Meter Data Portal is usually operated by one or more designated entities (e.g., country-specific metered data administrators). Since the Regional Data-sharing Infrastructure can function differently in each country, as discussed [here](../consent-admin-portal/consent-admin-portal.md), the Meter Data Portal interface is used for interactions regarding accessing data, as shown in the figure below.
 
 <div align="center">
 <img src="../consent-admin-portal/figures/regional-data-sharing-infr.svg">
@@ -12,6 +12,4 @@ The Meter Data Portal is the interface of the Regional Data-sharing Infrastructu
 
 ## Data Models
 
-> Information regarding the data exchanged with the Meter Data Portal is presented [here](../../data-models/meter-data-portal/meter-data-portal.md).
-
-<!-- > Information about the Permission Facade data model is provided [here](../../../data-models/permission-facade/permission-facade.md). -->
+> Information about the Meter Data Portal data model is provided [here](../../../data-models/meter-data-portal/meter-data-portal.md).

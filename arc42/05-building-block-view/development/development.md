@@ -14,6 +14,8 @@ In the process of achieving compatibility with the Regional Data-sharing Infrast
 
 ## External Systems
 
+Some technical interactions that can already be achieved through the Regional Data-sharing Infrastructure are documented in the table below based on country.
+
 | External System| Country| Section |
 |-|-|-|
 | EDA | Austria | [Link](./development/dev-eda/dev-eda.md) |
@@ -21,6 +23,8 @@ In the process of achieving compatibility with the Regional Data-sharing Infrast
 | Datadis | Spain | [Link](./development/dev-datadis/dev-datadis.md) |
 
 ## Products
+
+Some technical aspects of the demonstrators developed within the context of EDDIE are presented in the table below.
 
 | Product | Section |
 |-|-|

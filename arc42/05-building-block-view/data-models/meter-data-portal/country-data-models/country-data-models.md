@@ -1,5 +1,5 @@
 ---
-title: Country-specific Models
+title: Country-specific Data Models
 ---
 
 The following table provides mappings from country-specific data models to the CIM that is used internally by EDDIE.

@@ -8,4 +8,4 @@ TBD
 
 ## Data Models
 
-<!-- > Information about the Service data model is provided [here](../../../data-models/service/service.md). -->
+> Information about the Marketplace model is provided [here](../../../data-models/marketplace/marketplace.md).

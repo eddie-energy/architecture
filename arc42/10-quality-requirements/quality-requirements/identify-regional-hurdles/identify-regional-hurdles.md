@@ -1,5 +1,5 @@
 ---
-title: Identify Regional Technical Hurdles
+title: Identify Technical Regional Hurdles
 ---
 
 ## Context

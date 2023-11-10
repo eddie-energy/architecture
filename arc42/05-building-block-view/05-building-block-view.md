@@ -119,4 +119,4 @@ The Level 2 view introduces the following interfaces.
 
 ## Regional Hurdles
 
-> While implementing interactions for access to historical validated data, various hurdles stemming from limitations of the Regional Data-sharing Infrastructures are identified. These and hurdles are documented [here](./development/development.md) to be shared with the energy community.
+> While implementing interactions for access to historical validated data, various hurdles stemming from limitations of the Regional Data-sharing Infrastructures are identified. These hurdles are documented [here](./development/development.md) to be shared with the energy community.

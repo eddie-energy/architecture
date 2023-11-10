@@ -10,4 +10,4 @@ A class diagram with the implementation model of this component is provided [her
 
 ## Data Models
 
-> Information about the Regional Connector - Austria data model is provided [here](../../../../../../data-models/meter-data-portal/country-data-models/data-model-france/data-model-france.md).
+> Information about the Regional Connector - France data model is provided [here](../../../../../../data-models/meter-data-portal/country-data-models/data-model-france/data-model-france.md).
