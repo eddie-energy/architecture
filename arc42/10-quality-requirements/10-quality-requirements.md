@@ -89,19 +89,3 @@ For architects, two kinds of scenarios are important:
 
 #### Response  -->
 
-
-
-<!-- 
-===authorization
-Develop a consent-based interface – the Administrative Interface for In-house Data Access (AIIDA) – installable in standard home automation environments and in-house computing systems to facilitate the consent-based use of in-house data sources from smart meters and downstream submetering like the standardised interface mandatory for all smart metering systems installed after July 4th, 2019, as required by Article 20(a) of Directive (EU) 2019/
-
-===coverage
-<td>Provide demonstrated connectors to that unified European interface for more than 70% of European metering points with the deliverables produced as part of the EDDIE Framework, and clearly defined paths to attach more.</td>
-
-===Compliance Regional hurdles 
-<td>Identify and disseminate small or big hurdles while conceptualizing and developing EDDIE to Member State (MS) data-sharing infrastructure operators, national and European legislation to allow for improvement and convergence in that sector.</td>
-
-
-===regional coverage
-Provide AIIDA as an Administrative Interface for In-house Data Access (AIIDA), easily integrable in domestic software systems like smart home solutions or edge devices, making use of existing or additional hardware to be easily deployed in consumer houses. Provide customers a new solution to make available data streams from the standardised near real-time interface on the smart meter (priority) and a variety of in-house sensors. Allow customers to share their data with services using the EDDIE Framework, on a secure, clean and manageable consent basis. 	OBJ#2
--->

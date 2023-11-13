@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="387px" preserveAspectRatio="none" style="width:543px;height:387px;background:#FFFFFF;" version="1.1" viewBox="0 0 543 387" width="543px" zoomAndPan="magnify"><defs/><g><!--MD5=[8284efcdb2c06113b670adc4eb5eeffa]
+cluster EDDIE Framework--><g id="cluster_EDDIE Framework"><rect fill="none" height="349" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="530" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="138" x="203" y="21.9951">EDDIE Framework</text></g><!--MD5=[8a509646a725e4b29ac3346bf48b9d0c]
+cluster local--><g id="cluster_local"><polygon fill="none" points="31,60,41,50,513,50,513,322,503,332,31,332,31,60" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="503" x2="513" y1="60" y2="50"/><line style="stroke:#181818;stroke-width:1.0;" x1="31" x2="503" y1="60" y2="60"/><line style="stroke:#181818;stroke-width:1.0;" x1="503" x2="503" y1="60" y2="332"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="230" x="153" y="75.9951">«Local Computing Infrastructure»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="125" x="205.5" y="92.292">Docker Runtime</text></g><!--MD5=[3350d7f66612901443cd0d848f04b832]
+entity consentFacade--><g id="elem_consentFacade"><rect fill="none" height="71.8906" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="115" x="47.5" y="106"/><polygon fill="none" points="145.5,111,145.5,125,157.5,125,157.5,117,151.5,111,145.5,111" style="stroke:#000000;stroke-width:0.5;"/><line style="stroke:#000000;stroke-width:0.5;" x1="151.5" x2="151.5" y1="111" y2="117"/><line style="stroke:#000000;stroke-width:0.5;" x1="157.5" x2="151.5" y1="117" y2="117"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="85" x="57.5" y="131.9951">«Container»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="62" y="148.292">Permission</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="62" y="164.5889">Facade</text></g><!--MD5=[f687954eaad6e4cc089d50ae0ac13b41]
+entity comm--><g id="elem_comm"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="148" x="198" y="110.5"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="326" y="115.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="324" y="117.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="324" y="121.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="213" y="143.4951">Interoperable</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="213" y="159.792">Communication</text></g><!--MD5=[5dc741833ab4bfb2da004728c4a088b3]
+entity adminConsole--><g id="elem_adminConsole"><rect fill="none" height="71.8906" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="115" x="381.5" y="106"/><polygon fill="none" points="479.5,111,479.5,125,491.5,125,491.5,117,485.5,111,479.5,111" style="stroke:#000000;stroke-width:0.5;"/><line style="stroke:#000000;stroke-width:0.5;" x1="485.5" x2="485.5" y1="111" y2="117"/><line style="stroke:#000000;stroke-width:0.5;" x1="491.5" x2="485.5" y1="117" y2="117"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="85" x="391.5" y="131.9951">«Container»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="405.5" y="148.292">Admin</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="405.5" y="164.5889">Console</text></g><!--MD5=[e701bbac852ce3c7f1c3d2193e52d58f]
+entity broker--><g id="elem_broker"><rect fill="none" height="71.8906" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="122" x="192" y="241"/><polygon fill="none" points="297,246,297,260,309,260,309,252,303,246,297,246" style="stroke:#000000;stroke-width:0.5;"/><line style="stroke:#000000;stroke-width:0.5;" x1="303" x2="303" y1="246" y2="252"/><line style="stroke:#000000;stroke-width:0.5;" x1="309" x2="303" y1="252" y2="252"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="85" x="205.5" y="266.9951">«Container»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="202" y="283.292">Streaming</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="202" y="299.5889">Infrastructure</text></g><!--MD5=[f50ff5e4cd64f259303fc83dba1819fc]
+entity database--><g id="elem_database"><path d="M349,248 C349,238 423,238 423,238 C423,238 497,238 497,248 L497,305.8906 C497,315.8906 423,315.8906 423,315.8906 C423,315.8906 349,315.8906 349,305.8906 L349,248 " fill="none" style="stroke:#000000;stroke-width:0.5;"/><path d="M349,248 C349,258 423,258 423,258 C423,258 497,258 497,248 " fill="none" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="85" x="380.5" y="274.9951">«Container»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="391" y="291.292">Database</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="359" y="307.5889"> </text></g><!--MD5=[d799de9f50b8d4eb11cfb4763ee2e47d]
+link consentFacade to comm--><g id="link_consentFacade_comm"><path d="M162.94,142 C174.24,142 186.24,142 197.98,142 " fill="none" id="consentFacade-comm" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8d0bb3a8ac0afb0b1a4e30acd93d7473]
+link comm to adminConsole--><g id="link_comm_adminConsole"><path d="M346.22,132 C357.98,132 369.99,132 381.3,132 " fill="none" id="comm-adminConsole" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e071a9dc6c11ec7ec3a3b1e36f9273c6]
+link comm to broker--><g id="link_comm_broker"><path d="M256,173.65 C256,193.76 256,219.84 256,240.78 " fill="none" id="comm-broker" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a462568bff7f8f6d71ca2229719e80fc]
+link comm to database--><g id="link_comm_database"><path d="M346.38,153 C357.46,153 365.25,153 365.25,153 C365.25,153 365.25,201.44 365.25,237.77 " fill="none" id="comm-database" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[52c3acec2326dcc0f52e0055c6cc32f1]
+link adminConsole to database--><g id="link_adminConsole_database"><path d="M439,178.18 C439,196.61 439,219.05 439,237.88 " fill="none" id="adminConsole-database" style="stroke:#181818;stroke-width:1.0;"/></g><rect fill="none" height="16.2969" id="_caption" style="stroke:none;stroke-width:1.0;" width="301" x="114" y="362"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="301" x="114" y="374.9951">Deployment Diagram: Level 2 view, option 1</text><!--MD5=[a4bb3ff4b9ee740c9d1e4dcf411fa6d9]
+@startuml deployment-diagram-option-1
+'deployment diagram
+caption Deployment Diagram: Level 2 view, option 1
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam artifact{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam actor{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+
+rectangle "EDDIE Framework" {
+  node "Docker Runtime" <<Local Computing Infrastructure>> as local {    
+    artifact "Permission\nFacade" <<Container>> as consentFacade
+    component "Interoperable\nCommunication" as comm
+    artifact "Admin\nConsole" <<Container>> as adminConsole
+    artifact "Streaming\nInfrastructure" <<Container>> as broker
+    database "\tDatabase\t\n" <<Container>> as database
+  }
+}
+  consentFacade -right- comm
+  adminConsole -left- comm
+  comm -down- broker
+  comm -down- database
+  adminConsole -down- database 
+  
+@enduml
+
+@startuml deployment-diagram-option-1
+caption Deployment Diagram: Level 2 view, option 1
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam artifact{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam actor{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+
+rectangle "EDDIE Framework" {
+  node "Docker Runtime" <<Local Computing Infrastructure>> as local {    
+    artifact "Permission\nFacade" <<Container>> as consentFacade
+    component "Interoperable\nCommunication" as comm
+    artifact "Admin\nConsole" <<Container>> as adminConsole
+    artifact "Streaming\nInfrastructure" <<Container>> as broker
+    database "\tDatabase\t\n" <<Container>> as database
+  }
+}
+  consentFacade -right- comm
+  adminConsole -left- comm
+  comm -down- broker
+  comm -down- database
+  adminConsole -down- database 
+  
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

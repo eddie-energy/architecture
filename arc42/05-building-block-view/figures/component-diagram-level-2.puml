@@ -45,9 +45,8 @@ node "Eligible Party Infrastructure"  as epInfra{
 
   ui -down(0- consentFacade
   ui -[hidden]right- services
-  consentFacade -right- broker
   consentFacade -down- comm
-  broker -right- database
+  database -down- comm
   broker -down- comm
   database -right-adminConsole
   broker -up0)- services
@@ -70,11 +69,12 @@ node "Regional Data-sharing\nInfrastructure" as energyProvider {
 actor "Customer" as consumer
 actor "Eligible\nParty" as ep
 
-component "Marketplace" as marketplace
+node "Federated Infrastructure"  as marketplaceNode {
+  component "Marketplace" as marketplace
+}
 
 consumer -right- marketplace
 marketplace -down- ep
-
 
 ep -left- adminConsole
 

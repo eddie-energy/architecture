@@ -16,7 +16,7 @@ For the eligible party to access the historical validated energy consumption dat
 1. Using this information, the eligible party creates a Customer Consent Management (CCM) request ([CM_REQ](https://www.ebutilities.at/prozesse)) for access to the customer's energy data.
 1. The eligible party sends this request to the interface of the Regional Data-sharing Infrastructure, i.e., EDA, via the AS4 protocol.
 1. EDA forwards the request to the DSO (Distribution System Operator) of the customer.
-1. At this point, the consumer has to log in to the DSO website and accept the CCM request.
+1. At this point, the customer has to log in to the DSO website and accept the CCM request.
 1. The DSO forwards the acceptance to EDA, and EDA sends a status update to the eligible party via AS4.
 1. The DSO sends the requested data to EDA.
 1. EDA sends the data (as a [ConsumptionRecord](https://www.ebutilities.at/schemas/133)) to the eligible party via AS4.

@@ -32,22 +32,22 @@ skinparam rectangle{
 node "Eligible Party Infrastructure" as epInfra{
   node "Docker Runtime" <<Local Computing Infrastructure>> as local {    
     component "EDDIE Framework" {
-    component "Consent \nFacade" as consentFacade
+    artifact "Permission\nFacade" <<Container>> as consentFacade
     artifact "Streaming\nInfrastructure" <<Container>> as broker
     database "Database\n" <<Container>> as database
-    component "Admin \nConsole" as adminConsole
+    artifact "Admin \nConsole" <<Container>> as adminConsole
     component "\t\t\t\tInteroperable Communication\t\t\t\t" as comm
     }
   }
   node "Docker Runtime" <<Cloud Computing Infrastructure>> as cloud{
-    artifact "User Interface\n(Website or App)" <<Container>>as ui
+    artifact "EP Website" <<Container>>as ui
     artifact "Service" <<Container>> as services
   }
 
   ui -down- consentFacade
   ui -[hidden]right- services
-  consentFacade -right- broker
-  broker -right- database
+
+  database -down- comm
   broker -down- comm
   database -right-adminConsole
   broker -up- services
@@ -69,9 +69,19 @@ node "Regional Data-sharing\nInfrastructure" as energyProvider {
   interface "Consent\nAdmin\nPortal" as adminPortal
 }
 
-actor "Consumer" as consumer
+actor "Customer" as consumer
 actor "Eligible Party" as admin
-  admin -left- adminConsole
+
+node "Docker Runtime"  <<Federated Infrastructure>>  as marketplaceNode {
+  component "Marketplace" as marketplace
+}
+
+consumer -right- marketplace
+marketplace -down- admin
+
+
+
+admin -left- adminConsole
 
 consumer ---- aiida
 consumer - ui
@@ -81,6 +91,5 @@ comm -down-( adminPortal
 consentFacade -down- comm
 
 aiida -up- comm
-
 
 @enduml
