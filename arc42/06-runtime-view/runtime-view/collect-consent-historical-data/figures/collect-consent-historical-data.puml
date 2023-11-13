@@ -21,8 +21,6 @@ box "EDDIE Framework" #transparent
   end box
 end box
 
-user -> website : login(credentials)
-
 user -> website : connect(\nhistoricalData)
 activate website
   website -->> user : show(popUp)

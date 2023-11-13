@@ -4,18 +4,18 @@ title: Runtime View
 
 ## Overview
 
-The runtime view focuses on interactions among the system's components. The goal of this section is to describe representative and important workflows that occur during the runtime of the system. These workflows are divided in sections, as shown below.
+The runtime view focuses on interactions among the system's components. The goal of this section is to describe representative and important workflows that occur during the runtime of the system. These workflows are categorized into sections, as shown below.
 
-## 1. Collect Consent Form from the Customer 
+## 1. Collect the Consent Form of the Customer
 
 | Consent Form | Section |
 |-|-|
 | For Access to Historical Validated Data | [Link](./runtime-view/collect-consent-historical-data/collect-consent-historical-data.md) |
 | For Access to Real-time Data | [Link](./runtime-view/collect-consent-real-time-data/collect-consent-real-time-data.md) |
 
-## 2. Request the Customer Consent
+## 2. Request the Customer's Consent
 
-### For Accessing Historical Validated Data
+### Regarding Historical Validated Data
 
 <!-- Since the process to request the customer consent from the Regional Data-sharing Infrastructure can vary per country, the table below provides links to more detailed information for each country. -->
 
@@ -25,7 +25,7 @@ The runtime view focuses on interactions among the system's components. The goal
 <!-- | France | [Link](./runtime-view/request-consent-france/request-consent-france.md) | -->
 <!-- | Spain | TBD | -->
 
-### For Accessing Real-time Data
+### Regarding Real-time Data
 
 | Section |
 |-|
@@ -33,7 +33,7 @@ The runtime view focuses on interactions among the system's components. The goal
 
 ## 3. Access the Customer Data
 
-### Access Historical Validated Data
+### Access the Historical Validated Data
 
 <!-- Since the process to access the historical validated data from the Regional Data-sharing Infrastructure can vary per country, the table below provides links to more detailed information for each country. -->
 
@@ -43,14 +43,14 @@ The runtime view focuses on interactions among the system's components. The goal
 | France | [Link](./runtime-view/access-historical-data-france/access-historical-data-france.md) |
 <!-- | Spain | TBD | -->
 
-### Access Real-time Data
+### Access the Real-time Data
 
 | Section |
 |-|
 | [Link](./runtime-view/access-real-time-data/access-real-time-data.md) |
 
 
-## 4. Send Data to Services
+## 4. Send the Data to the Services
 
 | Connector | Section |
 |-|-|
@@ -59,12 +59,12 @@ The runtime view focuses on interactions among the system's components. The goal
 
 
 
-## 5. Revoke Customer Consent
+## 5. Revoke the Customer's Consent
 
 | Actor | Section |
 |-|-|
 | The customer revokes the consent at the Consent Admin Portal | [Link](./runtime-view/revocation-customer-consent-admin-portal/revocation-customer-consent-admin-portal.md) |
-| The permission administrator revokes the consent | [Link](./runtime-view/revocation-permission-administrator/revocation-permission-administrator.md) |
+| The metered data administrator revokes the consent | [Link](./runtime-view/revocation-meter-data-administrator/revocation-meter-data-administrator.md) |
 | The customer revokes the consent by terminating a Service | [Link](./runtime-view/revocation-customer-terminates-service/revocation-customer-terminates-service.md) |
 | The eligible party revokes the consent by terminating a Service | [Link](./runtime-view/revocation-eligible-party-terminates-service/revocation-eligible-party-terminates-service.md) |
 

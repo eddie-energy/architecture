@@ -1,4 +1,4 @@
-@startuml metered-data-admin-revokes-consent
+@startuml meter-data-admin-revokes-consent
 'sequence diagram
 caption Sequence Diagram: The metered data administrator revokes the consent
 
@@ -11,7 +11,9 @@ skinparam sequence {
 autonumber
 !pragma teoz true
 
-participant "Metered Data\nAdministrator" as mda
+box "Regional Data-sharing\nInfrastructure" #transparent
+  participant "Metered Data\nAdministrator" as mda
+end box
 box "EDDIE Framework" #transparent
   box "Interoperable\nCommunication" #transparent
     participant "Regional\nConnector" as regionalConnector

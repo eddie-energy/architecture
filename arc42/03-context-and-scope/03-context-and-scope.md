@@ -40,7 +40,7 @@ The table below shows a description of all the entities of the context diagram.
 | Component | Description | Within Scope |
 |-|-|-|
 | AIIDA | This is a software component that is deployed on an in-house device and connects to the house's energy metering devices. AIIDA collects real-time data from metering devices (e.g., a smart meter and/or an IoT home automation system), and sends this data to the EDDIE Framework. | &#x2611; Yes | 
-| Regional Data-sharing Infrastructure | This is the existing infrastructure of a Member State that provides access to historical data (e.g., historical validated metering data) about the energy consumption of a customer, i.e., energy consumption within a house. This infrastructure is provided, e.g., by a metered data administrator. | &#x2612; No|
+| Regional Data-sharing Infrastructure | This is the existing infrastructure of a Member State that provides access to historical data (e.g., historical validated metering data) about the energy consumption of a customer, i.e., energy consumption within a house. This infrastructure is provided, e.g., by a persmission administrator, and/or a metered data administrator. | &#x2612; No|
 | EDDIE Framework | This is a software component that runs on eligible party owned/operated infrastructure (e.g., local or cloud computing resources). It aggregates real-time metering data from AIIDA and historical validated data from the Regional Data-sharing Infrastructure (can be multiple instances of AIIDA and Regional Data-sharing Infrastructures), and consolidates it. | &#x2611; Yes |
 | Services | Each Service is a software component that is deployed by the eligible party on local/cloud computing resources. A Service acquires consolidated (real-time and/or historical) energy data from the EDDIE Framework and uses it to generate value, e.g., using data analysis methods that are based on statistics, machine learning, and artificial intelligence. Entities that can have a particular interest in taking the role of the eligible party and running Services for processing energy data can be, e.g.,  energy service providers and flexibility service providers. | &#x2612; No |
 
@@ -86,7 +86,7 @@ The table below shows a summary of the interfaces.
 
 ## Prerequisites
 
-Since the EDDIE framework interacts with various external components and infrastructures (e.g., the Regional Data-sharing Infrastructures, and AIIDA instances), certain prerequisites and dependencies arise. All the prerequisites are outlined in link below. 
+Since the EDDIE framework interacts with various external components and infrastructures (e.g., the Regional Data-sharing Infrastructures, and AIIDA instances), certain prerequisites and dependencies arise. All the prerequisites are outlined in the link below. 
 
 
 

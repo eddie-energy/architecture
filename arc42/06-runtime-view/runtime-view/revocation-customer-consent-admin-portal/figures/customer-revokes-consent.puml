@@ -12,7 +12,9 @@ autonumber
 !pragma teoz true
 
 actor "Customer" as user
-participant "Consent\nAdmin Portal" as adminPortal
+box "Regional Data-sharing\nInfrastructure" #transparent
+  participant "Consent\nAdmin Portal" as adminPortal
+end box
 box "EDDIE Framework" #transparent
   box "Interoperable\nCommunication" #transparent
     participant "Regional\nConnector" as regionalConnector

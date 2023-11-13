@@ -34,18 +34,14 @@ box "Regional Data-sharing\nInfrastructure" #transparent
 end box
 
 microfrontend -> user : show(redirection)
-user -> adminPortal : login(credentials)
-user -> adminPortal : approve(consentRequest)
-activate adminPortal
+user -> dataPortal : login(credentials)
+user -> dataPortal : approve(consentRequest)
+activate dataPortal
+dataPortal -> adminPortal : CCM approved
+deactivate dataPortal
 adminPortal -> pontonXP : CCM approved
-deactivate adminPortal
-activate pontonXP
 pontonXP -> pontonAdapter : CCM approved
-deactivate pontonXP
-activate pontonAdapter
 pontonAdapter -> microfrontend : CCM approved
-deactivate pontonAdapter
-activate microfrontend
 microfrontend -> user : show(\nconsentStatus)
 deactivate microfrontend
 
@@ -57,7 +53,5 @@ adminPortal -> pontonXP : send(data)
 
 pontonXP -> pontonAdapter : send(data)
 pontonAdapter -> messageProducer : send(data)
-
-
 
 @enduml

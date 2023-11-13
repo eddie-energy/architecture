@@ -25,7 +25,6 @@ box "Regional Data-sharing\nInfrastructure" #transparent
   participant "Consent\nAdmin Portal" as adminPortal
 end box
 
-user -> consentFacade : login(credentials)
 user -> consentFacade : terminate(service)
 activate consentFacade
   consentFacade -> regionalConnector : terminate(service,\ncustomer)
