@@ -51,7 +51,7 @@ The In-house Infrastructure hosts the following component which is provided by t
 | - | - |
 | AIIDA| The Administrative Interface for In-house Data Access (AIIDA) component connects to the Smart Meter in order to collect the real-time energy consumption data of a customer and send it to the EDDIE Framework. |
 
-There is one more component of the system shown below.
+There is one more node in the system shown above with the following components.
 
 | Component | Responsibility |
 | - | - |
@@ -92,10 +92,10 @@ The EDDIE Framework includes the following components.
 | Component | Responsibility |
 | - | - |
 | Permission Facade | Receives, stores, and manages the consent of the customers for access to both historical and real-time data (regardless of the customer's country).
-| Streaming Infrastructure | Facilitates the distribution of the data from the EDDIE Framework to the Services in a publish-subscribe fashion. |
+| Streaming Infrastructure | Facilitates the distribution of the data from the EDDIE Framework to the Services in a publish-subscribe fashion (for both historical and real-time data). |
 | Database | Stores configuration information and metadata regarding the eligible party, the customers, the consents, and the state of the EDDIE Framework. |
 | Admin Console | Provides an overview of active/inactive Services, consents and requests for data access, along with configuration options such as terminate, restart, etc. |
-| Interoperable Communication | Integrates the mechanisms to interact with the Regional Data-sharing Infrastructures for requesting consents and for accessing energy data. Also it establishes communication with multiple AIIDA instances for accessing real-time data from Smart Meters. | 
+| Interoperable Communication | Integrates the mechanisms to interact with the Regional Data-sharing Infrastructures for requesting consents and for accessing historical validated energy data. Also, it establishes communication with multiple AIIDA instances for accessing real-time data from Smart Meters. | 
 
 <!-- The AIIDA component includes the following components.
 
@@ -111,7 +111,7 @@ The Level 2 view introduces the following interfaces.
 | - | - | - |
 | Permission Facade | EP Website | HTTP |
 | Streaming Infrastructure | Services | Kafka |
-| Interoperable Communication | AIIDA | Kafka |
+| Streaming Infrastructure | AIIDA | Kafka |
 
 ## Component Description
 

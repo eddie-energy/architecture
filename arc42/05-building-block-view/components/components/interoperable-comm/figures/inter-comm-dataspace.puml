@@ -34,20 +34,24 @@ node "Eligible Party Infrastructure"  as epInfra{
       component "Message\nProducer" as messageProducer
       component "Dataspace\nConnector\n" as dataspaceConnector
       interface "Public API" as dataspaceAPI
-      interface " " as aiidaAPI
 
-
-      regCon -up-> messageProducer : Historical data
-      regConAIIDA -up-> messageProducer : "\n Real-time\ndata"
+      regCon ---right--> messageProducer : \n\nHistorical data
       dataspaceConnector -left- dataspaceAPI
       dataspaceConnector -down- messageProducer
       ' messageProducer -right-> marketplace
     }
     component "Streaming\nInfrastructure" as streaming
+    database "Database\n" as database
 
-    consentFacade -down- comm
-    messageProducer -up-> streaming : Publish\ndata
+    messageProducer -up-> streaming : Publish data
     dataspaceConnector -right- streaming
+
+    consentFacade -down- regCon
+    consentFacade -down- regConAIIDA
+    database -right- regCon
+    database -right- regConAIIDA
+
+    consentFacade -[hidden]left- database
   }
 
 }
@@ -56,15 +60,11 @@ node "Regional Data-sharing\nInfrastructure" as energyProvider{
   interface "Consent\nAdmin\nPortal" as adminPortal
 }
 
-node "In-house\nInfrastructure" {
-  component "AIIDA" as aiida
-}
 
 regCon -down-( dataPortal
 regCon -down-( adminPortal
-regCon -[hidden]right- regConAIIDA
-regConAIIDA -right- aiidaAPI
-aiida -up-( aiidaAPI : Push\nreal-time data
+
+
 
 
 

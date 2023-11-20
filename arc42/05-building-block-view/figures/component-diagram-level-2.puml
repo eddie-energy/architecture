@@ -24,41 +24,42 @@ skinparam collections{
   BackgroundColor white
 }
 skinparam rectangle{
-  BorderColor transparent
+  ' BorderColor transparent
   BackgroundColor transparent
   FontColor transparent
 }
 
 
 node "Eligible Party Infrastructure"  as epInfra{
-  component "EDDIE Framework" {    
-    component "Permission \nFacade" as consentFacade
-    component "Streaming\nInfrastructure" as broker
+  component "EDDIE Framework" {
+
+    component "Permission \nFacade" as permissionFacade
+    component "Streaming\nInfrastructure" as streamingInfr
     database "Database\n" as database
     component "Admin \nConsole" as adminConsole
-    component "\t\t\t\t\tInteroperable Communication\t\t\t\t\t" as comm
+    component "\t\t\tInteroperable Communication\t\t\t" as comm
   }
- 
-    component "EP Website" as ui
-    collections "Service" as services
-  
+  component "EP Website" as epWebsite
+  collections "Service" as services
 
-  ui -down(0- consentFacade
-  ui -[hidden]right- services
-  consentFacade -down- comm
-  database -down- comm
-  broker -down- comm
+  ' permissionFacade -right- streamingInfr
+  ' streamingInfr -right- database
   database -right-adminConsole
-  broker -up0)- services
-  adminConsole -down- comm
 
+  epWebsite -down(0- permissionFacade
+  epWebsite -[hidden]right- services
+  permissionFacade -down- comm
+  database -down- comm
+  streamingInfr -down- comm
+  services -down(0- streamingInfr
+  adminConsole -down- comm
 }
 node "In-house\nInfrastructure" {
-  component "\tAIIDA\t" as aiida
+  component "\t\tAIIDA\t\t" as aiida
   node "Smart Meter" as meter {
-      interface "Smart Meter\nInterface" as p1
+    interface "Smart Meter\nInterface" as p1
   }
-  aiida -down-( p1 
+  aiida -down-( p1
 }
 
 node "Regional Data-sharing\nInfrastructure" as energyProvider {
@@ -66,24 +67,34 @@ node "Regional Data-sharing\nInfrastructure" as energyProvider {
   interface "Consent\nAdmin\nPortal" as adminPortal
 }
 
-actor "Customer" as consumer
+actor "Customer" as customer
 actor "Eligible\nParty" as ep
 
-node "Federated Infrastructure"  as marketplaceNode {
+node " "  as marketplaceNode {
   component "Marketplace" as marketplace
 }
 
-consumer -right- marketplace
+customer -right- marketplace
 marketplace -down- ep
 
-ep -left- adminConsole
+adminConsole -right- ep
 
-consumer -down- aiida
-consumer - ui
+customer -down- aiida
+
+epWebsite -right- customer
 
 comm -down-( dataPortal
 comm -down-( adminPortal
 
-aiida -up(0- comm
+interface " " as kafkaAiidaInterface
+
+' customer -down- kafkaInterface
+kafkaAiidaInterface )-down- aiida
+streamingInfr -right- kafkaAiidaInterface
+
+
+
+
+ 
 
 @enduml

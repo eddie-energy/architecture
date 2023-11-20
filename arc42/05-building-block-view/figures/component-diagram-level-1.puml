@@ -57,7 +57,7 @@ node "Regional Data-sharing\nInfrastructure" as energyProvider {
 actor "Customer" as consumer
 actor "Eligible\nParty" as ep
 
-node "Federated Infrastructure"   as marketplaceNode {
+node " "   as marketplaceNode {
   component "Marketplace" as marketplace
 }
 
