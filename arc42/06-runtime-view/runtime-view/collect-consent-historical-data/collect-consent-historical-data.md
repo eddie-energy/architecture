@@ -22,4 +22,4 @@ This workflow includes the following steps:
 8. The Microfrontend forwards the required data to the internal components of the Regional Connector which initiates the interactions with the Regional Data-sharing Infrastructure to request access to the historical validated data of the customer.
 9. The Microfrontend shows the customer that the consent is requested, and further information about a redirection to the website of the permission administrator (or the metered data administrator), where the customer may need to log in and approve the consent request.
 
-After the consent form has been collected, another workflow takes place to request the historical validated data from the Regional Data-sharing Infrastructure of the corresponding country. These workflows are presented [here](../../06-runtime-view.md).
+<!-- After the consent form has been collected, another workflow takes place to request the historical validated data from the Regional Data-sharing Infrastructure of the corresponding country. These workflows are presented [here](../../06-runtime-view.md). -->

@@ -1,5 +1,5 @@
 ---
-title: The Meter Data Administrator Revokes the Consent of the Customer
+title: The Metered Data Administrator Revokes the Consent of the Customer
 ---
 
 ## Overview
