@@ -6,7 +6,7 @@ title: Permission Facade Data Model
 
 The Permission Facade is responsible for gathering the necessary information from the customer to establish that the customer consent has been given to the eligible party. This information may vary based on the country of the customer and the type of the data. For this reason, this information is outlined in the following sections. All the discussed fields are filled out by the customer through the EP Website.
 
-## For Access to Historical Validate Data
+## For Access to Historical Validated Data
 
 ### Country-agnostic Fields
 
