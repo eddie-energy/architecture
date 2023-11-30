@@ -22,7 +22,7 @@ node "Eligible Party Infrastructure"  as epInfra{
   collections "Service" as service
 
   messageProducer --up-> streaming : Publish historical data
-  service --down-> streaming : Receive data
+  service <-down-- streaming : Subscribe to \nreceive data
 }
 
 node "In-house\nInfrastructure" {
