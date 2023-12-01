@@ -12,11 +12,14 @@ skinparam rectangle {
   BackgroundColor transparent
 }
 
-usecase "\n\nEDDIE\nFramework\n\n" as eddie 
-' #ffbd38
+rectangle "Poject Scope" #line:Gray;line.dashed {
+
+  usecase "\n\nEDDIE\nFramework\n\n" as eddie
+  ' #52cbff
+  rectangle "AIIDA\n" as aiida
+  ' #ffbd38
+}
 rectangle "Regional Data-sharing\n\tInfrastructure" as energy
-' #52cbff
-rectangle "AIIDA\n" as aiida
 ' #7aff83
 rectangle "Services\n" as services
 ' #ff52ab
