@@ -16,5 +16,5 @@ The AIIDA Frontend enables the following functionalities:
 1. Configure the connection to the Smart Meter.
 1. Configure the connection to the EDDIE Framework.
 1. View active and inactive connections/permissions.
-1. Manage existing connections/permissions (e.g., activate, deactivate, delete, etc.)
+1. Manage existing connections/permissions (e.g., activate, terminate, etc.)
 
