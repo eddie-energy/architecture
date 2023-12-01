@@ -1,6 +1,6 @@
 @startuml aiida-backend
 'component diagram
-caption Component Diagram: Internal view of the AIIDA Backend component
+caption Component Diagram: Internal view of the AIIDA Backend
 
 skinparam linetype ortho
 skinparam interface {
@@ -47,6 +47,7 @@ node "In-house\nInfrastructure" {
     aiidaAPI -right- permissionManager
     ' aiidaAPI -right- errorHandler
     permissionManager -down- errorHandler
+    permissionManager -right- streamer
 
     errorHandler -right- storage
     storage -right- aggregator
