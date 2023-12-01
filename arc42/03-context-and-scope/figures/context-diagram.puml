@@ -12,7 +12,7 @@ skinparam rectangle {
   BackgroundColor transparent
 }
 
-rectangle "Poject Scope" #line:Gray;line.dashed {
+rectangle "Project EDDIE Scope" #line:Gray;line.dashed {
 
   usecase "\n\nEDDIE\nFramework\n\n" as eddie
   ' #52cbff
