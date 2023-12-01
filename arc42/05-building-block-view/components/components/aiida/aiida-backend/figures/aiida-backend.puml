@@ -1,6 +1,6 @@
 @startuml aiida-backend
 'component diagram
-caption Component Diagram: AIIDA
+caption Component Diagram: Internal view of the AIIDA Backend component
 
 skinparam linetype ortho
 skinparam interface {
@@ -33,7 +33,7 @@ node "Eligible Party Infrastructure"  as epInfra{
 node "In-house\nInfrastructure" {
   component "\tAIIDA" as aiida {
     component "AIIDA\nFrontend" as frontend
-    component "  AIIDA\n  Backend" as backend{
+    component "  AIIDA Backend" as backend{
       component "Aggregator" as aggregator
       component "Streamer" as streamer
       component "Permission\nManager" as permissionManager
