@@ -14,5 +14,6 @@ This repository hosts the documentation of the software architecture of EDDIE (E
 
 - [EDDIE Website](https://eddie.energy/)
 - [EDDIE Linkedin](https://www.linkedin.com/company/eddie-energy/)
-- [EDDIE Github](https://github.com/eddie-energy)
+- [EDDIE GitHub](https://github.com/eddie-energy)
+- [EDDIE Zenodo](https://zenodo.org/communities/eddie/)
 - [EDDIE CORDIS](https://cordis.europa.eu/project/id/101069510)

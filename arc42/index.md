@@ -31,3 +31,4 @@ This document is organized as follows:
 - [EDDIE Linkedin](https://www.linkedin.com/company/eddie-energy/)
 - [EDDIE GitHub](https://github.com/eddie-energy)
 - [EDDIE Zenodo](https://zenodo.org/communities/eddie/)
+- [EDDIE CORDIS](https://cordis.europa.eu/project/id/101069510)
