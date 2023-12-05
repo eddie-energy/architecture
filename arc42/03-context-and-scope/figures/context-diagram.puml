@@ -11,21 +11,25 @@ skinparam rectangle {
   BorderColor black
   BackgroundColor transparent
 }
+skinparam collections {
+  BorderColor black
+  BackgroundColor white
+}
 
 rectangle "Project EDDIE Scope" #line:Gray;line.dashed {
 
   usecase "\n\nEDDIE\nFramework\n\n" as eddie
   ' #52cbff
-  rectangle "AIIDA\n" as aiida
+  collections "AIIDA\n" as aiida
   ' #ffbd38
 }
-rectangle "Regional Data-sharing\n\tInfrastructure" as energy
+collections "Regional Data-sharing\n\tInfrastructure" as energy
 ' #7aff83
-rectangle "Services\n" as services
+rectangle "Eligible\nParty" as services
 ' #ff52ab
 
-aiida -right-> eddie :Real-time data
-energy -up-> eddie :Historical data
-eddie -right-> services :Real-time and historical data
+aiida -right-> eddie : Send real-time data
+energy -up-> eddie : Send historical data
+eddie -right-> services : Send real-time and historical data
 
 @enduml
