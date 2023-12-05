@@ -17,5 +17,5 @@ As soon as you have a suggestion of any type to improve the document, please cre
 
 ### Solving issues
 
-If you wish to resolve an existing [issue](https://github.com/eddie-energy/architecture/issues), please push your solution with one commit message describing your changes directly on the main branch. Provide a short description of the solution to the issue including a link to the commit message and optionally links to the changes on the [website](https://eddie-web.projekte.fh-hagenberg.at/architecture/).
+If you wish to resolve an existing [issue](https://github.com/eddie-energy/architecture/issues), please push your solution with one commit message (or more if necessary) describing your changes directly on the main branch. In this commit message, please also add the number of the issue at the end, e.g., "Add link to CONTRIBUTING file #43". Provide a short description of the solution to the issue including links to the changes on the [website](https://eddie-web.projekte.fh-hagenberg.at/architecture/).
 
