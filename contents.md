@@ -10,7 +10,6 @@
 
 1. [Context & Scope](./arc42/03-context-and-scope/03-context-and-scope.md)
 
-1. [Solution Strategy](./arc42/04-solution-strategy/04-solution-strategy.md)
 
 1. [Building Block View](./arc42/05-building-block-view/05-building-block-view.md)
 
