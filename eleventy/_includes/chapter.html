@@ -31,7 +31,7 @@ activeKey: (data) => data.eleventyNavigation.key
   </header>
   <div class="container">
     <nav>
-      {{ collections.all | eleventyNavigation | eleventyNavigationToHtml: navigationOptions }}
+      {{ collections.all | eleventyNavigation | renderNav: page.url }}
     </nav>
     <main>
       <h1>{{ title }}</h1>
@@ -42,6 +42,37 @@ activeKey: (data) => data.eleventyNavigation.key
     <span>last edited on {{ page.date | date: "%d.%m.%Y %H:%M" }}</span>
     <a href="https://github.com/eddie-energy/architecture/blob/main/{{ page.inputPath }}">edit on GitHub</a>
   </footer>
+
+
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Listener for summary clicks
+      document.querySelectorAll("nav details.collapsible summary").forEach(summary => {
+        summary.addEventListener("click", function (event) {
+          console.log("Summary clicked: " + this.textContent);
+          let details = summary.parentNode;
+          summary.setAttribute("open", "");
+          console.log("Summary ended");
+          // event.preventDefault();
+          // if (details.hasAttribute("open")) {
+          //   details.removeAttribute("open");
+          // } else {
+          //   details.setAttribute("open", "");
+          // }
+
+        });
+      });
+
+      document.querySelectorAll("nav details.collapsible summary a").forEach(link => {
+        link.addEventListener("click", function (event) {
+          console.log("Link clicked: " + this.textContent);
+          //event.stopPropagation(); // Prevent triggering the summary's click event
+        });
+      });
+    });
+  </script> -->
+
+
 </body>
 
 </html>
