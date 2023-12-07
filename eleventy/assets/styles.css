@@ -87,14 +87,15 @@ a.current {
   margin-bottom: 0;
   padding-top: 0;
   padding-bottom: 0;
+  line-height: 0.8;
 }
 
 .container>nav ul ul {
   padding-left: 1em;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  margin-top: 0em;
-  margin-bottom: 0em;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* ================================================================> collapsible TOC */
@@ -124,10 +125,10 @@ details>summary {
   padding: 0;
   /* Remove padding */
   background-color: rgb(255, 255, 255);
-  padding-top: 0em;
-  padding-bottom: 0em;
-  margin-top: 0em;
-  margin-bottom: 0em;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   
 }
 
