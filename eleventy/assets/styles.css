@@ -60,10 +60,6 @@ footer span {
 }
 
 /* ================================================================> navigation */
-.container>nav {
-  /* font-size: 1.1em; Increase the font size if needed */
-}
-
 .container>nav>ol {
   padding-left: 0;
 }
@@ -81,47 +77,121 @@ a.current {
 .container>nav>ul>li {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
-.container > nav ul {
+.container>nav ul {
   margin: 0;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.container > nav ul ul {
-  padding-left: 1em; /* Adjust this value as needed */
+.container>nav ul ul {
+  padding-left: 1em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-top: 0em;
+  margin-bottom: 0em;
 }
 
 /* ================================================================> collapsible TOC */
 details {
-  margin-bottom: 0.5em;
-  border-left: 3px solid var(--eddie-blue);
-  padding-left: 1em;
+  /* border-left: 3px solid var(--eddie-blue); */
+  padding-top: 0;
+  padding-left: 0;
   margin-left: 0;
-  /* Added to ensure no extra left margin */
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: rgb(255, 255, 255);
 }
+details[open] {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 
 details>summary {
   /* font-weight: bold; */
-  cursor: pointer;
+  /* cursor: context-menu; */
   color: var(--eddie-blue);
+  margin: 0;
+  /* Remove margin */
+  padding: 0;
+  /* Remove padding */
+  background-color: rgb(255, 255, 255);
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  
 }
 
-details[open] {
-  background-color: rgb(255, 255, 255);
+details[open]>summary::before {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
+
 
 /* ================================================================> tables */
-.container > main table {
-  width: 100%; /* Makes the table use the full width of its container */
-  table-layout: auto; /* Allows columns to adjust based on content */
-  border-collapse: collapse; /* Optional: Collapses border spacings */
+.container>main table {
+  width: 100%;
+  /* Makes the table use the full width of its container */
+  table-layout: auto;
+  /* Allows columns to adjust based on content */
+  border-collapse: collapse;
+  /* Optional: Collapses border spacings */
 }
 
-.container > main th, 
-.container > main td {
-  text-align: justify; /* Aligns text to the left within cells */
-  padding: 8px; /* Adds padding inside each cell */
-  border: 1px solid #ccc; /* Optional: Adds border to each cell */
-  background-color: white; /* Set the background color for table cells and headers */
+.container>main th,
+.container>main td {
+  text-align: justify;
+  /* Aligns text to the left within cells */
+  padding: 8px;
+  /* Adds padding inside each cell */
+  border: 1px solid #ccc;
+  /* Optional: Adds border to each cell */
+  background-color: white;
+  /* Set the background color for table cells and headers */
+}
+
+/* ================================================================> expand arrows */
+
+/* Hide the default arrow */
+details>summary {
+  list-style: none;
+}
+
+details>summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Create a custom arrow */
+details>summary::before {
+  /* content: '➤';  */
+  /* content: '➣';  */
+  /* content: '▶';  */
+  content: '›';
+  font-size: 2em;
+  /* Adjust size as needed */
+  margin-right: 0.5em;
+  /* Add other styling as needed (e.g., color) */
+}
+
+/* Change the arrow when details are open */
+details[open]>summary::before {
+  content: '›';
+  /* Arrow symbol */
+  display: inline-block;
+  /* Ensure the content is an inline block */
+  transform: rotate(90deg);
+  /* Rotate by 45 degrees */
+  transform-origin: center;
+  /* Set the rotation origin to the center */
 }
