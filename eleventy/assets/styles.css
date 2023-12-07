@@ -193,7 +193,7 @@ details>summary::before {
   content: '›';
   font-size: 2em;
   /* Adjust size as needed */
-  margin-right: 0.5em;
+  margin-right: 0.2em;
   /* Add other styling as needed (e.g., color) */
 }
 

@@ -6,13 +6,13 @@ title: Regional Hurdles
 
 In the process of achieving compatibility with the Regional Data-sharing Infrastructures, various hurdles are identified, mostly related to the functionality offered through the relevant APIs. These hurdles are categorized in the table below based on the country, to be shared with the energy community.
 
-| Regional Hurdles | Section |
-|-|-|
-| Austria | [Link](./development/dev-eda/issues.md) |
-| France | [Link](./development/dev-enedis/issues.md) |
-| Spain | [Link](./development/dev-datadis/issues.md) |
+| Country | Infrastructure Operator | Section |
+|-|-|-|
+| Austria | EDA | [Link](./development/dev-eda/issues.md) |
+| France | Enedis | [Link](./development/dev-enedis/issues.md) |
+| Spain | Datadis |[Link](./development/dev-datadis/issues.md) |
 
-## External Systems
+<!-- ## External Systems
 
 Some technical interactions that can already be achieved through the Regional Data-sharing Infrastructure are documented in the table below based on country.
 
@@ -28,7 +28,7 @@ Some technical aspects of the demonstrators developed within the context of EDDI
 
 | Product | Section |
 |-|-|
-| MVP-1 | [Link](./development/dev-mvp1/dev-mvp1.md) |
+| MVP-1 | [Link](./development/dev-mvp1/dev-mvp1.md) | -->
 
 
 
