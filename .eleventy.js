@@ -23,9 +23,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("arc42/**/*.(png|gif|jpg|svg)");
   eleventyConfig.addTransform("transformUrls", transformUrls);
 
-  // eleventyConfig.on('eleventy.before', async () => {
-  //   await writeIssues()
-  // });
+  eleventyConfig.on('eleventy.before', async () => {
+    await writeIssues()
+  });
 
   // Function to recursively render navigation
   function renderNavigation(items, currentPageUrl, parentIndex = '', isTopLevel = true) {
