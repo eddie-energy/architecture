@@ -33,25 +33,27 @@ module.exports = function (eleventyConfig) {
     let counter = 1;
 
     for (const item of items) {
-        // Generate the index for the current item
         let currentIndex = isTopLevel ? '' : (parentIndex ? `${parentIndex}.${counter}` : counter.toString());
-
         let isActive = currentPageUrl.startsWith(item.url);
+        let displayTitle = isTopLevel ? item.title : `${currentIndex} ${item.title}`;
 
-        if (item.children && item.children.length) {
-            let displayTitle = isTopLevel ? item.title : `${currentIndex} ${item.title}`;
-            html += `<details class="collapsible" ${isActive ? 'open' : ''}>`;
-            html += `<summary ${isActive ? 'style="font-weight: bold;"' : ''}><a href="${item.url}" class="nav-parent">${displayTitle}</a></summary>`;
-          
-
-            // Recursively call for children with updated parentIndex and isTopLevel flag
-            html += renderNavigation(item.children, currentPageUrl, currentIndex, false);
-            html += `</details>`;
+        if (isTopLevel) {
+            // Top-level items are not collapsible
+            html += `<li ${isActive ? 'style="font-weight: bold;"' : ''}><a href="${item.url}">${displayTitle}</a></li>`;
+            
+            if (item.children && item.children.length) {
+                // Recursively call for children with updated parentIndex and isTopLevel flag
+                html += renderNavigation(item.children, currentPageUrl, currentIndex, false);
+            }
         } else {
-            let displayTitle = isTopLevel ? item.title : `${currentIndex} ${item.title}`;
+            // Nested items remain collapsible
             html += `<details class="collapsible" ${isActive ? 'open' : ''}>`;
-            html += `<summary ${isActive ? 'style="font-weight: bold;"' : ''}><a href="${item.url}" class="nav-child">${displayTitle}</a></summary>`;
-
+            html += `<summary ${isActive ? 'style="font-weight: bold;"' : ''}><a href="${item.url}" class="${isTopLevel ? 'nav-parent' : 'nav-child'}">${displayTitle}</a></summary>`;
+            
+            if (item.children && item.children.length) {
+                // Recursively call for children with updated parentIndex and isTopLevel flag
+                html += renderNavigation(item.children, currentPageUrl, currentIndex, false);
+            }
             html += `</details>`;
         }
 
@@ -60,6 +62,7 @@ module.exports = function (eleventyConfig) {
 
     return html ? `<ul>${html}</ul>` : '';
 }
+
 
 
 
