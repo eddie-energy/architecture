@@ -41,14 +41,17 @@ module.exports = function (eleventyConfig) {
         if (item.children && item.children.length) {
             let displayTitle = isTopLevel ? item.title : `${currentIndex} ${item.title}`;
             html += `<details class="collapsible" ${isActive ? 'open' : ''}>`;
-            html += `<summary><a href="${item.url}" class="nav-parent">${displayTitle}</a></summary>`;
+            html += `<summary ${isActive ? 'style="font-weight: bold;"' : ''}><a href="${item.url}" class="nav-parent">${displayTitle}</a></summary>`;
+          
+
             // Recursively call for children with updated parentIndex and isTopLevel flag
             html += renderNavigation(item.children, currentPageUrl, currentIndex, false);
             html += `</details>`;
         } else {
             let displayTitle = isTopLevel ? item.title : `${currentIndex} ${item.title}`;
             html += `<details class="collapsible" ${isActive ? 'open' : ''}>`;
-            html += `<summary><a href="${item.url}" class="nav-child">${displayTitle}</a></summary>`;
+            html += `<summary ${isActive ? 'style="font-weight: bold;"' : ''}><a href="${item.url}" class="nav-child">${displayTitle}</a></summary>`;
+
             html += `</details>`;
         }
 

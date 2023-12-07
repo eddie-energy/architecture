@@ -6,8 +6,10 @@
 }
 
 body {
-  max-width: 1100px;
-  padding: 0 2ch;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 header {
@@ -17,29 +19,34 @@ header {
   padding-bottom: 0.5em;
 }
 
-header > h1 {
+header>h1 {
   font-weight: bolder;
   color: var(--eddie-blue);
   flex-grow: 1;
   margin: 0;
 }
 
-header > img {
+header>img {
   height: 4rem;
 }
 
 .container {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
-.container > nav {
-  flex: 0 0 30ch;
+.container>nav {
+  flex: 0 0 50ch;
 }
 
-.container > main {
-  flex: 1 1 80ch;
+div.container>nav {
+  padding-right: 1rem;
+}
+
+.container>main {
+  flex-grow: 1;
+  text-align: justify;
 }
 
 footer {
@@ -53,20 +60,15 @@ footer span {
 }
 
 /* ================================================================> navigation */
-.container > nav > ol {
+.container>nav {
+  /* font-size: 1.1em; Increase the font size if needed */
+}
+
+.container>nav>ol {
   padding-left: 0;
 }
 
-.container > nav > ol ol,
-.container > nav > ol ol ol {
-  padding-left: 3ch;
-}
-
-.container > nav > ol ol ol {
-  padding-left: 1.5ch;
-}
-
-.container > nav > ol > li {
+.container>nav>ol>li {
   list-style-type: none;
 }
 
@@ -74,19 +76,52 @@ a.current {
   font-weight: bolder;
 }
 
+.container>nav,
+.container>nav>ul,
+.container>nav>ul>li {
+  margin: 0;
+  padding: 0;
+}
+
+.container > nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container > nav ul ul {
+  padding-left: 1em; /* Adjust this value as needed */
+}
+
 /* ================================================================> collapsible TOC */
 details {
   margin-bottom: 0.5em;
   border-left: 3px solid var(--eddie-blue);
   padding-left: 1em;
+  margin-left: 0;
+  /* Added to ensure no extra left margin */
 }
 
-details > summary {
-  font-weight: bold;
+details>summary {
+  /* font-weight: bold; */
   cursor: pointer;
   color: var(--eddie-blue);
 }
 
 details[open] {
-  background-color: #f0f0f0;
+  background-color: rgb(255, 255, 255);
+}
+
+/* ================================================================> tables */
+.container > main table {
+  width: 100%; /* Makes the table use the full width of its container */
+  table-layout: auto; /* Allows columns to adjust based on content */
+  border-collapse: collapse; /* Optional: Collapses border spacings */
+}
+
+.container > main th, 
+.container > main td {
+  text-align: justify; /* Aligns text to the left within cells */
+  padding: 8px; /* Adds padding inside each cell */
+  border: 1px solid #ccc; /* Optional: Adds border to each cell */
+  background-color: white; /* Set the background color for table cells and headers */
 }
