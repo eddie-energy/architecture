@@ -33,35 +33,37 @@ module.exports = function (eleventyConfig) {
     let counter = 1;
 
     for (const item of items) {
-        let currentIndex = isTopLevel ? '' : (parentIndex ? `${parentIndex}.${counter}` : counter.toString());
-        let isActive = currentPageUrl.startsWith(item.url);
-        let displayTitle = isTopLevel ? item.title : `${currentIndex} ${item.title}`;
+      let currentIndex = isTopLevel ? '' : (parentIndex ? `${parentIndex}.${counter}` : counter.toString());
+      let isActive = currentPageUrl.startsWith(item.url);
+      let displayTitle = isTopLevel ? item.title : `${currentIndex} ${item.title}`;
 
-        if (isTopLevel) {
-            // Top-level items are not collapsible
-            html += `<li ${isActive ? 'style="font-weight: bold;"' : ''}><a href="${item.url}">${displayTitle}</a></li>`;
-            
-            if (item.children && item.children.length) {
-                // Recursively call for children with updated parentIndex and isTopLevel flag
-                html += renderNavigation(item.children, currentPageUrl, currentIndex, false);
-            }
-        } else {
-            // Nested items remain collapsible
-            html += `<details class="collapsible" ${isActive ? 'open' : ''}>`;
-            html += `<summary ${isActive ? 'style="font-weight: bold;"' : ''}><a href="${item.url}" class="${isTopLevel ? 'nav-parent' : 'nav-child'}">${displayTitle}</a></summary>`;
-            
-            if (item.children && item.children.length) {
-                // Recursively call for children with updated parentIndex and isTopLevel flag
-                html += renderNavigation(item.children, currentPageUrl, currentIndex, false);
-            }
-            html += `</details>`;
+      if (isTopLevel) {
+        // Top-level items are not collapsible
+        html += `<li ${isActive ? 'style="font-weight: bold;"' : ''}><a href="${item.url}">${displayTitle}</a></li>`;
+
+        if (item.children && item.children.length) {
+          // Recursively call for children with updated parentIndex and isTopLevel flag
+          html += renderNavigation(item.children, currentPageUrl, currentIndex, false);
         }
+      } else {
+        if (item.children && item.children.length) {
+          // Nested items with children are collapsible
+          html += `<details class="collapsible" ${isActive ? 'open' : ''}>`;
+          html += `<summary ${isActive ? 'style="font-weight: bold;"' : ''}><a href="${item.url}" class="${isTopLevel ? 'nav-parent' : 'nav-child'}">${displayTitle}</a></summary>`;
+          html += renderNavigation(item.children, currentPageUrl, currentIndex, false);
+          html += `</details>`;
+        } else {
+          // Nested items without children are not collapsible
+          html += `<ul class="nav-list" ${isActive ? 'style="font-weight: bold;"' : ''}><a href="${item.url}">${displayTitle}</a></ul>`;
+        }
+      }
 
-        counter++;
+      counter++;
     }
 
     return html ? `<ul>${html}</ul>` : '';
-}
+  }
+
 
 
 

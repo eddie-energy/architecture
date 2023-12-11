@@ -87,7 +87,7 @@ a.current {
   margin-bottom: 0;
   padding-top: 0;
   padding-bottom: 0;
-  line-height: 1;
+  line-height: 1.5em;
 }
 
 .container>nav ul ul {
@@ -191,10 +191,9 @@ details>summary::before {
   /* content: '➣';  */
   /* content: '▶';  */
   content: '›';
-  font-size: 2em;
-  /* Adjust size as needed */
-  margin-right: 0.2em;
-  /* Add other styling as needed (e.g., color) */
+  font-size: 1.5em;
+  margin-right: 0.35em;
+  line-height: 0.7em;
 }
 
 /* Change the arrow when details are open */
@@ -208,3 +207,5 @@ details[open]>summary::before {
   transform-origin: center;
   /* Set the rotation origin to the center */
 }
+
+/* ================================================================> Non collapsible TOC */
