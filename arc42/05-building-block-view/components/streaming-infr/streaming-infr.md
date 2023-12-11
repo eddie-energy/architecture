@@ -14,4 +14,4 @@ The Streaming Infrastructure component is implemented using Apache Kafka. When t
 
 ## Data Models
 
-> Information about the Streaming Infrastructure data model is provided [here](../../../data-models/streaming-infr/streaming-infr.md).
+> Information about the Streaming Infrastructure data model is provided [here](../../data-models/streaming-infr/streaming-infr.md).

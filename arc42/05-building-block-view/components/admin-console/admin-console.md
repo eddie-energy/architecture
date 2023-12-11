@@ -14,4 +14,4 @@ The Admin Console is a frontend application for the eligible party. This applica
 
 ## Data Models
 
-> Information about the Admin Console data model is provided [here](../../../data-models/admin-console/admin-console.md).
+> Information about the Admin Console data model is provided [here](../../data-models/admin-console/admin-console.md).

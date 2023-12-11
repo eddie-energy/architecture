@@ -8,4 +8,4 @@ TBD
 
 ## Data Models
 
-> Information about the Marketplace model is provided [here](../../../data-models/marketplace/marketplace.md).
+> Information about the Marketplace model is provided [here](../../data-models/marketplace/marketplace.md).

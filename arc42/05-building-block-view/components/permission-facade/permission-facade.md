@@ -12,4 +12,4 @@ The Permission Facade is a microfrontend application that is provided by the EDD
 
 ## Data Models
 
-> Information about the Permission Facade data model is provided [here](../../../data-models/permission-facade/permission-facade.md).
+> Information about the Permission Facade data model is provided [here](../../data-models/permission-facade/permission-facade.md).

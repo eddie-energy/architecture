@@ -14,6 +14,6 @@ Since the Regional Data-sharing Infrastructure of every country may be operating
 
 ## Data Models
 
-> Information about the Regional Data-sharing Infrastructure data models is provided [here](../../../../data-models/meter-data-portal/meter-data-portal.md).
+> Information about the Regional Data-sharing Infrastructure data models is provided [here](../../../data-models/meter-data-portal/meter-data-portal.md).
 
 

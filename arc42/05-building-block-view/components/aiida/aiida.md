@@ -43,4 +43,4 @@ Since the Smart Meter device may be different in each country, AIIDA may need to
 
 ## Data Models
 
-Information about the AIIDA data model is provided [here](../../../data-models/aiida/aiida.md).
+Information about the AIIDA data model is provided [here](../../data-models/aiida/aiida.md).

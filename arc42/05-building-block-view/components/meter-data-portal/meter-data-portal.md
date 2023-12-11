@@ -12,4 +12,4 @@ The Meter Data Portal is the interface of the Regional Data-sharing Infrastructu
 
 ## Data Models
 
-> Information about the Meter Data Portal data model is provided [here](../../../data-models/meter-data-portal/meter-data-portal.md).
+> Information about the Meter Data Portal data model is provided [here](../../data-models/meter-data-portal/meter-data-portal.md).

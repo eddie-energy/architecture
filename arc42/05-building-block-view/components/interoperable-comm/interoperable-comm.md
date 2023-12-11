@@ -32,4 +32,4 @@ The included interfaces that are exposed outside the EDDIE Framework are the fol
 
 ## Data Models
 
-> Information about the Interoperable Communication data model is provided [here](../../../data-models/interoperable-comm/interoperable-comm.md).
+> Information about the Interoperable Communication data model is provided [here](../../data-models/interoperable-comm/interoperable-comm.md).

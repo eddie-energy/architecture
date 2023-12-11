@@ -22,4 +22,4 @@ The included components are the following:
 
 ## Data Models
 
-> Information about the AIIDA Connector data model is provided [here](../../../../data-models/permission-facade/permission-facade.md).
+> Information about the AIIDA Connector data model is provided [here](../../../data-models/permission-facade/permission-facade.md).
