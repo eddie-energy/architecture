@@ -192,7 +192,7 @@ details>summary::before {
   /* content: '▶';  */
   content: '›';
   font-size: 1.5em;
-  margin-right: 0.35em;
+  margin-right: 0.37em;
   line-height: 0.7em;
 }
 
@@ -206,7 +206,7 @@ details[open]>summary::before {
   /* Rotate by 45 degrees */
   transform-origin: center;
   /* Set the rotation origin to the center */ 
-  margin-right: 0.2em;
+  margin-right: 0.21em;
 }
 
 details[open] {

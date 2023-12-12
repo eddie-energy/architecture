@@ -28,7 +28,23 @@ module.exports = function (eleventyConfig) {
   });
 
   // Function to recursively render navigation
-  function renderNavigation(items, currentPageUrl, parentIndex = '', isTopLevel = true) {
+  function renderNavigation(items, currentPageUrl, allCollections, parentIndex = '', isTopLevel = true) {
+
+    //make sure every item has the correct "order" from the frontmatter
+    for (const item of items) {
+      for (const fullItem of allCollections) {
+        if (item.url === fullItem.url) {
+          if ('order' in fullItem.data) {
+            item.order = fullItem.data.order;
+          }
+        }
+      }
+    }
+    //sort based on "order" of the frontmatter
+    items.sort((a, b) => {
+      return a.order - b.order;
+    });
+
     let html = '';
     let counter = 1;
 
@@ -43,14 +59,14 @@ module.exports = function (eleventyConfig) {
 
         if (item.children && item.children.length) {
           // Recursively call for children with updated parentIndex and isTopLevel flag
-          html += renderNavigation(item.children, currentPageUrl, currentIndex, false);
+          html += renderNavigation(item.children, currentPageUrl, allCollections, currentIndex, false);
         }
       } else {
         if (item.children && item.children.length) {
           // Nested items with children are collapsible
           html += `<details class="collapsible" ${isActive ? 'open' : ''}>`;
           html += `<summary ${isActive ? 'style="font-weight: bold;"' : ''}><a href="${item.url}" class="${isTopLevel ? 'nav-parent' : 'nav-child'}">${displayTitle}</a></summary>`;
-          html += renderNavigation(item.children, currentPageUrl, currentIndex, false);
+          html += renderNavigation(item.children, currentPageUrl, allCollections, currentIndex, false);
           html += `</details>`;
         } else {
           // Nested items without children are not collapsible
@@ -63,11 +79,6 @@ module.exports = function (eleventyConfig) {
 
     return html ? `<ul>${html}</ul>` : '';
   }
-
-
-
-
-
 
   // Add the function as a filter
   eleventyConfig.addFilter("renderNav", renderNavigation);
@@ -82,4 +93,3 @@ module.exports = function (eleventyConfig) {
     pathPrefix: "/architecture/",
   };
 };
-
