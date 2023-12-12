@@ -1,5 +1,6 @@
 ---
 title: Collect Customer Information
+order: 1
 ---
 
 ## Overview

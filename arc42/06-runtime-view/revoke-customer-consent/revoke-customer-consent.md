@@ -1,5 +1,6 @@
 ---
 title: Revoke Customer Consent
+order: 5
 ---
 
 ## Overview

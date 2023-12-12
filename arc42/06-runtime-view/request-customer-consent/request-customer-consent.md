@@ -1,5 +1,6 @@
 ---
 title: Request Customer Consent
+order: 2
 ---
 
 ## Overview
