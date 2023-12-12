@@ -1,7 +1,0 @@
----
-title: France
----
-
-## Overview 
-
-TBD

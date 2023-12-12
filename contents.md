@@ -4,27 +4,27 @@
 
 # Contents
 
-1. [Introduction and goals](./arc42/01-introduction-and-goals/01-introduction-and-goals.md)
+1. [Introduction and goals](./arc42/introduction-and-goals/introduction-and-goals.md)
 
-1. [Constraints](./arc42/02-constraints/02-constraints.md)
+1. [Constraints](./arc42/architectural-constraints/architectural-constraints.md)
 
-1. [Context & Scope](./arc42/03-context-and-scope/03-context-and-scope.md)
+1. [Context & Scope](./arc42/system-scope-and-context/system-scope-and-context.md)
 
 
-1. [Building Block View](./arc42/05-building-block-view/05-building-block-view.md)
+1. [Building Block View](./arc42/building-block-view/building-block-view.md)
 
-1. [Runtime View](./arc42/06-runtime-view/06-runtime-view.md)
+1. [Runtime View](./arc42/runtime-view/0untime-view.md)
 
-1. [Deployment View](./arc42/07-deployment-view/07-deployment-view.md)
+1. [Deployment View](./arc42/deployment-view/deployment-view.md)
 
-1. [Crosscutting Concepts](./arc42/08-crosscutting-concepts/08-crosscut-concepts.md)
+1. [Crosscutting Concepts](./arc42/crosscutting-concepts/crosscutting-concepts.md)
 
-1. [Architectural Decisions](./arc42/09-architectural-decisions/09-architectural-decisions.md)
+1. [Architectural Decisions](./arc42/architectural-decisions/architectural-decisions.md)
 
-1. [Quality Requirements](./arc42/10-quality-requirements/10-quality-requirements.md)
+1. [Quality Requirements](./arc42/quality-requirements/quality-requirements.md)
 
-1. [Risks & Technical Debt](./arc42/11-risks-and-technical-debt/11-risks-and-technical-debt.md)
+1. [Risks & Technical Debt](./arc42/risks-and-technical-debt/risks-and-technical-debt.md)
 
-1. [Glossary](./arc42/12-glossary/12-glossary.md)
+1. [Glossary](./arc42/glossary/glossary.md)
 
 
