@@ -1,5 +1,6 @@
 ---
-title: Service Data Model
+title: Service
+order: 2
 ---
 
 ## Overview

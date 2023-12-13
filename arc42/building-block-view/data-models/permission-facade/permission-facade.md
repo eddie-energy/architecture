@@ -1,5 +1,6 @@
 ---
-title: Permission Facade Data Model
+title: Permission Facade
+order: 3
 ---
 
 ## Overview

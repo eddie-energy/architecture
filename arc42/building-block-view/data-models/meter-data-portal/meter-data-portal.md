@@ -1,5 +1,6 @@
 ---
-title: Meter Data Portal Data Model
+title: Meter Data Portal
+order: 10
 ---
 
 ## Overview

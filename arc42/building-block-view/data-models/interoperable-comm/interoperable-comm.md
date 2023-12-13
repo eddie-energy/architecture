@@ -1,5 +1,6 @@
 ---
-title: Interoperable Communication Data Model
+title: Interoperable Communication
+order: 7
 ---
 
 ## Overview

@@ -1,5 +1,6 @@
 ---
-title: Admin Console Data Model
+title: Admin Console
+order: 6
 ---
 
 ## Overview

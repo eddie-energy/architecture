@@ -1,5 +1,6 @@
 ---
-title: EP Website Data Model
+title: EP Website
+order: 1
 ---
 
 ## Overview

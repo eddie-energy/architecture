@@ -1,5 +1,6 @@
 ---
-title: Streaming Infrastructure Data Model
+title: Streaming Infrastructure
+order: 4
 ---
 
 ## Overview

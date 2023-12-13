@@ -1,5 +1,6 @@
 ---
 title: Data Models
+order: 2
 ---
 
 The components of the system are shown in the table below with links to dedicated sections.

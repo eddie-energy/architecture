@@ -1,6 +1,6 @@
 ---
 title: Spain - Datadis
-Order: 3
+order: 3
 ---
 
 The Datadis service provides a Permission Administrator for all DSOs in Spain.

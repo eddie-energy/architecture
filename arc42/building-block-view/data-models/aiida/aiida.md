@@ -1,5 +1,6 @@
 ---
-title: AIIDA Data Model
+title: AIIDA
+order: 8
 ---
 
 ## Overview

@@ -1,5 +1,6 @@
 ---
 title: Smart Meter
+order: 11
 ---
 
 ## Overview

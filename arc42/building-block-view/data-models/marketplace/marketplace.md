@@ -1,5 +1,6 @@
 ---
-title: Marketplace Data Model
+title: Marketplace
+order: 12
 ---
 
 ## Overview
