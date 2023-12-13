@@ -164,7 +164,7 @@ details[open] summary {
 
 .container>main th,
 .container>main td {
-  text-align: justify;
+  /* text-align: justify; */
   /* Aligns text to the left within cells */
   padding: 8px;
   /* Adds padding inside each cell */

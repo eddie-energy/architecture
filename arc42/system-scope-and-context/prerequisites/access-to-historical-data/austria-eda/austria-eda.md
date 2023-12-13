@@ -1,14 +1,17 @@
 ---
-title: Regional Data-sharing Infrastructure of Austria
+title: Austria - EDA
+order: 1
 ---
 
 ## Overview
 
-### Create Account
+The Regional Data-sharing Infrastructure of Austria is operated by [EDA](https://www.eda.at/). To access energy data via EDA, an eligible party first has to create an eligible party account, and then use the specified process. These are described below.
 
-The Regional Data-sharing Infrastructure of Austria is operated by [EDA](https://www.eda.at/). EDA follows the [OASIS ebXML Messaging Services](http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms_core-3.0-spec.html) specification and implements the [AS4 messaging standard](https://en.wikipedia.org/wiki/AS4) for exchanging data. Every eligible party covering Austria must register with [ebUtilities](https://ebutilities.at/marktpartner) and acquire the Energy Service Provider identifier (e.g. EP100005). This identifier is then used for all interactions with EDA. 
+## Create Account
 
-### Access Data
+EDA follows the [OASIS ebXML Messaging Services](http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms_core-3.0-spec.html) specification and implements the [AS4 messaging standard](https://en.wikipedia.org/wiki/AS4) for exchanging data. Every eligible party covering Austria must register with [ebUtilities](https://ebutilities.at/marktpartner) and acquire the Energy Service Provider identifier (e.g. EP100005). This identifier is then used for all interactions with EDA. 
+
+## Access Data
 
 For the eligible party to access the historical validated energy consumption data of a customer the following process has to take place:
 
