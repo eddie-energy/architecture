@@ -1,6 +1,8 @@
 ---
 title: Spain - Datadis
-tags: [MVP-1,Spain]
+Order: 3
 ---
 
-Spanish Datadis service provides a Permission Administrator for all Spanish DSOs.
+The Datadis service provides a Permission Administrator for all DSOs in Spain.
+
+> The identified issues related to the use of Datadis are documented [here](./issues.md).
