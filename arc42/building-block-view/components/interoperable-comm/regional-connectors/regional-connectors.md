@@ -1,5 +1,6 @@
 ---
 title: Regional Connectors
+order: 1
 ---
 ## Overview
 
@@ -8,8 +9,8 @@ Since the Regional Data-sharing Infrastructure of every country may be operating
 
 | Regional Connector | Section |
 |-|-|
-| Austria | [Link](./country-specific/austria/austria.md) |
-| France | [Link](./country-specific/france/france.md) |
+| Austria | [Link](./regional-connector-austria/regional-connector-austria.md) |
+| France | [Link](./regional-connector-france/regional-connector-france.md) |
 <!-- | Spain | TBD | -->
 
 ## Data Models

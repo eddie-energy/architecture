@@ -1,5 +1,6 @@
 ---
 title: AIIDA Connector
+order: 2
 ---
 
 ## Overview

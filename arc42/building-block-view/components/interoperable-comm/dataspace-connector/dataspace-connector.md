@@ -1,5 +1,6 @@
 ---
 title: Dataspace Connector
+order: 3
 ---
 
 ## Overview
