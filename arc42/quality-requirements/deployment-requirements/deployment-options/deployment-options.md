@@ -1,5 +1,6 @@
 ---
 title: Deployment Options
+order: 3
 ---
 
 ## Context

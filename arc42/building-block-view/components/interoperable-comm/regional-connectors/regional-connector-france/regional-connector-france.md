@@ -1,5 +1,5 @@
 ---
-title: Regional Connector - France
+title: France
 order: 2
 ---
 

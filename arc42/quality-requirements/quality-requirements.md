@@ -19,40 +19,21 @@ requirements:
 quality tree example https://arnon.me/2010/05/utility-trees-hatching-quality-attributes/
 -->
 
-The quality requirements of the system are outlined in the quality tree below. This tree has 3 main aspects, i.e., Deployment ,Compliance, and Security, each one having one or more requirements.
+The quality requirements of the system are outlined in the quality tree below. This tree has 3 main types of quality requirements, i.e., Deployment, Compliance, and Security, each one having various requirements.
 
 <div align="center"> 
 <img src="./figures/quality-tree.svg">
 </div>
 
-The following sections provide tables which show the requirements for every aspect. These tables provide links to more detailed information.
+The following table provides links to more detailed information for every quality requirements type.
 
 ## Deployment Requirements
 
-| Deployment Requirement | Section |
+| Quality Requirement Type| Section |
 |-|-|
-| Decentralized | [Link](./quality-requirements/decentralized/decentralized.md) |
-| Single-command deployment | [Link](./quality-requirements/single-command-deployment/single-command-deployment.md) |
-| Deployment options | [Link](./quality-requirements/deployment-options/deployment-options.md) |
-| External database support | [Link](./quality-requirements/external-database-support/external-database-support.md) |
-| External streaming infrastructure support | [Link](./quality-requirements/external-streaming-infrastructure/external-streaming-infrastructure.md) |
-
-## Compliance Requirements
-
-| Compliance Requirement | Section |
-|-|-|
-| Implementing Act (SGTF) | [Link](./quality-requirements/implementing-act/implementing-act.md) |
-| Access historical and real-time data | [Link](./quality-requirements/access-historical-real-time-data/access-historical-real-time-data.md) |
-| Identify technical regional hurdles | [Link](./quality-requirements/identify-regional-hurdles/identify-regional-hurdles.md) |
-
-## Security Requirements
-
-| Security Requirement | Section |
-|-|-|
-| Data access only for authorized Services | [Link](./quality-requirements/data-access-for-authorized-services/data-access-for-authorized-services.md) |
-| Consent revocation | [Link](./quality-requirements/consent-revocation/consent-revocation.md) |
-
-
+| Deployment Requirements | [Link](./deployment-requirements/deployment-requirements.md) |
+| Compliance Requirements | [Link](./compliance-requirements/compliance-requirements.md) |
+| Security Requirements | [Link](./security-requirements/security-requirements.md) |
 
 
 

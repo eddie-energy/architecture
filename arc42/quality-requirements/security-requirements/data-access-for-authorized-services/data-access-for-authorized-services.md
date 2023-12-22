@@ -1,5 +1,6 @@
 ---
-title: Data Access only for Authorized Services
+title: Authorized Data Access
+order: 1
 ---
 
 ## Context

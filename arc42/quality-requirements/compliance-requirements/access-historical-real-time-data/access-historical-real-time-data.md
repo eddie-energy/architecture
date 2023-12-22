@@ -1,5 +1,6 @@
 ---
-title: Access Historical and Real-time Data
+title: Access Energy Data
+order: 2
 ---
 
 ## Context

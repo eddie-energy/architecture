@@ -1,5 +1,6 @@
 ---
 title: Consent Revocation
+order: 2
 ---
 
 ## Context

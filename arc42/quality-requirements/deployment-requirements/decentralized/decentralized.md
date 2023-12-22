@@ -1,5 +1,6 @@
 ---
 title: Decentralized
+order: 1
 ---
 
 ## Context

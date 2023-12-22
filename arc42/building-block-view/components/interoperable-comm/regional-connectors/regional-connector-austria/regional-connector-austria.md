@@ -1,5 +1,5 @@
 ---
-title: Regional Connector - Austria
+title: Austria
 order: 1
 ---
 

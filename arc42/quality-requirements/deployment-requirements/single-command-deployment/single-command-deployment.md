@@ -1,5 +1,6 @@
 ---
 title: Single-command Deployment
+order: 2
 ---
 
 ## Context
