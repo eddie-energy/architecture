@@ -3,7 +3,7 @@ title: Database
 order: 5
 ---
 
-## Overview
+## Master Data
 
 The data model of the Master data is shown in the class diagram below.
 
@@ -35,4 +35,10 @@ Additional helpful attribute descriptions are provided in the links below:
 - From the OneNet Project:
     - [OneNet Project](./RD_Projects_OneNet.md)
 
+## Consent Data Model
 
+The consent of the customer is stored using the following data model.
+
+<div align="center">
+<img src="./figures/MBIE EDDIE - Consent_2024-01-17T11.03.11.jpg">
+</div>

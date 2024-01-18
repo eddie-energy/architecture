@@ -8,7 +8,7 @@ order: 10
 The Regional Data-sharing Infrastructure of each country may be using a different data model to represent the energy data of a customer. For this reason, the EDDIE Framework converts the received data from a country-specific format to a unified format that is based on the Common Information Model (CIM) as derived from the standard IEC62325-351 Ed.3. Specifically, the data model that is used internally by the EDDIE Framework for representing historical validated data is shown in the class diagram below.
 
 <div align="center">
-<img src="./figures/VHD Assembly Extended.png">
+<img src="./figures/MBIE EDDIE_ValidatedHistoricalData_2023-11-06T14.02.10.jpg">
 </div>
 
 The metamodel of this model is shown in the class diagram below.
