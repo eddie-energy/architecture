@@ -17,5 +17,5 @@ This format is then mapped to the CIM-compliant model used internally by the EDD
 The mapping between these two data models is shown in the figure below.
 
 <div align="center">
-<img src="./figures/Mapping Austria.png">
+<img src="./figures/Mapping AT.png">
 </div>
