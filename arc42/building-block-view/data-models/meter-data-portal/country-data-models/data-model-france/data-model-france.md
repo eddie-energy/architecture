@@ -1,14 +1,15 @@
 ---
 title: France
+order: 2
 ---
 
-In France, the Regional Data-sharing Infrastructure operated by ENEDIS utilizes the following data format, which is not CIM-compliant.
+In France, the Regional Data-sharing Infrastructure operated by Enedis utilizes the following data format, which is not CIM-compliant.
 
 <div align="center">
-<img src="./figures/FR connector for transfer data.png">
+<img src="./figures/Regional connector FR.png">
 </div> 
 
-This format is then mapped to the CIM-compliant model used internally by the EDDIE Framework, which is shown below.
+This format is then mapped to the CIM-compliant model used internally by the EDDIE Framework, which is shown below. Notably, all the descriptions of the data fields are presented [here](../../../database/database.md).
 
 <div align="center">
 <img src="../../figures/VHD Assembly Extended.png">
