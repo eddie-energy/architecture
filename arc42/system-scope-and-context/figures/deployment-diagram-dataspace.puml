@@ -1,0 +1,61 @@
+@startuml deployment-diagram-dataspace
+'deployment diagram
+caption Deployment Diagram: Connections between the EDDIE Dataspace and its environment 
+
+
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam package {
+  BorderColor black
+  BackgroundColor white
+}
+skinparam node{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam collections {
+  BorderColor black
+  BackgroundColor white
+}
+skinparam rectangle {
+  BorderColor black
+  BackgroundColor transparent
+}
+
+node <<Eligible Party Infrastructure>> {
+  collections "Service" as service
+  collections "EP Website" as website
+}
+node <<In-house Infrastructure>> {
+  collections "Metering\nDevice" as smartMeter
+}
+node <<Regional Data-sharing Infrastructure>>{
+  collections "Regional Energy\nDatahub" as regionalData
+}
+node <<Gaia-X Approved Infrastructure>> {
+  rectangle "Gaia-X DCH" as gaiaX
+}
+node <<Dataspace Infrastructure>> {
+  rectangle "\tEDDIE Dataspace\t" as eddieDataspace
+}
+node <<Dataspace Infrastructure>> {
+  collections "Other Energy Data Space" as otherDataspace
+}
+
+website -[hidden]down- service
+website -right- eddieDataspace : HTTP
+service -right- eddieDataspace : \t Kafka\t
+
+
+gaiaX -down- eddieDataspace : HTTP
+gaiaX -down- otherDataspace : HTTP
+
+eddieDataspace -right- otherDataspace : \t HTTP\t\n\t Kafka\t
+
+eddieDataspace -down- smartMeter : RJ12\nUSB
+eddieDataspace -down- regionalData : HTTP\nAS4
+
+
+@enduml

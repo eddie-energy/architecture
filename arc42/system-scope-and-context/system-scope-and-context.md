@@ -3,87 +3,62 @@ title: System Scope and Context
 order: 3
 ---
 
-<!-- System scope and context - as the name suggests - delimits your system
-(i.e. your scope) from all its communication partners (neighboring
-systems and users, i.e. the context of your system). It thereby
-specifies the external interfaces. If necessary, differentiate the 
-business context (domain specific inputs and outputs) from the 
-technical context (channels, protocols, hardware).
-
-Various options:
--   Context diagrams
--   Lists of communication partners and their interfaces. -->
-
-The context of the system is described by showing the external interfaces and by specifying inputs and outputs. In the following, we differentiate between business context and technical context (for the same system).
+This section describes the context of the system. To this end, we show the EDDIE dataspace within its environment and we define all the neighboring entities, i.e., systems and users. In the following, we differentiate between business context where we describe the interactions within the environment, and technical context where we describe the technical nodes and connections.
 
 ## Business Context
 
-<!-- All kinds of context diagrams that show the system as a black box and specify
-the domain interfaces to communication partners. Alternatively 
-(or additionally) you can use a table, the three columns contain the name of
-the communication partner, the inputs, and the outputs. -->
+The figure below shows the context diagram of the environment. The system within scope, i.e., the EDDIE dataspace, is in a circle at the center, while the neighboring entities are shown as squares and users around it.
 
-From a business perspective, the system consists of four entities which are shown in the context diagram below.
-
-<!-- ![business context diagram](/3-context-and-scope/figures/external-interfaces.png) -->
 <div align="center">
-<img src="./figures/context-diagram.svg">
+<img src="./figures/context-diagram-dataspace.svg">
 </div>
-
-This context diagram shows how the EDDIE Framework (in the center of the figure) interacts with its environment. Three other entities are part of the system:
-
-1. AIIDA (Administrative Interface for In-house Data Access)
-1. Regional Data-sharing Infrastructure
-1. Services
 
 The table below shows a description of all the entities of the context diagram.
 
-| Component | Description | Within Scope |
-|-|-|-|
-| AIIDA | This is a software component that is deployed on an in-house device and connects to the house's energy metering devices. AIIDA collects real-time data from metering devices (e.g., a smart meter and/or an IoT home automation system), and sends this data to the EDDIE Framework. | &#x2611; Yes | 
-| Regional Data-sharing Infrastructure | This is the existing infrastructure of a Member State that provides access to historical data (e.g., historical validated metering data) about the energy consumption of a customer, i.e., energy consumption within a house. This infrastructure is provided, e.g., by a persmission administrator, and/or a metered data administrator. | &#x2612; No|
-| EDDIE Framework | This is a software component that runs on eligible party owned/operated infrastructure (e.g., local or cloud computing resources). It aggregates real-time metering data from AIIDA and historical validated data from the Regional Data-sharing Infrastructure (can be multiple instances of AIIDA and Regional Data-sharing Infrastructures), and consolidates it. | &#x2611; Yes |
-| Services | Each Service is a software component that is deployed by the eligible party on local/cloud computing resources. A Service acquires consolidated (real-time and/or historical) energy data from the EDDIE Framework and uses it to generate value, e.g., using data analysis methods that are based on statistics, machine learning, and artificial intelligence. Entities that can have a particular interest in taking the role of the eligible party and running Services for processing energy data can be, e.g.,  energy service providers and flexibility service providers. | &#x2612; No |
+| Entity | Responsibility |
+|-|-|
+| EDDIE Dataspace | This is the software system within scope. The EDDIE Dataspace aims at offering energy-related data to Services that are provided by eligible parties. Furthermore, the EDDIE Dataspace needs to be Gaia-X compliant in order to allow for interoperability with other energy dataspaces, i.e., other similar software systems for sharing energy data. |
+| Service | A Service is a software application that is provided by the eligible party. Services access energy data from the EDDIE Dataspace and use it to generate value, e.g., using data analysis techniques based on statistics and artificial intelligence. |
+| Eligible Party | The eligible party is a person (or organization) that wants to enter the energy data services market. The eligible party provides Services and uses the EDDIE Dataspace so that these Services have access to energy data from customers. |
+| Customer | Customers are persons (or organizations) that consume/produce energy, and are willing to share their energy consumption/production data. This data is used as input to the Services. Customers can be motivated to allow their data to be used as the input of the Services in order to access the output. For example, a Service may be processing residential energy consumption values in order to provide consumption recommendations that reduce the energy bill.|
+| EP Website | The EP Website (Eligible Party Website) is a website provided by an eligible party. The goal of this website is to gather the necessary information from customers to be able to access their energy data either from in-house Metering Devices, or from the Regional Energy Datahubs. |
+| Metering Device | This is an in-house device that can provide access to energy-related values, e.g., a smart meter that provides access to near real-time energy consumption values. |
+| Regional Energy Datahub | This is the energy data sharing system of a Member State that provides access to historical data (e.g., historical validated consumption metering data) about the energy consumption of a customer. 
+| Other Energy Dataspace| This is a software system similar to the EDDIE Dataspace that facilitates energy data sharing. The EDDIE Dataspace needs to be compatible with other energy dataspaces so that energy data can also be shared between dataspaces. |
+| Gaia-X DCH | The Gaia-X DCH (Digital Clearing House) offers compliance services and defines rules for achieving interoperability and trust among dataspaces. Thus, as long as two dataspaces follow the same compliance services and rules, a certain degree of interoperability can be achieved. |
 
-The figure above shows how the Services of an eligible party can acquire real-time data (from AIIDA) and historical validated data (from a Regional Data-sharing Infrastructure) using the EDDIE Framework. The eligible party is then expected to process this data using the Services, and potentially provide the output of these Services back to the customer. An example of this process can be an eligible party that offers a Service that provides energy consumption recommendations to customers. This Service processes real-time and historical consumption data of a customer and calculates recommendations that can help the customer, e.g., to reduce the electricity bill by achieving off-peak pricing.
-
-Notably, **one eligible party deploys one instance of the EDDIE Framework to communicate with one or more instances of AIIDA and Regional Data-sharing Infrastructures**. This way, the eligible party can collect data from one or more customers residing in one or more Member States.
 
 ## Technical Context 
 
-<!-- Technical interfaces (channels and transmission media) linking your system to its environment. In addition a mapping of domain-specific input/output to the channels, i.e. an explanation of which I/O uses which channel.
+The figure below shows a deployment diagram of the environment, specifying the participating nodes and technical connections between the entities. 
 
-E.g. UML deployment diagram describing channels to neighboring systems, together with a mapping table showing the relationships between channels and input/output. -->
-
-From a technical perspective, the system includes four types of nodes which are:
-1. Smart Meter: A device installed in a house, e.g., by a utility company, which measures data about the energy consumption of the house, and exposes this data, e.g., via a P1 port.
-1. In-house Device: A device such as a Raspberry Pi computer that connects to the smart meter, and implements the Docker Runtime for executing applications.
-1. Eligible Party Infrastructure: Either on-premise or cloud-based computing infrastructure that implements the Docker Runtime for executing applications.
-1. Regional Data-sharing Infrastructure: This is the existing infrastructure of Member States that provides interfaces for: i) Requesting the consent of customers for access to their historical validated energy consumption data. ii) Accessing the historical validated energy consumption data of a customer (when the consent has been given). This infrastructure is provided, e.g., by a metered data administrator, and/or a permission administrator, and/or other relevant entities. 
-
-The figure below shows the associations between software artifacts and interfaces as well as the communication protocols of these interfaces.
-
-<!-- ![deployment diagram](/03-context-and-scope/figures/deployment-diagram.png) -->
 <div align="center">
-<img src="./figures/deployment-diagram.svg">
+<img src="./figures/deployment-diagram-dataspace.svg">
 </div>
 
-The following table shows a description of the software artifacts.
+The table below shows a description of the nodes:
 
-| Artifact | Description |
+| Node | Description |
 |-|-|
-| AIIDA | Implements the functionality to acquire real-time data from the smart meter, and send this data to the EDDIE Framework, e.g., via a Kafka interface. |
-| EDDIE Framework| Implements functionality to receive real-time data from one or more AIIDA instances, e.g., via a Kafka interface. Also, to acquire historical data from one or more Regional Data-sharing Infrastructures, e.g., via HTTP. |
-| Service | Implement functionality to acquire real-time and historical data from the EDDIE Framework, e.g., via a Kafka interface, and to process this data using data mining and machine learning algorithms. The implementation of the Services is out of scope of this document.
+| Eligible Party Infrastructure | Either on-premise or cloud-based computing infrastructure for running software applications. This infrastructure is operated by the eligible party. |
+| In-house Infrastructure | This includes all the in-house devices with energy metering information such as smart meters, home automation systems, electric vehicle chargers, photovoltaic systems, etc. |
+| Regional Data-sharing Infrastructure | This is the computing infrastructure of a country for sharing historical validated energy consumption data. This infrastructure may be operated by a different entity in every country, e.g., by a country-specific permission administrator, and/or a metered data administrator. |
+| Dataspace Infrastructure | The infrastructure that hosts a dataspace. This infrastructure can be a distributed and may be operated by different entities that can vary based on the goals and use cases of the dataspace. The EDDIE Dataspace infrastructure is described in detail in the [Building Block View](../building-block-view/building-block-view.md). |
+| Gaia-X Approved Infrastructure | This infrastructure is operated by an organization that is approved by Gaia-X to operate a Gaia-X compliant Digital Clearing House for offering dataspace compliance services. |
 
-The table below shows a summary of the interfaces.
+The following table shows a description of the connection interfaces:
 
-| Provided by | Consumed by | Protocol |
-|-|-|-|
-| Smart meter| AIIDA | P1 (or other) |
-| EDDIE Framework | AIIDA | Kafka |
-| EDDIE Framework | Services | Kafka |
-| Regional Data-sharing Infrastructure | EDDIE Framework | HTTP (or other) |
+| Provided by | Consumed by | Protocol | Main Functionality|
+|-|-|-|-|
+| EDDIE Dataspace | EP Website | HTTP | Transfers the customer information necessary for accessing the customer energy data. |
+| EDDIE Dataspace | Service | Kafka | Transfers the customer energy data to the Services. |
+| Metering Device | EDDIE Dataspace | RJ12, USB | Transfers the energy metering data. |
+| Regional Datahub | EDDIE Dataspace | HTTP, AS4 | Transfers the historical validated energy consumption data. |
+| EDDIE Dataspace | Other energy dataspace | HTTP, KAfka | Transfers energy data between dataspaces. |
+| Other energy dataspace | EDDIE Dataspace | HTTP, KAfka | Transfers energy data between dataspaces. |
+| Gaia-X DCH | EDDIE Dataspace | HTTP | Transfers dataspace compliance data such as Gaia-X verifiable credentials.  |
+| Gaia-X DCH | Other energy dataspace | HTTP | Transfers dataspace compliance data such as Gaia-X verifiable credentials.  |
+
 
 ## Prerequisites
 
