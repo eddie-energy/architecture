@@ -54,7 +54,7 @@ gaiaX -down- otherDataspace : HTTP
 
 eddieDataspace -right- otherDataspace : \t HTTP\t\n\t Kafka\t
 
-eddieDataspace -down- smartMeter : RJ12\nDSMR
+eddieDataspace -down- smartMeter : DSMR\nDLMS
 smartMeter -[hidden]right- regionalData :\t\t\t\t
 eddieDataspace -down- regionalData : HTTP\nAS4
 

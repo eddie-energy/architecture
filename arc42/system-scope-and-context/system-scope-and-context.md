@@ -52,7 +52,7 @@ The following table shows a description of the connection interfaces.
 |-|-|-|-|
 | EDDIE Dataspace | EP Website | HTTP | Transfers the customer information necessary for accessing the customer energy data, e.g., country, metering point ID, etc. |
 | EDDIE Dataspace | Service | Kafka | Transfers the customer energy data to the Services, e.g., near real-time metering data, historical validated consumption metering data, etc. |
-| Metering Device | EDDIE Dataspace | DSMR | Transfers the energy metering data, e.g, near real-time smart meter measurements, etc. |
+| Metering Device | EDDIE Dataspace | DSMR, DLMS| Transfers the energy metering data, e.g, near real-time smart meter measurements, etc. |
 | Regional Datahub | EDDIE Dataspace | HTTP, AS4 | Transfers the historical validated energy consumption metering data. |
 | EDDIE Dataspace | Other energy dataspace | HTTP, Kafka | Transfers energy data between dataspaces, e.g., near real-time energy data, historical validated metering data, etc. |
 | Other energy dataspace | EDDIE Dataspace | HTTP, Kafka | Transfers energy data between dataspaces, e.g., near real-time energy data, historical validated metering data, etc. |

@@ -12,9 +12,9 @@ link service to eddieDataspace--><g id="link_service_eddieDataspace"><path d="M2
 link gaiaX to eddieDataspace--><g id="link_gaiaX_eddieDataspace"><path d="M547.98,82.04 C529.17,108.72 492.98,160.05 474.12,186.82 " fill="none" id="gaiaX-eddieDataspace" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="523" y="127.0669">HTTP</text></g><!--MD5=[b232de47b4f15362db1cd0ed476060c6]
 link gaiaX to otherDataspace--><g id="link_gaiaX_otherDataspace"><path d="M587.22,82.04 C629.83,108.72 711.81,160.05 754.56,186.82 " fill="none" id="gaiaX-otherDataspace" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="665" y="127.0669">HTTP</text></g><!--MD5=[a357f81dc0705df48640e756c9ea7660]
 link eddieDataspace to otherDataspace--><g id="link_eddieDataspace_otherDataspace"><path d="M552.42,205 C593.72,205 642.72,205 684.81,205 " fill="none" id="eddieDataspace-otherDataspace" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="606.5" y="183.0669">HTTP</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="35" x="606.5" y="198.1997">Kafka</text></g><!--MD5=[937f7bb01e384aa483af909e8df94877]
-link eddieDataspace to smartMeter--><g id="link_eddieDataspace_smartMeter"><path d="M445.28,223.08 C417.3,251.69 360.81,309.41 328.06,342.89 " fill="none" id="eddieDataspace-smartMeter" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="27" x="417.5" y="268.0669">RJ12</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38" x="412" y="283.1997">DSMR</text></g><!--MD5=[f75b18b27971a28636acc0313dfae9c8]
+link eddieDataspace to smartMeter--><g id="link_eddieDataspace_smartMeter"><path d="M445.28,223.08 C417.3,251.69 360.81,309.41 328.06,342.89 " fill="none" id="eddieDataspace-smartMeter" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38" x="412" y="268.0669">DSMR</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="37" x="412.5" y="283.1997">DLMS</text></g><!--MD5=[f75b18b27971a28636acc0313dfae9c8]
 link smartMeter to regionalData--><!--MD5=[96b7c068c5d336c6cd4d7dcdb6de958d]
-link eddieDataspace to regionalData--><g id="link_eddieDataspace_regionalData"><path d="M473.77,223.08 C493.49,251.69 533.28,309.41 556.35,342.89 " fill="none" id="eddieDataspace-regionalData" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="515" y="268.0669">HTTP</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="518" y="283.1997">AS4</text></g><rect fill="none" height="16.2969" id="_caption" style="stroke:none;stroke-width:1.0;" width="600" x="158.5" y="429"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="600" x="158.5" y="441.9951">Deployment Diagram: Connections between the EDDIE Dataspace and its environment</text><!--MD5=[929004994f37916fba5f808a0163c18f]
+link eddieDataspace to regionalData--><g id="link_eddieDataspace_regionalData"><path d="M473.77,223.08 C493.49,251.69 533.28,309.41 556.35,342.89 " fill="none" id="eddieDataspace-regionalData" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="515" y="268.0669">HTTP</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="518" y="283.1997">AS4</text></g><rect fill="none" height="16.2969" id="_caption" style="stroke:none;stroke-width:1.0;" width="600" x="158.5" y="429"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="600" x="158.5" y="441.9951">Deployment Diagram: Connections between the EDDIE Dataspace and its environment</text><!--MD5=[3d72e260f3f1b618bcdedc3da5ff3d5e]
 @startuml deployment-diagram-dataspace
 'deployment diagram
 caption Deployment Diagram: Connections between the EDDIE Dataspace and its environment 
@@ -71,7 +71,7 @@ gaiaX -down- otherDataspace : HTTP
 
 eddieDataspace -right- otherDataspace : \t HTTP\t\n\t Kafka\t
 
-eddieDataspace -down- smartMeter : RJ12\nDSMR
+eddieDataspace -down- smartMeter : DSMR\nDLMS
 smartMeter -[hidden]right- regionalData :\t\t\t\t
 eddieDataspace -down- regionalData : HTTP\nAS4
 
@@ -133,7 +133,7 @@ gaiaX -down- otherDataspace : HTTP
 
 eddieDataspace -right- otherDataspace : \t HTTP\t\n\t Kafka\t
 
-eddieDataspace -down- smartMeter : RJ12\nDSMR
+eddieDataspace -down- smartMeter : DSMR\nDLMS
 smartMeter -[hidden]right- regionalData :\t\t\t\t
 eddieDataspace -down- regionalData : HTTP\nAS4
 
