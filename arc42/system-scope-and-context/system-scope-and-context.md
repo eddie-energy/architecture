@@ -15,7 +15,7 @@ The figure below shows the context diagram of the environment. The system within
 
 The table below shows a description of all the entities of the context diagram.
 
-| Entity | Responsibility |
+| Entity | Description |
 |-|-|
 | EDDIE Dataspace | This is the software system within scope. The EDDIE Dataspace aims at offering energy-related data to Services that are provided by eligible parties. Furthermore, the EDDIE Dataspace needs to be Gaia-X compliant in order to allow for interoperability with other energy dataspaces, i.e., other similar software systems for sharing energy data. |
 | Service | A Service is a software application that is provided by the eligible party. Services access energy data from the EDDIE Dataspace and use it to generate value, e.g., using data analysis techniques based on statistics and artificial intelligence. |
@@ -36,7 +36,7 @@ The figure below shows a deployment diagram of the environment, specifying the p
 <img src="./figures/deployment-diagram-dataspace.svg">
 </div>
 
-The table below shows a description of the nodes:
+The table below shows a description of the nodes.
 
 | Node | Description |
 |-|-|
@@ -48,25 +48,19 @@ The table below shows a description of the nodes:
 
 The following table shows a description of the connection interfaces:
 
-| Provided by | Consumed by | Protocol | Main Functionality|
+| Provided by | Consumed by | Protocol | Transferred Data|
 |-|-|-|-|
 | EDDIE Dataspace | EP Website | HTTP | Transfers the customer information necessary for accessing the customer energy data, e.g., country, metering point ID, etc. |
 | EDDIE Dataspace | Service | Kafka | Transfers the customer energy data to the Services, e.g., near real-time metering data, historical validated consumption metering data, etc. |
 | Metering Device | EDDIE Dataspace | RJ12, USB | Transfers the energy metering data, e.g, near real-time smart meter measurements, etc. |
 | Regional Datahub | EDDIE Dataspace | HTTP, AS4 | Transfers the historical validated energy consumption metering data. |
-| EDDIE Dataspace | Other energy dataspace | HTTP, KAfka | Transfers energy data between dataspaces, e.g., near real-time energy data, historical validated metering data, etc. |
-| Other energy dataspace | EDDIE Dataspace | HTTP, KAfka | Transfers energy data between dataspaces, e.g., near real-time energy data, historical validated metering data, etc. |
+| EDDIE Dataspace | Other energy dataspace | HTTP, Kafka | Transfers energy data between dataspaces, e.g., near real-time energy data, historical validated metering data, etc. |
+| Other energy dataspace | EDDIE Dataspace | HTTP, Kafka | Transfers energy data between dataspaces, e.g., near real-time energy data, historical validated metering data, etc. |
 | Gaia-X DCH | EDDIE Dataspace | HTTP | Transfers dataspace compliance data, e.g., Gaia-X verifiable credentials about participants and data offerings. |
 | Gaia-X DCH | Other energy dataspace | HTTP | Transfers dataspace compliance data, e.g., Gaia-X verifiable credentials about participants and data offerings. |
 
 
-## Prerequisites
 
-Since the EDDIE framework interacts with various external components and infrastructures (e.g., the Regional Data-sharing Infrastructures, and AIIDA instances), certain prerequisites and dependencies arise. All the prerequisites are outlined in the link below. 
-
-
-
-> [Prerequisites](./prerequisites/prerequisites.md)
 
 
 
