@@ -46,7 +46,7 @@ The table below shows a description of the nodes.
 | Dataspace Infrastructure | The infrastructure that hosts a dataspace. This infrastructure can be a distributed and may be operated by different entities that can vary based on the goals and use cases of the dataspace. The EDDIE Dataspace infrastructure is described in detail in the [Building Block View](../building-block-view/building-block-view.md). |
 | Gaia-X Approved Infrastructure | This infrastructure is operated by an organization that is approved by Gaia-X to operate a Gaia-X compliant Digital Clearing House for offering dataspace compliance services. |
 
-The following table shows a description of the connection interfaces:
+The following table shows a description of the connection interfaces.
 
 | Provided by | Consumed by | Protocol | Transferred Data|
 |-|-|-|-|
