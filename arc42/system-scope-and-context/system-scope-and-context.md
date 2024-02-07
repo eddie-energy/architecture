@@ -13,7 +13,7 @@ The figure below shows the context diagram of the environment. The system within
 <img src="./figures/context-diagram-dataspace.svg">
 </div>
 
-<iframe class="c4-diagram" id="myEmbeddedDiagram" src="https://eddie.projekte.fh-hagenberg.at:5014/embed/1?diagram=eddie&diagramSelector=false&iframe=myEmbeddedDiagram" width="100%" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+{% c4 "eddie" %}
 
 The table below shows a description of all the entities of the context diagram.
 
