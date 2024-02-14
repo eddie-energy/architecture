@@ -90,7 +90,7 @@ module.exports = function (eleventyConfig) {
   // Add Structurizr C4 Shortcode (Shortcodes can be used in Markdown as well: https://github.com/11ty/eleventy/issues/944)
   eleventyConfig.addShortcode("c4", function(diagramKey) {
     // generate random suffix so that ids do not collide (https://stackoverflow.com/a/33146982)
-    const suffix = btoa(+new Date).slice(-7, -2)
+    const suffix = btoa(Math.random()).slice(-7, -2)
     const id = `c4_${diagramKey}_${suffix}`
 
     return `
