@@ -13,8 +13,6 @@ The figure below shows the context diagram of the environment. The system within
 <img src="./figures/context-diagram-dataspace.svg">
 </div>
 
-{% c4 "eddie" %}
-
 The table below shows a description of all the entities of the context diagram.
 
 | Entity | Description |
@@ -37,6 +35,9 @@ The figure below shows a deployment diagram of the environment, specifying the p
 <div align="center">
 <img src="./figures/deployment-diagram-dataspace.svg">
 </div>
+
+<!-- TODO: this showcases how to use C4-Diagrams via Shortcodes -->
+<!-- {% c4 "eddie" %} -->
 
 The table below shows a description of the nodes.
 
