@@ -4,6 +4,9 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const plantuml = require("eleventy-plugin-plantuml");
 const transformUrls = require("./eleventy/transformUrls");
 const { writeIssues } = require("bprt")
+const data = {
+  diagrams: require("./eleventy/_data/diagrams")()
+}
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = function (eleventyConfig) {
@@ -20,6 +23,7 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.setDataFileBaseName("index");
   eleventyConfig.addPassthroughCopy({ "eleventy/assets": "assets" });
+  eleventyConfig.addPassthroughCopy({ "eleventy/scripts": "scripts" });
   eleventyConfig.addPassthroughCopy("arc42/**/*.(png|gif|jpg|svg)");
   eleventyConfig.addTransform("transformUrls", transformUrls);
 
@@ -82,6 +86,26 @@ module.exports = function (eleventyConfig) {
 
   // Add the function as a filter
   eleventyConfig.addFilter("renderNav", renderNavigation);
+
+  // Add Structurizr C4 Shortcode (Shortcodes can be used in Markdown as well: https://github.com/11ty/eleventy/issues/944)
+  eleventyConfig.addShortcode("c4", function(diagramKey) {
+    // generate random suffix so that ids do not collide (https://stackoverflow.com/a/33146982)
+    const suffix = btoa(Math.random()).slice(-7, -2)
+    const id = `c4_${diagramKey}_${suffix}`
+
+    return `
+    <iframe
+      class="c4-diagram"
+      id="${id}"
+      src="${data.diagrams.structurizrBasePath}/embed/1?diagram=${diagramKey}&diagramSelector=false&iframe=${id}"
+      width="100%"
+      marginwidth="0"
+      marginheight="0"
+      frameborder="0"
+      scrolling="no"
+      allowfullscreen="true">
+    </iframe>`
+  })
 
   return {
     dir: {
