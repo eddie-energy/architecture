@@ -37,7 +37,7 @@ The figure below shows a deployment diagram of the environment, specifying the p
 </div>
 
 <!-- TODO: this showcases how to use C4-Diagrams via Shortcodes -->
-{% c4 "eddie" %}
+<!-- {% c4 "eddie" %} -->
 
 The table below shows a description of the nodes.
 
