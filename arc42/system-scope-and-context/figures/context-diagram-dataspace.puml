@@ -1,6 +1,6 @@
 @startuml context-diagram-dataspace
 'context diagram
-caption Context Diagram: Interactions between the EDDIE dataspace and its environment
+caption Context Diagram: Interactions between the EDDIE System and its environment
 
 skinparam usecase {
   BorderColor black
@@ -20,13 +20,13 @@ skinparam actor {
   BackgroundColor white
 }
 
-rectangle "Gaia-X DCH" as gaiaX
-usecase "\n\nEDDIE\nDataspace\n\n" as eddie
+rectangle "Gaia-X\nFramework" as gaiaX
+collections "External Energy Data Space\n(e.g. OneNet, Omega-X)" as dataSpaces
+usecase "\n\nEDDIE\nSystem\n\n" as eddie
 collections "Metering\nDevice" as smartMeter
 collections "Regional Energy\nDatahub" as regionalData
 collections "EP Website" as website
 collections "Service" as service
-collections "Other Energy Data Space\n(e.g. OneNet, Omega-X)" as dataSpaces
 
 actor "Eligible\nParties" as ep
 actor "Customers" as customer
