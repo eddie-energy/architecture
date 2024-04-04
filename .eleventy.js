@@ -93,11 +93,18 @@ module.exports = function (eleventyConfig) {
     const suffix = btoa(Math.random()).slice(-7, -2)
     const id = `c4_${diagramKey}_${suffix}`
 
+    // create the URL using JavaScript's URL API (this allows us to properly append the pathname and search params)
+    const url = new URL(data.diagrams.structurizrBasePath);
+    url.pathname = `embed/${data.diagrams.structurizrWorkspaceId}`;
+    url.searchParams.append("diagram", diagramKey);
+    url.searchParams.append("diagramSelector", false);
+    url.searchParams.append("iframe", id);
+
     return `
     <iframe
       class="c4-diagram"
       id="${id}"
-      src="${data.diagrams.structurizrBasePath}/embed/1?diagram=${diagramKey}&diagramSelector=false&iframe=${id}"
+      src="${url}"
       width="100%"
       marginwidth="0"
       marginheight="0"
