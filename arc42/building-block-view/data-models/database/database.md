@@ -40,5 +40,5 @@ Additional helpful attribute descriptions are provided in the links below:
 The consent of the customer is stored using the following data model.
 
 <div align="center">
-<img src="./figures/MBIE EDDIE - Consent_2024-01-17T11.03.11.jpg">
+<img src="./figures/customer-permission-data-model.png">
 </div>

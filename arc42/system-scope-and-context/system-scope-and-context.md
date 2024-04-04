@@ -9,6 +9,8 @@ This section describes the context of the system. To this end, we show the EDDIE
 
 The figure below shows the context diagram of the environment. The system within scope, i.e., the EDDIE dataspace, is in a circle at the center, while the neighboring entities are shown as squares and users around it.
 
+
+
 <div align="center">
 <img src="./figures/context-diagram-dataspace.svg">
 </div>
@@ -30,35 +32,22 @@ The table below shows a description of all the entities of the context diagram.
 
 ## Technical Context 
 
-The figure below shows a deployment diagram of the environment, specifying the participating nodes and technical connections between the entities. 
+The figure below shows a C4 context diagram of the environment. C4 offers a unique way to model a system in four layers. The first layer pictures the system in scope and its relationship with users and other systems. It should complement the first diagram with the perspective of a developer, namely software systems and their interactions. The grey systems are out of scope for the developer.
 
-<div align="center">
-<img src="./figures/deployment-diagram-dataspace.svg">
-</div>
+{% c4 "EDDIE System Landscape" %}
+
 
 The table below shows a description of the nodes.
 
-| Node | Description |
+| System | Description |
 |-|-|
-| Eligible Party Infrastructure | Either on-premise or cloud-based computing infrastructure for running software applications. This infrastructure is operated by the eligible party. |
-| In-house Infrastructure | This includes all the in-house devices with energy metering information such as smart meters, home automation systems, electric vehicle chargers, photovoltaic systems, etc. |
-| Regional Data-sharing Infrastructure | This is the computing infrastructure of a country for sharing historical validated energy consumption data. This infrastructure may be operated by a different entity in every country, e.g., by a country-specific permission administrator, and/or a metered data administrator. |
-| Dataspace Infrastructure | The infrastructure that hosts a dataspace. This infrastructure can be a distributed and may be operated by different entities that can vary based on the goals and use cases of the dataspace. The EDDIE Dataspace infrastructure is described in detail in the [Building Block View](../building-block-view/building-block-view.md). |
-| Gaia-X Approved Infrastructure | This infrastructure is operated by an organization that is approved by Gaia-X to operate a Gaia-X compliant Digital Clearing House for offering dataspace compliance services. |
-
-The following table shows a description of the connection interfaces.
-
-| Provided by | Consumed by | Protocol | Transferred Data|
-|-|-|-|-|
-| EDDIE Dataspace | EP Website | HTTP | Transfers the customer information necessary for accessing the customer energy data, e.g., country, metering point ID, etc. |
-| EDDIE Dataspace | Service | Kafka | Transfers the customer energy data to the Services, e.g., near real-time metering data, historical validated consumption metering data, etc. |
-| Metering Device | EDDIE Dataspace | DSMR, DLMS| Transfers the energy metering data, e.g, near real-time smart meter measurements, etc. |
-| Regional Datahub | EDDIE Dataspace | HTTP, AS4 | Transfers the historical validated energy consumption metering data. |
-| EDDIE Dataspace | Other energy dataspace | HTTP, Kafka | Transfers energy data between dataspaces, e.g., near real-time energy data, historical validated metering data, etc. |
-| Other energy dataspace | EDDIE Dataspace | HTTP, Kafka | Transfers energy data between dataspaces, e.g., near real-time energy data, historical validated metering data, etc. |
-| Gaia-X DCH | EDDIE Dataspace | HTTP | Transfers dataspace compliance data, e.g., Gaia-X verifiable credentials about participants and data offerings. |
-| Gaia-X DCH | Other energy dataspace | HTTP | Transfers dataspace compliance data, e.g., Gaia-X verifiable credentials about participants and data offerings. |
-
+|EDDIE Framework | Contains all the relevant infrastructure for the core features of EDDIE. The infrastructure can be distributed and may be operated by different components that can vary based on goals and use cases. The EDDIE Framework infrastructure is described in detail in the [Building Block View](../building-block-view/building-block-view.md). |
+|Gaia-X Framework | The Gaia-X Framework provides compliance services (e.g. the Digital Clearing House) for interoperability.|
+| EP System | The eligible party (EP) system consists of the EP Website and other EP Services, that can be either on-premise or cloud-based. On permission, the EP System transfers the customer information necessary for accessing the customer energy data, and forwards the customer energy data from EDDIE Framework. Apart from the Permission Facade Microfrontent the EP System is out of scope.|
+| AIIDA | The Administration Interface for In-house Data Access (AIIDA) is an interface, for acessing and forwarding real-time data collected by a customers households metering devices. Via AIIDA, a customer allows to share the data with EDDIE.|
+| Metering Device | This includes all the in-house devices with energy metering information such as smart meters, home automation systems, electric vehicle chargers, photovoltaic systems, etc. |
+|External Energy Data Space | Any Gaia-X compatible Data Space, providing further Energy Data such as Omega-X or OneNet.|
+| EU Energy Datahub 1/2/3 | This is the computing infrastructure of a country for sharing historical validated energy consumption data. This infrastructure may be operated by a different entity in every country, e.g., by a country-specific permission administrator, and/or a metered data administrator. |
 
 
 
