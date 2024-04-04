@@ -35,7 +35,7 @@ The table below shows a description of all the entities of the context diagram.
 
 The figure below shows a C4 context diagram of the environment. C4 offers a unique way to model a system in four layers. The first layer pictures the system in scope and its relationship with users and other systems. It should complement the first diagram with the perspective of a developer, namely software systems and their interactions. The grey systems are out of scope for the developer.
 
-{% c4 "EDDIE System Landscape" %}
+{% c4 "eddie" %}
 
 
 The table below shows a description of the nodes.
