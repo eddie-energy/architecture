@@ -1,14 +1,14 @@
 ---js
 {
-navigationOptions: {
-listElement: "ol",
-activeAnchorClass: "current"
-},
-eleventyComputed: {
-navigationOptions: {
-activeKey: (data) => data.eleventyNavigation.key
-}
-}
+  navigationOptions: {
+    listElement: "ol",
+    activeAnchorClass: "current"
+  },
+  eleventyComputed: {
+    navigationOptions: {
+      activeKey: (data) => data.eleventyNavigation.key
+    }
+  }
 }
 ---
 <!DOCTYPE html>
@@ -43,6 +43,8 @@ activeKey: (data) => data.eleventyNavigation.key
     <a href="https://github.com/eddie-energy/architecture/blob/main/{{ page.inputPath }}">edit on GitHub</a>
   </footer>
 
+  <script type="text/javascript" src="{{ diagrams.structurizrBasePath }}/static/js/structurizr-embed.js"></script>
+  <script type="text/javascript" src="/scripts/structurizr-iframe-sync.js"></script>
 </body>
 
 </html>
