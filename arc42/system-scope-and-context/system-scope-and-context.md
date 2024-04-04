@@ -8,7 +8,7 @@ This section describes the context of the system. To this end, we show the EDDIE
 ## Business Context
 
 The figure below shows the context diagram of the environment. The system within scope, i.e., the EDDIE System, is in a circle at the center, while the neighboring entities are shown as squares and users around it.
-The figure below shows the context diagram of the environment. The system within scope, i.e., the EDDIE dataspace, is in a circle at the center, while the neighboring entities are shown as squares and users around it.
+The figure below shows the context diagram of the environment. The system within scope, i.e., the EDDIE System, is in a circle at the center, while the neighboring entities are shown as squares and users around it.
 
 
 
