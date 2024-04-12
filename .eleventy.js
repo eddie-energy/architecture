@@ -88,7 +88,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("renderNav", renderNavigation);
 
   // Add Structurizr C4 Shortcode (Shortcodes can be used in Markdown as well: https://github.com/11ty/eleventy/issues/944)
-  eleventyConfig.addShortcode("c4", function(diagramKey) {
+  eleventyConfig.addShortcode("c4", function (diagramKey) {
+    // prevent users form accidentally prefixing the diagramKey with '#'
+    if (diagramKey.startsWith("#")) {
+      console.warn(`WARNING (${diagramKey}): please do not prefix the diagram key with '#'`)
+      diagramKey = diagramKey.substring(1)
+    }
+
     // generate random suffix so that ids do not collide (https://stackoverflow.com/a/33146982)
     const suffix = btoa(Math.random()).slice(-7, -2)
     const id = `c4_${diagramKey}_${suffix}`

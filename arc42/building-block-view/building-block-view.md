@@ -32,9 +32,9 @@ Level 1 & Level 2 on one page?
 How to use the C4 Zoom? (Links in
  blocks, that lead to new page?, Have one diagram with a changing table anf description on click?)
 
- {% c4 "#container-eddieFramework" %}
+ {% c4 "container-eddieFramework" %}
 
- {% c4 "#container-aiida" %}
+ {% c4 "container-aiida" %}
 The building block view is presented through a description of the system using two levels. Level 1 shows the overall system along with all the main building blocks. Level 2 further explains the building blocks from Level 1. The building blocks of Level 2 are explained further in dedicated sections.
 
 ## Level 1 View
