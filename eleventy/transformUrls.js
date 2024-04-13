@@ -12,13 +12,11 @@ function transformHrefs(tree) {
     ) {
       const path = link.slice(0, -3).split("/");
       const pl = path.length;
-      console.log(path);
-      if (pl>=2 && (path[pl-1]==="index" || path[pl-1]===path[pl-2]) ) {
+      if (pl >= 2 && (path[pl - 1] === "index" || path[pl - 1] === path[pl - 2])) {
         node.attrs.href = path.slice(0, -1).join("/") + "/";
       } else {
         node.attrs.href = link.slice(0, -3) + "/";
       }
-      console.log(`converted ${link} to ${node.attrs.href}`);
     }
     return node;
   });

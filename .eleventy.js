@@ -3,7 +3,7 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const plantuml = require("eleventy-plugin-plantuml");
 const transformUrls = require("./eleventy/transformUrls");
-const { writeIssues } = require("bprt")
+const StructurizrEleventyPlugin = require("./structurizr/11ty-plugin");
 const data = {
   diagrams: require("./eleventy/_data/diagrams")()
 }
@@ -26,10 +26,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "eleventy/scripts": "scripts" });
   eleventyConfig.addPassthroughCopy("arc42/**/*.(png|gif|jpg|svg)");
   eleventyConfig.addTransform("transformUrls", transformUrls);
-
-  eleventyConfig.on('eleventy.before', async () => {
-    await writeIssues()
-  });
 
   // Function to recursively render navigation
   function renderNavigation(items, currentPageUrl, allCollections, parentIndex = '', isTopLevel = true) {
@@ -86,39 +82,7 @@ module.exports = function (eleventyConfig) {
 
   // Add the function as a filter
   eleventyConfig.addFilter("renderNav", renderNavigation);
-
-  // Add Structurizr C4 Shortcode (Shortcodes can be used in Markdown as well: https://github.com/11ty/eleventy/issues/944)
-  eleventyConfig.addShortcode("c4", function (diagramKey) {
-    // prevent users form accidentally prefixing the diagramKey with '#'
-    if (diagramKey.startsWith("#")) {
-      console.warn(`WARNING (${diagramKey}): please do not prefix the diagram key with '#'`)
-      diagramKey = diagramKey.substring(1)
-    }
-
-    // generate random suffix so that ids do not collide (https://stackoverflow.com/a/33146982)
-    const suffix = btoa(Math.random()).slice(-7, -2)
-    const id = `c4_${diagramKey}_${suffix}`
-
-    // create the URL using JavaScript's URL API (this allows us to properly append the pathname and search params)
-    const url = new URL(data.diagrams.structurizrBasePath);
-    url.pathname = `embed/${data.diagrams.structurizrWorkspaceId}`;
-    url.searchParams.append("diagram", diagramKey);
-    url.searchParams.append("diagramSelector", false);
-    url.searchParams.append("iframe", id);
-
-    return `
-    <iframe
-      class="c4-diagram"
-      id="${id}"
-      src="${url}"
-      width="100%"
-      marginwidth="0"
-      marginheight="0"
-      frameborder="0"
-      scrolling="no"
-      allowfullscreen="true">
-    </iframe>`
-  })
+  eleventyConfig.addPlugin(StructurizrEleventyPlugin, { ...data.diagrams })
 
   return {
     dir: {
