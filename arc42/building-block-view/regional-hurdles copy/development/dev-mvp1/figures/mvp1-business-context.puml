@@ -1,0 +1,13 @@
+@startuml mvp1-business-context
+
+:user:
+
+[EDDIE Framework] as Eddie #lightblue
+
+[Eligible Party] as Ep
+Ep ..> Eddie
+
+component [Metering point administrator] as Mpa
+Eddie ..> Mpa
+
+@enduml
