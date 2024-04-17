@@ -1,8 +1,10 @@
 ---
-title: Regional Hurdles
+title: Containers - Level1
 order: 1
 ---
+ {% c4 "container-eddieFramework" %}
 
+ {% c4 "container-aiida" %}
  ## Regional Hurdles
 
 In the process of achieving compatibility with the Regional Data-sharing Infrastructures, various hurdles are identified, mostly related to the functionality offered through the provided APIs. These hurdles are categorized in the table below based on the country, to be shared with the energy community.
