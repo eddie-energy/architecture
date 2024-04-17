@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="549px" preserveAspectRatio="none" style="width:541px;height:549px;background:#FFFFFF;" version="1.1" viewBox="0 0 541 549" width="541px" zoomAndPan="magnify"><defs/><g><!--MD5=[c57d54656a6b708159567a005370dc18]
+cluster epInfra--><g id="cluster_epInfra"><polygon fill="none" points="16,16,26,6,314,6,314,497.5,304,507.5,16,507.5,16,16" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="304" x2="314" y1="16" y2="6"/><line style="stroke:#181818;stroke-width:1.0;" x1="16" x2="304" y1="16" y2="16"/><line style="stroke:#181818;stroke-width:1.0;" x1="304" x2="304" y1="16" y2="507.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="216" x="53" y="31.9951">Eligible Party Infrastructure</text></g><!--MD5=[d8519cdb77f238de7515b60c1e2a0448]
+cluster eddie--><g id="cluster_eddie"><rect fill="none" height="312" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="250" x="40" y="171.5"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="270" y="176.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="268" y="178.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="268" y="182.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="138" x="96" y="197.4951">EDDIE Framework</text></g><!--MD5=[ea13f3982d3f313ad76f361004455302]
+cluster comm--><g id="cluster_comm"><rect fill="none" height="113" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="202" x="64" y="346.5"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="246" y="351.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="244" y="353.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="244" y="357.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="107" x="111.5" y="372.4951">Interoperable</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="121" x="104.5" y="388.792">Communication</text></g><!--MD5=[415e973a851217c742885318a05f06ea]
+cluster In-house\nInfrastructure--><g id="cluster_In-house\nInfrastructure"><polygon fill="none" points="338,169,348,159,524,159,524,267,514,277,338,277,338,169" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="514" x2="524" y1="169" y2="159"/><line style="stroke:#181818;stroke-width:1.0;" x1="338" x2="514" y1="169" y2="169"/><line style="stroke:#181818;stroke-width:1.0;" x1="514" x2="514" y1="169" y2="277"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="69" x="392.5" y="184.9951">In-house</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="110" x="372" y="201.292">Infrastructure</text></g><!--MD5=[38bfa9dc6018363cafe15f923a4b8db9]
+entity service--><g id="elem_service"><rect fill="#FFFFFF" height="32.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="66" x="166" y="50"/><rect fill="#FFFFFF" height="32.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="66" x="162" y="46"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="170" y="66.9951">Service</text></g><!--MD5=[28e89758031464f183664ec848e9b0c4]
+entity streaming--><g id="elem_streaming"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="132" x="131" y="206.5"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="243" y="211.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="241" y="213.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="241" y="217.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="146" y="239.4951">Streaming</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="146" y="255.792">Infrastructure</text></g><!--MD5=[3fae18697c1514b048afb635d41589e9]
+entity messageProducer--><g id="elem_messageProducer"><rect fill="none" height="46.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="170" x="80" y="397.5"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="230" y="402.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="228" y="404.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="228" y="408.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130" x="95" y="430.4951">Message Producer</text></g><!--MD5=[0cf652f43e3bb8df3f72494916dfd857]
+entity aiida--><g id="elem_aiida"><rect fill="none" height="46.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="136" x="354" y="215"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="470" y="220"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="468" y="222"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="468" y="226"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35" x="401" y="247.9951">AIIDA</text></g><!--MD5=[946252ecea22370e3ca7558ce3f2594b]
+reverse link streaming to messageProducer--><g id="link_streaming_messageProducer"><path d="M190.5,274.79 C190.5,274.79 190.5,397.45 190.5,397.45 " fill="none" id="streaming-backto-messageProducer" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="190.5,269.79,186.5,278.79,190.5,274.79,194.5,278.79,190.5,269.79" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="139" x="50.5" y="332.1869">Publish historical data</text></g><!--MD5=[e2d18c5c72f4343de7c9b509935577da]
+reverse link service to streaming--><g id="link_service_streaming"><path d="M197,87.29 C197,87.29 197,206.49 197,206.49 " fill="none" id="service-backto-streaming" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="197,82.29,193,91.29,197,87.29,201,91.29,197,82.29" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="80" x="112" y="127.9569">Subscribe to</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="114.5" y="143.0897">receive data</text></g><!--MD5=[90476a963e9ab4974a4e30542d9d21df]
+reverse link streaming to aiida--><g id="link_streaming_aiida"><path d="M268.29,238.5 C268.29,238.5 353.84,238.5 353.84,238.5 " fill="none" id="streaming-backto-aiida" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="263.29,238.5,272.29,242.5,268.29,238.5,272.29,234.5,263.29,238.5" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="354.57" y="251.5669"> </text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="354.57" y="266.6997"> </text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="354.57" y="281.8325"> </text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="140" x="306.57" y="296.9653">Publish real-time data</text></g><rect fill="none" height="16.2969" id="_caption" style="stroke:none;stroke-width:1.0;" width="318" x="104.5" y="524.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="318" x="104.5" y="537.4951">Component Diagram: Streaming Infrastructure</text><!--MD5=[c1bcb320f9185bf7bd5382315c613114]
+@startuml component-diagram-streaming-infr
+'component diagram
+caption Component Diagram: Streaming Infrastructure
+skinparam linetype ortho
+
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" as eddie {
+    component "Interoperable\nCommunication" as comm {
+      component "Message Producer" as messageProducer
+    }
+    component "Streaming\nInfrastructure" as streaming
+  }
+  collections "Service" as service
+
+  messageProducer - -up-> streaming : Publish historical data
+  service <-down- - streaming : Subscribe to \nreceive data
+}
+
+node "In-house\nInfrastructure" {
+  component "\tAIIDA\t" as aiida
+}
+
+
+streaming <-right- aiida  : "\n\n\n          Publish real-time data"
+
+
+@enduml
+
+@startuml component-diagram-streaming-infr
+caption Component Diagram: Streaming Infrastructure
+skinparam linetype ortho
+
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" as eddie {
+    component "Interoperable\nCommunication" as comm {
+      component "Message Producer" as messageProducer
+    }
+    component "Streaming\nInfrastructure" as streaming
+  }
+  collections "Service" as service
+
+  messageProducer - -up-> streaming : Publish historical data
+  service <-down- - streaming : Subscribe to \nreceive data
+}
+
+node "In-house\nInfrastructure" {
+  component "\tAIIDA\t" as aiida
+}
+
+
+streaming <-right- aiida  : "\n\n\n          Publish real-time data"
+
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
