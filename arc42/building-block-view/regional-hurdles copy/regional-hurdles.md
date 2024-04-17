@@ -1,6 +1,6 @@
 ---
 title: Regional Hurdles
-order: 3
+order: 1
 ---
 
  ## Regional Hurdles
