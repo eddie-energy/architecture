@@ -7,6 +7,8 @@ This page shows all container views that can also be reached via the context dia
  ## Eddie Framework
  The EDDIE Framework contains the core functionality of EDDIE. As the Framework (especially the regional connectors and their interaction with other systems) can be different for different countries, each county is shown in its own subsection.
 
+ ### Eddie Framework Austria
+
  {% c4 "container-eddieFramework-austria" %}
 | Container | Responsibility |
 | - | - |
@@ -15,6 +17,19 @@ This page shows all container views that can also be reached via the context dia
 |Database|The Database stores important meta data, e.g. access rights, parameters for data exchange or country specific information.|
 |Interfaces|Containers may depend on interfaces such as ...|
 
+### Eddie Framework France
+{% c4 "container-eddieFramework-france" %}
+| Container | Responsibility |
+| - | - |
+|EDDIE Core| |
+|Regional Connector France||
+
+### Eddie Framework Spain
+{% c4 "container-eddieFramework-spain" %}
+| Container | Responsibility |
+| - | - |
+|EDDIE Core| |
+|Regional Connector Spain||
  ## AIIDA
  {% c4 "container-aiida" %}
  ## EP System
