@@ -1,5 +1,5 @@
 ---
-title: EDDIE Framework
+title: EP System
 order: 3
 ---
  ## EP System

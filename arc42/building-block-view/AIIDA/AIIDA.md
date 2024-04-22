@@ -1,5 +1,5 @@
 ---
-title: EDDIE Framework
+title: AIIDA
 order: 2
 ---
  ## AIIDA
