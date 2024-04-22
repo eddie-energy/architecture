@@ -2,7 +2,6 @@
 title: EDDIE Framework
 order: 1
 ---
-This page shows all container views that can also be reached via the context diagram. Each view shows the containers of each system and its ebvironment on a high level
 
  ## Eddie Framework
  The EDDIE Framework contains the core functionality of EDDIE. As the Framework (especially the regional connectors and their interaction with other systems) can be different for different countries, each county is shown in its own subsection.
@@ -30,8 +29,3 @@ This page shows all container views that can also be reached via the context dia
 | - | - |
 |EDDIE Core| |
 |Regional Connector Spain||
- ## AIIDA
- {% c4 "container-aiida" %}
- ## EP System
-  {% c4 "container-ep_system" %}
-
