@@ -1,6 +1,6 @@
 ---
 title: Components
-order: 2
+order: 4
 ---
 
 The components of the system are shown in the table below with links to dedicated sections.
