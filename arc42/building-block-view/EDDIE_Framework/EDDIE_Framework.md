@@ -1,5 +1,5 @@
 ---
-title: Containers - Level1
+title: EDDIE Framework
 order: 1
 ---
 This page shows all container views that can also be reached via the context diagram. Each view shows the containers of each system and its ebvironment on a high level
