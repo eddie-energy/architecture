@@ -4,7 +4,7 @@ order: 1
 ---
 
  ## Eddie Framework
- The EDDIE Framework contains the core functionality of EDDIE. As the Framework (especially the regional connectors and their interaction with other systems) can be different for different countries, each county is shown in its own subsection.
+ The EDDIE Framework contains the core functionality of EDDIE. As the Framework (especially the regional connectors and their interaction with other systems) can be different for different countries, each country is shown in its own subsection.
 
  ### Eddie Framework Austria
 
