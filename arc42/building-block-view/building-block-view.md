@@ -25,7 +25,7 @@ This structure can be used:
     Contained Building Blocks
     Important Interfaces
     Black boxes -->
-As the System scope and context, this section is described from the perspective of a developer​, meaning that each chapter could be handed over to a developer individually, without (much) further explanations. Also, it is meant to be interactive, meaning that clicking on a container or component in a diagram leads to the referring page or part where this particuliar container or component is described.
+As the "System scope and context", this section is described from the perspective of a developer​, e.g. each chapter could be handed over to a developer individually, without (much) further explanations. Also, it is meant to be interactive, meaning that clicking on a container or component in a diagram leads to the referring page or part where this particuliar container or component is described.
 
 Apart from this, the diagrams itself are zoomable, f.e. the container view of EDDIE Framework can be viewed by clicking on its name in the context view.
 
