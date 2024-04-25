@@ -3,7 +3,7 @@ title: Building Block View
 order: 5
 ---
 
-##### This section represents the container block diagram of the C4 modelling language. The container block shows one independent software application, e.g., database, frontend, backend, middleware, embedded app etc. It communicates with one or more other containers within or outside the context. In a modular application, each module becomes a container.
+##### This section represents the container block diagram of the C4 modelling language [C4 Container Diagrams](https://c4model.com/#ContainerDiagram). The container block shows one independent software application, e.g., database, frontend, backend, middleware, embedded app etc. It communicates with one or more other containers within or outside the context. In a modular application, each module becomes a container.
 
 <!-- Represents a static decomposition of the system
 into building blocks (modules, components, subsystems, classes,
