@@ -2,6 +2,8 @@
 title: System Scope and Context
 order: 3
 ---
+##### This section refers to the C4 context block diagram. The context block represents a software system, or a hardware system, and can include many software applications. It communicates with one or more other systems, or other context blocks.
+
 
 This section describes the context of the system. To this end, we show the EDDIE System within its environment and we define all the neighboring entities, i.e., systems and users. In the following, we differentiate between business context where we describe the interactions within the environment, and technical context where we describe the technical nodes and connections.
 
@@ -47,6 +49,6 @@ The table below shows a description of the nodes.
 | AIIDA | The Administration Interface for In-house Data Access (AIIDA) is an interface, for acessing and forwarding real-time data collected by a customers households metering devices. Via AIIDA, a customer allows to share the data with EDDIE.|
 | Metering Device | This includes all the in-house devices with energy metering information such as smart meters, home automation systems, electric vehicle chargers, photovoltaic systems, etc. |
 |External Energy Data Space | Any Gaia-X compatible Data Space, providing further Energy Data such as Omega-X or OneNet.|
-| EU Energy Datahub 1/2/3 | This is the computing infrastructure of a country for sharing historical validated energy consumption data. This infrastructure may be operated by a different entity in every country, e.g., by a country-specific permission administrator, and/or a metered data administrator. |
+| EU Energy Datahub | This is the computing infrastructure of a country for sharing historical validated energy consumption data. This infrastructure may be operated by a different entity in every country, e.g., by a country-specific permission administrator, and/or a metered data administrator. |
 
 
