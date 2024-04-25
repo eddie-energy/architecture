@@ -2,7 +2,7 @@
 title: System Scope and Context
 order: 3
 ---
-##### This section refers to the C4 context block diagram [C4 Context Diagrams](https://c4model.com/#SystemContextDiagram). The context block represents a software system, or a hardware system, and can include many software applications. It communicates with one or more other systems, or other context blocks.
+##### This section refers to the [C4 Context Diagrams](https://c4model.com/#SystemContextDiagram). The context block represents a software system, or a hardware system, and can include many software applications. It communicates with one or more other systems, or other context blocks.
 
 
 To this end, we show the EDDIE System within its environment and we define all the neighboring entities, i.e., systems and users. In the following, we differentiate between business context where we describe the interactions within the environment, and technical context where we describe the technical nodes and connections.
