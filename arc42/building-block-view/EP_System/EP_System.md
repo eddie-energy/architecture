@@ -2,6 +2,13 @@
 title: EP System
 order: 3
 ---
- ## EP System
+
+-Short description 
+
   {% c4 "container-ep_system" %}
+
+| Container | Responsibility |
+| - | - |
+| - | - |
+
 
