@@ -12,10 +12,10 @@ order: 1
 | Container | Responsibility |
 | - | - |
 |EDDIE Core| Provides the core functionalities of EDDIE, e.g. handles energy data or meta data that is forwarded to EDDIE, stored in the database or send somewhere else.|
-|Regional Connector Austria|The Regional Data-sharing Infrastructure of Austria is operated by EDA. Thus, EDA can be considered as the data access provider for historically validated data of customers in Austria. EDA works as a central messaging service for all the DSOs in Austria by implementing the AS4 messaging protocol and using the ebMS3 specification. Hence, instead of an API-based approach, energy data in Austria is exchanged via encrypted XML files. The utilized processes are described at the ebUtilities website. The relevant processes for EDDIE fall under the "Customer Consent Management" category. |
+|Regional Connector Austria|The Regional Data-sharing Infrastructure of Austria is operated by EDA. Thus, EDA can be considered as the data access provider for historically validated data of customers in Austria. EDA works as a central messaging service for all the DSOs in Austria by implementing the AS4 messaging protocol and using the ebMS3 specification. Hence, instead of an API-based approach, energy data in Austria is exchanged via encrypted XML files. The utilized processes are described at the ebUtilities website. The relevant processes for EDDIE fall under the "Customer Consent Management" category. More information about the regional connectorfor Austria is described [here](Regional_Connectors/Austria/Austria.md)|
 |Database|The Database stores important meta data, e.g. access rights, parameters for data exchange or country specific information.|
 |Interfaces|Containers may depend on some specific interfaces regarding permissions, communication or other applications.|
 
-For the sake of completeness all regional connectors inside EDDIE Framework are shown in the following picture:
+For a better overview all regional connectors inside EDDIE Framework are shown in the following picture:
  {% c4 "container-regional-connectors" %}
 
