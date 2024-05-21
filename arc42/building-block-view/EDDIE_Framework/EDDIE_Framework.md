@@ -16,3 +16,6 @@ order: 1
 |Database|The Database stores important meta data, e.g. access rights, parameters for data exchange or country specific information.|
 |Interfaces|Containers may depend on some specific interfaces regarding permissions, communication or other applications.|
 
+For the sake of completeness all regional connectors inside EDDIE Framework are shown in the following picture:
+ {% c4 "container-regional-connectors" %}
+
