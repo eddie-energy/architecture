@@ -2,7 +2,7 @@
 title: Austria
 order: 2
 ---
-The overall structure off EDDIE Framework has already been described at [EDDIE Framework](../../EDDIE_Framework.md)|
+The overall structure off EDDIE Framework has already been described at [EDDIE Framework](../../EDDIE_Framework.md).
 
 EDA can be thought of as the data access provider for historically validated data in Austria. 
 It works as a central messaging service for all the DSOs in Austria by implementing the [AS4 messaging protocol](https://www.codit.eu/blog/as4-for-dummies-part-ii-messaging-overview/) and using the [ebMS3 specification](http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms_core-3.0-spec.html).
