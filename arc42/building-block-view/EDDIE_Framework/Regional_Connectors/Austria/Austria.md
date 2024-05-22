@@ -2,8 +2,10 @@
 title: Austria
 order: 2
 ---
+## Eddie Framework Austria
 The overall structure off EDDIE Framework has already been described at [EDDIE Framework](../../EDDIE_Framework.md).
 
+## Connector Specifics
 EDA can be thought of as the data access provider for historically validated data in Austria. 
 It works as a central messaging service for all the DSOs in Austria by implementing the [AS4 messaging protocol](https://www.codit.eu/blog/as4-for-dummies-part-ii-messaging-overview/) and using the [ebMS3 specification](http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms_core-3.0-spec.html).
 
@@ -11,7 +13,7 @@ So instead of an API based approach, Austria exchanges energy data via encrypted
 
 How it works and relevant processes can be found at [ebUtilities](https://www.ebutilities.at/prozesse). The relevant processes for EDDIE fall unter the "Customer Consent Management" category.
 
-## Requesting Data
+### Requesting Data
 
 Requesting data works according to the [[CM_REQ_ONL] Consent Management - Datenfreigabe Online](https://www.ebutilities.at/prozesse/321) process.
 
@@ -24,7 +26,7 @@ It requires the following steps:
 
 As this process shows, Austria uses a push based model for historical validated data.
 
-## Setup/ Onboarding
+### Setup/ Onboarding
 
 For the AS4 communication with EDA we use a [Ponton X/P Messenger](https://www.ponton.de/ponton-xp).
 

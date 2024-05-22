@@ -12,11 +12,9 @@ As mentioned in the section for EDDIE Framework, each country can have a slightl
 |EDDIE Core| Provides the core functionalities of EDDIE, e.g. handles energy data or meta data that is forwarded to EDDIE, stored in the database or send somewhere else. |
 |Regional Connector France|The Enedis Datahub is a permission administrator and data access provider for historically validated data in France. Enedis offers various APIs, including the [Data Connect API](https://datahub-enedis.fr/en/data-connect-en/), which is useful for EDDIE to manage data access. Through these APIs, Enedis provides the eligible parties with the means to obtain metering data on behalf of customers in France. The provided APIs are based on HTTP/REST principles and use an OAuth 2.0-based authorization scheme to access the data. The identified issues related to the use of Enedis are documented [here](./issues.md).|
 |Database|The Database stores important meta data, e.g. access rights, parameters for data exchange or country specific information.|
-|Interfaces|Containers may depend on some specific interfaces regarding permissions, communication or other applications.|
-|
 
-
-The ENEDIS Datahub is a permission administrator and data access provider for historically validated data in France.
+## Connector Specifics
+|The ENEDIS Datahub is a permission administrator and data access provider for historically validated data in France.
 They offer some APIs from which we only consider the [Data Connect API](https://datahub-enedis.fr/en/data-connect-en/).
 It provides means to authorize a customer and obtain metering data on behalf of this customer for providing additional
 services.
@@ -24,7 +22,7 @@ services.
 This API is based on HTTP/REST principles and uses an OAuth 2.0 based authorization scheme to access that data.
 
 
-## Authorization
+### Authorization
 The current authorization API [Jeton v3](https://datahub-enedis.fr/services-api/data-connect/documentation/jeton/) is based on OAuth 2.0. This
 is the API ENEDIS offers to fulfill it's role as a permission administrator.
 
@@ -42,12 +40,12 @@ RFCs for OAUTH grants:
 A description  of various authorization flows can be found in the auth0 documentation, see
 [Authentication and Authorization Flows](https://auth0.com/docs/get-started/authentication-and-authorization-flow).
 
-## Metering Data
+### Metering Data
 
 * [Metering v5 – consommation 30 minutes](https://datahub-enedis.fr/services-api/data-connect/documentation/metering-v5-consommation-30-minutes/)
 * [Metering v5 – daily consumption](https://datahub-enedis.fr/services-api/data-connect/documentation/metering-v5-consommation-quotidienne/)
 
-## Links to ENEDIS Datahub
+### Links to ENEDIS Datahub
 - [Services providers presentation](https://datahub-enedis.fr/en/services-providers-presentation/): presentation of APIs for service providers
 - [Services API](https://datahub-enedis.fr/services-api/):  description of the available APIs _in French_
 - [État des services](https://datahub-enedis.fr/services-api/etat-des-services/): current status of the ENEDIS services _in French_
