@@ -3,5 +3,6 @@
 /figures/.idea/workspace.xml
 node_modules
 /eleventy/_site
+/.vitepress/cache
 /_site
 dist
