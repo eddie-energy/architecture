@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import * as pathlib from "path";
+import * as path from "path";
 import matter from "gray-matter";
 
 /*
@@ -13,63 +13,80 @@ export type SidebarItem = {
   order?: number; // new
 };
 
-function pathBaseName(filePath: string): string {
-  return pathlib.parse(filePath).name;
+function pathBaseNameWithoutExtension(filePath: string): string {
+  return path.parse(filePath).name;
 }
 
-function readFrontmatter(path: string): SidebarItem {
-  const frontMatter = matter(fs.readFileSync(path, "utf-8")).data;
-  const pathBaseNameValue = pathBaseName(path);
+function readFrontmatter(markdownFilePath: string): SidebarItem {
+  const frontMatter = matter(fs.readFileSync(markdownFilePath, "utf-8")).data;
+  const pathBaseNameValue = pathBaseNameWithoutExtension(markdownFilePath);
   return {
     text: frontMatter.title ?? pathBaseNameValue,
-    // order: frontMatter.order,
     ...(undefined !== frontMatter.order ? { order: frontMatter.order } : {}),
     ...(undefined !== pathBaseNameValue ? { link: pathBaseNameValue } : {}),
   };
 }
 
-function buildSidebar(path: string): SidebarItem | null {
-  if (fs.statSync(path).isDirectory()) {
-    let indexFile: string | undefined;
-    const indexFileIndexMd = path + "/index.md";
-    const indexFileDirnameMd = path + "/" + pathlib.basename(path) + ".md";
-    if (fs.existsSync(indexFileIndexMd)) {
-      indexFile = indexFileIndexMd;
-    } else if (fs.existsSync(indexFileDirnameMd)) {
-      indexFile = indexFileDirnameMd;
-    }
+function findIndexFileInDirectory(directoryPath: string): string | undefined {
+  const indexFileIndexMd = directoryPath + "/index.md";
+  const indexFileDirnameMd = directoryPath + "/" + path.basename(directoryPath) + ".md";
+  if (fs.existsSync(indexFileIndexMd)) {
+    return indexFileIndexMd;
+  } else if (fs.existsSync(indexFileDirnameMd)) {
+    return indexFileDirnameMd;
+  }
+}
 
-    let items = (
-      fs
-        .readdirSync(path)
-        .map((fileName) => buildSidebar(path + "/" + fileName))
-        .filter(
-          (item) => item !== null && (item.link || item.items)
-        ) as SidebarItem[]
-    ).map((item) => ({ ...item, link: path + "/" + item.link }));
-    items.sort((a, b) => (a.order ?? 9999) - (b.order ?? Number.MAX_SAFE_INTEGER));
+function readSidebarItemsFromSubdirectory(
+  directoryPath: string,
+  publicUrlPath: string,
+  indexFile?: string
+): SidebarItem[] {
+  let items = fs
+    .readdirSync(directoryPath)
+    .filter(
+      (fileName) => !indexFile || fileName !== path.basename(indexFile)
+    )
+    .map((fileName) => buildSidebar(directoryPath + "/" + fileName, publicUrlPath + "/" + fileName))
+    .filter(
+      (item) => item !== null && (item.link || item.items)
+    ) as SidebarItem[];
+  items.sort(
+    (a, b) =>
+      (a.order ?? Number.MAX_SAFE_INTEGER) -
+      (b.order ?? Number.MAX_SAFE_INTEGER)
+  );
+  return items;
+}
+
+export function buildSidebar(fileOrDirectoryPath: string, publicUrlPath: string): SidebarItem | null {
+  if (fs.statSync(fileOrDirectoryPath).isDirectory()) {
+    let indexFile = findIndexFileInDirectory(fileOrDirectoryPath);
+    console.log(`buildSidebar(DIR)(${fileOrDirectoryPath}, ${publicUrlPath}) indexFile=${indexFile}`);
+
+    const items = readSidebarItemsFromSubdirectory(fileOrDirectoryPath, publicUrlPath, indexFile).map(
+      (item) => ({
+        ...item,
+        ...(item.link ? { link: publicUrlPath + "/" + item.link } : {}),
+      })
+    );
+
     let frontmatter;
     if (indexFile) {
       frontmatter = readFrontmatter(indexFile);
     } else {
-      frontmatter = { text: pathBaseName(path) };
+      frontmatter = { text: pathBaseNameWithoutExtension(fileOrDirectoryPath) };
     }
-    return { ...frontmatter, items: items.length === 0 ? undefined : items };
-  } else if (path.endsWith(".md")) {
-    return readFrontmatter(path);
+    return { ...frontmatter, ...(items.length !== 0 ? { items } : {}) };
+  } else if (fileOrDirectoryPath.endsWith(".md")) {
+    return readFrontmatter(fileOrDirectoryPath);
   } else {
     return null;
   }
 }
 
-// console.log(JSON.stringify(buildSidebar("arc42"), null, 2));
-
+// console.log(JSON.stringify(buildSidebar("./arc42", "/"), null, 2));
 // console.log(JSON.stringify(buildSidebar("./arc42/solution-strategy-removed/solution-strategy/regional-coverage/figures"), null, 2));
 // console.log(JSON.stringify(buildSidebar("./arc42/solution-strategy-removed/solution-strategy/regional-coverage"), null, 2));
-console.log(
-  JSON.stringify(
-    buildSidebar("./arc42/solution-strategy-removed/solution-strategy"),
-    null,
-    2
-  )
-);
+// console.log(  JSON.stringify(    buildSidebar("./arc42/solution-strategy-removed/solution-strategy", "/solution-strategy-removed/solution-strategy"),    null,    2  ));
+// console.log(JSON.stringify(buildSidebar("./arc42/solution-strategy-removed", "/solution-strategy-removed"), null, 2));
