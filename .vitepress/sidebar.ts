@@ -74,6 +74,7 @@ export function buildSidebar(fileOrDirectoryPath: string, publicUrlPath: string)
     let frontmatter;
     if (indexFile) {
       frontmatter = readFrontmatter(indexFile);
+      frontmatter.link = frontmatter.link + "/" + frontmatter.link;
     } else {
       frontmatter = { text: pathBaseNameWithoutExtension(fileOrDirectoryPath) };
     }
@@ -84,9 +85,3 @@ export function buildSidebar(fileOrDirectoryPath: string, publicUrlPath: string)
     return null;
   }
 }
-
-// console.log(JSON.stringify(buildSidebar("./arc42", "/"), null, 2));
-// console.log(JSON.stringify(buildSidebar("./arc42/solution-strategy-removed/solution-strategy/regional-coverage/figures"), null, 2));
-// console.log(JSON.stringify(buildSidebar("./arc42/solution-strategy-removed/solution-strategy/regional-coverage"), null, 2));
-// console.log(  JSON.stringify(    buildSidebar("./arc42/solution-strategy-removed/solution-strategy", "/solution-strategy-removed/solution-strategy"),    null,    2  ));
-// console.log(JSON.stringify(buildSidebar("./arc42/solution-strategy-removed", "/solution-strategy-removed"), null, 2));

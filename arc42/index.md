@@ -1,6 +1,25 @@
 ---
-title: Top Page
-order: 1
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
+
+hero:
+  name: "EDDIE Architecture"
+  text: "Software Architecture for the EDDIE Project"
+  tagline: European Distributed Data Infrastructure For Energy
+  image: https://eddie.energy/files/layout/eddie_logo.png
+  actions:
+    - theme: brand
+      text: Building Block View
+      link: /building-block-view/building-block-view
+    - theme: alt
+      text: Introduction and Goals
+      link: /introduction-and-goals/introduction-and-goals
+
+features:
+  - title: EDDIE Framework
+    details: Providing core functionality of EDDIE
+  - title: AIIDA
+  - title: EDDIE Marketplace
 ---
 This website hosts the software architecture of EDDIE (European Distributed Data Infrastructure for Energy) which has been documented based on [arc42](https://arc42.org/). EDDIE is a research project co-funded by the European Union's Horizon Innovation Actions under grant agreement No. 101069510.
 
