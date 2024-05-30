@@ -8,8 +8,10 @@ export default defineConfig({
   description: "European Distributed Data Infrastructure For Energy",
   srcDir: "./arc42",
   lastUpdated: true,
+  head: [['link', { rel: 'icon', href: '/figures/favicon-32x32.png' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/figures/favicon-32x32.png',
     nav: [
       { text: 'Home', link: '/' },
     ],
