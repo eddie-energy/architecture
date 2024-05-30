@@ -8,7 +8,7 @@ order: 1
 
  ### Eddie Framework Austria
 
- {% c4 "container-eddieFramework-austria" %}
+ <C4 diagram="container-eddieFramework-austria" />
 | Container | Responsibility |
 | - | - |
 |EDDIE Core| Provides the core functionalities of EDDIE, e.g. handles energy data or meta data that is forwarded to EDDIE, stored in the database or send somewhere else.|
@@ -17,5 +17,5 @@ order: 1
 
 
 For a better overview all regional connectors inside EDDIE Framework are shown in the following picture:
- {% c4 "container-regional-connectors" %}
+ <C4 diagram="container-regional-connectors" />
 

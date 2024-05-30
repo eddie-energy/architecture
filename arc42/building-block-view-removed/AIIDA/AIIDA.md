@@ -5,7 +5,7 @@ order: 2
 
  -Short description 
 
- {% c4 "container-aiida" %}
+ <C4 diagram="container-aiida" />
 
 | Container | Responsibility |
 | - | - |

@@ -5,7 +5,7 @@ order: 3
 
 -Short description 
 
-  {% c4 "container-ep_system" %}
+  <C4 diagram="container-ep_system" />
 
 | Container | Responsibility |
 | - | - |
