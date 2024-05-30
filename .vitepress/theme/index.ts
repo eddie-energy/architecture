@@ -1,17 +1,15 @@
 // https://vitepress.dev/guide/custom-theme
-import { h } from 'vue'
-import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
-import './style.css'
+import type { Theme } from "vitepress";
+import DefaultTheme from "vitepress/theme";
+import "./style.css";
+import LayoutWithFrontmatterTitle from "./LayoutWithFrontmatterTitle.vue";
+import C4Diagram from "./C4Diagram.vue";
 
 export default {
   extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
+  Layout: LayoutWithFrontmatterTitle,
+
+  enhanceApp({ app }) {
+    app.component("C4", C4Diagram);
   },
-  enhanceApp({ app, router, siteData }) {
-    // ...
-  }
-} satisfies Theme
+} satisfies Theme;
