@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import matter from "gray-matter";
+import micromatch from "micromatch";
 
 /*
  * Type from: `vitepress/types/default-theme.d.ts`
@@ -29,7 +30,8 @@ function readFrontmatter(markdownFilePath: string): SidebarItem {
 
 function findIndexFileInDirectory(directoryPath: string): string | undefined {
   const indexFileIndexMd = directoryPath + "/index.md";
-  const indexFileDirnameMd = directoryPath + "/" + path.basename(directoryPath) + ".md";
+  const indexFileDirnameMd =
+    directoryPath + "/" + path.basename(directoryPath) + ".md";
   if (fs.existsSync(indexFileIndexMd)) {
     return indexFileIndexMd;
   } else if (fs.existsSync(indexFileDirnameMd)) {
@@ -40,14 +42,19 @@ function findIndexFileInDirectory(directoryPath: string): string | undefined {
 function readSidebarItemsFromSubdirectory(
   directoryPath: string,
   publicUrlPath: string,
+  srcExclude: string[],
   indexFile?: string
 ): SidebarItem[] {
-  let items = fs
-    .readdirSync(directoryPath)
-    .filter(
-      (fileName) => !indexFile || fileName !== path.basename(indexFile)
+  let items = micromatch
+    .not(fs.readdirSync(directoryPath), srcExclude, { contains: true })
+    .filter((fileName) => !indexFile || fileName !== path.basename(indexFile))
+    .map((fileName) =>
+      buildSidebar(
+        directoryPath + "/" + fileName,
+        publicUrlPath + "/" + fileName,
+        srcExclude
+      )
     )
-    .map((fileName) => buildSidebar(directoryPath + "/" + fileName, publicUrlPath + "/" + fileName))
     .filter(
       (item) => item !== null && (item.link || item.items)
     ) as SidebarItem[];
@@ -59,17 +66,26 @@ function readSidebarItemsFromSubdirectory(
   return items;
 }
 
-export function buildSidebar(fileOrDirectoryPath: string, publicUrlPath: string): SidebarItem | null {
+export function buildSidebar(
+  fileOrDirectoryPath: string,
+  publicUrlPath: string,
+  srcExclude: string[]
+): SidebarItem | null {
   if (fs.statSync(fileOrDirectoryPath).isDirectory()) {
     let indexFile = findIndexFileInDirectory(fileOrDirectoryPath);
-    console.log(`buildSidebar(DIR)(${fileOrDirectoryPath}, ${publicUrlPath}) indexFile=${indexFile}`);
-
-    const items = readSidebarItemsFromSubdirectory(fileOrDirectoryPath, publicUrlPath, indexFile).map(
-      (item) => ({
-        ...item,
-        ...(item.link ? { link: publicUrlPath + "/" + item.link } : {}),
-      })
+    console.log(
+      `buildSidebar(DIR)(${fileOrDirectoryPath}, ${publicUrlPath}) indexFile=${indexFile}`
     );
+
+    const items = readSidebarItemsFromSubdirectory(
+      fileOrDirectoryPath,
+      publicUrlPath,
+      srcExclude,
+      indexFile
+    ).map((item) => ({
+      ...item,
+      ...(item.link ? { link: publicUrlPath + "/" + item.link } : {}),
+    }));
 
     let frontmatter;
     if (indexFile) {
