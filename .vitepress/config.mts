@@ -17,7 +17,7 @@ export default defineConfig({
     logo: "/figures/favicon-32x32.png",
     nav: [{ text: "Home", link: "/" }],
 
-    sidebar: buildSidebar("./arc42", "", srcExclude)?.items,
+    sidebar: buildSidebar("./arc42", "", srcExclude)?.items?.map( (item) => ({ ...item, collapsed: true })),
 
     socialLinks: [
       { icon: "github", link: "https://github.com/eddie-energy/architecture" },
