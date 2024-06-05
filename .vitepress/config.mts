@@ -1,8 +1,12 @@
 import { defineConfig } from "vitepress";
 
-import { buildSidebar } from "./sidebar";
+import { SidebarItem, buildSidebar } from "./sidebar";
 
 const srcExclude = ["**/*\\(obsolete\\)/**", "**/*-removed/**"];
+
+const sidebarItems = buildSidebar("./arc42", "", srcExclude)?.items?.map(
+  (item) => ({ ...item, collapsed: true, items: item.items ?? [] })
+);
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -17,7 +21,7 @@ export default defineConfig({
     logo: "/figures/favicon-32x32.png",
     nav: [{ text: "Home", link: "/" }],
 
-    sidebar: buildSidebar("./arc42", "", srcExclude)?.items?.map( (item) => ({ ...item, collapsed: true })),
+    sidebar: sidebarItems,
 
     socialLinks: [
       { icon: "github", link: "https://github.com/eddie-energy/architecture" },
