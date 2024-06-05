@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 import { buildSidebar } from "./sidebar";
 
-const srcExclude = ["**/*\\(obsolete\\)", "**/*-removed"];
+const srcExclude = ["**/*\\(obsolete\\)/**", "**/*-removed/**"];
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
