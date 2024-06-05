@@ -37,4 +37,4 @@ Notably, while the Permission Facade microfrontend is provided by the EDDIE Fram
 
 ## Data Models
 
-> Information about the EP Website data model is provided [here](../../data-models/ep-website/ep-website.md).
+> Information about the Service data model is provided __here (broken link removed)__. <!-- [here](../../data-models/service/service.md) -->

@@ -17,11 +17,11 @@ The metamodel of this model is shown in the class diagram below.
 <img src="./figures/CIM transfer Data.png">
 </div>
 
-A detailed description of the attributes of this model is provided [here](../database/Class%20and%20attributes%20CIM%20Transfer%20Data%20Base.md). 
+A detailed description of the attributes of this model is provided [here](../../Database/Database.md). 
 
 To convert the data received from the Regional Data-sharing Infrastructure from the country-specific model to our CIM-compliant data model, we have created mappings which can be found in the link below.
 
-> Mappings to country-specific models are presented [here](./country-data-models/country-data-models.md).
+> Mappings to country-specific models are presented on the following pages.
 
 
 

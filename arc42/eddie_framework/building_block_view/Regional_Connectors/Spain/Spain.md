@@ -10,7 +10,7 @@ As mentioned in the section for EDDIE Framework, each country can have a slightl
 | Container | Responsibility |
 | - | - |
 |EDDIE Core| Provides the core functionalities of EDDIE, e.g. handles energy data or meta data that is forwarded to EDDIE, stored in the database or send somewhere else. |
-|Regional Connector Spain| The Datadis service provides a Permission Administrator for all DSOs in Spain. The identified issues related to the use of Datadis are documented [here](./issues.md).|
+|Regional Connector Spain| The Datadis service provides a Permission Administrator for all DSOs in Spain. The identified issues related to the use of Datadis are documented [here](../../../regional-hurdles/dev-datadis/issues.md).|
 |Database|The Database stores important meta data, e.g. access rights, parameters for data exchange or country specific information.|
 
 
