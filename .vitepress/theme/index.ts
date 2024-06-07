@@ -4,6 +4,7 @@ import DefaultTheme from "vitepress/theme";
 import "./style.css";
 import LayoutWithFrontmatterTitle from "./LayoutWithFrontmatterTitle.vue";
 import C4 from "./C4.vue";
+import Img from "./Img.vue";
 
 export default {
   extends: DefaultTheme,
@@ -11,5 +12,6 @@ export default {
 
   enhanceApp({ app }) {
     app.component("C4", C4);
+    app.component("Img", Img);
   },
 } satisfies Theme;
