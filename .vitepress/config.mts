@@ -1,9 +1,12 @@
 import { defineConfig } from "vitepress";
 
-import { SidebarItem, buildSidebar } from "./sidebar";
+import { buildSidebar } from "./sidebar";
+
+import renderMarkdownImage from "./renderMarkdownImage";
 
 const srcExclude = ["**/*\\(obsolete\\)/**", "**/*-removed/**"];
 
+// An empty sub-items is added to make all top-level sidebar items appear the same way.
 const sidebarItems = buildSidebar("./arc42", "", srcExclude)?.items?.map(
   (item) => ({ ...item, collapsed: true, items: item.items ?? [] })
 );
@@ -26,5 +29,10 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/eddie-energy/architecture" },
     ],
+  },
+  markdown: {
+    config: (md) => {
+      md.renderer.rules.image = renderMarkdownImage;
+    },
   },
 });
