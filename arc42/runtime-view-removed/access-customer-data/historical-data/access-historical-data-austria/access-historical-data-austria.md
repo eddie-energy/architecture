@@ -7,9 +7,9 @@ title: Austria
 The following workflow shows the process of the eligible party accessing the historical validated data of a customer in Austria. This process starts when the customer approves the consent request at the Regional Data-sharing Infrastructure. 
 <!-- The workflow of requesting the customer consent is presented [here](../request-consent-austria/request-consent-austria.md).  -->
 
-<div align="center"> 
-<img src="./figures/get-historical-data-austria.svg">
-</div>
+
+![](./figures/get-historical-data-austria.svg)
+
 
 
 This workflow includes the following steps:

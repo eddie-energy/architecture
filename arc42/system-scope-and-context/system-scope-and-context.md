@@ -14,9 +14,9 @@ The figure below shows the context diagram of the environment. The system within
 
 
 
-<div align="center">
-<img src="./figures/context-diagram-dataspace.svg">
-</div>
+
+![](./figures/context-diagram-dataspace.svg)
+
 
 The table below shows a description of all the entities of the context diagram.
 

@@ -8,9 +8,9 @@ order: 7
 The Interoperable Communication component is responsible for communication with external components (e.g., with the Regional Data-sharing Infrastructures). Primarily, it manages the customer consent in coordination with the Regional Data-sharing Infrastructures, and publishes the historical validated data to the Streaming Infrastructure (to be sent to the Services). The Interoperable Communication includes a collection of connectors, each one being responsible for data access of a particular type: The Regional Connectors handle the data access to historical validated data, the AIIDA Connector aids in establishing the customer consent for access to real-time data, and the Dataspace Connector is responsible for connecting to dataspaces. The internal structure of the Interoperable Communication component is shown in the figure below.
 
 
-<div align="center">
-<img src="./figures/inter-comm-dataspace.svg">
-</div>
+
+![](./figures/inter-comm-dataspace.svg)
+
 
 ## Components
 

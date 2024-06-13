@@ -15,9 +15,9 @@ The publish/subscribe pattern is used for the implementation of the Streaming In
 
 An eligible party may need to collect data from many customers and distribute this data to many Services. The publish/subscribe pattern offers an elegant way to achieve exactly this functionality. To this end, the energy data that is aggregated by the EDDIE Framework is first published to the Streaming Infrastructure (which is implemented using the Apache Kafka publish/subscribe framework). Then, this data is sent to subscribers that are the Services of the eligible party. An overview of Kafka is shown in the figure below:
 
-<div align="center">
-<img src="./figures/kafka-overview.svg">
-</div>
+
+![](./figures/kafka-overview.svg)
+
 
 This figure includes the following components:
 

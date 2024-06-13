@@ -7,9 +7,9 @@ order: 8
 
 AIIDA (Administrative Interface for In-house Data Access) is responsible for establishing the consent of the customer regarding access to real-time data from the customer's Smart Meter. Also, for acquiring the real-time data from the Smart Meter and sending it to the Streaming Infrastructure of the EDDIE Framework. The high-level view of AIIDA is shown in the figure below.
 
-<div align="center">
-<img src="./figures/aiida.svg">
-</div>
+
+![](./figures/aiida.svg)
+
 
 ## Components
 

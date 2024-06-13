@@ -6,9 +6,9 @@ title: The Eligible Party Terminates a Service
 
 The following workflow shows the process of the eligible party terminating a Service, and consequently, also revoking the consent of the customers who use this Service. This process starts with the eligible party accessing the Admin Console.
 
-<div align="center"> 
-<img src="./figures/eligible-party-terminates-service.svg">
-</div>
+
+![](./figures/eligible-party-terminates-service.svg)
+
 
 This workflow includes the following steps:
 1. The eligible party logs in to the Admin Console.

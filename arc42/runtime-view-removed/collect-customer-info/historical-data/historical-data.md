@@ -6,9 +6,9 @@ title: For Access to Historical Data
 
 The following workflow shows the process of a customer who fills out a consent form for access to their historical validated energy consumption data. Since this form may need to be different based on the regulations of each country (e.g., due to different required data, such as metering point number, or national identification number), a specific process takes place to provide all customers with a uniform and intuitive experience regarding giving their consent.
 
-<div align="center"> 
-<img src="./figures/collect-consent-historical-data.svg">
-</div>
+
+![](./figures/collect-consent-historical-data.svg)
+
 
 
 This workflow includes the following steps:

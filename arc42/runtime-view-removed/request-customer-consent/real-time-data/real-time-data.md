@@ -7,6 +7,6 @@ title: For Access to Real-time Data
 TBD
 
 <!-- 
-<div align="center"> 
-<img src="./figures/collect-consent-historical-data.svg">
-</div> -->
+
+![](./figures/collect-consent-historical-data.svg)
+ -->

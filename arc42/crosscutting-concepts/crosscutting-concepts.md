@@ -18,9 +18,9 @@ include many different topics, such as
 
 There are various important concepts that are relevant to many parts of the system. The figure below shows an overview of these concepts in the form of a mindmap. 
 
-<div align="center"> 
-<img src="./figures/crosscutting-concepts.svg">
-</div>
+
+![](./figures/crosscutting-concepts.svg)
+
 
 The following table provides links to more detailed information about these concepts based on category.
 

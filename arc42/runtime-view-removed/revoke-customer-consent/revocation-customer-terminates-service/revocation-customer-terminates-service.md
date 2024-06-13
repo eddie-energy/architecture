@@ -6,9 +6,9 @@ title: The Customer Terminates Service
 
 The following workflow shows the process of the customer terminating a Service, and consequently, revoking their consent for access to historical validated data. This process starts with the Customer accessing the Permission Facade through the website of the eligible party.
 
-<div align="center"> 
-<img src="./figures/customer-terminates-service.svg">
-</div>
+
+![](./figures/customer-terminates-service.svg)
+
 
 This workflow includes the following steps:
 1. The customer accesses the Permission Facade through the EP Website and clicks to terminate a running Service.

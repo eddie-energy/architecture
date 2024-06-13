@@ -7,9 +7,9 @@ order: 1
 
 The internal structure of the Regional Connector - Austria is shown below.
 
-<div align="center">
-<img src="./figures/regional-connector-austria.svg">
-</div>
+
+![](./figures/regional-connector-austria.svg)
+
 
 The included components are the following.
 

@@ -9,9 +9,9 @@ The Admin Console is a frontend application for the eligible party. This applica
 
 <!-- TBD -->
 
-<div align="center">
-<img src="./figures/admin-console.png">
-</div>
+
+![](./figures/admin-console.png)
+
 
 ## Data Models
 

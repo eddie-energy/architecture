@@ -29,9 +29,7 @@ Eddie ..> Mpa
 @enduml
 ``` -->
 
-<div align="center">
-<img src="./figures/mvp1-business-context.png" width="300">
-</div>
+![](./figures/mvp1-business-context.png)
 
 
 ## Functional Scope
@@ -94,6 +92,4 @@ Eddie ..> EnedisConsent
 @enduml
 ``` -->
 
-<div align="center">
-<img src="./figures/eda-enedis.png" width="700">
-</div>
+![](./figures/eda-enedis.png)
