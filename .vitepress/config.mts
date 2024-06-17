@@ -17,7 +17,7 @@ export default defineConfig({
   description: "European Distributed Data Infrastructure For Energy",
   srcDir: "./arc42",
   srcExclude,
-  lastUpdated: true,
+  lang: "en-GB",
   head: [["link", { rel: "icon", href: "/figures/favicon-32x32.png" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -29,6 +29,23 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/eddie-energy/architecture" },
     ],
+    editLink: {
+      text: "Edit this page on GitHub",
+      pattern:
+        "https://github.com/eddie-energy/architecture/blob/main/arc42/:path",
+    },
+    lastUpdated: {
+      text: "Last Updated",
+      formatOptions: {
+        day: "numeric",
+        month: "numeric",
+        year: "numeric",
+        forceLocale: true,
+      },
+    },
+    search: {
+      provider: "local",
+    },
   },
   markdown: {
     config: (md) => {
