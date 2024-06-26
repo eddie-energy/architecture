@@ -1,0 +1,36 @@
+@startuml customer-revokes-consent
+'sequence diagram
+caption Sequence Diagram: The customer revokes the consent via the Consent Admin Portal
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Customer" as user
+box "Regional Data-sharing\nInfrastructure" #transparent
+  participant "Consent\nAdmin Portal" as adminPortal
+end box
+box "EDDIE Framework" #transparent
+  box "Interoperable\nCommunication" #transparent
+    participant "Regional\nConnector" as regionalConnector
+  end box
+end box
+participant "Service" as service
+
+
+user -> adminPortal : login(credentials)
+user -> adminPortal : revokeConsent(\neligibleParty)
+activate adminPortal
+  adminPortal -> adminPortal : revokeConsent(\ncustomer, eligibleParty)
+  adminPortal -> regionalConnector : inform(revocation,customer)
+  adminPortal -->> user : OK
+deactivate adminPortal
+  regionalConnector -> regionalConnector : revokeConsent(customer)
+  regionalConnector -> service : inform(revocation, customer)
+
+@enduml

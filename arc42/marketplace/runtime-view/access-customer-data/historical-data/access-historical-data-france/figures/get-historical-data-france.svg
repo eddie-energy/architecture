@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="539px" preserveAspectRatio="none" style="width:714px;height:539px;background:#FFFFFF;" version="1.1" viewBox="0 0 714 539" width="714px" zoomAndPan="magnify"><defs/><g><rect height="503.2891" style="stroke:#181818;stroke-width:0.5;fill:none;" width="340" x="104.5" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="132" x="208.5" y="18.0669">EDDIE Framework</text><rect height="483.1563" style="stroke:#181818;stroke-width:0.5;fill:none;" width="340" x="104.5" y="26.1328"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="219" x="165" y="38.1997">Interoperable Communication</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="5" x="165" y="53.3325"> </text><rect height="468.0234" style="stroke:#181818;stroke-width:0.5;fill:none;" width="243" x="104.5" y="41.2656"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="209" x="121.5" y="53.3325">Regional Connector - France</text><rect height="503.2891" style="stroke:#181818;stroke-width:0.5;fill:none;" width="252" x="456.5" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="164" x="500.5" y="18.0669">Regional Data-sharing</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="101" x="500.5" y="33.1997">Infrastructure</text><rect height="468.0234" style="stroke:#181818;stroke-width:0.5;fill:none;" width="252" x="456.5" y="41.2656"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="53" x="556" y="53.3325">ENEDIS</text><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="42" x2="42" y1="136.6953" y2="503.2891"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="189" x2="189" y1="136.6953" y2="503.2891"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="286" x2="286" y1="136.6953" y2="503.2891"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="402" x2="402" y1="136.6953" y2="503.2891"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="510.5" x2="510.5" y1="136.6953" y2="503.2891"/><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="505.5" y="310.4922"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="659.5" x2="659.5" y1="136.6953" y2="503.2891"/><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="654.5" y="368.7578"/><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="654.5" y="427.0234"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="5" y="133.3936">Customer</text><ellipse cx="42" cy="68.8984" fill="none" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M42,76.8984 L42,103.8984 M29,84.8984 L55,84.8984 M42,103.8984 L29,118.8984 M42,103.8984 L55,118.8984 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="none" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="110" x="134" y="105.3984"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="141" y="125.3936">Microfrontend</text><rect fill="none" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="64" x="254" y="105.3984"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="261" y="125.3936">Service</text><rect fill="none" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="77" x="363.5" y="89.1016"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="370.5" y="109.0967">Message</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="370.5" y="125.3936">Producer</text><rect fill="none" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="100" x="460.5" y="89.1016"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="481" y="109.0967">Consent</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="467.5" y="125.3936">Admin Portal</text><rect fill="none" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="90" x="614.5" y="89.1016"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="621.5" y="109.0967">Meter Data</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="640" y="125.3936">Portal</text><polygon fill="#181818" points="53,161.8281,43,165.8281,53,169.8281" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="47" x2="188" y1="165.8281" y2="165.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="59" y="160.7622">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="110" x="72" y="160.7622">show(redirection)</text><polygon fill="#181818" points="498.5,190.9609,508.5,194.9609,498.5,198.9609" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="42" x2="504.5" y1="194.9609" y2="194.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="49" y="189.895">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="110" x="62" y="189.895">login(credentials)</text><polygon fill="#181818" points="498.5,220.0938,508.5,224.0938,498.5,228.0938" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="42" x2="504.5" y1="224.0938" y2="224.0938"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="49" y="219.0278">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="165" x="62" y="219.0278">approve(consentRequest)</text><line style="stroke:#181818;stroke-width:1.0;" x1="510.5" x2="552.5" y1="268.3594" y2="268.3594"/><line style="stroke:#181818;stroke-width:1.0;" x1="552.5" x2="552.5" y1="268.3594" y2="281.3594"/><line style="stroke:#181818;stroke-width:1.0;" x1="511.5" x2="552.5" y1="281.3594" y2="281.3594"/><polygon fill="#181818" points="521.5,277.3594,511.5,281.3594,521.5,285.3594" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="517.5" y="255.7271">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="78" x="530.5" y="248.1606">forwardToEP</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117" x="530.5" y="263.2935">Account(approval)</text><polygon fill="#181818" points="493.5,306.4922,503.5,310.4922,493.5,314.4922" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="286" x2="499.5" y1="310.4922" y2="310.4922"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="293" y="305.4263">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="158" x="306" y="305.4263">get(clientID,clientSecret)</text><line style="stroke:#181818;stroke-width:1.0;" x1="287" x2="297" y1="339.625" y2="335.625"/><line style="stroke:#181818;stroke-width:1.0;" x1="287" x2="297" y1="339.625" y2="343.625"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="286" x2="504.5" y1="339.625" y2="339.625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="303" y="334.5591">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="127" x="316" y="334.5591">clientID,clientSecret</text><polygon fill="#181818" points="642.5,364.7578,652.5,368.7578,642.5,372.7578" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="286" x2="648.5" y1="368.7578" y2="368.7578"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="293" y="363.6919">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="196" x="306" y="363.6919">getToken(clientID,clientSecret)</text><line style="stroke:#181818;stroke-width:1.0;" x1="287" x2="297" y1="397.8906" y2="393.8906"/><line style="stroke:#181818;stroke-width:1.0;" x1="287" x2="297" y1="397.8906" y2="401.8906"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="286" x2="653.5" y1="397.8906" y2="397.8906"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="303" y="392.8247">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38" x="316" y="392.8247">Token</text><polygon fill="#181818" points="642.5,423.0234,652.5,427.0234,642.5,431.0234" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="286" x2="648.5" y1="427.0234" y2="427.0234"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="293" y="421.9575">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="128" x="306" y="421.9575">requestData(Token)</text><line style="stroke:#181818;stroke-width:1.0;" x1="287" x2="297" y1="456.1563" y2="452.1563"/><line style="stroke:#181818;stroke-width:1.0;" x1="287" x2="297" y1="456.1563" y2="460.1563"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="286" x2="653.5" y1="456.1563" y2="456.1563"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="303" y="451.0903">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="31" x="325" y="451.0903">Data</text><polygon fill="#181818" points="390,481.2891,400,485.2891,390,489.2891" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="286" x2="396" y1="485.2891" y2="485.2891"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="293" y="480.2231">11</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="70" x="315" y="480.2231">send(data)</text><rect fill="none" height="16.2969" id="_caption" style="stroke:none;stroke-width:1.0;" width="679" x="19.75" y="514.2891"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="679" x="19.75" y="527.2842">Sequence Diagram: The Regional Connector - France accesses the historical data of the customer</text><!--MD5=[07ae704113a11e8992afa4540ef77cbe]
+@startuml get-historical-data-france
+'sequence diagram
+caption Sequence Diagram: The Regional Connector - France accesses the historical data of the customer
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Customer" as user
+box "EDDIE Framework" #transparent
+  ' participant "Permission\nFacade" as website
+  box "Interoperable Communication\n"  #transparent
+    box "Regional Connector - France"  #transparent
+      participant "Microfrontend" as microfrontend
+      participant "Service" as service
+    end box
+      participant "Message\nProducer" as messageProducer
+  end box
+end box
+box "Regional Data-sharing\nInfrastructure" #transparent
+  box "ENEDIS" #transparent
+    participant "Consent\nAdmin Portal" as adminPortal
+    participant "Meter Data\nPortal" as dataPortal
+  end box
+end box
+
+microfrontend -> user : show(redirection)
+user -> adminPortal : login(credentials)
+user -> adminPortal : approve(consentRequest)
+adminPortal -> adminPortal: forwardToEP\nAccount(approval)
+service -> adminPortal: get(clientID,clientSecret)
+activate adminPortal
+  adminPortal- ->> service : clientID,clientSecret
+deactivate adminPortal
+
+service -> dataPortal: getToken(clientID,clientSecret)
+activate dataPortal
+    dataPortal- ->> service: Token
+deactivate dataPortal
+
+service -> dataPortal: requestData(Token)
+activate dataPortal
+  dataPortal - ->> service: Data
+deactivate dataPortal
+service -> messageProducer : send(data)
+
+
+
+
+@enduml
+
+@startuml get-historical-data-france
+caption Sequence Diagram: The Regional Connector - France accesses the historical data of the customer
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Customer" as user
+box "EDDIE Framework" #transparent
+  box "Interoperable Communication\n"  #transparent
+    box "Regional Connector - France"  #transparent
+      participant "Microfrontend" as microfrontend
+      participant "Service" as service
+    end box
+      participant "Message\nProducer" as messageProducer
+  end box
+end box
+box "Regional Data-sharing\nInfrastructure" #transparent
+  box "ENEDIS" #transparent
+    participant "Consent\nAdmin Portal" as adminPortal
+    participant "Meter Data\nPortal" as dataPortal
+  end box
+end box
+
+microfrontend -> user : show(redirection)
+user -> adminPortal : login(credentials)
+user -> adminPortal : approve(consentRequest)
+adminPortal -> adminPortal: forwardToEP\nAccount(approval)
+service -> adminPortal: get(clientID,clientSecret)
+activate adminPortal
+  adminPortal- ->> service : clientID,clientSecret
+deactivate adminPortal
+
+service -> dataPortal: getToken(clientID,clientSecret)
+activate dataPortal
+    dataPortal- ->> service: Token
+deactivate dataPortal
+
+service -> dataPortal: requestData(Token)
+activate dataPortal
+  dataPortal - ->> service: Data
+deactivate dataPortal
+service -> messageProducer : send(data)
+
+
+
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

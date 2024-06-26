@@ -1,0 +1,94 @@
+@startuml
+
+[*] --> CREATED : CIMConsentRequest received
+CREATED --> INVALID : Request not valid
+INVALID : PA not onboarded in setup
+INVALID : Request not valid (e.g. probably in the past)
+INVALID : Other reason
+INVALID --> [*]
+
+state RegionConnector_Validate {
+    [*] -right-> ValidateAT
+    ValidateAT : check if CMRequestId is unique and properly generated
+    ValidateAT : MeteringPointId set?
+    ValidateAT : Agreement with DSO set up?
+    ValidateAT : DataFamily exists and no known validation issues?
+    ValidateAT -right-> [*]
+    [*] -right-> ValidateFR
+    ValidateFR : Set up done for DSO (e.g., Enedis or SRD Energies)
+    ValidateFR : MeteringPointId set up correctly
+    ValidateFR -right-> [*]
+}
+
+RegionConnector_Validate --> INVALID
+RegionConnector_Validate --> VALIDATED
+
+CREATED -left-> RegionConnector_Validate
+
+CREATED --> VALIDATED : PA is set up, syntactically correct and semantically consistent
+CREATED : Process state object created, process gets an ID
+VALIDATED -right-> TRANSFORMED_TO_PA_MESSAGE
+VALIDATED : Based on MS master data, CIM msg is transformed to PA format
+VALIDATED : Maybe we need some sort of envelope containing more than one actual msg
+TRANSFORMED_TO_PA_MESSAGE -right-> SENT_TO_PA : Request message sent to PA/Request executed against Hub
+
+state RegionConnector_SendRequest {
+    [*] -right-> CMRequestSent : EDA (AT)
+    CMRequestSent --> CMNotValid : SUBMIT=OK
+    CMRequestSent --> CMNotInvalid : SUBMIT=NOT_OK
+    CMNotValid --> [*]
+    CMNotInvalid --> [*]
+    --
+    [*] -right-> EnedisSkipStep : Enedis (FR)
+    EnedisSkipStep : User will be redirected through OAuth URL in VALID_PA
+    EnedisSkipStep -right-> [*]
+}
+
+SENT_TO_PA --> RegionConnector_SendRequest
+
+RegionConnector_SendRequest -right-> VALID_PA : Validation message received from PA (optional)
+VALID_PA : This would be the state when the GUI can forward the user to the PA portal
+RegionConnector_SendRequest -right-> INVALID_PA
+
+RegionConnector_WaitForAcceptance -right-> TIMED_OUT
+TIMED_OUT --> [*]
+INVALID_PA --> [*]
+
+state RegionConnector_WaitForAcceptance {
+    [*] --> ListenToCMRequestNotification
+    ListenToCMRequestNotification --> [*]
+    --
+    [*] --> ListenOnRedirectPage
+    ListenOnRedirectPage --> [*]
+}
+
+State CONSENT_ESTABLISHED #lightgreen
+State REQUEST_REJECTED #red
+State TIMED_OUT #orange
+
+VALID_PA --right> RegionConnector_WaitForAcceptance
+
+RegionConnector_WaitForAcceptance -right-> CONSENT_ESTABLISHED
+CONSENT_ESTABLISHED : in this state, TransferData is executed
+
+RegionConnector_WaitForAcceptance --> REQUEST_REJECTED
+REQUEST_REJECTED --> [*]
+
+CONSENT_ESTABLISHED --> CONSENT_TERMINATED : triggered via Admin Console GUI or EP Application
+CONSENT_TERMINATED : Typically triggered either from EP's Application or AdminConsole (via Kafka Event)
+CONSENT_TERMINATED --> [*]
+
+state RegionConnector_ListenForRevocation {
+    [*] -right-> ListenForCMRevocationMsg : EDA (AT)
+    ListenForCMRevocationMsg -right-> [*]
+    --
+    [*] -right-> PollDataHubForRevocation
+    PollDataHubForRevocation --> PollDataHubForRevocation : every XX hrs (configurable)
+    PollDataHubForRevocation --> [*]
+}
+
+CONSENT_ESTABLISHED -right-> RegionConnector_ListenForRevocation
+RegionConnector_ListenForRevocation --> CONSENT_REVOKED
+CONSENT_REVOKED --> [*]
+
+@enduml

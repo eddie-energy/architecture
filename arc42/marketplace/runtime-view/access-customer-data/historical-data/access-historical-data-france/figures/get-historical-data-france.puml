@@ -1,0 +1,55 @@
+@startuml get-historical-data-france
+'sequence diagram
+caption Sequence Diagram: The Regional Connector - France accesses the historical data of the customer
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Customer" as user
+box "EDDIE Framework" #transparent
+  ' participant "Permission\nFacade" as website
+  box "Interoperable Communication\n"  #transparent
+    box "Regional Connector - France"  #transparent
+      participant "Microfrontend" as microfrontend
+      participant "Service" as service
+    end box
+      participant "Message\nProducer" as messageProducer
+  end box
+end box
+box "Regional Data-sharing\nInfrastructure" #transparent
+  box "ENEDIS" #transparent
+    participant "Consent\nAdmin Portal" as adminPortal
+    participant "Meter Data\nPortal" as dataPortal
+  end box
+end box
+
+microfrontend -> user : show(redirection)
+user -> adminPortal : login(credentials)
+user -> adminPortal : approve(consentRequest)
+adminPortal -> adminPortal: forwardToEP\nAccount(approval)
+service -> adminPortal: get(clientID,clientSecret)
+activate adminPortal
+  adminPortal-->> service : clientID,clientSecret
+deactivate adminPortal
+
+service -> dataPortal: getToken(clientID,clientSecret)
+activate dataPortal
+    dataPortal-->> service: Token
+deactivate dataPortal
+
+service -> dataPortal: requestData(Token)
+activate dataPortal
+  dataPortal -->> service: Data
+deactivate dataPortal
+service -> messageProducer : send(data)
+
+
+
+
+@enduml

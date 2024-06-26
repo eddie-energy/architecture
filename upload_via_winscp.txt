@@ -1,5 +1,0 @@
-
-open sftp://webprojects3.fh-hagenberg.at
-synchronize remote -delete ./_site /web/architecture
-close
-exit

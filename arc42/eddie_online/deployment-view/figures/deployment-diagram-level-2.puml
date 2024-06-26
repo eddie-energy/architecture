@@ -1,0 +1,95 @@
+@startuml deployment-diagram-level-2
+'deployment diagram
+caption Deployment Diagram: Level 2 view
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam artifact{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam actor{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle{
+  BorderColor transparent
+  BackgroundColor transparent
+  FontColor transparent
+}
+
+node "Eligible Party Infrastructure" as epInfra{
+  node "Docker Runtime" <<Local Computing Infrastructure>> as local {    
+    component "EDDIE Framework" {
+    artifact "Permission\nFacade" <<Container>> as consentFacade
+    artifact "Streaming\nInfrastructure" <<Container>> as broker
+    database "Database\n" <<Container>> as database
+    artifact "Admin \nConsole" <<Container>> as adminConsole
+    component "\t\t\t\tInteroperable Communication\t\t\t\t" as comm
+    }
+  }
+  node "Docker Runtime" <<Cloud Computing Infrastructure>> as cloud{
+    artifact "EP Website" <<Container>>as ui
+    artifact "Service" <<Container>> as services
+  }
+
+  ui -down- consentFacade
+  ui -[hidden]right- services
+
+  database -down- comm
+  broker -down- comm
+  database -right-adminConsole
+  broker -up- services
+  adminConsole -down- comm
+
+}
+node "In-house Infrastructure" {
+  node "Docker Runtime" <<In-house Device>> as house{
+    component "\t\tAIIDA\t\t" as aiida
+  }
+  node " " <<Smart Meter>> as meter {
+      interface "P1" as p1
+  }
+  aiida -down-( p1 : "\t"
+}
+
+node "Regional Data-sharing\nInfrastructure" as energyProvider {
+  interface "Meter\nData\nPortal" as dataPortal
+  interface "Consent\nAdmin\nPortal" as adminPortal
+}
+
+actor "Customer" as consumer
+actor "Eligible Party" as admin
+
+node "Docker Runtime"  <<Federated Infrastructure>>  as marketplaceNode {
+  component "Marketplace" as marketplace
+}
+
+consumer -right- marketplace
+marketplace -down- admin
+
+
+
+admin -left- adminConsole
+
+consumer ---- aiida
+consumer - ui
+
+comm -down-( dataPortal
+comm -down-( adminPortal
+consentFacade -down- comm
+
+aiida -up- comm
+
+@enduml
