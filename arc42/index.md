@@ -6,7 +6,7 @@ hero:
   name: "EDDIE Architecture"
   text: "Software Architecture for the EDDIE Project"
   tagline: European Distributed Data Infrastructure For Energy
-  image: figures/thumbnail-eddie.png
+  image: figures/Lego-Eddie.png
   actions:
     - theme: brand
       text: Start Reading

@@ -9,8 +9,6 @@
   --eddie-light-blue: #1da7e0;
   --eddie-pink: #ea5297;
   --eddie-yellow: #ffd208;
-  /* nonstandard eddie colors */
-  --eddie-green-but-darker: #749a32;
 }
 
 /**
@@ -106,6 +104,10 @@
   --vp-button-alt-active-bg: var(--eddie-light-blue);
 }
 
+.dark {
+  --vp-button-alt-border: var(--vp-c-white);
+}
+  
 /**
  * Component: Home
  * -------------------------------------------------------------------------- */
