@@ -1,0 +1,58 @@
+@startuml aiida-connector
+'component diagram
+caption Component Diagram: AIIDA Connector
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle{
+  BorderColor transparent
+  BackgroundColor transparent
+  FontColor transparent
+}
+' component "Service/Data\nMarketplace" as marketplace
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" as eddie {
+    component "Permission\nFacade" as consentFacade
+    component "Interoperable Communication" as comm {
+      component "AIIDA Connector" as conAIIDA{
+        component "Microfrontend" as microfrontend
+        component "QR Code\nGenerator" as generator
+
+        microfrontend -right- generator
+      }
+    }
+    database "Database\n" as database
+
+
+
+    consentFacade -down- microfrontend
+    generator -right- database
+
+
+  }
+
+}
+
+
+
+
+
+
+
+
+@enduml

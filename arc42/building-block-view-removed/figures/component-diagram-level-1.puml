@@ -1,0 +1,75 @@
+@startuml component-diagram-level-1
+'component diagram
+caption Component Diagram: Level 1 view
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam actor{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle{
+  BorderColor transparent
+  BackgroundColor transparent
+  FontColor transparent
+}
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
+
+
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "\t\tEDDIE Framework\t\t\n" as eddie
+  component "EP Website" as ui
+  collections "Service" as service
+
+  ui -down- eddie
+  ui -[hidden]right- service
+  service -down- eddie
+}
+
+node "In-house\nInfrastructure" {
+  component "\tAIIDA\t" as aiida
+  node "Smart Meter" as meter {
+      interface "Smart Meter\nInterface" as p1
+  }
+  aiida -down-( p1 
+}
+
+node "Regional Data-sharing\nInfrastructure" as energyProvider {
+  interface "Meter\nData\nPortal" as dataPortal
+  interface "Consent\nAdmin\nPortal" as adminPortal
+}
+
+actor "Customer" as consumer
+actor "Eligible\nParty" as ep
+
+node " "   as marketplaceNode {
+  component "Marketplace" as marketplace
+}
+
+consumer -right- marketplace
+marketplace -down- ep
+
+ep -left- eddie
+consumer -left- ui
+consumer -down- aiida
+
+eddie -down-( adminPortal
+eddie -down-( dataPortal
+eddie -down- aiida
+
+@enduml

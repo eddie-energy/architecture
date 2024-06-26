@@ -1,0 +1,69 @@
+@startuml aiida-backend
+'component diagram
+caption Component Diagram: Internal view of the AIIDA Backend
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam actor{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle{
+  BorderColor black
+  BackgroundColor transparent
+}
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" {
+
+    component "Streaming\nInfrastructure" as streaming
+  }
+}
+node "In-house\nInfrastructure" {
+  component "\tAIIDA" as aiida {
+    component "AIIDA\nFrontend" as frontend
+    component "  AIIDA Backend" as backend{
+      component "Aggregator" as aggregator
+      component "Streamer" as streamer
+      component "Permission\nManager" as permissionManager
+      component "Error\nHandler" as errorHandler
+      database "Storage" as storage
+    }
+    interface " " as aiidaAPI
+
+    streamer -down- aggregator
+    frontend -right-( aiidaAPI
+    aiidaAPI -right- permissionManager
+    ' aiidaAPI -right- errorHandler
+    permissionManager -down- errorHandler
+    permissionManager -right- streamer
+
+    errorHandler -right- storage
+    storage -right- aggregator
+    permissionManager -down- storage
+  }
+  node "Smart Meter" as meter {
+    interface "Smart Meter\nInterface" as p1
+  }
+  aggregator -down-( p1
+}
+interface " " as streamAPI
+component "AIIDA\nApp" as app
+
+streaming -down- streamAPI
+streamer -up-( streamAPI
+
+app -down-( aiidaAPI
+
+@enduml

@@ -1,0 +1,36 @@
+@startuml component-diagram-streaming-infr
+'component diagram
+caption Component Diagram: Streaming Infrastructure
+skinparam linetype ortho
+
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" as eddie {
+    component "Interoperable\nCommunication" as comm {
+      component "Message Producer" as messageProducer
+    }
+    component "Streaming\nInfrastructure" as streaming
+  }
+  collections "Service" as service
+
+  messageProducer --up-> streaming : Publish historical data
+  service <-down-- streaming : Subscribe to \nreceive data
+}
+
+node "In-house\nInfrastructure" {
+  component "\tAIIDA\t" as aiida
+}
+
+
+streaming <-right- aiida  : "\n\n\n          Publish real-time data"
+
+
+@enduml

@@ -1,0 +1,24 @@
+@startuml smart-meter
+'component diagram
+caption Component Diagram: Smart Meter
+
+skinparam linetype ortho
+
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+
+node "In-house\nInfrastructure" {
+  component "\tAIIDA\t" as aiida
+  node "Smart Meter" as meter {
+      interface "Smart Meter\nInterface" as p1
+  }
+  aiida -down-( p1 
+}
+
+@enduml

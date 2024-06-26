@@ -1,0 +1,100 @@
+@startuml component-diagram-level-2
+'component diagram
+caption Component Diagram: Level 2 view
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam actor{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
+skinparam rectangle{
+  ' BorderColor transparent
+  BackgroundColor transparent
+  FontColor transparent
+}
+
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" {
+
+    component "Permission \nFacade" as permissionFacade
+    component "Streaming\nInfrastructure" as streamingInfr
+    database "Database\n" as database
+    component "Admin \nConsole" as adminConsole
+    component "\t\t\tInteroperable Communication\t\t\t" as comm
+  }
+  component "EP Website" as epWebsite
+  collections "Service" as services
+
+  ' permissionFacade -right- streamingInfr
+  ' streamingInfr -right- database
+  database -right-adminConsole
+
+  epWebsite -down(0- permissionFacade
+  epWebsite -[hidden]right- services
+  permissionFacade -down- comm
+  database -down- comm
+  streamingInfr -down- comm
+  services -down(0- streamingInfr
+  adminConsole -down- comm
+}
+node "In-house\nInfrastructure" {
+  component "\t\tAIIDA\t\t" as aiida
+  node "Smart Meter" as meter {
+    interface "Smart Meter\nInterface" as p1
+  }
+  aiida -down-( p1
+}
+
+node "Regional Data-sharing\nInfrastructure" as energyProvider {
+  interface "Meter\nData\nPortal" as dataPortal
+  interface "Consent\nAdmin\nPortal" as adminPortal
+}
+
+actor "Customer" as customer
+actor "Eligible\nParty" as ep
+
+node " "  as marketplaceNode {
+  component "Marketplace" as marketplace
+}
+
+customer -right- marketplace
+marketplace -down- ep
+
+adminConsole -right- ep
+
+customer -down- aiida
+
+epWebsite -right- customer
+
+comm -down-( dataPortal
+comm -down-( adminPortal
+
+interface " " as kafkaAiidaInterface
+
+' customer -down- kafkaInterface
+kafkaAiidaInterface )-down- aiida
+streamingInfr -right- kafkaAiidaInterface
+
+
+
+
+ 
+
+@enduml

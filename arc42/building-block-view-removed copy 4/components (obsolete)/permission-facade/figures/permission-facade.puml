@@ -1,0 +1,59 @@
+@startuml permission-facade
+'component diagram
+caption Component Diagram: Permission Facade
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle{
+  BorderColor transparent
+  BackgroundColor transparent
+  FontColor transparent
+}
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EP Website" as ui
+  component "EDDIE Framework" as eddie {
+    component "Permission\nFacade" as permissionFacade {
+      ' component "Micro frontend -\nAustria" as regConAu
+      ' component "Micro frontend -\nFrance" as regConFr
+      ' collections "Micro frontend -\nOther" as regConOt
+
+      ' regConFr -up- regConAu
+      ' regConFr -down- regConOt
+    }
+    component "Interoperable Communication" as comm {
+      component "Regional Connector" as regCon {
+        component "Microfrontend" as microReg
+      }
+      component "AIIDA Connector" as regConAIIDA {
+        component "Microfrontend" as microAIIDA
+      }
+
+    }
+    permissionFacade <-down-- microReg : Coutnry-specific\nfrontend elements\n
+    permissionFacade <-down--microAIIDA : AIIDA-specific\nfrontend elements\n
+  }
+  ui <-down-- permissionFacade : Apropriate\nconsent form
+
+}
+
+
+
+
+
+@enduml

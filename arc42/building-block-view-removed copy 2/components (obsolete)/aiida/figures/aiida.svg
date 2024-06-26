@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="718px" preserveAspectRatio="none" style="width:467px;height:718px;background:#FFFFFF;" version="1.1" viewBox="0 0 467 718" width="467px" zoomAndPan="magnify"><defs/><g><!--MD5=[c57d54656a6b708159567a005370dc18]
+cluster epInfra--><g id="cluster_epInfra"><polygon fill="none" points="158,16,168,6,450,6,450,182,440,192,158,192,158,16" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="440" x2="450" y1="16" y2="6"/><line style="stroke:#181818;stroke-width:1.0;" x1="158" x2="440" y1="16" y2="16"/><line style="stroke:#181818;stroke-width:1.0;" x1="440" x2="440" y1="16" y2="192"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="216" x="192" y="31.9951">Eligible Party Infrastructure</text></g><!--MD5=[8284efcdb2c06113b670adc4eb5eeffa]
+cluster EDDIE Framework--><g id="cluster_EDDIE Framework"><rect fill="none" height="114" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="164" x="222" y="54"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="366" y="59"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="364" y="61"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="364" y="65"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="138" x="235" y="79.9951">EDDIE Framework</text></g><!--MD5=[415e973a851217c742885318a05f06ea]
+cluster In-house\nInfrastructure--><g id="cluster_In-house\nInfrastructure"><polygon fill="none" points="16,314,26,304,398,304,398,666,388,676,16,676,16,314" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="388" x2="398" y1="314" y2="304"/><line style="stroke:#181818;stroke-width:1.0;" x1="16" x2="388" y1="314" y2="314"/><line style="stroke:#181818;stroke-width:1.0;" x1="388" x2="388" y1="314" y2="676"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="69" x="168.5" y="329.9951">In-house</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="110" x="148" y="346.292">Infrastructure</text></g><!--MD5=[f85c73ed3e8c310c887a4bc6076e593c]
+cluster aiida--><g id="cluster_aiida"><rect fill="none" height="114" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="334" x="40" y="368"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="354" y="373"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="352" y="375"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="352" y="379"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="41" x="206.5" y="393.9951">AIIDA</text></g><!--MD5=[7dbb7dea99a93d406f05c066d12ba64a]
+cluster meter--><g id="cluster_meter"><polygon fill="none" points="199,516,209,506,372,506,372,642,362,652,199,652,199,516" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="362" x2="372" y1="516" y2="506"/><line style="stroke:#181818;stroke-width:1.0;" x1="199" x2="362" y1="516" y2="516"/><line style="stroke:#181818;stroke-width:1.0;" x1="362" x2="362" y1="516" y2="652"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="97" x="233" y="531.9951">Smart Meter</text></g><!--MD5=[28e89758031464f183664ec848e9b0c4]
+entity streaming--><g id="elem_streaming"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="132" x="238" y="89"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="350" y="94"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="348" y="96"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="348" y="100"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="253" y="121.9951">Streaming</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="253" y="138.292">Infrastructure</text></g><!--MD5=[b1e3d2dcb3697de9e6328d1cb436cbc4]
+entity frontend--><g id="elem_frontend"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="103" x="56.5" y="403"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="139.5" y="408"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="137.5" y="410"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="137.5" y="414"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35" x="71.5" y="435.9951">AIIDA</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="71.5" y="452.292">Frontend</text></g><!--MD5=[4e8ecd94af36cce41665c9f079adf9fd]
+entity backend--><g id="elem_backend"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="109" x="248.5" y="403"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="337.5" y="408"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="335.5" y="410"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="335.5" y="414"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35" x="271.5" y="435.9951">AIIDA</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="271.5" y="452.292">Backend</text></g><!--MD5=[c729c131bf83156338fd9bf00fd8589e]
+entity aiidaAPI--><g id="elem_aiidaAPI"><ellipse cx="204" cy="434.5" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/></g><!--MD5=[c3dd7293d4e74cc67bec6d68663a773e]
+entity p1--><g id="elem_p1"><ellipse cx="303" cy="591" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="261" y="620.9951">Smart Meter</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="261" y="637.292">Interface</text></g><!--MD5=[a7c935033be853c9215d8890fbb5a100]
+entity streamAPI--><g id="elem_streamAPI"><ellipse cx="304" cy="250" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/></g><!--MD5=[92848cbaf65985a669855153c5362c37]
+entity customer--><g id="elem_customer"><ellipse cx="98" cy="220.5" fill="none" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><path d="M98,228.5 L98,255.5 M85,236.5 L111,236.5 M98,255.5 L85,270.5 M98,255.5 L111,270.5 " fill="none" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="65" y="284.9951">customer</text></g><!--MD5=[4541fb81c80c07473fe4b07432ef0971]
+entity app--><g id="elem_app"><rect fill="none" height="62.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="75" x="166.5" y="218.5"/><rect fill="none" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="221.5" y="223.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="219.5" y="225.5"/><rect fill="none" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="219.5" y="229.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35" x="181.5" y="251.4951">AIIDA</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="181.5" y="267.792">App</text></g><!--MD5=[9477ef29d66980c865964e9fafe1b940]
+link frontend to aiidaAPI--><g id="link_frontend_aiidaAPI"><path d="M159.65,435 C159.65,435 185,435 185,435 " fill="none" id="frontend-to-aiidaAPI" style="stroke:#181818;stroke-width:1.0;"/><path d="M191.9218,426.5428 A9,9 0 0 0 191.9218 443.4572" fill="none" style="stroke:#181818;stroke-width:1.5;"/></g><!--MD5=[44034612c5ea09785d238cdeb9cdf950]
+link aiidaAPI to backend--><g id="link_aiidaAPI_backend"><path d="M213.14,435 C221.47,435 234.51,435 248.11,435 " fill="none" id="aiidaAPI-backend" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[afae3e218e24689bb0453783ae276852]
+link backend to p1--><g id="link_backend_p1"><path d="M303,466.17 C303,466.17 303,571.83 303,571.83 " fill="none" id="backend-to-p1" style="stroke:#181818;stroke-width:1.0;"/><path d="M311.4572,578.7518 A9,9 0 0 0 294.5428 578.7518" fill="none" style="stroke:#181818;stroke-width:1.5;"/></g><!--MD5=[0634ed2fe75a85517edeacfa70a410e8]
+link streaming to streamAPI--><g id="link_streaming_streamAPI"><path d="M304,152.18 C304,181.38 304,222.85 304,240.96 " fill="none" id="streaming-streamAPI" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[11a6e7b0f83a56389b52af85be997d5b]
+reverse link streamAPI to backend--><g id="link_streamAPI_backend"><path d="M304,269.15 C304,269.15 304,402.79 304,402.79 " fill="none" id="streamAPI-backto-backend" style="stroke:#181818;stroke-width:1.0;"/><path d="M295.5428,262.2282 A9,9 0 0 0 312.4572 262.2282" fill="none" style="stroke:#181818;stroke-width:1.5;"/></g><!--MD5=[dc540b7b4e7a86248b4dd02597ef72b0]
+link customer to frontend--><g id="link_customer_frontend"><path d="M98,288.23 C98,322.11 98,371 98,402.77 " fill="none" id="customer-frontend" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9d070c17d60af0fda271a0e3ab29c6d1]
+link customer to app--><g id="link_customer_app"><path d="M131.25,250 C142.42,250 154.96,250 166.44,250 " fill="none" id="customer-app" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[15d2fbe1d609300493a81307ba674070]
+link app to aiidaAPI--><g id="link_app_aiidaAPI"><path d="M204,281.72 C204,281.72 204,415.3 204,415.3 " fill="none" id="app-to-aiidaAPI" style="stroke:#181818;stroke-width:1.0;"/><path d="M212.4572,422.2218 A9,9 0 0 0 195.5428 422.2218" fill="none" style="stroke:#181818;stroke-width:1.5;"/></g><rect fill="none" height="16.2969" id="_caption" style="stroke:none;stroke-width:1.0;" width="187" x="133" y="693"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="187" x="133" y="705.9951">Component Diagram: AIIDA</text><!--MD5=[e1a644ab304de7ebc018d9cb66df668c]
+@startuml aiida
+'component diagram
+caption Component Diagram: AIIDA
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam actor{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle{
+  BorderColor black
+  BackgroundColor transparent
+}
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" {
+
+    component "Streaming\nInfrastructure" as streaming
+  }
+}
+node "In-house\nInfrastructure" {
+  component "\tAIIDA" as aiida {
+    component "AIIDA\nFrontend" as frontend
+    component "  AIIDA\n  Backend" as backend
+    interface " " as aiidaAPI
+
+    frontend -right-( aiidaAPI
+    aiidaAPI -right- backend
+  }
+  node "Smart Meter" as meter {
+    interface "Smart Meter\nInterface" as p1
+  }
+  backend -down-( p1
+}
+interface " " as streamAPI
+actor "customer" as customer
+component "AIIDA\nApp" as app
+
+streaming -down- streamAPI
+backend -up-( streamAPI
+customer -down- frontend
+
+customer -right- app
+app -down-( aiidaAPI
+
+@enduml
+
+@startuml aiida
+caption Component Diagram: AIIDA
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam actor{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam rectangle{
+  BorderColor black
+  BackgroundColor transparent
+}
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" {
+
+    component "Streaming\nInfrastructure" as streaming
+  }
+}
+node "In-house\nInfrastructure" {
+  component "\tAIIDA" as aiida {
+    component "AIIDA\nFrontend" as frontend
+    component "  AIIDA\n  Backend" as backend
+    interface " " as aiidaAPI
+
+    frontend -right-( aiidaAPI
+    aiidaAPI -right- backend
+  }
+  node "Smart Meter" as meter {
+    interface "Smart Meter\nInterface" as p1
+  }
+  backend -down-( p1
+}
+interface " " as streamAPI
+actor "customer" as customer
+component "AIIDA\nApp" as app
+
+streaming -down- streamAPI
+backend -up-( streamAPI
+customer -down- frontend
+
+customer -right- app
+app -down-( aiidaAPI
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
