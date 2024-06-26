@@ -10,5 +10,4 @@ This section includes the workflows related to sending data to the services. Thi
 | Connector | Section |
 |-|-|
 | Historical data | [Link](./historical-data/historical-data.md) |
-| Real-time data | [Link](./real-time-data/real-time-data.md) |
 | Dataspace data | [Link](./dataspace-data/dataspace-data.md) |

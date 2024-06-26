@@ -5,10 +5,11 @@ order: 3
 
 ## Overview
 
-This section includes the workflows related to accessing the customer's data. Access to historical validated data is achieved through the Regional Data-sharing Infrastructure. Access to real-time data is achieved through AIIDA. The associated workflows are shown below.
+This section includes the workflows related to accessing the customer's historical validated data through the Regional Data-sharing Infrastructure. Since these workflows may differ based on the Regional Data-sharing Infrastructure of each country, the associated workflows are shown below for each country.
 
-
-| Workflows | Section |
+| Country | Section |
 |-|-|
-| Access historical data | [Link](./historical-data/historical-data.md) |
-| Access real-time data | [Link](./real-time-data/real-time-data.md) |
+| Austria | [Link](./access-historical-data-austria/access-historical-data-austria.md) |
+| France | [Link](./access-historical-data-france/access-historical-data-france.md) |
+<!-- | Spain | TBD | -->
+<!-- | Spain | TBD | -->
