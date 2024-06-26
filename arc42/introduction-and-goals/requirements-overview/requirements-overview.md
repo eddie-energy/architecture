@@ -2,7 +2,6 @@
 title: Requirements Overview
 order: 1
 ---
-# Requirements Overview
 
 In this section, we aim to provide a brief overview of the most important requirements for content, functionalities, and business goals.
 
@@ -22,7 +21,7 @@ priorities.
 - Not-for-profit: Apart from the innovation and know-how generated in the work on EDDIE, none of the consortium partners is expecting any direct returns or profit out of the generated software and deliverables. All participants have expertise in different domains or geographical areas, which they want to contribute to a greater – common – profit and a reliable infrastructure for an enhanced market.
 
 
-## Business Requirements
+## Essential Business Requirements
 
 1. Provide the EDDIE Framework as a dependable, scalable and extensible framework that is open source and free to use and change. The EDDIE Framework will be installable in the domain of eligible parties with the need for access to energy data on a customer consent basis. There will be no need for additional centralized intermediaries. This main outcome is aligned with European interoperability, digitalization and data-related legislation, and also provides means to feed back into these initiatives, leading in turn to better-informed decision-making.
 1. Provide AIIDA as an Administrative Interface for In-house Data Access, easily integrable in domestic software systems like smart home solutions or edge devices, making use of existing or additional hardware to be easily deployed in customer houses. Provide customers with a new solution to make available data streams from the standardized near real-time interface on the smart meter (and potentially from a variety of in-house sensors). Allow customers to share their data with services using the EDDIE Framework, on a secure, clean and manageable consent basis.

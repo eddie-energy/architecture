@@ -1,8 +1,7 @@
 ---
-title: Stakeholder
+title: Stakeholders
 order: 3
 ---
-# Stakeholders
 Roles that may be involved are:
 
 | Abbr. | Role | Description |
