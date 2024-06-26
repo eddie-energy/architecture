@@ -1,0 +1,52 @@
+sequenceDiagram
+    autonumber
+
+    participant ep_app as EP App
+    participant cons_popup as Consent Popup
+    participant cons_facade as Consent Facade
+    participant ep_service as EP Service
+    participant interop as ICL
+    participant pa_portal as PA Portal
+    participant md_admin as MDA
+
+    Note over ep_app,cons_popup: User flow within EP Onboarding
+
+    ep_app->>+ep_app: create account for customer
+    
+    loop for each data family or specs needed by EP Service
+        ep_app->>ep_app: show button "Connect My Energy Data"
+        ep_app ->>+ cons_popup: open dialog
+        cons_popup -->>+ cons_facade: reqmaster data
+        cons_facade -->>- cons_popup: countries and data families
+        cons_popup -->>+ cons_facade: request "glue form"
+        cons_facade -->>- cons_popup: PA user flow shortcomings
+        alt 'Cancel' clicked
+            cons_popup -->> ep_app: redirect back to app
+        else 'Forward to Consent Admin' clicked
+            cons_popup ->> interop: [CIMConsentRequest]
+            interop ->>+ pa_portal: [MSConsentRequest]
+            cons_popup ->>- pa_portal: forward customer to portal (ideally with ConsentID as param)
+            pa_portal ->> pa_portal: User logs in
+            alt login fails:
+                pa_portal ->> ep_app: User closes PA Portal or is redirected back
+            else on successful login
+                pa_portal ->> pa_portal: Points Customer to ConsentRequest
+                alt Consent Request not found or user rejects:
+                    pa_portal ->> interop: [MSConsentRequestStatus]
+                    interop ->> ep_app: [CIMConsentRequestStatus]
+                    pa_portal ->> ep_app: Close PA Portal or redirect user
+                else User accepts request
+                    pa_portal -->> md_admin: inform 
+                    md_admin -->> md_admin: set up transfer of data
+                    pa_portal -->> interop: [MSConsentRequestStatus]
+                    interop -->>+ ep_service: [CIMConsentRequestStatus]
+                    ep_service -->>- ep_service: update customer account
+                    pa_portal ->>- ep_app: Closes PA Portal or gets redirected back    
+                    ep_app ->>- ep_app: request addidional data, continue or finalise onboarding
+                    Note over ep_service,md_admin: Ad-hoc or daily transfer of requested data (AFTER user flow, directly system-to-system)
+                    md_admin -->> interop: [MSMeterData]
+                    interop -->> ep_service: [CIMMeterData]
+                end
+            end
+        end
+    end

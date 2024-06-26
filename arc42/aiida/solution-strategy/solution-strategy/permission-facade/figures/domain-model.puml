@@ -1,0 +1,108 @@
+@startuml
+
+
+abstract class ReferenceProcedure {
+    id : uuid
+    name : String
+    description : String
+    logo : Blob
+
+    {abstract} getConsentRequest()
+    {abstract} getPaCmRequest()
+}
+
+class AccessToValidatedHistoricalConsumptionData extends ReferenceProcedure {
+    consentId : String
+    permissionAdministrator : PermissionAdministrator
+y    meteringPointId : MeteringPointId
+    createdAt : Timestamp
+    validatedAt : Timestamp
+    acceptedAt : Timestamp
+    revokedAt : Timestamp
+    terminatedAt : Timestamp
+    accepted : Boolean
+    getConsentRequest()
+    getPaCmRequest()
+}
+
+class Service {
+    id : uuid
+    name : String
+    description : Text
+    logo : Blob
+}
+
+enum MemberState {
+    twoLetterCode : String
+    name : String
+}
+
+abstract class PermissionAdministrator {
+    id : uuid
+    name : String
+    description : String
+    memberState : Member State
+    {abstract} CMRequestValidationInformation validate(CMRequest)
+    {abstract} send(CMRequest) throws Exception
+    {abstract} CMRequestResult awaitAcceptance(CMRequest) : contains Consent if successful
+    {abstract} listenForRevocation(Consent)
+    {abstract} startDataTransferListener(Consent)
+    {abstract} boolean isOnboarded()
+    {abstract} OnboardingDetails getOnboardingDetails(<<optional>> clientOrganisation)
+}
+
+abstract class OnboardingDetails {
+    id : uuid
+    active : boolean
+    clientOrganisation : ClientOrganisation (mandantenfähigkeit)
+    name : String
+    createdAt : DateTime
+    updatedAt : DateTime
+}
+
+OnboardingDetails - PermissionAdministrator : may have zero to one per client <
+
+class EDAOnboardingDetails extends OnboardingDetails {
+    atCode : String
+    role : enum
+    publicKey : Blob <<optional>>
+    privateKey : Blob <<optional>>
+    keyPass : String <<optional>>
+    keyPassSalt : String <<optional>>
+}
+
+abstract OAuthOnboardingDetails extends OnboardingDetails {
+    apiKey : String
+    apiSecret : String
+    loginUrl : String
+    redirectUrl : String
+}
+
+class EnedisOnboardingDetails extends OAuthOnboardingDetails {
+}
+
+class PAEnedis extends PermissionAdministrator {
+    EnedisCMRequestValidationInformation validate(CMRequest)
+    send(EnedisCMRequest) throws Exception
+    EnedisCMRequestResult awaitAcceptance(EnedisCMRequest) : contains Consent if successful
+    listenForRevocation(EnedisConsent)
+    startDataTransferListener(EnedisConsent)
+    boolean isOnboarded()
+    EnedisOnboardingDetails getOnboardingDetails(<<optional>> clientOrganisation)
+}
+
+class PAEda extends PermissionAdministrator {
+    EdaCMRequestValidationInformation validate(CMRequest)
+    send(EdaCMRequest) throws Exception
+    EdaCMRequestResult awaitAcceptance(EdaCMRequest) : contains Consent if successful
+    listenForRevocation(EdaConsent)
+    startDataTransferListener(EdaConsent)
+    boolean isOnboarded()
+    EdaOnboardingDetails getOnboardingDetails(<<optional>> clientOrganisation)
+}
+
+class Consent {
+    PermissionAdministrator pa
+}
+
+@enduml
