@@ -1,5 +1,5 @@
 ---
-title: EDDIE Framework
+title: Building Block View
 order: 2
 ---
 

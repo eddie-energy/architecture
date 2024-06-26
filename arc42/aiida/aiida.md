@@ -1,5 +1,5 @@
 ---
-title: Building Block View
+title: AIIDA
 order: 5
 ---
 

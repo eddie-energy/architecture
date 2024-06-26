@@ -1,5 +1,5 @@
 ---
-title: Building Block View
+title: EDDIE Online
 order: 5
 ---
 
