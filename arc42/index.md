@@ -14,19 +14,20 @@ hero:
     - theme: alt
       text: System Scope and Context
       link: /system-scope-and-context/system-scope-and-context
-    - theme: alt
-      text: Building Block View
-      link: /building-block-view/building-block-view
 
 features:
   - title: EDDIE Framework
     details: Providing core functionality of EDDIE
-    link: /building-block-view/EDDIE_Framework/EDDIE_Framework
+    link: /eddie_framework/eddie_framework
   - title: AIIDA
     details: Enabling in-house data access
-    link: /building-block-view/AIIDA/AIIDA
+    link: /aiida/aiida
   - title: EDDIE Marketplace
-    details: TBD.
+    details: Discover datasets and services based on EDDIE
+    link: /marketplace/marketplace
+  - title: EDDIE Online
+    details: Getting started with EDDIE
+    link: /eddie_online/eddie_online
 ---
 This website hosts the software architecture of EDDIE (European Distributed Data Infrastructure for Energy) which has been documented based on [arc42](https://arc42.org/). EDDIE is a research project co-funded by the European Union's Horizon Innovation Actions under grant agreement No. 101069510.
 
@@ -37,9 +38,10 @@ This document is organized as follows:
 1. [Introduction and goals](./introduction-and-goals/introduction-and-goals.md). Includes the background, business goals, essential requirements and roles. 
 1. [Architectural Constraints](./architectural-constraints/architectural-constraints.md). Includes the political and business constraints.
 1. [Context & Scope](./system-scope-and-context/system-scope-and-context.md). Includes the business scope, technical scope and prerequisites.
-1. [Building Block View](./building-block-view/building-block-view.md). Includes high-level views and data models of the system.
-1. [Runtime View](./runtime-view/runtime-view.md). Includes behavioral views of the system and its components.
-1. [Deployment View](./deployment-view/deployment-view.md). Includes information about the infrastructure that can host the system.
+1. [EDDIE Framework](/eddie_framework/eddie_framework). Providing core functionality of EDDIE
+1. [AIIDA](/aiida/aiida). Enabling in-house data access
+1. [EDDIE Marketplace](/marketplace/marketplace). Discover datasets and services based on EDDIE
+1. [EDDIE Online](/eddie_online/eddie_online). Getting started with EDDIE
 1. [Crosscutting Concepts](./crosscutting-concepts/crosscutting-concepts.md). Includes information about important concepts used in the system.
 1. [Architectural Decisions](./architectural-decisions/architectural-decisions.md). Includes architectural decisions that affect the system.
 1. [Quality Requirements](./quality-requirements/quality-requirements.md). Includes requirements that need to be satisfied by the system.

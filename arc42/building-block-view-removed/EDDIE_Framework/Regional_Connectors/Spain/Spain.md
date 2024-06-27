@@ -6,7 +6,8 @@ order: 3
 ## Eddie Framework Spain
 As mentioned in the section for EDDIE Framework, each country can have a slightly different architecture. For Spain, the Framework looks as follows: 
 
-{% c4 "container-eddieFramework-spain" %}
+<C4 diagram="container-eddieFramework-spain" />
+
 | Container | Responsibility |
 | - | - |
 |EDDIE Core| Provides the core functionalities of EDDIE, e.g. handles energy data or meta data that is forwarded to EDDIE, stored in the database or send somewhere else. |

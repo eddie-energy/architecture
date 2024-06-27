@@ -6,7 +6,7 @@ order: 4
 ## Eddie Framework France
 As mentioned in the section for EDDIE Framework, each country can have a slightly different architecture. For France, the Framework looks as follows:
 
-{% c4 "container-eddieFramework-france" %}
+<C4 diagram="container-eddieFramework-france" />
 | Container | Responsibility |
 | - | - |
 |EDDIE Core| Provides the core functionalities of EDDIE, e.g. handles energy data or meta data that is forwarded to EDDIE, stored in the database or send somewhere else. |
