@@ -112,7 +112,7 @@ After establishing the consent, the data is sent to the EDDIE Framework through 
 <img src="./figures/transfer-of-data.png" >
 </div>
 
-When the data is received by the Interoperable Communication, this data is transformed into a [CIM](../../08-crosscut-concepts/domain-models/cim/cim.md) representation. Then, the data is enriched with additional information that is used internally in the EDDIE Framework (e.g., Service ID, ConsentID, etc.). Finally, the enriched CIM representation of the data is sent to the Service via a Kafka topic. This process is also shown in the figure below.
+When the data is received by the Interoperable Communication, this data is transformed into a [CIM](../../../../crosscutting-concepts/domain-models/cim/cim.md) representation. Then, the data is enriched with additional information that is used internally in the EDDIE Framework (e.g., Service ID, ConsentID, etc.). Finally, the enriched CIM representation of the data is sent to the Service via a Kafka topic. This process is also shown in the figure below.
 
 <div align="center">
 <img src="./figures/transfer-data-process.png" >

@@ -3,7 +3,7 @@ title: Austria
 order: 2
 ---
 ## Eddie Framework Austria
-The overall structure off EDDIE Framework has already been described at [EDDIE Framework](../../EDDIE_Framework.md).
+The overall structure off EDDIE Framework has already been described at [EDDIE Framework](../../../eddie_framework.md).
 
 ## Connector Specifics
 EDA can be thought of as the data access provider for historically validated data in Austria. 

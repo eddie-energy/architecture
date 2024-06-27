@@ -43,7 +43,7 @@ The table below shows a description of the nodes.
 
 | System | Description |
 |-|-|
-|EDDIE Framework | Contains all the relevant infrastructure for the core features of EDDIE. The infrastructure can be distributed and may be operated by different components that can vary based on goals and use cases. The EDDIE Framework infrastructure is described in detail in the [Building Block View](../building-block-view/building-block-view.md). |
+|EDDIE Framework | Contains all the relevant infrastructure for the core features of EDDIE. The infrastructure can be distributed and may be operated by different components that can vary based on goals and use cases. The EDDIE Framework infrastructure is described in detail in the [Building Block View](../eddie_framework/eddie_framework.md). |
 |Gaia-X Framework | The Gaia-X Framework provides compliance services (e.g. the Digital Clearing House) for interoperability.|
 | EP System | The eligible party (EP) system consists of the EP Website and other EP Services, that can be either on-premise or cloud-based. On permission, the EP System transfers the customer information necessary for accessing the customer energy data, and forwards the customer energy data from EDDIE Framework. Apart from the Permission Facade Microfrontent the EP System is out of scope.|
 | AIIDA | The Administration Interface for In-house Data Access (AIIDA) is an interface, for acessing and forwarding real-time data collected by a customers households metering devices. Via AIIDA, a customer allows to share the data with EDDIE.|
