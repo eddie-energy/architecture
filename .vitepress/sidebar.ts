@@ -29,9 +29,12 @@ function readFrontmatter(markdownFilePath: string): SidebarItem {
 }
 
 function findIndexFileInDirectory(directoryPath: string): string | undefined {
-  const indexFileIndexMd = directoryPath + "/index.md";
-  const indexFileDirnameMd =
-    directoryPath + "/" + path.basename(directoryPath) + ".md";
+  const indexFileIndexMd = path.join(directoryPath, "index.md");
+  const indexFileDirnameMd = path.format({
+    dir: directoryPath,
+    name: path.basename(directoryPath),
+    ext: ".md",
+  });
   if (fs.existsSync(indexFileIndexMd)) {
     return indexFileIndexMd;
   } else if (fs.existsSync(indexFileDirnameMd)) {
@@ -50,7 +53,7 @@ function readSidebarItemsFromSubdirectory(
     .filter((fileName) => !indexFile || fileName !== path.basename(indexFile))
     .map((fileName) =>
       buildSidebar(
-        directoryPath + "/" + fileName,
+        path.join(directoryPath, fileName),
         publicUrlPath + "/" + fileName,
         srcExclude
       )
