@@ -14,9 +14,8 @@ The figure below shows the context diagram of the environment. The system within
 
 
 
-<div align="center">
-<img src="./figures/context-diagram-dataspace.svg">
-</div>
+
+![](./figures/context-diagram-dataspace.svg)
 
 The table below shows a description of all the entities of the context diagram.
 
@@ -37,13 +36,13 @@ The table below shows a description of all the entities of the context diagram.
 
 The figure below shows a C4 context diagram of the environment. C4 offers a unique way to model a system in four layers. The first layer pictures the system in scope and its relationship with users and other systems. It should complement the first diagram with the perspective of a developer, namely software systems and their interactions. The grey systems are out of scope for the developer.
 
-{% c4 "eddie" %}
+<C4 diagram="eddie" />
 
 The table below shows a description of the nodes.
 
 | System | Description |
 |-|-|
-|EDDIE Framework | Contains all the relevant infrastructure for the core features of EDDIE. The infrastructure can be distributed and may be operated by different components that can vary based on goals and use cases. The EDDIE Framework infrastructure is described in detail in the [Building Block View](../building-block-view/building-block-view.md). |
+|EDDIE Framework | Contains all the relevant infrastructure for the core features of EDDIE. The infrastructure can be distributed and may be operated by different components that can vary based on goals and use cases. The EDDIE Framework infrastructure is described in detail in the [Building Block View](../eddie_framework/eddie_framework.md). |
 |Gaia-X Framework | The Gaia-X Framework provides compliance services (e.g. the Digital Clearing House) for interoperability.|
 | EP System | The eligible party (EP) system consists of the EP Website and other EP Services, that can be either on-premise or cloud-based. On permission, the EP System transfers the customer information necessary for accessing the customer energy data, and forwards the customer energy data from EDDIE Framework. Apart from the Permission Facade Microfrontent the EP System is out of scope.|
 | AIIDA | The Administration Interface for In-house Data Access (AIIDA) is an interface, for acessing and forwarding real-time data collected by a customers households metering devices. Via AIIDA, a customer allows to share the data with EDDIE.|

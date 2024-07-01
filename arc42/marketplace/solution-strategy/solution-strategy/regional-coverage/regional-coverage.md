@@ -14,8 +14,7 @@ The EDDIE Framework will expand to support customers in many countries in three 
 - **Phase 2** will cover other Regional Data-sharing Infrastructures not directly in the project, which may add up to 22% of the European metering points.
 - **Phase 3** will cover Regional Data-sharing Infrastructures outside Europe.
 
-Thus, EDDIE aims at making available a big part of the European metering points, as shown below. 
+Thus, EDDIE aims at making available a big part of the European metering points, as shown below.
 
-<div align="center">
-<img src="./figures/EDDIE_Coverage.jpg">
-</div>
+![](./figures/EDDIE_Coverage.jpg)
+

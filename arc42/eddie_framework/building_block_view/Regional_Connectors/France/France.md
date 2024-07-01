@@ -6,11 +6,11 @@ order: 4
 ## Eddie Framework France
 As mentioned in the section for EDDIE Framework, each country can have a slightly different architecture. For France, the Framework looks as follows:
 
-{% c4 "container-eddieFramework-france" %}
+<C4 diagram="container-eddieFramework-france" />
 | Container | Responsibility |
 | - | - |
 |EDDIE Core| Provides the core functionalities of EDDIE, e.g. handles energy data or meta data that is forwarded to EDDIE, stored in the database or send somewhere else. |
-|Regional Connector France|The Enedis Datahub is a permission administrator and data access provider for historically validated data in France. Enedis offers various APIs, including the [Data Connect API](https://datahub-enedis.fr/en/data-connect-en/), which is useful for EDDIE to manage data access. Through these APIs, Enedis provides the eligible parties with the means to obtain metering data on behalf of customers in France. The provided APIs are based on HTTP/REST principles and use an OAuth 2.0-based authorization scheme to access the data. The identified issues related to the use of Enedis are documented [here](./issues.md).|
+|Regional Connector France|The Enedis Datahub is a permission administrator and data access provider for historically validated data in France. Enedis offers various APIs, including the [Data Connect API](https://datahub-enedis.fr/en/data-connect-en/), which is useful for EDDIE to manage data access. Through these APIs, Enedis provides the eligible parties with the means to obtain metering data on behalf of customers in France. The provided APIs are based on HTTP/REST principles and use an OAuth 2.0-based authorization scheme to access the data. The identified issues related to the use of Enedis are summarized as a Table [BPRT_Infra_IssueList.xlsx](https://hartnerconsultingcom.sharepoint.com/:x:/r/sites/EuropeanDataAccess/Freigegebene%20Dokumente/WPs/WP5_RegionConnectors/T5.1_BPRT_Infrastructure/BPRT_Infra_IssueList.xlsx?d=w583708fb62a9480399a50c52d11afa4d&csf=1&web=1&e=M3A4cx).|
 |Database|The Database stores important meta data, e.g. access rights, parameters for data exchange or country specific information.|
 
 ## Connector Specifics

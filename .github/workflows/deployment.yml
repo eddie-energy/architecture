@@ -20,16 +20,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 19
-
-    - uses: actions/setup-java@v3 
-      with:
-        distribution: 'temurin'
-        java-version: '20'
-    - name: Run PlantUML Pico Server
-      run: |
-        curl -L https://github.com/plantuml/plantuml/releases/download/v1.2023.5/plantuml.jar --output plantuml.jar
-        java -jar ./plantuml.jar -picoweb:19283 &
-        sleep 5
     - name: Build
       run: |
         npm install --ci 

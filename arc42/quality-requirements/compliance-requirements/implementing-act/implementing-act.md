@@ -11,17 +11,15 @@ The behavior of the EDDIE Framework regarding handling historical validated ener
 - SGTF Use Case 3: The Eligible Party Terminates a Service
 - SGTF Use Case 4: Revocation of an Active Consent
 
-<div align="center"> 
-<img src="./figures/sgtf-use-cases.png">
-</div>
+
+![](./figures/sgtf-use-cases.png)
 
 ### SGTF Use Case 2: Access to Historical Validated Consumption Data by the Eligible Party
 
 To further aid in the interpretation of the diagrams, the following diagram is enhanced with a color scheme indicating what is directly within the scope of the EDDIE Framework, what is indirectly within scope (e.g. the communication between eligible party and metered data administrator) and what is out of scope (e.g. the customer identifying the eligible party).
 
-<div align="center"> 
-<img src="./figures/sgtf-use-case-2.png">
-</div>
+
+![](./figures/sgtf-use-case-2.png)
 
 ### SGTF Use Case 3: The Eligible Party Terminates a Service
 

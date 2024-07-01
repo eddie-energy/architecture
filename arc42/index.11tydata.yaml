@@ -1,8 +1,0 @@
-# default layout that is used for all pages in this folder
-# that don't specify their own layout
-layout: chapter
-
-# date of last modification of the file - the git version
-# is computationally more expensive
-# date: Last Modified
-date: git Last Modified

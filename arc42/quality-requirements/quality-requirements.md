@@ -21,9 +21,8 @@ quality tree example https://arnon.me/2010/05/utility-trees-hatching-quality-att
 
 The quality requirements of the system are outlined in the quality tree below. This tree has 3 main types of quality requirements, i.e., Deployment, Compliance, and Security, each one having various requirements.
 
-<div align="center"> 
-<img src="./figures/quality-tree.svg">
-</div>
+
+![](./figures/quality-tree.svg)
 
 The following table provides links to more detailed information for every quality requirements type.
 

@@ -8,10 +8,7 @@ order: 1
 The following workflow shows the process of the Message Producer sending data from the Regional/AIIDA Connector to a Service. This process starts when the Message Producer receives the data. 
 <!-- The workflow of how the data is sent to the Message Producer varies, e.g., based on country, and is presented [here](../../06-runtime-view.md).  -->
 
-<div align="center"> 
-<img src="./figures/reg-connector-sends-data.svg">
-</div>
-
+![](./figures/reg-connector-sends-data.svg)
 
 This workflow includes the following steps:
 1. Upon creation, the Service creates a new topic in the Streaming Infrastructure.

@@ -13,5 +13,4 @@ The runtime view focuses on interactions among the system's components. The goal
 | Request the customer's consent | [Link](./request-customer-consent/request-customer-consent.md) |
 | Access the customer's data | [Link](./access-customer-data/access-customer-data.md) |
 | Send the data to the services | [Link](./send-data-to-services/send-data-to-services.md) |
-| Revoke the customer's consent | [Link](./revoke-customer-consent/revoke-customer-consent.md) |
 

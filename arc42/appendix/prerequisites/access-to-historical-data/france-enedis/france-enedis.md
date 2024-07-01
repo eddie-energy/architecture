@@ -17,9 +17,7 @@ This application relates to a Service that is offered by the eligible party. Thu
 
 A screenshot of the application form is shown below.
 
-<div align="center">
-<img src="./figures/enedis-application-form.png" >
-</div>
+![](./figures/enedis-application-form.png)
 
 ## Connect Customers
 
@@ -34,8 +32,7 @@ ENEDIS exposes the energy data via a REST API. To access this API, every eligibl
 
 The available APIs for requesting energy data using the bearer token can be found [here](https://datahub-enedis.fr/services-api/data-connect/documentation/).
 
-The following screenshot shows an exmaple of data acquired from the ENEDIS API (including a daily meter reading of the smart meter).
+The following screenshot shows an example of data acquired from the ENEDIS API (including a daily meter reading of the smart meter).
 
-<div align="center">
-<img src="./figures/enedis-data-example.png" >
-</div>
+![](./figures/enedis-data-example.png)
+
