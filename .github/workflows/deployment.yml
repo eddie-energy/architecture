@@ -20,7 +20,7 @@ jobs:
     - name: Set up NodeJs 
       uses: actions/setup-node@v3
       with:
-        node-version: 19
+        node-version: 20
     - name: Build
       run: |
         npm install --ci 
@@ -33,5 +33,5 @@ jobs:
         target-server: ${{ secrets.SSH_HOST }}
         remote-user: ${{ secrets.SSH_USERNAME }}
         private-ssh-key: ${{ secrets.SSH_KEY }}
-        source-path: ./eleventy/_site/
+        source-path: ./.vitepress/dist/
         destination-path: /web/architecture/
