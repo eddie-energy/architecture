@@ -10,7 +10,6 @@ The AIIDA Backend component is responsible for accessing the real-time data from
 
 ![](./figures/aiida-backend.svg)
 
-
 ## Components
 
 The included components are the following:

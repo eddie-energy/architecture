@@ -21,7 +21,6 @@ There are various important concepts that are relevant to many parts of the syst
 
 ![](./figures/crosscutting-concepts.svg)
 
-
 The following table provides links to more detailed information about these concepts based on category.
 
 | Concept | Section |

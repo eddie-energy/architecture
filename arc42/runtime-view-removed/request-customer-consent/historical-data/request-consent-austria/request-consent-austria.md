@@ -10,8 +10,6 @@ The following workflow shows the process of the Regional Connector - Austria req
 
 ![](./figures/request-consent-austria.svg)
 
-
-
 This workflow includes the following steps:
 1. The customer fills out the consent form that is provided by the Microfrontend and is shown on the EP Website through the Permission Facade.
 2. The Microfrontend initiates the consent request from the Translation Service.

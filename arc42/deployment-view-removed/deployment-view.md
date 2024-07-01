@@ -38,8 +38,6 @@ The deployment view of the system focuses on the utilized technical infrastructu
 
 ![](./figures/deployment-diagram-level-2.svg)
 
-
-
 The system runs across four nodes which are described in the table below.
 
 | Node | Description |
@@ -56,12 +54,11 @@ Specifically for the deployment of the EDDIE Framework, i.e., the node Local Com
 
 ![](./figures/deployment-diagram-option-1.svg)
 
-
 Two additional options are shown below.
 
 | Option 2 | Option 3 |
 |-|-|
-|<div><img src="./figures/deployment-diagram-option-2.svg"></div>|<div><img src="./figures/deployment-diagram-option-3.svg"></div>|
+|![](./figures/deployment-diagram-option-2.svg)|![](./figures/deployment-diagram-option-3.svg)|
 
 The motivation for all 3 options is shown in the table below.
 | Option | Motivation |

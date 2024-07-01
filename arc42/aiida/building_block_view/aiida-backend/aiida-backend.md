@@ -7,9 +7,7 @@ order: 2
 
 The AIIDA Backend component is responsible for accessing the real-time data from the Smart Meter and sending it to the EDDIE Framework. In addition to this, AIIDA Backend has an interface for the customer via the AIIDA Frontend (which is a web application) and the AIIDA App (which is a smartphone app). This interface can be used by the customer to manage the customer consent for access to real-time data, and to view error messages regarding the consent, the connection to the Smart Meter and the connection to the EDDIE Framework. The internal view of the AIIDA Backend is shown in the figure below.
 
-<div align="center">
-<img src="./figures/aiida-backend.svg">
-</div>
+![](./figures/aiida-backend.svg)
 
 ## Components
 

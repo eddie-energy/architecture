@@ -10,12 +10,10 @@ The Regional Data-sharing Infrastructure of each country may be using a differen
 
 ![](./figures/HVD-data-model.png)
 
-
 The metamodel of this model is shown in the class diagram below.
 
 
 ![](./figures/CIM%20transfer%20Data.png)
-
 
 A detailed description of the attributes of this model is provided [here](../database/Class%20and%20attributes%20CIM%20Transfer%20Data%20Base.md). 
 

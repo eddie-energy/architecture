@@ -10,5 +10,4 @@ AIIDA handles the consent of the customer for access to real-time data, and the 
 
 ![](./figures/aiida-permission-model.png)
 
-
 The data model of the real-time energy consumption data used within AIIDA is the same CIM-compliant model that is used within the EDDIE Framework and is discussed [here](../meter-data-portal/meter-data-portal.md).

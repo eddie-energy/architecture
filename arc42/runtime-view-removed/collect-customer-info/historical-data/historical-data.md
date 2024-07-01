@@ -9,8 +9,6 @@ The following workflow shows the process of a customer who fills out a consent f
 
 ![](./figures/collect-consent-historical-data.svg)
 
-
-
 This workflow includes the following steps:
 1. The customer clicks a button on the EP Website to connect their historical validated data. This button is provided by the Permission Facade microfrontend of the EDDIE Framework.
 2. The Permission Facade shows a pop-up window for the customer to select their country. 

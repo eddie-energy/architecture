@@ -18,7 +18,6 @@ An eligible party may need to collect data from many customers and distribute th
 
 ![](./figures/kafka-overview.svg)
 
-
 This figure includes the following components:
 
 | Component | Description |

@@ -10,7 +10,6 @@ The internal structure of the Regional Connector - Austria is shown below.
 
 ![](./figures/regional-connector-austria.svg)
 
-
 The included components are the following.
 
 | Component | Responsibility |

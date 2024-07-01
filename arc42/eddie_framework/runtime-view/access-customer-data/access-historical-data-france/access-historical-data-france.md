@@ -9,9 +9,7 @@ The following workflow shows the process of the eligible party accessing the his
 
 <!-- TBD The Service within the Regional Connector has to be replaced by the appropriate components -->
 
-<div align="center"> 
-<img src="./figures/get-historical-data-france.svg">
-</div>
+![](./figures/get-historical-data-france.svg)
 
 This workflow includes the following steps:
 1. The Microfrontend shows the customer a redirection to the website of the permission administrator (which is operated by Enedis, in France).

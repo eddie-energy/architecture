@@ -9,8 +9,6 @@ The following workflow shows the process of the Regional Connector - France requ
 
 ![](./figures/request-consent-france.svg)
 
-
-
 This workflow includes the following steps:
 1. The customer fills out the consent form.
 2. The Microfrontend initiates the consent request from the Translation Service.

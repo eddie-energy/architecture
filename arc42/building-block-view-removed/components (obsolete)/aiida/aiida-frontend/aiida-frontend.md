@@ -9,8 +9,6 @@ The AIIDA Frontend is a web application for the customer to access and configure
 
 ![](./figures/aiida-frontend.svg)
 
-
-
 The AIIDA Frontend enables the following functionalities:
 
 1. Configure the connection to the Smart Meter.

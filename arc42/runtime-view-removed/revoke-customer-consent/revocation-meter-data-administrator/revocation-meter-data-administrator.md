@@ -9,7 +9,6 @@ The following workflow shows the process of the metered data administrator revok
 
 ![](./figures/meter-data-admin-revokes-consent.svg)
 
-
 This workflow includes the following steps:
 1. The metered data administrator revokes the consent of the customer. This step may also include interactions between the metered data administrator and the permission administrator, which are out of the scope of EDDIE.
 2. The metered data administrator informs the Regional Connector that the customer consent has been revoked.

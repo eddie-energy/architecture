@@ -24,7 +24,6 @@ The quality requirements of the system are outlined in the quality tree below. T
 
 ![](./figures/quality-tree.svg)
 
-
 The following table provides links to more detailed information for every quality requirements type.
 
 ## Deployment Requirements

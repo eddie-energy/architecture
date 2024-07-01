@@ -35,10 +35,7 @@ Describe (usually in a combination of diagrams, tables, and text):
 
 The deployment view of the system focuses on the utilized technical infrastructure, and shows deployment diagrams that depict where the components of the system run. The prime way to deploy these components is shown in the figure below. Notably, the Interoperable Communication component is not depicted as a Container because it may consist of multiple containers. The same applies to AIIDA, and the Marketplace.
 
-<div align="center"> 
-<img src="./figures/deployment-diagram-level-2.svg">
-</div>
-
+![](./figures/deployment-diagram-level-2.svg)
 
 The system runs across four nodes which are described in the table below.
 
@@ -53,15 +50,13 @@ The system runs across four nodes which are described in the table below.
 
 Specifically for the deployment of the EDDIE Framework, i.e., the node Local Computing Infrastructure shown above, two additional deployment options are possible. The original deployment is shown below isolated from the rest of the system.
 
-<div align="center"> 
-<img src="./figures/deployment-diagram-option-1.svg">
-</div>
+![](./figures/deployment-diagram-option-1.svg)
 
 Two additional options are shown below.
 
 | Option 2 | Option 3 |
 |-|-|
-|<div><img src="./figures/deployment-diagram-option-2.svg"></div>|<div><img src="./figures/deployment-diagram-option-3.svg"></div>|
+|![](./figures/deployment-diagram-option-2.svg)|![](./figures/deployment-diagram-option-3.svg)|
 
 The motivation for all 3 options is shown in the table below.
 | Option | Motivation |

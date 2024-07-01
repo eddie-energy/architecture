@@ -10,7 +10,6 @@ The AIIDA App is a smartphone application for the customer to access and configu
 
 ![](../aiida-frontend/figures/aiida-frontend.svg)
 
-
 The AIIDA App enables the following functionalities:
 
 1. Scan a QR code from the EP website to configure the connection to the Smart Meter and the EDDIE Framework automatically.
@@ -22,8 +21,8 @@ When scanning a QR code from the EP Website, the AIIDA App shows the configurati
 
 ![](./figures/aiida-app.png)
 
-
 The termination of an active permission for data access can also be executed via the AIIDA App. This is shown in the figure below which shows that the customer first has to select the "Terminate Permission" option (a), then confirm the termination (b), and then observe that the termination was executed by the status change to "TERMINATED". 
 
 
 ![](./figures/aiida-app-termination.png)
+

@@ -11,8 +11,6 @@ The following workflow shows the process of the Message Producer sending data fr
 
 ![](./figures/reg-connector-sends-data.svg)
 
-
-
 This workflow includes the following steps:
 1. Upon creation, the Service creates a new topic in the Streaming Infrastructure.
 2. The Service subscribes to this topic at the Streaming Infrastructure. When a customer wants to use a Service (and gives consent for data access), the information about which service each customer uses is stored. TBD

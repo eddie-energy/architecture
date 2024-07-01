@@ -10,7 +10,6 @@ The Consent Admin Portal is the interface of the Regional Data-sharing Infrastru
 
 ![](./figures/regional-data-sharing-infr.svg)
 
-
 ## Data Models
 
 > Information about the Consent Admin Portal data model is provided [here](../../data-models/consent-admin-portal/consent-admin-portal.md).

@@ -9,8 +9,6 @@ The following workflow shows the process of the customer revoking their consent 
 
 ![](./figures/customer-revokes-consent.svg)
 
-
-
 This workflow includes the following steps:
 1. The customer logs in to the Consent Admin Portal.
 2. The customer clicks to revoke the consent of the eligible party.

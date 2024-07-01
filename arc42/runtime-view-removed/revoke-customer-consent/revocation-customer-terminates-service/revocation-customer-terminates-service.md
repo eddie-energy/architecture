@@ -9,7 +9,6 @@ The following workflow shows the process of the customer terminating a Service, 
 
 ![](./figures/customer-terminates-service.svg)
 
-
 This workflow includes the following steps:
 1. The customer accesses the Permission Facade through the EP Website and clicks to terminate a running Service.
 2. The Permission Facade forwards the termination to the Regional Connector of the customer's country.

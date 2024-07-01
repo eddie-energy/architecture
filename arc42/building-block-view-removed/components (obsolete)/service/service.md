@@ -10,7 +10,6 @@ Each eligible party can use Services for processing the historical validated and
 
 ![](../ep-website/figures/component-diagram-ep-website.svg)
 
-
 Essentially, the EP Website collects the required information from the customer for establishing the customer consent. This information is sent to the EDDIE Framework which uses this information to access the customer data. This data is then sent to the Services for processing. The outcome of the processing may be sent back to the EP Website to the shared with the customer.
 
 ## Data Models

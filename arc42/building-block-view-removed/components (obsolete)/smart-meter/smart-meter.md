@@ -10,7 +10,6 @@ The Smart Meter is a device that is installed in the residence of each customer 
 
 ![](./figures/smart-meter.svg)
 
-
 ## Data Models
 
 > Information about the Smart Meter data model is provided [here](../../data-models/smart-meter/smart-meter.md).

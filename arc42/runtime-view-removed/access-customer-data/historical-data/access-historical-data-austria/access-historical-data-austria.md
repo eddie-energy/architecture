@@ -10,8 +10,6 @@ The following workflow shows the process of the eligible party accessing the his
 
 ![](./figures/get-historical-data-austria.svg)
 
-
-
 This workflow includes the following steps:
 1. The Microfrontend shows the customer a redirection to the website of the metered data administrator (that is the customer's DSO, in Austria).
 2. The customer logs in to the Meter Data Portal.

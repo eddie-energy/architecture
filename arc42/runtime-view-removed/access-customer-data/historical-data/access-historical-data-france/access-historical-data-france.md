@@ -12,7 +12,6 @@ The following workflow shows the process of the eligible party accessing the his
 
 ![](./figures/get-historical-data-france.svg)
 
-
 This workflow includes the following steps:
 1. The Microfrontend shows the customer a redirection to the website of the permission administrator (which is operated by Enedis, in France).
 2. The customer logs in to the Consent Admin Portal.

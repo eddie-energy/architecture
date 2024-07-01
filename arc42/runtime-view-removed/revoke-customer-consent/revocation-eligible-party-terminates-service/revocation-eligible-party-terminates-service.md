@@ -9,7 +9,6 @@ The following workflow shows the process of the eligible party terminating a Ser
 
 ![](./figures/eligible-party-terminates-service.svg)
 
-
 This workflow includes the following steps:
 1. The eligible party logs in to the Admin Console.
 2. The eligible party clicks to terminate the Service.

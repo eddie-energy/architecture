@@ -10,7 +10,6 @@ The Database stores the state of the EDDIE Framework. This includes information 
 
 ![](./figures/database.svg)
 
-
 ## Data Models
 
 > Information about the Database data model is presented on the following pages.

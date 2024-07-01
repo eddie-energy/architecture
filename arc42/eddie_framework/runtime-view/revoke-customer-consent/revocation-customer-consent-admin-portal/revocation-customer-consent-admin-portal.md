@@ -6,10 +6,7 @@ title: The Customer via the Consent Admin Portal
 
 The following workflow shows the process of the customer revoking their consent for historical validated data access via the Regional Data-sharing Infrastructure. This process starts with the customer logging in to the appropriate website, i.e., either the Consent Admin Portal or the Meter Data Portal (based on country).
 
-<div align="center"> 
-<img src="./figures/customer-revokes-consent.svg">
-</div>
-
+![](./figures/customer-revokes-consent.svg)
 
 This workflow includes the following steps:
 1. The customer logs in to the Consent Admin Portal.

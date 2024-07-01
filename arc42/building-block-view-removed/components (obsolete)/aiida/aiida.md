@@ -10,7 +10,6 @@ AIIDA (Administrative Interface for In-house Data Access) is responsible for est
 
 ![](./figures/aiida.svg)
 
-
 ## Components
 
 The included components are the following:

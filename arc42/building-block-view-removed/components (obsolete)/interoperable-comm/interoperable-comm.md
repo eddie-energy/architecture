@@ -11,7 +11,6 @@ The Interoperable Communication component is responsible for communication with 
 
 ![](./figures/inter-comm-dataspace.svg)
 
-
 ## Components
 
 The included components are the following:

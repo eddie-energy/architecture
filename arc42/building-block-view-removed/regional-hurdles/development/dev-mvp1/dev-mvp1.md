@@ -31,7 +31,6 @@ Eddie ..> Mpa
 
 ![](./figures/mvp1-business-context.png)
 
-
 ## Functional Scope
 The main objective of the MVP-1 is creating a software product that eligible parties can use to connect to permission administrators (PA) and metered data administrators (MDAs).
 Eligible parties need to be able to
@@ -93,3 +92,4 @@ Eddie ..> EnedisConsent
 ``` -->
 
 ![](./figures/eda-enedis.png)
+

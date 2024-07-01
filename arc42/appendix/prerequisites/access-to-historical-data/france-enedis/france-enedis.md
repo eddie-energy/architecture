@@ -35,3 +35,4 @@ The available APIs for requesting energy data using the bearer token can be foun
 The following screenshot shows an example of data acquired from the ENEDIS API (including a daily meter reading of the smart meter).
 
 ![](./figures/enedis-data-example.png)
+

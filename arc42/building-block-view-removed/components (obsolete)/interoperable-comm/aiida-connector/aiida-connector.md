@@ -10,7 +10,6 @@ The AIIDA Connector is responsible for enabling AIIDA instances to connect with 
 
 ![](./figures/aiida-connector.svg)
 
-
 ## Components
 
 The included components are the following:
