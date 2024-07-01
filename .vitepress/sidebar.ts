@@ -45,7 +45,7 @@ function findIndexFileInDirectory(directoryPath: string): string | undefined {
 function readSidebarItemsFromSubdirectory(
   directoryPath: string,
   publicUrlPath: string,
-  srcExclude: string[],
+  srcExclude?: string[],
   indexFile?: string
 ): SidebarItem[] {
   let items = micromatch
@@ -72,7 +72,7 @@ function readSidebarItemsFromSubdirectory(
 export function buildSidebar(
   fileOrDirectoryPath: string,
   publicUrlPath: string,
-  srcExclude: string[]
+  srcExclude?: string[]
 ): SidebarItem | null {
   if (fs.statSync(fileOrDirectoryPath).isDirectory()) {
     let indexFile = findIndexFileInDirectory(fileOrDirectoryPath);

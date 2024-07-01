@@ -4,7 +4,7 @@ import { buildSidebar } from "./sidebar";
 
 import renderMarkdownImage from "./renderMarkdownImage";
 
-const srcExclude = ["**/*\\(obsolete\\)/**", "**/*-removed/**"];
+const srcExclude = undefined; // nothing excluded (at the moment)
 
 // An empty sub-items is added to make all top-level sidebar items appear the same way.
 const sidebarItems = buildSidebar("./arc42", "", srcExclude)?.items?.map(
