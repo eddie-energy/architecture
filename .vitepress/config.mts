@@ -17,6 +17,7 @@ export default defineConfig({
   description: "European Distributed Data Infrastructure For Energy",
   srcDir: "./arc42",
   srcExclude,
+  base: "/architecture/",
   lang: "en-GB",
   head: [["link", { rel: "icon", href: "/figures/favicon-32x32.png" }]],
   themeConfig: {
