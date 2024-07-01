@@ -4,15 +4,8 @@
   "description": "Architecture documentation website for the EDDIE project",
   "main": "index.js",
   "scripts": {
-    "compose-up": "docker compose -f eleventy/_docker/docker-compose.yml -p 11ty-generation up -d",
-    "compose-down": "docker compose -f eleventy/_docker/docker-compose.yml -p 11ty-generation down",
-    "build": "npm run build:bprt && eleventy",
-    "build:bprt": "npm run build -w bprt ",
-    "dev": "npm run build:bprt && eleventy --serve",
-    "upload": "winscp.com /script=upload_via_winscp.txt",
-    "clean-deploy": "rimraf eleventy/_site && npm run build && npm run upload",
-    "clean": "rimraf eleventy/_site node_modules",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
@@ -28,15 +21,8 @@
   },
   "homepage": "https://github.com/eddie-energy/architecture#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "eleventy-plugin-plantuml": "^1.1.3",
-    "js-yaml": "^4.1.0",
-    "posthtml": "^0.16.6",
-    "rimraf": "^4.4.1",
+    "gray-matter": "^4.0.3",
+    "micromatch": "^4.0.7",
     "vitepress": "^1.2.2"
-  },
-  "workspaces": [
-    "bprt"
-  ]
+  }
 }
