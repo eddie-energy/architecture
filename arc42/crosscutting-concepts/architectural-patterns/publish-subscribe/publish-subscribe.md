@@ -2,6 +2,9 @@
 title: Publish/Subscribe
 ---
 
+> [!CAUTION]
+> Publish/Subscribe is not used in the EDDIE framework. Should be either removed or described why Kafka pub/sub doesn't fit the bill for EDDIE.
+
 ## Definition
 
 The publish/subscribe architectural pattern describes the design of the communication among different components of software systems. This pattern enables certain components, i.e., the publishers, to publish messages containing information to a broker. The broker is responsible for distributing these messages to multiple subscribers that have subscribed to receive specific types of information. Subscribers do not need to know about the publishers directly; they only need to subscribe to the topics they are interested in. This loose coupling between publishers and subscribers allows for flexible and scalable communication because the system components can interact without direct dependencies, making the system modular and adaptable to changes.

@@ -2,6 +2,9 @@
 title: Publish/subscribe mechanism for sending data from AIIDA to the EDDIE Framework
 ---
 
+> [!CAUTION]
+> Neither pub/sub nor Kafka is used for communication between AIIDA instances and the EDDIE framework.
+
 ## Context
 
 AIIDA, which runs on the in-house device, collects data from a smart meter in real time. This data needs to be sent to the EDDIE Framework (running on the infrastructure of the eligible party). Thus, each AIIDA instance sends real-time data to one or more instances of the EDDIE Framework, i.e., one or more eligible parties. Since this data transfer involves real-time data, it is crucial that all eligible parties get the data in due time. This may create a challenge when the number of receiver eligible parties is large, because the in-house device may not have the resources (e.g., computational and network resources) to initiate many transmissions at once.    

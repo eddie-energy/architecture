@@ -2,6 +2,9 @@
 title: Implement the Permission Facade as a Microfrontend
 ---
 
+> [!WARNING]
+> The permission facade doesn't exist as a component in the architecture but it's spread across the EDDIE core and region connectors. As such it can be embedded as a microfrontend but consists itself of multiple ones. HTML custom elements should be mentioned.
+
 ## Context
 
 The Permission Facade is the component that handles the process of acquiring the consent of the customer for access to their historical and real-time data. This component needs to be accessible from the EP Website so that customers can give their consent to the eligible party. 

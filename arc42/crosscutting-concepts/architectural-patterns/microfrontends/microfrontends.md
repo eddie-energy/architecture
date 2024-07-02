@@ -2,6 +2,9 @@
 title: Microfrontend
 ---
 
+> [!WARNING]
+> Microfrontends are used as a structuring mechanism also within the EDDIE Framework. And the "Permission Facade" doesn't exist as such.
+
 ## Definition
 
 <!-- What it is -->

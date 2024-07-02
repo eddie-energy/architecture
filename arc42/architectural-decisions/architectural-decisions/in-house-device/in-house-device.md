@@ -2,6 +2,9 @@
 title: Dedicated In-house Device
 ---
 
+> [!WARNING]
+> Interesting question but needs re-evaluation of the alternatives, e.g. cloud-AIIDA connecting to a [Smart Meter Adapter from oesterreichs energie](https://oesterreichsenergie.at/aktuelles/neuigkeiten/detailseite/die-smart-booster)
+
 ## Context
 
 The goal of the EDDIE Framework is to provide historical and real-time energy data to the Services. Notably, energy consumption data needs to be validated before being considered as accurate and credible data. When the EDDIE Framework acquires historical data from the Regional Data-sharing Infrastructure, this data is already validated. However, the Regional Data-sharing Infrastructure may not offer access to real-time validated data because the validation might incur additional delays. Thus, while access to historical validated data is achieved through the Regional Data-sharing Infrastructure, access to real-time validated data cannot be guaranteed in a similar way.

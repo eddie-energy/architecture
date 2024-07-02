@@ -2,6 +2,9 @@
 title: Publish/subscribe mechanism for sending data from the EDDIE Framework to the Services
 ---
 
+> [!CAUTION]
+> Kafka is used, but we limit permissions inside Kafka in a way to prevent Kafka's pub/sub features altogether.
+
 ## Context
 
 The EDDIE Framework gathers historical validated data from the Regional Data-sharing Infrastructure and real-time data from AIIDA, which has to be sent to the Services. Each eligible party can have multiple customers, each one using one or more Services. For this reason, distributing the customer data to the Services may become complicated, especially considering that the real-time data has to be sent with minimum delay.
