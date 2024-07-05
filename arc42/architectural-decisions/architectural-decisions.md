@@ -3,6 +3,23 @@ title: Architectural Decisions
 order: 9
 ---
 
+> [!INFO]
+> The main architectural decisions would be:
+>
+> #### EDDIE Online / multi-tenant use of EDDIE FW
+> - Why Kafka pub/sub isn't suitable for EDDIE Online
+>
+> #### Framework
+> - Plugin architecture with in/out facing plugins
+> - Monolithic vs. (micro-) service style deployment
+> - Modularized frontend instead of a monolithic one
+> - Use HTML custom elements for integration in the EP app
+>
+> #### AIIDA
+> - In-house device vs hosted service (as there are recurring discussions about AIIDA in the cloud)
+> - Use MQTT for communication with Framework
+> - How MQTT user management is integrated with the Framework (DB-based)
+
 Various architectural decisions are discussed for the implementation of this system. The table below shows an overview of these decisions.
 
 | No. | Title  | Status | Section |
