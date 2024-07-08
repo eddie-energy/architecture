@@ -12,6 +12,8 @@ There are 2 options to read the architecture documentation:
 
 ## Notes for editing
 
+The Markdown files are processed using vitepress which support a variety of [Markdowns extensions](https://vitepress.dev/guide/markdown). However, these are the main things to keep in mind:
+
 - **embed images**: Please use markdown syntax `![An example image](./image.png)` to embed images into the page. These will formatted to the text width and include a zoom-in feature automatically.
 - **embed C4 diagrams**: `<C4 diagram="diagram-name" />` where diagram-name is an existent name in the project's [Structurizr instance](https://diagrams-eddie.projekte.fh-hagenberg.at/).
 - **use HTML**: Please avoid using HTML if possible and use Markdown instead. If necessary, all not self-closing tags (like `<p>`) have to be closed to make it compatible with [Vue.js](https://vuejs.org/) templates.
