@@ -1,6 +1,6 @@
 ---
 title: Architectural Decisions
-order: 9
+order: 10
 ---
 
 Various architectural decisions are discussed for the implementation of this system. The table below shows an overview of these decisions.

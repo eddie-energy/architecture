@@ -1,6 +1,6 @@
 ---
 title: Appendix
-order: 13
+order: 14
 ---
 
 The table below provides additional useful information about the EDDIE Dataspace.
