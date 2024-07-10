@@ -3,7 +3,7 @@ title: Architectural Decisions
 order: 11
 ---
 
-> [!INFO]
+> [!NOTE]
 > The main architectural decisions would be:
 >
 > #### EDDIE Online / multi-tenant use of EDDIE FW
