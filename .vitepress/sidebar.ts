@@ -49,7 +49,7 @@ function readSidebarItemsFromSubdirectory(
   indexFile?: string
 ): SidebarItem[] {
   let items = micromatch
-    .not(fs.readdirSync(directoryPath), srcExclude, { contains: true })
+    .not(fs.readdirSync(directoryPath), srcExclude || [], { contains: true })
     .filter((fileName) => !indexFile || fileName !== path.basename(indexFile))
     .map((fileName) =>
       buildSidebar(
