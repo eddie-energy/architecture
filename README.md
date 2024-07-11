@@ -1,4 +1,4 @@
-<img align="right" width="150" src="./arc42/figures/eddie-logo.png">
+<img align="right" width="150" src="./arc42/public/figures/eddie-logo.png">
 <br/>
 <br/>
 
@@ -8,7 +8,6 @@ This repository hosts the documentation of the software architecture of EDDIE (E
 
 - To view the architecture documentation, click [here](https://eddie-web.projekte.fh-hagenberg.at/architecture/).
 - To view the guidelines for contributing, click [here](./CONTRIBUTING.md).
-
 
 ## Other Interesting links:
 
