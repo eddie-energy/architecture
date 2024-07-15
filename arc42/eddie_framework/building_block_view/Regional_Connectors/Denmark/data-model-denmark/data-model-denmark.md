@@ -1,6 +1,6 @@
 ---
-title: Denmark
-order: 3
+title: Data Model
+order: 1
 ---
 
 In Denmark, the Regional Data-sharing Infrastructure operated by Energinet utilizes the following data format which is CIM-compliant.

@@ -1,6 +1,6 @@
 ---
-title: Spain
-order: 4
+title: Data Model
+order: 1
 ---
 
 In Spain, the Regional Data-sharing Infrastructure operated by Datadis utilizes the following data format, which is not CIM-compliant.

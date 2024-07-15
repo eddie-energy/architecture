@@ -1,6 +1,6 @@
 ---
-title: France
-order: 2
+title: Data Model
+order: 1
 ---
 
 In France, the Regional Data-sharing Infrastructure operated by Enedis utilizes the following data format, which is not CIM-compliant.
