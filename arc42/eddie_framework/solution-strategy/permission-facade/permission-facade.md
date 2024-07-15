@@ -2,6 +2,9 @@
 title: Permission Facade
 ---
 
+> [!CAUTION]
+> The Permission Facade is not a component like in the project proposal. It's region-specific functions are included in the according region connector and there is also a part for functions that are the common across all regions.
+
 The Permission Facade (or Consent Facade) component is implemented within the EDDIE framework which is under the operation of the eligible party. Upon request from the customer, this component is responsible for triggering the process that gives the eligible party access to the customer's energy data (either from the customer's permission administrator or from AIIDA). The figures below describe various aspects of the Permission Facade.
 
 The Permission Facade is linked with various operations of the EDDIE Framework. For this reason, in order to describe the Permission Facade comprehensively, this section provides various details and graphical representations. In general, the acquisition of data from the EDDIE Framework is initiated by the creation of a *Service*. Thus, the eligible party initially has to create a Service and specify certain Service-related attributes such as the data family (e.g., historical validated data, or real-time data) of the required data. The figure below shows an example of a form that has to be filled out by the eligible party in order to create a new Service.
@@ -91,7 +94,7 @@ After establishing the consent, the data is sent to the EDDIE Framework through 
 
 ![](./figures/transfer-of-data.png)
 
-When the data is received by the Interoperable Communication, this data is transformed into a [CIM](../../../../crosscutting-concepts/domain-models/cim/cim.md) representation. Then, the data is enriched with additional information that is used internally in the EDDIE Framework (e.g., Service ID, ConsentID, etc.). Finally, the enriched CIM representation of the data is sent to the Service via a Kafka topic. This process is also shown in the figure below.
+When the data is received by the Interoperable Communication, this data is transformed into a [CIM](../../../crosscutting-concepts/domain-models/cim/cim.md) representation. Then, the data is enriched with additional information that is used internally in the EDDIE Framework (e.g., Service ID, ConsentID, etc.). Finally, the enriched CIM representation of the data is sent to the Service via a Kafka topic. This process is also shown in the figure below.
 
 ![](./figures/transfer-data-process.png)
 

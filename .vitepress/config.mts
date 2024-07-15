@@ -19,7 +19,25 @@ export default defineConfig({
   srcExclude,
   base: "/architecture/",
   lang: "en-GB",
-  head: [["link", { rel: "icon", href: "/figures/favicon-32x32.png" }]],
+  head: [
+    ["link", { rel: "icon", href: "/figures/favicon-32x32.png" }],
+    [
+      "script",
+      {
+        // async: "",
+        src: "https://diagrams-eddie.projekte.fh-hagenberg.at/static/js/structurizr-embed.js",
+      },
+    ],
+    [
+      "script",
+      {},
+      `function receiveStructurizrMessage(message) {
+        if (message?.data?.view)
+          console.log("diagram navigated", { "new-diagram-key": message.data.view })
+      }
+      window.addEventListener("message", receiveStructurizrMessage);`,
+    ],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/figures/favicon-32x32.png",
