@@ -2,6 +2,16 @@
 title: Solution Strategy
 order: 1
 ---
+TO ADD:
+According to arc42 this chapter should contain a short summary and explanation of the fundamental decisions and
+solution strategies, that shape the system architecture. It includes
+-   technology decisions
+-   decisions about the top-level decomposition of the system, e.g.
+    usage of an architectural pattern or design pattern
+-   decisions on how to achieve key quality goals
+-   relevant organizational decisions, e.g. selecting a development
+    process or delegating certain tasks to third parties.
+
 
 <!-- A short summary and explanation of the fundamental decisions and
 solution strategies, that shape system architecture. It includes
@@ -19,7 +29,16 @@ Motivate what was decided and why it was decided that way, based upon
 problem statement, quality goals and key constraints. Refer to details
 in the following sections. -->
 
+TO ADD: 
+## Overview
+Short description. Motivate what was decided and why it was decided that way, based upon
+problem statement, quality goals and key constraints. Refer to details
+in the following sections.
+
 There are certain goals of the framework which can be achieved by following a specific strategy. These goals are outlined in the following table which also provides links to more detailed explanations.
+
+
+## Table
 
 | Scenario | Approach | Section |
 |-|-|-|

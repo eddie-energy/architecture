@@ -2,6 +2,7 @@
 title: France
 order: 4
 ---
+TO ADD: More detailed explanation
 
 ## Eddie Framework France
 As mentioned in the section for EDDIE Framework, each country can have a slightly different architecture. For France, the Framework looks as follows:

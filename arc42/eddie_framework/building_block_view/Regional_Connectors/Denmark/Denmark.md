@@ -2,6 +2,7 @@
 title: Denmark
 order: 4
 ---
+TO ADD: More detailed explanation
 
 ## Eddie Framework Denmark
 As mentioned in the section for EDDIE Framework, each country can have a slightly different architecture. For Denmark, the Framework looks as follows: 

@@ -2,7 +2,7 @@
 title: Building Block View
 order: 2
 ---
-
+TO ADD: More detailed (but short) explaination about the different containers of the system. Descriptions are to generic at the moment
  ## Eddie Framework
  The EDDIE Framework contains the core functionality of EDDIE. The Framework (especially the regional connectors and their interaction with other systems) can be different for different countries. As an example, we show Austria in this section. The Framework architectures for the other countries are shown in the corresponding section for the Regional Connectors.
 

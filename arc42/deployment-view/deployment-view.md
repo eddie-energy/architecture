@@ -2,7 +2,24 @@
 title: Deployment View
 order: 9
 ---
+TO ADD: 
+According to Arc42 the deployment view includes descriptions about
+1.  technical infrastructure used to execute your system, with
+    infrastructure elements like geographical locations, environments,
+    computers, processors, channels and net topologies as well as other
+    infrastructure elements 
+2.  mapping of (software) building blocks to that infrastructure
+    elements.
+3. development environment, test environment, production environment.
 
+The highest level depolyment view should describe the deployment of the blocks (e.g. AIIDA, EDDIE Framework etc.) as black boxes, that are further described in their own chapter.
+
+
+## Overview
+
+## Figure + Table
+| Node | Description |
+|-|-|
 <!-- The deployment view describes:
 1.  technical infrastructure used to execute your system, with
     infrastructure elements like geographical locations, environments,
