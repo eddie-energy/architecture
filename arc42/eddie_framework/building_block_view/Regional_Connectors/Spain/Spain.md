@@ -2,6 +2,7 @@
 title: Spain
 order: 3
 ---
+TO ADD: More detailed explanation
 
 ## Eddie Framework Spain
 As mentioned in the section for EDDIE Framework, each country can have a slightly different architecture. For Spain, the Framework looks as follows: 
