@@ -2,10 +2,11 @@
 title: AIIDA
 order: 5
 ---
+TO ADD: short description and purpose of AIIDA
 
-##### This section represents the [C4 Container Diagrams](https://c4model.com/#ContainerDiagram) of the C4 modelling language. The container block shows one independent software application, e.g., database, frontend, backend, middleware, embedded app etc. It communicates with one or more other containers within or outside the context. In a modular application, each module becomes a container.
+<!--##### This section represents the [C4 Container Diagrams](https://c4model.com/#ContainerDiagram) of the C4 modelling language. The container block shows one independent software application, e.g., database, frontend, backend, middleware, embedded app etc. It communicates with one or more other containers within or outside the context. In a modular application, each module becomes a container.
 
-<!-- Represents a static decomposition of the system
+ Represents a static decomposition of the system
 into building blocks (modules, components, subsystems, classes,
 interfaces, packages, libraries, frameworks, layers, partitions, tiers,
 functions, macros, operations, data structures, ...) as well as their
@@ -26,7 +27,7 @@ This structure can be used:
     Motivation
     Contained Building Blocks
     Important Interfaces
-    Black boxes -->
+    Black boxes 
 As the "System scope and context", this section is described from the perspective of a developer​, e.g. each chapter could be handed over to a developer individually, without (much) further explanations. Also, it is meant to be interactive, meaning that clicking on a container or component in a diagram leads to the referring page or part where this particuliar container or component is described.
 
 Apart from this, the diagrams itself are zoomable, f.e. the container view of EDDIE Framework can be viewed by clicking on its name in the context view.
@@ -34,5 +35,5 @@ Apart from this, the diagrams itself are zoomable, f.e. the container view of ED
 The building block view is presented through a description of the system using different levels, following the C4 modelling language. It shows the overall system along with all the main building blocks. The first level refers to the C4 Container diagrams. Each chapter represents one independent software application, e.g., database, frontend, backend, middleware, embedded app, etc.​
 This application communicates with one or more other containers within or outside the context e.g. scope of EDDIE.​ 
 
-The second level further explains the building blocks of the containers, referring to the C4 Component diagrams. It represents a collection of implementation classes behind an interface, with a specific functionality.​ As the components, it communicates with one/more other components within or outside the container​ e.g. scope of EDDIE. The data models used by the systems are explained at there belonging components.
+The second level further explains the building blocks of the containers, referring to the C4 Component diagrams. It represents a collection of implementation classes behind an interface, with a specific functionality.​ As the components, it communicates with one/more other components within or outside the container​ e.g. scope of EDDIE. The data models used by the systems are explained at there belonging components. -->
 

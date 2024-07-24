@@ -2,9 +2,9 @@
 title: Solution Strategy
 order: 1
 ---
-
-<!-- A short summary and explanation of the fundamental decisions and
-solution strategies, that shape system architecture. It includes
+TO ADD:
+According to arc42 this chapter should contain a short summary and explanation of the fundamental decisions and
+solution strategies, that shape the system architecture. It includes
 -   technology decisions
 -   decisions about the top-level decomposition of the system, e.g.
     usage of an architectural pattern or design pattern
@@ -12,12 +12,13 @@ solution strategies, that shape system architecture. It includes
 -   relevant organizational decisions, e.g. selecting a development
     process or delegating certain tasks to third parties.
 
-Keep the explanations of such key decisions short. You may use a
-table: Quality goal, Scenario, Solution approach, Link to Details
-
-Motivate what was decided and why it was decided that way, based upon
+## Overview
+Short description. Motivate what was decided and why it was decided that way, based upon
 problem statement, quality goals and key constraints. Refer to details
-in the following sections. -->
+in the following sections.
+## Table
+including 
+Quality goal, Scenario, Solution approach, Link to Details
 
 
 <!-- | 3 | Incentives | Why would consumers and eligible parties use eddie | marketplace |  |
