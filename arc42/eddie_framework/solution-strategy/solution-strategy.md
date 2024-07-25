@@ -42,8 +42,8 @@ There are certain goals of the framework which can be achieved by following a sp
 
 | Scenario | Approach | Section |
 |-|-|-|
-| All customers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their permission administrator.| Implement a dedicated Permission Facade component that handles the consent of all the customers of an eligible party. This component shall comply with the specificities of each country. | [Link](./permission-facade/permission-facade.md) |
-| The EDDIE Framework shall support customers and Regional Data-sharing Infrastructures across many Member States. | The EDDIE Framework shall become compatible with multiple Member States and beyond in three phases. | [Link](./regional-coverage/regional-coverage.md) |
+| All customers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their permission administrator.| Implement a dedicated Permission Facade component that handles the consent of all the customers of an eligible party. This component shall comply with the specificities of each country. | |
+| The EDDIE Framework shall support customers and Regional Data-sharing Infrastructures across many Member States. | The EDDIE Framework shall become compatible with multiple Member States and beyond in three phases. |  |
 <!-- | 3 | Incentives | Why would consumers and eligible parties use eddie | marketplace |  |
 | 4 |  |  |  |  | -->
 

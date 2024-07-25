@@ -12,6 +12,7 @@ solution strategies, that shape the system architecture. It includes
 -   relevant organizational decisions, e.g. selecting a development
     process or delegating certain tasks to third parties.
 
+
 ## Overview
 Short description. Motivate what was decided and why it was decided that way, based upon
 problem statement, quality goals and key constraints. Refer to details
