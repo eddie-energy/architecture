@@ -1,7 +1,7 @@
 ---
 title: Regional Coverage
 ---
-
+<!--
 The EDDIE Framework will expand to support customers in many countries in three phases which are described below.
 
 | Phase | Included Countries | Comment |
@@ -17,4 +17,4 @@ The EDDIE Framework will expand to support customers in many countries in three 
 Thus, EDDIE aims at making available a big part of the European metering points, as shown below.
 
 ![](./figures/EDDIE_Coverage.jpg)
-
+-->

@@ -1,7 +1,7 @@
 ---
 title: Permission Facade
 ---
-
+<!--
 > [!CAUTION]
 > The Permission Facade is not a component like in the project proposal. It's region-specific functions are included in the according region connector and there is also a part for functions that are the common across all regions.
 
@@ -9,7 +9,7 @@ The Permission Facade (or Consent Facade) component is implemented within the ED
 
 The Permission Facade is linked with various operations of the EDDIE Framework. For this reason, in order to describe the Permission Facade comprehensively, this section provides various details and graphical representations. In general, the acquisition of data from the EDDIE Framework is initiated by the creation of a *Service*. Thus, the eligible party initially has to create a Service and specify certain Service-related attributes such as the data family (e.g., historical validated data, or real-time data) of the required data. The figure below shows an example of a form that has to be filled out by the eligible party in order to create a new Service.
 
-![](./figures/process-service.png)
+<!--![](./figures/process-service.png)
 
 When a Service is created, customers can be linked to this Service, so that the Service can process their data. The figure below shows the high-level process of a customer that gives their consent to an eligible party for data access and processing by a Service. This process includes the following steps:
 
@@ -25,15 +25,16 @@ When a Service is created, customers can be linked to this Service, so that the 
 10. The acceptance is forwarded to the EP Website.
 11. A status update of the request is shown.
 
-![](./figures/establishment-of-consent.png)
+<!-- ![](./figures/establishment-of-consent.png) 
+
 
 To show all the consents given to a particular eligible party, the EDDIE Framework will provide an overview of the consents along with respective details and available actions. An example of this overview is shown in the figure below.
 
-![](./figures/admin-console.png)
+<!--![](./figures/admin-console.png)
 
 The necessary components to achieve the basic functionality of the Permission Facade are shown in the figure below. On the left-hand side, there is an onboarding process that shows the button *connect my data* that has to be clicked by the customer. After clicking, there is a popup window with a form that gathers additional information from the customer. This information includes the country and the permission administrator of the customer. The filled-out form is sent back to the Permission Facade. The Permission Facade creates the request for data access and shares this request with the EDDIE Interoperable Communication component via a Kafka topic. The Interoperable Communication maintains a state of all the requests so that if a state changes, all related components are notified (e.g., the popup window of the customer on the EP Website). The state can change by EDDIE Components such as the Connectors which implement functionality to interact with Permission Administrators (PA) of the Regional Data-sharing Infrastructures, e.g., PA Connector EDA or PA Connector Enedis in the figure. These connectors communicate with the respective permission administrators, i.e., PA Connector EDA communicates with the Austrian permission administrator EDA, while Enedis is the French permission administrator.
 
-![](./figures/eddie-mvp.png)
+<!--![](./figures/eddie-mvp.png)
 
 The process discussed so far is also shown below in a detailed sequence diagram. This diagram includes the following steps.
 
@@ -64,7 +65,7 @@ The process discussed so far is also shown below in a detailed sequence diagram.
 25. Data is sent to the EP Service as an MS format MarketMessage to the Interoperable Communication. Note that in PULL scenarios this _sending_ needs to be emulated by polling smartly.
 26. Data is translated to common CIM MarketMessage and forwarded to EP Service through EDDIE Data Streaming infrastructure.
 
-![](./figures/sequence.svg)
+<!--![](./figures/sequence.svg)--
 
 The consent for data access may be revoked at any time. If the revocation is triggered by the Metered Data Administrator, then the Permission Administrator is notified, and in turn, the EDDIE Framework (through the Interoperable Communication). This process is shown in the figure below.
 
@@ -104,5 +105,5 @@ The figure below shows the process from the perspective of the customer. Specifi
 
 Finally, the following figure shows a domain model which includes the necessary variables and methods that need to be implemented in the EDDIE Framework for efficient integration and interactions with the permissions administrators.
 
-![](./figures/domain-model.png)
+![](./figures/domain-model.png) -->
 
