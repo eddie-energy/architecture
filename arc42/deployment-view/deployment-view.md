@@ -2,24 +2,28 @@
 title: Deployment View
 order: 9
 ---
-TO ADD: 
-According to Arc42 the deployment view includes descriptions about
+
+::: warning TO ADD
+[According to Arc42 the deployment view includes descriptions about](https://docs.arc42.org/section-7/)
+
 1.  technical infrastructure used to execute your system, with
     infrastructure elements like geographical locations, environments,
     computers, processors, channels and net topologies as well as other
-    infrastructure elements 
+    infrastructure elements
 2.  mapping of (software) building blocks to that infrastructure
     elements.
-3. development environment, test environment, production environment.
+3.  development environment, test environment, production environment.
 
 The highest level depolyment view should describe the deployment of the blocks (e.g. AIIDA, EDDIE Framework etc.) as black boxes, that are further described in their own chapter.
-
+:::
 
 ## Overview
 
 ## Figure + Table
+
 | Node | Description |
-|-|-|
+| ---- | ----------- |
+
 <!-- The deployment view describes:
 1.  technical infrastructure used to execute your system, with
     infrastructure elements like geographical locations, environments,
@@ -46,7 +50,7 @@ Describe (usually in a combination of diagrams, tables, and text):
 -   important justifications or motivations for this deployment
     structure
 -   quality and/or performance features of this infrastructure
--   mapping of software artifacts to elements of this infrastructure --> 
+-   mapping of software artifacts to elements of this infrastructure -->
 
 ## Overview
 
@@ -56,10 +60,9 @@ The deployment view of the system focuses on the utilized technical infrastructu
 
 The system runs across four nodes which are described in the table below.
 
-| Node | Description |
-|-|-|
-| Eligible Party Infrastructure | This is operated by the eligible party. The Local Computing Infrastructure is used for running the EDDIE framework which is deployed locally on the premises of the eligible party. The Cloud Computing Infrastructure is used for running the EP Website and the Services. The implementation and design of the EP Website and the Services are out of the scope of the EDDIE project. |
-| Regional Data-sharing Infrastructure | This is operated by country-specific entities such as the permission administrator and the metered data administrator. |
-| In-house Infrastructure | This node is operated by the customer. It includes an in-house device (e.g., a Raspberry Pi computer) and the Smart Meter. |
-| Federated Infrastructure | This node hosts the Marketplace. The Marketplace may include Services of multiple eligible parties. Thus, one or more eligible parties might operate the Marketplace as a federated service running, e.g., on cloud computing resources. |
-
+| Node                                 | Description                                                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Eligible Party Infrastructure        | This is operated by the eligible party. The Local Computing Infrastructure is used for running the EDDIE framework which is deployed locally on the premises of the eligible party. The Cloud Computing Infrastructure is used for running the EP Website and the Services. The implementation and design of the EP Website and the Services are out of the scope of the EDDIE project. |
+| Regional Data-sharing Infrastructure | This is operated by country-specific entities such as the permission administrator and the metered data administrator.                                                                                                                                                                                                                                                                  |
+| In-house Infrastructure              | This node is operated by the customer. It includes an in-house device (e.g., a Raspberry Pi computer) and the Smart Meter.                                                                                                                                                                                                                                                              |
+| Federated Infrastructure             | This node hosts the Marketplace. The Marketplace may include Services of multiple eligible parties. Thus, one or more eligible parties might operate the Marketplace as a federated service running, e.g., on cloud computing resources.                                                                                                                                                |

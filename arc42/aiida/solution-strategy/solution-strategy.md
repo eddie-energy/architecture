@@ -2,29 +2,33 @@
 title: Solution Strategy
 order: 1
 ---
-TO ADD:
+
+::: warning TO ADD
 According to arc42 this chapter should contain a short summary and explanation of the fundamental decisions and
 solution strategies, that shape the system architecture. It includes
--   technology decisions
--   decisions about the top-level decomposition of the system, e.g.
-    usage of an architectural pattern or design pattern
--   decisions on how to achieve key quality goals
--   relevant organizational decisions, e.g. selecting a development
-    process or delegating certain tasks to third parties.
 
+- technology decisions
+- decisions about the top-level decomposition of the system, e.g.
+  usage of an architectural pattern or design pattern
+- decisions on how to achieve key quality goals
+- relevant organizational decisions, e.g. selecting a development
+  process or delegating certain tasks to third parties.
+
+:::
 
 ## Overview
+
 Short description. Motivate what was decided and why it was decided that way, based upon
 problem statement, quality goals and key constraints. Refer to details
 in the following sections.
-## Table
-including 
-Quality goal, Scenario, Solution approach, Link to Details
 
+## Table
+
+including
+Quality goal, Scenario, Solution approach, Link to Details
 
 <!-- | 3 | Incentives | Why would consumers and eligible parties use eddie | marketplace |  |
 | 4 |  |  |  |  | -->
-
 
 <!-- ## OTHERs (TBD)
 
@@ -56,4 +60,3 @@ Both together, the EDDIE Framework and AIIDA will be put into a consistent overa
 <!-- </div> -->
 
 <!-- Activities towards the fourth main objective to (OBJ#4) provide extensive scientific assessment and share real-world experience on various aspects of data-sharing will start accompanying these developments and when the architecture and specification phase is completed and Milestone 2 (project month 9) is achieved. Implementation of software and systems to be developed within EDDIE will deliver usable and assessable preliminary results soon, to ensure that their contribution is aligned with the overall objectives during the whole lifecycle of the project. Following this rationale, software deliverables will be released on the open-source code management platform (GitHub [11]), so that all interested stakeholders can easily test and provide feedback. It is planned to ramp up dissemination and future development and maintenance through options like the formation of a new or the adoption of the project results by an existing open-source foundation such as the Linux Foundation for Energy [12] or European organisations. -->
-

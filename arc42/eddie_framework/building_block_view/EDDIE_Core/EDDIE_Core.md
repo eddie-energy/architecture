@@ -2,12 +2,19 @@
 title: EDDIE Core
 order: 1
 ---
-TO ADD: 
+
+::: warning TO ADD
+content as listed in the following document
+:::
+
 ## Overview
--Short description 
+
+-Short description
+
 ## Diagram
+
 -Figure
--Table 
+-Table
 | Container | Responsibility |
 | - | - |
 | - | - |

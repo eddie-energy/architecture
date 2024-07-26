@@ -2,24 +2,28 @@
 title: Deployment View
 order: 4
 ---
-TO ADD: 
-According to Arc42 the deployment view includes descriptions about
+
+::: warning TO ADD
+[According to Arc42 the deployment view includes descriptions about](https://docs.arc42.org/section-7/)
+
 1.  technical infrastructure used to execute your system, with
     infrastructure elements like geographical locations, environments,
     computers, processors, channels and net topologies as well as other
-    infrastructure elements 
+    infrastructure elements
 2.  mapping of (software) building blocks to that infrastructure
     elements.
-3. development environment, test environment, production environment.
+3.  development environment, test environment, production environment.
 
 The EDDIE Framework depolyment view should be a zoom into the highest level depolyment view, defining the environment for EDDIE Framework in specific
-
+:::
 
 ## Overview
 
 ## Figure + Table
+
 | Node | Description |
-|-|-|
+| ---- | ----------- |
+
 <!-- The deployment view describes:
 1.  technical infrastructure used to execute your system, with
     infrastructure elements like geographical locations, environments,
@@ -46,7 +50,7 @@ Describe (usually in a combination of diagrams, tables, and text):
 -   important justifications or motivations for this deployment
     structure
 -   quality and/or performance features of this infrastructure
--   mapping of software artifacts to elements of this infrastructure --> 
+-   mapping of software artifacts to elements of this infrastructure -->
 
 ## Overview
 
@@ -56,14 +60,14 @@ The deployment view of the system focuses on the utilized technical infrastructu
 
 The system runs across four nodes which are described in the table below.
 
-| Node | Description |
-|-|-|
-| Eligible Party Infrastructure | This is operated by the eligible party. The Local Computing Infrastructure is used for running the EDDIE framework which is deployed locally on the premises of the eligible party. The Cloud Computing Infrastructure is used for running the EP Website and the Services. The implementation and design of the EP Website and the Services are out of the scope of the EDDIE project. |
-| Regional Data-sharing Infrastructure | This is operated by country-specific entities such as the permission administrator and the metered data administrator. |
-| In-house Infrastructure | This node is operated by the customer. It includes an in-house device (e.g., a Raspberry Pi computer) and the Smart Meter. |
-| Federated Infrastructure | This node hosts the Marketplace. The Marketplace may include Services of multiple eligible parties. Thus, one or more eligible parties might operate the Marketplace as a federated service running, e.g., on cloud computing resources. |
+| Node                                 | Description                                                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Eligible Party Infrastructure        | This is operated by the eligible party. The Local Computing Infrastructure is used for running the EDDIE framework which is deployed locally on the premises of the eligible party. The Cloud Computing Infrastructure is used for running the EP Website and the Services. The implementation and design of the EP Website and the Services are out of the scope of the EDDIE project. |
+| Regional Data-sharing Infrastructure | This is operated by country-specific entities such as the permission administrator and the metered data administrator.                                                                                                                                                                                                                                                                  |
+| In-house Infrastructure              | This node is operated by the customer. It includes an in-house device (e.g., a Raspberry Pi computer) and the Smart Meter.                                                                                                                                                                                                                                                              |
+| Federated Infrastructure             | This node hosts the Marketplace. The Marketplace may include Services of multiple eligible parties. Thus, one or more eligible parties might operate the Marketplace as a federated service running, e.g., on cloud computing resources.                                                                                                                                                |
 
-## EDDIE  Framework Deployment Options
+## EDDIE Framework Deployment Options
 
 Specifically for the deployment of the EDDIE Framework, i.e., the node Local Computing Infrastructure shown above, two additional deployment options are possible. The original deployment is shown below isolated from the rest of the system.
 
@@ -71,13 +75,13 @@ Specifically for the deployment of the EDDIE Framework, i.e., the node Local Com
 
 Two additional options are shown below.
 
-| Option 2 | Option 3 |
-|-|-|
-|![](./figures/deployment-diagram-option-2.svg)|![](./figures/deployment-diagram-option-3.svg)|
+| Option 2                                       | Option 3                                       |
+| ---------------------------------------------- | ---------------------------------------------- |
+| ![](./figures/deployment-diagram-option-2.svg) | ![](./figures/deployment-diagram-option-3.svg) |
 
 The motivation for all 3 options is shown in the table below.
 | Option | Motivation |
 |-|-|
-| 1 |  Deployment on the personal computer or a standard server operated by the eligible party. The deployment of the EDDIE Framework is delivered with a simple console command that runs an orchestrated pre-defined virtual infrastructure configured by the EDDIE deployment scripts. |
+| 1 | Deployment on the personal computer or a standard server operated by the eligible party. The deployment of the EDDIE Framework is delivered with a simple console command that runs an orchestrated pre-defined virtual infrastructure configured by the EDDIE deployment scripts. |
 | 2 | Deployment for a scenario in a corporate environment that has its own Database and Streaming Infrastructure running on-site. This deployment option allows the reuse of these components which are managed and maintained by existing staff. |
 | 3 | Deployment scenario for running the EDDIE Framework via a “purchase” or “download” button of a cloud marketplace. This option works similar to Option 2, but it utilizes two integrated cloud components: a cloud-native Database and a cloud-native Streaming Infrastructure. |

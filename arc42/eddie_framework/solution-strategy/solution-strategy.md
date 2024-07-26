@@ -2,16 +2,19 @@
 title: Solution Strategy
 order: 1
 ---
-TO ADD:
+
+::: warning TO ADD
 According to arc42 this chapter should contain a short summary and explanation of the fundamental decisions and
 solution strategies, that shape the system architecture. It includes
--   technology decisions
--   decisions about the top-level decomposition of the system, e.g.
-    usage of an architectural pattern or design pattern
--   decisions on how to achieve key quality goals
--   relevant organizational decisions, e.g. selecting a development
-    process or delegating certain tasks to third parties.
 
+- technology decisions
+- decisions about the top-level decomposition of the system, e.g.
+  usage of an architectural pattern or design pattern
+- decisions on how to achieve key quality goals
+- relevant organizational decisions, e.g. selecting a development
+  process or delegating certain tasks to third parties.
+
+:::
 
 <!-- A short summary and explanation of the fundamental decisions and
 solution strategies, that shape system architecture. It includes
@@ -29,24 +32,26 @@ Motivate what was decided and why it was decided that way, based upon
 problem statement, quality goals and key constraints. Refer to details
 in the following sections. -->
 
-TO ADD: 
+::: warning TO ADD
+refine the following overview
+:::
+
 ## Overview
+
 Short description. Motivate what was decided and why it was decided that way, based upon
 problem statement, quality goals and key constraints. Refer to details
 in the following sections.
 
 There are certain goals of the framework which can be achieved by following a specific strategy. These goals are outlined in the following table which also provides links to more detailed explanations.
 
-
 ## Table
 
-| Scenario | Approach | Section |
-|-|-|-|
-| All customers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their permission administrator.| Implement a dedicated Permission Facade component that handles the consent of all the customers of an eligible party. This component shall comply with the specificities of each country. | |
-| The EDDIE Framework shall support customers and Regional Data-sharing Infrastructures across many Member States. | The EDDIE Framework shall become compatible with multiple Member States and beyond in three phases. |  |
-<!-- | 3 | Incentives | Why would consumers and eligible parties use eddie | marketplace |  |
-| 4 |  |  |  |  | -->
-
+| Scenario                                                                                                                                           | Approach                                                                                                                                                                                  | Section    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------- | ----------- | --- |
+| All customers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their permission administrator. | Implement a dedicated Permission Facade component that handles the consent of all the customers of an eligible party. This component shall comply with the specificities of each country. |            |
+| The EDDIE Framework shall support customers and Regional Data-sharing Infrastructures across many Member States.                                   | The EDDIE Framework shall become compatible with multiple Member States and beyond in three phases.                                                                                       |            |
+| <!--                                                                                                                                               | 3                                                                                                                                                                                         | Incentives | Why would consumers and eligible parties use eddie | marketplace |     |
+| 4                                                                                                                                                  |                                                                                                                                                                                           |            |                                                    |             | --> |
 
 <!-- ## OTHERs (TBD)
 
@@ -78,4 +83,3 @@ Both together, the EDDIE Framework and AIIDA will be put into a consistent overa
 <!-- </div> -->
 
 <!-- Activities towards the fourth main objective to (OBJ#4) provide extensive scientific assessment and share real-world experience on various aspects of data-sharing will start accompanying these developments and when the architecture and specification phase is completed and Milestone 2 (project month 9) is achieved. Implementation of software and systems to be developed within EDDIE will deliver usable and assessable preliminary results soon, to ensure that their contribution is aligned with the overall objectives during the whole lifecycle of the project. Following this rationale, software deliverables will be released on the open-source code management platform (GitHub [11]), so that all interested stakeholders can easily test and provide feedback. It is planned to ramp up dissemination and future development and maintenance through options like the formation of a new or the adoption of the project results by an existing open-source foundation such as the Linux Foundation for Energy [12] or European organisations. -->
-
