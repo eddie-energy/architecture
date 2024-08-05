@@ -1,0 +1,76 @@
+@startuml aiida_deployment_view
+'component diagram
+caption Component Diagram: Level 2 view
+
+skinparam linetype ortho
+skinparam interface {
+  backgroundColor transparent
+  borderColor black
+}
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam actor{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam database{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam collections{
+  BorderColor black
+  BackgroundColor white
+}
+skinparam rectangle{
+  ' BorderColor transparent
+  BackgroundColor transparent
+  FontColor transparent
+}
+
+
+node "Eligible Party Infrastructure"  as epInfra{
+  component "EDDIE Framework" {
+
+    component "EDDIE \nCore" as eddie
+    component "AIIDA Regional\nConnector" as regcon
+  }
+  component "EMQX IAM DB" as emqxiam
+  component "EMQX MQTT Broker" as broker
+
+  eddie -[hidden]down- emqxiam
+  eddie -[hidden]down- broker
+}
+node "Local Network" {
+  component "Smartphone" as smartphone{
+    component "Smartphone App" as app
+
+  }
+  node "AIIDA Device" as aiida {
+    component "Embedded App" as embapp
+    component "NanoMQ MQTT Broker" as nano
+    component "TimescaleDB" as db
+  }
+  embapp -[hidden]down- nano
+  nano -[hidden]down- db
+ 
+}
+
+node "Device" as device1
+node "Device" as device2
+node "Device" as device3
+
+
+embapp -right- device1
+embapp -right- device2
+embapp -right- device3
+device1 -[hidden]down- device2
+device2 -[hidden]down- device3
+epInfra -[hidden]right- aiida
+
+
+
+ 
+
+@enduml

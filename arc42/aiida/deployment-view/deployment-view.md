@@ -14,12 +14,13 @@ order: 4
     elements.
 3.  development environment, test environment, production environment.
 
-The AIIDA depolyment view should be a zoom into the highest level depolyment view, defining the envoronment for AIIDA in specific
+The AIIDA deployment view should be a zoom into the highest level depolyment view, defining the environment for AIIDA in specific.
 :::
 
 ## Overview
 
 ## Figure + Table
+![](./figures/aiida_deployment_view.puml)
 
 | Node | Description |
 | ---- | ----------- |
