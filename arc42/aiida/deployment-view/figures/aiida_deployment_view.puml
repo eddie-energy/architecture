@@ -48,23 +48,35 @@ node "Local Network" {
 
   }
   node "AIIDA Device" as aiida {
-    component "Embedded App" as embapp
+    component "Embedded App\n AIIDA Firmware" as embapp
     component "NanoMQ MQTT Broker" as nano
     component "TimescaleDB" as db
   }
   embapp -[hidden]down- nano
   nano -[hidden]down- db
+  aiida -[hidden]up- smartphone
+  embapp -up- app:DNS
  
 }
 
-node "Device" as device1
-node "Device" as device2
-node "Device" as device3
+node "Device Italy" as device1
+node "Device Austria" as device2
+node "Device France" as device3
 
+node "Smart Meter" as smartmeter1
+node "Enedis" as enedis
+node "Smart Meter" as smartmeter2
 
-embapp -right- device1
-embapp -right- device2
-embapp -right- device3
+device1 -left- smartmeter1:\n\nPhysical\ninterfaces
+device2 -left- smartmeter2:\n\nPhysical\ninterfaces
+device3 -left- enedis:\nTIC\n(2-wire)
+
+regcon -left- embapp:HTTP/MQTT
+embapp -[hidden]right- device2
+embapp -right- device1:USB
+embapp -right- device3:Modbus TCP
+nano -right- device2:MQTT
+nano -up-embapp
 device1 -[hidden]down- device2
 device2 -[hidden]down- device3
 epInfra -[hidden]right- aiida
