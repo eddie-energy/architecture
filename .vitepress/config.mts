@@ -66,6 +66,16 @@ export default defineConfig({
       provider: "local",
     },
   },
+  vite: {
+    assetsInclude: ["**/*.puml"],
+  },
+  vue: {
+    template: {
+      transformAssetUrls: {
+        Img: ["src"],
+      },
+    },
+  },
   markdown: {
     config: (md) => {
       md.renderer.rules.image = renderMarkdownImage;
