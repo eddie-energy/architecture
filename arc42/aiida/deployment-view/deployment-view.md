@@ -9,8 +9,8 @@ The AIIDA system runs on a simple raspberry Pi computer, including the embedded 
 To collect the data from AIIDA the EDDIE Framework also needs a MQTT broker. When scanning a QR Code, the smartphone sends the information to connect to the MQTT broker. With the first connection to the MQTT broker a user for the connected instance is created in the EMQX IAM Database for identity access management, so that it is recognised by the broker. After creating a user, each AIIDA instance stores its energy data in tits own account.
 The AIIDA deployment view zooms into the highest level depolyment view, defining the environment for AIIDA in specific.
 
-## Figure + Table
-![](./figures/aiida_deployment_view.puml)
+## Diagram
+![](./figures/aiida_deployment_view.svg)
 
 |Node | Description |
 | - | - |
