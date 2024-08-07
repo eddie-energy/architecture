@@ -10,7 +10,7 @@ To collect the data from AIIDA the EDDIE Framework also needs a MQTT broker. Whe
 The AIIDA deployment view zooms into the highest level depolyment view, defining the environment for AIIDA in specific.
 
 ## Diagram
-
+![](./figures/aiida_deployment_view.svg)
 |Node | Description |
 | - | - |
 |AIIDA Device| The AIIDA Device is a raspberry Pi computer, which is operated by the customer. It is connected to the local network.|
