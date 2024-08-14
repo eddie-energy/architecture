@@ -1,0 +1,53 @@
+@startuml aiida_new_connection_token
+'sequence diagram
+caption Establish a new connection via Token
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Customer" as user
+box "EP Infrastructure" #transparent
+  participant "EP Website" as website
+  participant "EMQX IAM \nDatabase" as database
+    box "\tAIIDA\t\t"  #transparent
+    participant "AIIDA Regional \nConnector" as connector
+      box "\t\tAIIDA Embedded App\t\t"  #transparent
+      participant "AIIDA Frontend" as frontend
+      participant "AIIDA Backend" as backend
+    end box
+  end box
+end box
+
+user -> website : AIIDA connect
+activate website
+
+  website -->> user : show (QR-Code/ Token)
+deactivate website
+
+user -> website : copy Token
+activate website
+  user -> frontend : insert Token, add new permission
+  activate frontend
+      frontend -> backend : access
+           activate backend 
+           deactivate frontend
+    backend  -->> connector : establish connection
+
+
+     deactivate backend
+     
+    activate connector
+    connector -> database : create user
+    deactivate connector 
+    activate database
+    deactivate database
+
+deactivate website
+
+@enduml

@@ -1,0 +1,44 @@
+@startuml aiida_new_connection_qr
+'sequence diagram
+caption Establish a new connection via QR-Code Scan
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Customer" as user
+box "EP Infrastructure" #transparent
+  participant "EP Website" as website
+  participant "EMQX IAM \nDatabase" as database
+    box "\tAIIDA Network\t\t"  #transparent
+    participant "Smartphone" as smartphone  
+    box "AIIDA" #transparent
+    participant "AIIDA Regional \nConnector" as connector
+    end box
+  end box
+end box
+
+user -> website : AIIDA connect
+activate website
+
+  website -->> user : show (QR-Code/ Token)
+deactivate website
+
+
+  user -> smartphone : scan QR Code, add new permission
+  activate smartphone
+    smartphone -->> connector : establish connection
+    activate connector
+    connector -> database : create user
+    deactivate connector 
+    activate database
+    deactivate database
+  deactivate smartphone
+
+
+@enduml

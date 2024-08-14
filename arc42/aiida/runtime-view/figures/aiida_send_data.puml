@@ -1,0 +1,49 @@
+@startuml aiida_send_data
+'sequence diagram
+caption The in-house devices send data to EDDIE Framework
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+actor customer
+
+box "Device" as device
+end box
+
+box "EP Infrastructure" #transparent
+
+    participant "EP Website" as website
+      participant "EMQX IAM \nDatabase" as database
+    box "\tAIIDA\t\t"  #transparent
+    participant "AIIDA Regional \nConnector" as connector
+      participant "AIIDA \nEmbedded App"  as app
+      
+  end box
+
+end box
+
+
+device -> app : send energy data
+activate app
+app -> connector : connect to EDDIE
+deactivate app
+activate connector
+connector -> database :store energy data
+activate database
+deactivate connector
+customer -> website : request energy data
+activate website
+website -> database : forward request
+database -->> website : send answer
+deactivate database
+website -->> customer : forward answer
+deactivate website
+
+
+
+@enduml
