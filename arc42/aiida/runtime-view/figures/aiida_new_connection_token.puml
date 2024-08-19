@@ -43,7 +43,7 @@ activate website
      deactivate backend
      
     activate connector
-    connector -> database : create user
+    connector -->> database : create user
     deactivate connector 
     activate database
     deactivate database

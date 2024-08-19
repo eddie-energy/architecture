@@ -32,9 +32,9 @@ deactivate website
 
   user -> smartphone : scan QR Code, add new permission
   activate smartphone
-    smartphone -->> connector : establish connection
+    smartphone -> connector : establish connection
     activate connector
-    connector -> database : create user
+    connector -->> database : create user
     deactivate connector 
     activate database
     deactivate database
