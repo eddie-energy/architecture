@@ -19,7 +19,7 @@ box "EP Infrastructure" #transparent
     participant "Smartphone" as smartphone  
     box "AIIDA" #transparent
     participant "AIIDA Regional \nConnector" as connector
-       box "AIIDA Ebedded App" #transparent
+       box "AIIDA Embedded App" #transparent
       participant "AIIDA Backend" as backend
     end box
   end box

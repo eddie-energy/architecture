@@ -21,27 +21,42 @@ box "EP Infrastructure" #transparent
       participant "EMQX IAM \nDatabase" as database
     box "\tAIIDA\t\t"  #transparent
     participant "AIIDA Regional \nConnector" as connector
+     participant "Timescale DB" as timescale
       participant "AIIDA \nEmbedded App"  as app
-      
+      participant "MQTT Broker" as broker
   end box
 
 end box
 
 
-device -> app : send energy data
+device -> broker : send energy\ndata [MQTT]
+activate broker
+broker -> app : translate protocol,\nsend energy data
+deactivate broker
 activate app
-app -> connector : connect to EDDIE
+app -> timescale : store energy\ndata
+activate timescale
 deactivate app
-activate connector
-connector -> database :store energy data
-activate database
-deactivate connector
-customer -> website : request energy data
+
+customer -> website : login
 activate website
-website -> database : forward request
-database -->> website : send answer
+website -> database : access user 
+activate database
+database -->> website : confirm access 
 deactivate database
-website -->> customer : forward answer
+
+
+customer -> website : request energy data
+website -> connector : forward request
+
+activate connector
+connector -> timescale : ask for permission
+timescale -->>  connector  : confirm access\nsend energy data
+deactivate timescale
+connector -->> website : forward energy data
+deactivate connector
+deactivate database
+website -->> customer : show energy data
 deactivate website
 
 
