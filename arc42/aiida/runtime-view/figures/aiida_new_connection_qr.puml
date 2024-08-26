@@ -19,6 +19,8 @@ box "EP Infrastructure" #transparent
     participant "Smartphone" as smartphone  
     box "AIIDA" #transparent
     participant "AIIDA Regional \nConnector" as connector
+       box "AIIDA Ebedded App" #transparent
+      participant "AIIDA Backend" as backend
     end box
   end box
 end box
@@ -32,10 +34,14 @@ deactivate website
 
   user -> smartphone : scan QR Code, add new permission
   activate smartphone
-    smartphone -> connector : establish connection
+    smartphone -> backend : add new permission
+    deactivate smartphone
+    activate backend
+    backend -->> connector : establish connection
     activate connector
-    connector -->> database : create user
-    deactivate connector 
+    deactivate backend
+    connector -> database : create user
+    deactivate connector
     activate database
     deactivate database
   deactivate smartphone
