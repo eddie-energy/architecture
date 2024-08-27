@@ -19,6 +19,8 @@ box "EP Infrastructure" #transparent
 
     participant "EP Website" as website
       participant "EMQX IAM \nDatabase" as database
+    participant "EMQX MQTT \nBroker" as mqttbroker
+    
     box "\tAIIDA\t\t"  #transparent
     participant "AIIDA Regional \nConnector" as connector
      participant "Timescale DB" as timescale
@@ -51,10 +53,12 @@ website -> connector : forward request
 
 activate connector
 connector -> timescale : ask for permission
-timescale -->>  connector  : confirm access\nsend energy data
-deactivate timescale
-connector -->> website : forward energy data
 deactivate connector
+timescale -->>  mqttbroker  :send energy data
+activate mqttbroker
+deactivate timescale
+mqttbroker -->> website : forward energy data
+deactivate mqttbroker
 deactivate database
 website -->> customer : show energy data
 deactivate website
