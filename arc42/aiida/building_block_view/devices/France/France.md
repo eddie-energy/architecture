@@ -2,8 +2,7 @@
 title: France
 order: 2
 ---
-# MicroTeleinfoV3
-This USB adapter supports the connection with the Linky smart meter in France. It converts the data retrieved to a serial interface.
+The MicroTeleinfoV3 USB adapter supports the connection with the Linky smart meter in France. It converts the data retrieved to a serial interface.
 In order to connect with the USB dongle, it has to be both plugged into a system which supports USB and an internet connection such as a raspberry pi.
 The USB dongle must then be connected to the Linky smart meter via 2 small cables, like a telephone wire. 
 

@@ -2,7 +2,7 @@
 title: Austria
 order: 1
 ---
-# Oesterreichs Energie Adapter
+
 The smart meter adapter by Oesterreichs Energie supports all smart meters deployed in Austria, regardless of their physical interface.
 
 ## How to use with AIIDA
