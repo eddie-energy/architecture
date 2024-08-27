@@ -2,14 +2,16 @@
 title: Embedded App
 order: 1
 ---
-# AIIDA Backend
-## Overview
+The AIIDA embedded app handles the core features of AIIDA. It consists of a backend and a small frontend.
+
+## AIIDA Backend
+### Overview
 
 The AIIDA Backend component is responsible for accessing the real-time data from the Smart Meter and sending it to the EDDIE Framework. In addition to this, AIIDA Backend has an interface for the customer via the AIIDA Frontend (which is a web application) and the AIIDA App (which is a smartphone app). This interface can be used by the customer to manage the customer consent for access to real-time data, and to view error messages regarding the consent, the connection to the Smart Meter and the connection to the EDDIE Framework. The internal view of the AIIDA Backend is shown in the figure below.
 
 ![](./figures/aiida-backend.svg)
 
-## Components
+### Components
 
 The included components are the following:
 
@@ -22,7 +24,7 @@ The included components are the following:
 | Storage | Stores the state of the system including information about the customer consents, and the connections to the EDDIE Framework and the Smart Meter. Also it stores recent energy consumption values which may need to be sent to the EDDIE Framework.  |
 
 
-## Interfaces
+### Interfaces
 
 The included interfaces are the following:
 
@@ -33,12 +35,12 @@ The included interfaces are the following:
 | Streaming Infrastructure | Streamer | Kafka |
 
 ---
-# AIIDA Frontend
+## AIIDA Frontend
 ---
 
-## Overview
+### Overview
 
-The AIIDA Frontend is a web application for the customer to access and configure the AIIDA Backend. Since the AIIDA Backend runs on the in-house device connected to the house's local area network, the AIIDA Frontend needs to be on the same network as well. This is done for security purposes so that only the customer can configure the AIIDA BAckend. To configure the connection to the EDDIE Framework, the customer needs to access the Permission Facade first, and manually copy-paste the provided information (e.g., host URL and connection ID) to the AIIDA Front end. An alternative to this process is to use the AIIDA App. The AIIDA Frontend is shown in the figure below. 
+The AIIDA Frontend is a web application for the customer to access and configure the AIIDA Backend. Since the AIIDA Backend runs on the in-house device connected to the house's local area network, the AIIDA Frontend needs to be on the same network as well. This is done for security purposes so that only the customer can configure the AIIDA Backend. To configure the connection to the EDDIE Framework, the customer needs to access the Permission Facade first, and manually copy-paste the provided information (e.g., host URL and connection ID) to the AIIDA Front end. An alternative to this process is to use the AIIDA App. The AIIDA Frontend is shown in the figure below. 
 
 ![](./figures/aiida-frontend.svg)
 

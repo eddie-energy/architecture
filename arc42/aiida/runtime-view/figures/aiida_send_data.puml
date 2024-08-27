@@ -52,7 +52,12 @@ customer -> website : request energy data
 website -> connector : forward request
 
 activate connector
-connector -> timescale : ask for permission
+connector -> app: ask for permission
+deactivate connector
+activate app 
+app -->> timescale : forward\nrequest
+deactivate app
+
 deactivate connector
 timescale -->>  mqttbroker  :send energy data
 activate mqttbroker

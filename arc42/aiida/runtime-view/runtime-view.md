@@ -48,9 +48,9 @@ With the AIIDA Smartphone App the Customer can as well scan the QR Code that was
 A device, that is somehow connected to the AIIDA Embedded App, stores its data in the Timescale DB.
 
 1. A device, that is somehow connected to energy collecting systems in a household, sends energy data to the AIIDA MQTT Broker. 
-2. The Broker translates the protocol and sends the data to the Timescale DB.
-2. The data is stored at the Timescale DB.
-3. The energy data is stored inside the households user account at the IAM database.
+2. The Broker translates the protocol and sends the data to the AIIDA embedded app, that forwards it to the Timescale DB.
+3. The data is stored at the Timescale DB.
+
 
 On the other hand, the Customer can look at his/her own data by requesting it through the EP Website. After the login the user can connect with AIIDA through the AIIDA regional connector.
 
@@ -58,7 +58,8 @@ On the other hand, the Customer can look at his/her own data by requesting it th
 5. / 6.  The user account is located at the EMQX IAM Database, where the request ist confirmed.
 7. To request his/her own energy data, the customer clicks a button on the EP website. 
 8. The EP website forwards the request to the AIIDA regional connector.
-9. The AIIDA regional connector requests the data from the Timescale DB.
-10. If the connectors request comes from the verfied and dedicated account, the Timescale DB sends the data directly to the MQTT Broker.
-11. The data is forwarded (after beeing translated by a MQTT Broker) to EP Website.
-12. The user can see and also download the data from the EP Website. Apart from that the data will be stored only in the cache, not at the EDDIE System itself.
+9. The AIIDA regional connector sends its request to the backend of the AIIDA embedded app.
+10. The AIIDA embedded app forwards the request to the Timescale DB.
+11. If the connectors request comes from the verfied and dedicated account, the Timescale DB sends the data directly to the MQTT Broker.
+12. The data is forwarded (after beeing translated by a MQTT Broker) to EP Website.
+13. The user can see and also download the data from the EP Website. Apart from that the data will be stored only in the cache, not at the EDDIE System itself.
