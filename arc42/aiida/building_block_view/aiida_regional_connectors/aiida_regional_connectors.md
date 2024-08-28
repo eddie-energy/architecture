@@ -11,7 +11,7 @@ The connector also subscribes to the status message topic and updates the intern
 
 There is a dedicated topic per AIIDA instance and permission for the near real-time data and connection status messages. The authentication of the user ensures that only the permitted AIIDA instance may publish/subscribe to these topics.
 
-As mentioned at [deployment view](../../deployment-view/deployment-view.md), the AIIDA regional connector runs at the EDDIE Framework site. There it appears in the list of available regional connectors if it has been configured correctly.
+As mentioned at the chapter for the [deployment view](../../deployment-view/deployment-view.md), the AIIDA regional connector runs at the EDDIE Framework site. There it appears in the list of available regional connectors if it has been configured correctly.
 
 ## MQTT broker interface
 The AIIDA region connector requires a MQTT broker together with a EMQX database to properly function. AIIDA instances will send their data messages to this MQTT broker to communicate with the connector. The connector will create a user with a random password for each permission and the AIIDA instance can fetch these credentials only once from the regional connector. 

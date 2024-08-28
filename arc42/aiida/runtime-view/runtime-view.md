@@ -27,7 +27,7 @@ This workflow includes the following steps:
 6. The backend establishes a connection with the regional connector for AIIDA, to share data with EDDIE Framework.
 7. The AIIDA regional connector connects with EDDIE Framework, where a new user is created at the IAM Database, to store the energy data.
 
-
+Revoking a connection works exactly the same way. The customer accesses the Frontend where he sees all open permissions. 
 
 ### Via Smartphone App
 ![](./figures/aiida_new_connection_qr.svg)
