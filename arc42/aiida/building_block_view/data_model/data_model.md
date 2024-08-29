@@ -3,7 +3,7 @@ title: Data Model
 order: 4
 ---
 
-There are two relevant databases for AIIDA, the internal Timescale DB, that stores the actual on-site energy data, and the EMQX IAM Database on the Eddie Framework site, that is used for identity access management (IAM) and user credentials.
+There are two relevant databases for AIIDA, the internal Timescale DB, that stores the actual on-site energy data, and the EMQX IAM Database on the Eddie Framework site, that is used for identity access management (IAM) and user credentials. It is important to mention, that EDDIE in general follows the CIM model; However, AIIDA or the Timescale DB respectively, uses its own model.
 
 ## Timescale DB 
 As mentionend, a households data is stored at a Timescale Database. TimescaleDB is specifically designed for storing time-series data, aka chronologically organized  datasets, including measurement series like those of AIIDA. TimescaleDB is based on PostgreSQL, adding several features for a more efficient handling of time-series data, such as automatic partitioning, hypertables for managing large datasets, analytical functions, and more. 

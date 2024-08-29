@@ -4,8 +4,8 @@ order: 3
 ---
 To connect with EDDIE, the AIIDA system also requires a connector, that is of the same type as the regional connectors that establish a connection with the regional data hubs.
 
-## Workflow
-The connector is mainly needed to request a permission for data access. If the permission was granted by the customer, their AIIDA instance will send data and status messages to separate topics on the MQTT broker. All messages are sent directly from AIIDA to this broker, nothing is routed through the regional connector.
+## Functionality
+The connector is mainly needed to request a permission for data access. If the permission was granted by the customer, their AIIDA instance will send data and status messages to separate topics on the MQTT broker, which is described below. All messages are sent directly from AIIDA to this broker, nothing is routed through the regional connector.
 
 The connector also subscribes to the status message topic and updates the internal status of a permission when such a message is received. When a permission of this region connector should be terminated (f.e. because the customer revoked a permission) the connector publishes a special message on the termination topic of the specific permission. The AIIDA instance is subscribed to this topic and will therefore receive and honor the termination request.
 

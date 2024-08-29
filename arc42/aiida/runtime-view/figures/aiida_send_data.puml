@@ -31,15 +31,15 @@ end box
 
 
 
-device -> broker : send energy\ndata [MQTT]
+device -> broker : send energy\ndata
 activate broker
-broker -> app : translate protocol,\nsend energy data
+broker -> app : send energy data
 deactivate broker
 activate app
 app -> timescale : store energy\ndata
 activate timescale
 deactivate app
-
+deactivate timescale
 customer -> website : login
 activate website
 website -> database : access user 
@@ -56,10 +56,13 @@ connector -> app: ask for permission
 deactivate connector
 activate app 
 app -->> timescale : forward\nrequest
+activate timescale
+timescale -> app : allow access
+deactivate timescale
+app -->> mqttbroker  :sends energy data
 deactivate app
 
 deactivate connector
-timescale -->>  mqttbroker  :send energy data
 activate mqttbroker
 deactivate timescale
 mqttbroker -->> website : forward energy data

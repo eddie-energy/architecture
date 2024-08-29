@@ -23,7 +23,12 @@ According to arc42, [the content should describe the static decomposition of the
 |[AIIDA embedded app](./embedded_app/embedded_app.md)|The AIIDA embedded app contains the core functionality of AIIDA. For the customer, it is accessible through a frontend or via the smartphone app. Its main purpose is to forward the real-time data, that was collected at the Smart Meter to the EDDIE Framework. Via the frontend or smartphone app, the customer can manage the consent of shared data.|
 |[AIIDA smartphone app](./aiida-smartphone-app/aiida-smartphone-app.md)|Via the smartphone app the customer can scan a QR-code from the EP-website that corresponds to the smart meter. While the connection establishes automatically, the customer can either grant or deny access for the collected data to be shared with EDDIE Framework.|
 |[AIIDA regional connector](./aiida_regional_connectors/aiida_regional_connectors.md)|As for the regional connectors of EDDIE Framework, the AIIDA regional connector allows AIIDA to interact with EDDIE Framework, e.g. forwards energy data. As the AIIDA regional connector works as a plugin system, it is pictured as part of the AIIDA system, although it is deployed with EDDIE Framework.|
-|[Devices](./devices/devices.md)|To connect with the smart meter, AIIDA includes a country specific device. The connection between the smart meter and the device is established via several physical interfaces.|
+|[Devices](./devices/devices.md)|To connect with the smart meter, AIIDA includes a country specific device. The connection between the smart meter and the device is established via several physical interfaces. A diagram for the country specific devices is shown below.|
+|[Timescale DB](./embedded_app/embedded_app.md)|The Timescale Database stores energy data, gathered by the devices.|
+
+## Country specific devices
+
+ <C4 diagram="aiida-embedded-app" />
 
 
 

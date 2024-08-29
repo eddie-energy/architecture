@@ -31,8 +31,7 @@ activate website
   website -->> user : show (QR-Code/ Token)
 deactivate website
 
-user -> website : copy Token
-activate website
+
   user -> frontend : insert Token, add new permission
   activate frontend
       frontend -> backend : access
@@ -49,6 +48,6 @@ activate website
     activate database
     deactivate database
 
-deactivate website
+
 
 @enduml
