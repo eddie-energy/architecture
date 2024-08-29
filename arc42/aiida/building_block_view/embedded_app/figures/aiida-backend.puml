@@ -32,13 +32,14 @@ node "Eligible Party Infrastructure"  as epInfra{
 }
 node "In-house\nInfrastructure" {
   component "\tAIIDA" as aiida {
+    database "Timescale DB" as storage
     component "AIIDA\nFrontend" as frontend
     component "  AIIDA Backend" as backend{
       component "Aggregator" as aggregator
       component "Streamer" as streamer
       component "Permission\nManager" as permissionManager
       component "Error\nHandler" as errorHandler
-      database "Storage" as storage
+      
     }
     interface " " as aiidaAPI
 

@@ -17,11 +17,11 @@ The included components are the following:
 
 | Component | Responsibility |
 | - | - |
-| Aggregator | Connect to the Smart Meter and collect the energy consumption measurements in real time. These values send to the Streamer, and are also stored in the Storage. |
+| Aggregator | Connect to the Smart Meter and collect the energy consumption measurements in real time. These values send to the Streamer, and are also stored in the Timescale DB. |
 | Streamer | Receives the real-time energy consumption values from the Aggregator and sends them to the Streaming Infrastructure of the EDDIE Framework. Since the Streaming Infrastructure implements a publish/subscribe mechanism based on Kafka, the Streamer implement a client that publishes the data on Kafka. |
-| Permission Manager | Handles the customer consent for access to real-time data, and stores the related information in the Storage. It also configures the Streamer to publish the data, when the customer consent has been given. |
+| Permission Manager | Handles the customer consent for access to real-time data, and stores the related information in the Timescale DB. It also configures the Streamer to publish the data, when the customer consent has been given. |
 | Error Handler | Follows the operation of the AIIDA Backend and logs error messages for the customer regarding the flow of the energy consumption data, the customer consent, and unexpected situations that might occur. |
-| Storage | Stores the state of the system including information about the customer consents, and the connections to the EDDIE Framework and the Smart Meter. Also it stores recent energy consumption values which may need to be sent to the EDDIE Framework.  |
+| Timescale DB | Stores the state of the system including information about the customer consents, and the connections to the EDDIE Framework and the Smart Meter. Also it stores recent energy consumption values which may need to be sent to the EDDIE Framework.  |
 
 
 ### Interfaces
