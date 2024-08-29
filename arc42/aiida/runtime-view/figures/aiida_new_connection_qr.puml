@@ -15,15 +15,16 @@ actor "Customer" as user
 box "EP Infrastructure" #transparent
   participant "EP Website" as website
   participant "EMQX IAM \nDatabase" as database
-    box "\tAIIDA Network\t\t"  #transparent
-    participant "Smartphone" as smartphone  
+end box
+box "\tAIIDA Network\t\t"  #transparent
+  participant "Smartphone" as smartphone  
     box "AIIDA" #transparent
     participant "AIIDA Regional \nConnector" as connector
        box "AIIDA Embedded App" #transparent
       participant "AIIDA Backend" as backend
     end box
   end box
-end box
+
 
 user -> website : AIIDA connect
 activate website

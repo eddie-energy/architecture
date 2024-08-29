@@ -20,7 +20,7 @@ box "EP Infrastructure" #transparent
     participant "EP Website" as website
       participant "EMQX IAM \nDatabase" as database
     participant "EMQX MQTT \nBroker" as mqttbroker
-    
+end box
     box "\tAIIDA\t\t"  #transparent
     participant "AIIDA Regional \nConnector" as connector
      participant "Timescale DB" as timescale
@@ -28,7 +28,7 @@ box "EP Infrastructure" #transparent
       participant "MQTT Broker" as broker
   end box
 
-end box
+
 
 
 device -> broker : send energy\ndata [MQTT]
