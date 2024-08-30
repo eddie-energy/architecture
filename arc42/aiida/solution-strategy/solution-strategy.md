@@ -26,5 +26,5 @@ The in-house device hosting components of AIIDA requires very little input from 
 ## Why does AIIDA need the Embedded app?
 The AIIDA Embedded app is used for accessing the interfaces of in-house energy metering devices and receiving the energy data. After getting the data, the AIIDA Embedded app is responsible for forwarding this data to the EDDIE Framework. Furthermore, the Embedded app provides the configuration interface to the customer.
 
-## Deployability // (Regarding Open Sourceness/Raspberry Pi and compatibility to other hardware/software)
-    - As the in-house device hosting the AIIDA Embedded app, we use a Raspberry Pi single-board computer. The Raspberry Pi is chosen for being a widely used and cost effective device with large community, supporting several connectivity options and technologies. For example, supporting Docker which enables flexibility and portability is a very big advantage.
+## Deployability
+As the in-house device hosting the AIIDA Embedded app, we use a Raspberry Pi single-board computer. The Raspberry Pi is chosen for being a widely used and cost effective device with large community, supporting several connectivity options and technologies. For example, supporting Docker which enables flexibility and portability is a very big advantage. Also, the Raspberry Pi community typically provides their solutions open-source which also helps with configuraitons and customizations.
