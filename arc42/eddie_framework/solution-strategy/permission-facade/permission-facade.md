@@ -1,6 +1,8 @@
 ---
 title: Permission Facade
+order: 2
 ---
+
 <!--
 > [!CAUTION]
 > The Permission Facade is not a component like in the project proposal. It's region-specific functions are included in the according region connector and there is also a part for functions that are the common across all regions.
@@ -25,7 +27,7 @@ When a Service is created, customers can be linked to this Service, so that the 
 10. The acceptance is forwarded to the EP Website.
 11. A status update of the request is shown.
 
-<!-- ![](./figures/establishment-of-consent.png) 
+<!-- ![](./figures/establishment-of-consent.png)
 
 
 To show all the consents given to a particular eligible party, the EDDIE Framework will provide an overview of the consents along with respective details and available actions. An example of this overview is shown in the figure below.
@@ -106,4 +108,3 @@ The figure below shows the process from the perspective of the customer. Specifi
 Finally, the following figure shows a domain model which includes the necessary variables and methods that need to be implemented in the EDDIE Framework for efficient integration and interactions with the permissions administrators.
 
 ![](./figures/domain-model.png) -->
-
