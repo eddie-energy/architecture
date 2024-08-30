@@ -26,6 +26,7 @@ _Soon_ (🔜) shows that the development is immediately planned and research is 
 | 🇦🇹  | Austria     | [EDA](https://www.eda.at)                                | ✅       | TODO                                                                                                              |
 | 🇩🇰  | Denmark     | [Energinet](https://en.energinet.dk/)                    | ✅       | TODO                                                                                                              |
 | 🇫🇮  | Finland     | [Fingrid](https://www.fingrid.fi)                        | ⏳       | TODO                                                                                                              |
+| 🇫🇷  | Finland     | [Fingrid](https://www.fingrid.fi)                        | ⚠️       | Unstable                                                                                                          |
 | 🇩🇪  | Germany     | TODO                                                     | 🔜       | TODO                                                                                                              |
 | 🇳🇱  | Netherlands | [Mijn Aansluiting](https://www.mijnaansluiting.nl)       | ⏳       | TODO                                                                                                              |
 | 🇪🇸  | Spain       | [Datadis](https://datadis.es)                            | ✅       | TODO                                                                                                              |
