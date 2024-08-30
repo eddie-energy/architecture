@@ -28,7 +28,7 @@ _Soon_ (🔜) shows that the development is immediately planned and research is 
 | 🇳🇱  | Netherlands | [Mijn Aansluiting](https://www.mijnaansluiting.nl)       | ⏳       | TODO                                                                                                              |
 | 🇪🇸  | Spain       | [Datadis](https://datadis.es)                            | ✅       | TODO                                                                                                              |
 | 🇺🇸  | USA         | [Green Button](https://www.energy.gov/data/green-button) | ⏳       | TODO                                                                                                              |
-| 🏠  | _AIIDA_     | [AIIDA](./../../../aiida/)                               | ✅       | AIIDA also connects via a regional connector, because this allowed us to reuse all of the existing infrastructre. |
+| 🏠  | _AIIDA_     | [AIIDA](./../../../aiida/aiida)                          | ✅       | AIIDA also connects via a regional connector, because this allowed us to reuse all of the existing infrastructre. |
 
 ## Planned Support
 
