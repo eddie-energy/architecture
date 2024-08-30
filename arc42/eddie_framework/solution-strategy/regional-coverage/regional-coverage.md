@@ -10,7 +10,9 @@ order: 1
 
 ## What is a Region Connector?
 
-TODO: what is a region connector
+Due to various reasons (e.g. legal constraints, energy data hubs, data models etc.) permissions as well as data can be provided differently by different countries/data hubs.
+In order to meet these requirements, EDDIE Framework is architected in a way that accomodates these differences by enabling different implementations as well as architectures for specific regional connectors as well.
+These regional connectors enable the customers or eligible parties to interact with the system via a common interface which abstracts these differences away, this easing the usage of permission requests, live data as well as historic energy data from these regional data hubs.
 
 ## Current State
 
