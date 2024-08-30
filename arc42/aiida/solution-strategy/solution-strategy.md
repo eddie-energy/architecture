@@ -3,60 +3,28 @@ title: Solution Strategy
 order: 1
 ---
 
-::: warning TO ADD
-According to arc42 this chapter should contain a short summary and explanation of the fundamental decisions and
-solution strategies, that shape the system architecture. It includes
-
-- technology decisions
-- decisions about the top-level decomposition of the system, e.g.
-  usage of an architectural pattern or design pattern
-- decisions on how to achieve key quality goals
-- relevant organizational decisions, e.g. selecting a development
-  process or delegating certain tasks to third parties.
-
-:::
 
 ## Overview
 
-Short description. Motivate what was decided and why it was decided that way, based upon
-problem statement, quality goals and key constraints. Refer to details
-in the following sections.
+AIIDA (or Administrative Interface for In-house Data Access) is a software system that includes components running on a device at the customer's site to collect real-time data of energy metering devices (such as smart meters, home-automation system, or other similar assets). To achieve that, AIIDA includes various components such as the AIIDA Embedded App, the AIIDA Regional Connector, and the AIIDA Smartphone App.
 
-## Table
+## Why is AIIDA necessary in the context of EDDIE?
 
-including
-Quality goal, Scenario, Solution approach, Link to Details
+While the EDDIE Framework integrates the functionality to access historical energy data of customers from existing interfaces, the real-time energy data of customers may not be readily available from an existing public interface. For this reason, the EDDIE Framework alone cannot access real-time energy data. To overcome this limitation, AIIDA includes components running at the customer's site in order to access real-time data and provide it to the EDDIE Framework. This way, assuming that energy metering devices at the customer's site are smart, i.e., they provide communication interfaces, AIIDA can utilize these interfaces and access the real-time data. Notably, real-time data can be crucial to services processing energy data using the EDDIE Framework for a variety of reasons. For example, processing real-time energy data may contribute to more efficient management and optimization of energy usage, demand response, and stability.
 
-<!-- | 3 | Incentives | Why would consumers and eligible parties use eddie | marketplace |  |
-| 4 |  |  |  |  | -->
+## Why use an additional in-house device?
 
-<!-- ## OTHERs (TBD)
-
-The overall methodology of EDDIE is oriented towards the first main objective to (OBJ#1) provide a dependable, scalable and extensible European Distributed Data Infrastructure for Energy Framework (EDDIE Framework). This means that the overlying European interface will be given priority, and data accessible through data-sharing infrastructure (1) provided by metered data administrators will be available first. In parallel, and independently but synchronised, the work on the second main objective to (OBJ#2) provide an Administrative Interface for In-house Data Access (AIIDA) to feed in-house data (2) to EDDIE Framework users will be started.
-
-Both together, the EDDIE Framework and AIIDA will be put into a consistent overall architectural environment in an extensive architecture and specification phase planned for the first six months of the project. Publicly available data (3) from different Member States (MSs) also often has some hurdles to take and should also be part of a unified interface in the future, but for the initial EDDIE project, it shall be out of scope. See Figure 3 that illustrates the 3 major data family groups (1–3) considered within EDDIE as described in detail in the following:
-
-•	Data-sharing infrastructure: These are national energy data management environments and online data hubs. Historical metering and consumption data is collected, validated and stored at entities that need to make that data available in turn to established actors or eligible parties. At the moment, this is done diversly and by different players in each Member State. Also, different processes need to be followed and data is delivered in different formats and schemas. The EDDIE Framework communicates with these data-sharing infrastructures and provides a streamlined consent management user flow and a transformation towards a common pivotal format.
-•	In-house data sources: Currently, near real-time data can in most MSs be read from the “standardised interface” on the smart meter (if it has been ordered and installed after July 4th 2019). If the customer manages to connect to that interface and make that data processable, it is still only available in-house and it needs to be transformed to a common format. The Administrative Interface for In-house Data Access (AIIDA) will be in the position to read that data from different meter models, standards and configurations and make it available through an online consent-based mechanism. This means that users of services that are based on the EDDIE Framework can be shown a button on e.g., the service website saying “connect my in-house data” and will be routed to their Consent Management Interface (within AIIDA). If a consent is given, the AIIDA instance will deliver the requested data to the EDDIE Framework of the service for which a consent was granted. Not only main meter interfaces will be supported, but also others (e.g., sub-meters).
-•	Publicly available data: There is also other – often publicly available – data, that is necessary for many processes, but does not directly belong to the customer and also does not show consumption or generation time series characteristics. National weather forecasts, price feeds or market reference data fall under this category. These data families are still depicted diversely and by different players depending on the country. Optionally, but if the time allows, the EDDIE project team will also address this field and strive to make it available in a unified pivotal format through the EDDIE Framework.
+An additional device in-house is needed to run components that access the interfaces of the in-house energy metering devices (or assets). Existing energy metering devices typically integrate interfaces that can be accessed within limited range, e.g., via WiFi, USB, or power-line communication. For this reason, an in-house device within limited range is necessaty to access these interfaces. Having acquired the real-time data from these interfaces, AIIDA then provides connectivity with the EDDIE Framework. Interestingly, since the type of interface of the energy metering devices can vary, AIIDA needs to be able to connect to various interfaces in order to support many different energy metering devices in-house.
 
 
+## How does AIIDA integrate into EDDIE?
+One AIIDA instance runs at every cutomer's site. Thus, AIIDA instances play the role of the data sources of real-time data. AIIDA instances integrate into the EDDIE Framework via a publish/subscribe mechanism, i.e., AIIDA instnances publish the real-time data, and the EDDIE Framework has subscribed to receive this data. From the EDDIE Framework perspective, AIIDA is considered a [Regional Connector](../../eddie_framework/solution-strategy/solution-strategy.md).
 
+## Why does AIIDA need a user Interface?
+The in-house device hosting components of AIIDA requires very little input from the customer, and is intended to be a headless devices. However, the customer has to interact with AIIDA, in order to configure AIIDA to connect with the EDDIE Framework. To enable these configurations, AIIDA provides a user interface to be accessed either via a smartphone. This interface is also important for the customer to manage the customer permission, i.e., to allow/prevent AIIDA from sharing data with the EDDIE Framework. 
+    
+## Why does AIIDA need the Embedded app?
+The AIIDA Embedded app is used for accessing the interfaces of in-house energy metering devices and receiving the energy data. After getting the data, the AIIDA Embedded app is responsible for forwarding this data to the EDDIE Framework. Furthermore, the Embedded app provides the configuration interface to the customer.
 
-
-
-
-The overall methodology of EDDIE is oriented towards the first main objective to (OBJ#1) provide a dependable, scalable and extensible European Distributed Data Infrastructure for Energy Framework (EDDIE Framework). This means that the overlying European interface will be given priority, and data accessible through data-sharing infrastructure (1) provided by metered data administrators will be available first. In parallel, and independently but synchronised, the work on the second main objective to (OBJ#2) provide an Administrative Interface for In-house Data Access (AIIDA) to feed in-house data (2) to EDDIE Framework users will be started.
-
-Both together, the EDDIE Framework and AIIDA will be put into a consistent overall architectural environment in an extensive architecture and specification phase planned for the first six months of the project. Publicly available data (3) from different Member States (MSs) also often has some hurdles to take and should also be part of a unified interface in the future, but for the initial EDDIE project, it shall be out of scope. See Figure 3 that illustrates the 3 major data family groups (1–3) considered within EDDIE as described in detail in the following:
-
-•	Data-sharing infrastructure: These are national energy data management environments and online data hubs. Historical metering and consumption data is collected, validated and stored at entities that need to make that data available in turn to established actors or eligible parties. At the moment, this is done diversly and by different players in each Member State. Also, different processes need to be followed and data is delivered in different formats and schemas. The EDDIE Framework communicates with these data-sharing infrastructures and provides a streamlined consent management user flow and a transformation towards a common pivotal format.
-•	In-house data sources: Currently, near real-time data can in most MSs be read from the “standardised interface” on the smart meter (if it has been ordered and installed after July 4th 2019). If the customer manages to connect to that interface and make that data processable, it is still only available in-house and it needs to be transformed to a common format. The Administrative Interface for In-house Data Access (AIIDA) will be in the position to read that data from different meter models, standards and configurations and make it available through an online consent-based mechanism. This means that users of services that are based on the EDDIE Framework can be shown a button on e.g., the service website saying “connect my in-house data” and will be routed to their Consent Management Interface (within AIIDA). If a consent is given, the AIIDA instance will deliver the requested data to the EDDIE Framework of the service for which a consent was granted. Not only main meter interfaces will be supported, but also others (e.g., sub-meters).
-•	Publicly available data: There is also other – often publicly available – data, that is necessary for many processes, but does not directly belong to the customer and also does not show consumption or generation time series characteristics. National weather forecasts, price feeds or market reference data fall under this category. These data families are still depicted diversely and by different players depending on the country. Optionally, but if the time allows, the EDDIE project team will also address this field and strive to make it available in a unified pivotal format through the EDDIE Framework. -->
-
-<!-- ![EDDIE Overview](/01-introduction-and-goals/figures/EDDIE_overview.png) -->
-<!-- <div align="center"> -->
-<!-- <img src="./figures/EDDIE_overview.png" width="850" alt="test"> -->
-<!-- </div> -->
-
-<!-- Activities towards the fourth main objective to (OBJ#4) provide extensive scientific assessment and share real-world experience on various aspects of data-sharing will start accompanying these developments and when the architecture and specification phase is completed and Milestone 2 (project month 9) is achieved. Implementation of software and systems to be developed within EDDIE will deliver usable and assessable preliminary results soon, to ensure that their contribution is aligned with the overall objectives during the whole lifecycle of the project. Following this rationale, software deliverables will be released on the open-source code management platform (GitHub [11]), so that all interested stakeholders can easily test and provide feedback. It is planned to ramp up dissemination and future development and maintenance through options like the formation of a new or the adoption of the project results by an existing open-source foundation such as the Linux Foundation for Energy [12] or European organisations. -->
+## Deployability // (Regarding Open Sourceness/Raspberry Pi and compatibility to other hardware/software)
+    - As the in-house device hosting the AIIDA Embedded app, we use a Raspberry Pi single-board computer. The Raspberry Pi is chosen for being a widely used and cost effective device with large community, supporting several connectivity options and technologies. For example, supporting Docker which enables flexibility and portability is a very big advantage.
