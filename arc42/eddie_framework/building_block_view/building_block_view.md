@@ -3,9 +3,9 @@ title: Building Block View
 order: 2
 ---
 
-::: warning TO ADD
+<!--::: warning TO ADD
 More detailed (but short) explaination about the different containers of the system. Descriptions are to generic at the moment
-:::
+::: -->
 
 ## Eddie Framework
 

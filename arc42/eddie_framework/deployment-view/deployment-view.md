@@ -2,9 +2,9 @@
 title: Deployment View
 order: 4
 ---
-
+<!--
 ::: warning TO ADD
-[According to Arc42 the deployment view includes descriptions about](https://docs.arc42.org/section-7/)
+[According to Arc42 the deployment view includes descriptions about](https://docs.arc42.org/section-7/) 
 
 1.  technical infrastructure used to execute your system, with
     infrastructure elements like geographical locations, environments,
@@ -12,17 +12,15 @@ order: 4
     infrastructure elements
 2.  mapping of (software) building blocks to that infrastructure
     elements.
-3.  development environment, test environment, production environment.
+3.  development environment, test environment, production environment. -->
 
-The EDDIE Framework depolyment view should be a zoom into the highest level depolyment view, defining the environment for EDDIE Framework in specific
+The EDDIE Framework depolyment view is a zoom into the highest level depolyment view, defining the environment for EDDIE Framework in specific
 :::
 
 ## Overview
 
-## Figure + Table
 
-| Node | Description |
-| ---- | ----------- |
+
 
 <!-- The deployment view describes:
 1.  technical infrastructure used to execute your system, with
@@ -52,7 +50,6 @@ Describe (usually in a combination of diagrams, tables, and text):
 -   quality and/or performance features of this infrastructure
 -   mapping of software artifacts to elements of this infrastructure -->
 
-## Overview
 
 The deployment view of the system focuses on the utilized technical infrastructure, and shows deployment diagrams that depict where the components of the system run. The prime way to deploy these components is shown in the figure below. Notably, the Interoperable Communication component is not depicted as a Container because it may consist of multiple containers. The same applies to AIIDA, and the Marketplace.
 

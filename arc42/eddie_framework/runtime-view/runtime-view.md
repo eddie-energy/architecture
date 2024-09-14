@@ -2,9 +2,9 @@
 title: Runtime View
 order: 3
 ---
-
+<!--
 ::: warning TO ADD
-For each chapter, review the content and check if the following criterias are fullfilled:
+For each chapter, review the content and check if the following criterias are fullfilled: 
 
 According to arc42 the runtime view describes concrete behavior and interactions of the system’s building blocks in form of scenarios. The scenario should answer the following questions:
 
@@ -16,7 +16,7 @@ According to arc42 the runtime view describes concrete behavior and interactions
   You should understand how (instances of) building blocks of your system perform their job and communicate at runtime. You will mainly capture scenarios in your documentation to communicate your architecture to stakeholders that are less willing or able to read and understand the static models (building block view, deployment view).
 
 :::
-
+-->
 ## Overview
 
 The runtime view focuses on interactions among the system's components. The goal of this section is to describe representative and important workflows that occur during the runtime of the system. These workflows are categorized into sections, as shown below.

@@ -2,10 +2,10 @@
 title: France
 order: 4
 ---
-
+<!--
 ::: warning TO ADD
 More detailed explanation
-:::
+::: -->
 
 ## Eddie Framework France
 

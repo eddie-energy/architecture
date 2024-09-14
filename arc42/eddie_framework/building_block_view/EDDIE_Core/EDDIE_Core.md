@@ -2,7 +2,7 @@
 title: EDDIE Core
 order: 1
 ---
-
+<!--
 ::: warning TO ADD
 content as listed in the following document
 :::
@@ -18,3 +18,4 @@ content as listed in the following document
 | Container | Responsibility |
 | - | - |
 | - | - |
+-->
