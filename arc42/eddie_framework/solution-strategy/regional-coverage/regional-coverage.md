@@ -2,12 +2,12 @@
 title: Regional Coverage
 order: 1
 ---
-
+<!--
 ::: warning TO REFINE
 
 - Especially look over the "Planned Support", it has blatantly been included from the old version - **have there been any changes**?
   :::
-
+-->
 ## What is a Region Connector?
 
 Due to various reasons (e.g. legal constraints, energy data hubs, data models etc.) permissions as well as data can be provided differently by different countries/data hubs.

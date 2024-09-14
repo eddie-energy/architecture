@@ -2,7 +2,7 @@
 title: Solution Strategy
 order: 1
 ---
-
+<!--
 ::: warning TO ADD
 According to arc42 this chapter should contain a short summary and explanation of the fundamental decisions and
 solution strategies, that shape the system architecture. It includes
@@ -30,8 +30,7 @@ table: Quality goal, Scenario, Solution approach, Link to Details
 
 Motivate what was decided and why it was decided that way, based upon
 problem statement, quality goals and key constraints. Refer to details
-in the following sections. -->
-
+in the following sections. 
 ::: warning TO ADD
 refine the following overview
 :::
