@@ -10,6 +10,7 @@ The AIIDA embedded app handles the core features of AIIDA. It consists of a back
 The AIIDA Backend component is responsible for accessing the real-time data from the Smart Meter and sending it to the EDDIE Framework. In addition to this, AIIDA Backend has an interface for the customer via the AIIDA Frontend (which is a web application) and the AIIDA App (which is a smartphone app). This interface can be used by the customer to manage the customer consent for access to real-time data, and to view error messages regarding the consent, the connection to the Smart Meter and the connection to the EDDIE Framework. The internal view of the AIIDA Backend is shown in the figure below.
 
 ![](./figures/aiida-backend.svg)
+<C4 diagram="container-aiida" />
 
 ### Components
 
@@ -40,9 +41,7 @@ The included interfaces are the following:
 
 ### Overview
 
-The AIIDA Frontend is a web application for the customer to access and configure the AIIDA Backend. Since the AIIDA Backend runs on the in-house device connected to the house's local area network, the AIIDA Frontend needs to be on the same network as well. This is done for security purposes so that only the customer can configure the AIIDA Backend. To configure the connection to the EDDIE Framework, the customer needs to access the Permission Facade first, and manually copy-paste the provided information (e.g., host URL and connection ID) to the AIIDA Front end. An alternative to this process is to use the AIIDA App. The AIIDA Frontend is shown in the figure below. 
-
-![](./figures/aiida-frontend.svg)
+The AIIDA Frontend is a web application for the customer to access and configure the AIIDA Backend. Since the AIIDA Backend runs on the in-house device connected to the house's local area network, the AIIDA Frontend needs to be on the same network as well. This is done for security purposes so that only the customer can configure the AIIDA Backend. To configure the connection to the EDDIE Framework, the customer needs to access the Permission Facade first, and manually copy-paste the provided information (e.g., host URL and connection ID) to the AIIDA Frontend. An alternative to this process is to use the AIIDA App. 
 
 The AIIDA Frontend enables the following functionalities:
 
