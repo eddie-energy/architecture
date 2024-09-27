@@ -2,9 +2,14 @@
 title: Runtime View
 order: 3
 ---
+
+::: warning DESIRED CONTENT
+Here we will not describe the runtime behavior per regional connector, as this well result in a matrix explosion problem (MxN).
+:::
+
 <!--
 ::: warning TO ADD
-For each chapter, review the content and check if the following criterias are fullfilled: 
+For each chapter, review the content and check if the following criterias are fullfilled:
 
 According to arc42 the runtime view describes concrete behavior and interactions of the system’s building blocks in form of scenarios. The scenario should answer the following questions:
 
@@ -17,6 +22,7 @@ According to arc42 the runtime view describes concrete behavior and interactions
 
 :::
 -->
+
 ## Overview
 
 The runtime view focuses on interactions among the system's components. The goal of this section is to describe representative and important workflows that occur during the runtime of the system. These workflows are categorized into sections, as shown below.

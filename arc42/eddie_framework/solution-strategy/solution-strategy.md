@@ -2,6 +2,21 @@
 title: Solution Strategy
 order: 1
 ---
+
+::: info DESIRED CONTENT
+Here we are gonna describe the main parts of EDDIE Framework from a logical point of view (_mainly in FAQ format, as we already introduced in AIIDA, as this eases readability_), why it is separated into **Regional Connectors** (and link to the corresponding subpage) and what role the **Permission Facade** plays (also with links to the detailed subpage). The third part is gonna be a quick description aboud the **Data Needs API**.
+
+We will not include EDDIE Core in this description, as it is not relevant for the understanding of the solution strategy, it will be described in the Building Block view.
+
+Depending on the amount of content, it might make sense to migrate the subsections directly into this page, as we have gained better navigation capabilities using Vitepress and its right sidebar.
+:::
+
+## Regional Connectors
+
+## Permission Facade
+
+## Data Needs API
+
 <!--
 ::: warning TO ADD
 According to arc42 this chapter should contain a short summary and explanation of the fundamental decisions and
@@ -30,7 +45,7 @@ table: Quality goal, Scenario, Solution approach, Link to Details
 
 Motivate what was decided and why it was decided that way, based upon
 problem statement, quality goals and key constraints. Refer to details
-in the following sections. 
+in the following sections.
 ::: warning TO ADD
 refine the following overview
 :::
@@ -50,7 +65,7 @@ There are certain goals of the framework which can be achieved by following a sp
 | All customers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their permission administrator. | Implement a dedicated Permission Facade component that handles the consent of all the customers of an eligible party. This component shall comply with the specificities of each country. |            |
 | The EDDIE Framework shall support customers and Regional Data-sharing Infrastructures across many Member States.                                   | The EDDIE Framework shall become compatible with multiple Member States and beyond in three phases.                                                                                       |            |
 | <!--                                                                                                                                               | 3                                                                                                                                                                                         | Incentives | Why would consumers and eligible parties use eddie | marketplace |     |
-| 4                                                                                                                                                  |                                                                                                                                                                                           |            |                                                    |             | --> |
+| 4                                                                                                                                                  |                                                                                                                                                                                           |            |                                                    |             | -->
 
 <!-- ## OTHERs (TBD)
 
