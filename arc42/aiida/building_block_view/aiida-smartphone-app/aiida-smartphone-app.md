@@ -5,10 +5,7 @@ order: 2
 
 ## Overview
 
-The AIIDA App is a smartphone application for the customer to access and configure the AIIDA Backend of the embedded app, similar to the AIIDA Frontend. Since the AIIDA Backend runs on the in-house device connected to the house's local area network, the AIIDA App needs to be on the same network as well. This is done for security purposes so that only the customer can configure the AIIDA BAckend. The AIIDA App is shown in the figure below.
-
-![](./figures/aiida-frontend.svg)
-
+The AIIDA App is a smartphone application for the customer to access and configure the AIIDA Backend of the embedded app, similar to the AIIDA Frontend. Since the AIIDA Backend runs on the in-house device connected to the house's local area network, the AIIDA App needs to be on the same network as well. This is done for security purposes so that only the customer can configure the AIIDA BAckend. 
 The AIIDA App enables the following functionalities:
 
 1. Scan a QR code from the EP website to configure the connection to the Smart Meter and the EDDIE Framework automatically.
