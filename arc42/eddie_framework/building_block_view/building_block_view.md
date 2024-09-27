@@ -3,9 +3,10 @@ title: Building Block View
 order: 2
 ---
 
-<!--::: warning TO ADD
-More detailed (but short) explaination about the different containers of the system. Descriptions are to generic at the moment
-::: -->
+::: warning SIMPLIFY THIS CONTENT
+Here it makes more sense to generally show a C4 diagram showing the different parts of EDDIE Framework and mainly use this page as a TOC to link to the various sub pages.
+We should definitely not describe individual countries on this level of documentation.
+:::
 
 ## Eddie Framework
 
