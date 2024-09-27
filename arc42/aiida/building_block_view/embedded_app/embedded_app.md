@@ -12,6 +12,9 @@ The AIIDA Backend component is responsible for accessing the real-time data from
 
 <C4 diagram="aiida-embedded-app" />
 
+The above picture only shows the connection to the device Austria as a default example. Nevertheless, the following devices are implemented as well: 
+<C4 diagram="container-regional-devices" />
+
 ### Components
 
 The included components are the following:
