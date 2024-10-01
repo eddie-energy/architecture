@@ -28,7 +28,8 @@ According to arc42, [the content should describe the static decomposition of the
 
 ## Country specific devices
 
- <C4 diagram="aiida-embedded-app" />
+The above picture only shows the connection to the device Austria as a default example. Nevertheless, the following devices are implemented as well: 
+<C4 diagram="container-regional-devices" />
 
 
 
