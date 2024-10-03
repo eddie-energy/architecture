@@ -7,7 +7,7 @@ skinparam interface {
   backgroundColor transparent
   borderColor black
 }
-skinparam component{
+skinparam artifact{
   BorderColor black
   BackgroundColor transparent
 }
@@ -26,46 +26,51 @@ skinparam collections{
 skinparam rectangle{
   ' BorderColor transparent
   BackgroundColor transparent
-  FontColor transparent
+  FontColor black
 }
 
 
-node "Eligible Party Infrastructure"  as epInfra{
-  component "EDDIE Framework" {
+frame "Eligible Party Infrastructure"  as epInfra{
+  rectangle "EDDIE Framework" {
 
-    component "EDDIE \nCore" as eddie
-    component "AIIDA Regional\nConnector" as regcon
+    rectangle "EDDIE \nCore" as eddie
+    rectangle "AIIDA Regional\nConnector" as regcon
   }
-  component "EMQX IAM DB" as emqxiam
-  component "EMQX MQTT Broker" as broker
+    rectangle "EMQX MQTT Broker" as broker
+  rectangle "EMQX IAM DB" as emqxiam
+
 
   eddie -[hidden]down- emqxiam
   eddie -[hidden]down- broker
+  emqxiam -left- broker
+ 
 }
-node "Local Network" {
-  component "Smartphone" as smartphone{
-    component "Smartphone App" as app
+rectangle "Local Network" {
+  rectangle "Smartphone" as smartphone{
+    rectangle "Smartphone App" as app
 
   }
-  node "AIIDA Device" as aiida {
-    component "Embedded App\n AIIDA Firmware" as embapp
-    component "NanoMQ MQTT Broker" as nano
-    component "TimescaleDB" as db
+  rectangle "AIIDA Device" as aiida {
+    rectangle "Embedded App\n AIIDA Firmware" as embapp
+    rectangle "NanoMQ MQTT Broker" as nano
+    rectangle "TimescaleDB" as db
   }
   embapp -[hidden]down- nano
   nano -[hidden]down- db
   aiida -[hidden]up- smartphone
   embapp -up- app:DNS
+  embapp -down- db
+  embapp -left- broker
  
 }
 
-node "Device Italy" as device1
-node "Device Austria" as device2
-node "Device France" as device3
+frame "Device Italy" as device1
+frame "Device Austria" as device2
+frame "Device France" as device3
 
-node "Smart Meter" as smartmeter1
-node "Enedis" as enedis
-node "Smart Meter" as smartmeter2
+frame "Smart Meter" as smartmeter1
+frame "Enedis" as enedis
+frame "Smart Meter" as smartmeter2
 
 device1 -left- smartmeter1:\n\nPhysical\ninterfaces
 device2 -left- smartmeter2:\n\nPhysical\ninterfaces
@@ -80,6 +85,7 @@ nano -up-embapp
 device1 -[hidden]down- device2
 device2 -[hidden]down- device3
 epInfra -[hidden]right- aiida
+enedis -[hidden]left-device3
 
 
 
