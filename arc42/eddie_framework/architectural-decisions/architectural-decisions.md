@@ -12,16 +12,6 @@ order: 5
 > - Use HTML custom elements for integration in the EP app
 >
 
-Various architectural decisions are discussed for the implementation of this system. The table below shows an overview of these decisions.
-
-| No. | Title  | Status | Section |
-| - | - | - | - |
-
-| AD1 | Publish/subscribe mechanism for sending data from the EDDIE Framework to the Services. | Accepted | [Link](./kafka-for-sending-data-to-services/kafka-for-sending-data-to-services.md) |
-| AD2 | Implement the permission Facade as a microfrontend. | Accepted | [Link](./consent-facade-microfrontend/consent-facade-microfrontend.md) |
-| AD3 | Deployment of a database for storing the internal state of the EDDIE Framework. | Draft | Link |
-
-<!-- | AD3 | - | - | - | -->
 
 
 
@@ -81,3 +71,5 @@ Negative consequences:
 
 Alternatives:
 - Provide the Permission Facade as an independent website that is operated and maintained by each eligible party.
+
+## Deployment of a database for storing the internal state of the EDDIE Framework

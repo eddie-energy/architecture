@@ -8,12 +8,7 @@ order: 5
 > - Use MQTT for communication with Framework
 > - How MQTT user management is integrated with the Framework (DB-based)
 
-Various architectural decisions are discussed for the implementation of this system. The table below shows an overview of these decisions.
 
-| No. | Title  | Status | Section |
-| - | - | - | - |
-| AD1 | Dedicated in-house device. | Accepted | [Link](./in-house-device/in-house-device.md) |
-| AD2 | Publish/subscribe mechanism for sending data from AIIDA to the EDDIE Framework. | Draft | [Link](./kafka-for-sending-data-to-framework/kafka-for-sending-data-to-framework.md) |
 
 
 ## Publish/subscribe mechanism for sending data from AIIDA to the EDDIE Framework
