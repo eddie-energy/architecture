@@ -34,18 +34,14 @@ deactivate website
 
 
   user -> smartphone : scan QR Code, add new permission
-  activate smartphone
+
     smartphone -> backend : add new permission
-    deactivate smartphone
-    activate backend
+   
+
     backend -->> connector : establish connection
-    activate connector
-    deactivate backend
+
     connector -> database : create user
-    deactivate connector
-    activate database
-    deactivate database
-  deactivate smartphone
+
 
 
 @enduml

@@ -1,6 +1,6 @@
-@startuml aiida_send_data
+@startuml aiida_request_data
 'sequence diagram
-caption The in-house devices send data to EDDIE Framework
+caption The customer requests data through EDDIE  Framework
 
 skinparam style strictuml
 skinparam sequence {
@@ -31,13 +31,28 @@ end box
 
 
 
-device -> broker : send energy\ndata
-
-broker -> app : send energy data
-
-app -> timescale : store energy\ndata
+customer -> website : request energy data
+website -> connector : forward request
 
 
+connector -> app: ask for permission
+
+activate app 
+app -->> timescale : forward\nrequest
+activate timescale
+timescale -> app : allow access
+deactivate timescale
+app -->> mqttbroker  :sends energy data
+deactivate app
+
+deactivate connector
+
+deactivate timescale
+mqttbroker -->> website : forward energy data
+
+deactivate database
+website -->> customer : show energy data
+deactivate website
 
 
 

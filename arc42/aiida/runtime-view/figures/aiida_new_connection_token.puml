@@ -33,20 +33,13 @@ deactivate website
 
 
   user -> frontend : insert Token, add new permission
-  activate frontend
+ 
       frontend -> backend : access
-           activate backend 
-           deactivate frontend
+
     backend  -->> connector : establish connection
 
-
-     deactivate backend
-     
-    activate connector
     connector -->> database : create user
-    deactivate connector 
-    activate database
-    deactivate database
+
 
 
 
