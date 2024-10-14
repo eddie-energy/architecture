@@ -13,8 +13,6 @@ order: 5
 >
 
 
-
-
 ---
 ## Publish/subscribe mechanism for sending data from the EDDIE Framework to the Services
 ---

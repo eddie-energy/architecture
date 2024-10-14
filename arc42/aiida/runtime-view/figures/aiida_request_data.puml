@@ -51,8 +51,7 @@ deactivate timescale
 mqttbroker -->> website : forward energy data
 
 deactivate database
-website -->> customer : show energy data
-deactivate website
+
 
 
 
