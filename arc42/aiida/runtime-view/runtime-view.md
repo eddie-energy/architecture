@@ -20,7 +20,9 @@ Via the EP Website the Customer creates a new token and inserts that into the pr
 This workflow includes the following steps:
 
 1. The user clicks the AIIDA connect button on the EP website.
+1. A request is sent to the AIIDA Regional Connector.
 1. A Token and a QR code is generated for the user to establish a connection.
+1. The Token is shown to the user.
 1. The user inserts the token at the AIIDA frontend.
 1. Through copying the token, the AIIDA backend recieves the information, that a new permission was granted.
 1. The backend establishes a connection with the regional connector for AIIDA, to share data with EDDIE Framework.
@@ -34,36 +36,22 @@ Revoking a connection works exactly the same way. The customer accesses the Fron
 With the AIIDA Smartphone App the Customer can as well scan the QR Code that was created by the EP Website. The connection is then established automatically.
 
 1. The user clicks the AIIDA connect button on the EP website.
+1. A request is sent to the AIIDA Regional Connector.
 1. A Token and a QR code is generated for the user to establish a connection.
+1. The Token is shown to the user.
 1. The user scans the QR-Code with a smartphone.
 1. The AIIDA Smartphone app establishes a connection  with the AIIDA backend, to enforce a new permission.
 1. The backend establishes a connection with the regional connector for AIIDA, to share data with EDDIE Framework.
 1. The AIIDA regional connector connects with EDDIE Framework, where a new user is created at the IAM Database, to store the energy data.
 
 
-## Request real-time data, establish connection
-![](./figures/aiida_request_data.svg)
-
-The Customer can look at his/her own data by requesting it through the EP Website. After the login the user can connect with AIIDA through the AIIDA regional connector. AIIDA checks the permission and sends back the energy data. 
-
-1. The customer logs into an account through the EP Website.
-1. The user account is located at the EMQX IAM Database, where the request ist confirmed.
-1. To request his/her own energy data, the customer clicks a button on the EP website. 
-1. The EP website forwards the request to the AIIDA regional connector.
-1. The AIIDA regional connector sends its request to the backend of the AIIDA embedded app.
-1. The AIIDA embedded app forwards the request to the Timescale DB.
-1. The Timescale DB allows access.
-1. If the connectors request comes from the verfied and dedicated account, the backend sends the data directly to the MQTT Broker.
-1. The data is forwarded (after beeing translated by a MQTT Broker) to EP Website.
-1. The user can see and also download the data from the EP Website. Apart from that the data will be stored only in the cache, not at the EDDIE System itself.
-
 ## Continuously stream real-time data from devices
-![](./figures/aiida_send_data.svg)
+![](./figures/aiida_request_data.svg)
 
 
 A device, that is somehow connected to the AIIDA Embedded App, stores its data in the Timescale DB. If a certain permission, with a start and end date exists, AIIDA continuously shares the data with EDDIE.
 
 1. A device, that is somehow connected to energy collecting systems in a household, sends energy data to the AIIDA MQTT Broker. 
-1. The Broker sends the data to the AIIDA embedded app, that subscribes to the topic of the broker, then forwards it to the Timescale DB.
 1. The data is stored at the Timescale DB.
-1. Data is streaed to EDDIE Core
+1. The Broker sends the data directly to the MQTT Broker on the EDDIE Framework side.
+1. The Broker buffers the energy data and shares it with various services on demand.

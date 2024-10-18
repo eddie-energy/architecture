@@ -18,6 +18,7 @@ end box
 box "EP Infrastructure" #transparent
 
     participant "EP Website" as website
+       participant "EP Service" as service
       participant "EMQX IAM \nDatabase" as database
     participant "EMQX MQTT \nBroker" as mqttbroker
 end box
@@ -30,29 +31,10 @@ end box
 
 
 
-
-customer -> website : request energy data
-website -> connector : forward request
-
-
-connector -> app: ask for permission
-
-activate app 
-app -->> timescale : forward\nrequest
-activate timescale
-timescale -> app : allow access
-deactivate timescale
-app -->> mqttbroker  :sends energy data
-deactivate app
-
-deactivate connector
-
-deactivate timescale
-mqttbroker -->> website : forward energy data
-
-deactivate database
-
-
-
-
+device -> broker : send energy data
+broker -> timescale : store energy data
+broker -> mqttbroker : share energy data 
+mqttbroker -> website : share energy data  
+website -> customer : show energy data
+mqttbroker -> service : share energy data
 @enduml

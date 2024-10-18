@@ -28,7 +28,10 @@ box "\tAIIDA Network\t\t"  #transparent
 
 user -> website : AIIDA connect
 activate website
-
+website -> connector : forward request
+activate connector
+connector -->> website : generate permission
+deactivate connector
   website -->> user : show (QR-Code/ Token)
 deactivate website
 
