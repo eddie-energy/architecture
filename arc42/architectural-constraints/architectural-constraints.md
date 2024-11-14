@@ -21,7 +21,8 @@ The architectural constraints included in this section limit the design decision
 
 | Constrain Category | Section |
 |-|-|
-| Political Constraints | [Link](./political-constraints/political-constraints.md) |
 | Technical Constraints | [Link](./technical-constraints/technical-constraints.md) |
+| Non-technical Constraints | [Link](./non-technical-constraints/non-technical-constraints.md) |
+
 
 
