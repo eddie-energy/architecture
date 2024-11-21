@@ -9,7 +9,8 @@ This section describes the static decomposition of the Marketplace into building
 
 ## Diagram
 
- <!-- <C4 diagram="container-marketplace" /> -->
+
+ <C4 diagram="marketplace" />
 
 |Container|Description|
 | - | - |
