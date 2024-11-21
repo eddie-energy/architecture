@@ -14,6 +14,7 @@ The Marketplace system consists of three docker containers (the Marketplace, the
 |Node | Description |
 | - | - |
 | Computing Infrastructure | This is computing infrastructure managed by the Marketplace operator, that hosts the Marketplace, the Database, and IAM. This computing infrastructure is typically a commercial cloud, although private computing infrastructure can also be used. |
-| User Device | Two user devices are host the frontend applications. The Customer Mobile App typically runs in the smartphone of the customer, and the EP Web App is typically a web interface for the eligible party.|
+| User Device | Two user devices are host the frontend applications. The Customer Mobile App typically runs in the smartphone of the customer, and the EP Web App is typically a web interface for the eligible party. |
+| AIIDA Embedded App | The AIIDA Embedded App is part of the AIIDA system (not the Marketplace system) and typically runs on in-house infrastructure. Nevertheless, it is shown in the figure because is communicates with the Marketplace. |
 
 
