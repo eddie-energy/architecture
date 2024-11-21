@@ -1,42 +1,48 @@
-@startuml deployment-diagram-option-1
-'deployment diagram
-caption Deployment Diagram: Level 2 view, option 1
+@startuml deployment-diagram-marketplace
 
-skinparam linetype ortho
-skinparam interface {
-  backgroundColor transparent
-  borderColor black
-}
+' skinparam linetype ortho
 skinparam artifact{
   BorderColor black
   BackgroundColor transparent
 }
-skinparam component{
+skinparam rectangle{
   BorderColor black
   BackgroundColor transparent
 }
-skinparam actor{
-  BorderColor black
-  BackgroundColor transparent
-}
-skinparam database{
+skinparam node{
   BorderColor black
   BackgroundColor transparent
 }
 
-rectangle "EDDIE Framework" {
-  node "Docker Runtime" <<Local Computing Infrastructure>> as local {    
-    artifact "Permission\nFacade" <<Container>> as consentFacade
-    component "Interoperable\nCommunication" as comm
-    artifact "Admin\nConsole" <<Container>> as adminConsole
-    artifact "Streaming\nInfrastructure" <<Container>> as broker
-    database "\tDatabase\t\n" <<Container>> as database
+rectangle "Marketplace System" {
+  node "Computing Infrastructure" as local {    
+    artifact "Marketplace" as marketplace
+    artifact "Database" as database
+    artifact "IAM" as iam
+
+    database -down- marketplace : SQL
+    marketplace -right- iam : HTTP
+    database -right- iam : SQL
   }
+node "User Device" as cust {
+    artifact "Customer Mobile App" as customer
 }
-  consentFacade -right- comm
-  adminConsole -left- comm
-  comm -down- broker
-  comm -down- database
-  adminConsole -down- database 
+node "User Device" as elpa {
+    artifact "EP Web App" as ep
+}
+ep -down[hidden]- customer
+}
+
+rectangle "AIIDA System" {
+  artifact "AIIDA Embedded App" as aiida
+}
+
+
+ep -right- marketplace : HTTP
+customer -right- marketplace : "HTTP  "
+
+marketplace -down- aiida : HTTP
+
+
   
 @enduml
