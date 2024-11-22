@@ -25,6 +25,9 @@ deactivate marketplace
 app -> iam : Create account
 activate iam
 iam -> database : Store account
+activate database
+database --> iam : OK
+deactivate database
 iam --> app : OK
 deactivate iam
 

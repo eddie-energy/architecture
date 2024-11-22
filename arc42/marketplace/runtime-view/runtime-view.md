@@ -23,6 +23,7 @@ The Marketplace system implements the following workflows which are further disc
 1. The Marketplace redirects the customer/eligible party to the IAM.
 1. The customer/eligible party creates a new account at the IAM.
 1. The IAM stores the new account at the Database.
+1. The new account is stored in the Database.
 1. The new account is created.
 
 After that, the customer/eligible party acquires a valid token from the IAM and includes this token in all the messages to the Marketplace. The Marketplace validates tokens at the IAM for authentication of customers/eligible parties.
