@@ -51,7 +51,7 @@ After that, the customer/eligible party acquires a valid token from the IAM and 
 
 ## The eligible party creates a data request/service
 
-<!-- ![](./figures/marketplace-create-request.svg) -->
+![](./figures/marketplace-create-request.svg)
 
 1. The eligible party fills out a form with all the required information about the data request/service at the EP Web App.
 1. The EP Web App sends this form to the Marketplace.
