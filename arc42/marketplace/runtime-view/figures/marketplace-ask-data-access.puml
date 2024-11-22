@@ -1,0 +1,39 @@
+@startuml marketplace-ask-data-access
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Eligible Party" as ep
+actor "Customer" as customer
+box "Marketplace System" #transparent
+  participant "EP Web App" as epApp
+  participant "Customer \nMobile App" as customerApp
+  participant "Marketplace" as marketplace
+  participant "IAM" as iam
+  participant "Database" as database
+end box
+
+box "AIIDA System" #transparent
+  participant "AIIDA \nEmbedded App" as aiida
+end box
+
+ep -> epApp : Ask AIIDA access
+epApp -> marketplace : Ask AIIDA access
+activate marketplace
+marketplace -> customerApp : Ask AIIDA access
+activate customerApp
+customerApp -> customer : Access notification
+customer -> customerApp : Approved
+customerApp -> marketplace : Approved
+deactivate customerApp
+marketplace -> aiida : Configure data access
+marketplace --> epApp : OK
+deactivate marketplace
+
+@enduml

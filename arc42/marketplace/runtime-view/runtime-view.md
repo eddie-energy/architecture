@@ -74,11 +74,14 @@ After that, the customer/eligible party acquires a valid token from the IAM and 
 
 ## The eligible party asks for access to data from AIIDA instances
 
-<!-- ![](./figures/marketplace-ask-data-access.svg) -->
+![](./figures/marketplace-ask-data-access.svg)
 
-1. After the eligible party has checked which AIIDA instances have energy data matching a data request, the eligible party asks for data access from the Marketplace.  
+1. After the eligible party has searched which AIIDA instances have energy data matching a data request, the eligible party clicks a button to ask for data access at the EP Web App.
+1. The EP Web App asks the Marketplace for data access.  
 1. The Marketplace sends access requests to the Customer Mobile Apps of the customers whose AIIDA instances have the energy data.
-1. The customers accept/reject the access requests.
-1. The Marketplace instructs the AIIDA instances of the customers who accepted to start sending data to the EDDIE Framework of the eligible party.
-
+1. The Customer Mobile Apps of these customers show an access request notification.
+1. The customers approve/reject the access requests.
+1. The Customer Mobile Apps of the customers who approved notify the Marketplace.
+1. The Marketplace configures the data access at the AIIDA instances of the customers who approved the access requests. The AIIDA instances then start sending data to the EDDIE Framework of the eligible party.
+1. The Marketplace notifies the EP Web App that access has been requested.
 
