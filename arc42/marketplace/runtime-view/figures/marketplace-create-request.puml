@@ -1,0 +1,29 @@
+@startuml marketplace-create-request
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Eligible Party" as ep
+box "Marketplace System" #transparent
+  participant "EP Web App" as app
+  participant "Marketplace" as marketplace
+  participant "Database" as database
+end box
+
+ep -> app : Fill out form
+app -> marketplace : Send form
+activate marketplace
+marketplace -> database : Store request/service \ninformation
+activate database
+database --> marketplace : OK
+deactivate database
+marketplace --> app : OK
+deactivate marketplace
+
+@enduml

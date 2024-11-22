@@ -1,0 +1,40 @@
+@startuml marketplace-register-aiida
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Customer" as customer
+box "Marketplace System" #transparent
+  participant "Customer \nMobile App" as app
+  participant "Marketplace" as marketplace
+  participant "IAM" as iam
+  participant "Database" as database
+end box
+
+box "AIIDA System" #transparent
+  participant "AIIDA \nEmbedded App" as aiida
+end box
+
+aiida -> marketplace : AIIDA information
+marketplace -> database : Store AIIDA \ninformation
+customer -> app : Register AIIDA
+app -> marketplace : Register AIIDA
+activate marketplace
+marketplace -> database : Register AIIDA
+activate database
+database --> marketplace : OK
+deactivate database
+marketplace --> app : OK
+deactivate marketplace
+
+
+
+
+
+@enduml

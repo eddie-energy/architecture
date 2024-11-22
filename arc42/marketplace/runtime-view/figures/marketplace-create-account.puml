@@ -1,0 +1,31 @@
+@startuml marketplace-create-account
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Customer" as customer
+box "Marketplace System" #transparent
+  participant "Customer \nMobile App" as app
+  participant "Marketplace" as marketplace
+  participant "IAM" as iam
+  participant "Database" as database
+end box
+
+customer -> app : Create account
+app -> marketplace : Create account
+activate marketplace
+marketplace --> app : IAM redirection
+deactivate marketplace
+app -> iam : Create account
+activate iam
+iam -> database : Store account
+iam --> app : OK
+deactivate iam
+
+@enduml
