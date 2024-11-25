@@ -33,7 +33,7 @@ activate aiida
 aiida -> aiida : Run Query
 aiida --> marketplace : Results
 deactivate aiida
-marketplace -> app : AIIDA IDs
+marketplace --> app : AIIDA IDs
 deactivate marketplace
 
 

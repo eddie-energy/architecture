@@ -2,6 +2,7 @@
 title: AIIDA
 order: 5
 ---
+
 AIIDA is an in-house software system for accessing real time data from the customers site and for sending it to the EDDIE framework. The customer can connect their local smart meters and other energy-collecting devices to it. AIIDA then shares the data with the EDDIE framework. This provides not only historical energy consumption data, which is shared by energy providers through EDDIE, but also near real-time data from individual households. The customer can manage, restrict access to, or completely remove their devices from the system at any time through an app or a small frontend interface.
 
 <!--##### This section represents the [C4 Container Diagrams](https://c4model.com/#ContainerDiagram) of the C4 modelling language. The container block shows one independent software application, e.g., database, frontend, backend, middleware, embedded app etc. It communicates with one or more other containers within or outside the context. In a modular application, each module becomes a container.
