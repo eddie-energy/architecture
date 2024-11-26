@@ -41,7 +41,7 @@ deactivate website
     smartphone -> backend : add new permission
    
 
-    backend -->> connector : establish connection
+    backend -> connector : establish connection
 
     connector -> database : create user
 

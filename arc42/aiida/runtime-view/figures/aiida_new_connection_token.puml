@@ -39,9 +39,9 @@ deactivate website
  
       frontend -> backend : access
 
-    backend  -->> connector : establish connection
+    backend  -> connector : establish connection
 
-    connector -->> database : create user
+    connector -> database : create user
 
 
 
