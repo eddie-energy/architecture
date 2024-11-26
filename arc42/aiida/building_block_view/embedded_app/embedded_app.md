@@ -7,7 +7,7 @@ The AIIDA embedded app handles the core features of AIIDA. It consists of a back
 ## AIIDA Backend
 ### Overview
 
-The AIIDA Backend component is responsible for accessing the real-time data from the Smart Meter and sending it to the EDDIE Framework. In addition to this, AIIDA Backend has an interface for the customer via the AIIDA Frontend (which is a web application) and the AIIDA App (which is a smartphone app). This interface can be used by the customer to manage the customer consent for access to real-time data, and to view error messages regarding the consent, the connection to the Smart Meter and the connection to the EDDIE Framework. The internal view of the AIIDA Backend is shown in the figure below.
+The AIIDA Backend component is responsible for accessing the real-time data from the Smart Meter and sending it to the EDDIE Framework. In addition to this, AIIDA Backend has an interface for the customer via the AIIDA Frontend (which is a web application) and the AIIDA App (which is a smartphone app). This interface can be used by the customer to manage the customer permission for access to real-time data, and to view error messages regarding the permission, the connection to the Smart Meter and the connection to the EDDIE Framework. The internal view of the AIIDA Backend is shown in the figure below.
 
 
 <C4 diagram="aiida-embedded-app" />
@@ -21,9 +21,9 @@ The included components are the following:
 | - | - |
 | Aggregator | Connect to the Smart Meter and collect the energy consumption measurements in real time. These values send to the Streamer, and are also stored in the Timescale DB. |
 | Streamer | Receives the real-time energy consumption values from the Aggregator and sends them to the Streaming Infrastructure of the EDDIE Framework. Since the Streaming Infrastructure implements a publish/subscribe mechanism based on Kafka, the Streamer implement a client that publishes the data on Kafka. |
-| Permission Manager | Handles the customer consent for access to real-time data, and stores the related information in the Timescale DB. It also configures the Streamer to publish the data, when the customer consent has been given. |
-| Error Handler | Follows the operation of the AIIDA Backend and logs error messages for the customer regarding the flow of the energy consumption data, the customer consent, and unexpected situations that might occur. |
-| Timescale DB | Stores the state of the system including information about the customer consents, and the connections to the EDDIE Framework and the Smart Meter. Also it stores recent energy consumption values which may need to be sent to the EDDIE Framework.  |
+| Permission Manager | Handles the customer permission for access to real-time data, and stores the related information in the Timescale DB. It also configures the Streamer to publish the data, when the customer permission has been given. |
+| Error Handler | Follows the operation of the AIIDA Backend and logs error messages for the customer regarding the flow of the energy consumption data, the customer permission, and unexpected situations that might occur. |
+| Timescale DB | Stores the state of the system including information about the customer permissions, and the connections to the EDDIE Framework and the Smart Meter. Also it stores recent energy consumption values which may need to be sent to the EDDIE Framework.  |
 
 
 ### Interfaces

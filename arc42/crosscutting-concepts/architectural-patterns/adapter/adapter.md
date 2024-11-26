@@ -17,7 +17,7 @@ This architectural pattern is used for implementing the Regional Connectors. The
 
 <!-- Why it is used, what are alternatives, why is this preferred compared to alternatives -->
 
-This architectural pattern is used for connecting the Permission Facade with the Regional Data-sharing Infrastructure. The customer uses the Permission Facade to submit the required information for requesting the customer consent. Subsequently, the Permission Facade needs an adapter that translates this information into requests and formats that can be sent to the Regional Data-sharing Infrastructure. This is exactly the role of the Regional Connectors.
+This architectural pattern is used for connecting the Permission Facade with the Regional Data-sharing Infrastructure. The customer uses the Permission Facade to submit the required information for requesting the customer permission. Subsequently, the Permission Facade needs an adapter that translates this information into requests and formats that can be sent to the Regional Data-sharing Infrastructure. This is exactly the role of the Regional Connectors.
 
 > [!WARNING]
 > Plugin isn't an alternative. Each region connector works as an adapter but integrates into the EDDIE Framework as a plugin.

@@ -15,14 +15,14 @@ title: Microfrontend
 
 <!-- Where it is used, i.e., in what parts of EDDIE -->
 
-This architectural pattern is used for the development of the Permission Facade. The Permission Facade is a microfrontend offered by the EDDIE Framework to the EP Website. The prime role of the Permission Facade is to provide a form for collecting the required information of the customer, and then use this information to request the customer consent from the Regional Data-sharing Infrastructure. 
+This architectural pattern is used for the development of the Permission Facade. The Permission Facade is a microfrontend offered by the EDDIE Framework to the EP Website. The prime role of the Permission Facade is to provide a form for collecting the required information of the customer, and then use this information to request the customer permission from the Regional Data-sharing Infrastructure. 
 
 
 ## Motivation
 
 <!-- Why it is used, what are alternatives, why is this preferred compared to alternatives -->
 
-By implementing the Permission Facade as a microfrontend, all eligible parties can integrate it easily into their EP Website. As a result, the eligible parties do not need to put any effort into implementing forms for collecting the customer consent based on the regulations of each country, because this is offered by the Permission Facade and the EDDIE Framework. Another advantage is that all customers receive a homogeneous user experience by filling out the same consent form regardless of their eligible party, and their country of residence.
+By implementing the Permission Facade as a microfrontend, all eligible parties can integrate it easily into their EP Website. As a result, the eligible parties do not need to put any effort into implementing forms for collecting the customer permission based on the regulations of each country, because this is offered by the Permission Facade and the EDDIE Framework. Another advantage is that all customers receive a homogeneous user experience by filling out the same permission form regardless of their eligible party, and their country of residence.
 
 An alternative to the microfrontend pattern is:
 
