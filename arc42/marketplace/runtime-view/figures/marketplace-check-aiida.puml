@@ -12,7 +12,7 @@ autonumber
 actor "Eligible Party" as ep
 box "Marketplace System" #transparent
   participant "EP Web App" as app
-  participant "Marketplace" as marketplace
+  participant "Marketplace \nBackend" as marketplace
   participant "IAM" as iam
   participant "Database" as database
 end box

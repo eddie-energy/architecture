@@ -12,7 +12,7 @@ autonumber
 actor "Customer" as customer
 box "Marketplace System" #transparent
   participant "Customer \nMobile App" as app
-  participant "Marketplace" as marketplace
+  participant "Marketplace \nBackend" as marketplace
   participant "IAM" as iam
   participant "Database" as database
 end box
