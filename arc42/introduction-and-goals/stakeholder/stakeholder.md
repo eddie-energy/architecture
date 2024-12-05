@@ -2,6 +2,8 @@
 title: Stakeholders
 order: 3
 ---
+Stakeholders are all person, roles or organizations that somehow interact with the architecture, because they need to work with the system, document or develop it.
+
 Roles that may be involved are:
 
 | Abbr. | Role | Description |

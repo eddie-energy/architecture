@@ -8,3 +8,4 @@ The table below provides additional useful information about the EDDIE Dataspace
 | Topic | Section |
 |-|-|
 | Prerequisites | [Link](./prerequisites/prerequisites.md)|
+| Background Information | [Link](./background_information.md)|
