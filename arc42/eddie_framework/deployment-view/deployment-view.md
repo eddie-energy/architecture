@@ -2,6 +2,12 @@
 title: Deployment View
 order: 4
 ---
+
+::: warning TO ADD
+This section is by far not finished yet.
+Also link to the framework documentation regarding this topic, this makes sure that developers coming to this page will be able to also find out how to deploy EDDIE.
+:::
+
 <!--
 ::: warning TO ADD
 [According to Arc42 the deployment view includes descriptions about](https://docs.arc42.org/section-7/) 
@@ -14,7 +20,7 @@ order: 4
     elements.
 3.  development environment, test environment, production environment. -->
 
-The EDDIE Framework depolyment view is a zoom into the highest level depolyment view, defining the environment for EDDIE Framework in specific
+The EDDIE Framework depolyment view is a zoom into the highest level deployment view, defining the environment for EDDIE Framework in specific
 :::
 
 ## Overview

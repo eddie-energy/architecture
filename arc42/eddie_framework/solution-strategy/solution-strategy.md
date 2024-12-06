@@ -4,20 +4,26 @@ order: 1
 ---
 
 ::: info DESIRED CONTENT
-Here we are gonna describe the main parts of EDDIE Framework from a logical point of view (_mainly in FAQ format, as we already introduced in AIIDA, as this eases readability_), why it is separated into **Regional Connectors** (and link to the corresponding subpage) and what role the **Permission Facade** plays (also with links to the detailed subpage). The third part is gonna be a quick description aboud the **Data Needs API**.
+Here we are gonna describe the main parts of EDDIE Framework from a logical point of view (_mainly in FAQ format, as we already introduced in AIIDA, as this eases readability_), why it is separated into **Region Connectors** (and link to the corresponding subpage) and what role the **Permission Facade** plays (also with links to the detailed subpage). We are also gonna describe the initial term "**Services**" (we still have to think of a name here - Data Needs), the **Streaming Infrastructure** (and its roles inside core as well as outbound) and the initially coined "**Interoperable Communication Layer**".
 
 We will not include EDDIE Core in this description, as it is not relevant for the understanding of the solution strategy, it will be described in the Building Block view.
 
 Depending on the amount of content, it might make sense to migrate the subsections directly into this page, as we have gained better navigation capabilities using Vitepress and its right sidebar.
 :::
 
-## Regional Connectors
+## Region Connectors
 
 ## Permission Facade
 
-## Data Needs API
+## Services (Data Needs API)
+
+## Streaming Infrastructure
+
+## Interoperable Communication Layer
 
 <!--
+====== this is just here for reference, please delete it once working on the page =======
+
 ::: warning TO ADD
 According to arc42 this chapter should contain a short summary and explanation of the fundamental decisions and
 solution strategies, that shape the system architecture. It includes
