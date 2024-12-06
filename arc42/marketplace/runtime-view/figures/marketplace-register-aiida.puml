@@ -28,9 +28,9 @@ app -> marketplace : Register AIIDA
 activate marketplace
 marketplace -> database : Register AIIDA
 activate database
-database --> marketplace : OK
+database -->> marketplace : OK
 deactivate database
-marketplace --> app : OK
+marketplace -->> app : OK
 deactivate marketplace
 
 

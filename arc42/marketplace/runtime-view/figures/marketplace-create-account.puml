@@ -20,15 +20,15 @@ end box
 customer -> app : Create account
 app -> marketplace : Create account
 activate marketplace
-marketplace --> app : IAM redirection
+marketplace -->> app : IAM redirection
 deactivate marketplace
 app -> iam : Create account
 activate iam
 iam -> database : Store account
 activate database
-database --> iam : OK
+database -->> iam : OK
 deactivate database
-iam --> app : OK
+iam -->> app : OK
 deactivate iam
 
 @enduml
