@@ -3,66 +3,38 @@ title: Quality Requirements
 order: 12
 ---
 
-<!-- This section contains all quality requirements as quality tree with
-scenarios. The most important ones have already been described in
-section 1.2. (quality goals)
-Here you can also capture quality requirements with lesser priority,
-which will not create high risks when they are not fully achieved.
-The quality tree (as defined in ATAM -- Architecture Tradeoff Analysis
-Method) with quality/evaluation scenarios as leafs.
+This section outlines the essential quality requirements of the EDDIE system, structured into two main subsections: Quality Requirements and Quality Scenarios. Quality Requirements explains the requirements with a description mentioning relevance to EDDIE. Quality Scenarios provides examples through scenarios that show how the system should perform under various conditions.
 
-The quality tree is a high-level overview of the quality goals and
-requirements:
--   tree-like refinement of the term \"quality\". Use \"quality\" or
-    \"usefulness\" as a root
--   a mind map with quality categories as main branches 
-quality tree example https://arnon.me/2010/05/utility-trees-hatching-quality-attributes/
--->
+## Quality Requirements
 
-The quality requirements of the system are outlined in the quality tree below. This tree has 3 main types of quality requirements, i.e., Deployment, Compliance, and Security, each one having various requirements.
+| Category | Quality | Description | Scenario |
+|-|-|-|-|
+| Usability | Compatibility | Uniform customer interface for integration with different regional data-sharing infrastructures. | QS3 |
+| Usability | Ease of Use | Simple and intuitive user interfaces for customers. | QS3 |
+| Usability | Ease of Use | Simple and intuitive interfaces for eligible parties, regarding also support for system deployment. | QS1 |
+| Security | Compliance | All data-sharing interactions comply with GDPR. | QS4 |
+| Security | Compliance | The internal operation of the system aligns with [applicable use cases](./implementing-act/implementing-act.md) defined by the Smart Grids Task Force. | |
+| Scalability | Data Integration | The system supports data aggregation of metering points at European scale. | QS2 |
+| Extensibility | Integration | Integration of in-house metering devices, such as smart meters and sub-meters. | QS5 |
+| Performance | Real-time Efficiency| Real-time or near real-time data streaming to energy services. | |
+| Reliability | Resilience | Reliable operation under high load and failure scenarios. | QS6 |
+| Accessibility | Community Engagement| Open-source development to allow for broad participation and customizability. | |
+| Cost Efficiency | Cost Reduction | Reduce data integration costs of running energy services. | |
 
 
-![](./figures/quality-tree.svg)
+## Quality Scenarios
 
-The following table provides links to more detailed information for every quality requirements type.
-
-## Deployment Requirements
-
-| Quality Requirement Type| Section |
+| ID | Scenario |
 |-|-|
-| Deployment Requirements | [Link](./deployment-requirements/deployment-requirements.md) |
-| Compliance Requirements | [Link](./compliance-requirements/compliance-requirements.md) |
-| Security Requirements | [Link](./security-requirements/security-requirements.md) |
+| QS1 | An eligible party can easily set up the EDDIE system for providing energy services. |
+| QS2 | Using the EDDIE system, an eligible party can easily connect to European data-sharing infrastructures. |
+| QS3 | Customers from different countries can easily access the provided services with similar user experience. |
+| QS4 | During customer permission workflows, all user data is handled in compliance with GDPR. |
+| QS5 | Sub-meter data from customer devices (e.g., home automation IoT devices, or PVs) can be integrated in the system. |
+| QS6 | The system continues normal operation even when a regional data-sharing infrastructure (or other data source) is temporarily unavailable. |
 
 
-
-
-
-
-
-
-
-
-<!-- Concretization of (sometimes vague or implicit) quality requirements
-using (quality) scenarios.
-These scenarios describe what should happen when a stimulus arrives at
-the system.
-For architects, two kinds of scenarios are important:
--   Usage scenarios (also called application scenarios or use case
-    scenarios) describe the system's runtime reaction to a certain
-    stimulus. This also includes scenarios that describe the system's
-    efficiency or performance. Example: The system reacts to a user's
-    request within one second.
--   Change scenarios describe a modification of the system or of its
-    immediate environment. Example: Additional functionality is
-    implemented or requirements for a quality attribute change. 
-
- A scenario should have:
-- Context – under what circumstances
-- Stimulus – trigger in Use case lingo
-- Response – what the system does. 
-
- ### Unauthorized Access
+<!-- Requirement description
 
 #### Context
 
