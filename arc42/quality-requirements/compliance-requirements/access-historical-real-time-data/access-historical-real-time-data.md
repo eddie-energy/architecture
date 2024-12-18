@@ -12,3 +12,6 @@ Regarding historical validated data, the customer fills out a form (at the EP We
 
 ## Response
 The historical validated data and the real-time data of the customer is sent to the EDDIE Framework.
+
+The figure below shows how the near real time data is read from the smart meter:
+![](./figures/read-near-real-time-data-from-smart-meter.png)

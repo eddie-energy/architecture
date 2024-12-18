@@ -27,7 +27,7 @@ TBD
 
 ### SGTF Use Case 4: Revocation of an Active Consent
 
-TBD
+![](./figures/revocation-of-an-active-consent.png)
 
 ## Stimulus
 
