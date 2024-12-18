@@ -21,9 +21,9 @@ app -> marketplace : Get data \nrequests/services
 activate marketplace
 marketplace -> database : Get data \nrequests/services
 activate database
-database --> marketplace : Requests/services
+database -->> marketplace : Requests/services
 deactivate database
-marketplace --> app : Requests/services
+marketplace -->> app : Requests/services
 deactivate marketplace
 
 @enduml

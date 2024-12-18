@@ -30,10 +30,10 @@ marketplace -> customerApp : Ask AIIDA access
 activate customerApp
 customerApp -> customer : Access notification
 customer -> customerApp : Approved
-customerApp --> marketplace : Approved
+customerApp -->> marketplace : Approved
 deactivate customerApp
 marketplace -> aiida : Configure data access
-marketplace --> epApp : OK
+marketplace -->> epApp : OK
 deactivate marketplace
 
 @enduml

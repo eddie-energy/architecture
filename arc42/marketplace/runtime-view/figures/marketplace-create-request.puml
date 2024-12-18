@@ -21,9 +21,9 @@ app -> marketplace : Send form
 activate marketplace
 marketplace -> database : Store request/service \ninformation
 activate database
-database --> marketplace : OK
+database -->> marketplace : OK
 deactivate database
-marketplace --> app : OK
+marketplace -->> app : OK
 deactivate marketplace
 
 @enduml

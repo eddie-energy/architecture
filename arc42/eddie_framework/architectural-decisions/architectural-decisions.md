@@ -3,6 +3,10 @@ title: Architectural Decisions
 order: 5
 ---
 
+::: warning NOT FINISHED
+This section has to be re-worked.
+:::
+
 > ## General Decisions
 > - Why Kafka pub/sub isn't suitable for EDDIE Online
 >
