@@ -1,25 +1,13 @@
 @startuml aiida_deployment_view
 'component diagram
-caption Component Diagram: Level 2 view
 
-skinparam linetype ortho
-skinparam interface {
-  backgroundColor transparent
-  borderColor black
-}
+' skinparam linetype ortho
+
 skinparam artifact{
   BorderColor black
   BackgroundColor transparent
 }
-skinparam actor{
-  BorderColor black
-  BackgroundColor transparent
-}
-skinparam database{
-  BorderColor black
-  BackgroundColor transparent
-}
-skinparam collections{
+skinparam node{
   BorderColor black
   BackgroundColor white
 }
@@ -29,66 +17,66 @@ skinparam rectangle{
   FontColor black
 }
 
+rectangle "AIIDA System" {
+  node "Eligible Party Infrastructure"  as epInfra{
+    rectangle "EDDIE Framework" {
+      artifact "AIIDA Regional\nConnector" as regcon
+    }
+    artifact "EMQX \nMQTT Broker" as broker
+    artifact "EMQX \nIAM DB" as emqxiam
 
-frame "Eligible Party Infrastructure"  as epInfra{
-  rectangle "EDDIE Framework" {
-
-    rectangle "EDDIE \nCore" as eddie
-    rectangle "AIIDA Regional\nConnector" as regcon
+    broker -right- emqxiam : SQL
+    regcon -down- broker : MQTT
   }
-    rectangle "EMQX MQTT Broker" as broker
-  rectangle "EMQX IAM DB" as emqxiam
 
+  node "Smartphone" as smartphone{
+    artifact "AIIDA Smartphone App" as app
 
-  eddie -[hidden]down- emqxiam
-  eddie -[hidden]down- broker
-  emqxiam -left- broker
- 
+  }
+  node "In-house Device" as aiida {
+    artifact "AIIDA Embedded App" as embapp
+    artifact "NanoMQ \nMQTT Broker" as nano
+    artifact "TimescaleDB" as db
+
+    embapp -down- nano : MQTT
+    embapp -down- db : SQL
+    db -[hidden]right- nano
+  }
+
+  embapp -up- app : DNS Service\nDiscovery
+  embapp -right- broker : MQTT
+
+  ' frame "Device Austria" as device2
+  ' frame "Device France" as device3
+node "Adapter Device" as adapterDevice
 }
-rectangle "Local Network" {
-  rectangle "Smartphone" as smartphone{
-    rectangle "Smartphone App" as app
+node "Smart Meter" as smartmeter
 
-  }
-  rectangle "AIIDA Device" as aiida {
-    rectangle "Embedded App\n AIIDA Firmware" as embapp
-    rectangle "NanoMQ MQTT Broker" as nano
-    rectangle "TimescaleDB" as db
-  }
-  embapp -[hidden]down- nano
-  nano -[hidden]down- db
-  aiida -[hidden]up- smartphone
-  embapp -up- app:DNS
-  embapp -down- db
-  embapp -left- broker
- 
-}
+adapterDevice -left- embapp :  Wired Connection\ne.g., USB
+adapterDevice -left- nano : MQTT
 
-frame "Device Italy" as device1
-frame "Device Austria" as device2
-frame "Device France" as device3
+smartmeter -up- adapterDevice : Wired Connection\ne.g., RJ12
 
-frame "Smart Meter" as smartmeter1
-frame "Enedis" as enedis
-frame "Smart Meter" as smartmeter2
 
-device1 -left- smartmeter1:\n\nPhysical\ninterfaces
-device2 -left- smartmeter2:\n\nPhysical\ninterfaces
-device3 -left- enedis:\nTIC\n(2-wire)
+' frame "Enedis" as enedis
+' frame "Smart Meter" as smartmeter2
 
-regcon -left- embapp:HTTP/MQTT
-embapp -[hidden]right- device2
-embapp -right- device1:USB
-embapp -right- device3:Modbus TCP
-nano -right- device2:MQTT
-nano -up-embapp
-device1 -[hidden]down- device2
-device2 -[hidden]down- device3
-epInfra -[hidden]right- aiida
-enedis -[hidden]left-device3
+' device1 -left- smartmeter1:\n\nPhysical\ninterfaces
+' device2 -left- smartmeter2:\n\nPhysical\ninterfaces
+' device3 -left- enedis:\nTIC\n(2-wire)
 
 
 
- 
+' embapp -right- device1:USB
+' embapp -right- device3:Modbus TCP
+' nano -right- device2:MQTT
+' device1 -[hidden]down- device2
+' device2 -[hidden]down- device3
+' epInfra -[hidden]right- aiida
+' enedis -[hidden]left-device3
+
+
+
+
 
 @enduml

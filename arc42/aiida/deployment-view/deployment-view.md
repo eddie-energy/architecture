@@ -4,16 +4,18 @@ order: 4
 ---
 
 ## Overview
-The AIIDA system runs on a simple raspberry Pi computer, including the embedded app, as well as further components, like a timscaleDB for storing energy data and a MQTT broker, as the austrian device sends the data via MQTT protocol. The country specific devices are somehow connected to the AIIDA device, f.e. as a raspberry Pi shield or via USB. As mentioned at the section of the building block view, the regional connector for AIIDA works as a plugin system, which is deployed at EDDIE Framework. Therefore it is shown has part of AIIDA System for the building block view, but not as part of the AIIDA device. Both, AIIDA Device and the smartphone app have to be in the same network to communicate.
+The AIIDA system runs mainly on an in-house device (e.g., a raspberry Pi computer) and eligible party infrastructure. To access the real-time data, an Adapter Device connects to the smart meter via a physical interface, e.g., RJ12. The Adapter Device may vary to be compatible with different smart meters (e.g., in different countries). Different Adapter Devices can connect to the AIIDA Embedded App in different ways, e.g., via MQTT, or USB. The AIIDA Embedded App stores the real-time data to the TimescaleDB, and also sends this data to the AIIDA Regional Connector via MQTT. The AIIDA Regional Connector then communicates with the EDDIE Framework.
 
-To collect the data from AIIDA the EDDIE Framework also needs a MQTT broker. When scanning a QR Code, the smartphone sends the information to connect to the MQTT broker. With the first connection to the MQTT broker a user for the connected instance is created in the EMQX IAM Database for identity access management, so that it is recognised by the broker. The Timescale DB on the other hand, stores the energy data that is forwarded from the devices.
-The AIIDA deployment view zooms into the highest level depolyment view, defining the environment for AIIDA in specific.
+To configure the AIIDA Embedded App (e.g., to configure the IP address of the EMQX MQTT Broker of an eligible party) the AIIDA Smartphone App can be used. Specifically, the customer uses the AIIDA Smartphone App to scan a QR code from the EP Website. This QR code encodes the necessary information to connect to the AIIDA Regional connector. Then, the AIIDA Smartphone App, being in the same local area network with the in-house device, uses DNS Service Discovery to discover the AIIDA Embedded App, and send to the AIIDA Embedded app the encoded information of the QR code. With this information, the AIIDA Embedded App connects to the EMQX MQTT broker which creates a new user for this customer's AIIDA instance in the EMQX IAM Database for identity and access management. 
 
 ## Diagram
 ![](./figures/aiida_deployment_view.svg)
+
 |Node | Description |
 | - | - |
-|AIIDA Device| The AIIDA Device is a raspberry Pi computer, which is operated by the customer. It is connected to the local network. It consists of the AIIDA Backend, managing the core features of AIIDA, the Timescale DB to store the energy data and a MQTT Broker.|
-|Smartphone|The Smartphone must be at the same lokal network as the AIIDA Device, to establish a connection with the App to AIIDA.|
-|Smart Meter|The Smart Meter collects the data at the customers household and needs to be connected to AIIDA with a device, like the smart meter adapter for Austria f.e.|
-|Country specific devices|Countrys may define different ways for the Smart Meter to be connected to AIIDA. Austria For example uses a MQTT protocol to send the data, Italy uses MODBUS TCP protocol. More information can be found at Devices.|
+|In-house Device| The in-house device is a raspberry Pi computer, which is operated by the customer. It is connected to the customer's local area network.|
+|Smartphone|This is the customer's Smartphone which needs to be connected to the local area network as the in-house device to establish a connection between the AIIDA Smartphone App and the AIIDA Embedded App.|
+|Smart Meter|The Smart Meter represents a metering device that collects energy data at the customer's household.|
+|Adapter Device| An Adapter Device is needed to facilitate the connection between the smart meter and the AIIDA Embedded App. The Adapter Device may vary per customer in order to be compatible with each customer's specific smart meter. |
+|Eligible Party Infrastructure| This is the computing infrastructure that hosts the EDDIE Framework. The AIIDA Regional Connector run on this node and communicates with the EDDIE Core of the EDDIE Framework.|
+
