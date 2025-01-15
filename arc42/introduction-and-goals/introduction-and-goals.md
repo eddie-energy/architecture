@@ -53,8 +53,6 @@ The following goals have been established for this system:
 
 ## Quality Goals
 
-### 3. Quality Goals  
-
 The main quality goals for the architecture aim to ensure the system's effectiveness, efficiency, security, and maintainability.
 
 #### Primary Quality Goals  
