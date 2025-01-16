@@ -2,93 +2,91 @@
 title: Introduction and Goals
 order: 1
 ---
-This document serves as a comprehensive guide to the architecture, key components, and interactions of the systems within the EDDIE project: the EDDIE Framework, the Administrative Interface for In-house Data Access (AIIDA), and the Marketplace. Its primary purpose is to enable a shared understanding among all stakeholders of how the system supports the establishment of a Common European Energy Data Space.
 
-The EDDIE project aims to address the lack of large-scale, uniform, and easy access to energy data across European Member States. By providing a decentralized, open-source framework, EDDIE facilitates secure and efficient data sharing, supporting energy service providers, consumers, and other stakeholders.
+This document provides a comprehensive view on the architecture of the EDDIE software system (or EDDIE system hereinafter), following the guidelines of the [arc42](https://arc42.org/) template. The EDDIE software system is part of the [EDDIE project](https://eddie.energy/) which aims at addressing the lack of large-scale, uniform, and streamlined access to energy data across European member states, facilitating the establishment of a common European energy data space. The EDDIE system aims at providing an open-source framework for secure and efficient energy data sharing, supporting energy service providers (also referred to as eligible parties hereinafter) and customers, as well as other stakeholders.
 
-The following goals have been established for this system:
+The EDDIE software system is defined as a system of systems, consisting of three internal systems: 
+
+1. EDDIE Framework: Focuses on providing historical and (near) real-time energy data to energy services. 
+1. AIIDA: This is the Administrative Interface for In-house Data Access (AIIDA) which focuses on accessing real-time energy data from energy metering devices.
+1. Marketplace: Focuses on facilitating the communication between customers and eligible parties.
+
+The main goals of the EDDIE system are the following:
 
 | Goal | Description |
 |-|-|
-| Create a Common European Energy Data Space | Enable seamless, cross-border energy services by providing a unified data-sharing interface. |
-| Enhance Data Interoperability | Standardize data access and ensure compatibility with existing national energy data-sharing infrastructures. |
-| Empower Stakeholders | Provide tools and interfaces for energy service providers and end-users to interact with energy data securely and efficiently. |
-| Promote Scalability and Flexibility | Support integration with diverse systems and accommodate future data-sharing needs. |
-| Ensure Compliance and Security | Adhere to GDPR and other relevant regulations to protect user privacy and data integrity. |
-| Support Innovation and Economic Growth | Lower data integration costs, foster market competition, and enable new energy-related services. |
+| Enable secure energy data access | Implement a system to securely access historical and near real-time energy data from diverse sources across European member states. |
+| Facilitate in-house energy data sharing | Develop AIIDA to allow customers to share real-time energy data from their metering devices (e.g., smart meters). |
+| Ensure interoperability across systems | Support standardized data exchange and integration with various national and regional energy data-sharing infrastructures to create a unified European energy data interface. |
+| Empower eligible parties | Provide an interface that enables eligible parties to use the EDDIE system for collecting energy data and running energy services, e.g., for improving energy efficiency, predictability, and demand response, among others. |
+| Enhance customer control and permission management | Implement customer-controlled permission management, allowing users to grant and revoke access to their energy data in compliance with GDPR. |
+| Build a marketplace for energy data services | Develop the Marketplace to connect customers with eligible parties, allowing customers to discover and utilize energy services running over the EDDIE Framework. |
+| Promote open-source and scalability | Ensure that the EDDIE system remains open-source, modular, and scalable, enabling broad adoption and community improvements. |
 
 ## Requirements Overview
 
-### Essential Content Requirements
+This section aims at providing an overview with the main functional and non-functional requirements of the EDDIE system.
 
-| Id      | Requirement                        | Explanation                                                                                                   |
-|---------|------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| C1      | Provide In-house Data Access       | Develop software to act as an In-house Consent Administrator (ICA) and Metered Data Administrator (MDA) for in-house measured data. Ensure compatibility with existing hardware already available in-house, e.g.,home automation systems, NAS, minicomputers, and SoCs. Initially focus on standardized interfaces as per Directive (EU) 2019/944. |
-| C1.1    | Support additional data sources    | Extend support to sub-meter data and other sources, aligning with evolving legislative and technical standards. |
-| C2      | Real-Time Data Integration         | Enable near real-time data integration from AIIDA into the EDDIE Framework. Ensure data streams are "detectable" while addressing security, usability, and performance challenges. |
-| C3      | Customer Observability and Manageability | Provide intuitive interfaces for customers to monitor and manage data sharing. Integrate seamlessly with smart home apps to encourage adoption. |
+### Functional Requirements
 
+| ID  | Requirement | Description |
+|-|-|-|
+| FR1 | Decentralized | The system shall operate in a decentralized manner, allowing independent deployment by eligible parties, and allowing the customers to select who can access their data. No central entity shall have access to all the customer data without the explicit permission of customers. |
+| FR2 | In-house data access | The system shall enable customers to share energy data from their metering devices at home, such as smart meters, and IoT home automation devices. |
+| FR3 | Security, privacy, and compliance | The system shall ensure secure data access, respect for personal information, and compliance with GDPR and other relevant regulations, such as the Directive (EU) 2019/944. |
+| FR4 | Interoperability | The system shall support integration with different national and regional energy data-sharing infrastructures, ensuring seamless access to energy data across European member states. |
+| FR5 | Consent and permission management | The system shall allow customers to grant, manage, and revoke access permissions for their energy data. |
+| FR6 | Easy deployment and use by eligible parties | The system shall provide simple deployment mechanisms that allow eligible parties to easily integrate energy data into their services. |
+| FR7 | Enables energy service discovery | The system shall provide a marketplace where customers can connect with eligible parties offering energy services. |
 
+### Non-Functional Requirements
 
-### Essential Functional Requirements
+| ID  | Requirement | Description |
+|----|-------------|-------------|
+| NFR1 | Scalability | The system shall support multiple customers without significant performance degradation. |
+| NFR2 | Availability | The system shall ensure reliable operation even when data sources become unavailable. |
+| NFR3 | Performance | The system shall be able to handle large volumes of energy data, and strive for low-latency processing by the services. |
+| NFR4 | Modularity and extensibility | The system shall be modular, allowing extensions and adaptation without disrupting existing functionality. |
+| NFR5 | Usability | The system shall provide user-friendly interfaces for both customers and eligible parties, ensuring ease of use and intuitive navigation. |
+| NFR6 | Open-source | The system shall be maintained open-source, aiming to encourage contributions from the energy community. |
 
-| Id      | Requirement                        | Explanation                                                                                                   |
-|---------|------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| F1      | Decentralized Architecture         | Allow EDDIE Framework installation on any computer or cloud environment without requiring a central instance. |
-| F2      | Open-Source Framework              | Make the EDDIE Framework and AIIDA freely available, with no licensing constraints, supporting community-driven development. |
-| F3      | Ensure Security and Privacy        | Ensure GDPR compliance, safeguarding data privacy and integrity. Implement robust consent management for secure data sharing. |
-| F4      | Far-Reaching Compatibility         | Ensure compatibility with regional data-sharing infrastructures across Europe (potentially, and beyond Europe) to support cross-border collaboration. |
-
-
-
-### Essential Business Requirements
-
-| Id      | Requirement                        | Explanation                                                                                                   |
-|---------|------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| B1      | Framework Accessibility            | Provide a scalable, open-source framework that can be installed in eligible domains without centralized intermediaries. |
-| B2      | AIIDA Integration                  | Offer AIIDA as an integrable interface with smart home systems and edge devices for secure, consent-based sharing of real-time data. |
-| B3      | Scientific Assessment and Community Involvement | Conduct assessments on data-sharing from social, economic, and technological perspectives. Prioritize human-centered design for user acceptance. |
-| B4      | Data Services Marketplace          | Establish a web-based and mobile-accessible marketplace for customers to explore and utilize EDDIE-based applications while retaining full control over their data. |
-
+Additional extensive requirement documentation is currently under construction [here](https://eddie-web.projekte.fh-hagenberg.at/docs/requirements/).
 
 ## Quality Goals
 
-The main quality goals for the architecture aim to ensure the system's effectiveness, efficiency, security, and maintainability.
+The quality goals of the architecture aim at expressing the system's priorities regarding effectiveness and efficiency.
 
 #### Primary Quality Goals  
 
-| **Id**  | **Quality Goal**     | **Description**                                                                                                                |
-|---------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| Q1      | Interoperability      | Ensure seamless integration with diverse national data-sharing infrastructures and protocols across European Member States.     |
-| Q2      | Security and Privacy  | Protect sensitive user data by adhering to GDPR and ensuring secure data transfer, storage, and processing.                    |
-| Q3      | Scalability           | Support the handling of large-scale energy data, including real-time streams from more than 70% of European metering points.   |
-| Q4      | Reliability           | Provide a highly reliable system with minimal downtime to ensure uninterrupted access to energy data.                          |
-| Q5      | Usability             | Deliver intuitive, user-friendly interfaces for both end-users and administrators, ensuring smooth navigation and interaction.  |  
+| ID | Quality Goal | Description |
+|-|-|-|
+| QG1 | Interoperability | Ensure seamless integration with multiple regional data-sharing infrastructures across European member states. |
+| QG2 | Security and Privacy | Protect sensitive customer data by adhering to GDPR and ensuring secure data transfer, storage, and processing. |
+| QG3 | Scalability | Support the handling of multiple customers and large volumes of data, including real-time data streams from European metering points. |
+| QG4 | Usability | Deliver intuitive, user-friendly interfaces for the customers and eligible parties, ensuring smooth navigation and interaction. |  
 
 #### Secondary Quality Goals  
 
-| **Id**  | **Quality Goal**      | **Description**                                                                                                                |
-|---------|------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| Q6      | Maintainability        | Ensure the system is easy to modify, extend, and maintain, particularly given its open-source nature and community involvement. |
-| Q7      | Performance Efficiency | Optimize data processing times and minimize latency for real-time data access and analysis.                                    |
-| Q8      | Flexibility            | Allow for seamless updates and integration of new data sources, services, and technologies.                                    |
-| Q9      | Portability            | Ensure the framework can be deployed on various platforms, including cloud environments, on-premise servers, and edge devices. |
-| Q10     | Compliance             | Ensure alignment with relevant energy and data-related legislation, including Directive (EU) 2019/944 and the EU Green Deal.   |  
+| ID | Quality Goal | Description |
+|-|-|-|
+| QG5 | Reliability | Provide a highly reliable system with minimal downtime to ensure uninterrupted access to energy data. |
+| QG6 | Maintainability | Ensure the system is made open-source, and is easy to modify, extend, and maintain, encouraging community involvement. |
+| QG7 | Performance | Ensure low latency data access for the energy services of the eligible party. |
+| QG8 | Portability | Ensure that the system can be deployed on various platforms, including cloud computing, on-premise computing infrastructure, and edge devices. |
+
 
 ## Stakeholders
 
-Stakeholders are all person, roles or organizations that somehow interact with the architecture, because they need to work with the system, document or develop it.
+The stakeholders of the system's architecture include all roles and organizations that influence/depend on the architecture documentation, i.e., those who need to understand the architecture, interact with the system, or work with the source code. The following table provides an overview of the key stakeholders.
 
-Roles that may be involved are:
-
-| Abbr. | Role | Description |
+| Role | Stakeholder | Expectations |
 |-|-|-|
-| EP | Eligible Party | A Party requesting or processing data shared by the customer. |
-| PA | Permission Administrator | A party responsible for administrating a register of consents. The PA makes information about the consent (but not necessarily the data to be shared) available on request for entitled parties in the sector. |
-| OCA | Online Consent Administrator | PA with a constant and publicly usable interface through an online service. |
-| ICA | In-house Consent Administrator | Functional service managing the access to in-house data sources that would not be available online. Within the context of the EDDIE project, AIIDA is targeted to act as such. |
-| MDA | Metered Data Administrator | A party responsible for storing and distributing validated measured data. |
-| MS | Member State | Member State of the European Union. Within the scope of this project, MS can be viewed in a wider sense, meaning rather “regional cluster supporting data-sharing”, but political borders and data-sharing infrastructure responsibility for an area are not always the same. |
-| FSP | Flexibility Service Provider | Independent energy service providers aggregating flexibilities into energy and grid ancillary service markets. |
-| BRP | Balance Responsible Party | A party that is – according to the Harmonized Electricity Market Role Model (HEMRM) - responsible for its imbalances, meaning the difference between the energy volume physically injected to or withdrawn from the system and the final nominated energy volume, including any imbalance adjustment within a given imbalance settlement period. |
-| DER | Distributed Energy Resource | Distributed Energy Resources are energy resources spread over different levels and locations throughout the energy systems, typically within residential low voltage environments. They can consist of Distributed Generation (e.g., photovoltaic systems), Distributed Flexible Loads (e.g., heat pumps, smart heaters) as well as Distributed Storage (e.g., standalone batteries, V1G and V2X electric vehicles) |
+| System developers | EDDIE framework developers, AIIDA developers, Marketplace developers | Clear and maintainable documentation that facilitates easy and continuous contributions. |
+| Eligible parties | Energy service providers, flexibility service providers, balance responsible parties | Well-documented architecture that explains the access to energy data, and the integration with energy services. |
+| Customers | End users, energy consumers, prosumers | Clear customer permission management processes and transparent data-sharing mechanisms. |
+| Energy data-sharing infrastructure operators | Distribution System Operators (DSOs), Transmission System Operators (TSOs), Meter Data Administrators (MDAs), Consent Administrators (CAs) | Well-documented data access processes, compliance with regulatory requirements. |
+| Regulatory and compliance bodies | Policy makers, regulators, standardization organizations | Clear processes ensuring compliance with data protection regulations and energy data access policies. |
+| Open-source community | Software developers, business developers, energy community | Well-documented architecture, clear contribution guidelines, open access to source code. |
+| System operators | Hosting providers, IT administrators, DevOps teams | Clear deployment documentation. |
+| Architecture decision-makers | System architects, technical leads, product owners | Well-defined architecture documentation, clear rationale for architectural decisions. |
+
