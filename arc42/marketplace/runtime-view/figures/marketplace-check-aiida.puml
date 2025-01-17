@@ -12,7 +12,7 @@ autonumber
 actor "Eligible Party" as ep
 box "Marketplace System" #transparent
   participant "EP Web App" as app
-  participant "Marketplace \nBackend" as marketplace
+  participant "Marketplace \nApplication" as marketplace
   participant "IAM" as iam
   participant "Database" as database
 end box
@@ -33,7 +33,7 @@ activate aiida
 aiida -> aiida : Run Query
 aiida -->> marketplace : Results
 deactivate aiida
-marketplace -->> app : AIIDA IDs
+marketplace -->> app : Number of matching AIIDAs
 deactivate marketplace
 
 

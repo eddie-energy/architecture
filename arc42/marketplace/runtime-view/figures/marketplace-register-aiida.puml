@@ -12,7 +12,7 @@ autonumber
 actor "Customer" as customer
 box "Marketplace System" #transparent
   participant "Customer \nMobile App" as app
-  participant "Marketplace \nBackend" as marketplace
+  participant "Marketplace \nApplication" as marketplace
   participant "IAM" as iam
   participant "Database" as database
 end box
@@ -21,12 +21,12 @@ box "AIIDA System" #transparent
   participant "AIIDA \nEmbedded App" as aiida
 end box
 
-aiida -> marketplace : AIIDA information
-marketplace -> database : Store AIIDA \ninformation
 customer -> app : Register AIIDA
+app -> aiida : Request AIIDA information
+aiida -> app : Provide AIIDA information
 app -> marketplace : Register AIIDA
 activate marketplace
-marketplace -> database : Register AIIDA
+marketplace -> database : Store AIIDA \ninformation
 activate database
 database -->> marketplace : OK
 deactivate database

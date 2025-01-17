@@ -12,12 +12,12 @@ autonumber
 actor "Eligible Party" as ep
 box "Marketplace System" #transparent
   participant "EP Web App" as app
-  participant "Marketplace \nBackend" as marketplace
+  participant "Marketplace \nApplication" as marketplace
   participant "Database" as database
 end box
 
-ep -> app : Fill out form
-app -> marketplace : Send form
+ep -> app : Define energy data \nand target group
+app -> marketplace : Submit data request
 activate marketplace
 marketplace -> database : Store request/service \ninformation
 activate database

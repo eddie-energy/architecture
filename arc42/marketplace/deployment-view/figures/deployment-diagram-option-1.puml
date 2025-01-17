@@ -16,7 +16,7 @@ skinparam node{
 
 rectangle "Marketplace System" {
   node "Computing Infrastructure" as local {    
-    artifact "Marketplace\nBackend" as marketplace
+    artifact "Marketplace\nApplication" as marketplace
     artifact "Database" as database
     artifact "IAM" as iam
 
