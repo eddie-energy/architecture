@@ -17,16 +17,10 @@ box "Marketplace System" #transparent
   participant "Database" as database
 end box
 
-box "AIIDA System" #transparent
-  participant "AIIDA \nEmbedded App" as aiida
-end box
-
 customer -> app : Register AIIDA
-app -> aiida : Request AIIDA information
-aiida -> app : Provide AIIDA information
 app -> marketplace : Register AIIDA
 activate marketplace
-marketplace -> database : Store AIIDA \ninformation
+marketplace -> database : Store customer \nin AIIDA instance
 activate database
 database -->> marketplace : OK
 deactivate database

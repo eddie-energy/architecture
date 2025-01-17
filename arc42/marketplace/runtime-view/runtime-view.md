@@ -24,7 +24,7 @@ The Marketplace system implements the following workflows which are further disc
 1. The customer/eligible party creates a new account at the IAM.
 1. The IAM stores the new account at the Database.
 1. The new account is stored in the Database.
-1. The new account is created.
+1. The Customer Mobile App/EP Webb App is notified.
 
 After that, the customer/eligible party acquires a valid token from the IAM and includes this token in all the messages to the Marketplace Application. The Marketplace Application validates tokens at the IAM for authentication of customers/eligible parties.
 
@@ -32,11 +32,11 @@ After that, the customer/eligible party acquires a valid token from the IAM and 
 
 ![](./figures/marketplace-register-aiida.svg)
 
-1. All AIIDA instances register at the Marketplace Application once on start-up automatically, and submit their information including an ID and IP address.
-1. The Marketplace Application stores all the AIIDA information in the Database.
-1. The customer requests to register an AIIDA instance at the Customer Mobile App using the AIIDA instance ID.
-1. The Customer Mobile App sends the AIIDA instance ID to the Marketplace Application.
-1. The Marketplace Application registers the AIIDA instance of this ID as this customer's AIIDA instance at the Database.
+Prerequisite of this workflow is that the customer uses the AIIDA Smartphone App to register their AIIDA instance to the Marketplace, which leads to sending the AIIDA IP and an ID to the Marketplace and storing them as in AIIDA instance in the Database.
+
+1. The customer requests to register their AIIDA instance at the Customer Mobile App using the AIIDA ID.
+1. The Customer Mobile App forwards the registration request to the Marketplace Application, including the AIIDA ID.
+1. The Marketplace Application uses the AIIDA ID to find the AIIDA instance in the Database, and stores the customer's account as the owner of this AIIDA instance in the Database.
 1. The AIIDA instance is registered.
 1. The Customer Mobile App is notified.
 
@@ -44,7 +44,7 @@ After that, the customer/eligible party acquires a valid token from the IAM and 
 
 ![](./figures/marketplace-browse-requests.svg)
 
-1. The customer requests to see data requests/services of eligible parties at the Customer Mobile App (with filtering possible). 
+1. The customer requests to see data requests/services of eligible parties at the Customer Mobile App (filtering possible). 
 1. The Customer Mobile App forwards the request to the Marketplace Application. 
 1. The Marketplace Application requests the selected data requests/services from the Database.
 1. The Database responds with the matching data requests/services.
@@ -56,7 +56,7 @@ After that, the customer/eligible party acquires a valid token from the IAM and 
 
 1. The eligible party fills out a form with all the required information about the data request/service at the EP Web App.
 1. The EP Web App sends this form to the Marketplace Application.
-1. The Marketplace Application stores the data request/service information at the Database.
+1. The Marketplace Application stores the data request/service information to the Database.
 1. The information is stored at the Database.
 1. The Marketplace Application notifies the EP Web App that the data request/service is stored.
 

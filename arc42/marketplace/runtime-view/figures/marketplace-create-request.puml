@@ -16,7 +16,7 @@ box "Marketplace System" #transparent
   participant "Database" as database
 end box
 
-ep -> app : Define energy data \nand target group
+ep -> app : Fill out form
 app -> marketplace : Submit data request
 activate marketplace
 marketplace -> database : Store request/service \ninformation
