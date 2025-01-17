@@ -1,0 +1,37 @@
+@startwbs stakeholders
+'work breakdown structure
+
+<style>
+wbsdiagram {
+  node {
+    BackgroundColor transparemt
+    HorizontalAlignment center
+    fontsize 14
+  }
+'   :depth(3) {
+'     Linecolor white
+'   }
+}
+</style>
+
+* Stakeholders
+
+++ System users
++++_ Customers
++++_ Eligible parties
++++_ Open-source community
+
+++ System developers
++++_ System developers
++++_ Architecture decision-makers
++++_ Open-source community
+
+
+++ System operators
++++_ Energy data-sharing \ninfrastructure operators
++++_ IT system operators
+
+
+
+
+@endwbs
