@@ -13,9 +13,67 @@ Depending on the amount of content, it might make sense to migrate the subsectio
 
 ## Region Connectors
 
+Region connectors is an integral part of the EDDIE framework.
+They collect validated historical data and accounting point data from a metered data administrator (MDA) and permission administrator (PA).
+Furthermore, region connectors manage permissions given to collect the data.
+
+### What are the responsibilities of a region connector?
+
+A region connector has multiple responisibilities.
+It creates and manages permission requests to access data from a final customer.
+Furthermore, it collects validated historical data and accounting point data from an MDA.
+
+### Why isn't there just one region connector?
+
+There are multiple region connectors, since implementations of the permission process, that is how permission to data is given, differ per country or PA.
+Furthermore, the format of the validated historical data and accounting point data differs per country or MDA.
+This means to cover multiple MDAs and PAs, there need to be multiple implementations to cover the differences.
+This is what a region connector does.
+It implements the permission process for one PA or country and collects the data for one MDA or country.
+So there are different region connectors for all countries, PAs and MDAs where these concepts are implemented differently.
+Sometimes multiple PAs and MDAs implement the same permission process and provide the data in a common format, in this case there is only one region connector for multiple PAs and MDAs.
+In othe cases there are multiple countries implementing the same permission process and data formats.
+Here one region connector can cover multiple countries.
+
+### How is permission to data given?
+
+In order to access the data of a final customer, the final customer has to express the wish to share their data with the party hosting the EDDIE framework.
+Then the region connector can create a permission request, which is sent to the PA.
+The PA validates this permisison request and shows it the final customer.
+The final customer can accept or decline the permission request.
+Once it is accepted the PA notifies the region connector and at this point it is possible to retrieve the final customer's data.
+
+### How does a region connector integrate into MDA and PA?
+
+In order to create and manage permission requests a region connector has to integrate into the system of a PA.
+If it wants to retrieve data it needs to integrate in to the system of an MDA.
+MDAs and PAs have to offer an interface to interact with them.
+These interfaces can range from REST APIs to using messeging via the AS4 protocol.
+To access these interfaces a party hosting EDDIE has to registrate with the MDA and PA.
+
+### How is the data that is retrieved determined?
+
+The kind of data that is retrieved from a MDA is determined via a data need.
+A data need specifies what kind of data can be accessed.
+It differentiate between accounting point data and validated historical data.
+Furthermore, data needs for validated historical data specifies a start and end date, as well as what kind of energy data should be collected.
+For example gas or electricity.
+
 ## Permission Facade
 
 ## Services (Data Needs API)
+
+The data needs API provides a way to retrieve and create data needs.
+A data need is used to determine what data should be collected for a specific permission from a MDA.
+
+## Outbound Connectors
+
+An outbound connector provides endpoints to access to permission market documents, accounting point data market documents and validated historical data market documents.
+Furthermore, they provide means to terminate a permission request by the eligible party.
+
+### Why multiple outbound connectors?
+
+There are multiple implementations of the outbound connectors to allow the eligible party to use a protocol of their choosing.
 
 ## Streaming Infrastructure
 
