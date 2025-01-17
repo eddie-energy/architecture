@@ -26,5 +26,8 @@
     "gray-matter": "^4.0.3",
     "micromatch": "^4.0.7",
     "vitepress": "^1.2.2"
+  },
+  "dependencies": {
+    "vitepress-plugin-mermaid": "^2.0.17"
   }
 }

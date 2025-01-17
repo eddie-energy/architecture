@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-
+import { withMermaid } from "vitepress-plugin-mermaid";
 import { buildSidebar } from "./sidebar";
 
 import renderMarkdownImage from "./renderMarkdownImage";
@@ -12,13 +12,18 @@ const sidebarItems = buildSidebar("./arc42", "", srcExclude)?.items?.map(
 );
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid(defineConfig({
   title: "EDDIE Architecture",
   description: "European Distributed Data Infrastructure For Energy",
   srcDir: "./arc42",
   srcExclude,
   base: "/architecture/",
-  lang: "en-GB",
+  lang: "en-GB",  
+  vite: {
+    // workaround for a vite/pnpm related mermaid bug: https://github.com/mermaid-js/mermaid/issues/4320
+    // bug occurs in vitepress dev mode only
+    optimizeDeps: { include: ["mermaid"] },
+  },
   head: [
     ["link", { rel: "icon", href: "/figures/favicon-32x32.png" }],
     [
@@ -81,4 +86,4 @@ export default defineConfig({
       md.renderer.rules.image = renderMarkdownImage;
     },
   },
-});
+}));
