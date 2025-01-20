@@ -81,7 +81,7 @@ An overview of the key stakeholders is provided below.
 
 | Role | Stakeholder | Expectations |
 |-|-|-|
-| System developers | EDDIE framework developers, AIIDA developers, Marketplace developers | Clear and maintainable documentation that facilitates easy and continuous contributions. |
+| EDDIE project developers | EDDIE framework developers, AIIDA developers, Marketplace developers, Technical writers | Clear and maintainable documentation that facilitates easy and continuous contributions. |
 | Eligible parties | Energy service providers, flexibility service providers, balance responsible parties | Well-documented architecture that explains the access to energy data, and the integration with energy services. |
 | Customers | End users, energy consumers, prosumers | Clear customer permission management processes and transparent data-sharing mechanisms. |
 | Energy data-sharing infrastructure operators | Distribution System Operators (DSOs), Transmission System Operators (TSOs), Meter Data Administrators (MDAs), Consent Administrators (CAs) | Well-documented data access processes, compliance with regulatory requirements. |

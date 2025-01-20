@@ -14,20 +14,20 @@ wbsdiagram {
 }
 </style>
 
-* Stakeholders
+* Architecture Stakeholders
 
-++ System users
+++ System \nusers
 +++_ Customers
 +++_ Eligible parties
-+++_ Open-source community
++++_ Open-source \ncommunity
 
-++ System developers
-+++_ System developers
-+++_ Architecture decision-makers
-+++_ Open-source community
+++ System \ndevelopers
++++_ EDDIE project \ndevelopers
++++_ Architecture \ndecision-makers
++++_ Open-source \ncommunity
 
 
-++ System operators
+++ System \noperators
 +++_ Energy data-sharing \ninfrastructure operators
 +++_ IT system operators
 
