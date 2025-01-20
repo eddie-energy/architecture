@@ -21,8 +21,8 @@ box "AIIDA System" #transparent
   participant "AIIDA \nEmbedded App" as aiida
 end box
 
-ep -> app : Search AIIDA
-app -> marketplace : Send query
+ep -> app : Search for \nAIIDA instances
+app -> marketplace : Run data request
 activate marketplace
 marketplace -> database : Get all AIIDA IPs
 activate database
@@ -33,7 +33,7 @@ activate aiida
 aiida -> aiida : Run Query
 aiida -->> marketplace : Results
 deactivate aiida
-marketplace -->> app : Number of matching AIIDAs
+marketplace -->> app : Matching \nAIIDA instances
 deactivate marketplace
 
 

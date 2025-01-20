@@ -17,9 +17,9 @@ box "Marketplace System" #transparent
 end box
 
 ep -> app : Fill out form
-app -> marketplace : Submit data request
+app -> marketplace : Submit form
 activate marketplace
-marketplace -> database : Store request/service \ninformation
+marketplace -> database : Store \nrequest/service
 activate database
 database -->> marketplace : OK
 deactivate database

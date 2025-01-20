@@ -32,13 +32,13 @@ After that, the customer/eligible party acquires a valid token from the IAM and 
 
 ![](./figures/marketplace-register-aiida.svg)
 
-Prerequisite of this workflow is that the customer uses the AIIDA Smartphone App to register their AIIDA instance to the Marketplace, which leads to sending the AIIDA IP and an ID to the Marketplace and storing them as in AIIDA instance in the Database.
+Prerequisite of this workflow is that the customer uses the AIIDA Smartphone App to register their AIIDA instance at the Marketplace, which leads to sending the AIIDA IP and ID to the Marketplace and storing them as an AIIDA instance at the Database.
 
 1. The customer requests to register their AIIDA instance at the Customer Mobile App using the AIIDA ID.
 1. The Customer Mobile App forwards the registration request to the Marketplace Application, including the AIIDA ID.
 1. The Marketplace Application uses the AIIDA ID to find the AIIDA instance in the Database, and stores the customer's account as the owner of this AIIDA instance in the Database.
 1. The AIIDA instance is registered.
-1. The Customer Mobile App is notified.
+1. The Customer Mobile App is notified that the AIIDA instance is registered.
 
 ## The customer browses data requests and services
 
@@ -54,32 +54,34 @@ Prerequisite of this workflow is that the customer uses the AIIDA Smartphone App
 
 ![](./figures/marketplace-create-request.svg)
 
-1. The eligible party fills out a form with all the required information about the data request/service at the EP Web App.
+1. The eligible party fills out a form (with all the required information) at the EP Web App to create a data request/service. When creating a data request, a suitable query is also added by the eligible party. This query is later executed by AIIDA in the workflow to search for AIIDA instances having data that match this data request.
 1. The EP Web App sends this form to the Marketplace Application.
-1. The Marketplace Application stores the data request/service information to the Database.
-1. The information is stored at the Database.
+1. The Marketplace Application stores the data request/service information in the Database.
+1. The data request/service is stored at the Database.
 1. The Marketplace Application notifies the EP Web App that the data request/service is stored.
 
 ## The eligible party searches AIIDA instances for energy data
 
 ![](./figures/marketplace-check-aiida.svg)
 
-1. After a data request has been created, the eligible party clicks a button at the EP Web App to search for energy data matching this data request. 
-1. The EP Web App creates a query that matches the energy data of the data request to the Marketplace Application.  
-1. The Marketplace Application requests all the AIIDA instance IPs from the database.
-1. The Database responds with the AIIDA instance IPs.
-1. The Marketplace Application sends the query to all the AIIDA instances that are registered in the Database.
+1. After a data request has been created, the eligible party uses the EP Web App to search for AIIDA instances matching this data request. 
+1. The EP Web App requests the Marketplace Application to run the data request.  
+1. The Marketplace Application requests all the AIIDA IPs from the database.
+1. The Database responds with the AIIDA IPs.
+1. The Marketplace Application sends the query of the data request to all the AIIDA instances that are registered in the Database.
 1. The AIIDA instances run the query, and examine if they have data matching the query.
-1. The AIIDA instances respond to the Marketplace Application about whether they have matching data.
-1. The Marketplace Application responds to the EP Web App with the IDs of the AIIDA instances that have matching data. 
+1. The AIIDA instances respond to the Marketplace Application with the results of the query.
+1. The Marketplace Application responds to the EP Web App with the matching AIIDA instances. 
 
 ## The eligible party asks for access to data from AIIDA instances
 
 ![](./figures/marketplace-ask-data-access.svg)
 
-1. After the eligible party has searched which AIIDA instances have energy data matching a data request, the eligible party clicks a button to ask for data access at the EP Web App.
+Prerequisite of this workflow is that the eligible party has created and run a data request, and received information about the AIIDA instances matching this data request.
+
+1. To request access to the data of these AIIDA instances, the eligible party asks for data access at the EP Web App.
 1. The EP Web App asks the Marketplace Application for data access.  
-1. The Marketplace Application sends access requests to the Customer Mobile Apps of the customers whose AIIDA instances have the energy data.
+1. The Marketplace Application sends an access request to the Customer Mobile Apps of the customers whose AIIDA instances have the energy data.
 1. The Customer Mobile Apps of these customers show an access request notification.
 1. The customers approve/reject the access requests.
 1. The Customer Mobile Apps of the customers who approved notify the Marketplace Application.
