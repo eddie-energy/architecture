@@ -18,13 +18,13 @@ The Marketplace system implements the following workflows which are further disc
 
 ![](./figures/marketplace-create-account.svg)
 
-1. A customer or an eligible party use the Customer Mobile App or the EP Web App, respectively, to request a new account. 
+1. A customer or an eligible party uses the Customer Mobile App or the EP Web App, respectively, to request a new account. 
 1. The Customer Mobile App/EP Web App send the request for a new account to the Marketplace Application.
 1. The Marketplace Application redirects the customer/eligible party to the IAM.
 1. The customer/eligible party creates a new account at the IAM.
 1. The IAM stores the new account at the Database.
 1. The new account is stored in the Database.
-1. The Customer Mobile App/EP Webb App is notified.
+1. The Customer Mobile App/EP Web App is notified.
 
 After that, the customer/eligible party acquires a valid token from the IAM and includes this token in all the messages to the Marketplace Application. The Marketplace Application validates tokens at the IAM for authentication of customers/eligible parties.
 
@@ -32,7 +32,7 @@ After that, the customer/eligible party acquires a valid token from the IAM and 
 
 ![](./figures/marketplace-register-aiida.svg)
 
-Prerequisite of this workflow is that the customer uses the AIIDA Smartphone App to register their AIIDA instance at the Marketplace, which leads to sending the AIIDA IP and ID to the Marketplace and storing them as an AIIDA instance at the Database.
+The prerequisite of this workflow is that the customer uses the AIIDA Smartphone App to register their AIIDA instance at the Marketplace, which leads to sending the AIIDA IP and ID to the Marketplace and storing them as an AIIDA instance at the Database.
 
 1. The customer requests to register their AIIDA instance at the Customer Mobile App using the AIIDA ID.
 1. The Customer Mobile App forwards the registration request to the Marketplace Application, including the AIIDA ID.
@@ -85,6 +85,6 @@ Prerequisite of this workflow is that the eligible party has created and run a d
 1. The Customer Mobile Apps of these customers show an access request notification.
 1. The customers approve/reject the access requests.
 1. The Customer Mobile Apps of the customers who approved notify the Marketplace Application.
-1. The Marketplace Application configures the data access at the AIIDA instances of the customers who approved the access requests. The AIIDA instances then start sending data to the EDDIE Framework of the eligible party.
+1. The Marketplace Application configures the data access on the AIIDA instances of the customers who approved the access requests. The AIIDA instances then start sending data to the EDDIE Framework of the eligible party.
 1. The Marketplace Application notifies the EP Web App that access has been requested.
 
