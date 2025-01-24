@@ -13,9 +13,9 @@ The Italian company Sinapsi has created a device called Alfa which can be plugge
 Sinapsi provides a smartphone app that displays these values.
 
 
-The Alfa device also outputs the measurements via Modbus TCP, and Sinapsi offers a guide how to integrate Alfa into Home Assistant (a home automation system).
-The guide includes a configuration.txt file that details the Modbus TCP addresses, values and datatypes.
-The IP of the Alfa device can be seen in Sinapi's app.
+The Alfa device also outputs the measurements via Modbus TCP, and Sinapsi offers a guide on how to integrate Alfa into Home Assistant (a home automation system).
+The guide includes a configuration.txt file that details the Modbus TCP addresses, values and data types.
+The IP of the Alfa device can be seen in Sinapsi's app.
 
 
 The following picture shows the Sinapsi Alfa device, taken from the official [Sinapsi website](https://www.alfabysinapsi.it/prodotto/alfa-bianco/).

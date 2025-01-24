@@ -1,5 +1,5 @@
 ---
-title: Embedded App
+title: AIIDA Embedded App
 order: 1
 ---
 The AIIDA embedded app handles the core features of AIIDA. It consists of a backend and a small frontend.
@@ -19,8 +19,8 @@ The included components are the following:
 
 | Component | Responsibility |
 | - | - |
-| Aggregator | Connect to the Smart Meter and collect the energy consumption measurements in real time. These values send to the Streamer, and are also stored in the Timescale DB. |
-| Streamer | Receives the real-time energy consumption values from the Aggregator and sends them to the Streaming Infrastructure of the EDDIE Framework. Since the Streaming Infrastructure implements a publish/subscribe mechanism based on Kafka, the Streamer implement a client that publishes the data on Kafka. |
+| Aggregator | Connect to the Smart Meter and collect the energy consumption measurements in real time. These values are sent to the Streamer, and are also stored in the Timescale DB. |
+| Streamer | Receives the real-time energy consumption values from the Aggregator and sends them to the Streaming Infrastructure of the EDDIE Framework. Since the Streaming Infrastructure implements a publish/subscribe mechanism based on Kafka, the Streamer implements a client that publishes the data on Kafka. |
 | Permission Manager | Handles the customer permission for access to real-time data, and stores the related information in the Timescale DB. It also configures the Streamer to publish the data, when the customer permission has been given. |
 | Error Handler | Follows the operation of the AIIDA Backend and logs error messages for the customer regarding the flow of the energy consumption data, the customer permission, and unexpected situations that might occur. |
 | Timescale DB | Stores the state of the system including information about the customer permissions, and the connections to the EDDIE Framework and the Smart Meter. Also it stores recent energy consumption values which may need to be sent to the EDDIE Framework.  |
@@ -42,7 +42,7 @@ The included interfaces are the following:
 
 ### Overview
 
-The AIIDA Frontend is a web application for the customer to access and configure the AIIDA Backend. Since the AIIDA Backend runs on the in-house device connected to the house's local area network, the AIIDA Frontend needs to be on the same network as well. This is done for security purposes so that only the customer can configure the AIIDA Backend. To configure the connection to the EDDIE Framework, the customer needs to access the Permission Facade first, and manually copy-paste the provided information (e.g., host URL and connection ID) to the AIIDA Frontend. An alternative to this process is to use the AIIDA App. 
+The AIIDA Frontend is a web application for the customer to access and configure the AIIDA Backend. Since the AIIDA Backend runs on the in-house device connected to the household's local area network, the AIIDA Frontend needs to be on the same network as well. This is done for security purposes so that only the customer can configure the AIIDA Backend. To configure the connection to the EDDIE Framework, the customer needs to access the Permission Facade first, and manually copy-paste the provided information (e.g., host URL and connection ID) to the AIIDA Frontend. An alternative to this process is to use the AIIDA App. 
 
 The AIIDA Frontend enables the following functionalities:
 
