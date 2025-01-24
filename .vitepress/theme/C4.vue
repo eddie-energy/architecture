@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { ref } from "vue";
+
 const props = defineProps<{ diagram: string }>();
 let diagramKey = props.diagram;
 
@@ -26,28 +28,80 @@ src.pathname = `embed/${structurizrWorkspaceId}`;
 src.searchParams.append("diagram", diagramKey);
 src.searchParams.append("diagramSelector", String(false));
 src.searchParams.append("iframe", id);
+
+const isMaximized = ref(false);
+
+function maximize() { isMaximized.value = true; }
+function minimize() { isMaximized.value = false; }
+
 </script>
 
 <style>
+.outer {
+  position: relative;
+}
+
+.maxdiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.catchall {
+  cursor: zoom-in;
+}
+
+.darkened-maxed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  cursor: zoom-out;
+  background-color: #00000066;
+  padding: 1ex 1ex;
+}
+
+.closer {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: white;
+  text-align: right;
+}
+
 .c4-diagram {
   border-top: 1px solid var(--vp-c-divider);
   border-bottom: 1px solid var(--vp-c-divider);
   width: 100%;
-  background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100% 100%"><text fill="%23333333" x="50%" y="50%" font-family="\'Lucida Grande\', sans-serif" font-size="24" text-anchor="middle">loading...</text></svg>')
-    0px 0px no-repeat;
+  background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100% 100%"><text fill="%23333333" x="50%" y="50%" font-family="\'Lucida Grande\', sans-serif" font-size="24" text-anchor="middle">loading...</text></svg>') 0px 0px no-repeat;
+}
+
+.c4-maximized {
+  position: fixed;
+  width: calc(100% - 4rem);
+  height: calc(100% - 6rem);
+  top: 4rem;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 200;
 }
 </style>
 
 <template>
-  <iframe
-    class="c4-diagram"
-    :id
-    :src="src.href"
-    marginwidth="0"
-    marginheight="0"
-    frameborder="0"
-    scrolling="no"
-    allowfullscreen="true"
-  >
-  </iframe>
+  <div class="outer">
+    <div class="maxdiv closer" :class="{ 'darkened-maxed' : isMaximized }" @click="minimize">
+      <span v-if="isMaximized">close<span style="font-size: 1.5em;">&times;</span></span> 
+    </div>
+    <iframe class="c4-diagram" :class="{ 'c4-maximized': isMaximized }" :id :src="src.href" marginwidth="0"
+      marginheight="0" frameborder="0" :scrolling="isMaximized ? 'yes' : 'no'" allowfullscreen="true">
+    </iframe>
+    <div class="maxdiv catchall" @click="maximize">
+    </div>
+  </div>
 </template>
