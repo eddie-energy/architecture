@@ -21,7 +21,6 @@ rectangle "Marketplace System" {
     artifact "IAM" as iam
 
     database -down- marketplace : SQL
-    marketplace -right- iam : HTTP
     database -right- iam : SQL
   }
 node "User Device" as cust {
