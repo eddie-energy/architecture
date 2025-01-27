@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { nextTick, onMounted, reactive, ref } from "vue";
 
 const props = defineProps<{ diagram: string }>();
 let diagramKey = props.diagram;
@@ -30,9 +30,48 @@ src.searchParams.append("diagramSelector", String(false));
 src.searchParams.append("iframe", id);
 
 const isMaximized = ref(false);
+const sizerRef = ref<HTMLDivElement>();
+const iframeRef = ref<HTMLIFrameElement>();
+const iframeStyles = reactive({} as { width: string });
+var originalAspectRatio = 0;
 
-function maximize() { isMaximized.value = true; }
-function minimize() { isMaximized.value = false; }
+/**
+ * Resize the iframes width when maximized. It basically limits the width of the iframe because
+ * the C4 diagrams are always zoomed to fit the iframe's width. If the diagram doesn't match
+ * in height however, the lower part of the diagram cannot be seen.
+ * 
+ * It works like this:
+ * 1. when maximized, the original aspect ratio is stored in the variable `originalAspectRatio`
+ * 2. there is a div.c4-sizer as a parent around the iframe that is maximized when the diagram is clicked on
+ * 3. after resizing the .c4-sizer, that element is queried to determine the available space on screen
+ * 4. the maximum width of the iframe is calculated and set on the iframe
+ */
+function resizeMaxedIframe() {
+  if (isMaximized.value && iframeRef.value && sizerRef.value && originalAspectRatio) {
+    const { width, height } = sizerRef.value.getBoundingClientRect();
+    const matchingWidth = Math.min(height * originalAspectRatio, width);
+    console.log("resize maximized iframe to " + matchingWidth);
+    iframeStyles.width = matchingWidth + "px";
+  } else {
+    console.log("not resizing iframe");
+  }
+}
+
+function maximize() {
+  isMaximized.value = true;
+  if (iframeRef.value) {
+    const { width, height } = iframeRef.value.getBoundingClientRect();
+    originalAspectRatio = width / height;
+    nextTick(resizeMaxedIframe);
+    window.addEventListener("resize", resizeMaxedIframe);
+  }
+}
+
+function minimize() {
+  isMaximized.value = false;
+  window.removeEventListener("resize", resizeMaxedIframe);
+  iframeStyles.width = "";
+}
 
 </script>
 
@@ -79,9 +118,16 @@ function minimize() { isMaximized.value = false; }
   border-bottom: 1px solid var(--vp-c-divider);
   width: 100%;
   background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100% 100%"><text fill="%23333333" x="50%" y="50%" font-family="\'Lucida Grande\', sans-serif" font-size="24" text-anchor="middle">loading...</text></svg>') 0px 0px no-repeat;
+  pointer-events: all;
 }
 
-.c4-maximized {
+.c4-sizer {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.c4-sizer-maxed {
   position: fixed;
   width: calc(100% - 4rem);
   height: calc(100% - 6rem);
@@ -91,16 +137,23 @@ function minimize() { isMaximized.value = false; }
   bottom: 2rem;
   z-index: 200;
 }
+
+.c4-sizer-maxed .c4-diagram {
+  height: 100%;
+  margin: 0 auto;
+}
 </style>
 
 <template>
   <div class="outer">
-    <div class="maxdiv closer" :class="{ 'darkened-maxed' : isMaximized }" @click="minimize">
-      <span v-if="isMaximized">close<span style="font-size: 1.5em;">&times;</span></span> 
+    <div class="maxdiv closer" :class="{ 'darkened-maxed': isMaximized }" @click="minimize">
+      <span v-if="isMaximized">close<span style="font-size: 1.5em;">&times;</span></span>
     </div>
-    <iframe class="c4-diagram" :class="{ 'c4-maximized': isMaximized }" :id :src="src.href" marginwidth="0"
-      marginheight="0" frameborder="0" :scrolling="isMaximized ? 'yes' : 'no'" allowfullscreen="true">
-    </iframe>
+    <div class="c4-sizer" :class="{ 'c4-sizer-maxed': isMaximized }" ref="sizerRef">
+      <iframe :id class="c4-diagram"  :style="iframeStyles" ref="iframeRef"
+        :src="src.href" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" allowfullscreen="true">
+      </iframe>
+    </div>
     <div class="maxdiv catchall" @click="maximize">
     </div>
   </div>
