@@ -26,10 +26,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Deploy
-      uses: SamKirkland/web-deploy@v1
+      uses: eddie-energy/ftp-deploy-action@main
       with:
-        target-server: ${{ secrets.SSH_HOST }}
-        remote-user: ${{ secrets.SSH_USERNAME }}
-        private-ssh-key: ${{ secrets.SSH_KEY }}
-        source-path: ./.vitepress/dist/
-        destination-path: /web/architecture/
+        host: ${{ secrets.WEBSERVER_SFTP_HOST }}
+        user: ${{ secrets.WEBSERVER_SFTP_USERNAME }}
+        password: ${{ secrets.WEBSERVER_SFTP_PASSWORD }}
+        source: ./.vitepress/dist/
+        destination: "/public_html/architecture/"
