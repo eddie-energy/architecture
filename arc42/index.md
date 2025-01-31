@@ -25,9 +25,6 @@ features:
   - title: EDDIE Marketplace
     details: Discover datasets and services based on EDDIE
     link: /marketplace/marketplace
-  - title: EDDIE Online
-    details: Getting started with EDDIE
-    link: /eddie_online/eddie_online
 ---
 This website hosts the software architecture of EDDIE (European Distributed Data Infrastructure for Energy) which has been documented based on [arc42](https://arc42.org/). EDDIE is a research project co-funded by the European Union's Horizon Innovation Actions under grant agreement No. 101069510.
 
@@ -41,7 +38,6 @@ This document is organized as follows:
 1. [EDDIE Framework](/eddie_framework/eddie_framework). Providing core functionality of EDDIE
 1. [AIIDA](/aiida/aiida). Enabling in-house data access
 1. [EDDIE Marketplace](/marketplace/marketplace). Discover datasets and services based on EDDIE
-1. [EDDIE Online](/eddie_online/eddie_online). Getting started with EDDIE
 1. [Crosscutting Concepts](./crosscutting-concepts/crosscutting-concepts.md). Includes information about important concepts used in the system.
 1. [Architectural Decisions](./architectural-decisions/architectural-decisions.md). Includes architectural decisions that affect the system.
 1. [Quality Requirements](./quality-requirements/quality-requirements.md). Includes requirements that need to be satisfied by the system.
