@@ -23,13 +23,14 @@ According to arc42, [the content should describe the static decomposition of the
 |[AIIDA embedded app](./embedded_app/embedded_app.md)|The AIIDA Embedded App, consisting of backend and frontend components, contains the core functionality of AIIDA. For the customer, it is accessible through the frontend or via the smartphone app. The backend handles data collection, processing, and forwarding the real-time data from the Smart Meter to the EDDIE Framework, while the frontend provides an interface for the customer to manage settings and permissions.|
 |[AIIDA smartphone app](./aiida-smartphone-app/aiida-smartphone-app.md)|Via the smartphone app the customer can scan a QR-code from the EP-website that corresponds to the smart meter. While the connection establishes automatically, the customer can either grant or deny access for the collected data to be shared with EDDIE Framework.|
 |[AIIDA regional connector](./aiida_regional_connectors/aiida_regional_connectors.md)|As for the regional connectors of EDDIE Framework, the AIIDA regional connector allows AIIDA to interact with EDDIE Framework, e.g. forwards energy data. As the AIIDA regional connector works as a plugin system, it is pictured as part of the AIIDA system, although it is deployed with EDDIE Framework.|
-|[Adapter Devices](./devices/devices.md)|To connect with the smart meter, AIIDA includes a country-specific adapter device. The connection between the smart meter and the adapter device is established via several physical interfaces. A diagram for the country-specific adapter devices is shown below.|
+|[Adapter Devices](./devices/devices.md)|To connect with the smart meter, AIIDA includes a country-specific adapter device. The connection between the smart meter and the adapter device is established via a country-specific interface. Country-specific adapter devices are currently defined for Austria, France, Italy and Spain.|
 |[Timescale DB](./embedded_app/embedded_app.md)|The Timescale Database stores energy data, gathered by the devices.|
 
+<!--
 ## Country specific devices
 
 The above picture only shows the connection of one Adapter Device as a default example. Nevertheless, the following devices are implemented: 
-<C4 diagram="container-regional-devices" />
+<C4 diagram="container-regional-devices" /> -->
 
 
 

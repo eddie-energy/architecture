@@ -13,7 +13,7 @@ The following picture shows how the measurement data is stored as a timescale re
 
 ## EMQX IAM Database
 This Database comes with the MQTT broker which is needed at the EDDIE Framework site.
-While the MQTT broker mediates all messages between the EP and AIIDA, the IAM database ensures that only authorized clients have access to specific topics, enhancing the security of the network.
+While the MQTT broker mediates all messages between the EP and AIIDA, the IAM database ensures that only authorized clients have access to specific topics.
 The IAM database enables the separation and management of permissions between different users and groups, as the MQTT broker is shared by multiple users.
 Managing identities and access rights through a centralized IAM database also allows dynamic adjustments of rules and permissions without the need to reconfigure the broker itself. 
 

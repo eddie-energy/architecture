@@ -55,3 +55,5 @@ A device, that is somehow connected to the AIIDA Embedded App, stores its data i
 1. The data is stored at the Timescale DB.
 1. The Broker sends the data directly to the MQTT Broker on the EDDIE Framework side.
 1. The Broker buffers the energy data and shares it with various services on demand.
+1. The EP Website displays the energy data to the customer.
+1. The EMQX MQTT Broker also distributes the energy data to the EP Service.

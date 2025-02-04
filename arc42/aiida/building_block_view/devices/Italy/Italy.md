@@ -18,6 +18,6 @@ The guide includes a configuration.txt file that details the Modbus TCP addresse
 The IP of the Alfa device can be seen in Sinapsi's app.
 
 
-The following picture shows the Sinapsi Alfa device, taken from the official [Sinapsi website](https://www.alfabysinapsi.it/prodotto/alfa-bianco/).
+The following picture shows the Sinapsi Alfa device, taken from the official [Sinapsi website](https://www.sinapsitech.it/en/home-alfa/).
 
 ![](./figures/alfa-bianco.jpg)

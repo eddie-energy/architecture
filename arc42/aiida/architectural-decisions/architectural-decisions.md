@@ -37,10 +37,10 @@ Since AIIDA may be running on a resource-constrained device, sending multiple da
 Alternatives include point-to-point communication, which is resource-intensive at scale, or distributed message queues like Kafka for enhanced scalability and fault tolerance. Cloud-based services offer scalability but introduce dependencies, while a hybrid approach could balance performance for critical and non-urgent data.
 
 ## Dedicated In-house Device
----
 
+<!--
 > [!WARNING]
-> Interesting question but needs re-evaluation of the alternatives, e.g. cloud-AIIDA connecting to a [Smart Meter Adapter from oesterreichs energie](https://oesterreichsenergie.at/aktuelles/neuigkeiten/detailseite/die-smart-booster)
+> Interesting question but needs re-evaluation of the alternatives, e.g. cloud-AIIDA connecting to a [Smart Meter Adapter from oesterreichs energie](https://oesterreichsenergie.at/aktuelles/neuigkeiten/detailseite/die-smart-booster) -->
 
 ### Context
 
