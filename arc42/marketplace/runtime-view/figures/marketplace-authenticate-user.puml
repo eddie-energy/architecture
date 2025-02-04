@@ -1,0 +1,39 @@
+@startuml marketplace-authenticate-user
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Customer" as customer
+box "Marketplace System" #transparent
+  participant "Customer \nMobile App" as app
+  participant "Marketplace \nApplication" as marketplace
+  participant "IAM" as iam
+  participant "Database" as database
+end box
+
+customer -> app : Login request
+app -> iam : Authenticate user
+activate iam
+iam -> database : Validate credentials
+activate database
+database -->> iam : Credentials valid
+deactivate database
+iam -->> app : Authentication successful (access token issued)
+deactivate iam
+
+app -> marketplace : Access Marketplace (with token)
+activate marketplace
+marketplace -> iam : Validate access token
+activate iam
+iam -->> marketplace : Token valid (authorization granted)
+deactivate iam
+marketplace -->> app : Access granted
+deactivate marketplace
+
+@enduml

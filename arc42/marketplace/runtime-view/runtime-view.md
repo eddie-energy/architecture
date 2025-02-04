@@ -28,6 +28,19 @@ The Marketplace system implements the following workflows which are further disc
 
 After that, the customer/eligible party acquires a valid token from the IAM and includes this token in all the messages to the Marketplace Application. The Marketplace Application validates tokens at the IAM for authentication of customers/eligible parties.
 
+![](./figures/marketplace-authenticate-user.svg)
+
+1. The customer submits their credentials via the Customer Mobile App.
+1. The app sends the authentication request to IAM for verification.
+1. IAM queries the database to check if the provided credentials are correct.
+1. The database returns a confirmation if the credentials match a stored user record.
+1. IAM sends a response to the app, including an access token for the authenticated user.
+1. The app uses the issued token to request access to the Marketplace system.
+1. The Marketplace Application checks with IAM to ensure the token is valid and unexpired.
+1. IAM verifies the token and confirms whether the user has the required permissions.
+1. The Marketplace Application allows the user to proceed with authorized actions.
+
+
 ## The customer registers their AIIDA instance
 
 ![](./figures/marketplace-register-aiida.svg)
