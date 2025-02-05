@@ -9,8 +9,8 @@ The deployment view provides an overview of the technical infrastructure require
 
 This table provides links to the deployment view section of each system.
 
-| System | Section |
-| - | - |
-| EDDIE Framework | [Deployment View](../eddie_framework/deployment-view/deployment-view.md) |
-| AIIDA | [Deployment View](../aiida/deployment-view/deployment-view.md) |
-| Marketplace | [Deployment View](../marketplace/deployment-view/deployment-view.md) |
+| System          | Section                                                                  |
+|-----------------|--------------------------------------------------------------------------|
+| EDDIE Framework | [Deployment View](../eddie-framework/deployment-view/deployment-view.md) |
+| AIIDA           | [Deployment View](../aiida/deployment-view/deployment-view.md)           |
+| Marketplace     | [Deployment View](../marketplace/deployment-view/deployment-view.md)     |
