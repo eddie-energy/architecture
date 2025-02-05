@@ -76,8 +76,9 @@ The quality goals of the architecture aim at expressing the system's priorities 
 The stakeholders of the system's architecture include all roles and organizations that influence/depend on the architecture documentation, i.e., those who need to understand the architecture, interact with the system, or work with the source code. 
 An overview of the key stakeholders is provided below.
 
-![](./figures/stakeholders.svg)
+![](./figures/stakeholders.drawio.svg)
 
+---
 
 | Role | Stakeholder | Expectations |
 |-|-|-|
