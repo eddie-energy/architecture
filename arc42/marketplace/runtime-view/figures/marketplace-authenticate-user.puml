@@ -11,29 +11,43 @@ autonumber
 
 actor "Customer" as customer
 box "Marketplace System" #transparent
-  participant "Customer \nMobile App" as app
-  participant "Marketplace \nApplication" as marketplace
-  participant "IAM" as iam
-  participant "Database" as database
+participant "Customer \nMobile App" as app
+participant "Marketplace \nApplication" as marketplace
+participant "IAM" as iam
+participant "Database" as database
 end box
 
-customer -> app : Login request
+' get authorization code
+customer -> app : Login
 app -> iam : Authenticate user
 activate iam
-iam -> database : Validate credentials
+iam -> database : Validate user
 activate database
-database -->> iam : Credentials valid
+database -->> iam : OK
 deactivate database
-iam -->> app : Authentication successful (access token issued)
+iam -->> app : Authorization code
 deactivate iam
 
-app -> marketplace : Access Marketplace (with token)
-activate marketplace
-marketplace -> iam : Validate access token
+' get access tokens:
+' - Access Token (JWT): Used to access backend resources.
+' - ID Token (JWT): Contains user profile information.
+' - Refresh Token (optional): Used to obtain new access tokens when they expire.
+app -> iam : Get tokens
 activate iam
-iam -->> marketplace : Token valid (authorization granted)
+iam -->> app : Tokens
 deactivate iam
-marketplace -->> app : Access granted
+app -> customer : OK
+
+' marketplace validates tokens
+customer -> app : Any action
+app -> marketplace : Request with\n access token
+activate marketplace
+
+' The marketplace has a public key from IAM (acquired occasionally) that is used to validate tokens.
+
+marketplace -> marketplace : Validate\ntoken
+marketplace -> marketplace : Process\nrequest
+marketplace -->> app : Response
 deactivate marketplace
 
 @enduml

@@ -26,20 +26,23 @@ The Marketplace system implements the following workflows which are further disc
 1. The new account is stored in the Database.
 1. The Customer Mobile App/EP Web App is notified.
 
-After that, the customer/eligible party acquires a valid token from the IAM and includes this token in all the messages to the Marketplace Application. The Marketplace Application validates tokens at the IAM for authentication of customers/eligible parties.
+After creating an account, requests from Customer Mobile Apps/EP Web Apps are authenticated using the account credentials and tokens from the IAM, as shown below.
 
 ![](./figures/marketplace-authenticate-user.svg)
 
-1. The customer submits their credentials via the Customer Mobile App.
-1. The app sends the authentication request to IAM for verification.
-1. IAM queries the database to check if the provided credentials are correct.
-1. The database returns a confirmation if the credentials match a stored user record.
-1. IAM sends a response to the app, including an access token for the authenticated user.
-1. The app uses the issued token to request access to the Marketplace system.
-1. The Marketplace Application checks with IAM to ensure the token is valid and unexpired.
-1. IAM verifies the token and confirms whether the user has the required permissions.
-1. The Marketplace Application allows the user to proceed with authorized actions.
-
+1. The customer/eligible party submits their account credentials to login via the Customer Mobile App/EP Web App.
+1. The App sends the credentials to the IAM to authenticate the user account.
+1. The IAM queries the database to check if the provided credentials match an existing user account.
+1. The database returns a confirmation that the credentials match a stored user account.
+1. The IAM responds to the App with an authorization code for this particular user.
+1. The App can now use the authorization code to request tokens from the IAM (e.g., access, ID, and refresh tokens).
+1. IAM responds with (at least) a JWT access token.
+1. The customer/eligible party is now logged in, and the tokens can be used for any action at the Customer Mobile App/EP Web App.
+1. The customer/eligible party executes an action at the Customer Mobile App/EP Web App.
+1. The App includes the access token in the request to the Marketplace Application.
+1. The Marketplace Application validates the access token (to validate access tokens, the Marketplace Application needs to occasionally get a public key from the IAM).
+1. The Marketplace Application processes the request.
+1. The Marketplace Application sends the appropriate response.
 
 ## The customer registers their AIIDA instance
 
