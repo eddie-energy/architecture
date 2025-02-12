@@ -1,6 +1,5 @@
 @startuml context-diagram-dataspace
 'context diagram
-caption Context Diagram: Interactions between the EDDIE System and its environment
 
 skinparam usecase {
   BorderColor black
@@ -20,15 +19,15 @@ skinparam actor {
   BackgroundColor white
 }
 
-rectangle "Gaia-X\nFramework" as gaiaX
+rectangle "Gaia-X" as gaiaX
 collections "External Energy Data Space\n(e.g. OneNet, Omega-X)" as dataSpaces
 usecase "\n\nEDDIE\nSystem\n\n" as eddie
 collections "Metering\nDevice" as smartMeter
-collections "Regional Energy\nDatahub" as regionalData
-collections "EP Website" as website
-collections "Service" as service
+collections "Regional Data-sharing\nInfrastructures" as regionalData
+rectangle "EP Website" as website
+collections "Services" as service
 
-actor "Eligible\nParties" as ep
+actor "Eligible\nParty" as ep
 actor "Customers" as customer
 
 gaiaX -down-> eddie : Offers\ncompliance\nservices
@@ -36,17 +35,18 @@ gaiaX -down-> dataSpaces : Offers\ncompliance\nservices
 
 eddie <-right-> dataSpaces : Data exchange\nbased on IDSA
 
-service -right-> eddie : Accesses\ncustomer data
+service -right-> eddie : Access\ncustomer data
 eddie -down-> regionalData : Accesses\ncustomer\nhistorical data
 eddie -down-> smartMeter : Accesses\ncustomer\nreal-time data
-website -right-> eddie : Forwards\ncustomer\ninformation
+' website -[hidden]right->eddie : test
 smartMeter -[hidden] regionalData : \t\t\t
-website -[hidden] gaiaX : \t\t\t\t\t\t
 
 
-ep -right-> service : Provide
-ep -up-> website : Provide
+ep -right-> service : Provides
+ep -up-> website : Provides
 
-customer -right-> website : Submit\ncustomer\ninformation
+website -right-> customer : Provides \ncustomer\npermission\nform
+customer -down-> eddie : Submit\ncustomer\npermission\nform
+customer -[hidden]right- gaiaX : \t\t\t\t\t\t
 
 @enduml
