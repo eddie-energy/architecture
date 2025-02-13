@@ -38,15 +38,15 @@ eddie <-right-> dataSpaces : Data exchange\nbased on IDSA
 service -right-> eddie : Access\ncustomer data
 eddie -down-> regionalData : Accesses\ncustomer\nhistorical data
 eddie -down-> smartMeter : Accesses\ncustomer\nreal-time data
-' website -[hidden]right->eddie : test
+eddie -left-> website : Provides \ncustomer\npermission\nform
 smartMeter -[hidden] regionalData : \t\t\t
 
 
 ep -right-> service : Provides
 ep -up-> website : Provides
 
-website -right-> customer : Provides \ncustomer\npermission\nform
+website -right-> customer : Displays \ncustomer\npermission\nform
 customer -down-> eddie : Submit\ncustomer\npermission\nform
-customer -[hidden]right- gaiaX : \t\t\t\t\t\t
+customer -[hidden]right- gaiaX : \t\t\t
 
 @enduml
