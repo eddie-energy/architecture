@@ -5,14 +5,16 @@ order: 1
 
 ## Context
 
-The behavior of the EDDIE Framework regarding handling historical validated energy consumption data of customers, needs to comply with the Implementing Act of the Smart Grids TaskForce (SGTF). To this end, the process diagrams below shows the place of the EDDIE Framework in the context of the following SGTF uses cases. 
+The behavior of the EDDIE Framework regarding handling historical validated energy consumption data of customers, needs to comply with the Implementing Act of the Smart Grids TaskForce (SGTF). To this end, the process diagrams below shows the place of the EDDIE Framework in the context of the following SGTF procedures. 
 
-- SGTF Use Case 2: Access to Historical Validated Consumption Data by the Eligible Party
-- SGTF Use Case 3: The Eligible Party Terminates a Service
-- SGTF Use Case 4: Revocation of an Active Consent
+- SGTF Procedure 1: <s> Access validated historical consumption data by the customer </s> [not covered by EDDIE]
+- SGTF Procedure 2: Access to Historical Validated Consumption Data by the Eligible Party
+- SGTF Procedure 3: The Eligible Party Terminates a Service
+- SGTF Procedure 4: Revocation of an Active Consent
 
+Below you will find an overview of how the three supported SGTF procedures interact with the EDDIE environment. The trigger that starts the support for procedure 2 is in white, procedure 3 in blue  and procedure 4 in purple. Note that procedure 3 concerning revocation has two possible triggers: the final customer (3a in the diagram) and the Metered Data Administrator (3b in the diagram).
 
-![](./figures/sgtf-use-cases.png)
+  ![](./figures/sgtf-use-cases.png)
 
 ### SGTF Use Case 2: Access to Historical Validated Consumption Data by the Eligible Party
 
