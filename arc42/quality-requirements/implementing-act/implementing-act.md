@@ -9,27 +9,40 @@ The behavior of the EDDIE Framework regarding handling historical validated ener
 
 - SGTF Procedure 1: <s> Access validated historical consumption data by the customer </s> [not covered by EDDIE]
 - SGTF Procedure 2: Access to Historical Validated Consumption Data by the Eligible Party
-- SGTF Procedure 3: The Eligible Party Terminates a Service
+- SGTF Procedure 3: <s> The Eligible Party Terminates a Service </s> [not covered by EDDIE]
 - SGTF Procedure 4: Revocation of an Active Consent
+- SGTF Procedure 5: <s> Activate near real-time flow from smart meter  </s> [not covered by EDDIE]
+- SGTF Procedure 6: Read near real-time flow from smart meter 
 
-Below you will find an overview of how the three supported SGTF procedures interact with the EDDIE environment. The trigger that starts the support for procedure 2 is in white, procedure 3 in blue  and procedure 4 in purple. Note that procedure 3 concerning revocation has two possible triggers: the final customer (3a in the diagram) and the Metered Data Administrator (3b in the diagram).
+### Overview 
+
+Below you will find an overview of how the three supported SGTF procedures interact with the EDDIE environment. The trigger that starts the support for procedure 2 is in white, procedure 3 in blue  and procedure 4 in purple. Note that procedure 4 concerning revocation has two possible triggers: the final customer (3a in the diagram) and the Metered Data Administrator (3b in the diagram).
 
   ![](./figures/sgtf-use-cases.png)
 
-### SGTF Use Case 2: Access to Historical Validated Consumption Data by the Eligible Party
+### SGTF Procedure 2: Access to Historical Validated Consumption Data by the Eligible Party
 
 To further aid in the interpretation of the diagrams, the following diagram is enhanced with a color scheme indicating what is directly within the scope of the EDDIE Framework, what is indirectly within scope (e.g. the communication between eligible party and metered data administrator) and what is out of scope (e.g. the customer identifying the eligible party).
 
 
 ![](./figures/sgtf-use-case-2.png)
 
-### SGTF Use Case 3: The Eligible Party Terminates a Service
+### SGTF Procedure 3: The Eligible Party Terminates a Service
 
-TBD
+Not applicable
 
-### SGTF Use Case 4: Revocation of an Active Consent
+### SGTFProcedure 4: Revocation of an Active Consent
 
 ![](./figures/revocation-of-an-active-consent.png)
+
+
+### SGTF Procedure 5: Activate near real-time flow from smart meter 
+
+Not applicable
+
+
+### SGTF Procedure 6: Read near real-time flow from smart meter 
+
 
 ## Stimulus
 
