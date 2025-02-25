@@ -73,7 +73,7 @@ The quality goals of the architecture aim at expressing the system's priorities 
 
 ## Stakeholders
 
-The stakeholders of the system's architecture include all roles and organizations that influence/depend on the architecture documentation, i.e., those who need to understand the architecture, interact with the system, or work with the source code. 
+The stakeholders of the EDDIE system include all roles and organizations that influence/depend on the architecture documentation, i.e., those who need to understand the architecture, interact with the system, or work with the source code. 
 An overview of the key stakeholders is provided below.
 
 ![](./figures/stakeholders.drawio.svg)
@@ -82,7 +82,7 @@ An overview of the key stakeholders is provided below.
 
 | Role | Stakeholder | Expectations |
 |-|-|-|
-| EDDIE project developers | EDDIE framework developers, AIIDA developers, Marketplace developers, Technical writers | Clear and maintainable documentation that facilitates easy and continuous contributions. |
+| Software developers | EDDIE framework developers, AIIDA developers, Marketplace developers, Technical writers | Clear and maintainable documentation that facilitates easy and continuous contributions. |
 | Eligible parties | Energy service providers, flexibility service providers, balance responsible parties | Well-documented architecture that explains the access to energy data, and the integration with energy services. |
 | Customers | End users, energy consumers, prosumers | Clear customer permission management processes and transparent data-sharing mechanisms. |
 | Energy data-sharing infrastructure operators | Distribution System Operators (DSOs), Transmission System Operators (TSOs), Meter Data Administrators (MDAs), Consent Administrators (CAs) | Well-documented data access processes, compliance with regulatory requirements. |
