@@ -86,7 +86,7 @@ An overview of the key stakeholders is provided below.
 | Eligible parties | Energy service providers, flexibility service providers, balance responsible parties | Well-documented architecture that explains the access to energy data, and the integration with energy services. |
 | Customers | End users, energy consumers, prosumers | Clear customer permission management processes and transparent data-sharing mechanisms. |
 | Energy data-sharing infrastructure operators | Distribution System Operators (DSOs), Transmission System Operators (TSOs), Meter Data Administrators (MDAs), Consent Administrators (CAs) | Well-documented data access processes, compliance with regulatory requirements. |
-| Open-source community | Software developers, energy community | Well-documented architecture, clear contribution guidelines, open access to source code. |
+| Open source community | Software developers, energy community | Well-documented architecture, clear contribution guidelines, open access to source code. |
 | IT System operators | Hosting providers, IT administrators, DevOps teams | Clear deployment documentation. |
 | Architecture decision-makers | System architects, technical leads, product owners | Well-defined architecture documentation, clear rationale for architectural decisions. |
 | Regulatory and compliance bodies | Policy makers, regulators, standardization organizations | Clear processes ensuring compliance with data protection regulations and energy data access policies. |
