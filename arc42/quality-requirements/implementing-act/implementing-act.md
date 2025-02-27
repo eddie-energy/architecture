@@ -43,6 +43,8 @@ Not applicable
 
 ### SGTF Procedure 6: Read near real-time flow from smart meter 
 
+![](./figures/read-near-real-time-data-from-smart-meter.png>)
+
 
 ## Stimulus
 
