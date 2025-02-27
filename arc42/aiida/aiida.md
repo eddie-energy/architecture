@@ -1,6 +1,6 @@
 ---
 title: AIIDA
-order: 5
+order: 7
 ---
 
 AIIDA is an in-house software system for accessing real time data from the customer's site and for sending it to the EDDIE framework. The customer can connect their local smart meters and other energy-collecting devices to it. AIIDA then shares the data with the EDDIE framework. This provides not only historical energy consumption data, which is shared by energy providers through EDDIE, but also near real-time data from individual households. The customer can manage, restrict access to, or completely remove their devices from the system at any time through an app or a small frontend interface.

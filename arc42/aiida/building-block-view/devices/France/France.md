@@ -1,0 +1,19 @@
+---
+title: France
+order: 2
+---
+The [Micro Teleinfo V3.0](https://www.tindie.com/products/hallard/micro-teleinfo-v30/) is an Adapter Device that supports smart meters in **France**. This Adapter Device is shown below.
+
+![](./figures/micro-teleinfo-V3.0.jpg)
+
+## Connection to Metering Devices
+
+The Micro Teleinfo connects to smart meters via the Téléinfo interface over a dedicated plug connector. Once connected, the Micro Teleinfo reads data from the smart meter, including real-time electricity consumption, total energy consumed, and other relevant data.
+
+## Connection to AIIDA
+
+The Micro Teleinfo connects to AIIDA via a USB port on the Raspberry Pi which receives serial data. This data is then sent to AIIDA via MQTT.
+
+ 
+
+

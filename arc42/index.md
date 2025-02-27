@@ -37,7 +37,7 @@ This document is organized as follows:
 1. [Context & Scope](./system-scope-and-context/system-scope-and-context.md). Includes the business scope, technical scope and prerequisites.
 1. [EDDIE Framework](/eddie_framework/eddie_framework). Providing core functionality of EDDIE
 1. [AIIDA](/aiida/aiida). Enabling in-house data access
-1. [EDDIE Marketplace](/marketplace/marketplace). Discover datasets and services based on EDDIE
+1. [Marketplace](/marketplace/marketplace). Discover datasets and services based on EDDIE
 1. [Crosscutting Concepts](./crosscutting-concepts/crosscutting-concepts.md). Includes information about important concepts used in the system.
 1. [Architectural Decisions](./architectural-decisions/architectural-decisions.md). Includes architectural decisions that affect the system.
 1. [Quality Requirements](./quality-requirements/quality-requirements.md). Includes requirements that need to be satisfied by the system.

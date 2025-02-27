@@ -1,6 +1,5 @@
 @startuml aiida_request_data
 'sequence diagram
-caption The customer requests data through EDDIE  Framework
 
 skinparam style strictuml
 skinparam sequence {
@@ -10,31 +9,27 @@ skinparam sequence {
 
 autonumber
 !pragma teoz true
-actor customer
 
-box "Device" as device
-end box
-
+' actor customer
 box "EP Infrastructure" #transparent
-
-    participant "EP Website" as website
-       participant "EP Service" as service
-      participant "EMQX IAM \nDatabase" as database
-    participant "EMQX MQTT \nBroker" as mqttbroker
+' participant "EP Website" as website
+participant "Service" as service
 end box
-    box "\tAIIDA\t\t"  #transparent
-    participant "AIIDA Regional \nConnector" as connector
-     participant "Timescale DB" as timescale
-      participant "AIIDA \nEmbedded App"  as app
-      participant "MQTT Broker" as broker
-  end box
+box "\tAIIDA\t\t"  #transparent
+participant "AIIDA Regional \nConnector" as connector
+participant "Timescale DB" as timescale
+participant "AIIDA \nEmbedded App"  as app
+participant "Adapter\n Device" as adapter
+end box
+participant "Metering\n Device" as device
 
+device -> adapter : sends energy\ndata
+adapter -> app : sends energy\ndata
+app -> timescale : stores energy\ndata
+app -> connector : streams energy data via MQTT
+connector -> service : streams energy \ndata via Kafka
 
+' website -> customer : show energy data
+' connector -> website : share energy data
 
-device -> broker : send energy data
-broker -> timescale : store energy data
-broker -> mqttbroker : share energy data 
-mqttbroker -> website : share energy data  
-website -> customer : show energy data
-mqttbroker -> service : share energy data
 @enduml

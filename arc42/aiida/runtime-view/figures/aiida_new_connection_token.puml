@@ -1,6 +1,5 @@
 @startuml aiida_new_connection_token
 'sequence diagram
-caption Establish a new connection via Token
 
 skinparam style strictuml
 skinparam sequence {
@@ -13,37 +12,29 @@ autonumber
 
 actor "Customer" as user
 box "EP Infrastructure" #transparent
-  participant "EP Website" as website
-  participant "EMQX IAM \nDatabase" as database
+participant "EP Website" as website
+participant "EMQX IAM \nDatabase" as database
 end box
-    box "\tAIIDA\t\t"  #transparent
-    participant "AIIDA Regional \nConnector" as connector
-      box "\t\tAIIDA Embedded App\t\t"  #transparent
-      participant "AIIDA Frontend" as frontend
-      participant "AIIDA Backend" as backend
-    end box
-  end box
+box "\tAIIDA\t\t"  #transparent
+participant "AIIDA Regional \nConnector" as connector
+box "\t\tAIIDA Embedded App\t\t"  #transparent
+participant "AIIDA Frontend" as frontend
+participant "AIIDA Backend" as backend
+end box
+end box
 
-
-user -> website : AIIDA connect
+user -> website : connect AIIDA
 activate website
-website -> connector : forward request
+website -> connector : request QR code/token
 activate connector
-connector -->> website : generate permission
+connector -->> website : QR code/token
 deactivate connector
-  website -->> user : show (QR-Code/ Token)
+website -->> user : QR-Code/ Token
 deactivate website
 
-
-  user -> frontend : insert Token, add new permission
- 
-      frontend -> backend : access
-
-    backend  -> connector : establish connection
-
-    connector -> database : create user
-
-
-
+user -> frontend : insert Token, add new permission
+frontend -> backend : token \npermission
+backend -> connector : establish connection via MQTT
+connector -> database : create user
 
 @enduml
