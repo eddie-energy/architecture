@@ -5,19 +5,16 @@ order: 2
 
 ## Overview
 
-The AIIDA App is a smartphone application for the customer to access and configure the AIIDA Backend of the embedded app, similar to the AIIDA Frontend. Since the AIIDA Backend runs on the in-house device connected to the house's local area network, the AIIDA App needs to be on the same network as well. This is done for security purposes so that only the customer can configure the AIIDA Backend. 
-The AIIDA App enables the following functionalities:
+The AIIDA Smartphone App is a smartphone application for the customer developed using the Jetpack Compose framework. Similar to the AIIDA Frontend, the AIIDA Smartphone App needs to be connected to the same local area network as the AIIDA Embedded App. Using the local area network, the AIIDA Smartphone App uses DNS Service Discovery to find the port of the AIIDA Embedded App and establish a connection. Through the AIIDA Smartphone App, the customer can manage the connections and permissions of AIIDA (similar to the AIIDA Frontend). The AIIDA Smartphone App enables the following functionalities:
 
-1. Scan a QR code from the EP website to configure the connection to the Smart Meter and the EDDIE Framework automatically.
+1. Scan a QR code from the EP website to configure the connection to the EDDIE Framework automatically.
 1. View active and inactive connections/permissions.
 1. Manage existing connections/permissions (e.g., activate, terminate, etc.)
 
-When scanning a QR code from the EP Website, the AIIDA App shows the configurations to the customer who is expected to either accept the configurations (i.e., give permission for data access), or reject the configurations (i.e., deny the permission for data access). This is shown in the figure below.
+When scanning a QR code from the EP Website, the AIIDA Smartphone App shows the available configurations to the customer who is expected to either accept the configurations (i.e., give permission for data access), or reject the configurations (i.e., deny the permission for data access). This is shown in the figure below.
 
 ![](./figures/aiida-app.png)
 
-The termination of an active permission for data access can also be executed via the AIIDA App. This is shown in the figure below which shows that the customer first has to select the "Terminate Permission" option (a), then confirm the termination (b), and then observe that the termination was executed by the status change to "TERMINATED".
+The termination of an active permission for data access can also be executed via the AIIDA App. This is illustrated in the figure below, which shows that the customer first has to select the "Terminate Permission" option (a), then confirm the termination (b), and then observe that the termination was executed by the status change to "TERMINATED".
 
 ![](./figures/aiida-app-termination.png)
-
-After scanning the QR-Code the AIIDA App first establishes a connection with the Backend of the AIIDA embedded app via DNS Service Discovery, which means that both services have to be in the same network. After the connection is established information that was accessed via scanning the QR-code (e.g., how to connect to the regional connector) is sent through a REST-API via HTTP. 
