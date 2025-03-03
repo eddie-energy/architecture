@@ -25,15 +25,15 @@ end box
 
 user -> website : connect AIIDA
 activate website
-website -> connector : request QR code/token
+website -> connector : request QR code, token
 activate connector
-connector -->> website : QR code/token
+connector -->> website : QR code, token
 deactivate connector
-website -->> user : QR-Code/ Token
+website -->> user : show QR code, \ntoken
 deactivate website
 
-user -> frontend : scan QR Code, add new permission
-frontend -> backend : token \npermission
+user -> frontend : scan QR code, add new permission
+frontend -> backend : QR code information,\n permission
 backend -> connector : establish connection via MQTT
 connector -> database : create user
 

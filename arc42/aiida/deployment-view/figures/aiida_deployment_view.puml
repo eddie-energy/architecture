@@ -19,14 +19,14 @@ skinparam rectangle{
 
 rectangle "AIIDA System" {
   node "Eligible Party Infrastructure"  as epInfra{
-    rectangle "EDDIE Framework" {
       artifact "AIIDA Regional\nConnector" as regcon
-    }
     artifact "EMQX \nMQTT Broker" as broker
     artifact "EMQX \nIAM DB" as emqxiam
 
     broker -right- emqxiam : SQL
     regcon -down- broker : MQTT
+    regcon -down- emqxiam : SQL
+
   }
 
   node "Smartphone" as smartphone{
@@ -43,40 +43,18 @@ rectangle "AIIDA System" {
     db -[hidden]right- nano
   }
 
-  embapp -up- app : DNS Service\nDiscovery
+  embapp -up- app : HTTP
   embapp -right- broker : MQTT
 
   ' frame "Device Austria" as device2
   ' frame "Device France" as device3
 node "Adapter Device" as adapterDevice
 }
-node "Smart Meter" as smartmeter
+node "Metering Device" as smartmeter
 
-adapterDevice -left- embapp :  Wired Connection\ne.g., USB
+adapterDevice -[hidden]left- embapp
 adapterDevice -left- nano : MQTT
 
-smartmeter -up- adapterDevice : Wired Connection\ne.g., RJ12
-
-
-' frame "Enedis" as enedis
-' frame "Smart Meter" as smartmeter2
-
-' device1 -left- smartmeter1:\n\nPhysical\ninterfaces
-' device2 -left- smartmeter2:\n\nPhysical\ninterfaces
-' device3 -left- enedis:\nTIC\n(2-wire)
-
-
-
-' embapp -right- device1:USB
-' embapp -right- device3:Modbus TCP
-' nano -right- device2:MQTT
-' device1 -[hidden]down- device2
-' device2 -[hidden]down- device3
-' epInfra -[hidden]right- aiida
-' enedis -[hidden]left-device3
-
-
-
-
+smartmeter -up- adapterDevice : DSMR
 
 @enduml
