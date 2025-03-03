@@ -19,16 +19,16 @@ The Marketplace system implements the following workflows which are further disc
 ![](./figures/marketplace-create-account.svg)
 
 1. A customer or an eligible party uses the Customer Mobile App or the EP Web App, respectively, to request a new account. 
-1. The Customer Mobile App/EP Web App send the request for a new account to the Marketplace Application.
+1. The Customer Mobile App/EP Web App sends the request for a new account to the Marketplace Application.
 1. The Marketplace Application redirects the customer/eligible party to the IAM.
 1. The customer/eligible party creates a new account at the IAM.
-1. The IAM stores the new account at the Database.
+1. The IAM stores the new account in the Database.
 1. The new account is stored in the Database.
 1. The Customer Mobile App/EP Web App is notified.
 
-After creating an account, requests from Customer Mobile Apps/EP Web Apps are authenticated using the account credentials and tokens from the IAM, as shown below.
+After creating an account, requests from Customer Mobile Apps/EP Web Apps are authenticated based on OAuth2 using the account credentials and tokens from the IAM.
 
-![](./figures/marketplace-authenticate-user.svg)
+<!-- ![](./figures/marketplace-authenticate-user.svg)
 
 1. The customer/eligible party submits their account credentials to login via the Customer Mobile App/EP Web App.
 1. The App sends the credentials to the IAM to authenticate the user account.
@@ -42,13 +42,13 @@ After creating an account, requests from Customer Mobile Apps/EP Web Apps are au
 1. The App includes the access token in the request to the Marketplace Application.
 1. The Marketplace Application validates the access token (to validate access tokens, the Marketplace Application needs to occasionally get a public key from the IAM).
 1. The Marketplace Application processes the request.
-1. The Marketplace Application sends the appropriate response.
+1. The Marketplace Application sends the appropriate response. -->
 
 ## The customer registers their AIIDA instance
 
 ![](./figures/marketplace-register-aiida.svg)
 
-The prerequisite of this workflow is that the customer uses the AIIDA Smartphone App to register their AIIDA instance at the Marketplace, which leads to sending the AIIDA IP and ID to the Marketplace and storing them as an AIIDA instance at the Database.
+The prerequisite for this workflow is that the customer uses the AIIDA Smartphone App to register their AIIDA instance at the Marketplace, which leads to sending the AIIDA IP and ID to the Marketplace, and storing them as an AIIDA instance in the Database.
 
 1. The customer requests to register their AIIDA instance at the Customer Mobile App using the AIIDA ID.
 1. The Customer Mobile App forwards the registration request to the Marketplace Application, including the AIIDA ID.
@@ -70,10 +70,10 @@ The prerequisite of this workflow is that the customer uses the AIIDA Smartphone
 
 ![](./figures/marketplace-create-request.svg)
 
-1. The eligible party fills out a form (with all the required information) at the EP Web App to create a data request/service. When creating a data request, a suitable query is also added by the eligible party. This query is later executed by AIIDA in the workflow to search for AIIDA instances having data that match this data request.
+1. The eligible party fills out a form (with all the required information) in the EP Web App to create a data request/service. When creating a data request, a suitable query is also added by the eligible party. This query is later executed by AIIDA in the workflow to search for AIIDA instances having data that match this data request.
 1. The EP Web App sends this form to the Marketplace Application.
 1. The Marketplace Application stores the data request/service information in the Database.
-1. The data request/service is stored at the Database.
+1. The data request/service is stored in the Database.
 1. The Marketplace Application notifies the EP Web App that the data request/service is stored.
 
 ## The eligible party searches AIIDA instances for energy data

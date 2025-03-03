@@ -3,14 +3,22 @@ title: Architectural Decisions
 order: 5
 ---
 
-## Monolithic vs. Microservice Deployment
+## Monolithic deployment of the Marketplace
+
 ### Context
-The goal of the Marketplace is to enable customers to find and use energy services, while eligible parties can access the customer data they need. Concerns were raised about the operational complexities of microservices, particularly around managing inter-service communication and deployment overhead.
+
+The goal of the Marketplace is to enable customers to find and use energy services, and to enable eligible parties to find customer data. When designing such a system, the operational complexity of a microservice approach, particularly regarding inter-service communication and deployment overhead, may become concerning.
+
 ### Decision
+
 Opt for a monolithic deployment to simplify development, testing, and maintenance efforts, ensuring quicker delivery and fewer integration challenges.
+
 ### Consequences
+
 This decision reduces system complexity and accelerates initial implementation but may limit scalability and flexibility in the long term if requirements evolve significantly.
+
 ### Alternatives
+
 Employ a microservice architecture, which would involve breaking functionalities into smaller, independently deployable units.
 
 <!--
