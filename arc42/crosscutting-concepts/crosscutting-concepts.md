@@ -6,7 +6,7 @@ order: 10
 The EDDIE System is designed to foster seamless interoperability in energy data exchanges by utilizing advanced models, standards, and data-sharing techniques. It integrates certain key concepts such as CIM (Common Information Model) and Dataspace principles, with a focus on processes and components specific to the energy sector.
 
 ## "Under-the-Hood" Technical Concepts  
-- Common Information Model (CIM) Integration:  
+- **Common Information Model (CIM)** Integration:  
   - The Interoperable Communication Component of the EDDIE Framework translates incoming data into CIM, ensuring semantic interoperability.  
   - The CIM-based Master Data Model enables consistent data processing and exchange.  
 - **Dataspace**:  
