@@ -10,10 +10,11 @@ The behavior of the EDDIE Framework regarding handling historical validated ener
 - SGTF Procedure 1: <s> Access validated historical consumption data by the customer </s> [not covered by EDDIE]
 - SGTF Procedure 2: Access to Historical Validated Consumption Data by the Eligible Party
 - SGTF Procedure 3: <s> The Eligible Party Terminates a Service </s> [not covered by EDDIE]
-- SGTF Procedure 4: Revocation of an Active Consent
+- SGTF Procedure 4: Revocation of an Active Permission
 - SGTF Procedure 5: <s> Activate near real-time flow from smart meter  </s> [not covered by EDDIE]
 - SGTF Procedure 6: Read near real-time flow from smart meter 
 
+Note:  As of Januari 2024 the Smart Grids TaskForce passed over his work on drafting implementation acts to the Joined Working Group.
 ### Overview 
 
 Below you will find an overview of how the three supported SGTF procedures interact with the EDDIE environment. The trigger that starts the support for procedure 2 is in white, procedure 3 in blue  and procedure 4 in purple. Note that procedure 4 concerning revocation has two possible triggers: the final customer (3a in the diagram) and the Metered Data Administrator (3b in the diagram).
@@ -31,9 +32,9 @@ To further aid in the interpretation of the diagrams, the following diagrams are
 
 Not applicable
 
-### SGTFProcedure 4: Revocation of an Active Consent
+### SGTFProcedure 4: Revocation of an Active Permission
 
-![](./figures/revocation-of-an-active-consent.png)
+![](./figures/revocation-of-an-active-Permission.png)
 
 
 ### SGTF Procedure 5: Activate near real-time flow from smart meter 
@@ -49,13 +50,19 @@ Not applicable
 ## Stimulus
 
 There is a different stimulus for every use case, as shown below.
-- Procedure 2: The customer fills out the consent form of the EDDIE Framework, and the EDDIE Framework initiates the process of accessing the historical validated data from the Regional Data-sharing Infrastructure.
-- Procedure 4: TBD
-- Procedure 6: TBD
+- Procedure 2: The final customer fills out the Permission form of the EDDIE Framework, and the EDDIE Framework initiates the process of accessing the historical validated data from the Regional Data-sharing Infrastructure.
+- Procedure 4: Either the final customer or the Metering Data administrator initiates this process.
+- Procedure 6: The EDDIE framework, i.c. AIIDA (the Adminsitrative Inhouse Interface for Data Access) is triggered by a message received by the smart meter. 
 
 ## Response
 
 There is a different response for every use case, as shown below.
 - Procedure 2: The EDDIE Framework follows the process indicated by the SGTF use case 2 (show in the diagram above) to access the historical validated data of the customer.
-- Procedure 4: TBD
-- Procedure 6: TBD
+- Procedure 4: The revocation of an active Permission is finall
+- Procedure 6: The smart meter data is processed by The EDDIE framework, i.c. AIIDA, and made distributable to eligible parties.
+
+## Useful Links
+
+[implementing regulation] (https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1162 )
+
+[demand response draft ] (https://consultations.entsoe.eu/markets/public-consultation-networkcode-demand-response/  )
