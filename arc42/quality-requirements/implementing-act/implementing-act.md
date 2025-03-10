@@ -22,7 +22,7 @@ Below you will find an overview of how the three supported SGTF procedures inter
 
 ### SGTF Procedure 2: Access to Historical Validated Consumption Data by the Eligible Party
 
-To further aid in the interpretation of the diagrams, the following diagram is enhanced with a color scheme indicating what is directly within the scope of the EDDIE Framework, what is indirectly within scope (e.g. the communication between eligible party and metered data administrator) and what is out of scope (e.g. the customer identifying the eligible party).
+To further aid in the interpretation of the diagrams, the following diagrams are enhanced with a color scheme indicating what is directly within the scope of the EDDIE Framework, what is indirectly within scope (e.g. the communication between eligible party and metered data administrator) and what is out of scope (e.g. the customer identifying the eligible party).
 
 
 ![](./figures/sgtf-use-case-2.png)
@@ -49,13 +49,13 @@ Not applicable
 ## Stimulus
 
 There is a different stimulus for every use case, as shown below.
-- Use case 2: The customer fills out the consent form of the EDDIE Framework, and the EDDIE Framework initiates the process of accessing the historical validated data from the Regional Data-sharing Infrastructure.
-- Use case 3: TBD
-- Use case 4: TBD
+- Procedure 2: The customer fills out the consent form of the EDDIE Framework, and the EDDIE Framework initiates the process of accessing the historical validated data from the Regional Data-sharing Infrastructure.
+- Procedure 4: TBD
+- Procedure 6: TBD
 
 ## Response
 
 There is a different response for every use case, as shown below.
-- Use case 2: The EDDIE Framework follows the process indicated by the SGTF use case 2 (show in the diagram above) to access the historical validated data of the customer.
-- Use case 3: TBD
-- Use case 4: TBD
+- Procedure 2: The EDDIE Framework follows the process indicated by the SGTF use case 2 (show in the diagram above) to access the historical validated data of the customer.
+- Procedure 4: TBD
+- Procedure 6: TBD
