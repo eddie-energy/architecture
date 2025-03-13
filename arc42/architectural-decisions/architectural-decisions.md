@@ -3,32 +3,14 @@ title: Architectural Decisions
 order: 11
 ---
 
-> [!NOTE]
-> The main architectural decisions would be:
->
-> #### EDDIE Online / multi-tenant use of EDDIE FW
-> - Why Kafka pub/sub isn't suitable for EDDIE Online
->
-> #### Framework
-> - Plugin architecture with in/out facing plugins
-> - Monolithic vs. (micro-) service style deployment
-> - Modularized frontend instead of a monolithic one
-> - Use HTML custom elements for integration in the EP app
->
-> #### AIIDA
-> - In-house device vs hosted service (as there are recurring discussions about AIIDA in the cloud)
-> - Use MQTT for communication with Framework
-> - How MQTT user management is integrated with the Framework (DB-based)
+The implementation of the EDDIE system, as a system of systems, involves a series of key architectural decisions, each evaluated to address the unique requirements of the overall system.
+The table below lists the architectural decisions for each individual system in their respective sections.
 
-Various architectural decisions are discussed for the implementation of this system. The table below shows an overview of these decisions.
-
-| No. | Title  | Status | Section |
-| - | - | - | - |
-| AD1 | Dedicated in-house device. | Accepted | [Link](./in-house-device/in-house-device.md) |
-| AD2 | Publish/subscribe mechanism for sending data from the EDDIE Framework to the Services. | Accepted | [Link](./kafka-for-sending-data-to-services/kafka-for-sending-data-to-services.md) |
-| AD3 | Implement the permission Facade as a microfrontend. | Accepted | [Link](./consent-facade-microfrontend/consent-facade-microfrontend.md) |
-| AD4 | Publish/subscribe mechanism for sending data from AIIDA to the EDDIE Framework. | Draft | [Link](./kafka-for-sending-data-to-framework/kafka-for-sending-data-to-framework.md) |
-| AD5 | Deployment of a database for storing the internal state of the EDDIE Framework. | Draft | Link |
+| EDDIE system  | Section |
+| - | - |
+| EDDIE Framework | [Link](../eddie_framework/architectural-decisions/architectural-decisions.md) |
+| AIIDA | [Link](../aiida/architectural-decisions/architectural-decisions.md) |
+| Marketplace | [Link](../marketplace/architectural-decisions/architectural-decisions.md) |
 
 <!-- | AD3 | - | - | - | -->
 

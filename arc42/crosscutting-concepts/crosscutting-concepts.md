@@ -3,7 +3,7 @@ title: Crosscutting Concepts
 order: 10
 ---
 
-The EDDIE System incorporates certain concepts across multiple components:
+The EDDIE system incorporates certain concepts across multiple components:
 - Dataspace
 - Common Information Model
 - Smart Grid Architecture Model
@@ -47,7 +47,7 @@ CIM is an object-oriented model based on UML defining both syntax and semantics.
 
 ### Relevance
 
-The EDDIE System uses CIM to address interoperability concerns arising from diverse entities communicating with the EDDIE Framework. These include:
+The EDDIE system uses CIM to address interoperability concerns arising from diverse entities communicating with the EDDIE Framework. These include:
 
 - Smart meters generating data in various formats.
 - Metered data administrators providing historical data in different formats.
@@ -84,7 +84,7 @@ SGAM is organized into six main views:
 1. Deployment view: Defines the deployment scenarios and configurations of the smart grid system.
 
 ### Relevance
-SGAM provides reference points, e.g., scenarios, workflows, and data models, that aid the technical and conceptual development of the EDDIE System. SGAM provides a standardized way of organizing and describing the different components of the smart grid system, which are of relevance as well. 
+SGAM provides reference points, e.g., scenarios, workflows, and data models, that aid the technical and conceptual development of the EDDIE system. SGAM provides a standardized way of organizing and describing the different components of the smart grid system, which are of relevance as well. 
 
 ### Motivation
 SGAM provides a comprehensive and standardized way of organizing and describing the different components of a smart grid system, allowing for better communication and collaboration between different stakeholders and organizations involved in the development and implementation of smart grids. It provides a common language and framework for describing the different layers and functions of the smart grid system, as well as the communication networks and protocols that need to be used for exchanging information between different components of the smart grid system.
@@ -105,7 +105,7 @@ SAREF comprises a main ontology, SAREF, and several sub-ontologies such as SAREF
 ### Relevance
 In the context of IoT, SAREF is used to ensure the interoperability and semantic consistency of smart appliances, enabling their integration into a larger smart system. SAREF provides a standardized vocabulary for describing smart appliances, which allows different applications and systems to communicate with each other using a common language.
 
-In the EDDIE System, SAREF is relevant for the EDDIE Database and the services that acquire data from this database for further processing. The use of SAREF in these components ensures the interoperability and consistency of energy consumption data from smart appliances.
+In the EDDIE system, SAREF is relevant for the EDDIE Database and the services that acquire data from this database for further processing. The use of SAREF in these components ensures the interoperability and consistency of energy consumption data from smart appliances.
  
  ### Motivation
 SAREF is developed by ETSI, which ensures that it is developed in line with industry requirements and standards. It is also supported by several organizations and initiatives, such as the European Union-funded FIWARE project, which aims to promote the development of IoT applications and services.

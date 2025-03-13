@@ -21,6 +21,24 @@ MQTT improves scalability while handling real-time data well, and reduces the ov
 
 Alternatives include point-to-point communication, e.g., using CoAP or HTTP, which can be resource-intensive when running at scale.
 
+## Using EMQX IAM for user management
+
+### Context
+
+The AIIDA system requires secure authentication and authorization for MQTT interactions. The EMQX IAM Database manages user accounts, ensuring each AIIDA instance has restricted access to designated topics, preventing unauthorized data exchange. It also stores customer, topic, group, and permission data, enabling fine-grained security policies.
+
+### Decision
+
+The EMQX IAM Database is used for SQL-based authentication and authorization, enforcing topic access rules. Security policies define who can access which topics and allowed actions (e.g., publish, subscribe). This ensures strict data flow separation between AIIDA instances.
+
+### Consequences
+
+The EMQX IAM Database enforces access control and provides centralized management ensuring consistency. Additionally, its scalable security policies can adapt to evolving system needs. However, centralized management requires ongoing effort and introduces additional complexity and potential performance overhead.
+
+### Alternatives
+
+Alternatives include static configuration, which offers simplicity with hardcoded permissions but lacks flexibility, and external identity providers such as OAuth2, OpenID, or LDAP, which enable unified authentication but introduce additional complexity.
+
 ## Dedicated In-house Device
 
 ### Context

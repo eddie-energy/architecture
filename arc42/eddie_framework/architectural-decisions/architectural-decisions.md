@@ -5,6 +5,16 @@ order: 5
 
 ::: warning NOT FINISHED
 This section has to be re-worked.
+
+Moved from overall Architectural Decisions:
+> #### EDDIE Online / multi-tenant use of EDDIE FW
+> - Why Kafka pub/sub isn't suitable for EDDIE Online
+>
+> #### Framework
+> - Plugin architecture with in/out facing plugins
+> - Monolithic vs. (micro-) service style deployment
+> - Modularized frontend instead of a monolithic one
+> - Use HTML custom elements for integration in the EP app
 :::
 
 > ## General Decisions
@@ -53,7 +63,7 @@ Alternatives:
 > [!WARNING]
 > The permission facade doesn't exist as a component in the architecture but it's spread across the EDDIE core and region connectors. As such it can be embedded as a microfrontend but consists itself of multiple ones. HTML custom elements should be mentioned.
 
-
+## Context
 The Permission Facade is the component that handles the process of acquiring the consent of the customer for access to their historical and real-time data. This component needs to be accessible from the EP Website so that customers can give their consent to the eligible party. 
 
 ### Decision
