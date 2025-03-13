@@ -52,7 +52,7 @@ node "Adapter Device" as adapterDevice
 }
 node "Metering Device" as smartmeter
 
-adapterDevice -[hidden]left- embapp
+adapterDevice -left- embapp : HTTP
 adapterDevice -left- nano : MQTT
 
 smartmeter -up- adapterDevice : DSMR
