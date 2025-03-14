@@ -4,23 +4,23 @@ order: 10
 ---
 
 Vasious concepts are relevcant across the EDDIE system such as:
-- Dataspace
+- Data Space
 - Data Models
     - Common Information Model
     - Smart Grid Architecture Model
     - Smart Appliances REFerence ontology
   
 
-## Dataspace
+## Data Space
 ### Definition
 <!-- What it is -->
 
-The concept of a dataspace describes a federated system whereby organizations can share data in alignment with the principles of data sovereignty. Dataspaces facilitate secure, trusted, and interoperable data exchange across sectors. There are two prime initiatives that drive the adoption of dataspaces: IDSA (International Data Spaces Association) which focuses on defining specifications and standards for sharing sovereign data, and Gaia-X that focuses on compliance within and across dataspaces. Based on these initiatives, a dataspace is a system that includes multiple software applications for sharing sovereign data, such as dataspace connectors, registries for data and metadata, and identity management.
+The concept of a data space describes a federated system whereby organizations can share data in alignment with the principles of data sovereignty. Data Spaces facilitate secure, trusted, and interoperable data exchange across sectors. There are two prime initiatives that drive the adoption of data spaces: IDSA (International Data Spaces Association) which focuses on defining specifications and standards for sharing sovereign data, and Gaia-X that focuses on compliance within and across data spaces. Based on these initiatives, a data space is a system that includes multiple software applications for sharing sovereign data, such as dataspace connectors, registries for data and metadata, and identity management.
 
 ### Relevance
 <!-- Where it is used, i.e., in what parts of EDDIE -->
 
-The focus of the EDDIE project is to create a domain-specific data space tailored to the energy sector. This approach includes domain-specific processes and components designed to handle energy data. While general-purpose data spaces are broad and flexible, they may not be directly applicable to the specific needs of the energy sector. For this reason, EDDIE create a data data space that is similar to what is defined by data space initiatives but is able to meet the specific requirements of the energy sector. 
+The goal of the EDDIE system is to create a domain-specific data space tailored to the energy sector. This approach includes domain-specific processes designed to handle energy data. While general-purpose data spaces are broad and flexible, they may not be directly applicable to the specific needs of the energy sector. For this reason, the EDDIE system creates a data space that is similar to what is defined by data space initiatives but is able to meet the specific requirements of the energy sector. 
 
 ## Data Models
 ### Common Information Model (CIM)
@@ -98,7 +98,7 @@ In the context of IoT, SAREF is used to ensure the interoperability and semantic
 In the EDDIE system, SAREF is relevant for the EDDIE Database and the services that acquire data from this database for further processing. The use of SAREF in these components ensures the interoperability and consistency of energy consumption data from smart appliances.
  
 #### Motivation
-SAREF is developed by ETSI, which ensures that it is developed in line with industry requirements and standards. It is also supported by several organizations and initiatives, such as the European Union-funded FIWARE project, which aims to promote the development of IoT applications and services.
+SAREF is developed by ETSI, which ensures that it is developed in line with industry requirements and standards. It is also supported by several organizations and initiatives, such as the FIWARE project, which aims to promote the development of IoT applications and services.
 
 Alternative models to SAREF include:
 
