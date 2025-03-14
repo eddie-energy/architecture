@@ -2,6 +2,8 @@
 title: Architectural Decisions
 order: 5
 ---
+This section outlines key architectural decisions made for the Marketplace system:
+- Monolithic deployment of the Marketplace
 
 ## Monolithic deployment of the Marketplace
 

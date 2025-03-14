@@ -3,6 +3,11 @@ title: Architectural Decisions
 order: 5
 ---
 
+This section outlines key architectural decisions made for the AIIDA system:
+- Mechanism to send data from AIIDA to the EDDIE Framework
+- Using EMQX IAM for user management
+- Dedicated In-house Device
+
 ## Mechanism to send data from AIIDA to the EDDIE Framework
 
 ### Context
