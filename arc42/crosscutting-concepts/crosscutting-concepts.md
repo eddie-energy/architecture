@@ -22,6 +22,9 @@ The concept of a data space describes a federated system whereby organizations c
 
 The goal of the EDDIE system is to create a domain-specific data space tailored to the energy sector. This approach includes domain-specific processes designed to handle energy data. While general-purpose data spaces are broad and flexible, they may not be directly applicable to the specific needs of the energy sector. For this reason, the EDDIE system creates a data space that is similar to what is defined by data space initiatives but is able to meet the specific requirements of the energy sector. 
 
+### Relevance
+Data spaces are used for managing data according to [European Strategy for Data](https://digital-strategy.ec.europa.eu/en/policies/strategy-data).
+
 ## Data Models
 ### Common Information Model (CIM)
 
