@@ -35,9 +35,10 @@ This document is organized as follows:
 1. [Introduction and goals](./introduction-and-goals/introduction-and-goals.md). Includes the background, business goals, essential requirements and roles. 
 1. [Architectural Constraints](./architectural-constraints/architectural-constraints.md). Includes the political and business constraints.
 1. [Context & Scope](./system-scope-and-context/system-scope-and-context.md). Includes the business scope, technical scope and prerequisites.
-1. [EDDIE Framework](/eddie_framework/eddie_framework). Providing core functionality of EDDIE
-1. [AIIDA](/aiida/aiida). Enabling in-house data access
-1. [Marketplace](/marketplace/marketplace). Discover datasets and services based on EDDIE
+1. [EDDIE Framework](/eddie_framework/eddie_framework). Provides core functionality of the system.
+1. [AIIDA](/aiida/aiida). Enables in-house data access.
+1. [Marketplace](/marketplace/marketplace). Provides discovery of datasets and services of the system.
+1. [Deployment View](/deployment-view/deployment-view.md). Maps the building blocks of the system.
 1. [Crosscutting Concepts](./crosscutting-concepts/crosscutting-concepts.md). Includes information about important concepts used in the system.
 1. [Architectural Decisions](./architectural-decisions/architectural-decisions.md). Includes architectural decisions that affect the system.
 1. [Quality Requirements](./quality-requirements/quality-requirements.md). Includes requirements that need to be satisfied by the system.
