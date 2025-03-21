@@ -1,0 +1,34 @@
+@startuml deployment-diagram-eddie
+'deployment diagram
+
+skinparam component{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam package {
+  BorderColor black
+  BackgroundColor white
+}
+skinparam node{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam collections {
+  BorderColor black
+  BackgroundColor white
+}
+skinparam rectangle {
+  BorderColor black
+  BackgroundColor transparent
+}
+
+rectangle "EDDIE System" {
+  rectangle "\t\t\tAIIDA\t\t\t\n\n" as aiidaSystem
+  rectangle "\t\tEDDIE Framework\t\t\n\n" as eddieSystem
+  rectangle "\t\tMarketplace\t\t\t\n\n" as marketplaceSystem
+
+  eddieSystem -down- aiidaSystem: "MQTT"
+  aiidaSystem -right- marketplaceSystem : "HTTP"
+}
+
+@enduml

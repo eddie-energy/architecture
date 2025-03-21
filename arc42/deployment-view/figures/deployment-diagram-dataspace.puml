@@ -1,6 +1,5 @@
 @startuml deployment-diagram-dataspace
 'deployment diagram
-caption Deployment Diagram: Connections between the EDDIE Dataspace and its environment 
 
 
 skinparam component{
