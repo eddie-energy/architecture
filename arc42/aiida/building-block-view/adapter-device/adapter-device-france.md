@@ -1,6 +1,8 @@
 ---
-title: France
+title: Adapter Device for Smart Meters in France
 order: 2
+hiddenInSidebar: true
+
 ---
 The [Micro Teleinfo V3.0](https://www.tindie.com/products/hallard/micro-teleinfo-v30/) is an Adapter Device that supports smart meters in **France**. This Adapter Device is shown below.
 

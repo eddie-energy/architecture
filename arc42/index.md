@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "EDDIE Architecture"
-  text: "Software Architecture for the EDDIE Project"
-  tagline: European Distributed Data Infrastructure For Energy
+  # name: "Software Architecture of the EDDIE Project"
+  text: "Software Architecture of the EDDIE Project"
+  tagline: According to the Arc42 architecture template
   image: figures/Lego-Eddie.png
   actions:
     - theme: brand
@@ -22,7 +22,7 @@ features:
   - title: AIIDA
     details: Enabling in-house data access
     link: /aiida/aiida
-  - title: EDDIE Marketplace
+  - title: Marketplace
     details: Discover datasets and services based on EDDIE
     link: /marketplace/marketplace
 ---
