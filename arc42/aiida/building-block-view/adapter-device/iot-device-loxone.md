@@ -4,7 +4,7 @@ order: 6
 hiddenInSidebar: true
 ---
 
-Loxone is a proprietary smart home system for monitoring and controlling IoT devices. Loxone also provides proprietary IoT devices that seamlessly integrate with the Loxone system.
+[Loxone](https://www.loxone.com/) is a proprietary smart home system for monitoring and controlling IoT devices. Loxone also provides proprietary IoT devices that seamlessly integrate with the Loxone system.
 
 ## Connection to Metering Devices
 

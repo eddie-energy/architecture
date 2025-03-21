@@ -4,7 +4,7 @@ order: 5
 hiddenInSidebar: true
 ---
 
-Matter is a technical standard for smart home and IoT devices. Due to its popularity and support by IoT companies, a growing number of devices support Matter connectivity.
+[Matter](https://csa-iot.org/all-solutions/matter/) is a technical standard of the Connectivity Standards Alliance for smart home and IoT devices. Due to its popularity and support by IoT companies, a growing number of devices support Matter connectivity.
 
 ## Connection to Metering Devices
 
