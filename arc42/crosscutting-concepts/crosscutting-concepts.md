@@ -3,34 +3,34 @@ title: Crosscutting Concepts
 order: 10
 ---
 
-Vasious concepts are relevcant across the EDDIE system such as:
+Various concepts are relevant across the EDDIE system such as:
 - Data Space
 - Data Models
-    - Common Information Model
-    - Smart Grid Architecture Model
-    - Smart Appliances REFerence ontology
+    - Common Information Model (CIM)
+    - Smart Grid Architecture Model (SGAM)
+    - Smart Appliances REFerence ontology (SAREF)
   
 
 ## Data Space
 ### Definition
 <!-- What it is -->
 
-The concept of a data space describes a federated system whereby organizations can share data in alignment with the principles of data sovereignty. Data Spaces facilitate secure, trusted, and interoperable data exchange across sectors. There are two prime initiatives that drive the adoption of data spaces: IDSA (International Data Spaces Association) which focuses on defining specifications and standards for sharing sovereign data, and Gaia-X that focuses on compliance within and across data spaces. Based on these initiatives, a data space is a system that includes multiple software applications for sharing sovereign data, such as dataspace connectors, registries for data and metadata, and identity management.
+The concept of a data space describes a federated system whereby organizations can share data in alignment with the principles of data sovereignty. Data Spaces facilitate secure, trusted, and interoperable data exchange across sectors. There are two prime initiatives that drive the adoption of data spaces: IDSA (International Data Spaces Association) which focuses on defining processes and specifications for sharing sovereign data, and Gaia-X that focuses on compliance within and across data spaces. Based on these initiatives, a data space is a system that includes multiple software applications for sharing sovereign data, such as dataspace connectors, registries for data and metadata, and identity management.
 
 ### Relevance
 <!-- Where it is used, i.e., in what parts of EDDIE -->
 
-The goal of the EDDIE system is to create a domain-specific data space tailored to the energy sector. This approach includes domain-specific processes designed to handle energy data. While general-purpose data spaces are broad and flexible, they may not be directly applicable to the specific needs of the energy sector. For this reason, the EDDIE system creates a data space that is similar to what is defined by data space initiatives but is able to meet the specific requirements of the energy sector. 
+While general-purpose data spaces are broad and flexible, they may not be directly applicable to the specific needs of the energy sector, e.g, to access data from Regional Data-sharing Infrastructures or Metering Devices at home. For this reason, the EDDIE system creates a data space that is similar to what is defined by data space initiatives, but focuses more on meeting the needs of the energy sector. The goal of the EDDIE system is to create a domain-specific data space tailored to the energy sector. This approach includes domain-specific components and processes. For example, instead of a generic dataspace connector, the EDDIE System uses Regional Connectors tailored to accessing data from Regional Data-sharing infrastructures, and instead of a generic metadata registry, the EDDIE System integrates a Marketplace tailored to eligible parties and customers.
 
 ### Motivation
-Data spaces are used for managing data according to [European Strategy for Data](https://digital-strategy.ec.europa.eu/en/policies/strategy-data).
+Data spaces are proposed for managing data according to [European Strategy for Data](https://digital-strategy.ec.europa.eu/en/policies/strategy-data).
 
 ## Data Models
 ### Common Information Model (CIM)
 
 #### Definition
 
-CIM is an electric power transmission and distribution standard developed by the electric power industry. It aims to allow application software to exchange information about an electrical network. It has been officially adopted by the International Electrotechnical Commission (IEC). CIM defines a set of UML classes, class associations, datatypes, and attributes for describing common entities that exist in the context of energy production, consumption, and management systems. Therefore, CIM provides a vocabulary that can be used to describe energy systems in a way that is standardized and widely accepted.
+CIM is an electric power transmission and distribution standard developed by the electric power industry. It aims to allow application software to exchange information about an electrical network. It has been officially adopted by the International Electrotechnical Commission (IEC). CIM defines a set of UML classes, class associations, data types, and attributes for describing common entities that exist in the context of energy production, consumption, and management systems. Therefore, CIM provides a vocabulary that can be used to describe energy systems in a way that is standardized and widely accepted.
 
 CIM is an object-oriented model based on UML defining both syntax and semantics. It comprises three main parts:
 
@@ -45,12 +45,6 @@ The EDDIE system uses CIM to address interoperability concerns arising from dive
 - Smart meters generating data in various formats.
 - Metered data administrators providing historical data in different formats.
 - Permission administrators using various formats for consent messages.
-
-Instead of creating individual functions for each data format, which is impractical, CIM is used to standardize data handling. The Interoperable Communication component integrates converters to translate data to and from CIM, allowing common functions to process it.
-
-CIM is used in the following EDDIE Framework components:
-- Interoperable Communication: Converts incoming and outgoing data to and from CIM.
-- Database: Stores master data in CIM format, with minor adaptations if needed.
 
 #### Motivation
 
