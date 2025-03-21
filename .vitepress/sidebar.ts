@@ -18,13 +18,20 @@ function pathBaseNameWithoutExtension(filePath: string): string {
   return path.parse(filePath).name;
 }
 
-function readFrontmatter(markdownFilePath: string): SidebarItem {
+// Updated to support `hiddenInSidebar`
+function readFrontmatter(markdownFilePath: string): SidebarItem | null {
   const frontMatter = matter(fs.readFileSync(markdownFilePath, "utf-8")).data;
+
+  // Skip if marked hidden
+  if (frontMatter.hiddenInSidebar) {
+    return null;
+  }
+
   const pathBaseNameValue = pathBaseNameWithoutExtension(markdownFilePath);
   return {
     text: frontMatter.title ?? pathBaseNameValue,
-    ...(undefined !== frontMatter.order ? { order: frontMatter.order } : {}),
-    ...(undefined !== pathBaseNameValue ? { link: pathBaseNameValue } : {}),
+    ...(frontMatter.order !== undefined ? { order: frontMatter.order } : {}),
+    ...(pathBaseNameValue ? { link: pathBaseNameValue } : {}),
   };
 }
 
@@ -66,11 +73,13 @@ function readSidebarItemsFromSubdirectory(
     .filter(
       (item) => item !== null && (item.link || item.items)
     ) as SidebarItem[];
+
   items.sort(
     (a, b) =>
       (a.order ?? Number.MAX_SAFE_INTEGER) -
       (b.order ?? Number.MAX_SAFE_INTEGER)
   );
+
   return items;
 }
 
@@ -98,10 +107,17 @@ export function buildSidebar(
     let frontmatter;
     if (indexFile) {
       frontmatter = readFrontmatter(indexFile);
+
+      // Skip whole section if index file is marked hidden
+      if (!frontmatter) {
+        return null;
+      }
+
       frontmatter.link = frontmatter.link + "/" + frontmatter.link;
     } else {
       frontmatter = { text: pathBaseNameWithoutExtension(fileOrDirectoryPath) };
     }
+
     return { ...frontmatter, ...(items.length !== 0 ? { items } : {}) };
   } else if (fileOrDirectoryPath.endsWith(".md")) {
     return readFrontmatter(fileOrDirectoryPath);
