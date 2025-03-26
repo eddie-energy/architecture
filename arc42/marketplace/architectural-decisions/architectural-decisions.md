@@ -4,6 +4,7 @@ order: 5
 ---
 This section outlines key architectural decisions made for the Marketplace system:
 - [Monolithic deployment of the Marketplace](./architectural-decisions.md#monolithic-deployment-of-the-marketplace)
+- [Centralized Marketplace System Deployment](./architectural-decisions.md#centralized-marketplace-system-deployment)
 
 ## Monolithic deployment of the Marketplace
 
@@ -22,6 +23,25 @@ This decision reduces system complexity and accelerates initial implementation b
 ### Alternatives
 
 Employ a microservice architecture, which would involve breaking functionalities into smaller, independently deployable units.
+
+## Centralized Marketplace System Deployment
+
+### Context
+
+The Marketplace serves as a discovery mechanism, allowing customers to find energy services and eligible parties to locate relevant customer energy data. Given the need for streamlined interactions and data exchanges, the architecture must balance simplicity, efficiency, and scalability.
+
+### Decision
+
+Adopt a centralized Marketplace system to unify discovery and transactions under a single platform, ensuring a consistent and cohesive experience for customers and eligible parties. This approach simplifies governance, data management, and system interoperability.
+
+### Consequences
+
+A centralized Marketplace system ensures a single point of truth. It streamlines management, minimizes overhead, and enhances the user experience with a unified interface. However, it may face scalability challenges, introduce a single point of failure, and create bottlenecks in handling diverse marketplace interactions.
+
+### Alternatives
+
+ A separate Marketplace system would allow tailored solutions for specific sectors or regions but it would increase complexity and risks of siloed data. 
+ A marketplace of marketplaces would enable scalability and interoperability through a federated model but it would require more coordination and standardization.
 
 <!--
 ask later if there was a decision or if it was a relevant decision at all?
