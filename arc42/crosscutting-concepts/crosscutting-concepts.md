@@ -4,12 +4,11 @@ order: 10
 ---
 
 Various concepts are relevant across the EDDIE system such as:
-- Data Space
-- Data Models
-    - Common Information Model (CIM)
-    - Smart Grid Architecture Model (SGAM)
-    - Smart Appliances REFerence ontology (SAREF)
-  
+- [Data Space](./crosscutting-concepts.md#data-space)
+- [Data Models](./crosscutting-concepts.md#data-models)
+    - [Common Information Model (CIM)](./crosscutting-concepts.md#common-information-model-cim)
+    - [Smart Grid Architecture Model (SGAM)](./crosscutting-concepts.md#smart-grid-architecture-model-sgam)
+    - [Smart Appliances REFerence ontology (SAREF)](crosscutting-concepts.md#smart-appliances-reference-ontology-saref)
 
 ## Data Space
 ### Definition

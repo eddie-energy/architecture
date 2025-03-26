@@ -3,8 +3,9 @@ title: Architectural Decisions
 order: 5
 ---
 This section outlines key architectural decisions made for the EDDIE Framework system:
-- Publish/subscribe mechanism for sending data from the EDDIE Framework to the Services
-- Implement the Permission Facade as a Microfrontend
+- [Publish/subscribe mechanism for sending data from the EDDIE Framework to the Services](./architectural-decisions.md#publish-subscribe-mechanism-for-sending-data-from-the-eddie-framework-to-the-services)
+- [Implement the Permission Facade as a Microfrontend](./architectural-decisions.md#implement-the-permission-facade-as-a-microfrontend)
+- [Deployment of a database for storing the internal state of the EDDIE Framework](./architectural-decisions.md#deployment-of-a-database-for-storing-the-internal-state-of-the-eddie-framework)
 
 ::: warning NOT FINISHED
 This section has to be re-worked.

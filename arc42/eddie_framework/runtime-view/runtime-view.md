@@ -2,6 +2,8 @@
 title: Runtime View
 order: 3
 ---
+The main workflows of EDDIE Framework are:
+- [Permission Process Model](./runtime-view.md#permission-process-model)
 
 ::: warning DESIRED CONTENT
 Here we will not describe the runtime behavior per regional connector, as this well result in a matrix explosion problem (MxN).

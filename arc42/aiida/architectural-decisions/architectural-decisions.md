@@ -4,9 +4,9 @@ order: 5
 ---
 
 This section outlines key architectural decisions made for the AIIDA system:
-- Mechanism to send data from AIIDA to the EDDIE Framework
-- Using EMQX IAM for user management
-- Dedicated In-house Device
+- [Mechanism to send data from AIIDA to the EDDIE Framework](./architectural-decisions.md#mechanism-to-send-data-from-aiida-to-the-eddie-framework)
+- [Using EMQX IAM for user management](./architectural-decisions.md#using-emqx-iam-for-user-management)
+- [Dedicated In-house Device](./architectural-decisions.md#dedicated-in-house-device)
 
 ## Mechanism to send data from AIIDA to the EDDIE Framework
 

@@ -7,12 +7,12 @@ order: 3
 
 The Marketplace system implements the following workflows which are further discussed in the sections below.
 
-- The customer/eligible party creates a user account.
-- The customer registers their AIIDA instance.
-- The customer browses data requests and services.
-- The eligible party creates a data request/service.
-- The eligible party searches AIIDA instances for energy data.
-- The eligible party asks for access to data from AIIDA instances.
+- [The customer/eligible party creates a user account](./runtime-view.md#the-customer-eligible-party-creates-a-user-account)
+- [The customer registers their AIIDA instance](./runtime-view.md#the-customer-registers-their-aiida-instance)
+- [The customer browses data requests and services](./runtime-view.md#the-customer-browses-data-requests-and-services)
+- [The eligible party creates a data request/service](./runtime-view.md#the-eligible-party-creates-a-data-request-service)
+- [The eligible party searches AIIDA instances for energy data](./runtime-view.md#the-eligible-party-searches-aiida-instances-for-energy-data)
+- [The eligible party asks for access to data from AIIDA instances](./runtime-view.md#the-eligible-party-asks-for-access-to-data-from-aiida-instances)
 
 ## The customer/eligible party creates a user account
 

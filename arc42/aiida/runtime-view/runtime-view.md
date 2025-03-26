@@ -6,10 +6,10 @@ order: 3
 ## Overview
 
 The main workflows of AIIDA are:
-- Create a new connection to the EDDIE Framework
-    - Via the AIIDA Frontend
-    - Via the AIIDA Smartphone App
-- Stream energy data from the Metering Device to the EDDIE Framework
+- [Create a new connection to the EDDIE Framework](./runtime-view.md#create-a-new-connection-to-the-eddie-framework)
+    - [Via the AIIDA Frontend](./runtime-view.md#via-the-aiida-frontend)
+    - [Via the AIIDA Smartphone App](./runtime-view.md#via-the-aiida-smartphone-app)
+- [Stream energy data from the Metering Device to the EDDIE Framework](./runtime-view.md#stream-energy-data-from-the-metering-device-to-the-eddie-framework)
 
 ## Create a new connection to the EDDIE Framework 
 
