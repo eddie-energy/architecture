@@ -82,8 +82,6 @@ The prerequisite for this workflow is that the customer uses the AIIDA Smartphon
 
 1. After a data request has been created, the eligible party uses the EP Web App to search for AIIDA instances matching this data request. 
 1. The EP Web App requests the Marketplace Application to run the data request.  
-1. The Marketplace Application requests all the AIIDA IPs from the database.
-1. The Database responds with the AIIDA IPs.
 1. The Marketplace Application sends the query of the data request to all the AIIDA instances that are registered in the Database.
 1. The AIIDA instances run the query, and examine if they have data matching the query.
 1. The AIIDA instances respond to the Marketplace Application with the results of the query.
@@ -101,6 +99,5 @@ Prerequisite of this workflow is that the eligible party has created and run a d
 1. The Customer Mobile Apps of these customers show an access request notification.
 1. The customers approve/reject the access requests.
 1. The Customer Mobile Apps of the customers who approved notify the Marketplace Application.
-1. The Marketplace Application configures the data access on the AIIDA instances of the customers who approved the access requests. The AIIDA instances then start sending data to the EDDIE Framework of the eligible party.
+1. The Marketplace Application configures data access on the AIIDA instances of customers who approved the requests, enabling data streaming to the eligible party’s EDDIE Framework instance. This assumes prior [connection to the EDDIE Framework](../../aiida/runtime-view/runtime-view.md#create-a-new-connection-to-the-eddie-framework) in AIIDA, for example, via the QR code workflow. The AIIDA instances then start transmitting data, and the Marketplace Application notifies the EP Web App.
 1. The Marketplace Application notifies the EP Web App that access has been requested.
-

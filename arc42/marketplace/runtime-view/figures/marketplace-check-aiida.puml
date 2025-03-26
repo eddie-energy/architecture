@@ -24,10 +24,6 @@ end box
 ep -> app : Search for \nAIIDA instances
 app -> marketplace : Run data request
 activate marketplace
-marketplace -> database : Get all AIIDA IPs
-activate database
-database -->> marketplace : AIIDA IPs
-deactivate database
 marketplace -> aiida : Send query
 activate aiida
 aiida -> aiida : Run Query
