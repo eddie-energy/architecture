@@ -5,6 +5,7 @@ order: 5
 This section outlines key architectural decisions made for the Marketplace system:
 - [Monolithic deployment of the Marketplace](./architectural-decisions.md#monolithic-deployment-of-the-marketplace)
 - [Centralized Marketplace System Deployment](./architectural-decisions.md#centralized-marketplace-system-deployment)
+- [Marketplace Data Access and Security Permissions](./architectural-decisions.md#marketplace-data-access-and-security-permissions)
 
 ## Monolithic deployment of the Marketplace
 
@@ -42,6 +43,24 @@ A centralized Marketplace system ensures a single point of truth. It streamlines
 
  A separate Marketplace system would allow tailored solutions for specific sectors or regions but it would increase complexity and risks of siloed data. 
  A marketplace of marketplaces would enable scalability and interoperability through a federated model but it would require more coordination and standardization.
+
+ ## Marketplace Data Access and Security Permissions
+
+ ### Context
+
+ The Marketplace allows eligible parties to request access to data from AIIDA instances. Security concerns arise around how the Marketplace gains the right to configure AIIDA and enable data streaming, requiring proper permissions to ensure customer consent.
+
+ ### Decision
+
+ The Marketplace will only configure AIIDA for data sharing if the customer has granted prior permission, such as through the QR code mechanism in AIIDA. It will facilitate the data stream only after this consent is confirmed.
+
+ ### Consequences
+
+ This approach ensures secure, compliant data sharing with customer consent, minimizing privacy risks. However, it introduces operational overhead by requiring customer interaction for each request, potentially slowing the process.
+
+ ### Alternatives
+
+ The Marketplace could configure the connection without customer permission, streamlining the process but bypassing consent, which poses significant security and privacy risks.
 
 <!--
 ask later if there was a decision or if it was a relevant decision at all?
