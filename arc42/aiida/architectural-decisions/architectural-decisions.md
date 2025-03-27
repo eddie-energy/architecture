@@ -44,20 +44,22 @@ The EMQX IAM Database enforces access control and provides centralized managemen
 
 Alternatives include static configuration, which offers simplicity with hardcoded permissions but lacks flexibility, and external identity providers such as OAuth2, OpenID, or LDAP, which enable unified authentication but introduce additional complexity.
 
-## Dedicated In-house Device
+## Dedicated In-house Device 
 
-### Context
+### Context  
 
-The Regional Data-sharing Infrastructures provide access to historical validated energy consumption data of customers. Typically, Regional Data-sharing Infrastructures do not offer access to real-time data. For this reason, real-time data needs to be accessed by other means.
+AIIDA collects real-time energy data from metering devices, which often have limited-range interfaces, such as DSMR over RJ12. These interfaces require physical proximity for access, making it necessary to have a dedicated in-house device within the customer’s premises. Additionally, energy metering interface types vary across countries, requiring AIIDA to support multiple interface standards for broad compatibility.  
 
-### Decision
+Furthermore, while Regional Data-sharing Infrastructures provide access to historical validated energy consumption data, they typically do not support real-time data access. To ensure real-time availability, AIIDA must retrieve this data directly from metering devices rather than relying on delayed regional sources.  
 
-To access real-time energy data, AIIDA relies on a dedicated in-house device to connect directly to metering devices and smart meters and access the real-time energy data. This data is then sent from AIIDA to the EDDIE Framework.
+### Decision  
 
-### Consequences
+To access real-time energy data, AIIDA relies on a dedicated in-house device that runs the necessary components to interface with metering devices. This device collects real-time data and facilitates connectivity with the EDDIE Framework via the AIIDA Regional Connector, ensuring compatibility with different interface standards and enabling efficient data transmission.  
 
-Accessing real-time data directly from the smart meter reduces delays in transmission. However, the data from the smart meters is not validated, which means that there may be some deviation compared to the historical validated energy consumption data acquired from the Regional Data-sharing Infrastructures (when this data becomes available).
+### Consequences  
 
-### Alternatives
+Using an in-house device ensures reliable access to metering interfaces, regardless of protocol variations across regions. It minimizes delays in data transmission and enhances data security by keeping sensitive information within the customer’s premises before transmission. However, this approach introduces hardware deployment and maintenance costs, requiring customers to install and manage the device. Additionally, the real-time data from smart meters is not validated, meaning there may be discrepancies compared to historical data obtained from Regional Data-sharing Infrastructures.  
 
-An alternative is to access the real-time data from the Regional Data-sharing Infrastructure when it becomes available. However, this can introduce significant delays.
+### Alternatives  
+
+Direct cloud integration without an in-house device would remove the need for on-site hardware but is not feasible due to the limited-range interfaces of many metering devices. Relying on existing smart meter infrastructure could leverage cloud-based APIs; however, these are not universally available or standardized, restricting interoperability. Alternatively, accessing real-time data from Regional Data-sharing Infrastructures could reduce the need for an in-house device, but this approach would introduce significant delays.
