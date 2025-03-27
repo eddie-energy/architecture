@@ -57,7 +57,8 @@ To revoke the customer permission and stop streaming data, the customer accesses
 
 After a connection has been established in AIIDA, the AIIDA Embedded App can stream energy data from Metering Devices to the AIIDA Regional Connector.
 
-1. The Metering Device sends the energy data to the AIIDA Embedded App via a supported protocol, e.g., P1, DSMR, or other. 
+1. The Metering Device sends the energy data to the AIIDA Embedded App via a supported protocol, e.g., P1, DSMR over RJ12, or other.
+1. The Adapter Device either forwards the received data or generates energy data itself before transmitting it to the AIIDA Embedded App. 
 1. The AIIDA Embedded App stores the energy data in the Timescale DB.
 1. The AIIDA Embedded App streams the energy data to the AIIDA Regional Connector via MQTT.
-1. The AIIDA Regional Connector streams the energy data to the Service of the eligible party.
+1. The AIIDA Regional Connector streams the energy data to the Service of the eligible party via Kafka.
