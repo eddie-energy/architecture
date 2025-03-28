@@ -51,14 +51,14 @@ This workflow includes the following steps:
 
 To revoke the customer permission and stop streaming data, the customer accesses the AIIDA Smartphone App where all the permissions and connections can be managed. 
 
-## Stream energy data from the Metering Device to the EDDIE Framework
+## Stream energy data from AIIDA to the EDDIE Framework
 
 ![](./figures/aiida_request_data.svg)
 
-After a connection has been established in AIIDA, the AIIDA Embedded App can stream energy data from Metering Devices to the AIIDA Regional Connector.
+After a connection has been established in AIIDA, the AIIDA Embedded App can stream energy data from Adapter Devices to the AIIDA Regional Connector.
 
-1. The Metering Device sends the energy data to the AIIDA Embedded App via a supported protocol, e.g., P1, DSMR over RJ12, or other.
-1. The Adapter Device either forwards the received data or generates energy data itself before transmitting it to the AIIDA Embedded App. 
+1. In case the Adapter Device is connected to a Metering Device, first, the Metering Device sends the energy data to the Adapter Device via a supported protocol, e.g., DSMR over RJ12.
+1. The Adapter Device either receives data from a Metering Device or generates energy data itself, and sends this data to the AIIDA Embedded App, e.g., via MQTT.
 1. The AIIDA Embedded App stores the energy data in the Timescale DB.
 1. The AIIDA Embedded App streams the energy data to the AIIDA Regional Connector via MQTT.
 1. The AIIDA Regional Connector streams the energy data to the Service of the eligible party via Kafka.
