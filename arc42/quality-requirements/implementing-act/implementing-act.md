@@ -22,18 +22,30 @@ Below you will find an overview of how the three supported SGTF procedures inter
 
   ![](./figures/sgtf-use-cases.png)
 
-### SGTF Procedure 2: Access to Historical Validated Consumption Data by the Eligible Party
 
-To further aid in the interpretation of the diagrams, the following diagrams are enhanced with a color scheme indicating what is directly within the scope of the EDDIE Framework, what is indirectly within scope (e.g. the communication between eligible party and metered data administrator) and what is out of scope (e.g. the customer identifying the eligible party).
+To further aid the interpretation, the following diagrams are enhanced with a color scheme indicating what is directly within the scope of the EDDIE Framework [marked in yellow], what is indirectly within scope [marked in grey] (e.g. the communication between eligible party and metered data administrator) and what is out of scope [marked in pink] (e.g. the customer identifying the eligible party).
+
+### SGTF Procedure 2: Access to Historical Validated Consumption Data by the Eligible Party
+Content: The final customer shares his data with an eligible party.
+
+Stimulus: The final customer fills out the Permission form of the EDDIE Framework, and the EDDIE Framework initiates the process of accessing the historical validated data from the Regional Data-sharing Infrastructure.
+
+Response: The EDDIE Framework follows the process indicated by the SGTF use case 2 (show in the diagram above) to access the historical validated data of the customer.
 
 
 ![](./figures/sgtf-use-case-2.png)
 
 ### SGTF Procedure 3: The Eligible Party Terminates a Service
 
-Not applicable
+Not applicable.
 
 ### SGTFProcedure 4: Revocation of an Active Permission
+
+Content: an active permission is revoked.
+
+Stimulus: Either the final customer or the Metering Data administrator initiates this process.
+
+Response: The revocation of an active Permission is final.
 
 ![](./figures/revocation-of-an-active-consent.png)
 
@@ -45,19 +57,16 @@ Not applicable
 
 ### SGTF Procedure 6: Read near real-time flow from smart meter 
 
+Content: a smart meter outputs near real-time data directly from the P1 port.
+
+Stimulus: The EDDIE framework, i.c. AIIDA (the Adminsitrative Inhouse Interface for Data Access) is triggered by a message received by the smart meter. 
+
+Response: The smart meter data is processed by The EDDIE framework, i.c. AIIDA, and made distributable to eligible parties.
+
 ![](./figures/read-near-real-time-data-from-smart-meter.png)
 
 
-## Stimulus
 
-There is a different stimulus for every use case, as shown below.
-- Procedure 2: The final customer fills out the Permission form of the EDDIE Framework, and the EDDIE Framework initiates the process of accessing the historical validated data from the Regional Data-sharing Infrastructure.
-- Procedure 4: Either the final customer or the Metering Data administrator initiates this process.
-- Procedure 6: The EDDIE framework, i.c. AIIDA (the Adminsitrative Inhouse Interface for Data Access) is triggered by a message received by the smart meter. 
 
-## Response
 
-There is a different response for every use case, as shown below.
-- Procedure 2: The EDDIE Framework follows the process indicated by the SGTF use case 2 (show in the diagram above) to access the historical validated data of the customer.
-- Procedure 4: The revocation of an active Permission is finall
-- Procedure 6: The smart meter data is processed by The EDDIE framework, i.c. AIIDA, and made distributable to eligible parties.
+
