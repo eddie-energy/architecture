@@ -3,7 +3,7 @@ title: Architectural Decisions
 order: 5
 ---
 
-This section outlines key architectural decisions made for the Marketplace system:
+This section outlines key Architectural Decisions made for the Marketplace system:
 - [Monolithic Deployment of the Marketplace](./architectural-decisions.md#monolithic-deployment-of-the-marketplace)
 - [Centralized Marketplace Under one Operator](./architectural-decisions.md#centralized-marketplace-under-one-operator)
 - [Marketplace Accessing Data from AIIDA](./architectural-decisions.md#marketplace-accessing-data-from-aiida)
