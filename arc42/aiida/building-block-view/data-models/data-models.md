@@ -17,10 +17,10 @@ The EMQX IAM Database stores user accounts for all the AIIDA instances using SQL
 
 ## EMQX MQTT Broker
 
-The EMQX MQTT Broker facilitates communication between the AIIDA Embedded App and the AIIDA Regional Connector. Each instance of the AIIDA Embedded App has a dedicated topic through which it publishes energy data from potentially multiple Adapter Devices, and the AIIDA Regional Connector subscribes to receive this data. Additionally, the AIIDA Regional Connector publishes configuration requests to a separate topic for each Embedded App, which the Embedded App receives. These requests can include instructions such as stopping the data stream to the Regional Connector.
+The EMQX MQTT Broker facilitates the communication between the AIIDA Embedded App and the AIIDA Regional Connector. For every instance of the AIIDA Embedded App that communicates with an AIIDA Regional Connector, the EMQX MQTT Broker has two topics: The first topic is used by the AIIDA Embedded App instance to publish energy data from potentially multiple Adapter Devices. The AIIDA Regional Connector subscribes to this topic to receive the data. The second topic is used by the AIIDA Regional Connector to publish configuration requests (e.g., to cancel the streaming of data). The AIIDA Embedded App subscribes to this topic to receive the configuration requests.
 
 ## NanoMQ MQTT Broker
 
-The NanoMQ MQTT Broker facilitates sending energy data from the Adapter Device to the AIIDA Embedded App. Each stream of energy data from an Adapter Device has its own unique topic. The Adapter Device publishes energy data to this topic, and the AIIDA Embedded App receives it.
+The NanoMQ MQTT Broker facilitates the communication between Adapter Devices and the AIIDA Embedded App. Each Adapter Device publishes energy data to its own unique topic, and the AIIDA Embedded App subscribes to this topic to receive the data.
 
-The AIIDA Embedded App has the capability to merge energy data from multiple Adapter Devices and then send this merged data to the AIIDA Regional Connector. This data is published on the same topic as the one used by the EMQX MQTT Broker for the AIIDA Embedded App, allowing it to aggregate and forward the data seamlessly to the EDDIE Framework.
+The AIIDA Embedded App has the capability to merge energy data from multiple Adapter Devices and then send this merged data to the AIIDA Regional Connector through the EMQX MQTT Broker.
