@@ -3,12 +3,12 @@ title: Architectural Decisions
 order: 5
 ---
 
-This section outlines key Architectural Decisions made for the AIIDA system:
-- [Mechanism to send data from AIIDA to the EDDIE Framework](./architectural-decisions.md#mechanism-to-send-data-from-aiida-to-the-eddie-framework)
-- [Using EMQX IAM for user management](./architectural-decisions.md#using-emqx-iam-for-user-management)
+This section outlines key architectural decisions made for the AIIDA system:
+- [Mechanism to Send Data from AIIDA to the EDDIE Framework](./architectural-decisions.md#mechanism-to-send-data-from-aiida-to-the-eddie-framework)
+- [Using EMQX IAM for User Management](./architectural-decisions.md#using-emqx-iam-for-user-management)
 - [Dedicated In-house Device](./architectural-decisions.md#dedicated-in-house-device)
 
-## Mechanism to send data from AIIDA to the EDDIE Framework
+## Mechanism to Send Data from AIIDA to the EDDIE Framework
 
 ### Context
 
@@ -26,7 +26,7 @@ MQTT improves scalability while handling real-time data well, and reduces the ov
 
 Alternatives include point-to-point communication, e.g., using CoAP or HTTP, which can be resource-intensive when running at scale.
 
-## Using EMQX IAM for user management
+## Using EMQX IAM for User Management
 
 ### Context
 
