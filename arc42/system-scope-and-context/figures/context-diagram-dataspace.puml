@@ -21,7 +21,7 @@ skinparam actor {
 
 rectangle "Gaia-X" as gaiaX
 collections "External Energy Data Space\n(e.g. OneNet, Omega-X)" as dataSpaces
-usecase "\n\nEDDIE\nSystem\n\n" as eddie
+usecase "\n\nEDDIE\nsystem\n\n" as eddie
 collections "Metering\nDevice" as smartMeter
 collections "Regional Data-sharing\nInfrastructures" as regionalData
 rectangle "EP Website" as website
