@@ -1,6 +1,6 @@
 ---
 title: Architectural Decisions
-order: 5
+order: 6
 ---
 This section outlines key architectural decisions made for the EDDIE Framework system:
 - [Publish/subscribe mechanism for sending data from the EDDIE Framework to the Services](./architectural-decisions.md#publish-subscribe-mechanism-for-sending-data-from-the-eddie-framework-to-the-services)
