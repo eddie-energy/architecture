@@ -30,10 +30,7 @@ Moved from overall architectural decisions:
 > - Use HTML custom elements for integration in the EP app
 >
 
-
----
 ## Publish/subscribe mechanism for sending data from the EDDIE Framework to the Services
----
 
 > [!CAUTION]
 > Kafka is used, but we limit permissions inside Kafka in a way to prevent Kafka's pub/sub features altogether.
@@ -58,16 +55,13 @@ Negative consequences:
 
 Alternatives:
 - Send the data of each customer directly to the Services that the customer wants to use, e.g., via HTTP. While this way may work well with few customers and Services, a large number of customers and Services may create bottlenecks and induce additional delay.
- -->
 
----
 ## Implement the Permission Facade as a Microfrontend
----
 
 > [!WARNING]
 > The permission facade doesn't exist as a component in the architecture but it's spread across the EDDIE core and region connectors. As such it can be embedded as a microfrontend but consists itself of multiple ones. HTML custom elements should be mentioned.
 
-## Context
+### Context
 The Permission Facade is the component that handles the process of acquiring the consent of the customer for access to their historical and real-time data. This component needs to be accessible from the EP Website so that customers can give their consent to the eligible party. 
 
 ### Decision
