@@ -83,3 +83,66 @@ Alternatives:
 - Provide the Permission Facade as an independent website that is operated and maintained by each eligible party.
 
 ## Deployment of a database for storing the internal state of the EDDIE Framework
+
+## Embed the EDDIE Button as a Custom Element
+
+The Permission Facade is initiated by embedding the EDDIE button.
+
+There are two opposing approaches for how the button opens the Permission Facade:
+
+- **Embedded** inside the EDDIE button
+- **Standalone** in a new window or iframe
+
+### Embedded
+
+Embedding the application can be achieved by loading it as a custom element.
+This allows the eligible party to contain it as a dialog inside their own website.
+To embed the whole application as a custom element it has to be loaded from the button itself.
+
+Most popular web frameworks support exporting an application or singular components as a custom element.
+The application can be developed in isolation and exported for embedding.
+
+**Advantages**
+
+- No page change for the customer
+- Button can load before the customer interacts with it
+- Button can be easily configured through attributes
+
+#### Thoughts on loading times
+
+The Permission Facade application should only be loaded once, asynchronously and deferred.
+This can be done inside the EDDIE button, which will then create the application instance.
+
+This minimizes the impact of loading the initial EDDIE button on the eligible party's website and allows the application to load in the background. 
+To reduce the size of the application itself, region connector elements can be loaded as separate custom elements.
+
+### Standalone
+
+Embedding the application as an inline frame is also considered standalone for this context, 
+as the rendering is not done by the website embedding it.
+
+**Advantages**
+
+- Supports server-side rendering (SSR)
+- Supports partial hydration (lazy-load core logic) → allows the use of larger frameworks
+- Can run separately from the website of the eligible party
+- Avoids issues with cross-origin resource sharing (CORS)
+
+#### Thoughts on running in separation
+
+The user might want to interact with the permission facade without first navigating through the website of the eligible party. 
+For example, to check the status of their permission request on a separate page.
+
+As the application runs in isolation, the eligible party does not have to load it into their website, 
+and the EDDIE button will simply link to its location.
+
+Running in isolation might also improve the developer experience, 
+as the application can be developed and tested in the same environment it will be deployed in.
+
+### Conclusion
+
+The ability to embed the button comes with its implementation as a web component. 
+This approach is already present for the region connector elements and requires minimal effort.
+
+The button is thereby implemented as a web component to be embedded into the website of the eligible party. 
+This might change in the future if the benefits of a separate web application become relevant.
