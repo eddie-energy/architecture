@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { withMermaid } from "vitepress-plugin-mermaid";
 
 import { buildSidebar } from "./sidebar";
 
@@ -12,7 +13,7 @@ const sidebarItems = buildSidebar("./arc42", "", srcExclude)?.items?.map(
 );
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid(defineConfig({
   title: "EDDIE Architecture",
   description: "European Distributed Data Infrastructure For Energy",
   srcDir: "./arc42",
@@ -84,4 +85,4 @@ export default defineConfig({
       md.renderer.rules.image = renderMarkdownImage;
     },
   },
-});
+}));
