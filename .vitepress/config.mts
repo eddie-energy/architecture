@@ -41,7 +41,10 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/figures/favicon-32x32.png",
-    nav: [{ text: "Home", link: "/" }],
+    nav: [
+      { text: "Home", link: "/" },
+      { text: "Operation Manual", link: "https://eddie-web.projekte.fh-hagenberg.at/framework/" }
+    ],
 
     sidebar: sidebarItems,
 
