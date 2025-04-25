@@ -1,13 +1,12 @@
 ---
-title: Crosscutting Concepts
-order: 5
+title: User Experience
 ---
 
 ## Shoelace for EDDIE Button and RC Elements
 
 The [Shoelace](https://shoelace.style/) library provides a set of common components and styles and is used to ensure a consistent user experience across EDDIE components.
 
-![Visualization of how Shoelace components are used throughout EDDIE contexts](./figures/shoelace.svg)
+![Visualization of how Shoelace components are used throughout EDDIE contexts](../figures/shoelace.svg)
 
 Shoelace also supports [theming](https://shoelace.style/getting-started/themes) through CSS variables and [localization](https://shoelace.style/getting-started/localization).
 
@@ -30,7 +29,7 @@ Relevant Shoelace components are loaded from a Content Delivery Network (CDN) at
 The initial implementation of the EDDIE button uses a lot of vertical space to fit all information inside a single form dialog.
 This may overwhelm and discourage the user and also leads to layout shifts during interaction.
 
-![Design of the initial vertical implementation of the permission form](./figures/eddie-vertical-form.svg)
+![Design of the initial vertical implementation of the permission form](../figures/eddie-vertical-form.svg)
 
 Instead of showing all information at once, the dialog can display similar fields in separate steps.
 Such steps may be
@@ -43,11 +42,11 @@ Such steps may be
 
 The actual steps and even the number of total steps may depend on the button configuration (presets) and data need (AIIDA).
 
-![Design of the multistep form implementation](./figures/eddie-multi-step-form-stacked.svg)
+![Design of the multistep form implementation](../figures/eddie-multi-step-form-stacked.svg)
 
 Following the multistep approach, the form dialog communicates the state of the permission request, as well as error cases, as separate pages.
 
-![Diagram relating the permission process model to the multistep form](./figures/eddie-multi-step-form-states-vertical.svg)
+![Diagram relating the permission process model to the multistep form](../figures/eddie-multi-step-form-states-vertical.svg)
 
 The complete collection of diagrams is available on [Sharepoint](https://hartnerconsultingcom.sharepoint.com/:f:/r/sites/EuropeanDataAccess/Freigegebene%20Dokumente/WPs/WP2_FrameworkAPI/Permission%20Facade%20Design?csf=1&web=1&e=5dxhVW).
 
