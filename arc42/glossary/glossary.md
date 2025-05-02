@@ -40,6 +40,7 @@ The glossary is divided into two sections: domain terms and acronyms.
 | API | Application Programming Interface |
 | ASM | Active System Management |
 | BRP | Balancing Responsible Party |
+| CA | Consent Administrator |
 | CEP | Clean Energy Package |
 | CIM | Common Information Model |
 | CM | Capacity Mechanism |
@@ -66,7 +67,8 @@ The glossary is divided into two sections: domain terms and acronyms.
 | LV | Low voltage |
 | MDA | Metered Data Administrator |
 | mFRR | Manual Frequency Restoration Reserve |
-| MV | Medium voltage |
+| MS | Member State |
+| MV | Medium Voltage |
 | NC | Network Code |
 | NRA | National Regulatory Authority |
 | PA | Permission Administrator |
