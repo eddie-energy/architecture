@@ -19,8 +19,8 @@ Markus' master's thesis mainly contains these ideas and explanations.
 We should focus on the decisions around the micro-frontend approach and why it is necessary for a modular system.
 :::
 
-[Microfrontends](../architectural-decisions/architectural-decisions.md#implement-the-permission-facade-as-a-microfrontend)
-[Multistep Form](../crosscutting-concepts/user-experience.md#eddie-button-as-multistep-form)
+- [Microfrontends](../architectural-decisions/architectural-decisions.md#implement-the-permission-facade-as-a-microfrontend)
+- [Multistep Form](../crosscutting-concepts/user-experience.md#eddie-button-as-multistep-form)
 
 ## Region Connectors
 
