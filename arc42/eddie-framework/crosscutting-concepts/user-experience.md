@@ -105,7 +105,8 @@ In reality, the eligible party will likely redirect the user on completion or re
 
 The end user might want to abandon the created request if they made a mistake.
 However, this is very uncommon, and a created request will be idle and can still be accepted, potentially confusing the end user.
+To account for this scenario, the content of the previous steps must already provide all required information.
 
-If the user ignores the request in the PA portal, it will simply time out.
-This could even be decided per region connector.
+The user might also abandon the request intentionally or by accident.
+If the user ignores the request in the PA portal, it will not be processed.
 Since the user will typically not be able to reproduce the same result after navigating back after request creation, the navigation will be removed.
