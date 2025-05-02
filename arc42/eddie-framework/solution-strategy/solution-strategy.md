@@ -11,6 +11,17 @@ We will not include EDDIE Core in this description, as it is not relevant for th
 Depending on the amount of content, it might make sense to migrate the subsections directly into this page, as we have gained better navigation capabilities using Vitepress and its right sidebar.
 :::
 
+## Permission Facade
+
+::: info DESIRED CONTENT
+In this section we are gonna describe the reasoning and architectural implementation behind our permission facade.
+Markus' master's thesis mainly contains these ideas and explanations.
+We should focus on the decisions around the micro-frontend approach and why it is necessary for a modular system.
+:::
+
+[Microfrontends](../architectural-decisions/architectural-decisions.md#implement-the-permission-facade-as-a-microfrontend)
+[Multistep Form](../crosscutting-concepts/user-experience.md#eddie-button-as-multistep-form)
+
 ## Region Connectors
 
 Region connectors is an integral part of the EDDIE framework.
@@ -58,8 +69,6 @@ A data need specifies what kind of data can be accessed.
 It differentiate between accounting point data and validated historical data.
 Furthermore, data needs for validated historical data specifies a start and end date, as well as what kind of energy data should be collected.
 For example gas or electricity.
-
-## Permission Facade
 
 ## Services (Data Needs API)
 

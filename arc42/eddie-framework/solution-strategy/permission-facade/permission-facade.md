@@ -3,15 +3,7 @@ title: Permission Facade
 order: 2
 ---
 
-::: info DESIRED CONTENT
-In this section we are gonna describe the reasoning and architectural implementation behind our permission facade. Markus' master's thesis mainly contains these ideas and explanations.
-We should focus on the decisions around the micro-frontend approach and why it is necessary for a modular system.
-Furthermore Markus' design ideas regarding the multi-step form (as shown in the image) can help a lot for describing the complex permission processes.
 
-Regarding the different types of permission handling by regional connectors, we are gonna describe them in the building block view, as it is more implementation focused.
-:::
-
-![EDDIE Multi Step Form](./figures/eddie-multi-step-form.png "EDDIE Multi Step Form")
 
 <!--
 > [!CAUTION]
