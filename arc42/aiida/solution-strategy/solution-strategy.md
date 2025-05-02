@@ -19,7 +19,7 @@ An additional device in-house is needed to run components that access the interf
 
 ## How does AIIDA integrate into EDDIE?
 
-One AIIDA instance runs at every customer site. Thus, AIIDA instances serve as sources of real-time energy data. AIIDA instances integrate into the EDDIE Framework by sending the energy data to an AIIDA Regional Connector (which is a plugin of the EDDIE Framework). Therefore, from the EDDIE Framework perspective, AIIDA is considered a [Regional Connector](../../eddie_framework/solution-strategy/solution-strategy.md).
+One AIIDA instance runs at every customer site. Thus, AIIDA instances serve as sources of real-time energy data. AIIDA instances integrate into the EDDIE Framework by sending the energy data to an AIIDA Regional Connector (which is a plugin of the EDDIE Framework). Therefore, from the EDDIE Framework perspective, AIIDA is considered a [Regional Connector](../../eddie-framework/solution-strategy/solution-strategy.md).
 
 ## Why does AIIDA need a user interface?
 

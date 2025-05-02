@@ -47,24 +47,32 @@ The glossary is divided into two sections: domain terms and acronyms.
 | DCC | Demand Connection Code |
 | DER | Distributed Energy Resources |
 | DF | Distributed Flexibility |
+| DN | Data Need |
 | DSF | Demand-Side Flexibility |
 | DSO | Distribution System Operator |
 | EBGL | Electricity Balancing Guideline |
 | EDDIE | European Distributed Data Infrastructure for Energy |
 | eIDAS | Electronic Identification and Authentication Services. Regulation on electronic identification and trust services. Regulation (EU) No 910/2014. |
 | ENTSO-E |European Network of Transmission System Operators for Electricity |
+| EP | Eligible Party |
 | FMO | Flexibility Market Operator |
 | FSP | Flexibility Service Provider |
 | GDPR | Regulation (EU) 2016|679 a.k.a. General Data Protection Regulation |
 | GEODE | GEODE is made up of European independent distribution companies of gas and electricity |
 | HRM | Harmonised Role Model |
 | IA | Implementing Acts for Interoperability after Article 24 of Directive (EU) 2019/944 |
+| ICL | Interoperable Communication Layer |
 | ID | Intraday |
 | LV | Low voltage |
+| MDA | Metered Data Administrator |
 | mFRR | Manual Frequency Restoration Reserve |
 | MV | Medium voltage |
 | NC | Network Code |
 | NRA | National Regulatory Authority |
+| PA | Permission Administrator |
+| PF | Permission Facade |
+| PR | Permission Request |
+| RC | Region Connector |
 | RfG | Requirements for Generators |
 | SAREF | Smart Applications REFerence ontology |
 | SGAM | Smart Grid Architecture Model |

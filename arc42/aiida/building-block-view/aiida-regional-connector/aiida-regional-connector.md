@@ -3,7 +3,7 @@ title: AIIDA Regional Connector
 order: 3
 ---
 
-To connect with the EDDIE Framework, the AIIDA system requires an AIIDA [Regional Connector](../../../eddie_framework/solution-strategy/solution-strategy.md) plugin.
+To connect with the EDDIE Framework, the AIIDA system requires an AIIDA [Regional Connector](../../../eddie-framework/solution-strategy/solution-strategy.md) plugin.
 
 ## Functionality
 

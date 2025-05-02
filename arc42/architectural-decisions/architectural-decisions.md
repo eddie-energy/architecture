@@ -6,11 +6,11 @@ order: 11
 The implementation of the EDDIE system, as a system of systems, involves a series of key architectural decisions, each evaluated to address the unique requirements of the overall system.
 The table below lists the architectural decisions for each individual system in their respective sections.
 
-| EDDIE system | Architectural Decisions |
-| - | - |
-| EDDIE Framework | [Link](../eddie_framework/architectural-decisions/architectural-decisions.md) |
-| AIIDA | [Link](../aiida/architectural-decisions/architectural-decisions.md) |
-| Marketplace | [Link](../marketplace/architectural-decisions/architectural-decisions.md) |
+| EDDIE system    | Architectural Decisions                                                       |
+|-----------------|-------------------------------------------------------------------------------|
+| EDDIE Framework | [Link](../eddie-framework/architectural-decisions/architectural-decisions.md) |
+| AIIDA           | [Link](../aiida/architectural-decisions/architectural-decisions.md)           |
+| Marketplace     | [Link](../marketplace/architectural-decisions/architectural-decisions.md)     |
 
 <!-- | AD3 | - | - | - | -->
 

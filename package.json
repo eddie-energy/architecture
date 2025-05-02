@@ -24,7 +24,9 @@
     "@types/micromatch": "^4.0.9",
     "@types/node": "^20.14.10",
     "gray-matter": "^4.0.3",
+    "mermaid": "^11.6.0",
     "micromatch": "^4.0.7",
-    "vitepress": "^1.2.2"
+    "vitepress": "^1.2.2",
+    "vitepress-plugin-mermaid": "^2.0.17"
   }
 }

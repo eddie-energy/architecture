@@ -1,33 +1,24 @@
-<script setup>
-import { ref } from "vue";
+<script setup lang="ts">
+const props = defineProps<{ src: string, alt?: string }>()
 
-const props = defineProps({
-  src: {
-    type: String,
-    required: true,
-  },
-  alt: {
-    type: String,
-    default: "",
-  },
-});
+function openDialog(event) {
+  event.currentTarget.nextElementSibling.showModal();
+}
 
-const isActive = ref(false);
-
-const toggleActive = () => {
-  isActive.value = !isActive.value;
-};
+function closeDialog(event) {
+  event.currentTarget.close();
+}
 </script>
 <template>
   <div>
     <img
       :src="src"
       :alt="alt"
-      @click="toggleActive"
+      @click="openDialog"
     />
-    <div v-if="isActive" class="overlay" @click="toggleActive">
-      <img :src :alt class="enlarged" />
-    </div>
+    <dialog @click="closeDialog">
+      <img :src :alt />
+    </dialog>
   </div>
 </template>
 <style scoped>
@@ -36,25 +27,17 @@ img {
   max-width: 100%;
   height: auto;
 }
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+dialog {
+  padding: 0;
+  border: none;
   cursor: zoom-out;
+  outline: none;
 }
-.overlay img {
+
+dialog img {
   cursor: zoom-out;
-}
-img.enlarged {
-  max-width: 90%;
-  max-height: 90%;
-  z-index: 1001;
+  max-height: 90vh;
+  max-width: 90vw;
 }
 </style>
