@@ -15,7 +15,7 @@ The AIIDA Backend includes the following components.
 
 | Component | Responsibility |
 | - | - |
-| Aggregator | Connects to the Adapter Device and collects the real-time energy data. This data is sent to the Streamer, and is also stored in the Timescale DB. |
+| Aggregator | Connects to the Adapter Device and collects the real-time energy data. This data is sent to the Streamer, and is also stored in the Timescale DB. Furthermore, through this component, the AIIDA Backend can send signals to the Adapter Device. For example, in periods of heavy load, a signal can be sent to reduce/stop energy consumption (as long as this functionality is also supported by the Adapter Device). |
 | Streamer | Receives the real-time energy data from the Aggregator and sends it to the AIIDA Regional Connector of the EDDIE Framework via MQTT. |
 | Permission Manager | Handles the customer permission for access to real-time data, and stores all related information in the Timescale DB. The Permission Manager also configures the Streamer to start streaming the data to the AIIDA Regional Connector, when the customer permission has been granted. |
 | Error Handler | Follows the operation of the AIIDA Backend and logs status and error messages from all the AIIDA components (regarding the access to energy data, the customer permissions, and any other unexpected situations that might occur). Status and error messages are shown to the customer through the AIIDA Smartphone App and the AIIDA Frontend. |
