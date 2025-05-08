@@ -15,8 +15,6 @@ box "Marketplace System" #transparent
   participant "EP Web App" as epApp
   participant "Customer \nMobile App" as customerApp
   participant "Marketplace \nApplication" as marketplace
-  participant "IAM" as iam
-  participant "Database" as database
 end box
 
 box "AIIDA System" #transparent

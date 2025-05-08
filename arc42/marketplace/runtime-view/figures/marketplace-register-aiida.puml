@@ -13,7 +13,6 @@ actor "Customer" as customer
 box "Marketplace System" #transparent
   participant "Customer \nMobile App" as app
   participant "Marketplace \nApplication" as marketplace
-  participant "IAM" as iam
   participant "Database" as database
 end box
 
@@ -26,9 +25,5 @@ database -->> marketplace : OK
 deactivate database
 marketplace -->> app : OK
 deactivate marketplace
-
-
-
-
 
 @enduml
