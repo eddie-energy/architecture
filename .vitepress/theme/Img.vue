@@ -29,7 +29,6 @@ img {
 }
 
 dialog {
-  padding: 0;
   border: none;
   cursor: zoom-out;
   outline: none;
