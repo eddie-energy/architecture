@@ -139,7 +139,7 @@ This process is shown in the figure below and includes the following steps:
 ![](./figures/transfer-of-data.png)
 
 When the data is received by the Interoperable Communication, 
-this data is transformed into a [CIM](../../../crosscutting-concepts/domain-models/cim/cim.md) representation. 
+this data is transformed into a [CIM](../../../crosscutting-concepts/crosscutting-concepts.md#common-information-model-cim) representation. 
 Then, the data is enriched with additional information used internally in the EDDIE Framework (e.g., Service ID, ConsentID, etc.). 
 Finally, the enriched CIM representation of the data is sent to the Service via a Kafka topic. 
 This process is also shown in the figure below.
