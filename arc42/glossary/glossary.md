@@ -5,11 +5,11 @@ order: 14
 
 The glossary is divided into two sections: domain terms and acronyms.
 
-## Domain Terms 
+## Domain Terms
 
 | Term | Definition |
 |-|-|
-| Authentication | An electronic procedure that enables the electronic Identification of a natural or legal person. |
+| Authentication | An electronic procedure that enables the electronic identification of a natural or legal person. |
 | Balancing Responsible Party | An entity that is responsible for ensuring the balance between the energy supply and demand in a specific area or region.
 | Clean Energy Package | A set of legislative measures adopted by the European Union to promote the use of renewable energy sources, increase energy efficiency, and create a more integrated and competitive energy market.
 | Data Access Log | A timestamped record of data items accessed that includes at least the identification of the final customer or the eligible party accessing the data and, if applicable, the identification of the permission used to access the data. |
