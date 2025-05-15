@@ -4,11 +4,35 @@ order: 1
 ---
 
 ::: info DESIRED CONTENT
-Here we are gonna describe the main parts of EDDIE Framework from a logical point of view (_mainly in FAQ format, as we already introduced in AIIDA, as this eases readability_), why it is separated into **Region Connectors** (and link to the corresponding subpage) and what role the **Permission Facade** plays (also with links to the detailed subpage). We are also gonna describe the initial term "**Services**" (we still have to think of a name here - Data Needs), the **Streaming Infrastructure** (and its roles inside core as well as outbound) and the initially coined "**Interoperable Communication Layer**".
 
-We will not include EDDIE Core in this description, as it is not relevant for the understanding of the solution strategy, it will be described in the Building Block view.
+Similar to the methodology section of the grant agreement,
+this page should document how key responsibilities of the EDDIE Framework have been implemented.
+This is done by first showcasing the core components of the EDDIE Framework,
+and then describing how these components provide specific functionality.
+The latter is done by guiding the reader step-by-step through a complete setup and user flow.
 
-Depending on the amount of content, it might make sense to migrate the subsections directly into this page, as we have gained better navigation capabilities using Vitepress and its right sidebar.
+The scenario includes the perspective of both the eligible party and the final customer.
+
+1. The EP installs and sets up the EDDIE Framework
+    - The EP configures _Region Connectors_ for regions it operates in
+    - The EP creates a _Data Need_ to request data for their service
+    - The EP embeds the _EDDIE Popup_ into their application
+2. The customer grants their permission through the _EDDIE Popup_
+    - The customer accepts the permission request in the portal of their PA
+3. The EP manages data needs and permissions in the _Admin Console_
+4. The EP receives data from the MDA (via _Outbound Connector_)
+    - The EP configures an _Outbound Connector_ to consume data from
+5. The customer revokes their permission
+6. The EP discontinues their service terminating permissions
+
+---
+
+**Notes**
+- It should be readable without prior knowledge about the EDDIE Framework.
+- Avoid outdated terms and GA references. The [evolution page](evolution-from-the-grant-agreement.md) is for that.
+- Defer any additional information to other pages, particularly [domain concepts](../crosscutting-concepts/domain-concepts.md) and [architectural decisions](../architectural-decisions/architectural-decisions.md).
+- Describe in an FAQ format.
+
 :::
 
 ## Permission Facade
