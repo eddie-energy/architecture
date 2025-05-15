@@ -37,13 +37,14 @@ TODO: Link architectural decisions and building blocks; elaborate, reason
 - Admin console authenticates eligible party accounts using Keycloak.
 - The EDDIE Framework does authenticate users of the eligible party.
 - TODO: Check with Florian what the database actually does
-- TODO: Florian -> Document why we only use Postgres and why we cannot use an embedded database for Option 1 deployment
 
 > EDDIE Data Streaming Infrastructure [...] provide[s] the Application Programming Interface (API) for Energy Data – Based Services.
 
-
-
 > Scripted deployment configuration(s); single console command
+
+![](./permission-facade/figures/eddie-deployment-options.png)
+
+- TODO: Florian -> Document why we only use Postgres and why we cannot use an embedded database for Option 1 deployment
 
 ## Functionality provided by the EDDIE Framework
 
