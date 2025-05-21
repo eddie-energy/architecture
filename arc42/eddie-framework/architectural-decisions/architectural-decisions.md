@@ -2,35 +2,26 @@
 title: Architectural Decisions
 order: 6
 ---
-This section outlines key architectural decisions made for the EDDIE Framework system:
-- [Publish/subscribe mechanism for sending data from the EDDIE Framework to the Services](./architectural-decisions.md#publish-subscribe-mechanism-for-sending-data-from-the-eddie-framework-to-the-services)
-- [Deployment of a database for storing the internal state of the EDDIE Framework](./architectural-decisions.md#deployment-of-a-database-for-storing-the-internal-state-of-the-eddie-framework)
+This section outlines key architectural decisions made for the EDDIE Framework.
 
-::: warning NOT FINISHED
-This section has to be re-worked.
+::: warning TODO
+- Follow structure of other architectural decisions sections (Marketplace)
 
-Moved from overall architectural decisions:
-> #### EDDIE Online / multi-tenant use of EDDIE FW
-> - Why Kafka pub/sub isn't suitable for EDDIE Online
->
-> #### Framework
-> - Plugin architecture with in/out facing plugins
-> - Monolithic vs. (micro-) service style deployment
-> - Modularized frontend instead of a monolithic one
-> - Use HTML custom elements for integration in the EP app
+**Document**
+- Modularized frontend instead of a monolithic one; @Markus
+- Monolith over (micro-)service deployment
+- Event-driven permission process model -> We switched from a state machine that was hard to work with; @Florian
+
+**Consider documenting**
+- Deployment of a database for storing the internal state of the EDDIE Framework -> Did we really consider going stateless / moving this to the EP?
+- Separate Postgres database required -> Prevents us from using an embedded database and deploying a single JAR; @Florian
+- Plugin architecture with in/out facing plugins -> Was there really another option?
 :::
-
-> ## General Decisions
-> - Why Kafka pub/sub isn't suitable for EDDIE Online
->
-> - Plugin architecture with in/out facing plugins
-> - Monolithic vs. (micro-) service style deployment
-> - Modularized frontend instead of a monolithic one
 
 ## Publish/subscribe mechanism for sending data from the EDDIE Framework to the Services
 
-> [!CAUTION]
-> Kafka is used, but we limit permissions inside Kafka in a way to prevent Kafka's pub/sub features altogether.
+> [!CAUTION] OUTDATED
+> Bring up to date with region and outbound connector concepts. 
 
 
 The EDDIE Framework gathers historical validated data from the Regional Data-sharing Infrastructure and real-time data from AIIDA, which has to be sent to the Services. Each eligible party can have multiple customers, each one using one or more Services. For this reason, distributing the customer data to the Services may become complicated, especially considering that the real-time data has to be sent with minimum delay.
@@ -52,8 +43,6 @@ Negative consequences:
 
 Alternatives:
 - Send the data of each customer directly to the Services that the customer wants to use, e.g., via HTTP. While this way may work well with few customers and Services, a large number of customers and Services may create bottlenecks and induce additional delay.
-
-## Deployment of a database for storing the internal state of the EDDIE Framework
 
 ## Embed the EDDIE Button as a Custom Element
 
