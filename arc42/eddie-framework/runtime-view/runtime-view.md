@@ -17,6 +17,29 @@ This section should mainly describe the Permission Process Model and how the dif
 Regarding the specific workflows listed at the end of the page. They will still provide a lot of value, as those are the main use-cases of using EDDIE Framework, but we should explain them based on the Permission Process Model (top-down) and not based on the individual region connectors (bottom-up).
 :::
 
+## EDDIE Popup
+
+```mermaid
+sequenceDiagram
+	autonumber
+	actor Customer
+	participant Popup as EDDIE Popup
+	participant Core
+	participant RC as Region Connector
+
+	Popup->>Core: Fetch Data Need
+	Popup->>Core: Fetch Permission Administrators
+	Popup->>Core: Fetch RC Metadata
+	Customer->>Popup: Click EDDIE Button
+	Customer->>Popup: Confirm Data Need
+	Customer->>Popup: Select country and PA
+	Popup->>RC: Fetch RC element
+	Customer->>Popup: Interact with RC element
+	Note over Customer,RC: Interaction varies by RC element
+	Popup->>RC: Send permission request based on user interaction
+	Popup->>Core: Subscribe to permission status
+```
+
 ## Permission Process Model
 
 <!--
