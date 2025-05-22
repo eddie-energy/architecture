@@ -35,6 +35,8 @@ The scenario includes the perspective of both the eligible party and the final c
 
 :::
 
+![Architecture diagram including all major systems related to the EDDIE Framework](../figures/eddie-architecture.svg)
+
 ## Permission Facade
 
 ::: info DESIRED CONTENT
@@ -94,7 +96,7 @@ It differentiate between accounting point data and validated historical data.
 Furthermore, data needs for validated historical data specifies a start and end date, as well as what kind of energy data should be collected.
 For example gas or electricity.
 
-## Services (Data Needs API)
+## Data Needs (Services)
 
 The data needs API provides a way to retrieve and create data needs.
 A data need is used to determine what data should be collected for a specific permission from a MDA.
@@ -107,10 +109,6 @@ Furthermore, they provide means to terminate a permission request by the eligibl
 ### Why multiple outbound connectors?
 
 There are multiple implementations of the outbound connectors to allow the eligible party to use a protocol of their choosing.
-
-## Streaming Infrastructure
-
-## Interoperable Communication Layer
 
 <!--
 ====== this is just here for reference, please delete it once working on the page =======
