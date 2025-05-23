@@ -21,7 +21,7 @@ export default withMermaid(defineConfig({
   base: "/architecture/",
   lang: "en-GB",
   head: [
-    ["link", { rel: "icon", href: "/figures/favicon.svg" }],
+    ["link", { rel: "icon", href: "/architecture/figures/favicon.svg" }],
     [
       "script",
       {
