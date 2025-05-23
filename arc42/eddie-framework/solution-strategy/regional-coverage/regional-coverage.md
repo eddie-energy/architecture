@@ -1,6 +1,5 @@
 ---
 title: Regional Coverage
-order: 1
 ---
 
 ::: warning TO REVIEW

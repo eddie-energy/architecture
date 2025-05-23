@@ -1,6 +1,5 @@
 ---
 title: Evolution from the Grant Agreement
-hiddenInSidebar: true
 ---
 
 This page aims to describe the journey from the initial project specification towards the implemented architecture
