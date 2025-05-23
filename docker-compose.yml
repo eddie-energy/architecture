@@ -4,6 +4,6 @@ services:
   structurizr-lite:
     image: structurizr/lite
     volumes:
-      - .:/usr/local/structurizr
+      - ./diagrams:/usr/local/structurizr
     ports:
       - "8080:8080"

@@ -4,3 +4,7 @@ node_modules
 /.vitepress/cache
 /.vitepress/dist
 /out
+
+# structurizr
+.structurizr/
+workspace.json

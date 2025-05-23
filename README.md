@@ -9,6 +9,17 @@ This repository hosts the documentation of the software architecture of EDDIE (E
 - To view the architecture documentation, click [here](https://eddie-web.projekte.fh-hagenberg.at/architecture/).
 - To view the guidelines for contributing, click [here](./CONTRIBUTING.md).
 
+## Diagrams
+
+The [Structurizr DSL](https://docs.structurizr.com/dsl) is used to define C4 diagrams.
+These diagrams are defined in the [diagrams/workspace.dsl](./diagrams/workspace.dsl) file and [published](https://diagrams-eddie.projekte.fh-hagenberg.at/share/1) using the [Structurizr CLI](https://docs.structurizr.com/cli).
+
+To run the Structurizr UI for local editing:
+
+1. Install [Docker](https://www.docker.com/)
+2. Run `docker compose up`
+3. Open https://localhost:8080 in a browser
+
 ## Other Interesting links:
 
 - [EDDIE Website](https://eddie.energy/)
