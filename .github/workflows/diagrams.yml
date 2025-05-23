@@ -1,0 +1,28 @@
+name: Publish Diagrams
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "diagrams/**"
+
+jobs:
+  structurizr-cli:
+    name: Publish Diagrams using structurizr-cli
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Run structurizr-cli action
+        uses: aidmax/structurizr-cli-action@v1
+        id: test
+        with:
+          id: 1 # EDDIE workspace ID
+          key: ${{ secrets.STRUCTURIZR_KEY }}
+          secret: ${{ secrets.STRUCTURIZR_SECRET }}
+          workspace: ./diagrams/workspace.dsl
+
+          # optional parameters
+          url: ${{ secrets.STRUCTURIZR_URL }}
