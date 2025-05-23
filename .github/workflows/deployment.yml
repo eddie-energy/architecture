@@ -1,35 +1,45 @@
+name: Build and Deploy
+
 on:
   push:
     branches:
       - main
+    paths-ignore:
+      - "README.md"
+      - "CONTRIBUTING.md"
+      - "docker-compose.yml"
+      - "diagrams/**"
   workflow_dispatch:
 
 permissions:
   contents: write
   issues: write
 
-name: Build and Deploy
 jobs:
   web-deploy:
-    name: Deployment
+    name: Deploy VitePress site
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up NodeJs 
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20
-    - name: Build
-      run: |
-        npm install --ci 
-        npm run build
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Deploy
-      uses: eddie-energy/ftp-deploy-action@main
-      with:
-        host: ${{ secrets.WEBSERVER_SFTP_HOST }}
-        user: ${{ secrets.WEBSERVER_SFTP_USERNAME }}
-        password: ${{ secrets.WEBSERVER_SFTP_PASSWORD }}
-        source: ./.vitepress/dist/
-        destination: "/public_html/architecture/"
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up NodeJs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Build
+        run: |
+          npm install --ci 
+          npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy
+        uses: eddie-energy/ftp-deploy-action@main
+        with:
+          host: ${{ secrets.WEBSERVER_SFTP_HOST }}
+          user: ${{ secrets.WEBSERVER_SFTP_USERNAME }}
+          password: ${{ secrets.WEBSERVER_SFTP_PASSWORD }}
+          source: ./.vitepress/dist/
+          destination: "/public_html/architecture/"
