@@ -11,17 +11,17 @@ Various concepts are relevant across the EDDIE system such as:
     - [Smart Appliances REFerence ontology (SAREF)](crosscutting-concepts.md#smart-appliances-reference-ontology-saref)
 
 ## Data Space
-### Definition
+#### Definition
 <!-- What it is -->
 
-The concept of a data space describes a federated system whereby organizations can share data in alignment with the principles of data sovereignty. Data Spaces facilitate secure, trusted, and interoperable data exchange across sectors. There are two prime initiatives that drive the adoption of data spaces: IDSA (International Data Spaces Association) which focuses on defining processes and specifications for sharing sovereign data, and Gaia-X that focuses on compliance within and across data spaces. Based on these initiatives, a data space is a system that includes multiple software applications for sharing sovereign data, such as dataspace connectors, registries for data and metadata, and identity management.
+The concept of a data space describes a federated system whereby organizations can share data in alignment with the principles of data sovereignty. Data spaces facilitate secure, trusted, and interoperable data exchange across sectors. There are two prime initiatives that drive the adoption of data spaces: IDSA (International Data Spaces Association) which focuses on defining processes and specifications for sharing sovereign data, and Gaia-X that focuses on compliance within and across data spaces. Based on these initiatives, a data space is a system that includes multiple software applications for sharing sovereign data, such as dataspace connectors, registries for data and metadata, and identity management.
 
-### Relevance
+#### Relevance
 <!-- Where it is used, i.e., in what parts of EDDIE -->
 
-While general-purpose data spaces are broad and flexible, they may not be directly applicable to the specific needs of the energy sector, e.g, to access data from Regional Data-sharing Infrastructures or Metering Devices at home. For this reason, the EDDIE system creates a data space that is similar to what is defined by data space initiatives, but focuses more on meeting the needs of the energy sector. The goal of the EDDIE system is to create a domain-specific data space tailored to the energy sector. This approach includes domain-specific components and processes. For example, instead of a generic dataspace connector, the EDDIE System uses Regional Connectors tailored to accessing data from Regional Data-sharing infrastructures, and instead of a generic metadata registry, the EDDIE System integrates a Marketplace tailored to eligible parties and customers.
+While general-purpose data spaces are broad and flexible, they may not be directly applicable to the specific needs of the energy sector, e.g., to access data from Regional Data-sharing Infrastructures or Metering Devices at home. For this reason, the EDDIE system creates a data space that is similar to what is defined by data space initiatives, but focuses more on meeting the needs of the energy sector. The goal of the EDDIE system is to create a domain-specific data space tailored to the energy sector. This approach includes domain-specific components and processes. For example, instead of a generic dataspace connector, the EDDIE system uses Regional Connectors tailored to accessing data from Regional Data-sharing infrastructures, and instead of a generic metadata registry, the EDDIE system integrates a Marketplace tailored to eligible parties and customers.
 
-### Motivation
+#### Motivation
 Data spaces are proposed for managing data according to [European Strategy for Data](https://digital-strategy.ec.europa.eu/en/policies/strategy-data).
 
 ## Data Models
@@ -43,7 +43,7 @@ The EDDIE system uses CIM to address interoperability concerns arising from dive
 
 - Smart meters generating data in various formats.
 - Metered data administrators providing historical data in different formats.
-- Permission administrators using various formats for consent messages.
+- Permission administrators using various formats for permission messages.
 
 #### Motivation
 
@@ -51,7 +51,7 @@ CIM is a model that has been developed and refined for a long time reaching a sa
 
 Alternatives of CIM are:
 
-- [OpenADR](https://www.openadr.org/): Open Automated Demand Response (OpenADR) is an open and interoperable information exchange model and emerging Smart Grid standard.  OpenADR standardizes the message format used for Auto-DR so that dynamic price and reliability signals can be delivered in a uniform and interoperable fashion among utilities, ISOs, and energy management and control systems.
+- [OpenADR](https://www.openadr.org/): Open Automated Demand Response (OpenADR) is an open and interoperable information exchange model and emerging smart grid standard.  OpenADR standardizes the message format used for Auto-DR so that dynamic price and reliability signals can be delivered in a uniform and interoperable fashion among utilities, ISOs, and energy management and control systems.
 - [Green Button](https://www.greenbuttonalliance.org/): Green Button is based on the Energy Services Provider Interface (ESPI) data standard released by the North American Energy Standards Board (NAESB). The ESPI standard consists of two components: 1) a common XML format for energy usage information and 2) a data exchange protocol which allows for the automatic transfer of data from a utility to a third party based on customer authorization.
 
 
@@ -62,7 +62,7 @@ SGAM is a reference architecture developed by the International Electrotechnical
 
 SGAM is organized into six main views:
 
-1. Business view: Defines the overall business context of the smart grid system..
+1. Business view: Defines the overall business context of the smart grid system.
 1. Function view: Defines the functions and services that need to be provided by the smart grid system.
 1. Information view: Defines the information that needs to be exchanged between different components (including the data models and communication protocols).
 1. Communication view: Defines the communication networks and protocols that need to be used for exchanging information between the different components.
@@ -78,13 +78,13 @@ SGAM provides a comprehensive and standardized way of organizing and describing 
 Alternative models to SGAM include:
 
 - NIST Smart Grid Framework: Developed by the National Institute of Standards and Technology (NIST), the NIST Smart Grid Framework provides a comprehensive and standardized way of organizing and describing the different components of a smart grid system, similar to SGAM.
-- IEC 61850: IEC 61850 is a communication standard for power utility automation that defines a set of protocols.
+- IEC 61850: This is a communication standard for power utility automation that defines a set of protocols.
 
 ### Smart Appliances REFerence ontology (SAREF)
 #### Definition
 
 SAREF is a semantic data model developed by the European Telecommunications Standards Institute (ETSI) with the goal of facilitating the interoperability and standardization of smart appliances in the Internet of Things (IoT) ecosystem.
-IT provides a standardized ontology with classes and properties to describe smart appliances, such as household appliances, lighting systems, and HVAC systems. The ontology provides a standardized vocabulary that can be used to describe smart appliances in a way that is widely accepted.
+IT provides a standardized ontology with classes and properties to describe smart appliances, such as household appliances, lighting systems, and HVAC (Heating, Ventilation, Air Conditioning) systems. The ontology provides a standardized vocabulary that can be used to describe smart appliances in a way that is widely accepted.
 
 SAREF comprises a main ontology, SAREF, and several sub-ontologies such as SAREF4AUTO, SAREF4ENER, and SAREF4BLD, which provide more specific vocabularies for automotive, energy, and building domains respectively.
 
