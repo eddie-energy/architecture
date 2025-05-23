@@ -21,7 +21,7 @@ export default withMermaid(defineConfig({
   base: "/architecture/",
   lang: "en-GB",
   head: [
-    ["link", { rel: "icon", href: "/figures/favicon-32x32.png" }],
+    ["link", { rel: "icon", href: "/figures/favicon.svg" }],
     [
       "script",
       {
@@ -41,7 +41,7 @@ export default withMermaid(defineConfig({
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "/figures/favicon-32x32.png",
+    logo: "/figures/favicon.svg",
     nav: [
       { text: "Home", link: "/" },
       { text: "Operation Manual", link: "https://eddie-web.projekte.fh-hagenberg.at/framework/" }
