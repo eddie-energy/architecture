@@ -23,24 +23,72 @@ The scenario includes the perspective of both the eligible party and the final c
 4. The EP receives data from the MDA (via _Outbound Connector_)
     - The EP configures an _Outbound Connector_ to consume data from
 5. The customer revokes their permission
-6. The EP discontinues their service terminating permissions
+6. The EP discontinues their service, terminating permissions
 
 ---
 
-**Notes**
+**NOTES**
 - It should be readable without prior knowledge about the EDDIE Framework.
 - Avoid outdated terms and GA references. The [evolution page](evolution-from-the-grant-agreement.md) is for that.
 - Defer any additional information to other pages, particularly [domain concepts](../crosscutting-concepts/domain-concepts.md) and [architectural decisions](../architectural-decisions/architectural-decisions.md).
 - Describe in an FAQ format.
 
+--
+
+**TODO**
+- Check if the concepts should be moved to a _Domain Concepts_ section.
+
 :::
 
+## Overview
+
+The main functionality of the EDDIE Framework is to abstract away the complex processes of permission requests and data access for different regional data infrastructures.
+For this purpose, the EDDIE Framework builds upon four important concepts.
+- _Permission Facade_ — handles permission requests and state.
+- _Region Connectors_ — implement the data access for specific regional infrastructures.
+- _Outbound Connectors_ — handle the data exchange with the eligible party.
+- _Data Needs_ — define the data requirements of services provided by the eligible party.
+
+This section first showcases the core components of the EDDIE Framework and describes how these components enable its functionality. 
+It then elaborates on the key concepts mentioned, answers questions in a Q&A format, and references architectural decisions.
+
+## Core Components
+
+The diagram below shows, at a glance, the most important parts and actors of the system.
+At the top, the eligible party operates a website embedding the _EDDIE Popup_,
+for the customer to create permissions, and a service based on energy data.
+The eligible party also operates the framework application and containers supplementing additional functionality.
+
 ![Architecture diagram including all major systems related to the EDDIE Framework](../figures/eddie-architecture.svg)
+
+The framework application orchestrates _Region Connectors_ and _Outbound Connectors_
+that can be enabled as plugins to support specific data providers or data exchange protocols.
+An _Admin Console_ provides a UI for the eligible party to administer the EDDIE Framework,
+including the definition of services as _Data Needs_, the onboarding of _Region Connectors_, and the management of permissions.
+The user management and system monitoring are handled by specialized software deployed separate from the framework.
+
+The [Building Block View](../building-block-view/building-block-view.md) will continue with a more accurate representation of system containers and components based on the [C4 Model](https://c4model.com/).
+
+## Functionality
+
+To describe how these concepts and components work together to address functional requirements,
+we can look at the steps of the following scenario from the perspective of the eligible party.
+
+<!-- TODO: Add an installation step? -->
+
+- _Define services_ — The eligible party starts in the _Admin Console_ where they define the data requirements for their service as a _Data Need_.
+- _Enable region connectors_ — They configure a _Region Connector_ to access data from the regions they operate in.
+- _Establish permissions_ — On their website, they embed the _EDDIE Popup_ to guide their customers through the _Permission Facade_.
+- _Transfer data_ — The eligible party configures an _Outbound Connector_ to pass the energy data in their preferred format using a data exchange protocol of their choice.
+- _Manage active permissions_ — In the _Admin Console_, the eligible party can manage and view the status of active permissions.
+- _Termination and revocation_ — Active permissions can be revoked by the customer through the portal of their permission administrator, or terminated by the eligible party through the _Admin Console_.
+
+These important workflows are described in more detail in the [Runtime View](../runtime-view/runtime-view.md).
 
 ## Permission Facade
 
 ::: info DESIRED CONTENT
-In this section we are gonna describe the reasoning and architectural implementation behind our permission facade.
+In this section we are going to describe the reasoning and architectural implementation behind our permission facade.
 Markus' master's thesis mainly contains these ideas and explanations.
 We should focus on the decisions around the micro-frontend approach and why it is necessary for a modular system.
 :::
@@ -56,7 +104,7 @@ Furthermore, region connectors manage permissions given to collect the data.
 
 ### What are the responsibilities of a region connector?
 
-A region connector has multiple responisibilities.
+A region connector has multiple responsibilities.
 It creates and manages permission requests to access data from a final customer.
 Furthermore, it collects validated historical data and accounting point data from an MDA.
 
@@ -67,30 +115,30 @@ Furthermore, the format of the validated historical data and accounting point da
 This means to cover multiple MDAs and PAs, there need to be multiple implementations to cover the differences.
 This is what a region connector does.
 It implements the permission process for one PA or country and collects the data for one MDA or country.
-So there are different region connectors for all countries, PAs and MDAs where these concepts are implemented differently.
+So there are different region connectors for all countries, PAs, and MDAs, where these concepts are implemented differently.
 Sometimes multiple PAs and MDAs implement the same permission process and provide the data in a common format, in this case there is only one region connector for multiple PAs and MDAs.
 In othe cases there are multiple countries implementing the same permission process and data formats.
 Here one region connector can cover multiple countries.
 
 ### How is permission to data given?
 
-In order to access the data of a final customer, the final customer has to express the wish to share their data with the party hosting the EDDIE framework.
+To access the data of a final customer, the final customer has to express the wish to share their data with the party hosting the EDDIE framework.
 Then the region connector can create a permission request, which is sent to the PA.
-The PA validates this permisison request and shows it the final customer.
+The PA validates this permission request and shows it to the final customer.
 The final customer can accept or decline the permission request.
-Once it is accepted the PA notifies the region connector and at this point it is possible to retrieve the final customer's data.
+Once it is accepted, the PA notifies the region connector, and at this point it is possible to retrieve the final customer's data.
 
 ### How does a region connector integrate into MDA and PA?
 
-In order to create and manage permission requests a region connector has to integrate into the system of a PA.
+To create and manage permission requests a region connector has to integrate into the system of a PA.
 If it wants to retrieve data it needs to integrate in to the system of an MDA.
 MDAs and PAs have to offer an interface to interact with them.
-These interfaces can range from REST APIs to using messeging via the AS4 protocol.
-To access these interfaces a party hosting EDDIE has to registrate with the MDA and PA.
+These interfaces can range from REST APIs to using messaging via the AS4 protocol.
+To access these interfaces a party hosting EDDIE has to register with the MDA and PA.
 
 ### How is the data that is retrieved determined?
 
-The kind of data that is retrieved from a MDA is determined via a data need.
+The kind of data that is retrieved from an MDA is determined via a data need.
 A data need specifies what kind of data can be accessed.
 It differentiate between accounting point data and validated historical data.
 Furthermore, data needs for validated historical data specifies a start and end date, as well as what kind of energy data should be collected.
@@ -103,92 +151,9 @@ A data need is used to determine what data should be collected for a specific pe
 
 ## Outbound Connectors
 
-An outbound connector provides endpoints to access to permission market documents, accounting point data market documents and validated historical data market documents.
-Furthermore, they provide means to terminate a permission request by the eligible party.
+An outbound connector provides endpoints to access to permission market documents, accounting point data market documents, and validated historical data market documents.
+Furthermore, they provide the means to terminate a permission request by the eligible party.
 
 ### Why multiple outbound connectors?
 
 There are multiple implementations of the outbound connectors to allow the eligible party to use a protocol of their choosing.
-
-<!--
-====== this is just here for reference, please delete it once working on the page =======
-
-::: warning TO ADD
-According to arc42 this chapter should contain a short summary and explanation of the fundamental decisions and
-solution strategies, that shape the system architecture. It includes
-
-- technology decisions
-- decisions about the top-level decomposition of the system, e.g.
-  usage of an architectural pattern or design pattern
-- decisions on how to achieve key quality goals
-- relevant organizational decisions, e.g. selecting a development
-  process or delegating certain tasks to third parties.
-
-:::
-
-<!-- A short summary and explanation of the fundamental decisions and
-solution strategies, that shape system architecture. It includes
--   technology decisions
--   decisions about the top-level decomposition of the system, e.g.
-    usage of an architectural pattern or design pattern
--   decisions on how to achieve key quality goals
--   relevant organizational decisions, e.g. selecting a development
-    process or delegating certain tasks to third parties.
-
-Keep the explanations of such key decisions short. You may use a
-table: Quality goal, Scenario, Solution approach, Link to Details
-
-Motivate what was decided and why it was decided that way, based upon
-problem statement, quality goals and key constraints. Refer to details
-in the following sections.
-::: warning TO ADD
-refine the following overview
-:::
-
-## Overview
-
-Short description. Motivate what was decided and why it was decided that way, based upon
-problem statement, quality goals and key constraints. Refer to details
-in the following sections.
-
-There are certain goals of the framework which can be achieved by following a specific strategy. These goals are outlined in the following table which also provides links to more detailed explanations.
-
-## Table
-
-| Scenario                                                                                                                                           | Approach                                                                                                                                                                                  | Section    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------- | ----------- | --- |
-| All customers shall provide their consent for sharing data in a homogeneous manner, regardless of their country or their permission administrator. | Implement a dedicated Permission Facade component that handles the consent of all the customers of an eligible party. This component shall comply with the specificities of each country. |            |
-| The EDDIE Framework shall support customers and Regional Data-sharing Infrastructures across many Member States.                                   | The EDDIE Framework shall become compatible with multiple Member States and beyond in three phases.                                                                                       |            |
-| <!--                                                                                                                                               | 3                                                                                                                                                                                         | Incentives | Why would consumers and eligible parties use eddie | marketplace |     |
-| 4                                                                                                                                                  |                                                                                                                                                                                           |            |                                                    |             | -->
-
-<!-- ## OTHERs (TBD)
-
-The overall methodology of EDDIE is oriented towards the first main objective to (OBJ#1) provide a dependable, scalable and extensible European Distributed Data Infrastructure for Energy Framework (EDDIE Framework). This means that the overlying European interface will be given priority, and data accessible through data-sharing infrastructure (1) provided by metered data administrators will be available first. In parallel, and independently but synchronised, the work on the second main objective to (OBJ#2) provide an Administrative Interface for In-house Data Access (AIIDA) to feed in-house data (2) to EDDIE Framework users will be started.
-
-Both together, the EDDIE Framework and AIIDA will be put into a consistent overall architectural environment in an extensive architecture and specification phase planned for the first six months of the project. Publicly available data (3) from different Member States (MSs) also often has some hurdles to take and should also be part of a unified interface in the future, but for the initial EDDIE project, it shall be out of scope. See Figure 3 that illustrates the 3 major data family groups (1–3) considered within EDDIE as described in detail in the following:
-
-•	Data-sharing infrastructure: These are national energy data management environments and online data hubs. Historical metering and consumption data is collected, validated and stored at entities that need to make that data available in turn to established actors or eligible parties. At the moment, this is done diversly and by different players in each Member State. Also, different processes need to be followed and data is delivered in different formats and schemas. The EDDIE Framework communicates with these data-sharing infrastructures and provides a streamlined consent management user flow and a transformation towards a common pivotal format.
-•	In-house data sources: Currently, near real-time data can in most MSs be read from the “standardised interface” on the smart meter (if it has been ordered and installed after July 4th 2019). If the customer manages to connect to that interface and make that data processable, it is still only available in-house and it needs to be transformed to a common format. The Administrative Interface for In-house Data Access (AIIDA) will be in the position to read that data from different meter models, standards and configurations and make it available through an online consent-based mechanism. This means that users of services that are based on the EDDIE Framework can be shown a button on e.g., the service website saying “connect my in-house data” and will be routed to their Consent Management Interface (within AIIDA). If a consent is given, the AIIDA instance will deliver the requested data to the EDDIE Framework of the service for which a consent was granted. Not only main meter interfaces will be supported, but also others (e.g., sub-meters).
-•	Publicly available data: There is also other – often publicly available – data, that is necessary for many processes, but does not directly belong to the customer and also does not show consumption or generation time series characteristics. National weather forecasts, price feeds or market reference data fall under this category. These data families are still depicted diversely and by different players depending on the country. Optionally, but if the time allows, the EDDIE project team will also address this field and strive to make it available in a unified pivotal format through the EDDIE Framework.
-
-
-
-
-
-
-
-The overall methodology of EDDIE is oriented towards the first main objective to (OBJ#1) provide a dependable, scalable and extensible European Distributed Data Infrastructure for Energy Framework (EDDIE Framework). This means that the overlying European interface will be given priority, and data accessible through data-sharing infrastructure (1) provided by metered data administrators will be available first. In parallel, and independently but synchronised, the work on the second main objective to (OBJ#2) provide an Administrative Interface for In-house Data Access (AIIDA) to feed in-house data (2) to EDDIE Framework users will be started.
-
-Both together, the EDDIE Framework and AIIDA will be put into a consistent overall architectural environment in an extensive architecture and specification phase planned for the first six months of the project. Publicly available data (3) from different Member States (MSs) also often has some hurdles to take and should also be part of a unified interface in the future, but for the initial EDDIE project, it shall be out of scope. See Figure 3 that illustrates the 3 major data family groups (1–3) considered within EDDIE as described in detail in the following:
-
-•	Data-sharing infrastructure: These are national energy data management environments and online data hubs. Historical metering and consumption data is collected, validated and stored at entities that need to make that data available in turn to established actors or eligible parties. At the moment, this is done diversly and by different players in each Member State. Also, different processes need to be followed and data is delivered in different formats and schemas. The EDDIE Framework communicates with these data-sharing infrastructures and provides a streamlined consent management user flow and a transformation towards a common pivotal format.
-•	In-house data sources: Currently, near real-time data can in most MSs be read from the “standardised interface” on the smart meter (if it has been ordered and installed after July 4th 2019). If the customer manages to connect to that interface and make that data processable, it is still only available in-house and it needs to be transformed to a common format. The Administrative Interface for In-house Data Access (AIIDA) will be in the position to read that data from different meter models, standards and configurations and make it available through an online consent-based mechanism. This means that users of services that are based on the EDDIE Framework can be shown a button on e.g., the service website saying “connect my in-house data” and will be routed to their Consent Management Interface (within AIIDA). If a consent is given, the AIIDA instance will deliver the requested data to the EDDIE Framework of the service for which a consent was granted. Not only main meter interfaces will be supported, but also others (e.g., sub-meters).
-•	Publicly available data: There is also other – often publicly available – data, that is necessary for many processes, but does not directly belong to the customer and also does not show consumption or generation time series characteristics. National weather forecasts, price feeds or market reference data fall under this category. These data families are still depicted diversely and by different players depending on the country. Optionally, but if the time allows, the EDDIE project team will also address this field and strive to make it available in a unified pivotal format through the EDDIE Framework. -->
-
-<!-- ![EDDIE Overview](/01-introduction-and-goals/figures/EDDIE_overview.png) -->
-<!-- <div align="center"> -->
-<!-- <img src="./figures/EDDIE_overview.png" width="850" alt="test"> -->
-<!-- </div> -->
-
-<!-- Activities towards the fourth main objective to (OBJ#4) provide extensive scientific assessment and share real-world experience on various aspects of data-sharing will start accompanying these developments and when the architecture and specification phase is completed and Milestone 2 (project month 9) is achieved. Implementation of software and systems to be developed within EDDIE will deliver usable and assessable preliminary results soon, to ensure that their contribution is aligned with the overall objectives during the whole lifecycle of the project. Following this rationale, software deliverables will be released on the open-source code management platform (GitHub [11]), so that all interested stakeholders can easily test and provide feedback. It is planned to ramp up dissemination and future development and maintenance through options like the formation of a new or the adoption of the project results by an existing open-source foundation such as the Linux Foundation for Energy [12] or European organisations. -->
