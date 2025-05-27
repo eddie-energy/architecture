@@ -2,56 +2,70 @@
 title: Evolution from the Grant Agreement
 ---
 
+::: info TODO
+- Move to an appendix section over solution strategy?
+- Keep outside the EDDIE Framework system and also compare Marketplace and AIIDA?
+::: 
+
 This page aims to describe the journey from the initial project specification towards the implemented architecture
 by relating the methodology outlined in the Grant Agreement (Part B, Section 1.2, Pages 11–25)
-to the documented architecture with references to related pages.
+to the documented architecture.
 
 For those familiar with the Grant Agreement or early publications, it might serve as an improved point of entry towards the current state of the EDDIE Framework.
 Others may find in it a more coherent view on architectural drivers and functional requirements.
 Please note that the Grant Agreement is not a public document and therefore not shared with this documentation.
+If you have access to the Grant Agreement, this section uses the same diagrams and headlines for an easy comparison.
 
 With its methodological structure, this page can be read as a historical companion to the [solution strategy](../solution-strategy/solution-strategy.md).
 
 ## EDDIE core components
 
+The following diagram shows the most important parts and actors of EDDIE as laid out by the Grant Agreement.
+
 ![Architectural schema of the EDDIE Framework laid out in the Grant Agreement](./permission-facade/figures/eddie-infrastructure.png)
 
-- EDDIE Consent Facade -> [Permission Facade](../crosscutting-concepts/domain-concepts.md#permission-facade)
-- EDDIE Interoperable Communication Layer -> [Region Connectors](../crosscutting-concepts/domain-concepts.md#region-connectors)
-- EDDIE Data Streaming Infrastructure -> [Outbound Connectors](../crosscutting-concepts/domain-concepts.md#outbound-connectors)
-- EDDIE Administrative Console -> [Admin Console](../building-block-view/building-block-view.md#eddie-application)
+Comparing this diagram to the updated version below, 
+one can see that each existing component maps nicely to a specific concept implementing its envisioned functionality.
+
+- EDDIE Consent Facade → [Permission Facade](../crosscutting-concepts/domain-concepts.md#permission-facade)
+- EDDIE Data Streaming Infrastructure → [Outbound Connectors](../crosscutting-concepts/domain-concepts.md#outbound-connectors)
+- EDDIE Interoperable Communication Layer → [Region Connectors](../crosscutting-concepts/domain-concepts.md#region-connectors)
+- EDDIE Administrative Console → [Admin Console](../building-block-view/building-block-view.md#eddie-application)
+
+The most notable adaptation is the implementation of the _Data Streaming Infrastructure_ and _Interoperable Communication Layer_ through the concepts of _Outbound Connectors_ and _Region Connectors_.
+Both _Outbound Connectors_ and _Region Connectors_ are implemented using a plugin architecture, 
+where each plugin supports a specific data exchange protocol or energy data provider.
+_Outbound Connectors_ and _Region Connectors_ do not communicate directly, but use a separate component as a mediator.
 
 ![Evolution of core components from the Grant Agreement](./permission-facade/figures/eddie-infrastructure-comparison.png)
 
-One notable change is the column on the right where the EDDIE Framework uses other software to tackle specific problems.
+Another notable change is the column on the right where the EDDIE Framework uses specialized software to tackle specific problems.
 
 - System monitoring is done [separate from the admin console](../architectural-decisions/architectural-decisions.md#separate-system-monitoring-and-admin-console) and handled by an existing software solution.
-- Authentication, authorization, and user management are delegated to a configured Keycloak instance.
+- Authentication, authorization, and user management are delegated to a configured Keycloak instance and no longer stored in the shared database.
 - The shared database is configured to track process states and configuration for region connectors, as well as metrics for the admin console. It does not include authentication information.
 
-TODO: Link architectural decisions and building blocks; elaborate, reason
-
-> common database (EDDIE Database) to manage authentication information, process states, mapping/reference data
-
-- Admin console authenticates eligible party accounts using Keycloak.
-- The EDDIE Framework does authenticate users of the eligible party.
-- TODO: Check with Florian what the database actually does
-
-> EDDIE Data Streaming Infrastructure [...] provide[s] the Application Programming Interface (API) for Energy Data – Based Services.
-
-> Scripted deployment configuration(s); single console command
+The Grant Agreement also highlights how the EDDIE Framework can be installed with a single command through the use of scripted deployment configurations and provides the following diagram describing three deployment options.
+All these options can be achieved by configuration of the EDDIE Framework as described in the [Operation Manual](https://eddie-web.projekte.fh-hagenberg.at/framework/).
+Details on the deployment of the EDDIE Framework are found in its [Deployment View](../deployment-view/deployment-view.md).
 
 ![](./permission-facade/figures/eddie-deployment-options.png)
 
-- TODO: Florian -> Document why we only use Postgres and why we cannot use an embedded database for Option 1 deployment
-
 ## Functionality provided by the EDDIE Framework
+
+To demonstrate the functionality of the EDDIE Framework, the Grant Agreement describes a scenario of four stages.
+This section highlights how these descriptions differ from the implemented architecture.
+An updated collection of use-cases can be found in the [Runtime View](../runtime-view) of the EDDIE Framework.
 
 ### Installation and setup
 
-![](./permission-facade/figures/admin-console-region-setup.png)
+::: info TODO
+We are not yet sure if we can or even want to support the onboarding/configuration of region connectors through the admin console.
+:::
 
-![](./permission-facade/figures/admin-console-region-setup-details.png)
+![Sketch of the admin console showing showing a list of region connectors](./permission-facade/figures/admin-console-region-setup.png)
+
+![Sketch of the admin console showing forms for onboarding region connectors](./permission-facade/figures/admin-console-region-setup-details.png)
 
 _service_ provided by the eligible party
 the specification of the data was termed a [data need](../crosscutting-concepts/domain-concepts.md#data-needs).
