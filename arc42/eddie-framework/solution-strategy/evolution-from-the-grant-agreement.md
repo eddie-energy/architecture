@@ -55,7 +55,7 @@ Details on the deployment of the EDDIE Framework are found in its [Deployment Vi
 
 To demonstrate the functionality of the EDDIE Framework, the Grant Agreement describes a scenario of four stages.
 This section highlights how these descriptions differ from the implemented architecture.
-An updated collection of use-cases can be found in the [Runtime View](../runtime-view) of the EDDIE Framework.
+An updated collection of use-cases can be found in the [Runtime View](../runtime-view/runtime-view.md) of the EDDIE Framework.
 
 ### Installation and setup
 
