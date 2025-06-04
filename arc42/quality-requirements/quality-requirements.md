@@ -3,7 +3,7 @@ title: Quality Requirements
 order: 12
 ---
 
-This section outlines the essential quality requirements of the EDDIE system, structured into two main subsections: Quality Requirements and Quality Scenarios. Quality Requirements explains the requirements with a description mentioning relevance to EDDIE. Quality Scenarios provides examples through scenarios that show how the system should perform under various conditions.
+This section outlines the essential quality requirements of the EDDIE system, structured into two main subsections: Quality Requirements and Quality Scenarios. Quality Requirements explain the requirements with a description mentioning relevance to the EDDIE system. Quality Scenarios provide examples through scenarios that show how the system should perform under various conditions.
 
 ## Quality Requirements
 
@@ -11,7 +11,7 @@ This section outlines the essential quality requirements of the EDDIE system, st
 |-|-|-|-|
 | Usability | Compatibility | Uniform customer interface for integration with different regional data-sharing infrastructures. | QS3 |
 | Usability | Ease of Use | Simple and intuitive user interfaces for customers. | QS3 |
-| Usability | Ease of Use | Simple and intuitive interfaces for eligible parties, regarding also support for system deployment. | QS1 |
+| Usability | Ease of Use | Simple and intuitive interfaces for eligible parties, also regarding support for system deployment. | QS1 |
 | Security | Compliance | All data-sharing interactions comply with GDPR. | QS4 |
 | Security | Compliance | The internal operation of the system aligns with [applicable use cases](./implementing-act/implementing-act.md) defined by the Smart Grids Task Force. | |
 | Scalability | Data Integration | The system supports data aggregation of metering points at European scale. | QS2 |
