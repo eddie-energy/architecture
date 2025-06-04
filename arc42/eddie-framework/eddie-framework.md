@@ -3,8 +3,8 @@ title: EDDIE Framework
 order: 6
 ---
 
-The EDDIE Framework provides eligible third parties with the tools to access to energy data from various Metered Data Administrators (MDAs) throughout the European Union.
-This is done by implementing a unified interface to create permission requests and access energy data that abstracts away the diverse processes required by the different MDAs.
+The EDDIE Framework provides eligible third parties with the tools to access to energy data from various Data Access Providers (DAPs) throughout the European Union.
+This is done by implementing a unified interface to create permission requests and access energy data that abstracts away the diverse processes required by different data providers.
 
 ![A simple visualization of the EDDIE Framework](./figures/eddie-simple.svg)
 

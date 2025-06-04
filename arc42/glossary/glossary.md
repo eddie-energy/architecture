@@ -45,6 +45,7 @@ The glossary is divided into two sections: domain terms and acronyms.
 | CIM | Common Information Model |
 | CM | Capacity Mechanism |
 | DA | Day Ahead (market) |
+| DAP | Data Access Provider |
 | DCC | Demand Connection Code |
 | DER | Distributed Energy Resources |
 | DF | Distributed Flexibility |

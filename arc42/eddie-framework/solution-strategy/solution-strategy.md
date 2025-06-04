@@ -20,7 +20,7 @@ The scenario includes the perspective of both the eligible party and the final c
 2. The customer grants their permission through the _EDDIE Popup_
     - The customer accepts the permission request in the portal of their PA
 3. The EP manages data needs and permissions in the _Admin Console_
-4. The EP receives data from the MDA (via _Outbound Connector_)
+4. The EP receives data from the DAP (via _Outbound Connector_)
     - The EP configures an _Outbound Connector_ to consume data from
 5. The customer revokes their permission
 6. The EP discontinues their service, terminating permissions
