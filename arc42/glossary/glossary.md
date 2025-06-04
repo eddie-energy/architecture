@@ -5,6 +5,8 @@ order: 14
 
 The glossary is divided into two sections: domain terms and acronyms.
 
+The terminology is based on the [Commission Implementing Regulation 2023/1162](https://eur-lex.europa.eu/eli/reg_impl/2023/1162/oj) and [Harmonised Electricity Role Model](https://www.entsoe.eu/data/cim/role-models/).
+
 ## Domain Terms
 
 | Term | Definition |
@@ -15,6 +17,7 @@ The glossary is divided into two sections: domain terms and acronyms.
 | Data Access Log | A timestamped record of data items accessed that includes at least the identification of the final customer or the eligible party accessing the data and, if applicable, the identification of the permission used to access the data. |
 | Data Access Provider | A party responsible for facilitating access to validated historical metering and consumption data by the final customer. |
 | Eligible Party | Entity offering energy-related services to final customers, such as suppliers, transmission and distribution system operators, aggregators, energy service companies, and balancing service providers. |
+| Flexibility Service Provider | Independent energy service providers aggregating flexibilities into energy and grid ancillary service markets. |
 | Identity Service Provider | A party that manages identity information; issues, stores, protects, keeps up to date, and manages identity information for a natural or legal person and provides authentication services to eligible parties and final customers; |
 | Meter Operator | A party responsible for installing, maintaining, testing, certifying and decommissioning physical meters. |
 | Metered Data Administrator | A party responsible for storing validated historical metering and consumption data and distributing this data to final customers and eligible parties. |
@@ -28,10 +31,10 @@ The glossary is divided into two sections: domain terms and acronyms.
 | Reference Model | The procedures that are necessary for access to data describing the minimum required information exchange between market participants. |
 | Smart Meter | An electronic metering device deployed within a smart metering system as defined in the Article 2(23) of the Directive (EU) 2019/944. |
 | Sub-meter | A meter that measures only a part of a customer's load/production behind one connection to the grid (measured by a main meter) or a meter with a different granularity of metering data than the main meter. |
+| Transmission System Operator | An organisation which is responsible for the transport of energy at national or regional level using fixed infrastructure. |
 | Validated Historical Metering and Consumption Data | Historical metering and consumption data collected from a meter, a conventional or a smart meter, or completed with substitute values that are determined otherwise in case of meter unavailability. |
 
-
-## Acronyms 
+## Acronyms
 
 | Acronym | Definition |
 |-|-|
@@ -82,4 +85,4 @@ The glossary is divided into two sections: domain terms and acronyms.
 | SGU | Significant Grid User |
 | SOGL | System Operation Guideline |
 | TSO | Transmission System Operator |
-
+| VHD | Validated Historical Data |
