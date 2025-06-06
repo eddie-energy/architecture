@@ -188,4 +188,37 @@ It dramatically increases the workload, where each SQL script has to be tested f
 
 ## Outbound Connectors
 
+EDDIE needs to provide means to the eligible party to receive the requested energy data as well as status updates for permission requests.
+For that EDDIE has a number of different documents.
+
+### Decision
+
+In order to support as many different setups as possible on the eligible party's side it was decided to use an abstract approach to which systems and protocols are supported by EDDIE.
+The outbound connectors are inspired by [hexagonal architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)), where it doesn't matter what the ingoing and outgoing protocols are, because the application itself is protocol agnostic.
+The following outbound connectors need to be included:
+
+- Apache Kafka
+- AMQP 1.0
+- REST
+
+
+### Consequences
+
+Positive consequences:
+
+- Adding new protocols is easy and doesn't interfere with existing outbound connectors
+- Eligible parties only need to activate outbound connectors they require
+- Eligible parties can decide what protocol they want to use
+- Possibility to reuse components between outbound connectors
+
+Negative consequences:
+
+- Initial creation of outbound connectors can take a bit more planning time
+
+
+### Alternatives
+
+The alternative would be to strongly couple EDDIE to the protocols, such as Apache Kafka.
+This would make the application very inflexible and impossible to use for eligible parties that can't or won't use Apache Kafka.
+
 ## No internal communication with Apache Kafka
