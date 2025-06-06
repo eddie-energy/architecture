@@ -119,3 +119,31 @@ Such a setup would include the following features originally attributed to the A
 
 The Admin Console should still allow the eligible party to analyze domain entities like permissions, data packages, and data needs.
 A discussion on potential monitoring tools is documented in [this GitHub issue](https://github.com/eddie-energy/eddie/issues/774).
+
+## Region Connectors Architecture
+
+The region connectors need an internal architecture, since they are all structured similarly.
+A common architecture has to be found, to ease development, reuse components between region connectors and implement them in a consistent manner.
+
+### Decision
+
+As internal architecture the event sourcing pattern is used.
+This requires an eventbus, which can be either an external application, like Apache Kafak, or an internal software component, like Project Reactor's Sinks, an event store, in this case PostgreSQL with append-only tables, and an outbox, which guarantees that only persisted events are emitted to the eventbus.
+As eventbus a Project Reactor implementation was chosen, since no external service is required.
+
+### Consequences
+
+Positive consequences:
+
+- Flexible implementations possible
+- Increased traceability, what happend when to a specific permission request
+
+Negative consequences:
+
+- Reduced transparency in some cases
+
+### Alternative
+
+The EDDIE framework historically used two different architectures to manage permission requests in the region connectors.
+The first appraoch was to use state machines to represent permission requests and manage changes.
+This proved to be very inflexible, small features required changes at many different points in the code base, while not improving readability of the code.
