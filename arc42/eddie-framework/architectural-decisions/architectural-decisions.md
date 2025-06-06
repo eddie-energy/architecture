@@ -201,7 +201,6 @@ The following outbound connectors need to be included:
 - AMQP 1.0
 - REST
 
-
 ### Consequences
 
 Positive consequences:
@@ -221,4 +220,32 @@ Negative consequences:
 The alternative would be to strongly couple EDDIE to the protocols, such as Apache Kafka.
 This would make the application very inflexible and impossible to use for eligible parties that can't or won't use Apache Kafka.
 
-## No internal communication with Apache Kafka
+## Architecture of EDDIE
+
+EDDIE's architecture could have been realised in a number of ways to allow good interactions with permission administrators, meter data administrators, and eligible parties.
+
+### Decision
+
+It was decided to implement EDDIE as a monolith.
+Making an external communiction service, such as Apache Kafka, unnecessary.
+This allows rapid development, easy setup for eligible parties, and scaling out later.
+Refactoring specific components from a monolith to its own service is a valid scaling technique.
+
+### Consequences
+
+Positive consequences:
+
+- No strict requirements needed
+- Can be developed by one or multiple teams
+- Easy deployment
+Negative consequences:
+
+- Initial creation of outbound connectors can take a bit more planning time
+
+### Alternatives
+
+Alternatively, EDDIE could have been realised via a microserivce or service-oriented architecture.
+This would have required way more planning, good defined requirements, and multiple teams that take ownership of the different microservices.
+Furthermore, microservice architectures are often used for organisational purposes and less for technical reasons, which was not given for EDDIE.
+Using a microservice architecture before scaling issues and strict requirements are known is usually considered an anti-pattern.
+
