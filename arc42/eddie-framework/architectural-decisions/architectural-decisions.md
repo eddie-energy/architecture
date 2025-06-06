@@ -131,6 +131,11 @@ As internal architecture the event sourcing pattern is used.
 This requires an eventbus, which can be either an external application, like Apache Kafak, or an internal software component, like Project Reactor's Sinks, an event store, in this case PostgreSQL with append-only tables, and an outbox, which guarantees that only persisted events are emitted to the eventbus.
 As eventbus a Project Reactor implementation was chosen, since no external service is required.
 
+The append-only tables are then used to create the permission request, called the aggregate, from these events.
+The aggregate has one ID, which groups all events related to the aggregate, in this case, the ID is the permission ID.
+A view is created that uses PostgreSQL window functions, which parititions the event table accoding to the permission ID.
+The view then aggregates each column of the event table to one single row, which creates the permission request.
+
 ### Consequences
 
 Positive consequences:
@@ -147,3 +152,40 @@ Negative consequences:
 The EDDIE framework historically used two different architectures to manage permission requests in the region connectors.
 The first appraoch was to use state machines to represent permission requests and manage changes.
 This proved to be very inflexible, small features required changes at many different points in the code base, while not improving readability of the code.
+
+## Database
+
+The EDDIE framework needs to persist data to a database.
+The data contains information about permission requests, meter reading metadata, etc.
+Furthermore, the database is used to create the permission requests from its corresponding events as described in the [region connectors architecture](#region-connectors-architecture).
+
+### Decision
+
+The decision was made to only support and utilize PostgreSQL instead of multiple databases.
+The reason for this is that PostgreSQL is free and open source, supports a wide array of functionality and can be extended with plugins if additional functionality is needed.
+Furthermore, it can be easily started in development, on-premise, and cloud environments.
+This allows fast and reliable interactions with the database.
+
+### Consequences
+
+Positive consequences:
+
+- PostgreSQL-only features can be used, such as window functions
+- Interactins between EDDIE and PostgreSQL are very reliable, since it is used during development and in production environments
+- Improved reliability, since PostgreSQL is a proven technology
+
+Negative consequences:
+
+- Migrating to a different database can be challenging
+
+### Alternative
+
+Alternatively, multiple databases could be supported by EDDIE.
+This allows the eligible party to reuse any SQL database they already provisioned.
+But it is impossible to test each and every supported database for any issues.
+This can introduce bugs, performance issues, or reliability issues, since developers use one database for testing and eligible parties use another one.
+It dramatically increases the workload, where each SQL script has to be tested for every database in multiple configurations.
+
+## Outbound Connectors
+
+## No internal communication with Apache Kafka
