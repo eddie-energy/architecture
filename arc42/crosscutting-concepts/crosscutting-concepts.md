@@ -37,6 +37,10 @@ CIM is an object-oriented model based on UML defining both syntax and semantics.
 - IEC 61968-11: Defining application integration at electric utilities - System interfaces for distribution management.
 - IEC 62325-301: Defining a framework for energy market communications.
 
+CIM standard has strong semantics: each used object must have a clear definition registered in a common object model. It covers a large spectrum in the energy sector from grid operations to markets with a focus on infrastructural connectivity. 
+
+
+
 #### Relevance
 
 The EDDIE system uses CIM to address interoperability concerns arising from diverse entities communicating with the EDDIE Framework. These include:
@@ -47,13 +51,18 @@ The EDDIE system uses CIM to address interoperability concerns arising from dive
 
 #### Motivation
 
-CIM is a model that has been developed and refined for a long time reaching a satisfactory level of maturity. Throughout the years, it has received a lot of support from [ENTSO-E](https://www.entsoe.eu/digital/common-information-model/) which ensures that CIM is developed in line with TSO requirements. In addition, ENTSO-E runs yearly tests to demonstrate the interoperability of CIM, and to support the CIM development for grid models and market exchanges.
+CIM is a model that has been developed and refined for a long time reaching a satisfactory level of maturity. Throughout the years, it has received a lot of support from [ENTSO-E](https://www.entsoe.eu/digital/common-information-model/) which ensures that CIM is developed in line with TSO requirements. In addition, ENTSO-E runs yearly tests to demonstrate the interoperability of CIM, and to support the CIM development for grid models and market exchanges. Due to it's focus on infrastructure lifecycle, CIM can model historical changes in device replacements as easy as forecasting of prospective additions to an existing network. This aspect is crucial in a fast revolving energy environment where the one generation of devices is replaced by the next in order to give extended services to the parties involved.
 
-Alternatives of CIM are:
+Next to CIM, a number of sub-domain solutions have emerged over the years creating what sometimes is called a "cylinder of excellence". They fullfill a particular purpose, can have a large market penitration, but there applicability is limited. Here is a summary:
 
-- [OpenADR](https://www.openadr.org/): Open Automated Demand Response (OpenADR) is an open and interoperable information exchange model and emerging smart grid standard.  OpenADR standardizes the message format used for Auto-DR so that dynamic price and reliability signals can be delivered in a uniform and interoperable fashion among utilities, ISOs, and energy management and control systems.
-- [Green Button](https://www.greenbuttonalliance.org/): Green Button is based on the Energy Services Provider Interface (ESPI) data standard released by the North American Energy Standards Board (NAESB). The ESPI standard consists of two components: 1) a common XML format for energy usage information and 2) a data exchange protocol which allows for the automatic transfer of data from a utility to a third party based on customer authorization.
+- [OpenADR](https://www.openadr.org/): Open Automated Demand Response (OpenADR) is an open and interoperable information exchange model and emerging smart grid standard.  OpenADR standardizes the message format used for Auto-DR so that dynamic price and reliability signals can be delivered in a uniform and interoperable fashion among utilities, ISOs, and energy management and control systems. OpenADR lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak sementics.
+- [OCPP](https://www.openchargealliance.org/):the Open Charge Point Protocol (OCPP) is a communication protocol fore residential charging that enables seamless interaction between electric vehicle (EV) charging stations and central management systems (CMS). Like OpenADR it lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak sementics.
+-  [SAREF](https://www.saref.etsi.org/core/v4.1.1/): The Smart Applications REFerence Ontology (SAREF) suite of ontologies forms a shared model of consensus intended to enable semantic interoperability between solutions from different providers and among various activity sectors in the Internet of Things (IoT), thus contributing to the development of data spaces. SAREF4ENER is of particular interest as it has proven valuable in the modelling of smart white appliances with it's focus on devices. SAREF is based on a ontology (strong semanrtcs) which makes it a prefered standard interact with.
+- [Green Button](https://www.greenbuttonalliance.org/): Green Button is based on the Energy Services Provider Interface (ESPI) data standard released by the North American Energy Standards Board (NAESB). The ESPI standard consists of two components: 1) a common XML format for energy usage information and 2) a data exchange protocol which allows for the automatic transfer of data from a utility to a third party based on customer authorization. Like OpenADR it lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak sementics.
 
+#### Employed strategy
+
+The infrastructual lifecycle management of the CIM standard makes it the preferred standard used for exchange of smart meter and historical data. However, when Vehicle to Grid communication or interaction with smart white appliances, some market standards can not be ignores either because of it being used widely or because is has much better support in a area where CIM is still in development. To enrich sub-domain standards, creating a mapping to the CIM model, provides lifecycke infrastructural dimension to those standards, previously unavailable. On the other side, CIM can profit from years of development in other standards where CIM has not put its focus on (yet). One point of attention: when working weak semantic standards, careful scrutiny should be employed to make sure that terminology is consistent over standards. 
 
 ### Smart Grid Architecture Model (SGAM)
   
