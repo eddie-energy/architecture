@@ -25,74 +25,7 @@ While general-purpose data spaces are broad and flexible, they may not be direct
 Data spaces are proposed for managing data according to [European Strategy for Data](https://digital-strategy.ec.europa.eu/en/policies/strategy-data).
 
 ## Data Models
-### Common Information Model (CIM)
 
-#### Definition
-
-CIM is an electric power transmission and distribution standard developed by the electric power industry. It aims to allow application software to exchange information about an electrical network. It has been officially adopted by the International Electrotechnical Commission (IEC). CIM defines a set of UML classes, class associations, data types, and attributes for describing common entities that exist in the context of energy production, consumption, and management systems. Therefore, CIM provides a vocabulary that can be used to describe energy systems in a way that is standardized and widely accepted.
-
-CIM is an object-oriented model based on UML defining both syntax and semantics. It comprises three main parts:
-
-- IEC 61970-301: Defining the energy management system application programming interface (EMS-API).
-- IEC 61968-11: Defining application integration at electric utilities - System interfaces for distribution management.
-- IEC 62325-301: Defining a framework for energy market communications.
-
-CIM standard has strong semantics: each used object must have a clear definition registered in a common object model. It covers a large spectrum in the energy sector from grid operations to markets with a focus on infrastructural connectivity. 
-
-
-
-#### Relevance
-
-The EDDIE system uses CIM to address interoperability concerns arising from diverse entities communicating with the EDDIE Framework. These include:
-
-- Smart meters generating data in various formats.
-- Metered data administrators providing historical data in different formats.
-- Permission administrators using various formats for permission messages.
-
-#### Motivation
-
-CIM is a model that has been developed and refined for a long time reaching a satisfactory level of maturity. Throughout the years, it has received a lot of support from [ENTSO-E](https://www.entsoe.eu/digital/common-information-model/) which ensures that CIM is developed in line with TSO requirements. In addition, ENTSO-E runs yearly tests to demonstrate the interoperability of CIM, and to support the CIM development for grid models and market exchanges. Due to it's focus on infrastructure lifecycle, CIM can model historical changes in device replacements as easy as forecasting of prospective additions to an existing network. This aspect is crucial in a fast revolving energy environment where the one generation of devices is replaced by the next in order to give extended services to the parties involved.
-
-Next to CIM, a number of sub-domain solutions have emerged over the years creating what sometimes is called a "cylinder of excellence". They fullfill a particular purpose, can have a large market penitration, but there applicability is limited. Here is a summary:
-
-- [OpenADR](https://www.openadr.org/): Open Automated Demand Response (OpenADR) is an open and interoperable information exchange model and emerging smart grid standard.  OpenADR standardizes the message format used for Auto-DR so that dynamic price and reliability signals can be delivered in a uniform and interoperable fashion among utilities, ISOs, and energy management and control systems. OpenADR lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak sementics.
-- [OCPP](https://www.openchargealliance.org/): the Open Charge Point Protocol (OCPP) is a communication protocol fore residential charging that enables seamless interaction between electric vehicle (EV) charging stations and central management systems (CMS). Like OpenADR it lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak sementics.
--  [SAREF](https://www.saref.etsi.org/core/v4.1.1/): The Smart Applications REFerence Ontology (SAREF) suite of ontologies forms a shared model of consensus intended to enable semantic interoperability between solutions from different providers and among various activity sectors in the Internet of Things (IoT), thus contributing to the development of data spaces. SAREF4ENER is of particular interest as it has proven valuable in the modelling of smart white appliances with it's focus on devices. SAREF is based on a ontology (strong c) which makes it a prefered standard interact with.
-- [Green Button](https://www.greenbuttonalliance.org/): Green Button is based on the Energy Services Provider Interface (ESPI) data standard released by the North American Energy Standards Board (NAESB). The ESPI standard consists of two components: 1) a common XML format for energy usage information and 2) a data exchange protocol which allows for the automatic transfer of data from a utility to a third party based on customer authorization. Like OpenADR it lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak ## Data Models
-### Common Information Model (CIM)
-
-#### Definition
-
-CIM is an electric power transmission and distribution standard developed by the electric power industry. It aims to allow application software to exchange information about an electrical network. It has been officially adopted by the International Electrotechnical Commission (IEC). CIM defines a set of UML classes, class associations, data types, and attributes for describing common entities that exist in the context of energy production, consumption, and management systems. Therefore, CIM provides a vocabulary that can be used to describe energy systems in a way that is standardized and widely accepted.
-
-CIM is an object-oriented model based on UML defining both syntax and semantics. It comprises three main parts:
-
-- IEC 61970-301: Defining the energy management system application programming interface (EMS-API).
-- IEC 61968-11: Defining application integration at electric utilities - System interfaces for distribution management.
-- IEC 62325-301: Defining a framework for energy market communications.
-
-CIM standard has strong semantics: each used object must have a clear definition registered in a common object model. It covers a large spectrum in the energy sector from grid operations to markets with a focus on infrastructural connectivity. 
-
-
-
-#### Relevance
-
-The EDDIE system uses CIM to address interoperability concerns arising from diverse entities communicating with the EDDIE Framework. These include:
-
-- Smart meters generating data in various formats.
-- Metered data administrators providing historical data in different formats.
-- Permission administrators using various formats for permission messages.
-
-#### Motivation
-
-CIM is a model that has been developed and refined for a long time reaching a satisfactory level of maturity. Throughout the years, it has received a lot of support from [ENTSO-E](https://www.entsoe.eu/digital/common-information-model/) which ensures that CIM is developed in line with TSO requirements. In addition, ENTSO-E runs yearly tests to demonstrate the interoperability of CIM, and to support the CIM development for grid models and market exchanges. Due to it's focus on infrastructure lifecycle, CIM can model historical changes in device replacements as easy as forecasting of prospective additions to an existing network. This aspect is crucial in a fast revolving energy environment where the one generation of devices is replaced by the next in order to give extended services to the parties involved.
-
-Next to CIM, a number of sub-domain solutions have emerged over the years creating what sometimes is called a "cylinder of excellence". They fullfill a particular purpose, can have a large market penitration, but there applicability is limited. Here is a summary:
-
-- [OpenADR](https://www.openadr.org/): Open Automated Demand Response (OpenADR) is an open and interoperable information exchange model and emerging smart grid standard.  OpenADR standardizes the message format used for Auto-DR so that dynamic price and reliability signals can be delivered in a uniform and interoperable fashion among utilities, ISOs, and energy management and control systems. OpenADR lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak sementics.
-- [OCPP](https://www.openchargealliance.org/):the Open Charge Point Protocol (OCPP) is a communication protocol fore residential charging that enables seamless interaction between electric vehicle (EV) charging stations and central management systems (CMS). Like OpenADR it lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak sementics.
--  [SAREF](https://www.saref.etsi.org/core/v4.1.1/): The Smart Applications REFerence Ontology (SAREF) suite of ontologies forms a shared model of consensus intended to enable semantic interoperability between solutions from different providers and among various activity sectors in the Internet of Things (IoT), thus contributing to the development of data spaces. SAREF4ENER is of particular interest as it has proven valuable in the modelling of smart white appliances with it's focus on devices. SAREF is based on a ontology (strong semanrtcs) which makes it a prefered standard interact with.
-- [Green Button](https://www.greenbuttonalliance.org/): Green Button is based on the Energy Services Provider Interface (ESPI) data standard released by the North American Energy Standards Board (NAESB). The ESPI standard consists of two components: 1) a common XML format for energy usage information and 2) a data exchange protocol which allows for the automatic transfer of data from a utility to a third party based on customer authorization. Like OpenADR it lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak ## Data Models
 ### Common Information Model (CIM)
 
 #### Definition
@@ -124,7 +57,7 @@ CIM is a model that has been developed and refined for a long time reaching a sa
 Next to CIM, a number of sub-domain solutions have emerged over the years creating what sometimes is called a "cylinder of excellence". They fullfill a particular purpose, can have a large market penitration, but there applicability is limited. Here is a summary:
 
 - [OpenADR](https://www.openadr.org/): Open Automated Demand Response (OpenADR) is an open and interoperable information exchange model and emerging smart grid standard.  OpenADR standardizes the message format used for Auto-DR so that dynamic price and reliability signals can be delivered in a uniform and interoperable fashion among utilities, ISOs, and energy management and control systems. OpenADR lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak semantics.
-- [OCPP](https://www.openchargealliance.org/):the Open Charge Point Protocol (OCPP) is a communication protocol fore residential charging that enables seamless interaction between electric vehicle (EV) charging stations and central management systems (CMS). Like OpenADR it lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak semantics.
+- [OCPP](https://www.openchargealliance.org/): the Open Charge Point Protocol (OCPP) is a communication protocol fore residential charging that enables seamless interaction between electric vehicle (EV) charging stations and central management systems (CMS). Like OpenADR it lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak semantics.
 -  [SAREF](https://www.saref.etsi.org/core/v4.1.1/): The Smart Applications REFerence Ontology (SAREF) suite of ontologies forms a shared model of consensus intended to enable semantic interoperability between solutions from different providers and among various activity sectors in the Internet of Things (IoT), thus contributing to the development of data spaces. SAREF4ENER is of particular interest as it has proven valuable in the modelling of smart white appliances with it's focus on devices. SAREF is based on a ontology (strong semantics) which makes it a prefered standard interact with.
 - [Green Button](https://www.greenbuttonalliance.org/): Green Button is based on the Energy Services Provider Interface (ESPI) data standard released by the North American Energy Standards Board (NAESB). The ESPI standard consists of two components: 1) a common XML format for energy usage information and 2) a data exchange protocol which allows for the automatic transfer of data from a utility to a third party based on customer authorization. Like OpenADR it lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak semantics.
 
