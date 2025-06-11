@@ -22,7 +22,7 @@ With its methodological structure, this page can be read as a historical compani
 
 The following diagram shows the most important parts and actors of EDDIE as laid out by the Grant Agreement.
 
-![Architectural schema of the EDDIE Framework laid out in the Grant Agreement](./permission-facade/figures/eddie-infrastructure.png)
+![Architectural schema of the EDDIE Framework laid out in the Grant Agreement](../figures/eddie-grant-agreement-architecture.drawio.svg)
 
 Comparing this diagram to the updated version below, 
 one can see that each existing component maps nicely to a specific concept implementing its envisioned functionality.
@@ -37,7 +37,7 @@ Both _Outbound Connectors_ and _Region Connectors_ are implemented using a plugi
 where each plugin supports a specific data exchange protocol or energy data provider.
 _Outbound Connectors_ and _Region Connectors_ do not communicate directly, but use a separate component as a mediator.
 
-![Evolution of core components from the Grant Agreement](./permission-facade/figures/eddie-infrastructure-comparison.png)
+![Evolution of core components from the Grant Agreement](../figures/eddie-grant-agreement-comparison.drawio.svg)
 
 Another notable change is the column on the right where the EDDIE Framework uses specialized software to tackle specific problems.
 

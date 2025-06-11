@@ -6,7 +6,7 @@ title: User Experience
 
 The [Shoelace](https://shoelace.style/) library provides a set of common components and styles and is used to ensure a consistent user experience across EDDIE components.
 
-![Visualization of how Shoelace components are used throughout EDDIE contexts](../figures/shoelace.svg)
+![Visualization of how Shoelace components are used throughout EDDIE contexts](../figures/shoelace.drawio.svg)
 
 Shoelace also supports [theming](https://shoelace.style/getting-started/themes) through CSS variables and [localization](https://shoelace.style/getting-started/localization).
 
@@ -29,7 +29,7 @@ Relevant Shoelace components are loaded from a Content Delivery Network (CDN) at
 The initial implementation of the EDDIE button uses a lot of vertical space to fit all information inside a single form dialog.
 This may overwhelm and discourage the user and also leads to layout shifts during interaction.
 
-![Design of the initial vertical implementation of the permission form](../figures/eddie-vertical-form.svg)
+![Design of the initial vertical implementation of the permission form](../figures/eddie-vertical-form.drawio.svg)
 
 Instead of showing all information at once, the dialog can display similar fields in separate steps.
 Such steps may be

@@ -6,7 +6,7 @@ order: 6
 The EDDIE Framework provides eligible third parties with the tools to access to energy data from various Data Access Providers (DAPs) throughout the European Union.
 This is done by implementing a unified interface to create permission requests and access energy data that abstracts away the diverse processes required by different data providers.
 
-![A simple visualization of the EDDIE Framework](./figures/eddie-simple.svg)
+![A simple visualization of the EDDIE Framework](./figures/eddie-simple.drawio.svg)
 
 The documentation of the EDDIE Framework follows the [arc42](https://arc42.org/) template.
 The [Solution Strategy](./solution-strategy/solution-strategy.md) explains fundamental concepts and decisions shaping the framework architecture. 

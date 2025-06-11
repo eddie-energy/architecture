@@ -59,7 +59,7 @@ At the top, the eligible party operates a website embedding the _EDDIE Popup_,
 for the customer to create permissions, and a service based on energy data.
 The eligible party also operates the framework application and containers supplementing additional functionality.
 
-![Architecture diagram including all major systems related to the EDDIE Framework](../figures/eddie-architecture.svg)
+![Architecture diagram including all major systems related to the EDDIE Framework](../figures/eddie-architecture-overview.drawio.svg)
 
 The framework application orchestrates _Region Connectors_ and _Outbound Connectors_
 that can be enabled as plugins to support specific data providers or data exchange protocols.
