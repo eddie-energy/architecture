@@ -8,7 +8,7 @@ Various concepts are relevant across the EDDIE system such as:
 - [Data Models](./crosscutting-concepts.md#data-models)
     - [Common Information Model (CIM)](./crosscutting-concepts.md#common-information-model-cim)
     - [Smart Grid Architecture Model (SGAM)](./crosscutting-concepts.md#smart-grid-architecture-model-sgam)
-    - [Smart Appliances REFerence ontology (SAREF)](crosscutting-concepts.md#smart-appliances-reference-ontology-saref)
+    - [Smart Appliances REFerence ontology (SAREF)](./crosscutting-concepts.md#smart-appliances-reference-ontology-saref)
 
 ## Data Space
 #### Definition
@@ -30,43 +30,39 @@ Data spaces are proposed for managing data according to [European Strategy for D
 
 #### Definition
 
-CIM is an electric power transmission and distribution standard developed by the electric power industry. It aims to allow application software to exchange information about an electrical network. It has been officially adopted by the International Electrotechnical Commission (IEC). CIM defines a set of UML classes, class associations, data types, and attributes for describing common entities that exist in the context of energy production, consumption, and management systems. Therefore, CIM provides a vocabulary that can be used to describe energy systems in a way that is standardized and widely accepted.
+CIM (Common Information Model) is a standard for electric power transmission and distribution developed by the electric power industry. It aims to enable software applications exchange information about electrical networks in a consistent and interoperable manner. CIM has been officially adopted by the International Electrotechnical Commission (IEC). CIM defines a set of Unified Modeling Language (UML) classes, class associations, data types, and attributes for describing entities commonly found in energy production, distribution, consumption, and management systems. Thus, CIM provides a standardized vocabulary for modeling energy systems.
 
-CIM is an object-oriented model based on UML defining both syntax and semantics. It comprises three main parts:
+CIM is an object-oriented information model based on UML, which defines both syntax and semantics. It is composed of three main parts:
 
-- IEC 61970-301: Defining the energy management system application programming interface (EMS-API).
-- IEC 61968-11: Defining application integration at electric utilities - System interfaces for distribution management.
-- IEC 62325-301: Defining a framework for energy market communications.
+- IEC 61970-301: Defines the energy management system application programming interface (EMS-API).
+- IEC 61968-11: Defines system interfaces for the integration of distribution management systems (DMS) and other enterprise applications within electric utilities.
+- IEC 62325-301: Defines the energy market communications, supporting the exchange of information between market participants.
 
-CIM standard has strong semantics: each used object must have a clear definition registered in a common object model. It covers a large spectrum in the energy sector from grid operations to markets with a focus on infrastructural connectivity. 
-
+The CIM standard provides well-defined semantics. Each CIM class or object has a clear definition registered within the common model. This model encompasses a wide range of entities and functions across the energy sector, including grid operations, asset management, and energy markets, with a focus on infrastructure and connectivity.
 
 
 #### Relevance
 
-The EDDIE system uses CIM to address interoperability concerns arising from diverse entities communicating with the EDDIE Framework. These include:
+The EDDIE system uses CIM to address interoperability concerns arising from diverse entities communicating via the EDDIE Framework. These entities may include:
 
 - Smart meters generating data in various formats.
-- Metered data administrators providing historical data in different formats.
+- Regional Data-sharing Infrastructures providing historical data in different formats.
 - Permission administrators using various formats for permission messages.
 
 #### Motivation
 
-CIM is a model that has been developed and refined for a long time reaching a satisfactory level of maturity. Throughout the years, it has received a lot of support from [ENTSO-E](https://www.entsoe.eu/digital/common-information-model/) which ensures that CIM is developed in line with TSO requirements. In addition, ENTSO-E runs yearly tests to demonstrate the interoperability of CIM, and to support the CIM development for grid models and market exchanges. Due to it's focus on infrastructure lifecycle, CIM can model historical changes in device replacements as easy as forecasting of prospective additions to an existing network. This aspect is crucial in a fast revolving energy environment where the one generation of devices is replaced by the next in order to give extended services to the parties involved.
+CIM is a model that has been developed and refined for a long time reaching a satisfactory level of maturity. Throughout the years, it has received a lot of support from [ENTSO-E](https://www.entsoe.eu/digital/common-information-model/) which ensures that CIM is developed in line with TSO requirements. In addition, ENTSO-E runs yearly tests to demonstrate the interoperability of CIM, and to support the CIM development for grid models and market exchanges. Due to its focus on the infrastructure lifecycle, CIM can model historical changes in devices and device replacements, as well as expected future additions to existing networks. This aspect is crucial in a fast-evolving energy environment where one generation of devices may be replaced by the next in order to give extended services to the parties involved.
 
-Next to CIM, a number of sub-domain solutions have emerged over the years creating what sometimes is called a "cylinder of excellence". They fullfill a particular purpose, can have a large market penitration, but there applicability is limited. Here is a summary:
+Apart from CIM, a number of sub-domain solutions have emerged over the years creating what sometimes is called a "cylinder of excellence". These solutions focus on meeting particular purposes, which may foster large market penetration, although but their applicability for EDDIE might be limited. Some examples are discussed below:
 
-- [OpenADR](https://www.openadr.org/): Open Automated Demand Response (OpenADR) is an open and interoperable information exchange model and emerging smart grid standard.  OpenADR standardizes the message format used for Auto-DR so that dynamic price and reliability signals can be delivered in a uniform and interoperable fashion among utilities, ISOs, and energy management and control systems. OpenADR lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak semantics.
-- [OCPP](https://www.openchargealliance.org/): the Open Charge Point Protocol (OCPP) is a communication protocol fore residential charging that enables seamless interaction between electric vehicle (EV) charging stations and central management systems (CMS). Like OpenADR it lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak semantics.
--  [SAREF](https://www.saref.etsi.org/core/v4.1.1/): The Smart Applications REFerence Ontology (SAREF) suite of ontologies forms a shared model of consensus intended to enable semantic interoperability between solutions from different providers and among various activity sectors in the Internet of Things (IoT), thus contributing to the development of data spaces. SAREF4ENER is of particular interest as it has proven valuable in the modelling of smart white appliances with it's focus on devices. SAREF is based on a ontology (strong semantics) which makes it a prefered standard interact with. See further down for more details on SAREF.
-- [Green Button](https://www.greenbuttonalliance.org/): Green Button is based on the Energy Services Provider Interface (ESPI) data standard released by the North American Energy Standards Board (NAESB). The ESPI standard consists of two components: 1) a common XML format for energy usage information and 2) a data exchange protocol which allows for the automatic transfer of data from a utility to a third party based on customer authorization. Like OpenADR it lacks a data model and is more a set of defined exchange messages. It's objects do not have a clear definition and therefore can be labeled as weak semantics.
-
-.
+- [OpenADR](https://www.openadr.org/): Open Automated Demand Response (OpenADR) is an open and interoperable information exchange model and emerging smart grid standard.  OpenADR standardizes the message format used for Auto-DR so that dynamic price and reliability signals can be delivered in a uniform and interoperable fashion among utilities, ISOs, and energy management and control systems. OpenADR focuses on a set of defined exchange messages, and may lack data model definitions. Its objects do not have a clear definition and therefore can be labeled as weak semantics.
+- [OCPP](https://www.openchargealliance.org/): the Open Charge Point Protocol (OCPP) is a communication protocol for residential charging that enables seamless interaction between electric vehicle (EV) charging stations and central management systems (CMS). Similar to OpenADR it may lack data model definitions (due to focusing on defining exchange messages).
+-  [SAREF](https://www.saref.etsi.org/core/v4.1.1/): The Smart Applications REFerence Ontology (SAREF) suite of ontologies forms a shared model of consensus intended to enable semantic interoperability between solutions from different providers and among various activity sectors in the Internet of Things (IoT). SAREF4ENER is of particular interest as it has proven valuable in the modelling of smart white appliances with a focus on devices. SAREF is based on an ontology which also defines semantics. More information on SAREF is provided later on.
+- [Green Button](https://www.greenbuttonalliance.org/): Green Button is based on the Energy Services Provider Interface (ESPI) data standard released by the North American Energy Standards Board (NAESB). The ESPI standard consists of two components: 1) a common XML format for energy usage information and 2) a data exchange protocol which allows for the automatic transfer of data from a utility to a third party based on customer authorization. Similar to OpenADR, it may lack a data model, due to focusing on well-defined exchange messages. Its objects do not have clear definitions and therefore can be labeled as weak semantics.
 
 #### Employed strategy
 
-The infrastructual lifecycle management of the CIM standard makes it the preferred standard used for exchange of smart meter and historical data. However, when Vehicle to Grid communication or interaction with smart white appliances come in, some market standards can not be ignored either because of its .wide distribution or because is has much better support in a area where CIM is still in development. To enrich sub-domain standards, creating a mapping to the CIM model, provides lifecycle infrastructural dimension to those standards lacking these. On the other side, CIM can profit from years of development in other standards where CIM has not put its focus on (yet). One point of attention: when working weak semantic standards, careful scrutiny should be employed to make sure that terminology is consistent over standards. 
-.
+The infrastructural lifecycle management of the CIM standard makes it the preferred standard used for exchange of smart meter and historical data. However, when Vehicle to Grid communication or interaction with smart white appliances come in, some market standards cannot be ignored either because of their wide distribution or because they have much better support in areas where CIM is still in development. To enrich sub-domain standards, creating a mapping to the CIM model, provides a lifecycle infrastructural dimension to those standards lacking these. On the other side, CIM can profit from years of development in other standards where CIM has not put its focus on (yet). One point of attention: when working with weak semantic standards, careful scrutiny should be employed to make sure that terminology is consistent over standards. 
 
 
 ### Smart Grid Architecture Model (SGAM)
@@ -76,12 +72,12 @@ SGAM is a reference architecture developed by the International Electrotechnical
 
 SGAM is organized into six main views:
 
-1. Business view: Defines the overall business context of the smart grid system.
-1. Function view: Defines the functions and services that need to be provided by the smart grid system.
-1. Information view: Defines the information that needs to be exchanged between different components (including the data models and communication protocols).
-1. Communication view: Defines the communication networks and protocols that need to be used for exchanging information between the different components.
-1. Component view: Defines the physical and logical components that make up the smart grid system.
-1. Deployment view: Defines the deployment scenarios and configurations of the smart grid system.
+1. Business View: Defines the overall business context of the smart grid system.
+1. Function View: Defines the functions and services that need to be provided by the smart grid system.
+1. Information View: Defines the information that needs to be exchanged between different components (including the data models and communication protocols).
+1. Communication View: Defines the communication networks and protocols that need to be used for exchanging information between the different components.
+1. Component View: Defines the physical and logical components that make up the smart grid system.
+1. Deployment View: Defines the deployment scenarios and configurations of the smart grid system.
 
 #### Relevance
 SGAM provides reference points, e.g., scenarios, workflows, and data models, that aid the technical and conceptual development of the EDDIE system. SGAM provides a standardized way of organizing and describing the different components of the smart grid system, which are of relevance as well. 
@@ -98,7 +94,7 @@ Alternative models to SGAM include:
 #### Definition
 
 SAREF is a semantic data model developed by the European Telecommunications Standards Institute (ETSI) with the goal of facilitating the interoperability and standardization of smart appliances in the Internet of Things (IoT) ecosystem.
-IT provides a standardized ontology with classes and properties to describe smart appliances, such as household appliances, lighting systems, and HVAC (Heating, Ventilation, Air Conditioning) systems. The ontology provides a standardized vocabulary that can be used to describe smart appliances in a way that is widely accepted.
+It provides a standardized ontology with classes and properties to describe smart appliances, such as household appliances, lighting systems, and HVAC (Heating, Ventilation, Air Conditioning) systems. The ontology provides a standardized vocabulary that can be used to describe smart appliances in a way that is widely accepted.
 
 SAREF comprises a main ontology, SAREF, and several sub-ontologies such as SAREF4AUTO, SAREF4ENER, and SAREF4BLD, which provide more specific vocabularies for automotive, energy, and building domains respectively.
 
@@ -108,7 +104,7 @@ In the context of IoT, SAREF is used to ensure the interoperability and semantic
 In the EDDIE system, SAREF is relevant for the EDDIE Database and the services that acquire data from this database for further processing. The use of SAREF in these components ensures the interoperability and consistency of energy consumption data from smart appliances.
  
 #### Motivation
-SAREF is developed by ETSI, which ensures that it is developed in line with industry requirements and standards. It is also supported by several organizations and initiatives, such as the FIWARE project, which aims to promote the development of IoT applications and services.
+SAREF is developed by ETSI to align with industry requirements and standards. It is also supported by several organizations and initiatives, such as the FIWARE project, which aims to promote the development of IoT applications and services.
 
 Alternative models to SAREF include:
 
