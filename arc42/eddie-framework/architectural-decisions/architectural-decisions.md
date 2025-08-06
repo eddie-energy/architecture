@@ -128,8 +128,9 @@ A common architecture has to be found, to ease development, reuse components bet
 ### Decision
 
 As internal architecture the event sourcing pattern is used.
-This requires an eventbus, which can be either an external application, like Apache Kafak, or an internal software component, like Project Reactor's Sinks, an event store, in this case PostgreSQL with append-only tables, and an outbox, which guarantees that only persisted events are emitted to the eventbus.
-As eventbus a Project Reactor implementation was chosen, since no external service is required.
+This requires an event bus, which can be either an external application, like Apache Kafka, or an internal software component, like Project Reactor's Sinks.
+Furhtermore, it requires an event store, in this case PostgreSQL with append-only tables, and an outbox, which guarantees that only persisted events are emitted to the event bus.
+As event bus a [Project Reactor](https://projectreactor.io/) implementation was chosen, since no external service is required.
 
 The append-only tables are then used to create the permission request, called the aggregate, from these events.
 The aggregate has one ID, which groups all events related to the aggregate, in this case, the ID is the permission ID.
@@ -145,13 +146,14 @@ Positive consequences:
 
 Negative consequences:
 
-- Reduced transparency in some cases
+- Reduced transparency between the signal and subscribers
 
 ### Alternative
 
 The EDDIE framework historically used two different architectures to manage permission requests in the region connectors.
-The first appraoch was to use state machines to represent permission requests and manage changes.
-This proved to be very inflexible, small features required changes at many different points in the code base, while not improving readability of the code.
+The first approach was to use state machines to represent permission requests and manage changes.
+This proved to be very inflexible.
+Small features required changes at many different points in the code base, while not improving readability of the code.
 
 ## Database
 
@@ -165,14 +167,15 @@ The decision was made to only support and utilize PostgreSQL instead of multiple
 The reason for this is that PostgreSQL is free and open source, supports a wide array of functionality and can be extended with plugins if additional functionality is needed.
 Furthermore, it can be easily started in development, on-premise, and cloud environments.
 This allows fast and reliable interactions with the database.
+Supporting multiple databases would make it impossible to use more specialized features of each database, leading to imperformant code.
 
 ### Consequences
 
 Positive consequences:
 
 - PostgreSQL-only features can be used, such as window functions
-- Interactins between EDDIE and PostgreSQL are very reliable, since it is used during development and in production environments
-- Improved reliability, since PostgreSQL is a proven technology
+- Interactions between EDDIE and PostgreSQL are very reliable, since it is used during development and in production environments
+- PostgreSQL is a proven technology
 
 Negative consequences:
 
@@ -223,6 +226,7 @@ This would make the application very inflexible and impossible to use for eligib
 ## Architecture of EDDIE
 
 EDDIE's architecture could have been realised in a number of ways to allow good interactions with permission administrators, meter data administrators, and eligible parties.
+The options are to implement EDDIE as a monolith or in a service oriented architecture, such as microservices.
 
 ### Decision
 
@@ -248,4 +252,33 @@ Alternatively, EDDIE could have been realised via a microserivce or service-orie
 This would have required way more planning, good defined requirements, and multiple teams that take ownership of the different microservices.
 Furthermore, microservice architectures are often used for organisational purposes and less for technical reasons, which was not given for EDDIE.
 Using a microservice architecture before scaling issues and strict requirements are known is usually considered an anti-pattern.
+
+## Region Connector and Outbound Connector Isolation
+
+Based on the previous architecural decision, there are multiple ways to isolate the different components from each other to prevent information leakage between the region connectors and all other components, as well as prevent bugs.
+The approaches to isolate them are:
+
+- Microservices or a service oriented architecture
+- Monolith with one singular Spring Context for all components
+- Monolith with multiple child contexts for each component and a parent context that manages them
+
+### Decision
+
+Since it was already decided to use a monolith, the options were between one Spring context and multiple contexts with one parent.
+When one singular context is used it is harder to prevent information leakage between region connectors and other components, which would require additional checks to prevent that.
+Therefore, the option with a context for each component was chosen to prevent this.
+
+### Consequences
+
+Positive consequences:
+
+- Leaking information between components is practically impossible
+- Easy to start only a subset of the components
+- Streamlined information flow between components
+- Strong contracts between components
+
+Negative consequences:
+
+- Harder to understand
+- Passing information between components is more complicated
 
