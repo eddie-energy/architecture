@@ -209,7 +209,7 @@ The following outbound connectors need to be included:
 Positive consequences:
 
 - Adding new protocols is easy and doesn't interfere with existing outbound connectors
-- Eligible parties only need to activate outbound connectors they require
+- Eligible parties only need to activate outbound connectors they require to interact with the EDDIE framework
 - Eligible parties can decide what protocol they want to use
 - Possibility to reuse components between outbound connectors
 
@@ -230,8 +230,7 @@ The options are to implement EDDIE as a monolith or in a service oriented archit
 
 ### Decision
 
-It was decided to implement EDDIE as a monolith.
-Making an external communiction service, such as Apache Kafka, unnecessary.
+It was decided to implement EDDIE as a monolith, making an external communiction service, such as Apache Kafka, unnecessary.
 This allows rapid development, easy setup for eligible parties, and scaling out later.
 Refactoring specific components from a monolith to its own service is a valid scaling technique.
 
@@ -242,14 +241,15 @@ Positive consequences:
 - No strict requirements needed
 - Can be developed by one or multiple teams
 - Easy deployment
+
 Negative consequences:
 
-- Initial creation of outbound connectors can take a bit more planning time
+- Might lead to performance problems, but this is unknown
 
 ### Alternatives
 
 Alternatively, EDDIE could have been realised via a microserivce or service-oriented architecture.
-This would have required way more planning, good defined requirements, and multiple teams that take ownership of the different microservices.
+This would have required way more planning, well-defined requirements, and multiple teams that take ownership of the different microservices.
 Furthermore, microservice architectures are often used for organisational purposes and less for technical reasons, which was not given for EDDIE.
 Using a microservice architecture before scaling issues and strict requirements are known is usually considered an anti-pattern.
 
