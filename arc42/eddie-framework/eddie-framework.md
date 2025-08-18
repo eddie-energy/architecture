@@ -3,15 +3,10 @@ title: EDDIE Framework
 order: 6
 ---
 
-The EDDIE Framework provides eligible third parties with the tools to access to energy data from various Data Access Providers (DAPs) throughout the European Union.
-This is done by implementing a unified interface to create permission requests and access energy data that abstracts away the diverse processes required by different data providers.
+<!-- Regional Data-sharing Infrastructure is a common term used accross this document for Data Access Providers (DAPs) -->
 
-![A simple visualization of the EDDIE Framework](./figures/eddie-simple.drawio.svg)
+The EDDIE Framework is one of the software systems of EDDIE, along with AIIDA and the Marketplace. It provides eligible third parties with unified access to energy data from various Regional Data-Sharing Infrastructures (RDSIs) throughout the European Union. For this reason, the EDDIE Framework implements a common interface that allows third parties to create permission requests and retrieve energy data. By doing so, it abstracts away the diverse processes and requirements of different data providers. Thus, the EDDIE Framework ensures that third parties can seamlessly access and use energy data across multiple regions without having to deal with provider-specific complexities.  
 
-The documentation of the EDDIE Framework follows the [arc42](https://arc42.org/) template.
-The [Solution Strategy](./solution-strategy/solution-strategy.md) explains fundamental concepts and decisions shaping the framework architecture. 
-Afterward, the [Building Block View](./building-block-view/building-block-view.md) lays out the main building blocks of the system using the [C4 Model](https://c4model.com/). 
-The [Runtime View](./runtime-view/runtime-view.md) then shows the system behavior through important use-cases,
-while the [Deployment View](./deployment-view/deployment-view.md) shows how the system is deployed to the infrastructure of the eligible party. 
-The [Crosscutting Concepts](./crosscutting-concepts/crosscutting-concepts.md) section documents domain, development, and user experience concepts present throughout the system.
-Finally, the [Architectural Decisions](./architectural-decisions/architectural-decisions.md) section describes important decisions and their motivations.
+<!-- ![A simple visualization of the EDDIE Framework](./figures/eddie-simple.drawio.svg) -->
+
+To present the EDDIE Framework comprehensively, the main key decisions are discussed in the [Solution Strategy](./solution-strategy/solution-strategy.md). Afterwards, the [Building Block View](./building-block-view/building-block-view.md) describes the main building blocks of the system using the [C4 Model](https://c4model.com/). Then, the [Runtime View](./runtime-view/runtime-view.md) of the system depicts the main behaviors. After that, the [Deployment View](./deployment-view/deployment-view.md) provides an overview of how the framework is deployed in the infrastructure of the eligible party. Finally, the [Architectural Decisions](./architectural-decisions/architectural-decisions.md) section presents the system decisions and their motivations.  
