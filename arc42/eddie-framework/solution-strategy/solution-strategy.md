@@ -3,7 +3,70 @@ title: Solution Strategy
 order: 1
 ---
 
-::: info DESIRED CONTENT
+## Overview
+
+The EDDIE Framework is a software system deployed by eligible parties (EPs) to access customer energy data through standardized and consent-based processes.  
+Its main functionality is to abstract away the complexity of diverse regional data infrastructures (e.g., different formats, interfaces, and permission procedures), and to provide EPs with a unified interface to request and consume data.
+
+![Architecture diagram including all major systems related to the EDDIE Framework](../figures/eddie-architecture-overview.drawio.svg)
+
+The EDDIE Framework includes several components running on computing infrastructure controlled by the EP, typically in their cloud environment or on-premise servers. The table below shows a description of the core components of the framework. 
+
+| Component          | Description                                                                                                                                   |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Permission Facade    | Manages the customer-facing permission flow.                                                                                                     |
+| Regional Connectors  | Manage permissions and collect validated historical data and accounting point data from Metered Data Administrators (MDAs) and Permission Administrators (PAs). |
+| Outbound Connectors  | Deliver the data to the Eligible Party (EP) in their preferred format and protocol.                                                               |
+| Admin Console        | Provides the EP with tools to configure connectors, manage Data Needs, and oversee permissions.                                                  |
+| Data Needs           | Represent the EP’s request for determining what data should be collected for a specific permission from an MDA.                                  |
+
+## Why is the EDDIE Framework necessary in the context of EDDIE?
+
+While Regional Data-sharing infrastructures exist for accessing historical or accounting-point energy data, their implementations differ across countries and providers.  
+Without EDDIE, each eligible party would need to implement its own integrations for every regional system, facing significant complexity and cost.  
+
+The EDDIE Framework solves this problem by:  
+
+- Providing a single entry point for EPs to request data across multiple regions.  
+- Managing the customer permission flow through the Permission Facade.  
+- Acting as an integration layer between heterogeneous regional systems (via Regional Connectors).  
+- Enabling standardized data access through Data Needs, regardless of the original source.  
+- Ensuring compliance with European regulations, including Directive (EU) 2019/944 and GDPR.  
+
+## How do EPs and customers interact with the EDDIE Framework?
+
+1. Setup by EP  
+   - The EP installs the EDDIE Framework on their infrastructure.  
+   - The EP configures Regional Connectors for the PAs and MDAs in the regions where they operate.  
+   - The EP defines one or more Data Needs representing the data required for their services.  
+
+2. Customer permission  
+   - The EP embeds the EDDIE Popup in their service application.  
+   - Customers interact with the Popup, which forwards the request to their PA.  
+   - The customer accepts or rejects the permission request via their PA’s portal.  
+
+3. Data provisioning  
+   - Once permission is granted, the Regional Connector retrieves the relevant data from the MDA.  
+   - Outbound Connectors deliver this data to the EP’s services.  
+
+4. Permission management  
+   - Customers may revoke permissions via their PA.  
+   - EPs can monitor or terminate active permissions through the Admin Console.
+
+## How does the EDDIE Framework integrate with other EDDIE components?
+
+- With AIIDA: The framework uses AIIDA as a specialized Regional Connector for in-house real-time data streams.  
+- With the Marketplace: The Marketplace helps customers discover EPs and their services, but no data flows through the Marketplace itself. Data exchange always happens through the EDDIE Framework once permissions are granted. 
+  
+## Deployability
+
+The EDDIE Framework is deployable on commodity infrastructure (cloud or on-premise).  
+It follows a container-based architecture, allowing EPs to enable only the connectors they need.  
+<!-- This ensures scalability, resilience, and flexibility for integration with evolving regional infrastructures.   -->
+
+
+
+<!-- ::: info DESIRED CONTENT
 
 Similar to the methodology section of the grant agreement,
 this page should document how key responsibilities of the EDDIE Framework have been implemented.
@@ -38,8 +101,9 @@ The scenario includes the perspective of both the eligible party and the final c
 **TODO**
 - Check if the concepts should be moved to a _Domain Concepts_ section.
 
-:::
+::: -->
 
+<!-- old:
 ## Overview
 
 The main functionality of the EDDIE Framework is to abstract away the complex processes of permission requests and data access for different regional data infrastructures.
@@ -50,9 +114,14 @@ For this purpose, the EDDIE Framework builds upon four important concepts.
 - _Data Needs_ — define the data requirements of services provided by the eligible party.
 
 This section first showcases the core components of the EDDIE Framework and describes how these components enable its functionality. 
-It then elaborates on the key concepts mentioned, answers questions in a Q&A format, and references architectural decisions.
+It then elaborates on the key concepts mentioned, answers questions in a Q&A format, and references architectural decisions. -->
 
+<!-- 
 ## Core Components
+
+::: info Decide what to do
+
+:::
 
 The diagram below shows, at a glance, the most important parts and actors of the system.
 At the top, the eligible party operates a website embedding the _EDDIE Popup_,
@@ -72,9 +141,11 @@ The [Building Block View](../building-block-view/building-block-view.md) will co
 ## Functionality
 
 To describe how these concepts and components work together to address functional requirements,
-we can look at the steps of the following scenario from the perspective of the eligible party.
+we can look at the steps of the following scenario from the perspective of the eligible party.  -->
 
 <!-- TODO: Add an installation step? -->
+
+<!-- Move to Runtime View----Runtime View-------------Runtime View----------Runtime View-----Runtime View-----------:
 
 - _Define services_ — The eligible party starts in the _Admin Console_ where they define the data requirements for their service as a _Data Need_.
 - _Enable region connectors_ — They configure a _Region Connector_ to access data from the regions they operate in.
@@ -83,8 +154,13 @@ we can look at the steps of the following scenario from the perspective of the e
 - _Manage active permissions_ — In the _Admin Console_, the eligible party can manage and view the status of active permissions.
 - _Termination and revocation_ — Active permissions can be revoked by the customer through the portal of their permission administrator, or terminated by the eligible party through the _Admin Console_.
 
-These important workflows are described in more detail in the [Runtime View](../runtime-view/runtime-view.md).
+These important workflows are described in more detail in the [Runtime View](../runtime-view/runtime-view.md). 
 
+Runtime View-------------Runtime View----------Runtime View-----Runtime View-------------Runtime View---------- -->
+
+
+
+<!-- Move to Building Block View------Block View-------------Block View------------------Block View--------------Block View-----Block View-------------Block View-----:
 ## Permission Facade
 
 ::: info DESIRED CONTENT
@@ -102,12 +178,25 @@ Region connectors is an integral part of the EDDIE framework.
 They collect validated historical data and accounting point data from a metered data administrator (MDA) and permission administrator (PA).
 Furthermore, region connectors manage permissions given to collect the data.
 
+## Data Needs (Services)
+
+The data needs API provides a way to retrieve and create data needs.
+A data need is used to determine what data should be collected for a specific permission from a MDA.
+
+## Outbound Connectors
+
+An outbound connector provides endpoints to access to permission market documents, accounting point data market documents, and validated historical data market documents.
+Furthermore, they provide the means to terminate a permission request by the eligible party. 
+
 ### What are the responsibilities of a region connector?
 
 A region connector has multiple responsibilities.
 It creates and manages permission requests to access data from a final customer.
 Furthermore, it collects validated historical data and accounting point data from an MDA.
+Block View-------------Block View------------------Block View--------------Block View-----Block View-------------Block View Block View-------------Block View-->
 
+
+<!-- Move to Architectural decisions----------------- Architectural decisions -------------------- Architectural decisions---------
 ### Why isn't there just one region connector?
 
 There are multiple region connectors, since implementations of the permission process, that is how permission to data is given, differ per country or PA.
@@ -144,16 +233,10 @@ It differentiate between accounting point data and validated historical data.
 Furthermore, data needs for validated historical data specifies a start and end date, as well as what kind of energy data should be collected.
 For example gas or electricity.
 
-## Data Needs (Services)
 
-The data needs API provides a way to retrieve and create data needs.
-A data need is used to determine what data should be collected for a specific permission from a MDA.
-
-## Outbound Connectors
-
-An outbound connector provides endpoints to access to permission market documents, accounting point data market documents, and validated historical data market documents.
-Furthermore, they provide the means to terminate a permission request by the eligible party.
 
 ### Why multiple outbound connectors?
 
 There are multiple implementations of the outbound connectors to allow the eligible party to use a protocol of their choosing.
+
+Architectural decisions----------------- Architectural decisions -------------------- Architectural decisions--------- -->
