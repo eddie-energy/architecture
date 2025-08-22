@@ -10,9 +10,9 @@ Its main functionality is to abstract away the complexity of diverse regional da
 
 ![Architecture diagram including all major systems related to the EDDIE Framework](../figures/eddie-architecture-overview.drawio.svg)
 
-The EDDIE Framework includes several components running on computing infrastructure controlled by the EP, typically in their cloud environment or on-premise servers. The table below shows a description of the core components of the framework. 
+The EDDIE Framework builds upon several core concepts, which describe its main responsibilities and interactions. The table below provides an overview of these concepts. 
 
-| Component          | Description                                                                                                                                   |
+| Concept          | Description                                                                                                                                   |
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | Permission Facade    | Manages the customer-facing permission flow.                                                                                                     |
 | Regional Connectors  | Manage permissions and collect validated historical data and accounting point data from Metered Data Administrators (MDAs) and Permission Administrators (PAs). |
