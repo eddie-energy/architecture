@@ -5,8 +5,8 @@ order: 1
 
 ## Overview
 
-The EDDIE Framework is a software system deployed by eligible parties (EPs) to access customer energy data through standardized and consent-based processes.  
-Its main functionality is to abstract away the complexity of diverse regional data infrastructures (e.g., different formats, interfaces, and permission procedures), and to provide EPs with a unified interface to request and consume data.
+The EDDIE Framework is a software system deployed by Eligible Parties to access customer energy data through standardized and consent-based processes.  
+Its main functionality is to abstract away the complexity of diverse regional data infrastructures (e.g., different formats, interfaces, and permission procedures), and to provide Eligible Parties with a unified interface to request and consume data.
 
 ![Architecture diagram including all major systems related to the EDDIE Framework](../figures/eddie-architecture-overview.drawio.svg)
 
@@ -16,9 +16,9 @@ The EDDIE Framework builds upon several core concepts, which describe its main r
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | Permission Facade    | Manages the customer-facing permission flow.                                                                                                     |
 | Regional Connectors  | Manage permissions and collect validated historical data and accounting point data from Metered Data Administrators (MDAs) and Permission Administrators (PAs). |
-| Outbound Connectors  | Deliver the data to the Eligible Party (EP) in their preferred format and protocol.                                                               |
-| Admin Console        | Provides the EP with tools to configure connectors, manage Data Needs, and oversee permissions.                                                  |
-| Data Needs           | Represent the EP’s request for determining what data should be collected for a specific permission from an MDA.                                  |
+| Outbound Connectors  | Deliver the data to the Eligible Party in their preferred format and protocol.                                                               |
+| Admin Console        | Provides the Eligible Party with tools to configure connectors, manage Data Needs, and oversee permissions.                                                  |
+| Data Needs           | Represent the Eligible Party’s request for determining what data should be collected for a specific permission from an MDA.                                  |
 
 ## Why is the EDDIE Framework necessary in the context of EDDIE?
 
@@ -27,41 +27,41 @@ Without EDDIE, each eligible party would need to implement its own integrations 
 
 The EDDIE Framework solves this problem by:  
 
-- Providing a single entry point for EPs to request data across multiple regions.  
+- Providing a single entry point for Eligible Parties to request data across multiple regions.  
 - Managing the customer permission flow through the Permission Facade.  
 - Acting as an integration layer between heterogeneous regional systems (via Regional Connectors).  
 - Enabling standardized data access through Data Needs, regardless of the original source.  
 - Ensuring compliance with European regulations, including Directive (EU) 2019/944 and GDPR.  
 
-## How do EPs and customers interact with the EDDIE Framework?
+## How do Eligible Parties and customers interact with the EDDIE Framework?
 
-1. Setup by EP  
-   - The EP installs the EDDIE Framework on their infrastructure.  
-   - The EP configures Regional Connectors for the PAs and MDAs in the regions where they operate.  
-   - The EP defines one or more Data Needs representing the data required for their services.  
+1. Setup by Eligible Party  
+   - The Eligible Party installs the EDDIE Framework on their infrastructure.  
+   - The Eligible Party configures Regional Connectors for the PAs and MDAs in the regions where they operate.  
+   - The Eligible Party defines one or more Data Needs representing the data required for their services.  
 
 2. Customer permission  
-   - The EP embeds the EDDIE Popup in their service application.  
+   - The Eligible Party embeds the EDDIE Popup in their service application.  
    - Customers interact with the Popup, which forwards the request to their PA.  
    - The customer accepts or rejects the permission request via their PA’s portal.  
 
 3. Data provisioning  
    - Once permission is granted, the Regional Connector retrieves the relevant data from the MDA.  
-   - Outbound Connectors deliver this data to the EP’s services.  
+   - Outbound Connectors deliver this data to the Eligible Party’s services.  
 
 4. Permission management  
    - Customers may revoke permissions via their PA.  
-   - EPs can monitor or terminate active permissions through the Admin Console.
+   - Eligible Parties can monitor or terminate active permissions through the Admin Console.
 
 ## How does the EDDIE Framework integrate with other EDDIE components?
 
 - With AIIDA: The framework uses AIIDA as a specialized Regional Connector for in-house real-time data streams.  
-- With the Marketplace: The Marketplace helps customers discover EPs and their services, but no data flows through the Marketplace itself. Data exchange always happens through the EDDIE Framework once permissions are granted. 
+- With the Marketplace: The Marketplace helps customers discover Eligible Parties and their services, but no data flows through the Marketplace itself. Data exchange always happens through the EDDIE Framework once permissions are granted. 
   
 ## Deployability
 
 The EDDIE Framework is deployable on commodity infrastructure (cloud or on-premise).  
-It follows a container-based architecture, allowing EPs to enable only the connectors they need.  
+It follows a container-based architecture, allowing Eligible Parties to enable only the connectors they need.  
 <!-- This ensures scalability, resilience, and flexibility for integration with evolving regional infrastructures.   -->
 
 
