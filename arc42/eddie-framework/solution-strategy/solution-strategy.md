@@ -15,10 +15,10 @@ The EDDIE Framework builds upon several core concepts, which describe its main r
 | Concept          | Description                                                                                                                                   |
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | Permission Facade    | Manages the customer-facing permission flow.                                                                                                     |
-| Regional Connectors  | Manage permissions and collect validated historical data and accounting point data from Metered Data Administrators (MDAs) and Permission Administrators (PAs). |
+| Regional Connectors  | Manage permissions and collect validated historical data and accounting point data from Metered Data Administrators and Permission Administrators. |
 | Outbound Connectors  | Deliver the data to the Eligible Party in their preferred format and protocol.                                                               |
 | Admin Console        | Provides the Eligible Party with tools to configure connectors, manage Data Needs, and oversee permissions.                                                  |
-| Data Needs           | Represent the Eligible Party’s request for determining what data should be collected for a specific permission from an MDA.                                  |
+| Data Needs           | Represent the Eligible Party’s request for determining what data should be collected for a specific permission from an Metered Data Administrator.                                  |
 
 ## Why is the EDDIE Framework necessary in the context of EDDIE?
 
@@ -37,20 +37,20 @@ The EDDIE Framework solves this problem by:
 
 1. Setup by Eligible Party  
    - The Eligible Party installs the EDDIE Framework on their infrastructure.  
-   - The Eligible Party configures Regional Connectors for the PAs and MDAs in the regions where they operate.  
+   - The Eligible Party configures Regional Connectors for the Permission Administrators and Metered Data Administrators in the regions where they operate.  
    - The Eligible Party defines one or more Data Needs representing the data required for their services.  
 
 2. Customer permission  
    - The Eligible Party embeds the EDDIE Popup in their service application.  
-   - Customers interact with the Popup, which forwards the request to their PA.  
-   - The customer accepts or rejects the permission request via their PA’s portal.  
+   - Customers interact with the Popup, which forwards the request to their Permission Administrator.  
+   - The customer accepts or rejects the permission request via their Permission Administrator’s portal.  
 
 3. Data provisioning  
-   - Once permission is granted, the Regional Connector retrieves the relevant data from the MDA.  
+   - Once permission is granted, the Regional Connector retrieves the relevant data from the Metered Data Administrator.  
    - Outbound Connectors deliver this data to the Eligible Party’s services.  
 
 4. Permission management  
-   - Customers may revoke permissions via their PA.  
+   - Customers may revoke permissions via their Permission Administrator.  
    - Eligible Parties can monitor or terminate active permissions through the Admin Console.
 
 ## How does the EDDIE Framework integrate with other EDDIE components?
