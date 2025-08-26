@@ -3,14 +3,7 @@ title: Building Block View
 order: 2
 ---
 
-This section describes the building block view of the EDDIE Framework using the [C4 model](https://c4model.com/). 
-It begins with the containers inside the system and continues with the software components of the application.
-
-## EDDIE Framework
-
-The heart of the EDDIE Framework is the application responsible for accessing and streaming of energy data.
-To ease its adoption by the eligible party, 
-the EDDIE Framework includes companion containers providing administrative features. 
+This section describes the building block view of the EDDIE Framework using the [C4 Model](https://c4model.com/). For this purpose, an overview of the EDDIE containers is provided, along with their interactions. The goal of the EDDIE Framework is to enable Eligible Parties to access energy data from Regional Data-sharing infrastructures and stream this data to their own services. At its core, the EDDIE Application establishes permissions with Permission Administrators, retrieves validated historical data from Metered Data Administrators, and delivers this data through outbound connectors to the Eligible Party’s environment. To ease adoption and integration, the EDDIE Framework also includes companion containers that support administrative features such as authentication, monitoring, and persistence. While these companion containers are recommended and instructions are provided, they are not shipped with the main application and must be provided by the Eligible Party.
 
 <C4 diagram="container-eddie-framework" />
 
@@ -26,9 +19,9 @@ the EDDIE Framework includes companion containers providing administrative featu
 
 The application uses a plugin architecture for both inbound and outbound data exchange.
 _Inbound_ referring to the retrieval of energy data from the data provider, 
-and _outbound_ to the communication with the eligible party, 
+and _outbound_ to the communication with the Eligible Party, 
 where individual plugins can be enabled to support specific data providers or data exchange protocols. 
-These plugins are referred to as _Region Connectors_ and _Outbound Connectors_.
+These plugins are referred to as _Regional Connectors_ and _Outbound Connectors_.
 
 <C4 diagram="component-eddie-application" />
 
