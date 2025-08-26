@@ -5,7 +5,7 @@ order: 6
 
 <!-- Regional Data-sharing Infrastructure is a common term used accross this document for Data Access Providers (DAPs) -->
 
-The EDDIE Framework is one of the software systems of EDDIE, along with AIIDA and the Marketplace. It provides eligible third parties with unified access to energy data from various Regional Data-Sharing Infrastructures (RDSIs) throughout the European Union. For this reason, the EDDIE Framework implements a common interface that allows third parties to create permission requests and retrieve energy data. By doing so, it abstracts away the diverse processes and requirements of different data providers. Thus, the EDDIE Framework ensures that third parties can seamlessly access and use energy data across multiple regions without having to deal with provider-specific complexities.  
+The EDDIE Framework is one of the software systems of EDDIE, along with AIIDA and the Marketplace. It provides eligible third parties with unified access to energy data from various Regional Data-Sharing Infrastructures throughout the European Union. For this reason, the EDDIE Framework implements a common interface that allows third parties to create permission requests and retrieve energy data. By doing so, it abstracts away the diverse processes and requirements of different data providers. Thus, the EDDIE Framework ensures that third parties can seamlessly access and use energy data across multiple regions without having to deal with provider-specific complexities.  
 
 <!-- ![A simple visualization of the EDDIE Framework](./figures/eddie-simple.drawio.svg) -->
 
