@@ -6,7 +6,7 @@ order: 3
 The runtime view describes the behavior of EDDIE Framework and the interaction between its building blocks for important workflows.
 
 This section hides the behavior of individual region connectors and outbound connectors.
-Specific documentation can found on the [respective building block pages](../building-block-view/region-connectors/region-connectors.md).
+Specific documentation can found on the [respective building block pages](../building-block-view/regional-connectors/regional-connectors.md).
 
 ## EDDIE Popup
 
@@ -16,7 +16,7 @@ sequenceDiagram
 	actor Customer
 	participant Popup as EDDIE Popup
 	participant Core
-	participant RC as Region Connector
+	participant RC as Regional Connector
 
 	Popup->>Core: Fetch Data Need
 	Popup->>Core: Fetch Permission Administrators
