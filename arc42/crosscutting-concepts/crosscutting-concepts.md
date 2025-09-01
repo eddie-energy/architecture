@@ -36,10 +36,11 @@ CIM is an object-oriented information model based on UML, which defines both syn
 
 - IEC 61970-301: Defines the energy management system application programming interface (EMS-API).
 - IEC 61968-11: Defines system interfaces for the integration of distribution management systems (DMS) with enterprise applications within electric utilities.
-- IEC 62325-301: Defines the energy market communications, supporting the exchange of information between market participants.
+- IEC 62325-301: Defines the energy market communications, supporting the exchange of information between market participants. THe European version is known as ESMP (European Style Market Profile).
 
 The CIM standard provides well-defined semantics. Each CIM class or object has a clear definition registered within the common model. This model encompasses a wide range of entities and functions across the energy sector, including grid operations, asset management, and energy markets, with a focus on infrastructure and connectivity.
 
+Although CIM covers a large prtion of the energy sector data, there are area's where CIM is less well developed. e.g. electric vehicle charging. Below some complementary standards are discussed.
 
 #### Relevance
 
