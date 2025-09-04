@@ -27,9 +27,9 @@ The following diagram shows the most important parts and actors of EDDIE as laid
 Comparing this diagram to the updated version below, 
 one can see that each existing component maps nicely to a specific concept implementing its envisioned functionality.
 
-- EDDIE Consent Facade → [Permission Facade](../eddie-framework/crosscutting-concepts/domain-concepts.md#permission-facade)
-- EDDIE Data Streaming Infrastructure → [Outbound Connectors](../eddie-framework/crosscutting-concepts/domain-concepts.md#outbound-connectors)
-- EDDIE Interoperable Communication Layer → [Region Connectors](../eddie-framework/crosscutting-concepts/domain-concepts.md#region-connectors)
+- EDDIE Consent Facade → [Permission Facade](../crosscutting-concepts/crosscutting-concepts.md#permission-facade)
+- EDDIE Data Streaming Infrastructure → [Outbound Connectors](../eddie-framework/architectural-decisions/architectural-decisions.md#outbound-connectors)
+- EDDIE Interoperable Communication Layer → [Region Connectors](../eddie-framework/building-block-view/regional-connectors/regional-connectors.md)
 - EDDIE Administrative Console → [Admin Console](../eddie-framework/building-block-view/building-block-view.md#eddie-application)
 
 The most notable adaptation is the implementation of the _Data Streaming Infrastructure_ and _Interoperable Communication Layer_ through the concepts of _Outbound Connectors_ and _Region Connectors_.
@@ -41,13 +41,13 @@ _Outbound Connectors_ and _Region Connectors_ do not communicate directly, but u
 
 Another notable change is the column on the right where the EDDIE Framework uses specialized software to tackle specific problems.
 
-- System monitoring is done [separate from the admin console](../architectural-decisions/architectural-decisions.md#separate-system-monitoring-and-admin-console) and handled by an existing software solution.
+- System monitoring is done [separate from the admin console](../eddie-framework/architectural-decisions/architectural-decisions.md#separate-system-monitoring-and-admin-console) and handled by an existing software solution.
 - Authentication, authorization, and user management are delegated to a configured Keycloak instance and no longer stored in the shared database.
 - The shared database is configured to track process states and configuration for region connectors, as well as metrics for the admin console. It does not include authentication information.
 
 The Grant Agreement also highlights how the EDDIE Framework can be installed with a single command through the use of scripted deployment configurations and provides the following diagram describing three deployment options.
 All these options can be achieved by configuration of the EDDIE Framework as described in the [Operation Manual](https://eddie-web.projekte.fh-hagenberg.at/framework/).
-Details on the deployment of the EDDIE Framework are found in its [Deployment View](../deployment-view/deployment-view.md).
+Details on the deployment of the EDDIE Framework are found in its [Deployment View](../eddie-framework/deployment-view/deployment-view.md).
 
 ![](./permission-facade/figures/eddie-deployment-options.png)
 
@@ -68,21 +68,21 @@ We are not yet sure if we can or even want to support the onboarding/configurati
 ![Sketch of the admin console showing forms for onboarding region connectors](./permission-facade/figures/admin-console-region-setup-details.png)
 
 _service_ provided by the eligible party
-the specification of the data was termed a [data need](../eddie-framework/crosscutting-concepts/domain-concepts.md#data-needs).
+the specification of the data was termed a [data need](../crosscutting-concepts/crosscutting-concepts.md#data-needs).
 
 ![](./permission-facade/figures/process-service.png)
 
-From the perspective of the eligible party, the acquisition of data begins with the definition of a [data need](../eddie-framework/crosscutting-concepts/domain-concepts.md#data-needs) in the [admin console](../eddie-framework/building-block-view/building-block-view.md#eddie-application).
+From the perspective of the eligible party, the acquisition of data begins with the definition of a [data need](../crosscutting-concepts/crosscutting-concepts.md#data-needs) in the [admin console](../eddie-framework/building-block-view/building-block-view.md#eddie-application).
 
 ### Establishment of a consent
 
-Consent Facade -> [Permission Facade](../eddie-framework/crosscutting-concepts/domain-concepts.md#permission-facade)
+Consent Facade -> [Permission Facade](../crosscutting-concepts/crosscutting-concepts.md#permission-facade)
 
 ![](./permission-facade/figures/establishment-of-consent.png)
 
 ![](./permission-facade/figures/connect-my-data.png)
 
-[Multistep Form](../eddie-framework/crosscutting-concepts/user-experience.md#eddie-button-as-multistep-form)
+[Multistep Form](../crosscutting-concepts/crosscutting-concepts.md#eddie-button-as-multistep-form)
 
 ### Manage active consents
 
