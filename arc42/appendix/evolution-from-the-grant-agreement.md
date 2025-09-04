@@ -16,7 +16,7 @@ Others may find in it a more coherent view on architectural drivers and function
 Please note that the Grant Agreement is not a public document and therefore not shared with this documentation.
 If you have access to the Grant Agreement, this section uses the same diagrams and headlines for an easy comparison.
 
-With its methodological structure, this page can be read as a historical companion to the [solution strategy](../solution-strategy/solution-strategy.md).
+With its methodological structure, this page can be read as a historical companion to the [solution strategy](../eddie-framework/solution-strategy/solution-strategy.md).
 
 ## EDDIE core components
 
@@ -27,10 +27,10 @@ The following diagram shows the most important parts and actors of EDDIE as laid
 Comparing this diagram to the updated version below, 
 one can see that each existing component maps nicely to a specific concept implementing its envisioned functionality.
 
-- EDDIE Consent Facade → [Permission Facade](../crosscutting-concepts/domain-concepts.md#permission-facade)
-- EDDIE Data Streaming Infrastructure → [Outbound Connectors](../crosscutting-concepts/domain-concepts.md#outbound-connectors)
-- EDDIE Interoperable Communication Layer → [Region Connectors](../crosscutting-concepts/domain-concepts.md#region-connectors)
-- EDDIE Administrative Console → [Admin Console](../building-block-view/building-block-view.md#eddie-application)
+- EDDIE Consent Facade → [Permission Facade](../eddie-framework/crosscutting-concepts/domain-concepts.md#permission-facade)
+- EDDIE Data Streaming Infrastructure → [Outbound Connectors](../eddie-framework/crosscutting-concepts/domain-concepts.md#outbound-connectors)
+- EDDIE Interoperable Communication Layer → [Region Connectors](../eddie-framework/crosscutting-concepts/domain-concepts.md#region-connectors)
+- EDDIE Administrative Console → [Admin Console](../eddie-framework/building-block-view/building-block-view.md#eddie-application)
 
 The most notable adaptation is the implementation of the _Data Streaming Infrastructure_ and _Interoperable Communication Layer_ through the concepts of _Outbound Connectors_ and _Region Connectors_.
 Both _Outbound Connectors_ and _Region Connectors_ are implemented using a plugin architecture, 
@@ -55,7 +55,7 @@ Details on the deployment of the EDDIE Framework are found in its [Deployment Vi
 
 To demonstrate the functionality of the EDDIE Framework, the Grant Agreement describes a scenario of four stages.
 This section highlights how these descriptions differ from the implemented architecture.
-An updated collection of use-cases can be found in the [Runtime View](../runtime-view/runtime-view.md) of the EDDIE Framework.
+An updated collection of use-cases can be found in the [Runtime View](../eddie-framework/runtime-view/runtime-view.md) of the EDDIE Framework.
 
 ### Installation and setup
 
@@ -68,25 +68,25 @@ We are not yet sure if we can or even want to support the onboarding/configurati
 ![Sketch of the admin console showing forms for onboarding region connectors](./permission-facade/figures/admin-console-region-setup-details.png)
 
 _service_ provided by the eligible party
-the specification of the data was termed a [data need](../crosscutting-concepts/domain-concepts.md#data-needs).
+the specification of the data was termed a [data need](../eddie-framework/crosscutting-concepts/domain-concepts.md#data-needs).
 
 ![](./permission-facade/figures/process-service.png)
 
-From the perspective of the eligible party, the acquisition of data begins with the definition of a [data need](../crosscutting-concepts/domain-concepts.md#data-needs) in the [admin console](../building-block-view/building-block-view.md#eddie-application).
+From the perspective of the eligible party, the acquisition of data begins with the definition of a [data need](../eddie-framework/crosscutting-concepts/domain-concepts.md#data-needs) in the [admin console](../eddie-framework/building-block-view/building-block-view.md#eddie-application).
 
 ### Establishment of a consent
 
-Consent Facade -> [Permission Facade](../crosscutting-concepts/domain-concepts.md#permission-facade)
+Consent Facade -> [Permission Facade](../eddie-framework/crosscutting-concepts/domain-concepts.md#permission-facade)
 
 ![](./permission-facade/figures/establishment-of-consent.png)
 
 ![](./permission-facade/figures/connect-my-data.png)
 
-[Multistep Form](../crosscutting-concepts/user-experience.md#eddie-button-as-multistep-form)
+[Multistep Form](../eddie-framework/crosscutting-concepts/user-experience.md#eddie-button-as-multistep-form)
 
 ### Manage active consents
 
-[Admin Console](../building-block-view/building-block-view.md#eddie-application)
+[Admin Console](../eddie-framework/building-block-view/building-block-view.md#eddie-application)
 
 ![](./permission-facade/figures/admin-console.png)
 
@@ -105,7 +105,7 @@ From the Grant Agreement:
 > [2] online data streams (from MDAs and online near real-time data-sharing infrastructures) and the combination of the two, and also
 > [3] the communication between different EDDIE Framework applications.
 
-1. AIIDA communicates with EDDIE via [MQTT](../../aiida/architectural-decisions/architectural-decisions.md#mechanism-to-send-data-from-aiida-to-the-eddie-framework).
+1. AIIDA communicates with EDDIE via [MQTT](../aiida/architectural-decisions/architectural-decisions.md#mechanism-to-send-data-from-aiida-to-the-eddie-framework).
 2. Region connectors communicate with MDAs using their preferred (usually only) option.
    TODO: Check with Flo
 3. EDDIE Framework applications communicate using a suitable option.
