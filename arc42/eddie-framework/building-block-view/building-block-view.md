@@ -27,7 +27,7 @@ These plugins are referred to as _Regional Connectors_ and _Outbound Connectors_
 
 | Component | Description |
 | - | - |
-| EDDIE Popup | The EDDIE Popup is a frontend micro-frontend embedded into the website of the Eligible Party. It provides the customer-facing user interface for permission requests, guiding the customer through all required steps to grant or revoke access to their energy data. |
+| EDDIE Popup | The EDDIE Popup is a frontend based on micro-frontend architecture embedded into the website of the Eligible Party. It provides the customer-facing user interface for permission requests, guiding the customer through all required steps to grant or revoke access to their energy data. |
 | EDDIE Core | The EDDIE Core is the Spring backend entry point of the framework, packaged as a single JAR inside a Docker container. It orchestrates all other modules and facilitates the flow of information between Region Connectors and Outbound Connectors. |
 | Master Data API | The Master Data API is a backend service of the EDDIE Application. It provides metadata about business entities such as Permission Administrators and Metered Data Administrators. |
 | Data Needs API | The Data Needs API is part of the EDDIE Application backend. It allows the Eligible Party to manage the data requirements of their services, specifying what type of data should be collected for each permission. |
