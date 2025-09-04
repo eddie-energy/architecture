@@ -1,6 +1,6 @@
 ---
 title: Permission Facade
-hiddenInSidebar: true
+# hiddenInSidebar: true
 ---
 
 > [!note] TODO

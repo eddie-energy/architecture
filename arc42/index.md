@@ -44,6 +44,7 @@ This document is organized as follows:
 1. [Quality Requirements](./quality-requirements/quality-requirements.md). Includes requirements that need to be satisfied by the system.
 1. [Risks & Technical Debt](./risks-and-technical-debt/risks-and-technical-debt.md). Includes known risks and unimplemented aspects of the system.
 1. [Glossary](./glossary/glossary.md). Includes domain terms and acronyms.
+1. [Appendix](./appendix/appendix.md). Contains information that is relevant to the architecture but is not part of the arc42 template.
 <!-- 4. [Solution Strategy](./04-solution-strategy/04-solution-strategy.md). Includes elaborate guidelines for achieving complex goals. -->
 
 
