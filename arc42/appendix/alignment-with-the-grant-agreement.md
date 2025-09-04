@@ -1,5 +1,5 @@
 ---
-title: Evolution from the Grant Agreement
+title: Alignment with the Grant Agreement
 ---
 
 ::: info TODO
