@@ -3,10 +3,26 @@ title: Deployment View
 order: 4
 ---
 
-::: warning TO ADD
+## Overview
+
+The EDDIE Framework runs on the Eligible Party's infrastructure, hosted in Docker containers. It provides the core functionality for managing customer data, permissions, and energy data flows. The framework consists of the EDDIE Application (modular monolith), Admin Console, Database, and optional companion containers for System Monitoring and Authentication Management.  
+
+## Diagram
+![](./figures/eddie_framework_deployment_view.svg)
+
+| Node | Description |
+| - | - |
+| Eligible Party Infrastructure | Operated by the eligible party. Hosts the EDDIE Framework locally using Docker containers. |
+| EDDIE Application | Core backend of the framework, implemented as a modular monolith. Handles workflows, permissions, and energy data streaming. |
+| Admin Console | Frontend bundled with the EDDIE Application. Allows management of Data Needs, Region Connectors, permissions, and metrics. |
+| Database | PostgreSQL container storing system state, permissions, Data Needs, and metrics about permission events and data exchanges. |
+| System Monitoring | Optional companion containers for observability. Recommended stack: OpenTelemetry, Prometheus, Loki, Jaeger, and Grafana. |
+| Authentication Management | Optional companion container to handle OAuth-based authentication and authorization. Deployment assumes Keycloak. |
+
+<!-- ::: warning TO ADD
 This section is by far not finished yet.
 Also link to the framework documentation regarding this topic, this makes sure that developers coming to this page will be able to also find out how to deploy EDDIE.
-:::
+::: -->
 
 <!--
 ::: warning TO ADD
@@ -20,10 +36,10 @@ Also link to the framework documentation regarding this topic, this makes sure t
     elements.
 3.  development environment, test environment, production environment. -->
 
-The EDDIE Framework depolyment view is a zoom into the highest level deployment view, defining the environment for EDDIE Framework in specific
+<!-- The EDDIE Framework depolyment view is a zoom into the highest level deployment view, defining the environment for EDDIE Framework in specific
 :::
 
-## Overview
+## Overview -->
 
 
 
@@ -56,15 +72,15 @@ Describe (usually in a combination of diagrams, tables, and text):
 -   quality and/or performance features of this infrastructure
 -   mapping of software artifacts to elements of this infrastructure -->
 
-
+<!-- 
 The deployment view of the system focuses on the utilized technical infrastructure, and shows deployment diagrams that depict where the components of the system run. The prime way to deploy these components is shown in the figure below. Notably, the Interoperable Communication component is not depicted as a Container because it may consist of multiple containers. The same applies to AIIDA, and the Marketplace.
 
 ![](./figures/deployment-diagram-level-2.svg)
 
 The system runs across four nodes which are described in the table below.
 
-| Node                                 | Description                                                                                                                                                                                                                                                                                                                                                                             |
-| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Node                                 | Description                                                                                                                                                                                                                                                                                                                                                                             | -->
+<!-- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Eligible Party Infrastructure        | This is operated by the eligible party. The Local Computing Infrastructure is used for running the EDDIE framework which is deployed locally on the premises of the eligible party. The Cloud Computing Infrastructure is used for running the EP Website and the Services. The implementation and design of the EP Website and the Services are out of the scope of the EDDIE project. |
 | Regional Data-sharing Infrastructure | This is operated by country-specific entities such as the permission administrator and the metered data administrator.                                                                                                                                                                                                                                                                  |
 | In-house Infrastructure              | This node is operated by the customer. It includes an in-house device (e.g., a Raspberry Pi computer) and the Smart Meter.                                                                                                                                                                                                                                                              |
@@ -87,4 +103,4 @@ The motivation for all 3 options is shown in the table below.
 |-|-|
 | 1 | Deployment on the personal computer or a standard server operated by the eligible party. The deployment of the EDDIE Framework is delivered with a simple console command that runs an orchestrated pre-defined virtual infrastructure configured by the EDDIE deployment scripts. |
 | 2 | Deployment for a scenario in a corporate environment that has its own Database and Streaming Infrastructure running on-site. This deployment option allows the reuse of these components which are managed and maintained by existing staff. |
-| 3 | Deployment scenario for running the EDDIE Framework via a “purchase” or “download” button of a cloud marketplace. This option works similar to Option 2, but it utilizes two integrated cloud components: a cloud-native Database and a cloud-native Streaming Infrastructure. |
+| 3 | Deployment scenario for running the EDDIE Framework via a “purchase” or “download” button of a cloud marketplace. This option works similar to Option 2, but it utilizes two integrated cloud components: a cloud-native Database and a cloud-native Streaming Infrastructure. | -->

@@ -1,0 +1,32 @@
+@startuml eddie_framework_deployment_view
+' Deployment-style component diagram
+
+skinparam artifact{
+  BorderColor black
+  BackgroundColor transparent
+}
+skinparam node{
+  BorderColor black
+  BackgroundColor white
+}
+skinparam rectangle{
+  BackgroundColor transparent
+  FontColor black
+}
+
+rectangle "EDDIE Framework" {
+  node "Eligible Party Infrastructure" as epInfra {
+      artifact "EDDIE Application" as eddie_app
+      artifact "Admin Console" as admin_console
+      artifact "Database" as eddie_db
+      artifact "System Monitoring" as monitoring
+      artifact "Authentication Management" as auth
+
+      eddie_app -down- eddie_db : SQL
+      admin_console -down- eddie_app : HTTP
+      admin_console -down- auth : OAuth
+      eddie_app -down- monitoring : HTTP
+  }
+}
+
+@enduml
