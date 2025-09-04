@@ -9,6 +9,12 @@ Various concepts are relevant across the EDDIE system such as:
     - [Common Information Model (CIM)](./crosscutting-concepts.md#common-information-model-cim)
     - [Smart Grid Architecture Model (SGAM)](./crosscutting-concepts.md#smart-grid-architecture-model-sgam)
     - [Smart Appliances REFerence ontology (SAREF)](./crosscutting-concepts.md#smart-appliances-reference-ontology-saref)
+- [Domain Concepts](./crosscutting-concepts.md#domain-concepts)
+    - [Permission Facade](./crosscutting-concepts.md#permission-facade)
+    - [Data Needs](./crosscutting-concepts.md#data-needs)
+- [User Experience](./crosscutting-concepts.md#user-experience)
+    - [Shoelace for EDDIE Button and RC Elements](./crosscutting-concepts.md#shoelace-for-eddie-button-and-rc-elements)
+    - [EDDIE Button as Multistep Form](./crosscutting-concepts.md#eddie-button-as-multistep-form)
 
 ## Data Space
 #### Definition
@@ -111,3 +117,110 @@ Alternative models to SAREF include:
 
 - OneM2M: OneM2M is a global standard for Machine-to-Machine (M2M) and Internet of Things (IoT) interoperability, providing a common architecture and framework for IoT applications across different domains.
 - Brick Schema: Brick Schema is an open-source, community-driven effort to develop a comprehensive schema for building automation, based on Semantic Web technologies.
+
+## Domain Concepts
+
+### Permission Facade
+
+#### Definition
+The Permission Facade describes the process that enables the Eligible Party to request and the customer to grant permission to access customer data.  
+It acts as a simplified interface to diverse regional implementations by following the [Facade design pattern](https://refactoring.guru/design-patterns/facade).
+
+The facade includes:
+- the EDDIE button, [embedded](../eddie-framework/architectural-decisions/architectural-decisions.md#embed-the-eddie-button-as-a-custom-element) into the Eligible Party’s website,  
+- the permission dialog guiding the customer through creating permissions,  
+- backend endpoints to register and manage permissions,  
+- and integration with regional Permission Administrators.  
+
+Most of these aspects are located on the frontend, which is why the Permission Facade is often referred to as the frontend of the EDDIE Framework. It is not a standalone component but spans across the EDDIE Core and Region Connectors.
+
+![Visualization of the permission facade](../crosscutting-concepts/figures/eddie-permission-facade.png)
+
+#### Relevance
+The Permission Facade is the entry point for customers to grant access to their energy data. It ensures a consistent and user-friendly flow across regions, despite differences in underlying Permission Administrator processes.
+
+#### Motivation
+By abstracting the permission process into a common facade, EDDIE Framework lowers complexity for Eligible Parties and increases trust and usability for customers, which is crucial for adoption.
+
+---
+
+### Data Needs
+
+#### Definition
+Eligible Parties require different data to provide their services.  
+These requirements are standardized across region connectors as Data Needs. A Data Need specifies:
+- the type of data family (e.g., validated historical data, accounting point data, AIIDA real-time data),  
+- the time frame of the request,  
+- and additional parameters relevant for the data type.  
+
+On the frontend, Data Needs are used to inform customers about what data is requested and to determine which Region Connectors can fulfill the request.
+
+#### Relevance
+
+Data Needs ensure that service requirements are expressed consistently across all connectors. This standardization enables interoperability between Eligible Parties, customers, and Regional Data-sharing infrastructures.
+
+#### Motivation
+
+Without a common model for expressing data requirements, each region would enforce its own conventions. Data Needs provide a uniform contract that allows services to scale across multiple regions while remaining transparent to customers.
+More details are available in the [operation manual](https://eddie-web.projekte.fh-hagenberg.at/framework/2-integrating/data-needs.html).
+
+
+## User Experience
+### Shoelace for EDDIE Button and RC Elements
+
+#### Definition
+[Shoelace](https://shoelace.style/) is a lightweight library of web components that EDDIE adopts to provide a consistent look and feel across its user-facing elements, such as the EDDIE Button and Region Connector forms.  It supplies reusable components, theming via CSS variables, and localization support.
+
+![Visualization of how Shoelace components are used throughout EDDIE contexts](../crosscutting-concepts/figures/shoelace.drawio.svg)
+
+#### Relevance
+Shoelace ensures that user interactions across EDDIE components follow a uniform design, which improves usability and consistency, especially when components are embedded into external websites of Eligible Parties.  
+Because the library is loaded at runtime from a Content Delivery Network, EDDIE system avoids the need for a separate build process.
+
+#### Motivation
+Using an existing component library reduces development time and improves user experience through standardized patterns.  
+Over time, EDDIE system may replace Shoelace components with custom ones as the framework matures.  
+
+Advantages
+- Faster development by reusing tested components.  
+- A uniform, consistent user experience.  
+
+Disadvantages
+- Extra styles and components need to be loaded.  
+- Some styling may not fit perfectly with EDDIE system’s visual identity.  
+
+---
+
+## EDDIE Button as Multistep Form
+
+#### Definition
+The EDDIE Button is the primary entry point for customers to grant permissions.  
+While the initial version displayed all information in a single vertical form, this design consumed too much space and could overwhelm the user.  
+The multistep form approach addresses this by splitting the process into several smaller steps.
+
+![Design of the multistep form implementation](../crosscutting-concepts/figures/eddie-multi-step-form-stacked.svg)
+
+#### Relevance
+The multistep form improves usability by guiding customers through distinct steps, such as:
+1. Display of the data need.  
+2. Country and Permission Administrator selection.  
+3. Region Connector form inputs (e.g., metering point, access token).  
+4. Post-request instructions and actions.  
+5. Success page.  
+
+This approach adapts to button configuration and the type of Data Need (e.g., AIIDA real-time data).  
+Errors and status updates are displayed as separate pages, ensuring clarity for the customer.
+
+#### Motivation
+Breaking down the permission flow into smaller steps improves comprehension, reduces cognitive load, and works better on mobile devices.  
+It also allows for clearer communication of errors and request states, which strengthens trust in the process.  
+
+Design considerations  
+- Step indicators should remain simple to avoid clutter on mobile devices.  
+- Connection IDs are hidden from customers, as they are only relevant to Eligible Parties.  
+- Back navigation is limited after request creation to avoid confusing users.  
+- The button resets only when the dialog is closed deliberately by the customer.
+
+![Diagram relating the permission process model to the multistep form](../crosscutting-concepts/figures/eddie-multi-step-form-states-vertical.svg)
+
+The implementation of this approach is tracked in [GH-1233](https://github.com/eddie-energy/eddie/issues/1233).  
