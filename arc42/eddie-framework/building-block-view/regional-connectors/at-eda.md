@@ -1,7 +1,51 @@
 ---
 title: EDA (Austria)
 ---
+## Overview
 
+The EDA Region Connector integrates the EDDIE Framework with the Austrian data infrastructure operated by ebUtilities.  
+It connects to the Austrian Permission Administrators and Metered Data Administrators through the PontonXP Messenger, which implements the AS4 protocol required in Austria.
+
+The Region Connector enables Eligible Parties to request and manage customer permissions, and to retrieve validated consumption and metering point data once consent has been granted.
+
+## Prerequisites
+
+- Registration as a service provider at [ebUtilities.at](https://www.ebutilities.at/) to obtain a company identification number (e.g., `EP100129`).  
+- A licensed instance of PontonXP Messenger installed and configured. This is the middleware required for AS4-based communication with Austrian DSOs.  
+
+## Configuration
+
+The EDA Region Connector requires a set of configuration values to operate correctly.  
+These include:
+
+| Configuration Key | Description |
+|-------------------|-------------|
+| `region-connector.at.eda.eligibleparty.id` | Company ID obtained from ebUtilities. |
+| `region-connector.at.eda.ponton.messenger.adapter.id` | Adapter ID configured in PontonXP Messenger. |
+| `region-connector.at.eda.ponton.messenger.hostname` | Hostname or IP of the PontonXP Messenger instance. |
+| `region-connector.at.eda.ponton.messenger.port` | Port of the PontonXP Messenger (default: `2600`). |
+| `region-connector.at.eda.ponton.messenger.api.endpoint` | REST API endpoint of PontonXP Messenger. |
+| `region-connector.at.eda.retry` | Retry configuration using Spring cron syntax. |
+
+Configuration can be supplied as Spring properties or as environment variables.  
+For details, see the [Operation Manual](https://eddie-web.projekte.fh-hagenberg.at/framework/1-running/region-connectors/region-connector-at-eda.html).
+
+## Running the Region Connector
+
+When correctly configured, the EDA Region Connector appears in the list of available connectors in the EDDIE Framework.  
+It then handles the end-to-end process of:
+
+1. Receiving permission requests from the Eligible Party via EDDIE.  
+2. Forwarding and validating the request with the Permission Administrator (through PontonXP Messenger).  
+3. Allowing the customer to approve or reject the request in their DSO portal.  
+4. Retrieving validated metering and consumption data from the Metered Data Administrator once consent is confirmed.  
+
+## Notes
+
+- Multiple Eligible Parties can share one PontonXP Messenger instance by configuring separate adapters per Eligible Party ID.  
+- For advanced setup (e.g., routing to multiple adapters or customizing agreement templates), refer to the [PontonXP Messenger configuration guide](https://eddie-web.projekte.fh-hagenberg.at/framework/1-running/region-connectors/region-connector-at-eda.html).  
+
+<!-- 
 > [!note] TODO
 > - What should each RC page contain -> shared structure?
 > - How much technical detail?
@@ -26,59 +70,4 @@ title: EDA (Austria)
 
 [Onboarding and configuration](https://eddie-web.projekte.fh-hagenberg.at/framework/1-running/region-connectors/region-connector-at-eda.html)
 
-> [!note] TODO: Copied from our wiki. Please review.
-
-```mermaid
-sequenceDiagram
-    autonumber
-
-Actor Customer
-participant EP Service
-participant ConsentPopup
-participant ConsentFacade
-participant ICL
-participant DSOPortal
-
-Note over Customer, DSOPortal: TODO: Alternative paths, failures, options etc.
-
-ConsentPopup-->>ConsentFacade: request list of regions
-ConsentFacade-->>ConsentPopup: answer with MS list
-Customer->>+ConsentPopup: select AT
-ConsentPopup-->>ConsentFacade: request list of PAs in AT
-ConsentFacade-->>ConsentPopup: list with 139 Austrian DSOs is returned
-ConsentPopup-->>ConsentFacade: load glue HTML (field MeteringPointId, generate and paste CMRequestId)
-ConsentPopup-->>Customer: show description for how to find out meteringpoint id
-ConsentPopup-->>Customer: click on _blank link to open DSO Portal
-alt CMRequest with MeteringPointId
-opt Customer needs to find MeteringPointId from DSO Portal
-Customer-->>DSOPortal:find MeteringPointId
-DSOPortal-->>Customer: copy MeteringPointId
-end
-Customer-->>ConsentPopup: paste MeteringPointId
-else
-Customer-->Customer: selects MeteringPoint in DSOPortal when accepting request
-end
-Customer->>ConsentPopup: hit connect data button
-ConsentPopup->>ConsentFacade: submit form
-ConsentFacade->>+ICL: [MSConsentRequestAT]
-ICL->>ICL: create process
-ICL->>EP Service:[CIMRequestUpdate]
-ICL->>+DSOPortal: [ATConsentRequest]
-alt invalid request
-DSOPortal->>ICL: [ATCMRequestUpdate]
-ICL->>EP Service: [CIMRequestUpdate]
-ICL->>ConsentFacade:[CIMRequestUpdate]
-ConsentFacade->ConsentPopup: [CIMRequestUpdate]
-else valid request
-DSOPortal->>ICL: [ATConsentStatusUpdate] (accepted/rejected)
-ICL->>EP Service: [CIMConsentStatusUpdate]
-Customer->>DSOPortal:login
-Customer->>DSOPortal: search for CMRequest (optionally by Id)
-Customer->>DSOPortal: accept request
-DSOPortal->>ICL: [ATConsentStatusUpdate] ACCEPTED
-ICL->>-EP Service: [CIMConsentStatusUpdate] ACCEPTED
-DSOPortal->>-Customer: close DSO portal and/or redirect
-Customer->>ConsentPopup: close popup and show status update
-ConsentPopup->>-Customer: redirect to EP Website/App Onboarding
-end   
-```
+> [!note] TODO: Copied from our wiki. Please review. -->
