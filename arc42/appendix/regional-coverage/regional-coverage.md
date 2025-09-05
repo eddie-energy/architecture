@@ -2,8 +2,8 @@
 title: Regional Coverage
 ---
 
-::: warning TO REVIEW
-This was just a quick draft on how this section could look like, please either remove it and put the information into its respecting sections or work over it.
+::: warning TODO
+To be moved to the eddie-energy/eddie repository as part of its documentation
 :::
 
 ## What is a Region Connector?
