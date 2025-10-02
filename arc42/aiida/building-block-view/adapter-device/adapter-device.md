@@ -15,6 +15,7 @@ This table shows the supported Adapter Devices that connect to smart meters of s
 | France | [Micro Teleinfo V3.0](./adapter-device-france.md) |
 | Italy | [Sinapsi Alfa](./adapter-device-italy.md) |
 | Netherlands, Belgium, Sweden, Denmark, Finland, Hungary, Ireland, Lithuania, Switzerland | [Smart Meter WiFi Gateway](./adapter-device-north-europe.md) |
+| Austria, Germany, Slovenia, Luxembourg, Switzerland | [Smartmeter Kundenschnittstellen Modul](./adapter-device-shrdzm.md)|
 
 This table shows the supported IoT devices that also act as Adapter Devices.
 
