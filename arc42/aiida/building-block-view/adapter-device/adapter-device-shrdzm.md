@@ -6,7 +6,7 @@ hiddenInSidebar: true
 
 The [Smartmeter Kundenschnittstellen Modul](https://cms.shrdzm.com/produkt/smartmeter-modul/) developed by SHRDZM is an Adapter Device that supports smart meters in **Austria**, **Germany**, **Slovenia**, **Luxembourg** and **Switzerland**. This Adapter Device is shown below.
 
-![](./figures/shrdzm-smart-meter-adapter.jpg)
+![](./figures/adapter-device-shrdzm.JPG)
 
 
 ## Connection to Metering Devices
