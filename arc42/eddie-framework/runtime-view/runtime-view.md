@@ -167,15 +167,3 @@ sequenceDiagram
     Popup ->> RC: Send permission request based on user interaction
     Popup ->> Core: Subscribe to permission status
 ``` -->
-
-## Permission Process Model
-
-::: info TODO
-- Reference Aya's paper once published.
-- Check if this should be on the domain concepts page.
-- Provide prose description
-:::
-
-![BPRT diagram showing the permission request process](../figures/permission-process-model.svg)
-
-The [Operation Manual](https://eddie-web.projekte.fh-hagenberg.at/framework/2-integrating/integrating.html#permission-process-model) provides details on how to interpret and handle specific states.

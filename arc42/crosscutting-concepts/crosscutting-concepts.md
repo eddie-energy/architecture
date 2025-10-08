@@ -11,6 +11,7 @@ Various concepts are relevant across the EDDIE system such as:
     - [Smart Appliances REFerence ontology (SAREF)](./crosscutting-concepts.md#smart-appliances-reference-ontology-saref)
 - [Domain Concepts](./crosscutting-concepts.md#domain-concepts)
     - [Permission Facade](./crosscutting-concepts.md#permission-facade)
+    - [Permission Process Model](./crosscutting-concepts.md#permission-process-model)
     - [Data Needs](./crosscutting-concepts.md#data-needs)
 - [User Experience](./crosscutting-concepts.md#user-experience)
     - [Shoelace for EDDIE Button and RC Elements](./crosscutting-concepts.md#shoelace-for-eddie-button-and-rc-elements)
@@ -143,6 +144,30 @@ The Permission Facade is the entry point for customers to grant access to their 
 By abstracting the permission process into a common facade, EDDIE Framework lowers complexity for Eligible Parties and increases trust and usability for customers, which is crucial for adoption.
 
 ---
+
+### Permission Process Model
+
+#### Definition
+The Permission Process Model defines the lifecycle of a permission request within the EDDIE Framework.  
+A permission request represents the agreement between a Customer, their Permission Administrator, and the Eligible Party to access energy-related data.  
+Each permission request transitions through well-defined states — from its creation and validation to acceptance, revocation, or termination — ensuring that no state is skipped and that the complete permission history is traceable.  
+This state model standardizes how permissions are created, validated, transmitted, and retired across all regional connectors and PAs.
+
+![BPRT diagram showing the permission request process](../crosscutting-concepts/figures/permission-process-model.svg)
+
+The [Operation Manual](https://eddie-web.projekte.fh-hagenberg.at/framework/2-integrating/integrating.html#permission-process-model) provides details on how to interpret and handle specific states.
+
+#### Relevance
+The permission process model is fundamental to maintaining interoperability and consistency across regional implementations.  
+It enables EDDIE System to integrate with diverse Permission Administrators and Metered Data Administrators while preserving a unified internal workflow.  
+By formalizing the transition between states such as `CREATED`, `VALIDATED`, `ACCEPTED`, `REVOKED`, and `TERMINATED`, the framework can track the exact lifecycle of a permission request and handle external notifications or errors consistently.  
+Furthermore, this model ensures that both frontend components (like the EDDIE Popup) and backend systems (EDDIE Core, Region Connectors) can synchronize permission states accurately, enabling transparent communication between customers and Eligible Parties.
+
+#### Motivation
+Energy data access involves strict data protection and consent requirements.  
+A standardized permission process model ensures compliance with legal and regulatory frameworks while simplifying integration with regional infrastructures.  
+It provides a clear and auditable flow from request creation to termination, reducing ambiguity and risk of unauthorized access.  
+By adopting a unified state machine, EDDIE System ensures that every data exchange is backed by a verifiable permission status, improving trust, maintainability, and scalability of the overall system.
 
 ### Data Needs
 
