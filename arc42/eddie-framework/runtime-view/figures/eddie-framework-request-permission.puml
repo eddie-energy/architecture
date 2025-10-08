@@ -10,54 +10,54 @@ autonumber
 !pragma teoz true
 
 actor "Customer" as customer
-actor "Eligible Party (EP)" as ep
+actor "Eligible Party" as ep
 
 box "EP Infrastructure" #transparent
   participant "EP Website" as epApp
 end box
 
 box "EDDIE Framework" #transparent
-  participant "EDDIE Popup" as popup
-  participant "EDDIE Core" as core
-  participant "Region Connector" as rc
+  participant "EDDIE \nPopup" as popup
+  participant "EDDIE \nCore" as core
+  participant "Region \nConnector" as rc
 end box
 
 == Setup ==
-ep -> epApp : Create Data Need\nvia API or Admin Console
-ep -> epApp : Embed EDDIE Popup\nand configure with Data Need
+ep -> epApp : Create \nData \nNeed
+ep -> epApp : Embed \nEDDIE \nPopup
 
-== Permission Request ==
-customer -> epApp : Click EDDIE Popup
-epApp -> popup : Open Permission Dialog
+== Permission \nRequest ==
+customer -> epApp : Click \nEDDIE \nPopup
+epApp -> popup : Open \nPermission \nDialog
 activate popup
 
 ' --- Detailed permission interaction ---
-popup -> core : Fetch Data Need
-popup -> core : Fetch Permission Administrators
-popup -> core : Fetch RC Metadata
-customer -> popup : Confirm Data Need
-customer -> popup : Select Country and PA
-popup -> rc : Fetch RC Element
-customer -> popup : Interact with RC Element
+popup -> core : Fetch \nData Need
+popup -> core : Fetch \nPermission \nAdministrators
+popup -> core : Fetch \nRC Metadata
+customer -> popup : Confirm \nData Need
+customer -> popup : Select \nCountry \nand PA
+popup -> rc : Fetch \nRC Element
+customer -> popup : Interact \nwith \nRC Element
 note over customer, rc
   Interaction varies by RC element
   (e.g., metering point, access token)
 end note
-popup -> rc : Send Permission Request\nbased on user interaction
-popup -> core : Subscribe to Permission Status
+popup -> rc : Send \nPermission Request\nbased \non user \ninteraction
+popup -> core : Subscribe to \nPermission Status
 ' --- End detailed interaction ---
 
-core -> rc : Forward Permission Request
-rc -> customer : Show Consent Portal
-customer -> rc : Accept Request
-rc -->> core : Consent Accepted
-core -->> popup : Show confirmation
-popup -->> customer : Confirmation / Success page
+core -> rc : Forward \nPermission \nRequest
+rc -> customer : Show \nConsent \nPortal
+customer -> rc : Accept \nRequest
+rc -->> core : Consent \nAccepted
+core -->> popup : Show \nconfirmation
+popup -->> customer : Confirmation \n/Success page
 deactivate popup
 
 == Data Access ==
 ep -> core : Retrieve Data
-core -> rc : Request Validated Data
+core -> rc : Request \nValidated \nData
 rc -->> ep : Provide Data
 
 @enduml

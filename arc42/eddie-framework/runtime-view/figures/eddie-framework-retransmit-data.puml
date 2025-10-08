@@ -1,0 +1,38 @@
+@startuml eddie-framework-retransmit-data
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Eligible Party" as ep
+
+box "EP Infrastructure" #transparent
+  participant "EP Website" as epInterface
+end box
+
+box "EDDIE Framework" #transparent
+  participant "EDDIE Core" as eddie
+  participant "Database" as db
+  participant "Outbound Connectors" as oc
+end box
+
+== Retransmission Request ==
+ep -> epInterface : Initiate retransmission\n(via API or Admin Console)
+epInterface -> eddie : Send retransmission request
+activate eddie
+eddie -> db : Retrieve historical data
+db -->> eddie : Return stored data
+
+== Data Transmission ==
+eddie -> oc : Send data through all\nenabled outbound connectors
+oc -->> eddie : Acknowledge transmission
+deactivate eddie
+
+eddie -->> epInterface : Acknowledge retransmission\n(success or failure)
+
+@enduml

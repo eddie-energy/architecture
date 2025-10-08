@@ -4,15 +4,16 @@ order: 3
 ---
 
 ## Overview
-
-The EDDIE Framework implements the following core workflows, which are discussed in the sections below.
+The EDDIE Framework implements a set of core workflows that define how Eligible Parties and customers interact during the lifecycle of data access and sharing.
+These workflows describe how permissions are created, managed, and terminated, as well as how customer data is transmitted and retransmitted through the system.
+The following subsections describe these workflows in detail, each illustrated with sequence diagrams.
 
 - [The Eligible Party requests and the customer grants permission to access data](./runtime-view.md#the-eligible-party-requests-and-the-customer-grants-permission-to-access-data)
 - [The customer revokes a previously granted permission](./runtime-view.md#the-customer-revokes-a-previously-granted-permission)
 - [The Eligible Party collects customer data via message broker (Kafka, AMQP, MQTT)](./runtime-view.md#the-eligible-party-collects-customer-data-via-message-broker-kafka-amqp-mqtt)
 - [The Eligible Party collects customer data via HTTP](./runtime-view.md#the-eligible-party-collects-customer-data-via-http)
-- [The Eligible Party terminates a customer’s permission](./runtime-view.md#the-eligible-party-terminates-a-customers-permission)
-- [The Eligible Party retransmits already published customer data (Historical Data)](./runtime-view.md#the-eligible-party-retransmits-already-published-customer-data-validated-historical-data)
+- [The Eligible Party terminates a customer’s permission](./runtime-view.md#the-eligible-party-terminates-a-customer-s-permission)
+- [The Eligible Party retransmits already published customer data (historical data)](./runtime-view.md#the-eligible-party-retransmits-already-published-customer-data-historical-data)
 
 
 This section hides the behavior of individual region connectors and outbound connectors.
@@ -37,10 +38,12 @@ Basically the EDDIE Popup flow
 
 ## The Eligible Party requests and the customer grants permission to access data
 
+This diagram illustrates the complete workflow of how an Eligible Party requests and obtains permission from a Customer to access their energy data through the EDDIE Framework. It covers both the setup phase, where a Data Need is created and the EDDIE Popup is embedded into the EP’s website, and the interactive permission flow between the Customer, the EDDIE Popup, and the corresponding Regional Connector. Once the customer grants consent, the framework establishes a secure data exchange channel that allows the EP to retrieve validated data through the EDDIE Core.
+
 ![](./figures/eddie-framework-permission-request.svg)
 
-1. The Eligible Party (EP) defines a new Data Need using the API or the Admin Console.
-1. The EP embeds the EDDIE Popup (button) on their website and configures it with the created Data Need.
+1. The Eligible Party defines a new Data Need using the API or the Admin Console.
+1. The EP embeds the EDDIE Popup on their website and configures it with the created Data Need.
 1. The Customer visits the EP Website and clicks the EDDIE Popup to begin the permission process.
 1. The EDDIE Popup requests the available Data Needs, Permission Administrators, and Regional Connector metadata from the EDDIE Core.
 1. The Customer reviews the Data Need, selects their country and Permission Administrator (PA).
@@ -82,14 +85,14 @@ Basically the EDDIE Popup flow
 
 ![](./figures/eddie-framework-collect-data-message-broker.svg)
 
-1. The Eligible Party (EP) ensures that at least one Outbound Connector is enabled in the EDDIE Framework.
+1. The Eligible Party ensures that at least one Outbound Connector is enabled in the EDDIE Framework.
 1. The EP provides a message broker (Kafka, AMQP, or MQTT) that is reachable by the EDDIE Framework.
 1. The Regional Connector collects energy data from the respective regional data source and sends it to the EDDIE Core, formatted either in CIM or in a non-standardized EDDIE format.
 1. The EDDIE Core forwards the received data to all active Outbound Connectors.
 1. The Outbound Connector publishes the data to the configured message broker.
-1. The Eligible Party (EP) subscribes to the relevant topics on the message broker and consumes the transmitted customer data.
+1. The Eligible Party subscribes to the relevant topics on the message broker and consumes the transmitted customer data.
 
-### The Eligible Party collects customer data via HTTP
+## The Eligible Party collects customer data via HTTP
 
 <!-- https://eddie-web.projekte.fh-hagenberg.at/framework/1-running/outbound-connectors/outbound-connector-rest.html
 
@@ -99,21 +102,42 @@ Basically the EDDIE Popup flow
 
 ![](./figures/eddie-framework-collect-data-http.svg)
 
-1. The Eligible Party (EP) ensures that the REST Outbound Connector is enabled in the EDDIE Framework.
+1. The Eligible Party ensures that the REST Outbound Connector is enabled in the EDDIE Framework.
 1. The Regional Connector collects customer data from the regional data-sharing infrastructure and sends it to the EDDIE Core.
 1. The EDDIE Core temporarily stores the received data in the Database.
 1. The EDDIE Core forwards the data to the REST Outbound Connector, which makes it available through an HTTP endpoint.
-1. The Eligible Party (EP) uses its HTTP client to send a GET request to the REST endpoint.
+1. The Eligible Party uses its HTTP client to send a GET request to the REST endpoint.
 1. The Outbound Connector retrieves the requested data and returns it to the EP in the response.
 
-### EP terminates the customer's permission
+## The Eligible Party terminates a customer’s permission
 
-- HTTP request to the API or button in the admin console
+<!-- - HTTP request to the API or button in the admin console -->
+![](./figures/eddie-framework-terminate-permission.svg)
 
-### EP tries to retransmit already published customer data (VHD)
+1. The Eligible Party initiates a termination of a customer’s permission, either by:
+1. Sending an HTTP request to the EDDIE API, or
+1. Clicking a button in the Admin Console.
+1. The EP interface (HTTP client or Admin Console) sends the termination request to the EDDIE Core.
+1. The EDDIE Core updates the Database, marking the permission status as TERMINATED.
+1. The EDDIE Core notifies the Region Connector about the termination.
+1. The Region Connector confirms the termination with the EDDIE Core.
+1. The EDDIE Core acknowledges the result of the termination process to the EP interface (success or failure).
 
-- HTTP request to the API or button in the admin console
-- Data is sent again through all enabled outbound connectors
+## The Eligible Party retransmits already published customer data (historical data)
+
+<!-- - HTTP request to the API or button in the admin console
+- Data is sent again through all enabled outbound connectors -->
+![](./figures/eddie-framework-retransmit-data.svg)
+
+1. The Eligible Party initiates retransmission of previously published data by either:
+1. Sending an HTTP request to the API, or
+1. Clicking a button in the Admin Console.
+1. The EP interface sends the retransmission request to the EDDIE Core.
+1. The EDDIE Core queries the Database to retrieve the stored historical data.
+1. The Database returns the requested data to the EDDIE Core.
+1. The EDDIE Core transmits the retrieved data through all enabled outbound connectors (e.g., Kafka, AMQP, MQTT, HTTP).
+1. Each Outbound Connector acknowledges successful data transmission.
+1. The EDDIE Core sends a final acknowledgment to the EP interface, confirming successful or failed retransmission.
 
 <!-- ## Use-Cases
 

@@ -1,0 +1,36 @@
+@startuml eddie-framework-terminate-permission
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Eligible Party" as ep
+
+box "EP Infrastructure" #transparent
+  participant "EP Website" as epInterface
+end box
+
+box "EDDIE Framework" #transparent
+  participant "EDDIE Core" as eddie
+  participant "Region Connector" as rc
+  participant "Database" as db
+end box
+
+== Termination Request ==
+ep -> epInterface : Initiate permission termination\n(via API or Admin Console)
+epInterface -> eddie : Send termination request
+activate eddie
+eddie -> db : Update permission status to TERMINATED
+eddie -> rc : Notify termination
+deactivate eddie
+
+== Data Handling ==
+rc -->> eddie : Confirm termination
+eddie -->> epInterface : Acknowledge termination\n(success or failure)
+
+@enduml

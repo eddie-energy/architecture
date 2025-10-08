@@ -9,7 +9,7 @@ skinparam sequence {
 autonumber
 !pragma teoz true
 
-actor "Eligible Party (EP)" as ep
+actor "Eligible Party" as ep
 
 box "EP Infrastructure" #transparent
   participant "Message Broker" as broker
