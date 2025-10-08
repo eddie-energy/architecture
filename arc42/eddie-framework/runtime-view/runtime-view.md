@@ -39,11 +39,36 @@ Basically the EDDIE Popup flow
 
 ![](./figures/eddie-framework-permission-request.svg)
 
-### Customer revokes their permission
+1. The Eligible Party (EP) defines a new Data Need using the API or the Admin Console.
+1. The EP embeds the EDDIE Popup (button) on their website and configures it with the created Data Need.
+1. The Customer visits the EP Website and clicks the EDDIE Popup to begin the permission process.
+1. The EDDIE Popup requests the available Data Needs, Permission Administrators, and Regional Connector metadata from the EDDIE Core.
+1. The Customer reviews the Data Need, selects their country and Permission Administrator (PA).
+1. The EDDIE Popup retrieves the appropriate Regional Connector (RC) element for the selected PA.
+1. The Customer interacts with the RC element (e.g., enters metering point ID, access token).
+1. The EDDIE Popup sends the permission request to the Regional Connector based on the customer’s input.
+1. The EDDIE Popup subscribes to updates on the permission status from the EDDIE Core.
+1. The EDDIE Core forwards the permission request to the relevant Regional Connector.
+1. The Regional Connector redirects the Customer to their Permission Administrator’s portal to approve the request.
+1. The Customer reviews and accepts the permission request in the PA portal.
+1. The Regional Connector notifies the EDDIE Core that the permission has been accepted.
+1. The EDDIE Core informs the EDDIE Popup, which displays a confirmation or success page to the Customer.
+1. The Eligible Party can now begin retrieving validated energy data via the EDDIE Core, which communicates with the Regional Connector to access the data.
 
-- The customer logs in to the portal of their permission administrator and revoke their consent by whatever action necessary (RC as blackbox here).
+## The customer revokes a previously granted permission
+
+<!-- - The customer logs in to the portal of their permission administrator and revoke their consent by whatever action necessary (RC as blackbox here).
 - Depending on the RC, we receive information that the permission was revoked or we check ourselves when we stop receiving data for that permission.
-- We update the permission status and stop retrieving data.
+- We update the permission status and stop retrieving data. -->
+
+![](./figures/eddie-framework-revoke-permission.svg)
+
+1. The Customer logs in to the portal of their Permission Administrator (PA) through the Permission Facade.
+1. The Customer revokes their previously granted permission.
+1. The Permission Facade notifies the corresponding Regional Connector (RC) that the permission has been revoked.
+1. Depending on the implementation, either the RC sends an explicit revocation notification to the EDDIE Core, or the EDDIE Core detects the revocation by observing that no further data updates are received from the RC.
+1. The EDDIE Core updates the permission status in the Database to reflect the revocation.
+1. The EDDIE Core instructs the Regional Connector to stop retrieving or transmitting data related to the revoked permission.
 
 ### EP collects customer data via message broker (Kafka, AMQP, MQTT)
 

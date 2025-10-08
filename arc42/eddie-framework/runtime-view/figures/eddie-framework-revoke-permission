@@ -1,0 +1,38 @@
+@startuml eddie-framework-revoke-permission
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Customer" as customer
+box "EDDIE Framework" #transparent
+  participant "Permission \nFacade" as paPortal
+  participant "Region Connector" as rc
+  participant "EDDIE Core" as eddie
+  participant "Database" as db
+end box
+
+customer -> paPortal : Login and revoke\npermission
+activate paPortal
+paPortal -> rc : Notify revocation
+deactivate paPortal
+
+alt RC notifies revocation
+  rc -> eddie : Send revocation\nnotification
+else RC does not notify
+  eddie -> rc : Check data updates
+  rc -->> eddie : No more data received
+end
+
+activate eddie
+eddie -> db : Update permission status
+deactivate eddie
+
+eddie -->> rc : Stop data retrieval
+
+@enduml

@@ -17,39 +17,47 @@ box "EP Infrastructure" #transparent
 end box
 
 box "EDDIE Framework" #transparent
-  participant "EDDIE Button\n(Permission Facade)" as button
-  participant "EDDIE Core" as eddie
+  participant "EDDIE Popup" as popup
+  participant "EDDIE Core" as core
   participant "Region Connector" as rc
 end box
 
-participant "Permission Administrator (PA)" as pa
-
 == Setup ==
 ep -> epApp : Create Data Need\nvia API or Admin Console
-ep -> epApp : Embed EDDIE Button\nand configure with Data Need
+ep -> epApp : Embed EDDIE Popup\nand configure with Data Need
 
 == Permission Request ==
-customer -> epApp : Click EDDIE Button
-epApp -> button : Open Permission Dialog
-activate button
-button -> customer : Show instructions
-customer -> button : Follow steps\n(country, PA, metering point)
-button -> eddie : Create Permission Request
-activate eddie
-eddie -> rc : Forward Permission Request
-rc -> pa : Send Permission Request
-pa -> customer : Show Consent Portal
-customer -> pa : Accept Request
-pa -->> rc : Consent Accepted
-rc -->> eddie : Notify Permission Accepted
-eddie -->> button : Show confirmation
-button -->> customer : Confirmation / Success page
-deactivate eddie
-deactivate button
+customer -> epApp : Click EDDIE Popup
+epApp -> popup : Open Permission Dialog
+activate popup
+
+' --- Detailed permission interaction ---
+popup -> core : Fetch Data Need
+popup -> core : Fetch Permission Administrators
+popup -> core : Fetch RC Metadata
+customer -> popup : Confirm Data Need
+customer -> popup : Select Country and PA
+popup -> rc : Fetch RC Element
+customer -> popup : Interact with RC Element
+note over customer, rc
+  Interaction varies by RC element
+  (e.g., metering point, access token)
+end note
+popup -> rc : Send Permission Request\nbased on user interaction
+popup -> core : Subscribe to Permission Status
+' --- End detailed interaction ---
+
+core -> rc : Forward Permission Request
+rc -> customer : Show Consent Portal
+customer -> rc : Accept Request
+rc -->> core : Consent Accepted
+core -->> popup : Show confirmation
+popup -->> customer : Confirmation / Success page
+deactivate popup
 
 == Data Access ==
-ep -> eddie : Retrieve Data
-eddie -> rc : Request Validated Data
+ep -> core : Retrieve Data
+core -> rc : Request Validated Data
 rc -->> ep : Provide Data
 
 @enduml
