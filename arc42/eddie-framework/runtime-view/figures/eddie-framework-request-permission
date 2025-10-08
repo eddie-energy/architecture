@@ -1,0 +1,55 @@
+@startuml eddie-framework-permission-request
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Customer" as customer
+actor "Eligible Party (EP)" as ep
+
+box "EP Infrastructure" #transparent
+  participant "EP Website" as epApp
+end box
+
+box "EDDIE Framework" #transparent
+  participant "EDDIE Button\n(Permission Facade)" as button
+  participant "EDDIE Core" as eddie
+  participant "Region Connector" as rc
+end box
+
+participant "Permission Administrator (PA)" as pa
+
+== Setup ==
+ep -> epApp : Create Data Need\nvia API or Admin Console
+ep -> epApp : Embed EDDIE Button\nand configure with Data Need
+
+== Permission Request ==
+customer -> epApp : Click EDDIE Button
+epApp -> button : Open Permission Dialog
+activate button
+button -> customer : Show instructions
+customer -> button : Follow steps\n(country, PA, metering point)
+button -> eddie : Create Permission Request
+activate eddie
+eddie -> rc : Forward Permission Request
+rc -> pa : Send Permission Request
+pa -> customer : Show Consent Portal
+customer -> pa : Accept Request
+pa -->> rc : Consent Accepted
+rc -->> eddie : Notify Permission Accepted
+eddie -->> button : Show confirmation
+button -->> customer : Confirmation / Success page
+deactivate eddie
+deactivate button
+
+== Data Access ==
+ep -> eddie : Retrieve Data
+eddie -> rc : Request Validated Data
+rc -->> ep : Provide Data
+
+@enduml
