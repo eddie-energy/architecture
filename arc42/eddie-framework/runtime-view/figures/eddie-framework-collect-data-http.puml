@@ -1,0 +1,37 @@
+@startuml eddie-framework-collect-data-http
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Eligible Party (EP)" as ep
+
+box "EP Infrastructure" #transparent
+  participant "EP HTTP Client" as httpClient
+end box
+
+box "EDDIE Framework" #transparent
+  participant "EDDIE Core" as eddie
+  participant "Region Connector" as rc
+  participant "Outbound Connector" as restOC
+  participant "Database" as db
+end box
+
+== Data Retrieval ==
+rc -> eddie : Send collected data
+activate eddie
+eddie -> db : Store data temporarily
+eddie -> restOC : Make data available\nvia HTTP endpoint
+deactivate eddie
+
+== Data Access ==
+ep -> httpClient : Send GET request to\nREST endpoint
+httpClient -> restOC : Retrieve data
+restOC -->> ep : Return customer data
+
+@enduml

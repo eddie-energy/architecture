@@ -1,0 +1,34 @@
+@startuml eddie-framework-collect-data-message-broker
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Eligible Party (EP)" as ep
+
+box "EP Infrastructure" #transparent
+  participant "Message Broker" as broker
+end box
+
+box "EDDIE Framework" #transparent
+  participant "EDDIE Core" as eddie
+  participant "Region Connector" as rc
+  participant "Outbound Connector" as oc
+end box
+
+== Data Retrieval ==
+rc -> eddie : Send collected data
+activate eddie
+eddie -> oc : Forward data to all\nactive outbound connectors
+oc -> broker : Publish data to\nmessage broker
+deactivate eddie
+
+== Data Consumption ==
+ep -> broker : Subscribe to topics\nand consume data
+
+@enduml
