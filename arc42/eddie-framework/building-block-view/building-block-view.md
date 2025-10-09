@@ -21,7 +21,7 @@ The application uses a plugin architecture for both inbound and outbound data ex
 _Inbound_ referring to the retrieval of energy data from the data provider, 
 and _outbound_ to the communication with the Eligible Party, 
 where individual plugins can be enabled to support specific data providers or data exchange protocols. 
-These plugins are referred to as _Regional Connectors_ and _Outbound Connectors_.
+These plugins are referred to as _Region Connectors_ and _Outbound Connectors_.
 
 <C4 diagram="component-eddie-application" />
 
@@ -31,5 +31,5 @@ These plugins are referred to as _Regional Connectors_ and _Outbound Connectors_
 | EDDIE Core | The EDDIE Core is the Spring backend entry point of the framework, packaged as a single JAR inside a Docker container. It orchestrates all other modules and facilitates the flow of information between Region Connectors and Outbound Connectors. |
 | Master Data API | The Master Data API is a backend service of the EDDIE Application. It provides metadata about business entities such as Permission Administrators and Metered Data Administrators. |
 | Data Needs API | The Data Needs API is part of the EDDIE Application backend. It allows the Eligible Party to manage the data requirements of their services, specifying what type of data should be collected for each permission. |
-| [Regional Connectors](./regional-connectors/regional-connectors.md) | Region Connectors are backend plugins implemented within the EDDIE Application. Each connector integrates with the APIs of a specific Regional Data-sharing infrastructure (e.g., PA/MDA systems), handling permission requests and collecting validated historical data and accounting point data. |
+| [Region Connectors](./regional-connectors/regional-connectors.md) | Region Connectors are backend plugins implemented within the EDDIE Application. Each connector integrates with the APIs of a specific Regional Data-sharing infrastructure (e.g., PA/MDA systems), handling permission requests and collecting validated historical data and accounting point data. |
 | Outbound Connectors | Outbound Connectors are backend plugins in the EDDIE Application that handle data delivery to the Eligible Party. They can support multiple protocols such as REST, Kafka, or AMQP. While EDDIE provides the connector plugins, the actual Kafka/AMQP infrastructure must be provided by the Eligible Party. |

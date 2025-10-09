@@ -16,7 +16,7 @@ box "EP Infrastructure" #transparent
 participant "Service" as service
 end box
 box "\tAIIDA System\t\t"  #transparent
-participant "AIIDA Regional \nConnector" as connector
+participant "AIIDA Region \nConnector" as connector
 participant "Timescale DB" as timescale
 participant "AIIDA \nEmbedded App"  as app
 participant "Adapter\n Device" as adapter

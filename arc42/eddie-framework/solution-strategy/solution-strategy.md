@@ -15,7 +15,7 @@ The EDDIE Framework builds upon several core concepts, which describe its main r
 | Concept          | Description                                                                                                                                   |
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | Permission Facade    | Manages the customer-facing permission flow.                                                                                                     |
-| Regional Connectors  | Manage permissions and collect validated historical data and accounting point data from Metered Data Administrators and Permission Administrators. |
+| Region Connectors  | Manage permissions and collect validated historical data and accounting point data from Metered Data Administrators and Permission Administrators. |
 | Outbound Connectors  | Deliver the data to the Eligible Party in their preferred format and protocol.                                                               |
 | Admin Console        | Provides the Eligible Party with tools to configure connectors, manage Data Needs, and oversee permissions.                                                  |
 | Data Needs           | Represent the Eligible Party’s request for determining what data should be collected for a specific permission from an Metered Data Administrator.                                  |
@@ -29,7 +29,7 @@ The EDDIE Framework solves this problem by:
 
 - Providing a single entry point for Eligible Parties to request data across multiple regions.  
 - Managing the customer permission flow through the Permission Facade.  
-- Acting as an integration layer between heterogeneous regional systems (via Regional Connectors).  
+- Acting as an integration layer between heterogeneous regional systems (via Region Connectors).  
 - Enabling standardized data access through Data Needs, regardless of the original source.  
 - Ensuring compliance with European regulations, including Directive (EU) 2019/944 and GDPR.  
 
@@ -37,7 +37,7 @@ The EDDIE Framework solves this problem by:
 
 1. Setup by Eligible Party  
    - The Eligible Party installs the EDDIE Framework on their infrastructure.  
-   - The Eligible Party configures Regional Connectors for the Permission Administrators and Metered Data Administrators in the regions where they operate.  
+   - The Eligible Party configures Region Connectors for the Permission Administrators and Metered Data Administrators in the regions where they operate.  
    - The Eligible Party defines one or more Data Needs representing the data required for their services.  
 
 2. Customer permission  
@@ -46,7 +46,7 @@ The EDDIE Framework solves this problem by:
    - The customer accepts or rejects the permission request via their Permission Administrator’s portal.  
 
 3. Data provisioning  
-   - Once permission is granted, the Regional Connector retrieves the relevant data from the Metered Data Administrator.  
+   - Once permission is granted, the Region Connector retrieves the relevant data from the Metered Data Administrator.  
    - Outbound Connectors deliver this data to the Eligible Party’s services.  
 
 4. Permission management  
@@ -55,7 +55,7 @@ The EDDIE Framework solves this problem by:
 
 ## How does the EDDIE Framework integrate with other EDDIE components?
 
-- With AIIDA: The framework uses AIIDA as a specialized Regional Connector for in-house real-time data streams.  
+- With AIIDA: The framework uses AIIDA as a specialized Region Connector for in-house real-time data streams.  
 - With the Marketplace: The Marketplace helps customers discover Eligible Parties and their services, but no data flows through the Marketplace itself. Data exchange always happens through the EDDIE Framework once permissions are granted. 
   
 ## Deployability

@@ -26,7 +26,7 @@ The concept of a data space describes a federated system whereby organizations c
 #### Relevance
 <!-- Where it is used, i.e., in what parts of EDDIE -->
 
-While general-purpose data spaces are broad and flexible, they may not be directly applicable to the specific needs of the energy sector, e.g., to access data from Regional Data-sharing Infrastructures or Metering Devices at home. For this reason, the EDDIE system creates a data space that is similar to what is defined by data space initiatives, but focuses more on meeting the needs of the energy sector. The goal of the EDDIE system is to create a domain-specific data space tailored to the energy sector. This approach includes domain-specific components and processes. For example, instead of a generic dataspace connector, the EDDIE system uses Regional Connectors tailored to accessing data from Regional Data-sharing infrastructures, and instead of a generic metadata registry, the EDDIE system integrates a Marketplace tailored to eligible parties and customers.
+While general-purpose data spaces are broad and flexible, they may not be directly applicable to the specific needs of the energy sector, e.g., to access data from Regional Data-sharing Infrastructures or Metering Devices at home. For this reason, the EDDIE system creates a data space that is similar to what is defined by data space initiatives, but focuses more on meeting the needs of the energy sector. The goal of the EDDIE system is to create a domain-specific data space tailored to the energy sector. This approach includes domain-specific components and processes. For example, instead of a generic dataspace connector, the EDDIE system uses Region Connectors tailored to accessing data from Regional Data-sharing infrastructures, and instead of a generic metadata registry, the EDDIE system integrates a Marketplace tailored to eligible parties and customers.
 
 #### Motivation
 Data spaces are proposed for managing data according to [European Strategy for Data](https://digital-strategy.ec.europa.eu/en/policies/strategy-data).
@@ -151,7 +151,7 @@ By abstracting the permission process into a common facade, EDDIE Framework lowe
 The Permission Process Model defines the lifecycle of a permission request within the EDDIE Framework.  
 A permission request represents the agreement between a Customer, their Permission Administrator, and the Eligible Party to access energy-related data.  
 Each permission request transitions through well-defined states — from its creation and validation to acceptance, revocation, or termination — ensuring that no state is skipped and that the complete permission history is traceable.  
-This state model standardizes how permissions are created, validated, transmitted, and retired across all regional connectors and PAs.
+This state model standardizes how permissions are created, validated, transmitted, and retired across all Region Connectors and PAs.
 
 ![BPRT diagram showing the permission request process](../crosscutting-concepts/figures/permission-process-model.svg)
 

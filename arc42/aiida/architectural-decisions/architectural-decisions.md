@@ -16,11 +16,11 @@ AIIDA collects real-time data from metering devices, and sends this data to one 
 
 ### Decision
 
-The data is sent from AIIDA to the AIIDA Regional Connector of the EDDIE Framework using an MQTT Broker running along with the AIIDA Regional Connector. Using MQTT, an AIIDA instance can send data to multiple MQTT Brokers (i.e., multiple AIIDA Regional Connectors corresponding to multiple EDDIE Frameworks deployed by different eligible parties), and one AIIDA Regional Connector (i.e., one EDDIE Framework) can receive data from multiple AIIDA instances (i.e., multiple customers). This approach simplifies data distribution and mitigates the need for direct communication between AIIDA and EDDIE Framework instances.
+The data is sent from AIIDA to the AIIDA Region Connector of the EDDIE Framework using an MQTT Broker running along with the AIIDA Region Connector. Using MQTT, an AIIDA instance can send data to multiple MQTT Brokers (i.e., multiple AIIDA Region Connectors corresponding to multiple EDDIE Frameworks deployed by different eligible parties), and one AIIDA Region Connector (i.e., one EDDIE Framework) can receive data from multiple AIIDA instances (i.e., multiple customers). This approach simplifies data distribution and mitigates the need for direct communication between AIIDA and EDDIE Framework instances.
 
 ### Consequences
 
-MQTT improves scalability while handling real-time data well, and reduces the overhead of AIIDA on the in-house device by leveraging a broker running along with the AIIDA Regional Connector. However, it creates a dependency on the central broker, which introduces a single point of failure for the AIIDA Regional Connector.
+MQTT improves scalability while handling real-time data well, and reduces the overhead of AIIDA on the in-house device by leveraging a broker running along with the AIIDA Region Connector. However, it creates a dependency on the central broker, which introduces a single point of failure for the AIIDA Region Connector.
 
 ### Alternatives
 
@@ -52,7 +52,7 @@ While Regional Data-sharing Infrastructures provide access to historical validat
 
 ### Decision  
 
-To access real-time energy data, AIIDA is deployed on a dedicated in-house device that connects to metering devices. This dedicated in-house device is a Raspberry Pi computer that collects real-time data via various interfaces of metering devices, and sends this data to the EDDIE Framework via the AIIDA Regional Connector. This approach ensures that metering devices sending data over wired or wireless channels can be connected to the EDDIE System.  
+To access real-time energy data, AIIDA is deployed on a dedicated in-house device that connects to metering devices. This dedicated in-house device is a Raspberry Pi computer that collects real-time data via various interfaces of metering devices, and sends this data to the EDDIE Framework via the AIIDA Region Connector. This approach ensures that metering devices sending data over wired or wireless channels can be connected to the EDDIE System.  
 
 ### Consequences  
 

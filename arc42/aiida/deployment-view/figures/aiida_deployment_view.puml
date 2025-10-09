@@ -19,7 +19,7 @@ skinparam rectangle{
 
 rectangle "AIIDA System" {
   node "Eligible Party Infrastructure"  as epInfra{
-      artifact "AIIDA Regional\nConnector" as regcon
+      artifact "AIIDA Region\nConnector" as regcon
     artifact "EMQX \nMQTT Broker" as broker
     artifact "EMQX \nIAM DB" as emqxiam
 

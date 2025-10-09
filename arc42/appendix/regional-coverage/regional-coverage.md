@@ -9,14 +9,14 @@ To be moved to the eddie-energy/eddie repository as part of its documentation
 ## What is a Region Connector?
 
 Due to various reasons (e.g. legal constraints, energy data hubs, data models etc.) permissions as well as data can be provided differently by different countries/data hubs.
-In order to meet these requirements, EDDIE Framework is architected in a way that accomodates these differences by enabling different implementations as well as architectures for specific regional connectors as well.
-These regional connectors enable the customers or eligible parties to interact with the system via a common interface which abstracts these differences away, this easing the usage of permission requests, live data as well as historic energy data from these regional data hubs.
+In order to meet these requirements, EDDIE Framework is architected in a way that accomodates these differences by enabling different implementations as well as architectures for specific region connectors as well.
+These region connectors enable the customers or eligible parties to interact with the system via a common interface which abstracts these differences away, this easing the usage of permission requests, live data as well as historic energy data from these regional data hubs.
 
 ## Current State
 
-The following table depicts current situation of EDDIE's regional connector support.
-It gets updated as new regional connectors are developed or the development of existing ones advances.
-The hourglass (⏳) depicts that a regional connector is currently in development.
+The following table depicts current situation of EDDIE's region connector support.
+It gets updated as new region connectors are developed or the development of existing ones advances.
+The hourglass (⏳) depicts that a region connector is currently in development.
 _Soon_ (🔜) shows that the development is immediately planned and research is currently conducted.
 
 |     | Region      | Data Hub                                                 | Progress | Remarks                                                                                                           |
@@ -29,7 +29,7 @@ _Soon_ (🔜) shows that the development is immediately planned and research is 
 | 🇳🇱  | Netherlands | [Mijn Aansluiting](https://www.mijnaansluiting.nl)       | ⏳       | TODO                                                                                                              |
 | 🇪🇸  | Spain       | [Datadis](https://datadis.es)                            | ✅       | TODO                                                                                                              |
 | 🇺🇸  | USA         | [Green Button](https://www.energy.gov/data/green-button) | ⏳       | TODO                                                                                                              |
-| 🏠  | _AIIDA_     | [AIIDA](../../aiida/aiida.md)                          | ✅       | AIIDA also connects via a regional connector, because this allowed us to reuse all of the existing infrastructre. |
+| 🏠  | _AIIDA_     | [AIIDA](../../aiida/aiida.md)                          | ✅       | AIIDA also connects via a region connector, because this allowed us to reuse all of the existing infrastructre. |
 
 ## Planned Support
 

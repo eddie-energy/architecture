@@ -6,7 +6,7 @@ order: 1
 
 ## Overview
 
-AIIDA (or Administrative Interface for In-house Data Access) is a software system that includes components running on a device at the customer's site to collect real-time data from energy metering devices (such as smart meters, home automation systems, or other similar assets). To achieve that, AIIDA includes various components such as the AIIDA Embedded App, the AIIDA Regional Connector, and the AIIDA Smartphone App.
+AIIDA (or Administrative Interface for In-house Data Access) is a software system that includes components running on a device at the customer's site to collect real-time data from energy metering devices (such as smart meters, home automation systems, or other similar assets). To achieve that, AIIDA includes various components such as the AIIDA Embedded App, the AIIDA Region Connector, and the AIIDA Smartphone App.
 
 ## Why is AIIDA necessary in the context of EDDIE?
 
@@ -19,7 +19,7 @@ An additional device in-house is needed to run components that access the interf
 
 ## How does AIIDA integrate into EDDIE?
 
-One AIIDA instance runs at every customer site. Thus, AIIDA instances serve as sources of real-time energy data. AIIDA instances integrate into the EDDIE Framework by sending the energy data to an AIIDA Regional Connector (which is a plugin of the EDDIE Framework). Therefore, from the EDDIE Framework perspective, AIIDA is considered a [Regional Connector](../../eddie-framework/solution-strategy/solution-strategy.md).
+One AIIDA instance runs at every customer site. Thus, AIIDA instances serve as sources of real-time energy data. AIIDA instances integrate into the EDDIE Framework by sending the energy data to an AIIDA Region Connector (which is a plugin of the EDDIE Framework). Therefore, from the EDDIE Framework perspective, AIIDA is considered a [Region Connector](../../eddie-framework/solution-strategy/solution-strategy.md).
 
 ## Why does AIIDA need a user interface?
 
