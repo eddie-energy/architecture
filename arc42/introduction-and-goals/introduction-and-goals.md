@@ -70,6 +70,14 @@ The quality goals of the architecture aim at expressing the system's priorities 
 | QG7 | Performance | Ensure low latency data access for the energy services of the eligible party. |
 | QG8 | Portability | Ensure that the system can be deployed on various platforms, including cloud computing, on-premise computing infrastructure, and edge devices. |
 
+## Scripted Development
+
+The EDDIE System follows a structured and collaborative development strategy centered on a single public GitHub repository, ensuring transparency, version control, and alignment with the project’s open-source objectives. Development is conducted in agile three-week sprints, with daily standups, regular sprint reviews, and focused planning sessions to maintain momentum and adaptability.
+
+Continuous Integration and Continuous Delivery (CI/CD) pipelines are implemented using GitHub Actions, providing automated builds, testing, static analysis, containerization, and vulnerability scanning. This ensures immediate feedback on code quality and stable releases for deployment across development, hardening, and production environments. Testing follows a two-fold approach: unit tests are executed on every commit, while integration and performance tests run nightly to verify robustness and scalability.
+
+Code quality and maintainability are reinforced through shared coding guidelines, cross-team code reviews, and strict merge policies. The use of dependency injection, test-driven development, and adherence to Java best practices guarantee a clean, modular, and verifiable codebase across the EDDIE ecosystem.
+
 
 ## Stakeholders
 

@@ -41,6 +41,7 @@ This document is organized as follows:
 1. [Deployment View](/deployment-view/deployment-view.md). Maps the building blocks of the system.
 1. [Crosscutting Concepts](./crosscutting-concepts/crosscutting-concepts.md). Includes information about important concepts used in the system.
 1. [Architectural Decisions](./architectural-decisions/architectural-decisions.md). Includes architectural decisions that affect the system.
+1. [Development Process and Guidelines](./development-process-and-guidelines/development-process-and-guidelines.md). Describes development workflow, CI/CD, testing, and coding guidelines.
 1. [Quality Requirements](./quality-requirements/quality-requirements.md). Includes requirements that need to be satisfied by the system.
 1. [Risks & Technical Debt](./risks-and-technical-debt/risks-and-technical-debt.md). Includes known risks and unimplemented aspects of the system.
 1. [Glossary](./glossary/glossary.md). Includes domain terms and acronyms.
