@@ -9,6 +9,7 @@ Various concepts are relevant across the EDDIE system such as:
     - [Common Information Model (CIM)](./crosscutting-concepts.md#common-information-model-cim)
     - [Smart Grid Architecture Model (SGAM)](./crosscutting-concepts.md#smart-grid-architecture-model-sgam)
     - [Smart Appliances REFerence ontology (SAREF)](./crosscutting-concepts.md#smart-appliances-reference-ontology-saref)
+- [Kafka Topic Topology](./crosscutting-concepts.md#kafka-topic-topology)
 - [Domain Concepts](./crosscutting-concepts.md#domain-concepts)
     - [Permission Facade](./crosscutting-concepts.md#permission-facade)
     - [Permission Process Model](./crosscutting-concepts.md#permission-process-model)
@@ -119,11 +120,102 @@ Alternative models to SAREF include:
 - OneM2M: OneM2M is a global standard for Machine-to-Machine (M2M) and Internet of Things (IoT) interoperability, providing a common architecture and framework for IoT applications across different domains.
 - Brick Schema: Brick Schema is an open-source, community-driven effort to develop a comprehensive schema for building automation, based on Semantic Web technologies.
 
+## Kafka Topic Topology
+
+#### Definition
+
+The EDDIE Framework uses Apache Kafka as one of its outbound communication mechanisms to exchange messages between the framework and Eligible Parties.  
+Kafka provides a scalable, event-driven publish/subscribe architecture that enables EDDIE Framework to distribute energy-related data, permission request status updates, and termination commands asynchronously.  
+
+Each EDDIE instance defines a set of Kafka topics that follow a standardized naming scheme and can carry data in either JSON or XML format.  
+These topics allow EDDIE to act both as a producer (publishing validated and raw data) and as a consumer (receiving terminations and retransmission requests).
+
+#### Relevance
+
+Kafka topics are a fundamental integration concept of the EDDIE Framework’s Outbound Connectors.  
+They enable the decoupling of internal data flows from external consumers and ensure that permission-related and energy data can be delivered in near real time to Eeligible Parties, regardless of their internal technology stack.  
+
+Using Kafka allows EDDIE Framework to:
+- Publish validated and raw data messages originating from Region Connectors.
+- Notify Eligible Parties about permission request status changes.
+- Receive termination or retransmission commands directly from Eligible Parties.
+- Scale efficiently when handling high volumes of customer data.
+
+This mechanism supports interoperability between the EDDIE core, Region Connectors, and Eligible Party infrastructures by adhering to open, message-based integration patterns.
+
+#### Motivation
+
+A message broker like Kafka was selected to meet the scalability, flexibility, and interoperability requirements of the EDDIE Framework.  
+Since Eligible Parties can differ in their backend technologies and data processing rates, asynchronous communication via Kafka provides an optimal balance between throughput and reliability.  
+
+Additionally, Kafka supports:
+- High-performance data streaming for real-time energy data.
+- Fault tolerance and persistence for sensitive permission and metering information.
+- Extensible topic-based communication for adding new message types or regional formats in the future.
+
+---
+
+#### Topic Naming Scheme
+
+Each EDDIE System instance is identified by an `eddie-id`, which is used in topic names to separate data streams across deployments.  
+The topics created by the Outbound Connector follow this pattern:
+
+| Topic | Direction | Description |
+|-------|------------|-------------|
+| `ep.${eddie-id}.agnostic.connection-status-message` | Outbound | Provides updates on permission request status changes. |
+| `ep.${eddie-id}.agnostic.raw-data-message` | Outbound | Publishes raw data messages from Region Connectors with additional metadata. |
+| `ep.${eddie-id}.cim_0_82.permission-md` | Outbound | Publishes permission market documents. |
+| `ep.${eddie-id}.cim_0_82.validated-historical-data-md` | Outbound | Publishes historical data market documents. |
+| `ep.${eddie-id}.cim_0_82.accounting-point-md` | Outbound | Publishes accounting point market documents. |
+| `fw.${eddie-id}.cim_0_82.termination-md` | Inbound | Receives permission termination documents from Eligible Parties. |
+| `fw.${eddie-id}.cim_0_91_08.retransmissions` | Inbound | Receives redistribution transaction requests for re-sending historical data. |
+
+---
+
+#### Message Headers
+
+Each outbound Kafka message carries additional metadata headers that help correlate messages with specific permission requests and Data Needs:
+
+- `permission-id`: Identifier of the permission request.  
+- `connection-id`: Identifier provided by the Eligible Party to group related requests.  
+- `data-need-id`: Identifier of the Data Need linked to this message.
+
+---
+
+#### Configuration Parameters
+
+EDDIE System supports all [Kafka producer and consumer configurations](https://kafka.apache.org/documentation/).  
+All configuration keys must be prefixed with `kafka.` or `outbound-connector.kafka.` depending on their scope.
+
+Common configuration examples include:
+- outbound-connector.kafka.enabled=true
+- outbound-connector.kafka.eddie-id=eddie
+- outbound-connector.kafka.format=json
+- kafka.bootstrap.servers=localhost:9094
+
+#### Handling Large Messages
+
+EDDIE can produce large data records.
+Kafka’s default message size limit (1 MB) can be increased to support these larger records:
+- kafka.buffer.memory=104857600
+- kafka.message.max.bytes=104857600
+- kafka.max.request.size=104857600
+
+#### Data Exchange Behavior
+The Kafka Outbound Connector enables bidirectional communication between the EDDIE Framework and Eligible Parties:
+
+Outbound Flow
+EDDIE Framework publishes permission updates, validated data, and raw data messages to Outbound Topics.
+Eligible Parties consume these topics via their Kafka clients or data pipelines.
+
+Inbound Flow
+Eligible Parties can send termination and retransmission documents to the EDDIE Framework.
+These are published to the inbound topics (termination-md and retransmissions), which EDDIE Framework consumes and processes accordingly.
+
 ## Domain Concepts
 
 ### Permission Facade
 
-#### Definition
 The Permission Facade describes the process that enables the Eligible Party to request and the customer to grant permission to access customer data.  
 It acts as a simplified interface to diverse regional implementations by following the [Facade design pattern](https://refactoring.guru/design-patterns/facade).
 
