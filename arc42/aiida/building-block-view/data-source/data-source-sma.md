@@ -8,7 +8,6 @@ The [Smart Meter Adapter](https://oesterreichsenergie.at/smart-meter) developed 
 
 ![](./figures/smart-meter-adapter.jpg)
 
-
 ## Connection to Metering Devices
 
 The Smart Meter Adapter connects to smart meters via the DSMR protocol over the RJ12 port. Once connected, the Smart Meter Adapter reads data from the smart meter, including electricity consumption and production data.
