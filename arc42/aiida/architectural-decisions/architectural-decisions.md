@@ -60,4 +60,4 @@ Using a dedicated in-house device ensures reliable access to metering devices, r
 
 ### Alternatives  
 
-Deploying AIIDA in the cloud avoids the in-house device. However, this assumes that all the Adapter Devices can send the real-time data to AIIDA in the cloud over the Internet. Devices that do not have Internet connectivity cannot send data to AIIDA and the EDDIE Framework. Accessing real-time data from Regional Data-sharing Infrastructures (similar to how historical validated energy consumption data is accessed) avoids the need for AIIDA, but such infrastructures are not yet available.
+Deploying AIIDA in the cloud avoids the in-house device. However, this assumes that all the Data Sources can send the real-time data to AIIDA in the cloud over the Internet. Devices that do not have Internet connectivity cannot send data to AIIDA and the EDDIE Framework. Accessing real-time data from Regional Data-sharing Infrastructures (similar to how historical validated energy consumption data is accessed) avoids the need for AIIDA, but such infrastructures are not yet available.

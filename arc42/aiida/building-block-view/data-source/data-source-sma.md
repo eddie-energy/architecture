@@ -1,10 +1,10 @@
 ---
-title: Adapter Device for Smart Meters in Austria
+title: Data Source for Smart Meters in Austria
 order: 1
 hiddenInSidebar: true
 ---
 
-The [Smart Meter Adapter](https://oesterreichsenergie.at/smart-meter) developed by Oesterreichs Energie is an Adapter Device that supports smart meters in **Austria**. This Adapter Device is shown below.
+The [Smart Meter Adapter](https://oesterreichsenergie.at/smart-meter) developed by Oesterreichs Energie is an Data Source that supports smart meters in **Austria**. This Data Source is shown below.
 
 ![](./figures/smart-meter-adapter.jpg)
 

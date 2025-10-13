@@ -1,12 +1,12 @@
 ---
-title: Adapter Device for Smart Meters in Austria, Germany, Slovenia, Luxembourg and Switzerland
+title: Data Source for Smart Meters in Austria, Germany, Slovenia, Luxembourg and Switzerland
 order: 5
 hiddenInSidebar: true
 ---
 
-The [Smartmeter Kundenschnittstellen Modul](https://cms.shrdzm.com/produkt/smartmeter-modul/) developed by SHRDZM is an Adapter Device that supports smart meters in **Austria**, **Germany**, **Slovenia**, **Luxembourg** and **Switzerland**. This Adapter Device is shown below.
+The [Smartmeter Kundenschnittstellen Modul](https://cms.shrdzm.com/produkt/smartmeter-modul/) developed by SHRDZM is an Data Source that supports smart meters in **Austria**, **Germany**, **Slovenia**, **Luxembourg** and **Switzerland**. This Data Source is shown below.
 
-![](./figures/adapter-device-shrdzm.jpg)
+![](./figures/data-source-shrdzm.jpg)
 
 
 ## Connection to Metering Devices
