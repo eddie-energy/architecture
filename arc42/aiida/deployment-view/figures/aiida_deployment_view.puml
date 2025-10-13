@@ -48,7 +48,7 @@ rectangle "AIIDA System" {
 
   ' frame "Device Austria" as device2
   ' frame "Device France" as device3
-node "Adapter Device" as adapterDevice
+node "Data Source" as adapterDevice
 }
 node "Metering Device" as smartmeter
 
