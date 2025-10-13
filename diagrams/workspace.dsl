@@ -148,7 +148,7 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
                 tags "Database"
             }
 
-            Adapter_Device = container "Adapter Device"{
+            Data_Source = container "Data Source"{
                 description "Connects AIIDA to the Metering Device"
             }
             aiida_app = container "AIIDA Smartphone App" {
@@ -238,8 +238,8 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         aiida_frontend -> permission_manager "Configures permissions and connections" HTTP
         aggregator -> streamer "Forwards energy data"
 
-        Adapter_Device -> aggregator  "Sends real-time energy data" MQTT
-        Adapter_Device -> smartMeter "Accesses real-time energy data" DSMR
+        Data_Source -> aggregator  "Sends real-time energy data" MQTT
+        Data_Source -> smartMeter "Accesses real-time energy data" DSMR
 
         streamer -> eddie_region_connectors  "Streams real-time energy data" MQTT
         eddie_region_connector_aiida -> eddie_core "Streams real-time energy data" MQTT
