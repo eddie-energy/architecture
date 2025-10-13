@@ -43,3 +43,14 @@ jobs:
           password: ${{ secrets.WEBSERVER_SFTP_PASSWORD }}
           source: ./.vitepress/dist/
           destination: "/public_html/architecture/"
+
+      - name: Copy files via SSH
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.EDDIE_ENERGY_SSH_HOST }}
+          username: ${{ secrets.EDDIE_ENERGY_SSH_USERNAME }}
+          password: ${{ secrets.EDDIE_ENERGY_SSH_PASSWORD }}
+          source: "./.vitepress/dist/"
+          target: "/var/www/vhosts/eddie.energy/architecture.eddie.energy/architecture/"
+          strip_components: "3"
+          overwrite: true
