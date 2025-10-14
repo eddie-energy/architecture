@@ -16,7 +16,7 @@ this section provides various details and graphical representations.
 In general, the acquisition of data from the EDDIE Framework is initiated by the creation of a *Service*. 
 Thus, the eligible party initially has to create a Service, 
 and specify certain Service-related attributes such as the data family 
-(e.g., historical validated data, or real-time data) of the required data. 
+(e.g., historical validated data, or near real-time data) of the required data. 
 The figure below shows an example of a form that has to be filled out by the eligible party to create a new Service.
 
 ![](./figures/process-service.png)
@@ -28,7 +28,7 @@ This process includes the following steps:
 1. The customer creates an account on the Eligible Party (EP) Website.
 2. The customer clicks a button to share their data.
 3. The customer then has to fill out a form with details of the data to be shared and also select their permission administrator (e.g., based on their country).
-4. Using the collected information, a request for data access is created and sent to the permission administrator (if the request is for historical data) or to AIIDA (if the request is for real-time data).
+4. Using the collected information, a request for data access is created and sent to the permission administrator (if the request is for historical data) or to AIIDA (if the request is for near real-time data).
 5. The request for data access is received by the permission administrator.
 6. The customer is redirected to the permissions administrator's website.
 7. The customer accepts (or declines) the request for data access.

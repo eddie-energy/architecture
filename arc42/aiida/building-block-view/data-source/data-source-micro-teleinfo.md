@@ -10,7 +10,7 @@ The [Micro Teleinfo V3.0](https://www.tindie.com/products/hallard/micro-teleinfo
 
 ## Connection to Metering Devices
 
-The Micro Teleinfo connects to smart meters via the Téléinfo interface over a dedicated plug connector. Once connected, the Micro Teleinfo reads data from the smart meter, including real-time electricity consumption, total energy consumed, and other relevant data.
+The Micro Teleinfo connects to smart meters via the Téléinfo interface over a dedicated plug connector. Once connected, the Micro Teleinfo reads data from the smart meter, including near real-time electricity consumption, total energy consumed, and other relevant data.
 
 ## Connection to AIIDA
 

@@ -118,7 +118,7 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         }
 
         aiida = softwareSystem "AIIDA" {
-            description "Manages permission and access to real-time energy data"
+            description "Manages permission and access to near real-time energy data"
 
             aiida_embedded_app = container "AIIDA Embedded App" {
                 description "Implements permission management and data streaming"
@@ -131,7 +131,7 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
                     description "Handles customer permission and data access"
                 }
                 aggregator = component "Aggregator" {
-                    description "Collects real-time energy data"
+                    description "Collects near real-time energy data"
                 }
 
                 error_handler = component "Error Handler"{
@@ -195,7 +195,7 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         customer -> ep_website "Fills out EDDIE Popup"
         ep_website -> eddie_popup "Embeds EDDIE Popup" HTTP
 
-        customer -> aiida_frontend "Provides permission for real-time data sharing"
+        customer -> aiida_frontend "Provides permission for near real-time data sharing"
         customer -> aiida_app "Interacts with (scans QR Code)"
         customer -> marketplace "Browses energy services"
 
@@ -238,11 +238,11 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         aiida_frontend -> permission_manager "Configures permissions and connections" HTTP
         aggregator -> streamer "Forwards energy data"
 
-        Data_Source -> aggregator  "Sends real-time energy data" MQTT
-        Data_Source -> smartMeter "Accesses real-time energy data" DSMR
+        Data_Source -> aggregator  "Sends near real-time energy data" MQTT
+        Data_Source -> smartMeter "Accesses near real-time energy data" DSMR
 
-        streamer -> eddie_region_connectors  "Streams real-time energy data" MQTT
-        eddie_region_connector_aiida -> eddie_core "Streams real-time energy data" MQTT
+        streamer -> eddie_region_connectors  "Streams near real-time energy data" MQTT
+        eddie_region_connector_aiida -> eddie_core "Streams near real-time energy data" MQTT
 
         # eddie_region_connector_aiida -> aiida_embedded_app "Sends configuration requests"
         # eddie_region_connector_aiida -> permission_manager "Authenticates AIIDA instance" HTTP

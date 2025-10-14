@@ -5,7 +5,7 @@ order: 2
 
 ## Overview
 
-This section describes the building block view of the AIIDA (Administration Interface for In-house Data Access) system using the [C4 Model](https://c4model.com/). For this purpose, an overview of the AIIDA containers is provided, along with their interactions. The goal of the AIIDA system is to access the real-time energy data of the customer. After accessing the data from the customer's in-house metering devices, AIIDA sends this data to the EDDIE Framework. While AIIDA can connect with multiple different Data Sources to support various metering devices, e.g., smart meters in different countries, only one Data Source is shown in the figure for better readability.
+This section describes the building block view of the AIIDA (Administration Interface for In-house Data Access) system using the [C4 Model](https://c4model.com/). For this purpose, an overview of the AIIDA containers is provided, along with their interactions. The goal of the AIIDA system is to access the near real-time energy data of the customer. After accessing the data from the customer's in-house metering devices, AIIDA sends this data to the EDDIE Framework. While AIIDA can connect with multiple different Data Sources to support various metering devices, e.g., smart meters in different countries, only one Data Source is shown in the figure for better readability.
 
  <C4 diagram="container-aiida" />
 
