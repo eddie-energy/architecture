@@ -1,6 +1,6 @@
 ---
 title: Inbound Permission and Data Source
-order: 6
+order: 10
 hiddenInSidebar: true
 ---
 
