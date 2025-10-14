@@ -22,6 +22,7 @@ This table shows the supported data sources which don't connect to a smart meter
 | To access other data | Data Source                            |
 |----------------------|----------------------------------------|
 | Shelly               | [Shelly](./data-source-shelly)         |
+| Modbus               | [Modbus](./data-source-modbus)         |
 | CIM                  | [CIM](./data-source-cim)               |
 | Simulation           | [Simulation](./data-source-simulation) |
 | Inbound API          | [Inbound](./data-source-inbound)       |
