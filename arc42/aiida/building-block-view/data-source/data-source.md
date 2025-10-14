@@ -3,8 +3,6 @@ title: Data Source
 order: 4
 ---
 
-<!-- The AIIDA Embedded App runs on an in-house device, e.g., a Raspberry Pi computer, that needs to connect to the metering devices in order to access the energy data of the customer's site. Since the metering devices, e.g., the smart meters, may support limited interfaces for accessing the energy data, e.g., DSMR over RJ12, an Data Source is needed to connect the Raspberry Pi to the smart meter. This Data Source depends on the provided interface of the smart meter which can vary per country. Once connected to the smart meter, the Data Source can send the energy data to the AIIDA Embedded App running on the Raspberry Pi via a different protocol, e.g., MQTT over Wi-Fi. So far, Data Sources for smart meters in the following countries are supported. -->
-
 The Data Source is a device that sends energy-related data to the AIIDA Embedded App. The Data Source has access to energy data either because it collects it from a metering device (such as a smart meter), or because it is an IoT device that measures the energy data itself. Since many different devices can act as an Data Source, each device may use different communication protocols to access energy data (e.g., DSMR over RJ12), or to send the data to the AIIDA Embedded App (e.g., MQTT over WiFi). For this reason, we clarify the connectivity of each supported Data Source in the links of the tables below.
 
 This table shows the supported Data Sources that connect to smart meters of specific countries. 
