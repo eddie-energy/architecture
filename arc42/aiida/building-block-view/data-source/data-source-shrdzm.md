@@ -15,4 +15,4 @@ The Smart Meter Adapter connects to smart meters via IR/MBus/P1 interface either
 
 ## Connection to AIIDA
 
-To configure the Smart Meter Adapter, the customer can access a configuration web interface via WiFi. Through this interface, the Smart Meter Adapter can be configured to send real-time energy data to AIIDA via MQTT.
+To configure the Smart Meter Adapter, the customer can access a configuration web interface via WiFi. Through this interface, the Smart Meter Adapter can be configured to send near real-time energy data to AIIDA via MQTT.
