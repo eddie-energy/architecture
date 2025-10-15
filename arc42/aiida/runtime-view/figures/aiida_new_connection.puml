@@ -1,4 +1,4 @@
-@startuml aiida_new_connection_qr
+@startuml aiida_new_connection_token
 'sequence diagram
 
 skinparam style strictuml
@@ -17,8 +17,8 @@ participant "EMQX IAM \nDatabase" as database
 end box
 box "\tAIIDA System\t\t"  #transparent
 participant "AIIDA Region \nConnector" as connector
-box "\t\tAIIDA Embedded App\t\t"  #transparent
-participant "AIIDA \nSmartphone App" as frontend
+box "\t\tAIIDA Application\t\t"  #transparent
+participant "AIIDA UI" as frontend
 participant "AIIDA Backend" as backend
 end box
 end box
@@ -29,11 +29,11 @@ website -> connector : request QR code, token
 activate connector
 connector -->> website : QR code, token
 deactivate connector
-website -->> user : show QR code, \ntoken
+website -->> user : show QR code,\ntoken
 deactivate website
 
-user -> frontend : scan QR code, add new permission
-frontend -> backend : QR code information,\n permission
+user -> frontend : add token (manually or via QR code), add new permission
+frontend -> backend : token information\npermission
 backend -> connector : establish connection via MQTT
 connector -> database : create user
 
