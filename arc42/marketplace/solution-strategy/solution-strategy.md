@@ -36,3 +36,16 @@ Eligible parties can publish service descriptions and provide a link to the live
 
 Customers can browse these listings, view details, and access the services via the provided links.
 All subsequent steps, such as service subscription and data exchange, are handled outside the Marketplace and follow the rules of the eligible party.
+
+## What is the difference between Data Services and Data Hubs?
+
+Both Data Services and Data Hubs are energy-related offerings created and submitted by eligible parties.  
+However, their intended audiences and purposes differ:
+
+- **Data Services** are designed for customers. They represent interactive applications such as analytics tools or visualizations that process the customer’s individual energy data.  
+- **Data Hubs**, in contrast, are designed for eligible parties. They provide access to aggregated or derived energy datasets, often combining data from multiple customers.  
+
+For example, an eligible party may offer a Data Hub that aggregates energy consumption data from customers within a specific country.  
+Other eligible parties can then access and utilize this aggregated dataset to build or enhance their own services.  
+
+Because Data Hubs are not relevant for end customers, they are only visible to users logged in as eligible parties in the Data Services Marketplace.
