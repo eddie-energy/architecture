@@ -14,34 +14,28 @@ skinparam node{
   BackgroundColor transparent
 }
 
-rectangle "Marketplace System" {
-  node "Computing Infrastructure" as local {    
-    artifact "Marketplace\nApplication" as marketplace
+rectangle "Data Services Marketplace System" {
+  node "Operator Infrastructure" as local {    
+    artifact "Marketplace\nBackend" as marketplace
     artifact "Database" as database
     artifact "IAM" as iam
 
-    database -down- marketplace : SQL
-    database -right- iam : SQL
+    marketplace -right- database : SQL
+    iam -down- marketplace : HTTP
   }
-node "User Device" as cust {
-    artifact "Customer Mobile App" as customer
+node "User Device" as user {
+  artifact "Marketplace Progressive Web App" as app
 }
-node "User Device" as elpa {
-    artifact "EP Web App" as ep
-}
-ep -down[hidden]- customer
 }
 
-rectangle "AIIDA System" {
-  artifact "AIIDA Embedded App" as aiida
+rectangle "EP System" {
+  artifact "EDDIE Framework" as eddie
 }
 
-
-ep -right- marketplace : HTTP
-customer -right- marketplace : "HTTP  "
-
-marketplace -down- aiida : HTTP
+app -right- iam : HTTP
+app -right- marketplace : HTTP
 
 
+marketplace -down- eddie: URL
   
 @enduml
