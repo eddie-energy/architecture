@@ -11,19 +11,19 @@ autonumber
 
 actor "Customer" as customer
 box "Marketplace System" #transparent
-  participant "Customer \nMobile App" as app
-  participant "Marketplace \nApplication" as marketplace
+  participant "Marketplace \nFrontend" as app
+  participant "Marketplace \nBackend" as marketplace
   participant "Database" as database
 end box
 
-customer -> app : Get data \nrequests/services
-app -> marketplace : Get data \nrequests/services
+customer -> app : Get data services
+app -> marketplace : Get data services
 activate marketplace
-marketplace -> database : Get data \nrequests/services
+marketplace -> database : Get data services
 activate database
-database -->> marketplace : Requests/services
+database -->> marketplace : Services
 deactivate database
-marketplace -->> app : Requests/services
+marketplace -->> app : Services
 deactivate marketplace
 
 @enduml

@@ -1,0 +1,29 @@
+@startuml marketplace-access-service
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Customer/EP" as customer
+box "Marketplace System" #transparent
+  participant "Marketplace \nFrontend" as app
+  participant "Marketplace \nBackend" as marketplace
+end box
+
+box "EP System" #transparent
+  participant "EP Service" as ep
+end box
+
+customer -> app : Click on redirect button
+app -> marketplace : Forward information
+marketplace -> ep : Redirect to EP system
+activate ep
+ep -->> customer : Show data service
+deactivate ep
+
+@enduml

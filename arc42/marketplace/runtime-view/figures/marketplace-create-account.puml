@@ -9,19 +9,15 @@ skinparam sequence {
 autonumber
 !pragma teoz true
 
-actor "Customer" as customer
+actor "User" as user
 box "Marketplace System" #transparent
-  participant "Customer \nMobile App" as app
-  participant "Marketplace \nApplication" as marketplace
+  participant "Marketplace \nFrontend" as app
   participant "IAM" as iam
   participant "Database" as database
 end box
 
-customer -> app : Create account
-app -> marketplace : Create account
-activate marketplace
-marketplace -->> app : IAM redirection
-deactivate marketplace
+user -> app : Register/login
+app -->> app : IAM redirection
 app -> iam : Create account
 activate iam
 iam -> database : Store account

@@ -1,4 +1,4 @@
-@startuml marketplace-register-aiida
+@startuml marketplace-submit-service
 
 skinparam style strictuml
 skinparam sequence {
@@ -9,17 +9,17 @@ skinparam sequence {
 autonumber
 !pragma teoz true
 
-actor "Customer" as customer
+actor "Eligible Party" as ep
 box "Marketplace System" #transparent
-  participant "Customer \nMobile App" as app
-  participant "Marketplace \nApplication" as marketplace
+  participant "Marketplace \nFrontend" as app
+  participant "Marketplace \nBackend" as marketplace
   participant "Database" as database
 end box
 
-customer -> app : Register AIIDA
-app -> marketplace : Register AIIDA
+ep -> app : Fill out form
+app -> marketplace : Submit form
 activate marketplace
-marketplace -> database : Store customer \nin AIIDA instance
+marketplace -> database : Store data service
 activate database
 database -->> marketplace : OK
 deactivate database

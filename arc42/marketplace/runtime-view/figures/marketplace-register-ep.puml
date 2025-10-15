@@ -1,0 +1,36 @@
+@startuml marketplace-register-ep
+
+skinparam style strictuml
+skinparam sequence {
+  ParticipantBackgroundColor transparent
+  ActorBackgroundColor transparent
+}
+
+autonumber
+!pragma teoz true
+
+actor "Eligible Party" as ep
+actor "Marketplace Operator" as operator
+
+box "Marketplace System" #transparent
+  participant "IAM" as iam
+  participant "Data Services Marketplace" as marketplace
+end box
+
+ep -> operator : Send EP registration request per email
+activate operator
+operator -> iam : Create new EP role
+activate iam
+iam -->> operator : EP role created
+operator -> iam : Link EP role to user account
+iam -->> operator : EP registered
+deactivate iam
+operator -->> ep : Inform of success
+deactivate operator
+ep -> marketplace : Log in
+activate marketplace
+marketplace -->> ep: Show EP features
+deactivate marketplace
+
+
+@enduml
