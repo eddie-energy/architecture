@@ -4,7 +4,7 @@ order: 5
 hiddenInSidebar: true
 ---
 
-The [Smartmeter Kundenschnittstellen Modul](https://cms.shrdzm.com/produkt/smartmeter-modul/) developed by SHRDZM is an Data Source that supports smart meters in **Austria**, **Germany**, **Slovenia**, **Luxembourg** and **Switzerland**. This Data Source is shown below.
+The [Smartmeter Kundenschnittstellen Modul](https://cms.shrdzm.com/produkt/smartmeter-modul/) developed by SHRDZM is a Data Source that supports smart meters in **Austria**, **Germany**, **Slovenia**, **Luxembourg** and **Switzerland**. This Data Source is shown below.
 
 ![](./figures/data-source-shrdzm.jpg)
 
