@@ -120,7 +120,7 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         aiida = softwareSystem "AIIDA" {
             description "Manages permission and access to near real-time energy data"
 
-            aiida_embedded_app = container "AIIDA Embedded App" {
+            aiida_embedded_app = container "AIIDA Application" {
                 description "Implements permission management and data streaming"
                 #aiida_backend = component "AIIDA Backend"
 
@@ -134,12 +134,13 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
                     description "Collects near real-time energy data"
                 }
 
-                error_handler = component "Error Handler"{
-                    description  "Logs processes and error messages"
-                }
-
                 aiida_frontend = component "AIIDA Frontend" {
                     description "Web interface for the customer"
+                }
+
+
+                Data_Source_Adapter = component "Data Source Adapter"{
+                    description "Connects AIIDA to the Data Source"
                 }
             }
 
@@ -149,14 +150,11 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
             }
 
             Data_Source = container "Data Source"{
-                description "Connects AIIDA to the Metering Device"
-            }
-            aiida_app = container "AIIDA Smartphone App" {
-                description "Smartphone interface for the customer"
+                description "Logical or physical instance between measuring device and AIIDA"
             }
         }
 
-        smartMeter = softwareSystem "Metering Device" {
+        smartMeter = softwareSystem "Measuring Device" {
             description "In-house device that collects energy data, e.g., a smart meter"
 
             #tags "External Component"
@@ -196,11 +194,9 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         ep_website -> eddie_popup "Embeds EDDIE Popup" HTTP
 
         customer -> aiida_frontend "Provides permission for near real-time data sharing"
-        customer -> aiida_app "Interacts with (scans QR Code)"
         customer -> marketplace "Browses energy services"
 
         eligible_party -> marketplace "Submits energy services"
-        mplace_backend -> aiida_embedded_app "Searches energy data" HTTP
         eligible_party -> mplace_iamkey "Creates account"
         customer -> mplace_iamkey "Creates account"
         customer -> mplace_customerapp "Browses energy services"
@@ -229,17 +225,15 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         eddie_outbound_connectors -> ep_service "Stream energy data" Kafka/AMQP/HTTP
         ep_service -> eddie_outbound_connectors "Send instructions" Kafka/AMQP/HTTP
 
-        aiida_app ->  permission_manager "Configures permissions and connections" HTTP
         # permission_manager -> timescale_db "Stores energy data" SQL
-        # timescale_db ->  error_handler "Logs error messages"
         aggregator -> timescale_db "Stores energy data" SQL
-        permission_manager -> error_handler "Forwards status and error messages"
         permission_manager -> streamer "Provides permission to stream data"
         aiida_frontend -> permission_manager "Configures permissions and connections" HTTP
         aggregator -> streamer "Forwards energy data"
 
-        Data_Source -> aggregator  "Sends near real-time energy data" MQTT
-        Data_Source -> smartMeter "Accesses near real-time energy data" DSMR
+        Data_Source -> Data_Source_Adapter  "Sends near real-time energy data" MQTT
+        Data_Source_Adapter -> aggregator  "Provides parsed near real-time energy data"
+        Data_Source -> smartMeter "Accesses near real-time energy data" "DSMR,wM-Bus,etc."
 
         streamer -> eddie_region_connectors  "Streams near real-time energy data" MQTT
         eddie_region_connector_aiida -> eddie_core "Streams near real-time energy data" MQTT
