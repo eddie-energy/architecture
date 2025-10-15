@@ -149,7 +149,7 @@ A message broker like Kafka was selected to meet the scalability, flexibility, a
 Since Eligible Parties can differ in their backend technologies and data processing rates, asynchronous communication via Kafka provides an optimal balance between throughput and reliability.  
 
 Additionally, Kafka supports:
-- High-performance data streaming for real-time energy data.
+- High-performance data streaming for near real-time energy data.
 - Fault tolerance and persistence for sensitive permission and metering information.
 - Extensible topic-based communication for adding new message types or regional formats in the future.
 
@@ -266,7 +266,7 @@ By adopting a unified state machine, EDDIE System ensures that every data exchan
 #### Definition
 Eligible Parties require different data to provide their services.  
 These requirements are standardized across region connectors as Data Needs. A Data Need specifies:
-- the type of data family (e.g., validated historical data, accounting point data, AIIDA real-time data),  
+- the type of data family (e.g., validated historical data, accounting point data, AIIDA near real-time data),  
 - the time frame of the request,  
 - and additional parameters relevant for the data type.  
 
@@ -325,7 +325,7 @@ The multistep form improves usability by guiding customers through distinct step
 4. Post-request instructions and actions.  
 5. Success page.  
 
-This approach adapts to button configuration and the type of Data Need (e.g., AIIDA real-time data).  
+This approach adapts to button configuration and the type of Data Need (e.g., AIIDA near real-time data).  
 Errors and status updates are displayed as separate pages, ensuring clarity for the customer.
 
 #### Motivation

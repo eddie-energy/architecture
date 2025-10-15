@@ -5,7 +5,7 @@ order: 4
 
 ## Overview
 
-The AIIDA system primarily runs on an in-house device (e.g., a Raspberry Pi) and the eligible party's infrastructure. To access real-time data, it relies on an Data Source, which sends energy-related data to the AIIDA Embedded App. The Data Source can be either an adapter to a metering device (such as a smart meter) or an IoT device that measures energy data itself. Depending on the Data Source type and model, it may use different communication protocols both for connecting to the AIIDA Embedded App (e.g., MQTT over Wi-Fi), and for connecting to the metering device (e.g., DSMR over RJ12). The AIIDA Embedded App stores real-time data in the Timescale DB and also sends this data to the AIIDA Region Connector via MQTT, which then makes the data available to the EDDIE Framework.
+The AIIDA system primarily runs on an in-house device (e.g., a Raspberry Pi) and the eligible party's infrastructure. To access near real-time data, it relies on an Data Source, which sends energy-related data to the AIIDA Embedded App. The Data Source can be either an adapter to a metering device (such as a smart meter) or an IoT device that measures energy data itself. Depending on the Data Source type and model, it may use different communication protocols both for connecting to the AIIDA Embedded App (e.g., MQTT over Wi-Fi), and for connecting to the metering device (e.g., DSMR over RJ12). The AIIDA Embedded App stores near real-time data in the Timescale DB and also sends this data to the AIIDA Region Connector via MQTT, which then makes the data available to the EDDIE Framework.
 
 ## Diagram
 ![](./figures/aiida_deployment_view.svg)
