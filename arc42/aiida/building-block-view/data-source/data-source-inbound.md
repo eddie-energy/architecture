@@ -1,6 +1,7 @@
 ---
 title: Inbound Data Source
 order: 2
+collapsed: true
 ---
 
 For **outbound data** (data sent from AIIDA to an EP), the outbound data need type is used.

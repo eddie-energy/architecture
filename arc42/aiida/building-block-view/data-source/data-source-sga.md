@@ -1,6 +1,7 @@
 ---
 title: Smart Meter Wifi Gateway
 order: 10
+collapsed: true
 ---
 
 The [Smart Meter WiFi Gateway](https://smartgateways.nl/en/product/smart-meter-wifi-gateway/) is a Data Source that supports smart meters in many countries including **the Netherlands, Belgium, Sweden, Denmark, Finland, Hungary, Ireland, Lithuania, and Switzerland**. This Data Source is shown below.

@@ -1,7 +1,6 @@
 ---
 title: Data Sources
-order: 4
-collapsed: true
+order: 5
 ---
 
 The Data Source is a device that sends energy-related data to the AIIDA application. The Data Source has access to

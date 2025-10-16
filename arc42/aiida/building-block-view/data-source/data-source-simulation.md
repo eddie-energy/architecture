@@ -1,6 +1,7 @@
 ---
 title: Simulation Data Source
 order: 6
+collapsed: true
 ---
 
 The Simulation Data Source allows testing the internal functionality of AIIDA.

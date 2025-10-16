@@ -1,6 +1,7 @@
 ---
 title: Shelly Devices
 order: 5
+collapsed: true
 ---
 
 > [!WARNING]

@@ -1,6 +1,7 @@
 ---
 title: CIM Data Source
 order: 1
+collapsed: true
 ---
 
 The CIM Data Source allows connecting to any device which supports communication over MQTT.
