@@ -1,7 +1,6 @@
 ---
 title: Inbound Permission and Data Source
 order: 10
-hiddenInSidebar: true
 ---
 
 For **outbound data** (data sent from AIIDA to an EP), the outbound data need type is used.
