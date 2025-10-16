@@ -1,7 +1,6 @@
 ---
 title: Data Source for Smart Meters in Austria, Germany, Slovenia, Luxembourg and Switzerland
 order: 5
-hiddenInSidebar: true
 ---
 
 The [Smartmeter Kundenschnittstellen Modul](https://cms.shrdzm.com/produkt/smartmeter-modul/) developed by SHRDZM is a Data Source that supports smart meters in **Austria**, **Germany**, **Slovenia**, **Luxembourg** and **Switzerland**. This Data Source is shown below.

@@ -1,7 +1,6 @@
 ---
 title: Shelly Devices
 order: 6
-hiddenInSidebar: true
 ---
 
 > [!WARNING]

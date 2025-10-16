@@ -1,7 +1,6 @@
 ---
 title: Data Source for Smart Meters in Austria
 order: 1
-hiddenInSidebar: true
 ---
 
 The [Smart Meter Adapter](https://oesterreichsenergie.at/smart-meter) developed by Oesterreichs Energie is a Data Source that supports smart meters in **Austria**. This Data Source is shown below.
