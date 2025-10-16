@@ -17,22 +17,29 @@ end box
 
 box "EDDIE Framework" #transparent
   participant "EDDIE Core" as eddie
-  participant "Database" as db
-  participant "Outbound Connectors" as oc
+  participant "Region \nConnector" as rc
+  participant "Metered \nData \nAdministrator" as mda
+  participant "Outbound \nConnectors" as oc
 end box
 
 == Retransmission Request ==
 ep -> epInterface : Initiate retransmission\n(via API or Admin Console)
 epInterface -> eddie : Send retransmission request
 activate eddie
-eddie -> db : Retrieve historical data
-db -->> eddie : Return stored data
 
-== Data Transmission ==
-eddie -> oc : Send data through all\nenabled outbound connectors
-oc -->> eddie : Acknowledge transmission
+== Route to Region Connector ==
+eddie -> rc : Route retransmission request
+activate rc
+rc -> mda : Retrieve re-requested historical data
+mda -->> rc : Return historical data
+
+par Parallel Acknowledgment & Data Transmission
+    rc -> eddie : Acknowledge retransmission\n(success or failure)
+    rc -> eddie : Send historical data
+    eddie -> oc : Send data through all enabled outbound connectors
+end
+
+deactivate rc
 deactivate eddie
-
-eddie -->> epInterface : Acknowledge retransmission\n(success or failure)
 
 @enduml

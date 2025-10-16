@@ -131,15 +131,16 @@ This diagram illustrates the complete workflow of how an Eligible Party requests
 - Data is sent again through all enabled outbound connectors -->
 ![](./figures/eddie-framework-retransmit-data.svg)
 
-1. The Eligible Party initiates retransmission of previously published data by either:
-1. Sending an HTTP request to the API, or
-1. Clicking a button in the Admin Console.
-1. The EP interface sends the retransmission request to the EDDIE Core.
-1. The EDDIE Core queries the Database to retrieve the stored historical data.
-1. The Database returns the requested data to the EDDIE Core.
-1. The EDDIE Core transmits the retrieved data through all enabled outbound connectors (e.g., Kafka, AMQP, MQTT, HTTP).
-1. Each Outbound Connector acknowledges successful data transmission.
-1. The EDDIE Core sends a final acknowledgment to the EP interface, confirming successful or failed retransmission.
+1. The Eligible Party initiates retransmission of previously published data by either:  
+   1. Sending an HTTP request to the API, or  
+   1. Clicking a button in the Admin Console.  
+1. The EP Website sends the retransmission request to the EDDIE Core.  
+1. The EDDIE Core routes the retransmission request to the correct Region Connector.  
+1. The Region Connector retrieves the re-requested historical data from the Metered Data Administrator.  
+1. The Region Connector acknowledges the retransmission request to the EDDIE Core (success or failure).  
+1. The Region Connector sends the historical data to the EDDIE Core.  
+1. The EDDIE Core transmits the data through all enabled outbound connectors (e.g., Kafka, AMQP, MQTT, HTTP).
+
 
 <!-- ## Use-Cases
 
