@@ -103,7 +103,7 @@ This diagram illustrates the complete workflow of how an Eligible Party requests
 ![](./figures/eddie-framework-collect-data-http.svg)
 
 1. Prerequisite: The Eligible Party ensures that the REST Outbound Connector is enabled in the EDDIE Framework.  
-1. The Region Connector collects customer data from the regional Data-sharing infrastructure.  
+1. The Region Connector collects customer data from the Regional Data-sharing infrastructure.  
 1. The Region Connector sends the collected data to the EDDIE Core.  
 1. The EDDIE Core forwards the data to the REST Outbound Connector.  
 1. The REST Outbound Connector temporarily stores the data in the Database.  
