@@ -1,12 +1,12 @@
 ---
 title: CIM Data Source
-order: 8
+order: 1
 ---
 
 The CIM Data Source allows connecting to any device which supports communication over MQTT.
 The CIM Data Source Adapter is a general purpose adapter that can be used if no specific adapter is available for a
 device.
-It uses the `TimeSeries` object of the [Real Time Data Market Document](../data-models/cim.md) to parse incoming data.
+It uses the `TimeSeries` object of the [Real Time Data Market Document](../cim/cim.md) to parse incoming data.
 
 ## Connection to AIIDA
 
@@ -44,7 +44,7 @@ Data of the original source must be parsed into the a `TimeSeries` JSON object w
 - `dateAndOrTimeDateTime`: The UTC timestamp of the data
 - `quantities`: An array of quantities with the following fields:
     - `quantity`: The quantity value of the data.
-    - `type`: The type of the quantity. See the table in the [Real Time Data Market Document](../data-models/cim.md) for
+    - `type`: The type of the quantity. See the table in the [Real Time Data Market Document](../cim/cim.md) for
       supported types.
     - `quality`: The quality of the quantity. See the table in
-      the [Real Time Data Market Document](../data-models/cim.md) for supported qualities.
+      the [Real Time Data Market Document](../cim/cim.md) for supported qualities.

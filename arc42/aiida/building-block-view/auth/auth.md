@@ -1,6 +1,6 @@
 ---
 title: Authentication
-order: 6
+order: 2
 ---
 
 Authentication is not handled by the AIIDA Embedded App itself but delegated to Keycloak.
