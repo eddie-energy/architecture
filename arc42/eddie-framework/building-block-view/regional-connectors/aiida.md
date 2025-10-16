@@ -2,8 +2,6 @@
 title: AIIDA
 ---
 
-# Overview
-
 To share near real-time energy data the AIIDA region connector is used.
 AIIDA acts as a permission administrator in the final customer's home.
 AIIDA connects to various data sources in the final customer's home, provides a dashboard for the final customer to
