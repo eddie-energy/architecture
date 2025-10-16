@@ -102,12 +102,14 @@ This diagram illustrates the complete workflow of how an Eligible Party requests
 
 ![](./figures/eddie-framework-collect-data-http.svg)
 
-1. The Eligible Party ensures that the REST Outbound Connector is enabled in the EDDIE Framework.
-1. The Region Connector collects customer data from the regional data-sharing infrastructure and sends it to the EDDIE Core.
-1. The EDDIE Core temporarily stores the received data in the Database.
-1. The EDDIE Core forwards the data to the REST Outbound Connector, which makes it available through an HTTP endpoint.
-1. The Eligible Party uses its HTTP client to send a GET request to the REST endpoint.
-1. The Outbound Connector retrieves the requested data and returns it to the EP in the response.
+1. Prerequisite: The Eligible Party ensures that the REST Outbound Connector is enabled in the EDDIE Framework.  
+1. The Region Connector collects customer data from the regional data-sharing infrastructure.  
+1. The Region Connector sends the collected data to the EDDIE Core.  
+1. The EDDIE Core forwards the data to the REST Outbound Connector.  
+1. The REST Outbound Connector temporarily stores the data in the Database.  
+1. The REST Outbound Connector makes the data available via an HTTP endpoint.  
+1. The Eligible Party sends an HTTP GET request to the REST endpoint.  
+1. The REST Outbound Connector retrieves the requested data and returns it to the Eligible Party in the response.  
 
 ## The Eligible Party terminates a customer’s permission
 

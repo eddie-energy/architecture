@@ -25,6 +25,7 @@ end box
 == Data Retrieval ==
 rc -> eddie : Send collected data
 activate eddie
+eddie -> restOC : Forward collected data
 eddie -> db : Store data temporarily
 eddie -> restOC : Make data available\nvia HTTP endpoint
 deactivate eddie
