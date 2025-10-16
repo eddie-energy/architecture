@@ -1,8 +1,6 @@
 ---
 title: Data Source for Smart Meters in Italy
 order: 3
-hiddenInSidebar: true
-
 ---
 
 The [Sinapsi Alfa](https://www.sinapsitech.it/en/home-alfa/) is a Data Source that supports Open Meter 2.0 smart meters which are commonly used in **Italy**.
