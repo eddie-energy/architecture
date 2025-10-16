@@ -1,6 +1,6 @@
 ---
 title: Modbus Data Source
-order: 7
+order: 4
 ---
 
 The Modbus Data Source is a generic Data Source that supports metering devices that communicate via the Modbus protocol.

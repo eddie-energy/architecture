@@ -1,6 +1,6 @@
 ---
-title: Data Source for Smart Meters in France
-order: 2
+title: Micro Teleinfo V3.0
+order: 3
 ---
 The [Micro Teleinfo V3.0](https://www.tindie.com/products/hallard/micro-teleinfo-v30/) is a Data Source that supports smart meters in **France**. This Data Source is shown below.
 

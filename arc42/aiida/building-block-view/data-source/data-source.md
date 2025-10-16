@@ -1,11 +1,17 @@
 ---
-title: Data Source
+title: Data Sources
 order: 4
+collapsed: true
 ---
 
-The Data Source is a device that sends energy-related data to the AIIDA application. The Data Source has access to energy data either because it collects it from a metering device (such as a smart meter), or because it is an IoT device that measures the energy data itself. Since many different devices can act as a Data Source, each device may use different communication protocols to access energy data (e.g., DSMR over RJ12), or to send the data to the AIIDA Application (e.g., MQTT over WiFi). For this reason, we clarify the connectivity of each supported Data Source in the links of the tables below.
+The Data Source is a device that sends energy-related data to the AIIDA application. The Data Source has access to
+energy data either because it collects it from a metering device (such as a smart meter), or because it is an IoT device
+that measures the energy data itself. Since many different devices can act as a Data Source, each device may use
+different communication protocols to access energy data (e.g., DSMR over RJ12), or to send the data to the AIIDA
+Application (e.g., MQTT over WiFi). For this reason, we clarify the connectivity of each supported Data Source in the
+links of the tables below.
 
-This table shows the supported Data Sources that connect to smart meters of specific countries. 
+This table shows the supported Data Sources that connect to smart meters of specific countries.
 
 | To access smart meter data in specific countries                                         | Data Source                                                   |
 |------------------------------------------------------------------------------------------|---------------------------------------------------------------|
