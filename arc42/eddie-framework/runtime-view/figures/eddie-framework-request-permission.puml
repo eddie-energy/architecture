@@ -23,7 +23,7 @@ box "EDDIE Framework" #transparent
 end box
 
 == Setup ==
-ep -> epApp : Create \nData \nNeed
+ep -> core : Create \nData \nNeed
 ep -> epApp : Embed \nEDDIE \nPopup
 
 == Permission \nRequest ==
