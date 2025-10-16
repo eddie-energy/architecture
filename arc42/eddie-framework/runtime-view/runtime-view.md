@@ -86,11 +86,10 @@ This diagram illustrates the complete workflow of how an Eligible Party requests
 
 ![](./figures/eddie-framework-collect-data-message-broker.svg)
 
-1. The Eligible Party ensures that at least one Outbound Connector is enabled in the EDDIE Framework.
-1. The EP provides a message broker (Kafka, AMQP, or MQTT) that is reachable by the EDDIE Framework.
-1. The Region Connector collects energy data from the respective regional data source and sends it to the EDDIE Core, formatted either in CIM or in a non-standardized EDDIE format.
-1. The EDDIE Core forwards the received data to all active Outbound Connectors.
-1. The Outbound Connector publishes the data to the configured message broker.
+1. Prerequisite: The Eligible Party has configured the EDDIE Framework and ensured that at least one Outbound Connector is enabled.  
+1. The Region Connector collects energy data from the respective regional data source and sends it to the EDDIE Core, formatted either in CIM or in a non-standardized EDDIE format.  
+1. The EDDIE Core forwards the received data to all active Outbound Connectors.  
+1. The Outbound Connector publishes the data to the configured message broker (Kafka, AMQP, or MQTT).  
 1. The Eligible Party subscribes to the relevant topics on the message broker and consumes the transmitted customer data.
 
 ## The Eligible Party collects customer data via HTTP
