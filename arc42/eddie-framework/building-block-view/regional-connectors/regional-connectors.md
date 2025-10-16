@@ -36,7 +36,7 @@ Since each country or region may define its own processes for managing permissio
 - Eligible Parties must be registered with the Permission Administrator and Metered Data Administrator to use the interfaces.  
 - Sensitive information is only accessed once explicit consent has been confirmed by the Permission Administrator. 
 
-The EDDIE Framework uses several Region Connectors, such as [EDA (Austria)](./at-eda.md) and [AIIDA](../../../aiida/building-block-view/aiida-regional-connector/aiida-regional-connector.md), each implementing the permission and data access processes of their respective infrastructures.
+The EDDIE Framework uses several Region Connectors, such as [EDA (Austria)](./at-eda.md) and [AIIDA](./aiida.md), each implementing the permission and data access processes of their respective infrastructures.
 
 <!-- > [!note] TODO
 > - Describe shared APIs and similarities between region connectors
@@ -53,4 +53,4 @@ In reality, each region connector is specifically tailored towards its respectiv
 This page documents shared concepts and interfaces while the following pages document the individual region connectors.
 
 - [EDA (Austria)](./at-eda.md)
-- [AIIDA](../../../aiida/building-block-view/aiida-regional-connector/aiida-regional-connector.md) -->
+- [AIIDA](./aiida.md) -->
