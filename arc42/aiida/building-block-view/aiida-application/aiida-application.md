@@ -1,11 +1,11 @@
 ---
-title: AIIDA Embedded App
+title: AIIDA Application
 order: 1
 ---
 
 ### Overview
 
-The AIIDA Embedded App handles the core functionalities of AIIDA. It consists of a backend and a frontend. The AIIDA
+The AIIDA Application handles the core functionalities of AIIDA. It consists of a backend and a frontend. The AIIDA
 Backend is a Spring Boot application that is responsible for accessing the near real-time data from the Data Source and
 sending it to the EDDIE Framework. The AIIDA Frontend is a Vue web application that provides an interface for the customer
 to manage the customer permissions, to configure connections to the Data Source and the EDDIE Framework, and to view
