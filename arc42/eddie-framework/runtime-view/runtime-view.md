@@ -46,8 +46,8 @@ This diagram illustrates the complete workflow of how an Eligible Party requests
 1. The EP embeds the EDDIE Popup on their website and configures it with the created Data Need.
 1. The Customer visits the EP Website and clicks the EDDIE Popup to begin the permission process.
 1. The EDDIE Popup requests the available Data Needs, Permission Administrators, and Region Connector metadata from the EDDIE Core.
-1. The Customer reviews the Data Need, selects their country and Permission Administrator (PA).
-1. The EDDIE Popup retrieves the appropriate Region Connector (RC) element for the selected PA.
+1. The Customer reviews the Data Need, selects their country and Permission Administrator.
+1. The EDDIE Popup retrieves the appropriate Region Connector element for the selected PA.
 1. The Customer interacts with the RC element (e.g., enters metering point ID, access token).
 1. The EDDIE Popup sends the permission request to the Region Connector based on the customer’s input.
 1. The EDDIE Popup subscribes to updates on the permission status from the EDDIE Core.
@@ -66,12 +66,13 @@ This diagram illustrates the complete workflow of how an Eligible Party requests
 
 ![](./figures/eddie-framework-revoke-permission.svg)
 
-1. The Customer logs in to the portal of their Permission Administrator (PA) through the Permission Facade.
-1. The Customer revokes their previously granted permission.
-1. The Permission Facade notifies the corresponding Region Connector (RC) that the permission has been revoked.
-1. Depending on the implementation, either the RC sends an explicit revocation notification to the EDDIE Core, or the EDDIE Core detects the revocation by observing that no further data updates are received from the RC.
-1. The EDDIE Core updates the permission status in the Database to reflect the revocation.
-1. The EDDIE Core instructs the Region Connector to stop retrieving or transmitting data related to the revoked permission.
+1. The Customer accesses the Permission Administrator’s portal and logs in to manage their existing permissions.  
+1. The Customer performs an action in the portal to revoke a previously granted permission.  
+1. The Permission Administrator processes the revocation request and confirms the permission is revoked.  
+1. The Permission Administrator notifies the corresponding Region Connector within the EDDIE Framework that the permission has been revoked.  
+1. If no notification is received, the EDDIE Core later detects the revocation indirectly by recognizing that no new data updates arrive from the Region Connector.  
+1. Upon receiving or detecting the revocation, the EDDIE Core updates the permission status in the Database to mark it as revoked.  
+1. Finally, the EDDIE Core instructs the Region Connector to stop retrieving and transmitting data related to the revoked permission. 
 
 ## The Eligible Party collects customer data via message broker (Kafka, AMQP, MQTT)
 

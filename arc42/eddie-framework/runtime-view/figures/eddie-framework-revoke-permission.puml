@@ -10,8 +10,11 @@ autonumber
 !pragma teoz true
 
 actor "Customer" as customer
+box "Permission Administrator" #transparent
+  participant "PA Portal" as paPortal
+end box
+
 box "EDDIE Framework" #transparent
-  participant "Permission \nFacade" as paPortal
   participant "Region Connector" as rc
   participant "EDDIE Core" as eddie
   participant "Database" as db
@@ -19,7 +22,7 @@ end box
 
 customer -> paPortal : Login and revoke\npermission
 activate paPortal
-paPortal -> rc : Notify revocation
+paPortal -> rc : Notify revocation\n(optional)
 deactivate paPortal
 
 alt RC notifies revocation
