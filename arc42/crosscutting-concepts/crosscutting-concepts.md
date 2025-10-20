@@ -269,7 +269,7 @@ This state model standardizes how permissions are created, validated, transmitte
 
 ![BPRT diagram showing the permission request process](../crosscutting-concepts/figures/permission-process-model.svg)
 
-The [Operation Manual](https://eddie-web.projekte.fh-hagenberg.at/framework/2-integrating/integrating.html#permission-process-model) provides details on how to interpret and handle specific states.
+The [Operation Manual](https://architecture.eddie.energy/framework/2-integrating/integrating.html#permission-process-model) provides details on how to interpret and handle specific states.
 
 #### Relevance
 
@@ -306,7 +306,7 @@ Data Needs ensure that service requirements are expressed consistently across al
 #### Motivation
 
 Without a common model for expressing data requirements, each region would enforce its own conventions. Data Needs provide a uniform contract that allows services to scale across multiple regions while remaining transparent to customers.
-More details are available in the [operation manual](https://eddie-web.projekte.fh-hagenberg.at/framework/2-integrating/data-needs.html).
+More details are available in the [operation manual](https://architecture.eddie.energy/framework/2-integrating/data-needs.html).
 
 ## User Experience
 

@@ -46,7 +46,7 @@ Another notable change is the column on the right where the EDDIE Framework uses
 - The shared database is configured to track process states and configuration for region connectors, as well as metrics for the admin console. It does not include authentication information.
 
 The Grant Agreement also highlights how the EDDIE Framework can be installed with a single command through the use of scripted deployment configurations and provides the following diagram describing three deployment options.
-All these options can be achieved by configuration of the EDDIE Framework as described in the [Operation Manual](https://eddie-web.projekte.fh-hagenberg.at/framework/).
+All these options can be achieved by configuration of the EDDIE Framework as described in the [Operation Manual](https://architecture.eddie.energy/framework/).
 Details on the deployment of the EDDIE Framework are found in its [Deployment View](../eddie-framework/deployment-view/deployment-view.md).
 
 ![](./permission-facade/figures/eddie-deployment-options.png)

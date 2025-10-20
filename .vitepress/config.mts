@@ -44,8 +44,8 @@ export default withMermaid(defineConfig({
     logo: "/figures/favicon.svg",
     nav: [
       { text: "Home", link: "/" },
-      { text: "EDDIE Operation Manual", link: "https://eddie-web.projekte.fh-hagenberg.at/framework/" },
-      { text: "AIIDA Operation Manual", link: "https://eddie-web.projekte.fh-hagenberg.at/aiida/" }
+      { text: "EDDIE Operation Manual", link: "https://architecture.eddie.energy/framework/" },
+      { text: "AIIDA Operation Manual", link: "https://architecture.eddie.energy/aiida/" }
     ],
 
     sidebar: sidebarItems,
