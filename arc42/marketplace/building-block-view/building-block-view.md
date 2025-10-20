@@ -18,7 +18,7 @@ The following diagram shows the internal containers and interactions of the Mark
 ## Diagram
 
 
- <C4 diagram="marketplace" />
+ <C4 diagram="data-services-marketplace" />
 
 |Container|Description|
 | - | - |
