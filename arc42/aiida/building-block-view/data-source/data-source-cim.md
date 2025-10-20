@@ -10,7 +10,7 @@ It uses the `TimeSeries` object of the [Real Time Data Market Document](../data-
 
 ## Connection to AIIDA
 
-Devices can send data to the MQTT broker of the EDDIE instance on the dedicated topic for the CIM Data Source.
+Devices can send data to the MQTT broker of the AIIDA instance on the dedicated topic for the CIM Data Source.
 
 ```json
 {
