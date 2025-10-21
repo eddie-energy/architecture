@@ -23,11 +23,12 @@ box "EDDIE Framework" #transparent
 end box
 
 == Data Retrieval ==
+rc -> rc : Collect \ncustomer data \nfrom regional \ndata source
 rc -> eddie : Send collected data
 activate eddie
 eddie -> restOC : Forward collected data
-eddie -> db : Store data temporarily
-eddie -> restOC : Make data available\nvia HTTP endpoint
+restOC -> db : Store data temporarily
+restOC -> eddie : Make data available\nvia HTTP endpoint
 deactivate eddie
 
 == Data Access ==

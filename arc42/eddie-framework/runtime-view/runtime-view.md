@@ -68,11 +68,12 @@ This diagram illustrates the complete workflow of how an Eligible Party requests
 
 1. The Customer accesses the Permission Administrator’s portal and logs in to manage their existing permissions.  
 1. The Customer performs an action in the portal to revoke a previously granted permission.  
-1. The Permission Administrator processes the revocation request and confirms the permission is revoked.  
+1. The Permission Administrator processes the revocation request and confirms that the permission has been revoked.  
 1. The Permission Administrator notifies the corresponding Region Connector within the EDDIE Framework that the permission has been revoked.  
-1. If no notification is received, the EDDIE Core later detects the revocation indirectly by recognizing that no new data updates arrive from the Region Connector.  
-1. Upon receiving or detecting the revocation, the EDDIE Core updates the permission status in the Database to mark it as revoked.  
-1. Finally, the EDDIE Core instructs the Region Connector to stop retrieving and transmitting data related to the revoked permission. 
+1. If no explicit revocation notification is received, the Region Connector may attempt to retrieve data from the Permission Administrator. In this case, the Permission Administrator typically responds with an HTTP 403 or 401 error, indicating that access is no longer permitted.  
+1. Upon receiving this error, the Region Connector infers that the permission has been revoked and sends a revocation notification to the EDDIE Core. Alternatively, if no data updates are received for a certain period, the EDDIE Core can also detect the revocation indirectly.  
+1. The EDDIE Core updates the permission status in the Database to mark it as revoked.  
+1. Finally, the EDDIE Core instructs the Region Connector to stop retrieving and transmitting data related to the revoked permission.  
 
 ## The Eligible Party collects customer data via message broker (Kafka, AMQP, MQTT)
 
