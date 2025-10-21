@@ -8,7 +8,7 @@ This section outlines key architectural decisions made for the EDDIE Framework:
 - [Monolithic Architecture of the EDDIE Framework](#monolithic-architecture-of-the-eddie-framework)
 - [Region Connector and Outbound Connector Isolation](#region-connector-and-outbound-connector-isolation)
 - [Event-Driven Permission Process Model](#event-driven-permission-process-model)
-- [Embed the EDDIE Button as a Custom Element](#embed-the-eddie-button-as-a-custom-element)
+- [Embed the EDDIE Popup as a Custom Element](#embed-the-eddie-popup-as-a-custom-element)
 - [Publish/Subscribe Mechanism for Data Exchange](#publish-subscribe-mechanism-for-data-exchange)
 - [Separate System Monitoring and Admin Console](#separate-system-monitoring-and-admin-console)
 - [Database](#database)
