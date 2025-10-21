@@ -1,15 +1,11 @@
-
 workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
-
-
     model {
-
-        ep_website = softwareSystem "EP Website"{
+        ep_website = softwareSystem "EP Website" {
             description "Website representing the EP"
             tags "outofscope"
         }
 
-        ep_service = softwareSystem "EP Service"{
+        ep_service = softwareSystem "EP Service" {
             description "Energy service provided by the eligible party"
             tags "outofscope"
         }
@@ -18,7 +14,7 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
             description "User of energy services"
         }
 
-        eligible_party = "person" "Eligible Party" {
+        eligible_party = person "Eligible Party" {
             description "Person or organization providing energy services."
         }
 
@@ -122,20 +118,19 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
 
             aiida_embedded_app = container "AIIDA Embedded App" {
                 description "Implements permission management and data streaming"
-                #aiida_backend = component "AIIDA Backend"
 
-                streamer = component "Streamer"{
+                streamer = component "Streamer" {
                     description "Streams energy data"
                 }
-                permission_manager = component "Permission Manager"{
+                permission_manager = component "Permission Manager" {
                     description "Handles customer permission and data access"
                 }
                 aggregator = component "Aggregator" {
                     description "Collects real-time energy data"
                 }
 
-                error_handler = component "Error Handler"{
-                    description  "Logs processes and error messages"
+                error_handler = component "Error Handler" {
+                    description "Logs processes and error messages"
                 }
 
                 aiida_frontend = component "AIIDA Frontend" {
@@ -148,9 +143,10 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
                 tags "Database"
             }
 
-            Adapter_Device = container "Adapter Device"{
+            Adapter_Device = container "Adapter Device" {
                 description "Connects AIIDA to the Metering Device"
             }
+
             aiida_app = container "AIIDA Smartphone App" {
                 description "Smartphone interface for the customer"
             }
@@ -158,56 +154,33 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
 
         smartMeter = softwareSystem "Metering Device" {
             description "In-house device that collects energy data, e.g., a smart meter"
-
-            #tags "External Component"
             tags "outofscope"
         }
 
-        # ========= Deployment Views =========
-       # docker = deploymentEnvironment "Docker" {
-        #    deploymentNode "Eligible Party Infrastructure" "Eligible Party hosts EDDIE Framework via Docker" "Docker Runtime" {
-         #       #containerInstance eddieCore
-          #      containerInstance kafka
-           # }
-        #}
+        gaia_x_framework -> eddie_framework "Offers compliance services" "HTTP"
+        gaia_x_framework -> other_dataspace "Offers compliance services" "HTTP"
 
-        // eddieOnline = deploymentEnvironment "EDDIE Online" {
-        //     deploymentNode "Showcase Server" "Eligible Party hosts EDDIE Framework via Docker" "Docker Runtime" {
-        //         containerInstance library
-        //         deploymentNode "MySQL" {
-        //             containerInstance analyzers
-        //         }
-        //     }
-        // }
+        eddie_framework -> other_dataspace "Data exchange based on IDSA" "HTTP/Kafka"
 
-        # Relations
+        other_dataspace -> eddie_framework "Data exchange based on IDSA" "HTTP/Kafka"
+        eddie_framework -> regional_data_sharing_infrastructure "Accesses historical energy data" "HTTP/AS4"
 
-        gaia_x_framework -> eddie_framework "Offers compliance services" HTTP
-        gaia_x_framework -> other_dataspace "Offers compliance services" HTTP
-
-        eddie_framework -> other_dataspace "Data exchange based on IDSA" HTTP/Kafka
-
-        other_dataspace -> eddie_framework "Data exchange based on IDSA" HTTP/Kafka
-        eddie_framework -> regional_data_sharing_infrastructure "Accesses historical energy data" HTTP/AS4
-
-
-        # write as "Customer -> EP website" or "Customer -> EDDIE Popup"?
         customer -> ep_website "Fills out EDDIE Popup"
-        ep_website -> eddie_popup "Embeds EDDIE Popup" HTTP
+        ep_website -> eddie_popup "Embeds EDDIE Popup" "HTTP"
 
         customer -> aiida_frontend "Provides permission for real-time data sharing"
         customer -> aiida_app "Interacts with (scans QR Code)"
         customer -> marketplace "Browses energy services"
 
         eligible_party -> marketplace "Submits energy services"
-        mplace_backend -> aiida_embedded_app "Searches energy data" HTTP
+        mplace_backend -> aiida_embedded_app "Searches energy data" "HTTP"
         eligible_party -> mplace_iamkey "Creates account"
         customer -> mplace_iamkey "Creates account"
         customer -> mplace_customerapp "Browses energy services"
         eligible_party -> mplace_webapp "Submits energy services"
-        mplace_webapp -> mplace_backend "Submits energy services, searches AIIDA instances" HTTP
-        mplace_customerapp -> mplace_backend "Searches energy services, registers AIIDA instance" HTTP
-        mplace_backend -> mplace_database "Searches customer and eligible party information" SQL
+        mplace_webapp -> mplace_backend "Submits energy services, searches AIIDA instances" "HTTP"
+        mplace_customerapp -> mplace_backend "Searches energy services, registers AIIDA instance" "HTTP"
+        mplace_backend -> mplace_database "Searches customer and eligible party information" "SQL"
 
         eddie_application -> eddie_database "Store system state"
         eddie_system_monitoring -> eddie_application "Aggregate logs and retrieve system information"
@@ -215,48 +188,41 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         eddie_admin_console -> eddie_application "Collect permission information and metrics"
         eddie_admin_console -> eddie_data_needs_api "Manage data needs"
 
-        eddie_popup -> eddie_core "Retrieve region connector metadata" HTTP
-        eddie_popup -> eddie_master_data_api "Retrieve permission administrators" HTTP
-        eddie_popup -> eddie_region_connectors "Retrieve microfrontends" HTTP
-        eddie_core -> eddie_region_connectors "Forward instructions from the eligible party" Flux
-        eddie_core -> eddie_outbound_connectors "Stream energy data from region connectors" Flux
+        eddie_popup -> eddie_core "Retrieve region connector metadata" "HTTP"
+        eddie_popup -> eddie_master_data_api "Retrieve permission administrators" "HTTP"
+        eddie_popup -> eddie_region_connectors "Retrieve microfrontends" "HTTP"
+        eddie_core -> eddie_region_connectors "Forward instructions from the eligible party" "Flux"
+        eddie_core -> eddie_outbound_connectors "Stream energy data from region connectors" "Flux"
         eddie_core -> eddie_data_needs_api "Retrieve data needs"
         eddie_data_needs_api -> eddie_database "Store data needs"
         eddie_region_connectors -> eddie_database "Store permission state"
         eddie_region_connectors -> regional_data_sharing_infrastructure "Accesses historical energy data"
-        eddie_region_connectors -> eddie_core "Stream permission events and energy data" Flux
-        eddie_outbound_connectors -> eddie_core "Stream instructions from the eligible party" Flux
-        eddie_outbound_connectors -> ep_service "Stream energy data" Kafka/AMQP/HTTP
-        ep_service -> eddie_outbound_connectors "Send instructions" Kafka/AMQP/HTTP
+        eddie_region_connectors -> eddie_core "Stream permission events and energy data" "Flux"
+        eddie_outbound_connectors -> eddie_core "Stream instructions from the eligible party" "Flux"
+        eddie_outbound_connectors -> ep_service "Stream energy data" "Kafka/AMQP/HTTP"
+        ep_service -> eddie_outbound_connectors "Send instructions" "Kafka/AMQP/HTTP"
 
-        aiida_app ->  permission_manager "Configures permissions and connections" HTTP
-        # permission_manager -> timescale_db "Stores energy data" SQL
-        # timescale_db ->  error_handler "Logs error messages"
-        aggregator -> timescale_db "Stores energy data" SQL
+        aiida_app ->  permission_manager "Configures permissions and connections" "HTTP"
+        aggregator -> timescale_db "Stores energy data" "SQL"
         permission_manager -> error_handler "Forwards status and error messages"
         permission_manager -> streamer "Provides permission to stream data"
-        aiida_frontend -> permission_manager "Configures permissions and connections" HTTP
+        aiida_frontend -> permission_manager "Configures permissions and connections" "HTTP"
         aggregator -> streamer "Forwards energy data"
 
-        Adapter_Device -> aggregator  "Sends real-time energy data" MQTT
-        Adapter_Device -> smartMeter "Accesses real-time energy data" DSMR
+        Adapter_Device -> aggregator  "Sends real-time energy data" "MQTT"
+        Adapter_Device -> smartMeter "Accesses real-time energy data" "DSMR"
 
-        streamer -> eddie_region_connectors  "Streams real-time energy data" MQTT
-        eddie_region_connector_aiida -> eddie_core "Streams real-time energy data" MQTT
-
-        # eddie_region_connector_aiida -> aiida_embedded_app "Sends configuration requests"
-        # eddie_region_connector_aiida -> permission_manager "Authenticates AIIDA instance" HTTP
+        streamer -> eddie_region_connectors  "Streams real-time energy data" "MQTT"
+        eddie_region_connector_aiida -> eddie_core "Streams real-time energy data" "MQTT"
     }
 
     views {
-
         branding {
             logo "./assets/eddie.png"
         }
 
         systemLandscape eddie {
             title "EDDIE System Landscape"
-            # description "The C4 context diagram of the EDDIE system"
             include *
             autoLayout tb
         }
@@ -277,47 +243,32 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
             autoLayout tb
         }
 
-        container aiida "container-regional-devices" {
+        container aiida_regional_devices "container-regional-devices" {
             include aiida_embedded_app
             autoLayout tb
         }
 
-        component aiida_embedded_app "aiida-embedded-app"{
+        component aiida_embedded_app "aiida-embedded-app" {
             include *
             autoLayout tb
         }
 
-        container marketplace "marketplace"{
+        container marketplace "marketplace" {
             include *
             autolayout tb
         }
 
-        // deployment docker "docker-deployment" {
-        //     include *
-        //     autolayout
-        // }
-
-        #!script groovy {
-        #    workspace.views.createDefaultViews()
-        #}
-
         theme default
 
         styles {
-            // relationship "Relationship" {
-            //     routing Direct
-            // }
-
             relationship todo {
                 color #ff0000
-                colour #ff0000
             }
 
             element todo {
                 background #ff0000
                 stroke #ff0000
                 color #ff0000
-                colour #ff0000
             }
 
             element "Company" {
@@ -328,15 +279,11 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
                 background #999999
             }
 
-            element "Application" {
-                background #94c242
-            }
-
             element "Database" {
                 shape cylinder
             }
 
-            element "Policy"{
+            element "Policy" {
                 shape Folder
                 background #E4080A
             }
@@ -351,15 +298,12 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
 
             element "Kafka Cluster" {
                 shape Hexagon
-                #background #53666B
             }
 
             element "Reused Existing Item" {
                 background #1b4f1f
                 shape Box
-                #shape <Box|RoundedBox|Circle|Ellipse|Hexagon|Cylinder|Pipe|Person|Robot|Folder|WebBrowser|MobileDevicePortrait|MobileDeviceLandscape|Component>
             }
         }
     }
-
 }
