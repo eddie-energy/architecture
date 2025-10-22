@@ -133,9 +133,9 @@ These topics allow EDDIE to act both as a producer (publishing validated and raw
 #### Relevance
 
 Kafka topics are a fundamental integration concept of the EDDIE Framework’s Outbound Connectors.  
-They enable the decoupling of internal data flows from external consumers and ensure that permission-related and energy data can be delivered in near real time to Eeligible Parties, regardless of their internal technology stack.  
+They enable the decoupling of internal data flows from external consumers and ensure that permission-related and energy data can be delivered in near real time to Eligible Parties, regardless of their internal technology stack.
 
-Using Kafka allows EDDIE Framework to:
+Using Kafka allows the EDDIE Framework to:
 - Publish validated and raw data messages originating from Region Connectors.
 - Notify Eligible Parties about permission request status changes.
 - Receive termination or retransmission commands directly from Eligible Parties.
