@@ -27,13 +27,13 @@ rc -> rc : Collect \ncustomer data \nfrom regional \ndata source
 rc -> eddie : Send collected data
 activate eddie
 eddie -> restOC : Forward collected data
-restOC -> db : Store data temporarily
+restOC -> db : Store data \ntemporarily
 restOC -> eddie : Make data available\nvia HTTP endpoint
 deactivate eddie
 
 == Data Access ==
-ep -> httpClient : Send GET request to\nREST endpoint
-httpClient -> restOC : Retrieve data
+ep -> httpClient : Request data
+httpClient -> restOC : Send GET requests to the REST endpoint
 restOC -->> ep : Return customer data
 
 @enduml

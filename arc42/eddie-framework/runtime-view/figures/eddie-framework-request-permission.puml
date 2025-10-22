@@ -48,7 +48,7 @@ popup -> core : Subscribe to \nPermission Status
 ' --- End detailed interaction ---
 
 core -> rc : Forward \nPermission \nRequest
-rc -> customer : Show \nConsent \nPortal
+rc -> customer : Direct to \nConsent \nPortal
 customer -> rc : Accept \nRequest
 rc -->> core : Consent \nAccepted
 core -->> popup : Show \nconfirmation
