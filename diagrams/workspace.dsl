@@ -243,7 +243,7 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
             autoLayout tb
         }
 
-        container aiida_regional_devices "container-regional-devices" {
+        container aiida "container-regional-devices" {
             include aiida_embedded_app
             autoLayout tb
         }
