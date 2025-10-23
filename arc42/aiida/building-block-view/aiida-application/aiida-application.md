@@ -30,7 +30,7 @@ The AIIDA Frontend is a web application for the customer to access and configure
 communication between the AIIDA Frontend and the AIIDA Backend, both components need to run on devices connected to the
 household's local area network. This is done for security purposes to ensure that only the customer can configure the
 AIIDA Backend. To configure the connection to the EDDIE Framework, the customer needs to access the EP Website first,
-and manually copy-paste the provided token (encoding the necessary information, e.g., the Region Connector IP and
+and manually copy-paste the provided token (encoding the necessary information, e.g., the URL of the EDDIE framework and
 connection ID) to the AIIDA Frontend. Alternatively, the customer can use the AIIDA Smartphone App which automatically
 sends this information to the AIIDA Backend by scanning a QR code from the EP Website. Overall, the AIIDA Frontend
 enables the customer to: configure the connection to the Data Source, configure the connection to the EDDIE Framework,
