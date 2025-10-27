@@ -77,7 +77,7 @@ This diagram illustrates the complete workflow of how an Eligible Party requests
 
 ## The Eligible Party collects customer data via message broker (Kafka, AMQP, MQTT)
 
-<!-- https://eddie-web.projekte.fh-hagenberg.at/framework/1-running/outbound-connectors/outbound-connector-kafka.html
+<!-- https://architecture.eddie.energy/framework/1-running/outbound-connectors/outbound-connector-kafka.html
 
 - EP needs at least on outbound connector to be enabled
 - EP needs message broker to be available to the EDDIE framework
@@ -95,7 +95,7 @@ This diagram illustrates the complete workflow of how an Eligible Party requests
 
 ## The Eligible Party collects customer data via HTTP
 
-<!-- https://eddie-web.projekte.fh-hagenberg.at/framework/1-running/outbound-connectors/outbound-connector-rest.html
+<!-- https://architecture.eddie.energy/framework/1-running/outbound-connectors/outbound-connector-rest.html
 
 - EP needs rest outbound connector enabled
 - Framework receives data and temporarily stores it
@@ -146,7 +146,7 @@ This diagram illustrates the complete workflow of how an Eligible Party requests
 
 ::: info TODO
 - Please check with @fweingartshofer if these notes are correct!
-- Framework docs can be helpful reference: https://eddie-web.projekte.fh-hagenberg.at/framework
+- Framework docs can be helpful reference: https://architecture.eddie.energy/framework
 :::
 
 ## EDDIE Popup

@@ -18,7 +18,7 @@ box "Marketplace System" #transparent
 end box
 
 box "AIIDA System" #transparent
-  participant "AIIDA \nEmbedded App" as aiida
+  participant "AIIDA \nApplication" as aiida
 end box
 
 ep -> epApp : Ask AIIDA access

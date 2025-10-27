@@ -1,11 +1,12 @@
 ---
-title: Adapter Device for Smart Meters in Italy
-order: 3
-hiddenInSidebar: true
-
+title: Sinapsi Alfa
+order: 7
+collapsed: true
 ---
 
-The [Sinapsi Alfa](https://www.sinapsitech.it/en/home-alfa/) is an Adapter Device that supports Open Meter 2.0 smart meters which are commonly used in **Italy**. 
+The [Sinapsi Alfa](https://www.sinapsitech.it/en/home-alfa/) is a Data Source that supports Open Meter 2.0 smart meters which are commonly used in **Italy**.
+
+![Sinapsi Alfa device](./figures/alfa-bianco.jpg)
 
 ## Connection to Metering Devices
 

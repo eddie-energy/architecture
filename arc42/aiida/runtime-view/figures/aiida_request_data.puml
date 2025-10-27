@@ -18,16 +18,16 @@ end box
 box "\tAIIDA System\t\t"  #transparent
 participant "AIIDA Region \nConnector" as connector
 participant "Timescale DB" as timescale
-participant "AIIDA \nEmbedded App"  as app
-participant "Adapter\n Device" as adapter
+participant "AIIDA \nApplication"  as app
+participant "Data\n Source" as data_source
 end box
-participant "Metering\n Device" as device
+participant "Measuring\n Device" as device
 
-device -> adapter : sends energy\ndata
-adapter -> app : sends energy\ndata
+device -> data_source : sends energy\ndata
+data_source -> app : sends energy\ndata
 app -> timescale : stores energy\ndata
-app -> connector : streams energy data via MQTT
-connector -> service : streams energy \ndata via Kafka
+app -> connector : publishes energy data via MQTT
+connector -> service : subscribes energy \ndata via MQTT
 
 ' website -> customer : show energy data
 ' connector -> website : share energy data

@@ -12,7 +12,7 @@ This section outlines key architectural decisions made for the AIIDA system:
 
 ### Context
 
-AIIDA collects real-time data from metering devices, and sends this data to one or more EDDIE Framework instances hosted by eligible parties. To ensure that all eligible parties receive the data in a timely manner, an appropriate communication mechanism is needed, that can manage potential computational and network loads.    
+AIIDA collects near real-time data from metering devices, and sends this data to one or more EDDIE Framework instances hosted by eligible parties. To ensure that all eligible parties receive the data in a timely manner, an appropriate communication mechanism is needed, that can manage potential computational and network loads.    
 
 ### Decision
 
@@ -20,7 +20,7 @@ The data is sent from AIIDA to the AIIDA Region Connector of the EDDIE Framework
 
 ### Consequences
 
-MQTT improves scalability while handling real-time data well, and reduces the overhead of AIIDA on the in-house device by leveraging a broker running along with the AIIDA Region Connector. However, it creates a dependency on the central broker, which introduces a single point of failure for the AIIDA Region Connector.
+MQTT improves scalability while handling near real-time data well, and reduces the overhead of AIIDA on the in-house device by leveraging a broker running along with the AIIDA Region Connector. However, it creates a dependency on the central broker, which introduces a single point of failure for the AIIDA Region Connector.
 
 ### Alternatives
 
@@ -48,16 +48,16 @@ Alternatives include static configuration, which offers simplicity with hardcode
 
 ### Context  
 
-While Regional Data-sharing Infrastructures provide access to historical validated energy consumption data, they typically do not provide real-time energy consumption data. To access real-time energy data, AIIDA retrieves such data directly from in-house metering devices. These devices often have limited-range interfaces, such as DSMR over RJ12, which requires physical proximity for access, making it necessary to have a dedicated in-house device within the customer’s premises. Additionally, metering device interfaces can vary across countries, requiring AIIDA to support multiple interface types for broad compatibility with in-house metering devices across Europe. 
+While Regional Data-sharing Infrastructures provide access to historical validated energy consumption data, they typically do not provide near real-time energy consumption data. To access near real-time energy data, AIIDA retrieves such data directly from in-house metering devices. These devices often have limited-range interfaces, such as DSMR over RJ12, which requires physical proximity for access, making it necessary to have a dedicated in-house device within the customer’s premises. Additionally, metering device interfaces can vary across countries, requiring AIIDA to support multiple interface types for broad compatibility with in-house metering devices across Europe.  The near real-time data obtained from these interfaces usually has high resolution and can be filtered or aggregated for specific purposes at the edge. Keeping the data locally in the customer’s environment enhances security.
 
 ### Decision  
 
-To access real-time energy data, AIIDA is deployed on a dedicated in-house device that connects to metering devices. This dedicated in-house device is a Raspberry Pi computer that collects real-time data via various interfaces of metering devices, and sends this data to the EDDIE Framework via the AIIDA Region Connector. This approach ensures that metering devices sending data over wired or wireless channels can be connected to the EDDIE System.  
+To access near real-time energy data, AIIDA is deployed on a dedicated in-house device that connects to metering devices. This dedicated in-house device is a Raspberry Pi computer that collects near real-time data via various interfaces of metering devices, and sends this data to the EDDIE Framework via the AIIDA Region Connector. This approach ensures that metering devices sending data over wired or wireless channels can be connected to the EDDIE System.  
 
 ### Consequences  
 
-Using a dedicated in-house device ensures reliable access to metering devices, regardless of physical interfaces or protocol variations across regions. Furthermore, there is no additional delay in accessing the data, e.g., similar to when accessing data from Regional Data-sharing Infrastructures, and privacy is preserved because the data is sent directly from the customer site to the EDDIE Framework. However, this approach introduces hardware deployment and maintenance costs, requiring customers to install and manage the dedicated in-house device. Additionally, the real-time data from smart meters is not validated, meaning that there may be discrepancies compared to the historical validated consumption data obtained from Regional Data-sharing Infrastructures. 
+Using a dedicated in-house device ensures reliable access to metering devices, regardless of physical interfaces or protocol variations across regions. Furthermore, there is no additional delay in accessing the data, e.g., similar to when accessing data from Regional Data-sharing Infrastructures, and privacy is preserved because the data is sent directly from the customer site to the EDDIE Framework. However, this approach introduces hardware deployment and maintenance costs, requiring customers to install and manage the dedicated in-house device. Additionally, the near real-time data from smart meters is not validated, meaning that there may be discrepancies compared to the historical validated consumption data obtained from Regional Data-sharing Infrastructures. 
 
 ### Alternatives  
 
-Deploying AIIDA in the cloud avoids the in-house device. However, this assumes that all the Adapter Devices can send the real-time data to AIIDA in the cloud over the Internet. Devices that do not have Internet connectivity cannot send data to AIIDA and the EDDIE Framework. Accessing real-time data from Regional Data-sharing Infrastructures (similar to how historical validated energy consumption data is accessed) avoids the need for AIIDA, but such infrastructures are not yet available.
+Deploying AIIDA in the cloud avoids the in-house device. However, this assumes that all the Data Sources can send the near real-time data to AIIDA in the cloud over the Internet. Devices that do not have Internet connectivity cannot send data to AIIDA and the EDDIE Framework. Accessing near real-time data from Regional Data-sharing Infrastructures (similar to how historical validated energy consumption data is accessed) avoids the need for AIIDA, but such infrastructures are not yet available. This also implies that full-resolution user data is stored in the cloud, resulting in high traffic, increased processing and storage costs, and reduced privacy and security.

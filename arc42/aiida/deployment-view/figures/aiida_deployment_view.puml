@@ -1,5 +1,5 @@
 @startuml aiida_deployment_view
-'component diagram
+' component diagram
 
 ' skinparam linetype ortho
 
@@ -18,43 +18,45 @@ skinparam rectangle{
 }
 
 rectangle "AIIDA System" {
+  node "In-house Device" as aiida {
+    artifact "AIIDA Application" as aiidaapp
+    artifact "EMQX \nMQTT Broker" as emqx
+    artifact "TimescaleDB" as db
+    artifact "Keycloak" as kc
+
+    aiidaapp -down- emqx : MQTT
+    aiidaapp -down- db : SQL
+    aiidaapp -down- kc : OIDC
+    db -[hidden]right- emqx
+    kc -[hidden]right- emqx
+  }
+
   node "Eligible Party Infrastructure"  as epInfra{
-      artifact "AIIDA Region\nConnector" as regcon
+    artifact "AIIDA Region\nConnector" as regcon
     artifact "EMQX \nMQTT Broker" as broker
     artifact "EMQX \nIAM DB" as emqxiam
 
-    broker -right- emqxiam : SQL
+    broker -left- emqxiam : SQL
     regcon -down- broker : MQTT
     regcon -down- emqxiam : SQL
 
   }
 
-  node "Smartphone" as smartphone{
-    artifact "AIIDA Smartphone App" as app
-
-  }
-  node "In-house Device" as aiida {
-    artifact "AIIDA Embedded App" as embapp
-    artifact "NanoMQ \nMQTT Broker" as nano
-    artifact "TimescaleDB" as db
-
-    embapp -down- nano : MQTT
-    embapp -down- db : SQL
-    db -[hidden]right- nano
-  }
-
-  embapp -up- app : HTTP
-  embapp -right- broker : MQTT
+  aiidaapp -left- broker : MQTT
+  aiidaapp -up- REST : HTTP
+  aiidaapp -up- UI : HTTP
 
   ' frame "Device Austria" as device2
   ' frame "Device France" as device3
-node "Adapter Device" as adapterDevice
+node "Data Source" as adapterDevice
 }
-node "Metering Device" as smartmeter
+node "Measuring Device" as measuringdevice
 
-adapterDevice -left- embapp : HTTP
-adapterDevice -left- nano : MQTT
+adapterDevice -left- aiidaapp : Modbus
+adapterDevice -left- emqx : MQTT
 
-smartmeter -up- adapterDevice : DSMR
+measuringdevice -up- adapterDevice : DSMR, Modbus, M-Bus, etc.
+
+}
 
 @enduml

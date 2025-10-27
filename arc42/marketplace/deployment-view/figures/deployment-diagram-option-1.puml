@@ -33,7 +33,7 @@ ep -down[hidden]- customer
 }
 
 rectangle "AIIDA System" {
-  artifact "AIIDA Embedded App" as aiida
+  artifact "AIIDA Application" as aiida
 }
 
 

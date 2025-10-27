@@ -8,7 +8,7 @@ This document provides a comprehensive view on the architecture of the EDDIE sof
 The EDDIE software system is defined as a system of systems, consisting of three internal systems: 
 
 1. EDDIE Framework: Focuses on providing historical and (near) real-time energy data to eligible parties. 
-1. AIIDA: This is the Administrative Interface for In-house Data Access (AIIDA) which focuses on accessing real-time energy data from energy metering and IoT devices.
+1. AIIDA: This is the Administrative Interface for In-house Data Access (AIIDA) which focuses on accessing near real-time energy data from energy metering and IoT devices.
 1. Marketplace: Focuses on facilitating the communication between customers and eligible parties.
 
 The main goals of the EDDIE system are the following:
@@ -16,7 +16,7 @@ The main goals of the EDDIE system are the following:
 | Goal | Description |
 |-|-|
 | Enable secure energy data access | Implement a system to securely access historical and near real-time energy data from diverse sources across European member states. |
-| Facilitate in-house energy data sharing | Develop AIIDA to allow customers to share real-time energy data from their metering and IoT devices (e.g., smart meters, and IoT home automation systems). |
+| Facilitate in-house energy data sharing | Develop AIIDA to allow customers to share near real-time energy data from their metering and IoT devices (e.g., smart meters, and IoT home automation systems). |
 | Ensure interoperability across systems | Support standardized data exchange and integration with various national and regional energy data-sharing infrastructures to create a unified European energy data interface. |
 | Empower customers and eligible parties | Provide an interface that enables customers and eligible parties to use the EDDIE system for sharing energy data and for running energy services, e.g., to improve energy efficiency, predictability, and demand response, among others. |
 | Enhance customer control and permission management | Implement customer-controlled permission management, allowing users to grant and revoke access to their energy data in compliance with GDPR. |
@@ -64,7 +64,7 @@ The quality goals of the architecture aim at expressing the system's priorities 
 
 | ID | Quality Goal | Description |
 |-|-|-|
-| QG4 | Scalability | Support the handling of multiple customers and large volumes of data, including real-time data streams from European metering points. |
+| QG4 | Scalability | Support the handling of multiple customers and large volumes of data, including near real-time data streams from European metering points. |
 | QG5 | Usability | Deliver intuitive, user-friendly interfaces for the customers and eligible parties, ensuring smooth navigation and interaction. |  
 | QG6 | Reliability | Provide a highly reliable system with minimal downtime to ensure uninterrupted access to energy data. |
 | QG7 | Performance | Ensure low latency data access for the energy services of the eligible party. |
