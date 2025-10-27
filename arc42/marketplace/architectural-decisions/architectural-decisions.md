@@ -45,7 +45,7 @@ All users are required to create an account and log in to access the system’s 
 
 ### Consequences
 
-Using a centralized user management system allows the Marketplace to associate all data with user accounts.  
+Using a centralized user management system allows the Data Services Marketplace to associate all data with user accounts.  
 Submitted data services and data hubs are linked to eligible party accounts, while customer feedback such as ratings and comments is mapped to the respective customer accounts.
 
 ### Alternatives
