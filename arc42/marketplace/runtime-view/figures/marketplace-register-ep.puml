@@ -12,7 +12,7 @@ autonumber
 actor "Eligible Party" as ep
 actor "Marketplace Operator" as operator
 
-box "Marketplace System" #transparent
+box "Data Services Marketplace System" #transparent
   participant "IAM" as iam
   participant "Data Services Marketplace" as marketplace
 end box

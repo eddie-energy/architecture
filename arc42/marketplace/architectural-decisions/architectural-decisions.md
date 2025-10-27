@@ -4,11 +4,11 @@ order: 5
 ---
 
 This section outlines key architectural decisions made for the Data Services Marketplace system:
-- [Implement Marketplace Frontend as PWA](./architectural-decisions.md#implement-marketplace-frontend-as-pwa)
+- [Marketplace Frontend as PWA](./architectural-decisions.md#marketplace-frontend-as-pwa)
 - [User Management](./architectural-decisions.md#user-management)
 - [Hide data hubs from customers](./architectural-decisions.md#hide-data-hubs-from-customers)
 
-## Implement Marketplace Frontend as PWA
+## Marketplace Frontend as PWA
 
 ### Context
 

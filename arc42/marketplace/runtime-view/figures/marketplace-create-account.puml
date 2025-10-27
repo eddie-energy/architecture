@@ -10,13 +10,13 @@ autonumber
 !pragma teoz true
 
 actor "User" as user
-box "Marketplace System" #transparent
+box "Data Services Marketplace System" #transparent
   participant "Marketplace \nFrontend" as app
   participant "IAM" as iam
   participant "Database" as database
 end box
 
-user -> app : Register/login
+user -> app : Register
 app -->> app : IAM redirection
 app -> iam : Create account
 activate iam

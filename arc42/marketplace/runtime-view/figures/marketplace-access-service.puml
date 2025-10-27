@@ -10,7 +10,7 @@ autonumber
 !pragma teoz true
 
 actor "Customer/EP" as customer
-box "Marketplace System" #transparent
+box "Data Services Marketplace System" #transparent
   participant "Marketplace \nFrontend" as app
   participant "Marketplace \nBackend" as marketplace
 end box
