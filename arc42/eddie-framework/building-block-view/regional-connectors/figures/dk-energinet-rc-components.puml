@@ -1,0 +1,74 @@
+@startuml
+'skinparam linetype ortho
+
+node "EDDIE Core" as core
+
+database "database" as db {
+	folder "Permission Events" as pe
+	frame "Permission Request View" as prv
+	pe <-- prv
+}
+interface "SQL" as sql
+db -up- sql
+
+node "Energinet API" as energinet
+interface "Energinet HTTP IF" as energinet_if
+energinet_if -- energinet
+
+node "Denmark Energinet Region Connector" as rc {
+	[Persistence] as persistence
+	persistence --> sql
+	interface "Persistence IF" as persistence_if
+	persistence -up- persistence_if
+
+	[Event Infrastructure] as event_infra
+	event_infra -right-> persistence_if
+	interface "Event Infrastructure IF" as ev_if
+	event_infra -up- ev_if 
+
+	interface "Streams IF" as streams_if
+
+	[Providers] as providers
+	providers --> streams_if
+	interface "Providers IF" as providers_if
+	providers_if -- providers
+	core --> providers_if
+
+	[API Client] as api
+	api --> energinet_if
+	interface "API Client IF" as api_if
+	api -up- api_if
+
+	package "Services" as services {
+		[PermissionService] as permission_service
+		permission_service --> persistence_if
+		permission_service --> ev_if
+		permission_service -up-> core
+		interface "Permission Service IF" as permission_service_if
+		permission_service - permission_service_if
+
+		[PollingService] as polling_service
+		polling_service -up- streams_if
+		polling_service -left-> ev_if
+		polling_service <-up-> core
+	
+		polling_service -> api_if
+		interface "Polling Service IF" as polling_service_if
+		polling_service -- polling_service_if
+
+	}
+
+	[Event Handlers] as event_handlers
+	event_handlers -down-> ev_if
+	event_handlers -down-> polling_service_if
+	event_handlers -down-> persistence_if
+	event_handlers -up-> core
+	event_handlers -> api_if
+
+	[Web Controller] as wc
+	wc --> permission_service_if
+	interface "Web Controller IF" as http 
+	http -- wc 
+	core --> http 
+} 
+@enduml
