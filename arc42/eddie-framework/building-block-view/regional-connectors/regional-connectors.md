@@ -54,3 +54,78 @@ This page documents shared concepts and interfaces while the following pages doc
 
 - [EDA (Austria)](./at-eda.md)
 - [AIIDA](./aiida.md) -->
+
+### Shared Components
+
+These are the components that each region connector will have an instance of.
+There is a separate instance for each region connector.
+The following diagram shows some of the shared components.
+
+![Generic Region Connector Components](./figures/rc-components.png)
+
+#### Event Infrastructure
+
+This is the central communications component.
+It is responsible for:
+
+1. Persisting events to the database
+2. Receiving events from the event producers, which can be other components
+3. Propagating events to subscribers
+
+#### Permission Events
+
+A permission event represents a change in a permission request.
+There are special types of permission events, which are internal events.
+These events will be ignored by certain event handlers.
+The internal events depend on the implementation of the specific region connector.
+
+#### Permission Request
+
+A permission request represents a request initiated by a final customer that is tracked via EDDIE.
+It is an aggregate of multiple related permission events.
+A new event will change the state of the permission request.
+
+#### Permission Request Views
+
+The permission request views are dedicated views in the database.
+They are responsible for aggregating the permission events to permission requests.
+Each region connector will have a dedicated view for its permission requests.
+
+#### Event Handlers
+
+There are two common shared event handlers, that are used by all region connectors to create connection status messages and permission market documents.
+Those documents are then propagated to the EDDIE Core.
+They subscribe to all events in the event infrastructure, except internal events.
+Since they are always present in each region connector, they will not appear in the more detailed building blocks to reduce the complexity.
+
+#### Persistence
+
+The persistence components are responsible for persisting and querying permission events.
+Permission events might be preprocessed in the database using the permission request view.
+This view aggregates related permission events into a permission request.
+
+The persistence components also track which energy data was already received for which permission request.
+
+The persistence components can also query and persist region connector specific components, which are not covered here.
+
+#### Web Controller
+
+Each region connector will at least have one Web Controller that is responsible for serving API endpoints to create permission requests and retrieving status updates for a specific permission request.
+In addition, the controllers might implement endpoints for OAuth 2.0 callbacks or similar mechanisms.
+They can also include other endpoints, not described here.
+
+#### Providers
+
+Providers are components that make documents produced by the region connector, such as validated historical data market documents, available to the EDDIE Core.
+They map the region specific data formats to data formats accepted by the EDDIE Core.
+
+#### Data Needs Services in the EDDIE Core
+
+All region connectors have access to the data needs services, which provide information about data needs.
+Furthermore, each region connector can configure their data needs services with its constraints to aid in creation and validation of permission requests.
+
+
+#### Other shared components
+
+There are shared components that are far too low-level to describe here.
+Please refer to the [Shared Functionality](https://architecture.eddie.energy/framework/3-extending/region-connector/shared-functionality.html) section in the framework docs.

@@ -1,0 +1,36 @@
+@startuml
+node "EDDIE Core" as core
+
+database "database" as db {
+	folder "Permission Events" as pe
+	frame "Permission Request View" as prv
+	pe <-- prv
+}
+interface "SQL" as sql
+db -up- sql
+
+
+node "Generic Region Connector" as rc {
+	[Persistence] as persistence
+	persistence --> sql
+	interface "Persistence IF" as persistence_if
+	persistence -up- persistence_if
+
+	[Event Infrastructure] as event_infra
+	event_infra --> persistence_if
+	interface "Event Infrastructure IF" as ev_if
+	event_infra -up- ev_if 
+
+	[Event Handlers] --> ev_if
+
+	[Providers] as providers
+	interface "Providers IF" as providers_if
+	providers_if -- providers
+	core --> providers_if
+
+	[Web Controller] as wc
+	interface "Web Controller IF" as http 
+	http -- wc 
+	core --> http 
+} 
+@enduml
