@@ -12,20 +12,20 @@ links of the tables below.
 
 This table shows the supported Data Sources that connect to smart meters of specific countries.
 
-| To access smart meter data in specific countries                                         | Data Source                                                   |
-|------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| Austria                                                                                  | [Smart Meter Adapter](./data-source-sma)                      |
-| France                                                                                   | [Micro Teleinfo V3.0](./data-source-micro-teleinfo)           |
-| Italy                                                                                    | [Sinapsi Alfa](./data-source-sinapsi)                         |
-| Netherlands, Belgium, Sweden, Denmark, Finland, Hungary, Ireland, Lithuania, Switzerland | [Smart Meter WiFi Gateway](./data-source-sga)                 |
-| Austria, Germany, Slovenia, Luxembourg, Switzerland                                      | [Smartmeter Kundenschnittstellen Modul](./data-source-shrdzm) |
+| To access smart meter data in specific countries                                         | Data Source                                                      |
+|------------------------------------------------------------------------------------------|------------------------------------------------------------------|
+| Austria                                                                                  | [Smart Meter Adapter](./data-source-sma.md)                      |
+| France                                                                                   | [Micro Teleinfo V3.0](./data-source-micro-teleinfo.md)           |
+| Italy                                                                                    | [Sinapsi Alfa](./data-source-sinapsi.md)                         |
+| Netherlands, Belgium, Sweden, Denmark, Finland, Hungary, Ireland, Lithuania, Switzerland | [Smart Meter WiFi Gateway](./data-source-sga.md)                 |
+| Austria, Germany, Slovenia, Luxembourg, Switzerland                                      | [Smartmeter Kundenschnittstellen Modul](./data-source-shrdzm.md) |
 
 This table shows the supported data sources which don't connect to a smart meters.
 
-| To access other data | Data Source                            |
-|----------------------|----------------------------------------|
-| Shelly               | [Shelly](./data-source-shelly)         |
-| Modbus               | [Modbus](./data-source-modbus)         |
-| CIM                  | [CIM](./data-source-cim)               |
-| Simulation           | [Simulation](./data-source-simulation) |
-| Inbound API          | [Inbound](./data-source-inbound)       |
+| To access other data | Data Source                               |
+|----------------------|-------------------------------------------|
+| Shelly               | [Shelly](./data-source-shelly.md)         |
+| Modbus               | [Modbus](./data-source-modbus.md)         |
+| CIM                  | [CIM](./data-source-cim.md)               |
+| Simulation           | [Simulation](./data-source-simulation.md) |
+| Inbound API          | [Inbound](./data-source-inbound.md)       |
