@@ -18,6 +18,7 @@ This section describes the building block view of the EDDIE Framework using the 
 ## EDDIE Application
 
 The application uses a plugin architecture for both inbound and outbound data exchange.
+It is a single application packaged as a JAR, which can be deployed on a Java Web Server or via Docker.
 _Inbound_ referring to the retrieval of energy data from the data provider, 
 and _outbound_ to the communication with the Eligible Party, 
 where individual plugins can be enabled to support specific data providers or data exchange protocols. 
@@ -28,7 +29,7 @@ These plugins are referred to as _Region Connectors_ and _Outbound Connectors_.
 | Component | Description |
 | - | - |
 | EDDIE Popup | The EDDIE Popup is a frontend based on micro-frontend architecture embedded into the website of the Eligible Party. It provides the customer-facing user interface for permission requests, guiding the customer through all required steps to grant or revoke access to their energy data. |
-| EDDIE Core | The EDDIE Core is the Spring backend entry point of the framework, packaged as a single JAR inside a Docker container. It orchestrates all other modules and facilitates the flow of information between Region Connectors and Outbound Connectors. |
+| EDDIE Core | The EDDIE Core is the entry point of the framework. It orchestrates all other modules and facilitates the flow of information between Region Connectors and Outbound Connectors, as well as providing access to the Data Needs API to the other modules. |
 | Master Data API | The Master Data API is a backend service of the EDDIE Application. It provides metadata about business entities such as Permission Administrators and Metered Data Administrators. |
 | Data Needs API | The Data Needs API is part of the EDDIE Application backend. It allows the Eligible Party to manage the data requirements of their services, specifying what type of data should be collected for each permission. |
 | [Region Connectors](./regional-connectors/regional-connectors.md) | Region Connectors are backend plugins implemented within the EDDIE Application. Each connector integrates with the APIs of a specific Regional Data-sharing infrastructure (e.g., PA/MDA systems), handling permission requests and collecting validated historical data and accounting point data. |
