@@ -11,7 +11,7 @@ autonumber
 
 actor "User" as user
 box "Data Services Marketplace System" #transparent
-  participant "Marketplace \nFrontend" as app
+  participant "Marketplace \nPWA" as app
   participant "IAM" as iam
   participant "Database" as database
 end box
