@@ -161,7 +161,7 @@ Since Eligible Parties can differ in their backend technologies and data process
 
 Additionally, Kafka supports:
 
-- High-performance data streaming for real-time energy data.
+- High-performance data streaming for near real-time energy data.
 - Fault tolerance and persistence for sensitive permission and metering information.
 - Extensible topic-based communication for adding new message types or regional formats in the future.
 
@@ -269,7 +269,7 @@ This state model standardizes how permissions are created, validated, transmitte
 
 ![BPRT diagram showing the permission request process](../crosscutting-concepts/figures/permission-process-model.svg)
 
-The [Operation Manual](https://eddie-web.projekte.fh-hagenberg.at/framework/2-integrating/integrating.html#permission-process-model) provides details on how to interpret and handle specific states.
+The [Operation Manual](https://architecture.eddie.energy/framework/2-integrating/integrating.html#permission-process-model) provides details on how to interpret and handle specific states.
 
 #### Relevance
 
@@ -293,9 +293,9 @@ By adopting a unified state machine, EDDIE System ensures that every data exchan
 Eligible Parties require different data to provide their services.  
 These requirements are standardized across region connectors as Data Needs. A Data Need specifies:
 
-- the type of data family (e.g., validated historical data, accounting point data, AIIDA real-time data),
-- the time frame of the request,
-- and additional parameters relevant for the data type.
+- the type of data family (e.g., validated historical data, accounting point data, AIIDA near real-time data),  
+- the time frame of the request,  
+- and additional parameters relevant for the data type.  
 
 On the frontend, Data Needs are used to inform customers about what data is requested and to determine which Region Connectors can fulfill the request.
 
@@ -306,7 +306,7 @@ Data Needs ensure that service requirements are expressed consistently across al
 #### Motivation
 
 Without a common model for expressing data requirements, each region would enforce its own conventions. Data Needs provide a uniform contract that allows services to scale across multiple regions while remaining transparent to customers.
-More details are available in the [operation manual](https://eddie-web.projekte.fh-hagenberg.at/framework/2-integrating/data-needs.html).
+More details are available in the [operation manual](https://architecture.eddie.energy/framework/2-integrating/data-needs.html).
 
 ## User Experience
 
@@ -360,7 +360,7 @@ The multistep form improves usability by guiding customers through distinct step
 4. Post-request instructions and actions.
 5. Success page.
 
-This approach adapts to button configuration and the type of Data Need (e.g., AIIDA real-time data).  
+This approach adapts to button configuration and the type of Data Need (e.g., AIIDA near real-time data).  
 Errors and status updates are displayed as separate pages, ensuring clarity for the customer.
 
 #### Motivation

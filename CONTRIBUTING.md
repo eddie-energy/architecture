@@ -5,7 +5,7 @@ Thank you for your interest in contributing! At the moment, we accept contributi
 ## How to view the document
 
 There are 2 options to read the architecture documentation:
-1. [Visit the architecture website](https://eddie-web.projekte.fh-hagenberg.at/architecture/).
+1. [Visit the architecture website](https://architecture.eddie.energy/architecture/).
 2. Set up the architecture website locally by using Node.js 20. 
     - `npm install` to install dependencies
     - `npm run dev` starts serving the website locally
@@ -41,5 +41,5 @@ As soon as you have a suggestion of any type to improve the document, please cre
 
 ### Solving issues
 
-If you wish to resolve an existing [issue](https://github.com/eddie-energy/architecture/issues), please push your solution with one commit message (or more if necessary) describing your changes directly on the main branch. In this commit message, please also add the number of the issue at the end, e.g., "Add link to CONTRIBUTING file #43". Provide a short description of the solution to the issue including links to the changes on the [website](https://eddie-web.projekte.fh-hagenberg.at/architecture/).
+If you wish to resolve an existing [issue](https://github.com/eddie-energy/architecture/issues), please push your solution with one commit message (or more if necessary) describing your changes directly on the main branch. In this commit message, please also add the number of the issue at the end, e.g., "Add link to CONTRIBUTING file #43". Provide a short description of the solution to the issue including links to the changes on the [website](https://architecture.eddie.energy/architecture/).
 

@@ -130,7 +130,7 @@ A standalone web application (opened in a new window or iframe) was considered b
 
 ### Context
 
-The EDDIE Framework collects historical data from Regional Data-sharing Infrastructures and real-time data from AIIDA.  
+The EDDIE Framework collects historical data from Regional Data-sharing Infrastructures and near real-time data from AIIDA.  
 This data must be distributed efficiently to multiple Eligible Parties and services while maintaining scalability and minimal latency.
 
 ### Decision
@@ -143,7 +143,7 @@ Each service subscribes to its respective topic, receiving data in either standa
 Positive consequences
 - Scalable and flexible data delivery mechanism.
 - Reduces coupling between data producers and consumers.
-- Enables real-time streaming for multiple Eligible Parties.
+- Enables near real-time streaming for multiple Eligible Parties.
 
 Negative consequences
 - Requires additional infrastructure and monitoring.
@@ -151,7 +151,7 @@ Negative consequences
 
 ### Alternatives
 
-Direct HTTP-based delivery was considered simpler but unsuitable for high-volume or real-time data exchange scenarios.
+Direct HTTP-based delivery was considered simpler but unsuitable for high-volume or near real-time data exchange scenarios.
 
 
 ## Separate System Monitoring and Admin Console

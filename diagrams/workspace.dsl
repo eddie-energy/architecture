@@ -44,6 +44,31 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
             }
         }
 
+        ds_marketplace = softwareSystem "Data Services Marketplace" {
+            description "Catalog of energy data services"
+
+            ds_mplace_app = container "Marketplace PWA" {
+                description "Frontend Interface for eligible parties and customers to access data services"
+            }
+
+            ds_mplace_backend = container "Marketplace Backend" {
+                description "Implements the marketplace workflows (e.g., to submit and search for energy services)"
+            }
+
+            ds_mplace_database = container "Database" {
+                description "Stores customer and eligible party data"
+                tags "Database"
+            }
+
+            ds_mplace_iam = container "IAM" {
+                description "Manages the authentication and the authorization of customers and eligible parties"
+            }
+        }
+
+        ep_system = softwareSystem "Eligible party system" {
+            description "Eligible party infrastructure providing the data service"
+        }
+
         other_dataspace = softwareSystem "External Energy Data Space" {
             description "External EU Energy Data Space, e.g., Omega-X, OneNet"
             tags "outofscope"
@@ -110,27 +135,30 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         }
 
         aiida = softwareSystem "AIIDA" {
-            description "Manages permission and access to real-time energy data"
 
-            aiida_embedded_app = container "AIIDA Embedded App" {
+            description "Manages permission and access to near real-time energy data"
+
+            aiida_embedded_app = container "AIIDA Application" {
                 description "Implements permission management and data streaming"
 
                 streamer = component "Streamer" {
                     description "Streams energy data"
                 }
+
                 permission_manager = component "Permission Manager" {
                     description "Handles customer permission and data access"
                 }
-                aggregator = component "Aggregator" {
-                    description "Collects real-time energy data"
-                }
 
-                error_handler = component "Error Handler" {
-                    description "Logs processes and error messages"
+                aggregator = component "Aggregator" {
+                    description "Collects near real-time energy data"
                 }
 
                 aiida_frontend = component "AIIDA Frontend" {
                     description "Web interface for the customer"
+                }
+
+                data_source_adapter = component "Data Source Adapter"{
+                    description "Connects AIIDA to the Data Source"
                 }
             }
 
@@ -139,16 +167,13 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
                 tags "Database"
             }
 
-            Adapter_Device = container "Adapter Device" {
-                description "Connects AIIDA to the Metering Device"
+            data_source = container "Data Source"{
+                description "Logical or physical instance between measuring device and AIIDA"
             }
 
-            aiida_app = container "AIIDA Smartphone App" {
-                description "Smartphone interface for the customer"
-            }
         }
 
-        smartMeter = softwareSystem "Metering Device" {
+        smartMeter = softwareSystem "Measuring Device" {
             description "In-house device that collects energy data, e.g., a smart meter"
             tags "outofscope"
         }
@@ -177,6 +202,18 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         ds_mplace_backend -> ds_mplace_database "Stores data" SQL
         ds_mplace_backend -> ep_service "Redirects to data service"
 
+        customer -> ds_marketplace "Browses data services"
+
+        eligible_party -> ds_marketplace "Submits data services"
+        eligible_party -> ds_mplace_iam "Creates account"
+        customer -> ds_mplace_iam "Creates account"
+        customer -> ds_mplace_app "Browses data services"
+        eligible_party -> ds_mplace_app "Submits data services"
+        ds_mplace_app -> ds_mplace_backend "Submits and search data services" HTTP
+        ds_mplace_backend -> ds_mplace_database "Stores data" SQL
+        eligible_party -> ep_system "Create data service"
+        ds_mplace_backend -> ep_system "Redirect to data service" URL
+
         eddie_application -> eddie_database "Store system state"
         eddie_system_monitoring -> eddie_application "Aggregate logs and retrieve system information"
         eddie_admin_console -> eddie_auth "Authorize users"
@@ -197,18 +234,18 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         eddie_outbound_connectors -> ep_service "Stream energy data" "Kafka/AMQP/HTTP"
         ep_service -> eddie_outbound_connectors "Send instructions" "Kafka/AMQP/HTTP"
 
-        aiida_app ->  permission_manager "Configures permissions and connections" "HTTP"
-        aggregator -> timescale_db "Stores energy data" "SQL"
-        permission_manager -> error_handler "Forwards status and error messages"
+        # permission_manager -> timescale_db "Stores energy data" SQL
+        aggregator -> timescale_db "Stores energy data" SQL
         permission_manager -> streamer "Provides permission to stream data"
         aiida_frontend -> permission_manager "Configures permissions and connections" "HTTP"
         aggregator -> streamer "Forwards energy data"
 
-        Adapter_Device -> aggregator  "Sends real-time energy data" "MQTT"
-        Adapter_Device -> smartMeter "Accesses real-time energy data" "DSMR"
+        data_source -> data_source_adapter  "Sends near real-time energy data" MQTT
+        data_source_adapter -> aggregator  "Provides parsed near real-time energy data"
+        data_source -> smartMeter "Accesses near real-time energy data" "DSMR,wM-Bus,etc."
 
-        streamer -> eddie_region_connectors  "Streams real-time energy data" "MQTT"
-        eddie_region_connector_aiida -> eddie_core "Streams real-time energy data" "MQTT"
+        streamer -> eddie_region_connectors  "Streams near real-time energy data" "MQTT"
+        eddie_region_connector_aiida -> eddie_core "Streams near real-time energy data" "MQTT"
     }
 
     views {
@@ -219,6 +256,8 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         systemLandscape eddie {
             title "EDDIE System Landscape"
             include *
+            exclude ep_system
+            exclude marketplace
             autoLayout tb
         }
 
@@ -246,6 +285,11 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         component aiida_embedded_app "aiida-embedded-app" {
             include *
             autoLayout tb
+        }
+
+        container ds_marketplace "data-services-marketplace"{
+            include *
+            autolayout tb
         }
 
         container ds_marketplace "data-services-marketplace"{

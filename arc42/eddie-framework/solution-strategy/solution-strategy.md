@@ -55,7 +55,7 @@ The EDDIE Framework solves this problem by:
 
 ## How does the EDDIE Framework integrate with other EDDIE components?
 
-- With AIIDA: The framework uses AIIDA as a specialized Region Connector for in-house real-time data streams.  
+- With AIIDA: The framework uses AIIDA as a specialized Region Connector for in-house near real-time data streams.  
 - With the Marketplace: The Marketplace helps customers discover Eligible Parties and their services, but no data flows through the Marketplace itself. Data exchange always happens through the EDDIE Framework once permissions are granted. 
   
 ## Deployability
