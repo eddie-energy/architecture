@@ -44,31 +44,6 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
             }
         }
 
-        ds_marketplace = softwareSystem "Data Services Marketplace" {
-            description "Catalog of energy data services"
-
-            ds_mplace_app = container "Marketplace PWA" {
-                description "Frontend Interface for eligible parties and customers to access data services"
-            }
-
-            ds_mplace_backend = container "Marketplace Backend" {
-                description "Implements the marketplace workflows (e.g., to submit and search for energy services)"
-            }
-
-            ds_mplace_database = container "Database" {
-                description "Stores customer and eligible party data"
-                tags "Database"
-            }
-
-            ds_mplace_iam = container "IAM" {
-                description "Manages the authentication and the authorization of customers and eligible parties"
-            }
-        }
-
-        ep_system = softwareSystem "Eligible party system" {
-            description "Eligible party infrastructure providing the data service"
-        }
-
         other_dataspace = softwareSystem "External Energy Data Space" {
             description "External EU Energy Data Space, e.g., Omega-X, OneNet"
             tags "outofscope"
@@ -189,8 +164,7 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         customer -> ep_website "Fills out EDDIE Popup"
         ep_website -> eddie_popup "Embeds EDDIE Popup" "HTTP"
 
-        customer -> aiida_frontend "Provides permission for real-time data sharing"
-        customer -> aiida_app "Interacts with (scans QR Code)"
+        customer -> aiida_frontend "Provides permission for near real-time data sharing"
         customer -> ds_marketplace "Browses data services"
 
         eligible_party -> ds_marketplace "Submits data services"
@@ -201,18 +175,6 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         ds_mplace_app -> ds_mplace_backend "Submits and search data services" HTTP
         ds_mplace_backend -> ds_mplace_database "Stores data" SQL
         ds_mplace_backend -> ep_service "Redirects to data service"
-
-        customer -> ds_marketplace "Browses data services"
-
-        eligible_party -> ds_marketplace "Submits data services"
-        eligible_party -> ds_mplace_iam "Creates account"
-        customer -> ds_mplace_iam "Creates account"
-        customer -> ds_mplace_app "Browses data services"
-        eligible_party -> ds_mplace_app "Submits data services"
-        ds_mplace_app -> ds_mplace_backend "Submits and search data services" HTTP
-        ds_mplace_backend -> ds_mplace_database "Stores data" SQL
-        eligible_party -> ep_system "Create data service"
-        ds_mplace_backend -> ep_system "Redirect to data service" URL
 
         eddie_application -> eddie_database "Store system state"
         eddie_system_monitoring -> eddie_application "Aggregate logs and retrieve system information"
@@ -256,8 +218,6 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         systemLandscape eddie {
             title "EDDIE System Landscape"
             include *
-            exclude ep_system
-            exclude marketplace
             autoLayout tb
         }
 
@@ -285,11 +245,6 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         component aiida_embedded_app "aiida-embedded-app" {
             include *
             autoLayout tb
-        }
-
-        container ds_marketplace "data-services-marketplace"{
-            include *
-            autolayout tb
         }
 
         container ds_marketplace "data-services-marketplace"{
