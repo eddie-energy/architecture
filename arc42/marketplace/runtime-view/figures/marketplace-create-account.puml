@@ -16,15 +16,18 @@ box "Data Services Marketplace System" #transparent
   participant "Database" as database
 end box
 
-user -> app : Register
-app -->> app : IAM redirection
-app -> iam : Create account
+user -> app : Request to create new Account
+activate app
+app -> iam : Redirect user to IAM
 activate iam
+deactivate app
+iam -> user: Show registration form
+user -> iam : Fill out registration form / provide credentials
 iam -> database : Store account
 activate database
 database -->> iam : OK
 deactivate database
-iam -->> app : OK
+iam -> app : Redirect with Authorization Code
 deactivate iam
 
 @enduml

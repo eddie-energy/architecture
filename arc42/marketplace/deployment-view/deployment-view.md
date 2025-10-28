@@ -18,6 +18,4 @@ Although the Progressive Web App (PWA) is hosted by the operator, it is accessed
 | - | - |
 | Operator Infrastructure | The computing infrastructure managed by the Data Services Marketplace operator that hosts the Marketplace Backend, Marketplace Frontend, Database, and IAM. The actual deployment setup may vary depending on the operator’s environment. While the IAM typically maintains its own database, it can alternatively use the same database as the Marketplace Backend — provided that separate schemas are used to isolate their respective functionalities. The IAM may also be hosted independently by a third-party provider and does not necessarily need to be operated by the Marketplace operator. |
 | User Device | Since the Data Services Marketplace is implemented as a Progressive Web App, the User Device can be any type of end-user device, such as a smartphone, laptop, or tablet. The PWA, running either as an installed app or directly in a browser, communicates with both the Marketplace Backend and IAM using HTTP requests. |
-| EDDIE Framework |  The EDDIE Framework is used by eligible parties to provide data services and forms part of the eligible party’s system. The exact deployment of these data services depends on the eligible party but typically runs on in-house infrastructure. |
-
 

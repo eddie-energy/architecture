@@ -16,14 +16,14 @@ box "Data Services Marketplace System" #transparent
   participant "Database" as database
 end box
 
-customer -> app : Get data services
+customer -> app : Discover data services
 app -> marketplace : Get data services
 activate marketplace
 marketplace -> database : Get data services
 activate database
-database -->> marketplace : Services
+database -->> marketplace : Data Services
 deactivate database
-marketplace -->> app : Services
+marketplace -->> app : Data Services
 deactivate marketplace
 
 @enduml

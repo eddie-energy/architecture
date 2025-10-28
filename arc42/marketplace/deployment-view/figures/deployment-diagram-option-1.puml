@@ -28,14 +28,7 @@ node "User Device" as user {
 }
 }
 
-rectangle "EP System" {
-  artifact "EDDIE Framework" as eddie
-}
-
 app -right- iam : HTTP
 app -right- marketplace : HTTP
-
-
-marketplace -down- eddie: URL
   
 @enduml

@@ -19,9 +19,16 @@ box "EP System" #transparent
   participant "EP Service" as ep
 end box
 
+customer -> app : Select data service
+activate app
+app -> marketplace : Load data service
+activate marketplace
+marketplace --> app : Provide data
+deactivate marketplace
+app -> customer : Show data service information
 customer -> app : Click on redirect button
-app -> marketplace : Forward information
-marketplace -> ep : Redirect to EP system
+app -> ep : Redirect to EP system
+deactivate app
 activate ep
 ep -->> customer : Show data service
 deactivate ep

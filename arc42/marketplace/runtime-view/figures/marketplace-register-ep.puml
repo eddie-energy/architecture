@@ -21,9 +21,8 @@ ep -> operator : Send EP registration request per email
 activate operator
 operator -> iam : Create new EP role
 activate iam
-iam -->> operator : EP role created
 operator -> iam : Link EP role to user account
-iam -->> operator : EP registered
+
 deactivate iam
 operator -->> ep : Inform of success
 deactivate operator

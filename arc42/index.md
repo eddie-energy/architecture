@@ -23,7 +23,7 @@ features:
     details: Enabling in-house data access
     link: /aiida/aiida
   - title: Data Services Marketplace
-    details: Discover data services based on EDDIE
+    details: Discover data services based on the EDDIE Framework
     link: /marketplace/marketplace
 ---
 This website hosts the software architecture of EDDIE (European Distributed Data Infrastructure for Energy) which has been documented based on [arc42](https://arc42.org/). EDDIE is a research project co-funded by the European Union's Horizon Innovation Actions under grant agreement No. 101069510.
