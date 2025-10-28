@@ -1,0 +1,86 @@
+@startuml
+'skinparam linetype ortho
+
+
+node "EDDIE Core" as core
+
+database "database" as db {
+	folder "Permission Events" as pe
+	frame "Permission Request View" as prv
+	pe <-- prv
+}
+interface "SQL" as sql
+db - sql
+
+
+queue "Ponton X/P Messenger" as ponton
+interface HTTP as ponton_http
+ponton_http -- ponton 
+
+node "EDA Region Connector" {
+	[Persistence] as persistence
+	sql <- persistence 
+	interface "Persistence IF" as persistence_if
+	persistence - persistence_if
+
+	[Ponton Adapter] as ponton_adapter
+	ponton_adapter --> ponton_http 
+	ponton_adapter --> persistence_if
+	interface "Ponton Adapter IF" as ponton_adapter_if
+	ponton_adapter -up- ponton_adapter_if
+
+	[Event Infrastructure] as event_infra
+	event_infra --> persistence_if
+	interface "Event Infrastructure IF" as ev_if
+	event_infra - ev_if
+
+	[Identifiable Streams] as identifiable_streams
+	identifiable_streams -right-> ponton_adapter_if
+	identifiable_streams --> persistence_if
+	interface "Streams IF" as streams 
+	identifiable_streams -up- streams
+
+	package "Services" {
+		[Permission Service] as permission_service
+		permission_service --> ev_if
+		permission_service -> core
+		interface "Permission Service IF" as permission_service_if
+		permission_service_if -- permission_service
+
+		[Retransmission/Termination Service] as retransmission_service
+		retransmission_service -> ponton_adapter_if
+		retransmission_service -> persistence_if
+		interface "Retransmission/Termination Service IF" as retransmission_service_if
+		retransmission_service -up- retransmission_service_if
+		core --> retransmission_service_if
+	}
+
+	[Providers] as providers
+	providers --> streams
+	interface "Providers IF" as providers_if
+	providers_if -- providers
+	core --> providers_if
+
+	[EDA Event Handlers] as eda_event_handlers
+	eda_event_handlers -> ponton_adapter_if
+	ev_if <- eda_event_handlers 
+	persistence_if <-- eda_event_handlers
+
+	[Internal Event Handlers] as internal_event_handlers
+	ev_if <-- internal_event_handlers
+	internal_event_handlers -up-> persistence_if
+	internal_event_handlers --> ponton_adapter_if
+
+	[Web Controller] as wc
+	wc --> permission_service_if
+	interface "Web Controller IF" as eda_http
+	eda_http -- wc 
+	core --> eda_http
+}
+
+'''' Styling
+'ponton_adapter_if -up[hidden]- internal_event_handlers
+'ev_if -down[hidden]- persistence_if
+
+@enduml
+

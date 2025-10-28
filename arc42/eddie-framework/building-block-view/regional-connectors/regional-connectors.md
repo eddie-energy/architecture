@@ -124,7 +124,6 @@ They map the region specific data formats to data formats accepted by the EDDIE 
 All region connectors have access to the data needs services, which provide information about data needs.
 Furthermore, each region connector can configure their data needs services with its constraints to aid in creation and validation of permission requests.
 
-
 #### Other shared components
 
 There are shared components that are far too low-level to describe here.
