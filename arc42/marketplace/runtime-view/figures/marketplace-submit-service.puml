@@ -1,4 +1,4 @@
-@startuml marketplace-create-request
+@startuml marketplace-submit-service
 
 skinparam style strictuml
 skinparam sequence {
@@ -11,15 +11,19 @@ autonumber
 
 actor "Eligible Party" as ep
 box "Marketplace System" #transparent
-  participant "EP Web App" as app
-  participant "Marketplace \nApplication" as marketplace
+  participant "Marketplace \nPWA" as app
+  participant "Marketplace \nBackend" as marketplace
   participant "Database" as database
 end box
 
-ep -> app : Fill out form
-app -> marketplace : Submit form
+ep -> app : Request new submission
+activate app
+app --> ep : Show empty form
+ep -> app : Fill out form and submit
+app -> marketplace : Forward data
 activate marketplace
-marketplace -> database : Store \nrequest/service
+deactivate app
+marketplace -> database : Store data service or data hub
 activate database
 database -->> marketplace : OK
 deactivate database

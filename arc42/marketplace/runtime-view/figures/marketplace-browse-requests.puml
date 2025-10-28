@@ -10,20 +10,20 @@ autonumber
 !pragma teoz true
 
 actor "Customer" as customer
-box "Marketplace System" #transparent
-  participant "Customer \nMobile App" as app
-  participant "Marketplace \nApplication" as marketplace
+box "Data Services Marketplace System" #transparent
+  participant "Marketplace \nPWA" as app
+  participant "Marketplace \nBackend" as marketplace
   participant "Database" as database
 end box
 
-customer -> app : Get data \nrequests/services
-app -> marketplace : Get data \nrequests/services
+customer -> app : Discover data services
+app -> marketplace : Get data services
 activate marketplace
-marketplace -> database : Get data \nrequests/services
+marketplace -> database : Get data services
 activate database
-database -->> marketplace : Requests/services
+database -->> marketplace : Data Services
 deactivate database
-marketplace -->> app : Requests/services
+marketplace -->> app : Data Services
 deactivate marketplace
 
 @enduml

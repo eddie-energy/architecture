@@ -5,99 +5,96 @@ order: 3
 
 ## Overview
 
-The Marketplace system implements the following workflows which are further discussed in the sections below.
+The Marketplace system supports several main workflows, which are outlined below and described in detail in the following sections. Other basic workflows are not covered here.
+
 
 - [The customer/eligible party creates a user account](./runtime-view.md#the-customer-eligible-party-creates-a-user-account)
-- [The customer registers their AIIDA instance](./runtime-view.md#the-customer-registers-their-aiida-instance)
-- [The customer browses data requests and services](./runtime-view.md#the-customer-browses-data-requests-and-services)
-- [The eligible party creates a data request/service](./runtime-view.md#the-eligible-party-creates-a-data-request-service)
-- [The eligible party searches AIIDA instances for energy data](./runtime-view.md#the-eligible-party-searches-aiida-instances-for-energy-data)
-- [The eligible party asks for access to data from AIIDA instances](./runtime-view.md#the-eligible-party-asks-for-access-to-data-from-aiida-instances)
+- [The eligible party user registers as eligible party](./runtime-view.md#the-eligible-party-user-registers-as-eligible-party)
+- [The eligible party submits a data service or data hub](./runtime-view.md#the-eligible-party-submits-a-data-service-or-data-hub)
+- [The customer browses data services](./runtime-view.md#the-customer-browses-data-services)
+- [The customer accesses a data service](./runtime-view.md#the-customer-accesses-a-data-service)
+- [The customer submits feedback on a data service](./runtime-view.md#the-customer-submits-feedback-on-a-data-service)
 
 ## The customer/eligible party creates a user account
 
 ![](./figures/marketplace-create-account.svg)
 
-1. A customer or an eligible party uses the Customer Mobile App or the EP Web App, respectively, to request a new account. 
-1. The Customer Mobile App/EP Web App sends the request for a new account to the Marketplace Application.
-1. The Marketplace Application redirects the customer/eligible party to the IAM.
-1. The customer/eligible party creates a new account at the IAM.
-1. The IAM stores the new account in the Database.
-1. The new account is stored in the Database.
-1. The Customer Mobile App/EP Web App is notified.
+The process for creating a new user account and obtaining access to the Data Service Marketplace follows a standard OpenID Connect (OIDC) flow built on top of OAuth 2.0.
+In this process, the Identity and Access Management (IAM) system handles user registration, authentication, and the issuance of tokens that enable secure access to the Marketplace Backend.
+The typical workflow is as follows:
 
-After creating an account, requests from Customer Mobile Apps/EP Web Apps are authenticated based on OAuth2 using the account credentials and tokens from the IAM.
+1. A customer or eligible party initiates a request to create a new account via the Marketplace Frontend (PWA). 
+2. The PWA redirects the user to the IAM system’s web interface (authorization endpoint) in the browser. 
+3. The IAM presents a registration or login form, allowing the user to either create a new account or sign in if an account already exists. 
+4. The user enters the required credentials and submits the form. 
+5. The IAM validates the input, creates the new account (if applicable), and securely stores the user information in its internal database.
+6. The database confirms successful storage. 
+7. After successful authentication or registration, the IAM issues an authorization code and redirects the user back to the Marketplace Frontend via the predefined redirect URI.
 
-<!-- ![](./figures/marketplace-authenticate-user.svg)
+The PWA is now able to exchange this authorization code for a set of tokens (including Access Token, ID Token, and optionally a Refresh Token) by calling the IAM’s token endpoint and can now securely communicate with protected Marketplace Backend APIs using these tokens. 
+As this is a standard OAuth flow, it is not shown into more detail here.
 
-1. The customer/eligible party submits their account credentials to login via the Customer Mobile App/EP Web App.
-1. The App sends the credentials to the IAM to authenticate the user account.
-1. The IAM queries the database to check if the provided credentials match an existing user account.
-1. The database returns a confirmation that the credentials match a stored user account.
-1. The IAM responds to the App with an authorization code for this particular user.
-1. The App can now use the authorization code to request tokens from the IAM (e.g., access, ID, and refresh tokens).
-1. IAM responds with (at least) a JWT access token.
-1. The customer/eligible party is now logged in, and the tokens can be used for any action at the Customer Mobile App/EP Web App.
-1. The customer/eligible party executes an action at the Customer Mobile App/EP Web App.
-1. The App includes the access token in the request to the Marketplace Application.
-1. The Marketplace Application validates the access token (to validate access tokens, the Marketplace Application needs to occasionally get a public key from the IAM).
-1. The Marketplace Application processes the request.
-1. The Marketplace Application sends the appropriate response. -->
+## The eligible party user registers as eligible party 
 
-## The customer registers their AIIDA instance
+![](./figures/marketplace-register-ep.svg)
 
-![](./figures/marketplace-register-aiida.svg)
+The prerequisite for this workflow is that the eligible party (EP) has already created a user account in the Data Services Marketplace, as described in the previous section.
 
-The prerequisite for this workflow is that the customer uses the AIIDA Smartphone App to register their AIIDA instance at the Marketplace, which leads to sending the AIIDA IP and ID to the Marketplace, and storing them as an AIIDA instance in the Database.
+1. The eligible party (EP) contacts the Marketplace Operator (e.g. via email), providing the necessary user account details and information required for the EP role. 
+2. The Marketplace Operator creates the EP role in the Identity and Access Management (IAM) system, entering all relevant information.
+3. The Marketplace Operator associates (links) the newly created EP role with the corresponding user account in the IAM. 
+4. The Marketplace Operator sends a confirmation notification to the eligible party once the process is completed. 
+5. Upon the next login to the Data Services Marketplace via the Progressive Web App (PWA), the IAM includes the updated role information in the user’s token, and the PWA updates the user’s privileges accordingly. 
+6. The eligible party can now access extended Marketplace functionalities, such as browsing data hubs and submitting new data services or data hubs.
 
-1. The customer requests to register their AIIDA instance at the Customer Mobile App using the AIIDA ID.
-1. The Customer Mobile App forwards the registration request to the Marketplace Application, including the AIIDA ID.
-1. The Marketplace Application uses the AIIDA ID to find the AIIDA instance in the Database, and stores the customer's account as the owner of this AIIDA instance in the Database.
-1. The AIIDA instance is registered.
-1. The Customer Mobile App is notified that the AIIDA instance is registered.
+The essential aspect of this process is that the Marketplace Operator is responsible for assigning and linking the eligible party role to the corresponding user account in the IAM.
+All subsequent steps, such as authorization and token-based access control, follow the standard OpenID Connect (OIDC) mechanisms and are therefore not covered in detail here.
 
-## The customer browses data requests and services
+
+## The eligible party submits a data service or data hub
+
+![](./figures/marketplace-submit-service.svg)
+
+1. The eligible party requests a new submission via the PWA.
+2. The PWA shows an empty for and requests the data to be entered. 
+3. The eligible party fills out the form in the Marketplace Frontend with all required information, including a link to the data service or data hub.
+4. Once the eligible party submits the data, the Marketplace Frontend sends the form data to the Marketplace Backend.
+5. The Marketplace Backend stores the submitted information in the database.
+6. The Marketplace Backend notifies the Frontend that the data service or data hub has been successfully stored.
+
+## The customer browses data services
 
 ![](./figures/marketplace-browse-requests.svg)
 
-1. The customer requests to see data requests/services of eligible parties at the Customer Mobile App (filtering possible). 
-1. The Customer Mobile App forwards the request to the Marketplace Application. 
-1. The Marketplace Application requests the selected data requests/services from the Database.
-1. The Database responds with the matching data requests/services.
-1. The Marketplace Application sends to the Customer Mobile App the requested data requests/services.
+1. The customer requests to view data services offered by eligible parties via the PWA (optional filtering available).
+2. The PWA forwards the request to the Marketplace Backend.
+3. The Marketplace Backend queries the database for the corresponding data services.
+4. The database returns the requested data.
+5. The Marketplace Backend responds to the PWA with the filtered list of data services.
 
-## The eligible party creates a data request/service
+*Note:* This process can be performed without user registration. Registration is only required when the user wants to view details or access a specific data service.
 
-![](./figures/marketplace-create-request.svg)
+Once the user is registered as eligible party, this process looks the same for eligible parties browsing data hubs.
 
-1. The eligible party fills out a form (with all the required information) in the EP Web App to create a data request/service. When creating a data request, a suitable query is also added by the eligible party. This query is later executed by AIIDA in the workflow to search for AIIDA instances having data that match this data request.
-1. The EP Web App sends this form to the Marketplace Application.
-1. The Marketplace Application stores the data request/service information in the Database.
-1. The data request/service is stored in the Database.
-1. The Marketplace Application notifies the EP Web App that the data request/service is stored.
+## The customer accesses a data service
 
-## The eligible party searches AIIDA instances for energy data
+![](./figures/marketplace-access-service.svg)
 
-![](./figures/marketplace-check-aiida.svg)
+1. The customer selects a data service in the Marketplace Frontend to view more details. 
+2. The Marketplace Frontend sends a request to the Marketplace Backend to retrieve the corresponding data service information. 
+3. The Marketplace Backend returns the detailed information about the selected data service. 
+4. The Marketplace Frontend displays the data service details to the customer in a dedicated detail view. 
+5. The customer clicks a button in the detail view which links directly to the data service hosted on the eligible party’s system. 
+6. The Marketplace Frontend redirects to the customer’s browser with the corresponding URL provided by the eligible party. 
+7. The data service is then opened and displayed in the customer’s browser, loaded from the eligible party’s environment.
 
-1. After a data request has been created, the eligible party uses the EP Web App to search for AIIDA instances matching this data request. 
-1. The EP Web App requests the Marketplace Application to run the data request.  
-1. The Marketplace Application sends the query of the data request to all the AIIDA instances that are registered in the Database.
-1. The AIIDA instances run the query, and examine if they have data matching the query.
-1. The AIIDA instances respond to the Marketplace Application with the results of the query.
-1. The Marketplace Application responds to the EP Web App with the matching AIIDA instances. 
+This process looks the same for eligible parties accessing data hubs.
 
-## The eligible party asks for access to data from AIIDA instances
+## The customer submits feedback on a data service
 
-![](./figures/marketplace-ask-data-access.svg)
+![](./figures/marketplace-submit-feedback.svg)
 
-Prerequisite of this workflow is that the eligible party has created and run a data request, and received information about the AIIDA instances matching this data request.
-
-1. To request access to the data of these AIIDA instances, the eligible party asks for data access at the EP Web App.
-1. The EP Web App asks the Marketplace Application for data access.  
-1. The Marketplace Application sends an access request to the Customer Mobile Apps of the customers whose AIIDA instances have the energy data.
-1. The Customer Mobile Apps of these customers show an access request notification.
-1. The customers approve/reject the access requests.
-1. The Customer Mobile Apps of the customers who approved notify the Marketplace Application.
-1. The Marketplace Application configures data access on the AIIDA instances of customers who approved the requests, enabling data streaming to the eligible party’s EDDIE Framework instance. This assumes that the customer permission for data sharing already exists in AIIDA (via the [connection to the EDDIE Framework](../../aiida/runtime-view/runtime-view.md#create-a-new-connection-to-the-eddie-framework) workflow of AIIDA, e.g., using a QR code from the EP Website. The AIIDA instances then start streaming the data.
-1. The Marketplace Application notifies the EP Web App that access has been requested.
+1. The customer fills out a feedback form (containing a comment and/or rating) in the Marketplace Frontend.  
+2. Once the customer submits the feedback, the Marketplace Frontend sends the form data to the Marketplace Backend.  
+3. The Marketplace Backend stores the feedback along with a reference to the corresponding data service in the database.  
+4. The Marketplace Backend notifies the Frontend that the feedback has been successfully stored.

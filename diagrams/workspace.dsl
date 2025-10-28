@@ -23,28 +23,23 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
             tags "outofscope"
         }
 
-        # Outdated: Switch to data services Marketplace
-        marketplace = softwareSystem "Marketplace" {
-            description "Catalog of energy services and AIIDA instances"
+        ds_marketplace = softwareSystem "Data Services Marketplace" {
+            description "Catalog of energy data services"
 
-            mplace_customerapp = container "Customer Mobile App" {
-                description "Interface for customers to create an account, browse energy services, and give permission for data sharing"
+            ds_mplace_app = container "Marketplace PWA" {
+                description "Frontend Interface for eligible parties and customers to access data services"
             }
 
-            mplace_webapp = container "EP Web App" {
-                description "Interface for eligible parties to create an account and submit energy services"
+            ds_mplace_backend = container "Marketplace Backend" {
+                description "Implements the marketplace workflows (e.g., to submit and search for energy services)"
             }
 
-            mplace_backend = container "Marketplace Application" {
-                description "Implements the marketplace workflows (e.g., to search for energy services and AIIDA instances)"
-            }
-
-            mplace_database = container "Database" {
-                description "Stores customer and eligible party information"
+            ds_mplace_database = container "Database" {
+                description "Stores customer and eligible party data"
                 tags "Database"
             }
 
-            mplace_iamkey = container "IAM" {
+            ds_mplace_iam = container "IAM" {
                 description "Manages the authentication and the authorization of customers and eligible parties"
             }
         }
@@ -194,18 +189,18 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
         customer -> ep_website "Fills out EDDIE Popup"
         ep_website -> eddie_popup "Embeds EDDIE Popup" "HTTP"
 
-        customer -> aiida_frontend "Provides permission for near real-time data sharing"
-        // customer -> marketplace "Browses energy services"
+        customer -> aiida_frontend "Provides permission for real-time data sharing"
+        customer -> aiida_app "Interacts with (scans QR Code)"
+        customer -> ds_marketplace "Browses data services"
 
-        eligible_party -> marketplace "Submits energy services"
-        mplace_backend -> aiida_embedded_app "Searches energy data" "HTTP"
-        eligible_party -> mplace_iamkey "Creates account"
-        customer -> mplace_iamkey "Creates account"
-        customer -> mplace_customerapp "Browses energy services"
-        eligible_party -> mplace_webapp "Submits energy services"
-        mplace_webapp -> mplace_backend "Submits energy services, searches AIIDA instances" "HTTP"
-        mplace_customerapp -> mplace_backend "Searches energy services, registers AIIDA instance" "HTTP"
-        mplace_backend -> mplace_database "Searches customer and eligible party information" "SQL"
+        eligible_party -> ds_marketplace "Submits data services"
+        eligible_party -> ds_mplace_iam "Creates account"
+        customer -> ds_mplace_iam "Creates account"
+        customer -> ds_mplace_app "Browses data services"
+        eligible_party -> ds_mplace_app "Submits data services"
+        ds_mplace_app -> ds_mplace_backend "Submits and search data services" HTTP
+        ds_mplace_backend -> ds_mplace_database "Stores data" SQL
+        ds_mplace_backend -> ep_service "Redirects to data service"
 
         customer -> ds_marketplace "Browses data services"
 
@@ -292,7 +287,7 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
             autoLayout tb
         }
 
-        container marketplace "marketplace" {
+        container ds_marketplace "data-services-marketplace"{
             include *
             autolayout tb
         }

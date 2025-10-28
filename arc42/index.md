@@ -22,8 +22,8 @@ features:
   - title: AIIDA
     details: Enabling in-house data access
     link: /aiida/aiida
-  - title: Marketplace
-    details: Discover datasets and services based on EDDIE
+  - title: Data Services Marketplace
+    details: Discover data services based on the EDDIE Framework
     link: /marketplace/marketplace
 ---
 This website hosts the software architecture of EDDIE (European Distributed Data Infrastructure for Energy) which has been documented based on [arc42](https://arc42.org/). EDDIE is a research project co-funded by the European Union's Horizon Innovation Actions under grant agreement No. 101069510.
@@ -37,7 +37,7 @@ This document is organized as follows:
 1. [Context & Scope](./system-scope-and-context/system-scope-and-context.md). Includes the business scope, technical scope and prerequisites.
 1. [EDDIE Framework](/eddie-framework/eddie-framework). Provides core functionality of the system.
 1. [AIIDA](/aiida/aiida). Enables in-house data access.
-1. [EDDIE Marketplace](/marketplace/marketplace). Provides discovery of datasets and services of the system.
+1. [EDDIE Data Services Marketplace](/marketplace/marketplace). Provides discovery of data services for customers.
 1. [Deployment View](/deployment-view/deployment-view.md). Maps the building blocks of the system.
 1. [Crosscutting Concepts](./crosscutting-concepts/crosscutting-concepts.md). Includes information about important concepts used in the system.
 1. [Architectural Decisions](./architectural-decisions/architectural-decisions.md). Includes architectural decisions that affect the system.

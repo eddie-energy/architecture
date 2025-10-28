@@ -5,16 +5,17 @@ order: 4
 
 ## Overview
 
-The Marketplace system consists of three Docker containers (the Marketplace Application, the Database, and IAM) running on computing infrastructure managed by the Marketplace operator, e.g., in the cloud or on private computing infrastructure, and the two frontend applications (the Customer Mobile App, and the EP Web App) running on user equipment, e.g., smartphones, laptops, etc. Furthermore, the Marketplace communicates with AIIDA instances running on in-house devices of customers to check the type of data they offer.  
+The Data Services Marketplace system consists of four Docker containers — the Marketplace Backend, the Marketplace Progressive Web App (PWA), the Database, and the Identity and Access Management (IAM) service — running on computing infrastructure managed by the Data Services Marketplace operator. This infrastructure may be hosted in the cloud or on private servers.  
+
+Although the Marketplace PWA is hosted by the operator, it is accessed from the user’s device; therefore, it is represented within the User Device box in the diagram. Furthermore, the Marketplace Backend may redirect certain requests to the eligible party’s service, which runs on the eligible party’s own system.
+
 
 ## Diagram
 
 ![](./figures/deployment-diagram-marketplace.svg)
 
-|Node | Description |
-| - | - |
-| Computing Infrastructure | This is the computing infrastructure managed by the Marketplace operator that hosts the Marketplace Application, the Database, and IAM. While the IAM and Marketplace Application may share a common database, they utilize distinct database schemas to manage their respective functionalities. This computing infrastructure is typically a commercial cloud, although private computing infrastructure can also be used.|
-| User Device | Two user devices host the frontend applications. The Customer Mobile App runs on the smartphone of the customer, and the EP Web App runs on a device with a browser offering a web interface for the eligible party. |
-| AIIDA Application | The AIIDA Application is part of the AIIDA system (not the Marketplace system) and typically runs on in-house infrastructure. |
-
+|Node | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| - |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Operator Infrastructure | The computing infrastructure managed by the Data Services Marketplace operator that hosts the Marketplace Backend, Marketplace PWA, Database, and IAM. The actual deployment setup may vary depending on the operator’s environment. While the IAM typically maintains its own database, it can alternatively use the same database as the Marketplace Backend — provided that separate schemas are used to isolate their respective functionalities. The IAM may also be hosted independently by a third-party provider and does not necessarily need to be operated by the Marketplace operator. |
+| User Device | Since the Data Services Marketplace is implemented as a Progressive Web App, the User Device can be any type of end-user device, such as a smartphone, laptop, or tablet. The PWA, running either as an installed app or directly in a browser, communicates with both the Marketplace Backend and IAM using HTTP requests.                                                                                                                                                                                                                                                                        |
 
