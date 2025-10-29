@@ -143,12 +143,12 @@ workspace "EDDIE" "Architecture Overview of the EDDIE Project" {
             }
 
             data_source = container "Data Source"{
-                description "Logical or physical instance between measuring device and AIIDA"
+                description "Logical or physical instance between metering device and AIIDA"
             }
 
         }
 
-        smartMeter = softwareSystem "Measuring Device" {
+        smartMeter = softwareSystem "Metering Device" {
             description "In-house device that collects energy data, e.g., a smart meter"
             tags "outofscope"
         }
