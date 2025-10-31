@@ -59,7 +59,7 @@ This page documents shared concepts and interfaces while the following pages doc
 
 These are the components that each region connector will have an instance of.
 There is a separate instance for each region connector.
-The following diagram shows some of the shared components.
+The following diagram shows some components that are present in all region connectors.
 
 ![Generic Region Connector Components](./figures/rc-components.png)
 
