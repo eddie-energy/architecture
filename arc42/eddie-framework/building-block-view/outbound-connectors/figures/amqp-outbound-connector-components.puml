@@ -1,0 +1,38 @@
+
+@startuml
+skinparam linetype ortho
+left to right direction
+
+node "EDDIE Core" as core
+queue "AMQP Message Broker" as amqp
+interface "AMQP IF" as amqp_if
+amqp_if -- amqp
+
+node "AMQP Outbound Connector" as oc {
+	[Connectors] as connectors
+	interface "Connector IF" as connector_if
+	connectors -right- connector_if 
+	core -->  connector_if
+
+	[Serialization and Deserialization] as serde
+	interface "Serde IF" as serde_if
+	serde -- serde_if
+
+	[AMQP Connection] as connection
+	connection --> amqp_if
+	interface "AMQP Connection IF" as amqp_connection_if
+	amqp_connection_if -- connection
+
+
+	[AMQP Client] as client
+	client -> serde_if
+	connector_if <-- client
+	client --> amqp_connection_if
+
+	[AMQP Setup] as setup
+	setup -> amqp_connection_if
+}
+
+'''' Styling
+
+@enduml
