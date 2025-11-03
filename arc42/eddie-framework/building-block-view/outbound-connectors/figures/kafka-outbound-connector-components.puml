@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype ortho
+left to right direction
+
+node "EDDIE Core" as core
+queue "Apache Kafka" as kafka
+interface "Apache Kafka IF" as kafka_if
+kafka_if -- kafka
+
+node "Apache Kafka Outbound Connector" as oc {
+	[Connectors] as connectors
+	interface "Connector IF" as connector_if
+	connectors -right- connector_if 
+	core -->  connector_if
+
+	[Serialization and Deserialization] as serde
+	interface "Serde IF" as serde_if
+	serde -- serde_if
+
+	[Kafka Client] as client
+	client -> serde_if
+	connector_if <-- client
+	client --> kafka_if
+}
+
+'''' Styling
+
+@enduml
