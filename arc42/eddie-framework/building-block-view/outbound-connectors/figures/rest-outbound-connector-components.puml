@@ -1,0 +1,44 @@
+@startuml
+
+node "EDDIE Core" as core
+
+node "OAuth 2.0 Server" as oauth
+interface "OAuth 2.0 IF" as oauth_if
+oauth -- oauth_if
+
+database "Database" as db
+interface "SQL" as sql
+sql -- db
+
+node "REST Outbound Connector" as oc {
+	[Connectors] as connectors
+	interface "Connector IF" as connector_if
+	connectors -up- connector_if 
+	core -->  connector_if
+
+	[Persistence] as persistence
+	persistence --> sql
+	interface "Persistence IF" as persistence_if
+	persistence_if -up- persistence
+
+	[Tasks] as tasks
+	tasks -up-> persistence_if
+	tasks -up-> connector_if
+
+	[Web Controllers] as controllers
+	connector_if <-- controllers
+	controllers -> persistence_if
+	interface "Web Controller IF" as controller_if
+	controller_if -- controllers
+	core --> controller_if
+
+	[Security Chain] as security
+	security -up- oauth_if
+	controller_if -up- security 
+
+}
+
+'''' Styling
+connectors -right[hidden]- controllers
+
+@enduml
