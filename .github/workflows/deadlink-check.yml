@@ -1,0 +1,27 @@
+name: deadlink-check.yml
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+    paths:
+      - "**.md"
+
+jobs:
+  deadlink-check:
+    runs-on: linux
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deadlink check
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --exclude-all-private --exclude '^https://github.com/eddie-energy/' --root-dir $(pwd)/arc42 .
+          fail: "true"
+      - name: Comment Broken Links
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          path: lychee/out.md
