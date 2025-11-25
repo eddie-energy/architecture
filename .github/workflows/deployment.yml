@@ -35,15 +35,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Deploy
-        uses: eddie-energy/ftp-deploy-action@main
-        with:
-          host: ${{ secrets.WEBSERVER_SFTP_HOST }}
-          user: ${{ secrets.WEBSERVER_SFTP_USERNAME }}
-          password: ${{ secrets.WEBSERVER_SFTP_PASSWORD }}
-          source: ./.vitepress/dist/
-          destination: "/public_html/architecture/"
-
       - name: Copy files via SSH
         uses: appleboy/scp-action@v1
         with:
