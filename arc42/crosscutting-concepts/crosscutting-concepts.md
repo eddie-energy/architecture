@@ -265,7 +265,11 @@ By abstracting the permission process into a common facade, EDDIE Framework lowe
 The Permission Process Model defines the lifecycle of a permission request within the EDDIE Framework.  
 A permission request represents the agreement between a Customer, their Permission Administrator, and the Eligible Party to access energy-related data.  
 Each permission request transitions through well-defined states — from its creation and validation to acceptance, revocation, or termination — ensuring that no state is skipped and that the complete permission history is traceable.  
-This state model standardizes how permissions are created, validated, transmitted, and retired across all Region Connectors and PAs.
+This state model standardizes how permissions are created, validated, transmitted, and retired across all Region Connectors and PAs.  
+The process is initiated by the end-customer through the eligible party.  
+The end-customer decides about access to the energy data (i.e., accept or reject) and can revoke the granted permission at any point.  
+The eligible party can terminate the permission when the data access is no longer needed.  
+The permission administrator forwards the request from the eligible party to the customer and sends the requested data only if the customer grants the permission.
 
 ![BPRT diagram showing the permission request process](../crosscutting-concepts/figures/permission-process-model.svg)
 
