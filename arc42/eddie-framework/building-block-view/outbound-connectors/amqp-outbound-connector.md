@@ -34,6 +34,6 @@ Furthermore, it uses the Connectors to send messages from the AMQP Message Broke
 ## AMQP Setup
 
 The AMQP Setup component is responsible for setting up the infrastructure on the AMQP Message Broker, such as Queues.
-For more information on setting up a AMQP Message Broker see the [AMQP docs](https://www.amqp.org/product/architecture).
+For more information on setting up a AMQP Message Broker see the [AMQP docs](https://www.amqp.org/product/architecture.html).
 
 
