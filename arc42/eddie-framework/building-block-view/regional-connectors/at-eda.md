@@ -6,7 +6,7 @@ title: EDA (Austria) Region Connector
 The EDA Region Connector integrates the EDDIE Framework with the Austrian data infrastructure operated by EDA.  
 It connects to the Austrian Permission Administrators and Metered Data Administrators through the PontonXP Messenger, which implements the AS4 protocol required in Austria.
 
-For information on how to operate the EDA Region Connector, see the [Framework Docs](https://eddie-web.projekte.fh-hagenberg.at/framework/1-running/region-connectors/region-connector-at-eda.html).
+For information on how to operate the EDA Region Connector, see the [Framework Docs](https://architecture.eddie.energy/framework/1-running/region-connectors/region-connector-at-eda.html).
 
 > [!NOTE]
 > Shared components described in the [region connectors section](./regional-connectors.md#shared-components) will not be included in the figure unless necessary.

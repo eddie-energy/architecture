@@ -36,7 +36,7 @@ Since each country or region may define its own processes for managing permissio
 - Eligible Parties must be registered with the Permission Administrator and Metered Data Administrator to use the interfaces.  
 - Sensitive information is only accessed once explicit consent has been confirmed by the Permission Administrator. 
 
-The EDDIE Framework uses several Region Connectors, each implementing the permission and data access processes of their respective infrastructures. More information about all the supported connectors can be found in [Region Connectors](https://eddie-web.projekte.fh-hagenberg.at/framework/1-running/region-connectors/region-connectors.html).
+The EDDIE Framework uses several Region Connectors, each implementing the permission and data access processes of their respective infrastructures. More information about all the supported connectors can be found in [Region Connectors](https://architecture.eddie.energy/framework/1-running/region-connectors/region-connectors.html).
 
 <!-- > [!note] TODO
 > - Describe shared APIs and similarities between region connectors
