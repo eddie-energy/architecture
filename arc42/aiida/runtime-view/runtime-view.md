@@ -10,6 +10,11 @@ The main workflows of AIIDA are:
 - [Create a new connection to the EDDIE Framework](./runtime-view.md#create-a-new-connection-to-the-eddie-framework)
 - [Stream energy data from the Metering Device to the EDDIE Framework](./runtime-view.md#stream-energy-data-from-the-metering-device-to-the-eddie-framework)
 
+The wire-level messages exchanged in both workflows (QR code payload, handshake
+requests, MQTT topics, status updates) are specified in the
+[AIIDA Communication Protocol](../../appendix/aiida-communication/aiida-communication.md)
+appendix.
+
 ## Create a new connection to the EDDIE Framework
 
 ![](./figures/aiida_new_connection.svg)
@@ -27,7 +32,8 @@ This workflow includes the following steps:
 3. The AIIDA Region Connector generates a Token and a QR code, and shows them on the EP Website.
 4. The token and the QR code are shown to the customer.
 5. The customer adds (by copy-pasting or scanning the QR code) the token into the UI of the AIIDA application, and gives
-   permission to AIIDA to stream energy data.
+   permission to AIIDA to stream energy data. AIIDA then performs the handshake with EDDIE
+   (fetch permission details respond to the permission request).
 6. The AIIDA UI forwards the token information and the customer permission to the AIIDA Backend.
 7. The AIIDA Backend uses the token information to establish a connection to the AIIDA Region Connector via MQTT. After
    the connection is established, energy data can be streamed from the AIIDA Application to the AIIDA Region Connector
@@ -49,5 +55,6 @@ AIIDA Region Connector.
 2. The Data Source either receives data from a Measuring Device or generates energy data itself, and sends this data to
    the AIIDA Application, e.g., via MQTT.
 3. The AIIDA Application stores the energy data in the Timescale DB.
-4. The AIIDA Application publishes the energy data to the AIIDA Region Connector via MQTT.
+4. The AIIDA Application publishes the energy data to the AIIDA Region Connector via MQTT on the outbound data topic.
+   Lifecycle messages (acknowledgement, termination, status updates) are exchanged on the Control Plane topics.
 5. The EP can subscribe the energy data via MQTT with the respective user.
