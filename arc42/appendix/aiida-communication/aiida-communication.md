@@ -11,7 +11,7 @@ same flows from a component perspective:
 - The **connection-setup workflow** (QR code &rarr; handshake &rarr; MQTT
   credentials) corresponds to steps&nbsp;1&ndash;3 of the Control Plane below.
 - The **data-streaming workflow** is realized by the Data Plane, with optional
-  acknowledgement, termination, and status messages on the Control Plane.
+  acknowledgement, permission-command, and status messages on the Control Plane.
 
 Communication is divided into two planes:
 
@@ -118,7 +118,7 @@ Authorization: Bearer {accessToken}
   "password": "z=1CfV%O2jHX03ar8]ev&;W`",
   "dataTopic": "aiida/v1/09520290-ea60-4422-a54c-db8fde93cfd5/data/outbound",
   "statusTopic": "aiida/v1/09520290-ea60-4422-a54c-db8fde93cfd5/status",
-  "terminationTopic": "aiida/v1/09520290-ea60-4422-a54c-db8fde93cfd5/termination",
+  "commandTopic": "aiida/v1/09520290-ea60-4422-a54c-db8fde93cfd5/command/+",
   "acknowledgementTopic": null
 }
 ```
@@ -138,14 +138,36 @@ Sent only when the data need has `acknowledgementRequired = true`.
 
 Payload: [`ACKNOWLEDGEMENT_CIM_V1_12`](https://architecture.eddie.energy/framework/2-integrating/messages/cim/acknowledgement-market-documents.html)
 
-#### 4b. EDDIE &rarr; AIIDA: Termination (optional)
+#### 4b. EDDIE &rarr; AIIDA: Permission Command (optional)
 
-Sent when the EDDIE side terminates the permission before its natural end.
+Permission commands let the eligible party remotely control an active permission.
+They originate from the EP, enter EDDIE via the AIIDA Region Connector (e.g. the
+REST/Kafka/AMQP outbound connectors) and are forwarded to AIIDA on the command
+topic. AIIDA subscribes with the wildcard `command/+`; the trailing segment is
+the command's `action`.
 
-**MQTT topic:** `aiida/v1/09520290-ea60-4422-a54c-db8fde93cfd5/termination`
+**MQTT topic:** `aiida/v1/09520290-ea60-4422-a54c-db8fde93cfd5/command/+`
 
-```
-09520290-ea60-4422-a54c-db8fde93cfd5
+The payload is a [`PERMISSION_COMMAND`](https://architecture.eddie.energy/framework/2-integrating/messages/agnostic.html#permission-commands)
+whose `action` field discriminates the command:
+
+| Action                         | Extra field            | Effect                                                                                |
+|--------------------------------|------------------------|---------------------------------------------------------------------------------------|
+| `UPDATE_TRANSMISSION_SCHEDULE` | `transmissionSchedule` | Adjusts the transmission schedule (cron); capped at the data-need frequency.          |
+| `SET_TRANSMISSION_ENABLED`     | `enabled`              | Pauses or resumes transmission for the permission.                                    |
+| `TERMINATE`                    | &ndash;                | Terminates the permission; AIIDA stops streaming and cleans up associated resources.  |
+
+`UPDATE_TRANSMISSION_SCHEDULE` and `SET_TRANSMISSION_ENABLED` are honored only if
+the data need lists them in `allowedPermissionCommands`; `TERMINATE` is always
+accepted.
+
+```json
+{
+  "regionConnectorId": "aiida",
+  "permissionId": "09520290-ea60-4422-a54c-db8fde93cfd5",
+  "action": "UPDATE_TRANSMISSION_SCHEDULE",
+  "transmissionSchedule": "0 */1 * * * *"
+}
 ```
 
 ### 5. AIIDA &rarr; EDDIE: Status Update
@@ -200,7 +222,7 @@ stateDiagram-v2
   FAILED_TO_START --> [*]
   STREAMING_DATA --> streaming_fork
   streaming_fork --> REVOKED: Revoked by User
-  streaming_fork --> TERMINATED: Terminated by EDDIE
+  streaming_fork --> TERMINATED: TERMINATE permission command
   streaming_fork --> FULFILLED: Permission Expired
   REVOKED --> join_state_all
   TERMINATED --> join_state_all
