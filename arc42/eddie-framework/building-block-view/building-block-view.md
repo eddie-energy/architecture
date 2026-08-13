@@ -1,6 +1,6 @@
 ---
 title: Building Block View
-order: 2
+order: 3
 ---
 
 This section describes the building block view of the EDDIE Framework using the [C4 Model](https://c4model.com/). For this purpose, an overview of the EDDIE containers is provided, along with their interactions. The goal of the EDDIE Framework is to enable Eligible Parties to access energy data from Regional Data-sharing infrastructures and stream this data to their own services. At its core, the EDDIE Application establishes permissions with Permission Administrators, retrieves validated historical data from Metered Data Administrators, and delivers this data through outbound connectors to the Eligible Party’s environment. To ease adoption and integration, the EDDIE Framework also includes companion containers that support administrative features such as authentication, monitoring, and persistence. While these companion containers are recommended and instructions are provided, they are not shipped with the main application and must be provided by the Eligible Party.
