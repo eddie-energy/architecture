@@ -9,10 +9,11 @@ This section outlines key architectural decisions made for the EDDIE Framework:
 - [Region Connector and Outbound Connector Isolation](#region-connector-and-outbound-connector-isolation)
 - [Event-Driven Permission Process Model](#event-driven-permission-process-model)
 - [Embed the EDDIE Popup as a Custom Element](#embed-the-eddie-popup-as-a-custom-element)
-- [Publish/Subscribe Mechanism for Data Exchange](#publish-subscribe-mechanism-for-data-exchange)
+- [Publish/Subscribe Mechanism for Data Exchange](#publishsubscribe-mechanism-for-data-exchange)
 - [Separate System Monitoring and Admin Console](#separate-system-monitoring-and-admin-console)
 - [Database](#database)
 - [Region Connectors Architecture](#region-connectors-architecture)
+- [Management API Isolation](#management-api-isolation)
 
 ## Monolithic Architecture of the EDDIE Framework
 
@@ -234,3 +235,46 @@ Negative consequences
 ### Alternatives
 
 A traditional state-machine approach was abandoned in favor of event sourcing due to its scalability, traceability, and better handling of asynchronous communication.
+
+## Management API Isolation
+
+### Context
+
+The EDDIE Framework exposes APIs serving different purposes and with different security requirements.
+Public APIs are usually customer facing and integrated into the EDDIE Button or AIIDA.
+Management APIs provide privileged administrative capabilities.
+
+These interfaces have different security requirements and therefore require the ability to apply different access-control policies at the deployment level.
+
+### Decision
+Separate public and management interfaces through distinct network ports:
+
+- Public interface (8080): exposes APIs required for integration with external applications.
+- Management interface (9090): exposes privileged APIs used to administer and configure the EDDIE Framework.
+
+The management interface is logically separated from the public interface to allow deployment environments to apply independent network and access-control policies.
+
+The architectural decision does not prescribe a specific authentication or authorization mechanism.
+Protection of the management interface may be implemented using infrastructure-level controls, such as network restrictions, reverse proxies, authentication gateways, or other access-control mechanisms appropriate to the deployment environment.
+
+The ports and endpoint paths are configurable to support different deployment architectures.
+
+### Consequences
+
+Positive consequences
+- Establishes a clear security boundary between public and privileged functionality.
+- Allows management interfaces to be protected independently of public interfaces.
+- Enables deployment-specific network and access-control policies.
+- Reduces the exposure of privileged functionality to untrusted networks.
+- Avoids coupling the EDDIE Framework to a specific authentication or authorization technology.
+
+Negative consequences
+- Introduces an additional network interface that must be configured and secured.
+- Requires deployment environments to explicitly manage access to both public and management interfaces.
+- Incorrect exposure or configuration of the management interface may weaken the intended security boundary.
+
+### Alternatives
+
+Exposing public and management APIs through a single network interface was considered. This would simplify network configuration but would make it more difficult to enforce distinct access-control policies for privileged functionality.
+
+An alternative approach would be to enforce all access control within EDDIE Core. This was not selected because infrastructure-level protection provides greater flexibility for deployment-specific security requirements and avoids coupling the architecture to a particular authentication mechanism.
